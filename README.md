@@ -1,3 +1,4 @@
+# or: vim README.md / code README.md<<<<<<< HEAD
 OpenRoot
 "There will come a time when the animals are suffering and the earth is weeping,
 and there shall come a tribe from all corners of the earth,
@@ -98,3 +99,6 @@ Want to contribute builds, designs, code, or validation? That is worth more than
 The project succeeds when it no longer needs Jesse McMillen.
 One pour. One node. One warrior at a time.
 CC-BY-SA 4.0 (Hardware) | GPL v3 (Software) | No Patents. Ever.
+=======
+paste your content here
+>>>>>>> 6c3ff8e (Rewrite README with Hopi prophecy and full structure)
