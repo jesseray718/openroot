@@ -1,0 +1,202 @@
+Couldn't find '/data/data/com.termux/files/home/.ollama/id_ed25519'. Generating new private key.
+Your new public key is: 
+
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJksvmWILvpeEMhDj8jEBztV99k+4gKa5KVBxm4V5wXq
+
+time=2026-06-28T17:01:35.922Z level=INFO source=routes.go:1961 msg="server config" env="map[CUDA_VISIBLE_DEVICES: GGML_VK_VISIBLE_DEVICES: GPU_DEVICE_ORDINAL: HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY: HTTP_PROXY: LLAMA_ARG_FIT: LLAMA_ARG_FIT_TARGET: NO_PROXY: OLLAMA_CONTEXT_LENGTH:0 OLLAMA_DEBUG:INFO OLLAMA_DEBUG_LOG_REQUESTS:false OLLAMA_EDITOR: OLLAMA_FLASH_ATTENTION:false OLLAMA_GO_TEMPLATE:true OLLAMA_GPU_OVERHEAD:0 OLLAMA_HOST:http://127.0.0.1:11434 OLLAMA_IGPU_ENABLE: OLLAMA_KEEP_ALIVE:5m0s OLLAMA_KV_CACHE_TYPE: OLLAMA_LLM_LIBRARY: OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:0 OLLAMA_MAX_QUEUE:512 OLLAMA_MAX_TRANSFER_STREAMS:4 OLLAMA_MODELS:/data/data/com.termux/files/home/.ollama/models OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NO_CLOUD:false OLLAMA_NUM_PARALLEL:1 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://* vscode-webview://* vscode-file://*] OLLAMA_REMOTES:[ollama.com] OLLAMA_SCHED_SPREAD:false OLLAMA_VULKAN:true ROCR_VISIBLE_DEVICES: http_proxy: https_proxy: no_proxy:]"
+time=2026-06-28T17:01:35.924Z level=INFO source=routes.go:1963 msg="Ollama cloud disabled: false"
+time=2026-06-28T17:01:35.926Z level=INFO source=images.go:883 msg="total blobs: 0"
+time=2026-06-28T17:01:35.926Z level=INFO source=images.go:890 msg="total unused blobs removed: 0"
+time=2026-06-28T17:01:35.932Z level=INFO source=routes.go:2023 msg="Listening on 127.0.0.1:11434 (version 0.30.11)"
+time=2026-06-28T17:01:35.937Z level=INFO source=model_list_cache.go:111 msg="model list cache hydration complete" models=0 failures=0 elapsed=4.679077ms
+time=2026-06-28T17:01:35.939Z level=INFO source=runner.go:60 msg="discovering available GPUs..."
+time=2026-06-28T17:01:36.113Z level=INFO source=types.go:50 msg="inference compute" id=cpu library=cpu compute="" name=cpu description=cpu libdirs=ollama driver="" pci_id="" type="" total="3.5 GiB" available="727.9 MiB"
+time=2026-06-28T17:01:36.114Z level=INFO source=routes.go:2073 msg="vram-based default context" total_vram="0 B" default_num_ctx=4096
+[GIN] 2026/06/28 - 17:01:38 | 200 |    4.746154ms |       127.0.0.1 | HEAD     "/"
+[GIN] 2026/06/28 - 17:01:38 | 404 |    7.662385ms |       127.0.0.1 | POST     "/api/show"
+time=2026-06-28T17:01:38.938Z level=WARN source=model_show_cache.go:142 msg="model show cloud cache hydration failed" error="Get \"https://ollama.com:443/api/tags?ts=1782666095\": context deadline exceeded"
+time=2026-06-28T17:01:38.939Z level=WARN source=model_recommendations.go:168 msg="model recommendations refresh failed" error="Get \"https://ollama.com/api/experimental/model-recommendations\": context deadline exceeded"
+time=2026-06-28T17:01:38.939Z level=INFO source=model_recommendations.go:177 msg="model recommendations cache sleep scheduled" wait=4m51.163246899s consecutive_failures=1
+time=2026-06-28T17:01:39.830Z level=INFO source=download.go:179 msg="downloading c1864a5eb193 in 16 104 MB part(s)"
+time=2026-06-28T17:01:50.005Z level=INFO source=download.go:297 msg="c1864a5eb193 part 12 attempt 0 failed: Get \"https://dd20bb891979d25aebc8bec07b2b3bbc.r2.cloudflarestorage.com/ollama/docker/registry/v2/blobs/sha256/c1/c1864a5eb19305c40519da12cc543519e48a0697ecd30e15d5ac228644957d12/data?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=66040c77ac1b787c3af820529859349a%2F20260628%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260628T170140Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=58984bbb42a11df3a46d0e0ec0e01aac21eedefd0148a365d0484636bd5ff0df\": net/http: TLS handshake timeout, retrying in 1s"
+time=2026-06-28T17:01:50.009Z level=INFO source=download.go:297 msg="c1864a5eb193 part 1 attempt 0 failed: Get \"https://dd20bb891979d25aebc8bec07b2b3bbc.r2.cloudflarestorage.com/ollama/docker/registry/v2/blobs/sha256/c1/c1864a5eb19305c40519da12cc543519e48a0697ecd30e15d5ac228644957d12/data?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=66040c77ac1b787c3af820529859349a%2F20260628%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260628T170140Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=58984bbb42a11df3a46d0e0ec0e01aac21eedefd0148a365d0484636bd5ff0df\": net/http: TLS handshake timeout, retrying in 1s"
+time=2026-06-28T17:01:50.010Z level=INFO source=download.go:297 msg="c1864a5eb193 part 5 attempt 0 failed: Get \"https://dd20bb891979d25aebc8bec07b2b3bbc.r2.cloudflarestorage.com/ollama/docker/registry/v2/blobs/sha256/c1/c1864a5eb19305c40519da12cc543519e48a0697ecd30e15d5ac228644957d12/data?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=66040c77ac1b787c3af820529859349a%2F20260628%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260628T170140Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=58984bbb42a11df3a46d0e0ec0e01aac21eedefd0148a365d0484636bd5ff0df\": net/http: TLS handshake timeout, retrying in 1s"
+time=2026-06-28T17:05:35.583Z level=INFO source=download.go:297 msg="c1864a5eb193 part 10 attempt 0 failed: unexpected EOF, retrying in 1s"
+time=2026-06-28T17:05:35.581Z level=INFO source=download.go:297 msg="c1864a5eb193 part 2 attempt 0 failed: unexpected EOF, retrying in 1s"
+time=2026-06-28T17:05:35.580Z level=INFO source=download.go:297 msg="c1864a5eb193 part 13 attempt 0 failed: unexpected EOF, retrying in 1s"
+time=2026-06-28T17:05:35.582Z level=INFO source=download.go:297 msg="c1864a5eb193 part 5 attempt 1 failed: unexpected EOF, retrying in 2s"
+time=2026-06-28T17:05:35.589Z level=INFO source=download.go:297 msg="c1864a5eb193 part 9 attempt 0 failed: unexpected EOF, retrying in 1s"
+time=2026-06-28T17:05:35.582Z level=INFO source=download.go:297 msg="c1864a5eb193 part 15 attempt 0 failed: unexpected EOF, retrying in 1s"
+time=2026-06-28T17:05:35.590Z level=INFO source=download.go:297 msg="c1864a5eb193 part 6 attempt 0 failed: unexpected EOF, retrying in 1s"
+time=2026-06-28T17:05:35.590Z level=INFO source=download.go:297 msg="c1864a5eb193 part 11 attempt 0 failed: unexpected EOF, retrying in 1s"
+time=2026-06-28T17:05:35.592Z level=INFO source=download.go:297 msg="c1864a5eb193 part 12 attempt 1 failed: unexpected EOF, retrying in 2s"
+time=2026-06-28T17:05:35.581Z level=INFO source=download.go:297 msg="c1864a5eb193 part 7 attempt 0 failed: unexpected EOF, retrying in 1s"
+time=2026-06-28T17:05:35.599Z level=INFO source=download.go:297 msg="c1864a5eb193 part 8 attempt 0 failed: unexpected EOF, retrying in 1s"
+time=2026-06-28T17:05:35.600Z level=INFO source=download.go:297 msg="c1864a5eb193 part 0 attempt 0 failed: unexpected EOF, retrying in 1s"
+time=2026-06-28T17:05:35.600Z level=INFO source=download.go:297 msg="c1864a5eb193 part 4 attempt 0 failed: unexpected EOF, retrying in 1s"
+time=2026-06-28T17:05:35.601Z level=INFO source=download.go:297 msg="c1864a5eb193 part 1 attempt 1 failed: unexpected EOF, retrying in 2s"
+time=2026-06-28T17:05:35.602Z level=INFO source=download.go:297 msg="c1864a5eb193 part 14 attempt 0 failed: unexpected EOF, retrying in 1s"
+time=2026-06-28T17:05:35.602Z level=INFO source=download.go:297 msg="c1864a5eb193 part 3 attempt 0 failed: unexpected EOF, retrying in 1s"
+time=2026-06-28T17:05:48.809Z level=INFO source=download.go:297 msg="c1864a5eb193 part 14 attempt 1 failed: read tcp 10.111.222.1:43638->172.64.66.2:443: read: software caused connection abort, retrying in 2s"
+time=2026-06-28T17:05:48.808Z level=INFO source=download.go:297 msg="c1864a5eb193 part 11 attempt 1 failed: read tcp 10.111.222.1:43664->172.64.66.2:443: read: software caused connection abort, retrying in 2s"
+time=2026-06-28T17:05:48.808Z level=INFO source=download.go:297 msg="c1864a5eb193 part 2 attempt 1 failed: read tcp 10.111.222.1:43690->172.64.66.2:443: read: software caused connection abort, retrying in 2s"
+time=2026-06-28T17:05:48.808Z level=INFO source=download.go:297 msg="c1864a5eb193 part 3 attempt 1 failed: read tcp 10.111.222.1:43666->172.64.66.2:443: read: software caused connection abort, retrying in 2s"
+time=2026-06-28T17:05:48.808Z level=INFO source=download.go:297 msg="c1864a5eb193 part 12 attempt 2 failed: read tcp 10.111.222.1:43726->172.64.66.2:443: read: software caused connection abort, retrying in 4s"
+time=2026-06-28T17:05:48.808Z level=INFO source=download.go:297 msg="c1864a5eb193 part 15 attempt 1 failed: read tcp 10.111.222.1:43644->172.64.66.2:443: read: software caused connection abort, retrying in 2s"
+time=2026-06-28T17:05:48.808Z level=INFO source=download.go:297 msg="c1864a5eb193 part 5 attempt 2 failed: read tcp 10.111.222.1:43724->172.64.66.2:443: read: software caused connection abort, retrying in 4s"
+time=2026-06-28T17:05:48.808Z level=INFO source=download.go:297 msg="c1864a5eb193 part 8 attempt 1 failed: read tcp 10.111.222.1:43688->172.64.66.2:443: read: software caused connection abort, retrying in 2s"
+time=2026-06-28T17:05:48.808Z level=INFO source=download.go:297 msg="c1864a5eb193 part 6 attempt 1 failed: read tcp 10.111.222.1:43706->172.64.66.2:443: read: software caused connection abort, retrying in 2s"
+time=2026-06-28T17:05:48.808Z level=INFO source=download.go:297 msg="c1864a5eb193 part 13 attempt 1 failed: read tcp 10.111.222.1:43710->172.64.66.2:443: read: software caused connection abort, retrying in 2s"
+time=2026-06-28T17:05:48.808Z level=INFO source=download.go:297 msg="c1864a5eb193 part 10 attempt 1 failed: read tcp 10.111.222.1:43658->172.64.66.2:443: read: software caused connection abort, retrying in 2s"
+time=2026-06-28T17:05:48.809Z level=INFO source=download.go:297 msg="c1864a5eb193 part 4 attempt 1 failed: read tcp 10.111.222.1:43636->172.64.66.2:443: read: software caused connection abort, retrying in 2s"
+time=2026-06-28T17:05:48.809Z level=INFO source=download.go:297 msg="c1864a5eb193 part 9 attempt 1 failed: read tcp 10.111.222.1:43620->172.64.66.2:443: read: software caused connection abort, retrying in 2s"
+time=2026-06-28T17:05:48.809Z level=INFO source=download.go:297 msg="c1864a5eb193 part 7 attempt 1 failed: read tcp 10.111.222.1:43712->172.64.66.2:443: read: software caused connection abort, retrying in 2s"
+time=2026-06-28T17:05:48.809Z level=INFO source=download.go:297 msg="c1864a5eb193 part 0 attempt 1 failed: read tcp 10.111.222.1:43618->172.64.66.2:443: read: software caused connection abort, retrying in 2s"
+time=2026-06-28T17:05:48.810Z level=INFO source=download.go:297 msg="c1864a5eb193 part 1 attempt 2 failed: read tcp 10.111.222.1:43738->172.64.66.2:443: read: software caused connection abort, retrying in 4s"
+time=2026-06-28T17:05:51.922Z level=INFO source=download.go:297 msg="c1864a5eb193 part 7 attempt 2 failed: read tcp 10.111.222.1:54206->172.64.66.2:443: read: software caused connection abort, retrying in 4s"
+time=2026-06-28T17:05:51.923Z level=INFO source=download.go:297 msg="c1864a5eb193 part 2 attempt 2 failed: read tcp 10.111.222.1:54252->172.64.66.2:443: read: software caused connection abort, retrying in 4s"
+time=2026-06-28T17:05:51.924Z level=INFO source=download.go:297 msg="c1864a5eb193 part 4 attempt 2 failed: read tcp 10.111.222.1:54150->172.64.66.2:443: read: software caused connection abort, retrying in 4s"
+time=2026-06-28T17:05:51.924Z level=INFO source=download.go:297 msg="c1864a5eb193 part 9 attempt 2 failed: read tcp 10.111.222.1:54244->172.64.66.2:443: read: software caused connection abort, retrying in 4s"
+time=2026-06-28T17:05:51.925Z level=INFO source=download.go:297 msg="c1864a5eb193 part 10 attempt 2 failed: read tcp 10.111.222.1:54184->172.64.66.2:443: read: software caused connection abort, retrying in 4s"
+time=2026-06-28T17:05:51.925Z level=INFO source=download.go:297 msg="c1864a5eb193 part 13 attempt 2 failed: read tcp 10.111.222.1:54190->172.64.66.2:443: read: software caused connection abort, retrying in 4s"
+time=2026-06-28T17:05:51.926Z level=INFO source=download.go:297 msg="c1864a5eb193 part 6 attempt 2 failed: read tcp 10.111.222.1:54178->172.64.66.2:443: read: software caused connection abort, retrying in 4s"
+time=2026-06-28T17:05:51.928Z level=INFO source=download.go:297 msg="c1864a5eb193 part 0 attempt 2 failed: read tcp 10.111.222.1:54230->172.64.66.2:443: read: software caused connection abort, retrying in 4s"
+time=2026-06-28T17:05:51.928Z level=INFO source=download.go:297 msg="c1864a5eb193 part 8 attempt 2 failed: read tcp 10.111.222.1:54166->172.64.66.2:443: read: software caused connection abort, retrying in 4s"
+time=2026-06-28T17:05:51.929Z level=INFO source=download.go:297 msg="c1864a5eb193 part 14 attempt 2 failed: read tcp 10.111.222.1:54262->172.64.66.2:443: read: software caused connection abort, retrying in 4s"
+time=2026-06-28T17:05:51.929Z level=INFO source=download.go:297 msg="c1864a5eb193 part 15 attempt 2 failed: read tcp 10.111.222.1:54256->172.64.66.2:443: read: software caused connection abort, retrying in 4s"
+time=2026-06-28T17:05:51.929Z level=INFO source=download.go:297 msg="c1864a5eb193 part 3 attempt 2 failed: read tcp 10.111.222.1:54218->172.64.66.2:443: read: software caused connection abort, retrying in 4s"
+time=2026-06-28T17:05:51.929Z level=INFO source=download.go:297 msg="c1864a5eb193 part 11 attempt 2 failed: read tcp 10.111.222.1:54204->172.64.66.2:443: read: software caused connection abort, retrying in 4s"
+time=2026-06-28T17:06:33.110Z level=WARN source=model_recommendations.go:168 msg="model recommendations refresh failed" error="Get \"https://ollama.com/api/experimental/model-recommendations\": context deadline exceeded"
+time=2026-06-28T17:06:33.115Z level=INFO source=model_recommendations.go:177 msg="model recommendations cache sleep scheduled" wait=16m5.1663161s consecutive_failures=2
+time=2026-06-28T17:12:07.473Z level=INFO source=download.go:179 msg="downloading 097a36493f71 in 1 8.4 KB part(s)"
+time=2026-06-28T17:12:08.763Z level=INFO source=download.go:179 msg="downloading 109037bec39c in 1 136 B part(s)"
+time=2026-06-28T17:12:10.087Z level=INFO source=download.go:179 msg="downloading 22a838ceb7fb in 1 84 B part(s)"
+time=2026-06-28T17:12:11.466Z level=INFO source=download.go:179 msg="downloading 887433b89a90 in 1 483 B part(s)"
+[GIN] 2026/06/28 - 17:12:17 | 200 |        10m38s |       127.0.0.1 | POST     "/api/pull"
+[GIN] 2026/06/28 - 17:12:18 | 200 |  492.692077ms |       127.0.0.1 | POST     "/api/show"
+time=2026-06-28T17:12:19.436Z level=INFO source=sched.go:1158 msg="disabling mmap for llama-server load by default" model=/data/data/com.termux/files/home/.ollama/models/blobs/sha256-c1864a5eb19305c40519da12cc543519e48a0697ecd30e15d5ac228644957d12 reason=cpu
+time=2026-06-28T17:12:19.437Z level=INFO source=server.go:109 msg="using llama-server for model" model=/data/data/com.termux/files/home/.ollama/models/blobs/sha256-c1864a5eb19305c40519da12cc543519e48a0697ecd30e15d5ac228644957d12
+time=2026-06-28T17:12:19.451Z level=INFO source=llama_server.go:425 msg="starting llama-server" cmd="/data/data/com.termux/files/usr/lib/ollama/llama-server --model /data/data/com.termux/files/home/.ollama/models/blobs/sha256-c1864a5eb19305c40519da12cc543519e48a0697ecd30e15d5ac228644957d12 --port 42887 --host 127.0.0.1 --no-webui --offline -c 4096 -np 1 --log-verbosity 4 --no-log-prefix --no-log-timestamps --no-jinja --chat-template chatml --no-mmap --flash-attn auto -b 512 -ub 512 --context-shift --keep 4"
+time=2026-06-28T17:12:19.456Z level=INFO source=sched.go:623 msg="system memory" total="3.5 GiB" free="1.4 GiB" free_swap="6.0 GiB"
+time=2026-06-28T17:12:19.456Z level=INFO source=llama_server.go:960 msg="loading model via llama-server" model=/data/data/com.termux/files/home/.ollama/models/blobs/sha256-c1864a5eb19305c40519da12cc543519e48a0697ecd30e15d5ac228644957d12
+time=2026-06-28T17:12:19.456Z level=INFO source=llama_server.go:1207 msg="waiting for llama-server to start responding"
+time=2026-06-28T17:12:19.458Z level=INFO source=llama_server.go:1262 msg="waiting for llama-server to become available" status="llm server not responding"
+common_params_print_info: build 1 (51eae8c) with Clang 21.0.0 for Android aarch64
+log_info: verbosity = 4 (adjust with the `-lv N` CLI arg)
+device_info:
+  - CPU     : CPU (3559 MiB, 3559 MiB free)
+system_info: n_threads = 8 (n_threads_batch = 8) / 8 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | DOTPROD = 1 | LLAMAFILE = 1 | REPACK = 1 | 
+srv          init: using 7 threads for HTTP server
+srv          init: The UI is disabled
+srv          init: Use --ui/--no-ui (or deprecated --webui/--no-webui) to enable/disable
+srv         start: binding port with default address family
+srv  llama_server: loading model
+srv    load_model: loading model '/data/data/com.termux/files/home/.ollama/models/blobs/sha256-c1864a5eb19305c40519da12cc543519e48a0697ecd30e15d5ac228644957d12'
+common_init_result: fitting params to device memory ...
+common_init_result: (for bugs during this step try to reproduce them with -fit off, or provide --verbose logs if the bug only occurs with -fit on)
+common_params_fit_impl: getting device memory data for initial parameters:
+time=2026-06-28T17:12:19.717Z level=INFO source=llama_server.go:1262 msg="waiting for llama-server to become available" status="llm server loading model"
+common_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+common_memory_breakdown_print: |   - Host               |                  719 =   531 +      72 +     116                |
+common_memory_breakdown_print: |   - CPU_REPACK         |                 1594 =  1594 +       0 +       0                |
+common_params_fit_impl: projected to use 719 MiB of host memory vs. 3559 MiB of total host memory
+common_params_fit_impl: will leave 2839 >= 1024 MiB of system memory, no changes needed
+common_fit_params: successfully fit params to free device memory
+common_fit_params: fitting params to free memory took 0.78 seconds
+llama_model_loader: loaded meta data with 21 key-value pairs and 164 tensors from /data/data/com.termux/files/home/.ollama/models/blobs/sha256-c1864a5eb19305c40519da12cc543519e48a0697ecd30e15d5ac228644957d12 (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = gemma
+llama_model_loader: - kv   1:                               general.name str              = gemma-2b-it
+llama_model_loader: - kv   2:                       gemma.context_length u32              = 8192
+llama_model_loader: - kv   3:                          gemma.block_count u32              = 18
+llama_model_loader: - kv   4:                     gemma.embedding_length u32              = 2048
+llama_model_loader: - kv   5:                  gemma.feed_forward_length u32              = 16384
+llama_model_loader: - kv   6:                 gemma.attention.head_count u32              = 8
+llama_model_loader: - kv   7:              gemma.attention.head_count_kv u32              = 1
+llama_model_loader: - kv   8:                 gemma.attention.key_length u32              = 256
+llama_model_loader: - kv   9:               gemma.attention.value_length u32              = 256
+llama_model_loader: - kv  10:     gemma.attention.layer_norm_rms_epsilon f32              = 0.000001
+llama_model_loader: - kv  11:                       tokenizer.ggml.model str              = llama
+llama_model_loader: - kv  12:                tokenizer.ggml.bos_token_id u32              = 2
+llama_model_loader: - kv  13:                tokenizer.ggml.eos_token_id u32              = 1
+llama_model_loader: - kv  14:            tokenizer.ggml.padding_token_id u32              = 0
+llama_model_loader: - kv  15:            tokenizer.ggml.unknown_token_id u32              = 3
+llama_model_loader: - kv  16:                      tokenizer.ggml.tokens arr[str,256128]  = ["<pad>", "<eos>", "<bos>", "<unk>", ...
+llama_model_loader: - kv  17:                      tokenizer.ggml.scores arr[f32,256128]  = [0.000000, 0.000000, 0.000000, 0.0000...
+llama_model_loader: - kv  18:                  tokenizer.ggml.token_type arr[i32,256128]  = [3, 3, 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, ...
+llama_model_loader: - kv  19:               general.quantization_version u32              = 2
+llama_model_loader: - kv  20:                          general.file_type u32              = 2
+llama_model_loader: - type  f32:   37 tensors
+llama_model_loader: - type q4_0:  126 tensors
+llama_model_loader: - type q8_0:    1 tensors
+print_info: file format = GGUF V3 (latest)
+print_info: file type   = Q4_0
+print_info: file size   = 1.56 GiB (5.34 BPW) 
+load: control-looking token:    107 '<end_of_turn>' was not control-type; this is probably a bug in the model. its type will be overridden
+load: 0 unused tokens
+load: control-looking token:    213 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+load: printing all EOG tokens:
+load:   - 1 ('<eos>')
+load:   - 107 ('<end_of_turn>')
+load:   - 213 ('</s>')
+load: special tokens cache size = 6
+load: token to piece cache size = 1.6014 MB
+print_info: arch                  = gemma
+print_info: vocab_only            = 0
+print_info: no_alloc              = 0
+print_info: n_ctx_train           = 8192
+print_info: n_embd_inp            = 2048
+print_info: n_embd                = 2048
+print_info: n_embd_out            = 2048
+print_info: n_layer               = 18
+print_info: n_layer_all           = 18
+print_info: n_head                = 8
+print_info: n_head_kv             = 1
+print_info: n_rot                 = 256
+print_info: n_swa                 = 0
+print_info: is_swa_any            = 0
+print_info: n_embd_head_k         = 256
+print_info: n_embd_head_v         = 256
+print_info: n_gqa                 = 8
+print_info: n_embd_k_gqa          = 256
+print_info: n_embd_v_gqa          = 256
+print_info: f_norm_eps            = 0.0e+00
+print_info: f_norm_rms_eps        = 1.0e-06
+print_info: f_clamp_kqv           = 0.0e+00
+print_info: f_max_alibi_bias      = 0.0e+00
+print_info: f_logit_scale         = 0.0e+00
+print_info: f_attn_scale          = 0.0e+00
+print_info: f_attn_value_scale    = 0.0000
+print_info: n_ff                  = 16384
+print_info: n_expert              = 0
+print_info: n_expert_used         = 0
+print_info: n_expert_groups       = 0
+print_info: n_group_used          = 0
+print_info: causal attn           = 1
+print_info: pooling type          = -1
+print_info: rope type             = 2
+print_info: rope scaling          = linear
+print_info: freq_base_train       = 10000.0
+print_info: freq_scale_train      = 1
+print_info: n_ctx_orig_yarn       = 8192
+print_info: rope_yarn_log_mul     = 0.0000
+print_info: rope_finetuned        = unknown
+print_info: model type            = 2B
+print_info: model params          = 2.51 B
+print_info: general.name          = gemma-2b-it
+print_info: vocab type            = SPM
+print_info: n_vocab               = 256128
+print_info: n_merges              = 0
+print_info: BOS token             = 2 '<bos>'
+print_info: EOS token             = 1 '<eos>'
+print_info: EOT token             = 107 '<end_of_turn>'
+print_info: UNK token             = 3 '<unk>'
+print_info: PAD token             = 0 '<pad>'
+print_info: LF token              = 227 '<0x0A>'
+print_info: EOG token             = 1 '<eos>'
+print_info: EOG token             = 107 '<end_of_turn>'
+print_info: EOG token             = 213 '</s>'
+print_info: max token length      = 93
+load_tensors: loading model tensors, this can take a while... (mmap = false, direct_io = false)
+load_tensors:          CPU model buffer size =   531.80 MiB
+load_tensors:   CPU_REPACK model buffer size =  1594.64 MiB
