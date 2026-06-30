@@ -1,12 +1,12 @@
-Creative Commons Attribution-ShareAlike 4.0 International
+# Creative Commons Attribution-ShareAlike 4.0 International
 
-All hardware designs, documentation, build guides, mix recipes,
-and non-software content in this repository.
+This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
+To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/
 
-You are free to share and adapt for any purpose, even commercially,
-provided you give attribution and share alike under the same license.
+You are free to:
+- Share — copy and redistribute the material in any medium or format
+- Adapt — remix, transform, and build upon the material for any purpose, even commercially
 
-Full license: https://creativecommons.org/licenses/by-sa/4.0/legalcode
-
-No patents. No monopolies. Immutable commons.
-Build freely. Share improvements.
+Under the following terms:
+- Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made
+- ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original

@@ -1,9 +1,9 @@
-*.csv
-.env
-*.local
 .DS_Store
+Thumbs.db
+*.swp
+node_modules/
 __pycache__/
+.vscode/
+.idea/
+.env
 *.pyc
-.tokens_log
-ollama.log
-bin/

@@ -1,0 +1,98 @@
+#!/data/data/com.termux/files/usr/bin/python3
+"""
+Kai Cascading CLI
+Order: gpt-oss-120b → qwen/qwen3.6-27b → gpt-oss-20b → llama-3.3-70b-versatile
+"""
+
+import os
+import sys
+import json
+import time
+from datetime import datetime, timedelta
+from pathlib import Path
+
+try:
+    import requests
+except ImportError:
+    print("pip install requests")
+    sys.exit(1)
+
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+API_URL = "https://api.groq.com/openai/v1/chat/completions"
+
+MODELS = [
+    "openai/gpt-oss-120b",
+    "qwen/qwen3.6-27b", 
+    "openai/gpt-oss-20b",
+    "llama-3.3-70b-versatile"
+]
+
+RATE_LIMIT = 200_000
+WINDOW_MINUTES = 30
+TOKENS_FILE = Path.home() / "openroot" / ".tokens_log"
+
+def load_history():
+    if not TOKENS_FILE.exists():
+        return []
+    try:
+        with open(TOKENS_FILE) as f:
+            data = json.load(f)
+        cutoff = datetime.now() - timedelta(minutes=WINDOW_MINUTES)
+        return [t for ts, t in data if datetime.fromisoformat(ts) > cutoff ]
+
+def save_usage(tokens):
+    history = load_history()
+    history.append((datetime.now().isoformat(), tokens))
+    with open(TOKENS_FILE, 'w') as f:
+        json.dump(history, f)
+
+def get_usage():
+    return sum(load_history())
+
+def call_model(prompt, model):
+    headers = {
+        "Authorization": f"Bearer {GROQ_API_KEY}",
+        "Content-Type": "application/json"
+    }
+    payload = {
+        "model": model,
+        "messages": ,
+        "temperature": 0.7,
+        "max_tokens": 2048
+    }
+
+    try:
+        r = requests.post(API_URL, json=payload, headers=headers, timeout=25)
+        r.raise_for_status()
+        data = r.json()
+        text = data [0]  tokens = data.get("usage", {}).get("total_tokens", 0)
+        return text, tokens
+    except Exception as e:
+        print(f"    Failed with {model}: {type(e).__name__}")
+        return None, 0
+
+def main():
+    if len(sys.argv) < 2:
+        print("Usage: kai \"your question\"")
+        sys.exit(1)
+
+    prompt = " ".join(sys.argv[1:])
+    print("=== Kai (Cascading) ===")
+
+    if get_usage() >= RATE_LIMIT - 10000:
+        print("⚠️  Near rate limit. Switching models more aggressively.")
+
+    for model in MODELS:
+        print(f"Trying → {model}")
+        reply, tokens = call_model(prompt, model)
+        if reply:
+            save_usage(tokens)
+            print(f"\n{reply}\n")
+            print(f"✅ Used: {model}")
+            print(f"📊 Tokens: {tokens} | Total window: {get_usage()}/{RATE_LIMIT}")
+            return
+
+    print("❌ All models failed.")
+
+if __name__ == "__main__":
+    main()
