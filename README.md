@@ -1,154 +1,85 @@
-# AeroCement Ecosystem
-### Volumetric Thermal/Cryo Energy & Agritech Nodes
+# OpenRoot
+### The Open Foundation for a Civilization That Works
 
-**Designed by Jesse Ray — independent inventor and systems designer, SE Missouri**
+> *"There will come a time when the animals are suffering and the earth is weeping,*
+> *and there shall come a tribe from all corners of the earth,*
+> *of all colors, classes, and creeds,*
+> *and through their actions, shall make the earth green again,*
+> *and they will be known as the Warriors of the Rainbow."*
+> — Hopi Prophecy
 
-> *"What creates the most good with the least effort?"*
+That time is now. This is the root.
 
----
+**Founded by:** Jesse McMillen — Sikeston, Missouri
+**Status:** Node Zero Active — June 2026
+**License:** Hardware CC-BY-SA 4.0 | Software GPL v3
+**Archive:** DOI 10.5281/zenodo.20639511
+**Contact:** jrm8908@proton.me
 
-## What This Is
+## What OpenRoot Is
 
-The AeroCement Ecosystem is an open-source passive solar system that produces cold storage, preserved food, and mechanical power — with no compressor, no refrigerant, and no grid connection.
+1. **Open hardware library** — CC-BY-SA 4.0 forever. No patents. Ever.
+2. **Knowledge commons** — Community-built, peer-reviewed. Anyone can use and improve.
+3. **ACRE token** — Minted only for verified physical work. No speculation. No pre-mine.
 
-It is designed to be built by communities, for communities, starting in rural and underserved areas of SE Missouri and replicating outward from there.
+## The Thermal Loop
 
----
+Passive solar-thermal cooling. Zero grid. Zero fans.
 
-## The Core Innovation
+Fresh air → Desiccant → Underground labyrinth (FILLED SOLID with wet aerocement, 500–2,000 m²/m³ surface area) → Cold Tank B (radiative night-sky lid) → Solar panel → Hot Tank A → Stirling engine → back to desiccant.
 
-### The Panel
+Output air approaches ~55°F ground temperature on a hot day. Same physics as a ground-source heat pump. We never claim greater than 100% thermodynamic efficiency.
 
-The foundation is a **volumetric open-cell concrete panel** made with activated carbon aggregate. This makes it a near-perfect black body absorber — capturing approximately **98% of incident solar energy**. The panel has an insulated back and a selective cover to minimize re-radiation.
+Full specs: projects/aerocement/
 
-This is not a solar panel in the photovoltaic sense. It absorbs heat directly into a porous thermal mass that air can flow through.
+## Projects
 
-### The Thermal/Cryo Loop
+| Project | What It Is |
+|---------|-----------|
+| AeroCement | Node Zero — Sikeston MO. The thermal loop. The proof. |
+| The Hearth | Community energy sovereignty. Powers a neighborhood. |
+| AEGIS MESH | Decentralized mesh. Communications that cannot be shut off. |
 
-Solar heat charges a **200–500 gallon insulated hot water battery**.
+## ACRE Token
 
-Hot air from the system passes through a **desiccant bed**, dropping relative humidity as low as possible before entering the tunnel.
+Minted only for verified physical work. No airdrops. No pre-mine.
+Minting formula: ACRE = (Joules × 0.000001) + (SqFt × 1.0) + (Lbs Food × 0.5) + (Trees × 5.0) + (Blueprints × 10.0) + (Nodes × 25.0)
+Two neighboring validators approve every claim.
+Full design: tokens/ACRE_SPECIFICATION.md
 
-The tunnel is the key: it is **filled** (not merely lined) with serpentine modules of the same wetted volumetric porous concrete. Air flows through the porous block structure itself — not just around it. This creates an enormous surface area for heat exchange.
+## Bounty Board
 
-When hot, dry air contacts wet, cold porous concrete at ~55°F (ground temperature at ~10 feet depth), a massive latent heat exchange occurs. Outlet air temperature can reach **~35°F (1.7°C)** even when it is 100°F outside.
+| Build | Bounty |
+|-------|--------|
+| Water purification | 2,000 ACRE |
+| Fridge | 5,000 ACRE |
+| First thermal loop node | 10,000 ACRE |
+| Tractor | 25,000 ACRE |
+| Bus | 40,000 ACRE |
+| Power plant | 150,000 ACRE |
 
-That cold output charges a **cold battery** — another insulated tank with a reflective/radiative lid for passive night-sky cooling.
+## Hard Rules
 
-### Energy Harvesting
+1. Never claim greater than 100% thermodynamic efficiency
+2. 21-day wet cure — non-negotiable
+3. Tunnel FILLED SOLID — never lined or walled
+4. Two separate tanks — never combined
+5. Desiccant at intake only
+6. No patents. Ever.
+7. Failures are data — document honestly
+8. Serve the least first
 
-The temperature differential between the hot battery and cold battery drives:
-- **Stirling engines** — mechanical work (pumps, mills, compressors)
-- **TEG modules** — low-voltage electricity
+## Support This Work
 
-This harvested energy powers freeze-dryers, circulation pumps, fans, and other processing loads.
+Built alone, on a phone, after shifts. Everything here is free. Always will be.
 
-### Integration
+| Solana | 3fF26gcj1ednMUASxJxo1dt5rQ2ZegXbH7k4ynJazerk |
+| Bitcoin | bc1qq69dze04yul5cl5lgv3hakg4scxfzq3swje6ey |
+| Ethereum | 0x8eA4dBF495ef2Ab6E4371C75060390563b79c138 |
 
-The system is designed to connect with:
-- Aquaponics
-- Spirulina cultivation
-- Beekeeping
-- Food preservation and freeze-drying
+The project succeeds when it no longer needs Jesse McMillen.
 
----
-
-## Why It Matters
-
-Rural and low-income communities often lack reliable cold chain infrastructure. Produce spoils. Medicine goes bad. Food insecurity compounds.
-
-This system addresses that with materials that can be made locally, designs that can be replicated without specialized labor, and governance that keeps control in community hands.
-
----
-
-## Tokenomics — Proof of Physical Work (PoPW)
-
-Tokens are minted for **verified real-world outputs only** — not speculation.
-
-| What earns tokens | Verification method |
-|---|---|
-| Verified node build | Photo + sensor data + community audit |
-| Verified uptime | Automated telemetry |
-| Kilograms of freeze-dried food | Logged output + spot checks |
-| Code, design, or documentation contributions | GitHub-linked commits |
-
-**Tokens grant:**
-- Access to land or time-share on project sites
-- Resource credits (cold hours, water, energy, processing time)
-- Governance votes on project direction and upgrades
-
-The token is a **utility/credit + governance token**, not a speculative security.
-
-**Legal structure:** 501(c)(3) nonprofit + LLC, designed to protect the mission while allowing sustainable commercialization.
-
----
-
-## Project Philosophy
-
-Every decision in this project is filtered through one question:
-
-> **"What creates the most good with the least effort?"*
-
-We apply permaculture principles throughout, with special weight on:
-- **Stack Functions** — one element serves multiple roles
-- **Catch & Store Energy** — passive systems preferred
-- **Small & Slow Solutions** — replicable before scalable
-- **Use & Value Edge-Effect** — the most productive zones are at the boundaries
+One pour. One node. One warrior at a time.
 
 ---
-
-## Repository Structure
-
-```
-AeroCement_Ecosystem/
-├── docs/           # System design documents and technical specs
-├── hardware/       # Panel designs, tunnel modules, BOM
-├── firmware/       # Sensor and control logic
-├── grants/         # Grant strategy and application materials
-├── legal/          # 501(c)(3) + LLC blueprint
-├── tokens/         # PoPW tokenomics design
-├── community/      # Governance framework
-├── pilot/          # 90-day pilot plan (SE Missouri)
-└── kai-mission-tools/  # Local AI assistant configuration
-```
-
----
-
-## Development History
-
-This project has evolved across 7 public repositories at [github.com/jesseray718](https://github.com/jesseray718), documenting the full journey from initial concept through working prototype. This repository represents the current unified state of the system.
-
----
-
-## Status
-
-- [x] Core thermal loop design complete
-- [x] Panel specification documented
-- [x] Tunnel module design documented
-- [x] Tokenomics framework designed
-- [x] Legal structure blueprint complete
-- [x] Grant strategy outlined
-- [x] Local AI assistant (Kai 9000) running on-site hardware
-- [ ] Physical pilot build — SE Missouri (in progress)
-- [ ] First node sensor telemetry
-- [ ] Community governance launch
-
----
-
-## Get Involved
-
-This project is open source and community-governed. If you want to build a node, contribute a design, or just follow the work:
-
-- Browse the docs
-- Open an issue with questions or ideas
-- Fork and build — that's the whole point
-
----
-
-## License
-
-All designs, documentation, and code in this repository are released under the [MIT License](LICENSE) unless otherwise noted. Build freely. Give credit. Share improvements.
-
----
-
-*Built in SE Missouri. Designed for the world.*
+*CC-BY-SA 4.0 (Hardware) | GPL v3 (Software) | No Patents. Ever.*

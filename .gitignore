@@ -1,9 +1,8 @@
+*.log
+ollama.log
+.tokens_log
+sensor_log*.csv
+openroot/
 .DS_Store
-Thumbs.db
 *.swp
-node_modules/
-__pycache__/
-.vscode/
-.idea/
 .env
-*.pyc
