@@ -34,3 +34,6 @@ BACKUP CORNER: /sdcard/OpenRoot-Backups (last 5, survives reinstall)
 DOCS: PHILOSOPHY.md (why/de-commodify) · FINANCE-PLAN.md (flywheel+hardware pipeline) · JOBSITE-APPS.md (F-Droid kit)
 NEXT: fund sol memo if pending · Oracle VM → run vm-bootstrap.sh + ipfs pin · NLnet app + HCB sponsorship · install Termux:API/Widget/KeePassDX
 RULE: raw transcripts are compost once distilled here; BRIDGE.md is the seed. Paste it into any AI = full context restored.
+
+## STATE v3 — 2026-07-02
+ADDED: tools/calc.py (SI quote calc) · docs/KNOWLEDGE-WHEEL.md (forkable index) · LLC formation staged · identity → jesse@openroot.dev staged pending domain
