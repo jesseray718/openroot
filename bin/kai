@@ -1,7 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/python3
 """
-Kai Cascading CLI
-Order: gpt-oss-120b → qwen/qwen3.6-27b → gpt-oss-20b → llama-3.3-70b-versatile
+Kai Groq CLI - Local wrapper for Groq's Llama 70B
+Tracks 200k tokens per 30 minutes (rolling window)
 """
 
 import os
@@ -14,85 +14,139 @@ from pathlib import Path
 try:
     import requests
 except ImportError:
-    print("pip install requests")
+    print("Error: requests library not found. Install with: pip install requests")
     sys.exit(1)
 
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+MODEL = "llama-3.3-70b-versatile"
 API_URL = "https://api.groq.com/openai/v1/chat/completions"
-
-MODELS = [
-    "openai/gpt-oss-120b",
-    "qwen/qwen3.6-27b", 
-    "openai/gpt-oss-20b",
-    "llama-3.3-70b-versatile"
-]
-
 RATE_LIMIT = 200_000
 WINDOW_MINUTES = 30
-TOKENS_FILE = Path.home() / "openroot" / ".tokens_log"
 
-def load_history():
+OPENROOT = Path.home() / "openroot"
+TOKENS_FILE = OPENROOT / ".tokens_log"
+
+def load_token_history():
+    """Load recorded token usage from the last 30 minutes."""
     if not TOKENS_FILE.exists():
         return []
     try:
-        with open(TOKENS_FILE) as f:
-            data = json.load(f)
+        with open(TOKENS_FILE, 'r') as f:
+            history = json.load(f)
         cutoff = datetime.now() - timedelta(minutes=WINDOW_MINUTES)
-        return [t for ts, t in data if datetime.fromisoformat(ts) > cutoff ]
+        recent = [
+            (ts, tokens)
+            for ts, tokens in history
+            if datetime.fromisoformat(ts) > cutoff
+        ]
+        return recent
+    except (json.JSONDecodeError, ValueError):
+        return []
 
-def save_usage(tokens):
-    history = load_history()
-    history.append((datetime.now().isoformat(), tokens))
+def save_token_usage(tokens_used):
+    """Log token usage with timestamp."""
+    history = load_token_history()
+    history.append((datetime.now().isoformat(), tokens_used))
     with open(TOKENS_FILE, 'w') as f:
         json.dump(history, f)
 
-def get_usage():
-    return sum(load_history())
+def get_token_usage():
+    """Calculate total tokens used in the rolling 30-min window."""
+    history = load_token_history()
+    return sum(tokens for _, tokens in history)
 
-def call_model(prompt, model):
+def check_rate_limit():
+    """Check current usage and warn if near limit."""
+    used = get_token_usage()
+    remaining = RATE_LIMIT - used
+    percent = (used / RATE_LIMIT) * 100
+
+    if remaining <= 0:
+        print(f"⛔ RATE LIMIT EXCEEDED ({used:,} / {RATE_LIMIT:,} tokens)")
+        print(f"⏳ Window resets in 30 minutes. Waiting...")
+        time.sleep(1800)
+        return True
+
+    if percent > 80:
+        print(f"⚠️  WARNING: {percent:.1f}% of limit used ({used:,} / {RATE_LIMIT:,})")
+        print(f"   Remaining: {remaining:,} tokens | Resets in ~30 min\n")
+
+    return False
+
+def call_groq(prompt):
+    """Make API call to Groq and return response + token usage."""
+    if not GROQ_API_KEY:
+        print("Error: GROQ_API_KEY environment variable not set")
+        sys.exit(1)
+
     headers = {
         "Authorization": f"Bearer {GROQ_API_KEY}",
         "Content-Type": "application/json"
     }
+
     payload = {
-        "model": model,
-        "messages": ,
+        "model": MODEL,
+        "messages": [{"role": "user", "content": prompt}],
         "temperature": 0.7,
-        "max_tokens": 2048
+        "max_tokens": 2048,
+        "stream": False
     }
 
     try:
-        r = requests.post(API_URL, json=payload, headers=headers, timeout=25)
-        r.raise_for_status()
-        data = r.json()
-        text = data [0]  tokens = data.get("usage", {}).get("total_tokens", 0)
-        return text, tokens
+        response = requests.post(API_URL, json=payload, headers=headers, timeout=30)
+        response.raise_for_status()
+        data = response.json()
+
+        reply = data["choices"][0]["message"]["content"]
+        usage = data.get("usage", {})
+        prompt_tokens = usage.get("prompt_tokens", 0)
+        completion_tokens = usage.get("completion_tokens", 0)
+        total_tokens = prompt_tokens + completion_tokens
+
+        return reply, total_tokens
+
+    except requests.exceptions.ConnectionError:
+        print("❌ Connection error: Check internet and Groq API status")
+        sys.exit(1)
+    except requests.exceptions.HTTPError as e:
+        if response.status_code == 429:
+            print("⛔ API Rate limited by Groq (429)")
+        else:
+            print(f"❌ API Error: {response.status_code}")
+            print(response.text)
+        sys.exit(1)
     except Exception as e:
-        print(f"    Failed with {model}: {type(e).__name__}")
-        return None, 0
+        print(f"❌ Error: {e}")
+        sys.exit(1)
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: kai \"your question\"")
+        print("Usage: kai \"your prompt here\"")
         sys.exit(1)
 
     prompt = " ".join(sys.argv[1:])
-    print("=== Kai (Cascading) ===")
 
-    if get_usage() >= RATE_LIMIT - 10000:
-        print("⚠️  Near rate limit. Switching models more aggressively.")
+    print("=== Kai (Groq Llama 70B) ===")
 
-    for model in MODELS:
-        print(f"Trying → {model}")
-        reply, tokens = call_model(prompt, model)
-        if reply:
-            save_usage(tokens)
-            print(f"\n{reply}\n")
-            print(f"✅ Used: {model}")
-            print(f"📊 Tokens: {tokens} | Total window: {get_usage()}/{RATE_LIMIT}")
-            return
+    if check_rate_limit():
+        main()
+        return
 
-    print("❌ All models failed.")
+    print(f"📤 Sending prompt...\n")
+
+    reply, tokens_used = call_groq(prompt)
+
+    save_token_usage(tokens_used)
+
+    print(reply)
+    print(f"\n📊 Tokens used: {tokens_used:,}")
+
+    used = get_token_usage()
+    remaining = RATE_LIMIT - used
+    percent = (used / RATE_LIMIT) * 100
+
+    print(f"📈 Window usage: {used:,} / {RATE_LIMIT:,} ({percent:.1f}%)")
+    print(f"⏱️  Remaining: {remaining:,} tokens (30-min rolling window)")
 
 if __name__ == "__main__":
     main()
