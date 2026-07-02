@@ -24,3 +24,13 @@ COMPUTE: A15 = cockpit, cloud = engine. Oracle Always-Free ARM VM (4c/24GB, Kai 
 FINANCE FLYWHEEL: EIN (free) → MO LLC ($50) → biz checking → net-30 x3 → Paydex 80. Fiscal sponsorship (HCB) before own 501c3. Grants by fit: NLnet (top), Awesome Fdn $1k, Hackaday Prize, REAP yr-2, SBIR parked. Personal credit: util <10%, never miss. No BNPL. R&D expensing restored; QBI 20%; S-corp only >~$45k net. VITA free filing. Free pros: MO SBDC (Cape Girardeau), SCORE.
 HARDWARE PIPELINE (easiest first): Buy Nothing ask w/ project link · library card (+MOBIUS) · PCs for People · human-I-T · GovDeals workstation watchlist (32GB+ = local 30-70B LLMs) · direct-ask letters to local IT · Computers w/ Causes.
 TRACKER: ~/openroot/docs/FINANCE-PLAN.md
+
+## STATE v2 — 2026-07-02 (supersedes v1 STATE; latest vN wins)
+ANCHORS: ipfs://pending · doi:pending · sol:pending · genesis.sh re-runs to completion
+LEDGER: ACRE seeded — acre/GENESIS.json + LEDGER.jsonl, supply 0, no premine, mint = verified physical work only (concept)
+NODE 0: this phone = cockpit; manifest node/NODE.md; topology phone⇄GitHub⇄VM(pinner)⇄IPFS⇄mesh
+SCRIPTS: genesis.sh (anchor pipeline) · node-zero.sh (compact+backup+push, idempotent, one-tap via Termux:Widget)
+BACKUP CORNER: /sdcard/OpenRoot-Backups (last 5, survives reinstall)
+DOCS: PHILOSOPHY.md (why/de-commodify) · FINANCE-PLAN.md (flywheel+hardware pipeline) · JOBSITE-APPS.md (F-Droid kit)
+NEXT: fund sol memo if pending · Oracle VM → run vm-bootstrap.sh + ipfs pin · NLnet app + HCB sponsorship · install Termux:API/Widget/KeePassDX
+RULE: raw transcripts are compost once distilled here; BRIDGE.md is the seed. Paste it into any AI = full context restored.
