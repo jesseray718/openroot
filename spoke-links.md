@@ -19,3 +19,4 @@
 
 ## Integration Rule
 Every module works standalone. Every module speaks the same protocol (git + IPFS + ACRE).
+SimpleX Channel: https://smp9.simplex.im/a#vklZrSjZTQdgXBqW_sLK1h5FeajDoa7wTaSWGSw62Sw

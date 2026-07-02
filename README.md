@@ -71,6 +71,8 @@ Full design: tokens/ACRE_SPECIFICATION.md
 
 ## Support This Work
 
+**Join the channel (SimpleX):** https://smp9.simplex.im/a#vklZrSjZTQdgXBqW_sLK1h5FeajDoa7wTaSWGSw62Sw
+
 Built alone, on a phone, after shifts. Everything here is free. Always will be.
 
 | Solana | 3fF26gcj1ednMUASxJxo1dt5rQ2ZegXbH7k4ynJazerk |
