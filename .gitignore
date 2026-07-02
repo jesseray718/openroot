@@ -1,8 +1,9 @@
-*.log
-ollama.log
-.tokens_log
-sensor_log*.csv
-openroot/
-.DS_Store
-*.swp
-.env
+*.tar.gz
+*.gguf
+*.bin
+*.safetensors
+node_modules/
+.ollama/
+backups/
+*.env
+!archive/genesis-state.env
