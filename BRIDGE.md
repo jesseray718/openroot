@@ -44,3 +44,7 @@ ADDED: tools/calc.py (SI quote calc) · docs/KNOWLEDGE-WHEEL.md (forkable index)
 ## STATE v4 — 2026-07-02
 ADDED: docs/AXIOMS.md (axioms+instant-inference theory) · acre/CONTRACT-SPEC.md (no-deploy-yet rule) · DeFi ruled out (overcollateralized); capital path = Kiva 0% + CDFI + grants
 PROTOCOL: kill long threads; new chat + BRIDGE.md paste = max efficiency
+
+## STATE v4 — 2026-07-02
+ADDED: docs/AXIOMS.md (axioms+instant-inference theory) · acre/CONTRACT-SPEC.md (no-deploy-yet rule) · DeFi ruled out (overcollateralized); capital path = Kiva 0% + CDFI + grants
+PROTOCOL: kill long threads; new chat + BRIDGE.md paste = max efficiency
