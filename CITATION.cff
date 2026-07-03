@@ -2,7 +2,7 @@ cff-version: 1.2.0
 title: "OpenRoot: Open-Source Appropriate-Technology Ecosystem"
 message: "If you use OpenRoot, please cite it."
 authors:
-  - family-names: McMillen
+  - family-names: Ray
     given-names: Jesse
 type: software
 license: GPL-3.0-or-later
