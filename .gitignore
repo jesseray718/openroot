@@ -7,3 +7,7 @@ node_modules/
 backups/
 *.env
 !archive/genesis-state.env
+*.log
+*.env
+.tokens_log
+nohup.out
