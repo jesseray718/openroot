@@ -48,3 +48,10 @@ PROTOCOL: kill long threads; new chat + BRIDGE.md paste = max efficiency
 ## STATE v4 — 2026-07-02
 ADDED: docs/AXIOMS.md (axioms+instant-inference theory) · acre/CONTRACT-SPEC.md (no-deploy-yet rule) · DeFi ruled out (overcollateralized); capital path = Kiva 0% + CDFI + grants
 PROTOCOL: kill long threads; new chat + BRIDGE.md paste = max efficiency
+
+## STATE v6 — 2026-07-03
+COMPLETED: openroot_fix.sh ran (topics+descs on openroot/aerocement, community files pushed, profile README live, spoke template populated, OpenCell-Thermal-System + renaissance-protocol archived). gh auth refreshed with codespace scope. Terms backup on /sdcard. Profile repo has topics.
+LIVE REPOS: openroot (hub, 9 topics) · aerocement (6 topics) · openroot-spoke-template (5 topics, skeleton) · civilization2.0 (8 topics) · jesseray718 (profile README)
+ARCHIVED: AeroCement_Ecosystem, open-cell-thermal-loop, open-cell-thermal-open-cell-the, aerocement-, OpenCell-Thermal-System, renaissance-protocol
+BLOCKED: PINATA_JWT + ZENODO_TOKEN + GROQ_API_KEY still empty in ~/.openroot-secrets · Oracle VM not provisioned · Zenodo toggle not flipped · repos not pinned · OSHWA not filed
+NEXT: fill secrets → Zenodo toggle + gh release create v0.1.0 → pin repos → provision Oracle ARM VM → build llama.cpp → EnergyPlus
