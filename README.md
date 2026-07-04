@@ -42,9 +42,9 @@ Full specs: projects/aerocement/
 
 ## ACRE Token
 
-Minted only for verified physical work. No airdrops. No pre-mine.
-Minting formula: ACRE = (Joules × 0.000001) + (SqFt × 1.0) + (Lbs Food × 0.5) + (Trees × 5.0) + (Blueprints × 10.0) + (Nodes × 25.0)
-Two neighboring validators approve every claim.
+Minted only for verified innovation — not for hours worked or repetition. No airdrops. No pre-mine.
+Building the first node in a new climate zone, fixing a documented flaw, shipping a new tool, or writing a new skill doc earns ACRE. Replicating a known build (e.g. node #47 in a climate already validated) earns 0 — it's real work, but not new knowledge.
+Two independent validators approve every claim.
 Full design: tokens/ACRE_SPECIFICATION.md
 
 ## Bounty Board
