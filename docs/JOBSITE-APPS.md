@@ -1,0 +1,11 @@
+# F-Droid kit, impact-per-effort order
+1. Termux:API — https://f-droid.org/packages/com.termux.api  (clipboard/sensors→scripts; required by termux-* cmds)
+2. Termux:Widget — https://f-droid.org/packages/com.termux.widget  (home-screen one-tap backup)
+3. Termux:Boot — https://f-droid.org/packages/com.termux.boot  (scripts survive reboot; Kai persistence)
+4. KeePassDX — https://f-droid.org/packages/com.kunzisoft.keepass.libre  (vault your API tokens/keys)
+5. Markor — https://f-droid.org/packages/net.gsantner.markor  (edit repo docs offline between pours)
+6. Syncthing-Fork — https://f-droid.org/packages/com.github.catfriend1.syncthingandroid  (phone⇄PC/VM sync, no cloud)
+7. Kiwix — https://f-droid.org/packages/org.kiwix.kiwixmobile  (offline Wikipedia/appropriate-tech libraries)
+8. Forecastie — https://f-droid.org/packages/cz.martykan.forecastie  (pour-planning weather, no ads)
+9. Open Camera — https://f-droid.org/packages/net.sourceforge.opencamera  (timestamped build documentation)
+10. Organic Maps — https://f-droid.org/packages/app.organicmaps  (offline maps to sites)

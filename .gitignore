@@ -1,0 +1,13 @@
+*.tar.gz
+*.gguf
+*.bin
+*.safetensors
+node_modules/
+.ollama/
+backups/
+*.env
+!archive/genesis-state.env
+*.log
+*.env
+.tokens_log
+nohup.out
