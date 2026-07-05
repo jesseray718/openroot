@@ -1,39 +1,43 @@
 # OpenRoot Bounty Board
 
-> **Note:** ACRE tokens do not yet exist. These bounties are posted as engineering challenges.
-> Token payouts are contingent on the ACRE token system launching, which requires 3 verified
-> nodes and a legal opinion on token classification. What you earn today is provable priority,
-> community recognition, and a permanent place in the commons. The money follows the proof.
+## Not a Prize Table — A Procurement Protocol
 
-First working physical prototype + sensor-verified data + CC-BY-SA blueprints + 2 validators wins.
+The bounty board is **not** a list of prizes Jesse is offering. It is a concept for a new way the human species directs innovation:
 
-## Active Bounties
+- Anyone proposes a need
+- Anyone contributes any amount ($0.20, $1, $5)
+- Whoever solves it first — openly, verifiably — claims the bounty
+- The solution becomes open-source (CC-BY-SA 4.0 / GPL v3)
+- The solver also earns ACRE (innovation token, minted only for verified new knowledge)
 
-| Challenge | Prize |
-|-----------|-------|
-| Scrap-steel Stirling engine (200W+) | 1,000 ACRE |
-| Stirling-powered scooter | 10,000 ACRE |
-| Stirling-powered tractor | 25,000 ACRE |
-| Stirling-powered bus | 40,000 ACRE |
-| Stirling-powered tugboat | 50,000 ACRE |
-| Stirling-powered bulldozer | 75,000 ACRE |
-| Industrial factory floor drive (5kW+) | 100,000 ACRE |
-| Community power plant (10kW+) | 150,000 ACRE |
-| Cold-battery-only refrigerator | 5,000 ACRE |
-| Aerocement water purification | 2,000 ACRE |
-| Atmospheric water harvester (10L/day) | 3,000 ACRE |
+**Why:** Consumerism and capitalism currently decide what gets invented. The bounty board replaces that with a protocol where human need sets the agenda — and the entire species can fund its own solutions collectively.
 
-## Validation Required
-1. Working physical prototype
-2. Sensor-verified data published to IPFS
-3. Complete blueprints under CC-BY-SA 4.0
-4. Two independent community validators
-5. One successful replication within 90 days
+---
 
-## Submit
-Open an Issue: [BOUNTY SUBMISSION] Challenge — Your Handle
+## Full Concept Document
 
-## Post Your Own
-Fork, add your challenge, open a PR. Anyone can post a bounty.
+Read [`BOUNTY-BOARD-CONCEPT.md`](BOUNTY-BOARD-CONCEPT.md) for the complete framework, including:
+- How it differs from venture capital, government grants, and prize competitions
+- Connection to agape mathematics (AX-018/019)
+- Illustrative examples ($1 from 1M Americans → open-source zero-fuel car)
+- Permaculture design principles applied to innovation economics
+- ACRE token's role (recognition, not currency)
+- What's needed for implementation (escrow, validation framework, protocol spec)
 
-*Every blueprint entering this commons is permanent. Cannot be patented. Belongs to everyone.*
+---
+
+## State of Implementation
+
+| Component | Status |
+|---|---|
+| Concept | ✅ Defined |
+| Protocol specification | Pending |
+| Escrow mechanism | Pending |
+| Validation framework | Pending (maps to AX-019 two-validator rule) |
+| First bounty proposal | Pending |
+
+---
+
+*The species procures its own solutions.*
+
+*CC-BY-SA 4.0 (docs) | GPL v3 (code) | No Patents. Ever.*
