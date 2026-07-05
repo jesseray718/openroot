@@ -85,3 +85,13 @@ One pour. One node. One warrior at a time.
 
 ---
 *CC-BY-SA 4.0 (Hardware) | GPL v3 (Software) | No Patents. Ever.*
+
+---
+
+## Permanently Published Research
+
+**Zenodo DOI:** [`10.5281/zenodo.21210931`](https://doi.org/10.5281/zenodo.21210931)  
+**IPFS CID:** `QmcMjnAVN9FbQ77VbwMPMCteb93U7W4REdZmZbPqoMBE4F`  
+**Status:** Peer-validated thermal cascade physics dataset — CC-BY 4.0
+
+Verify any future claims against these immutable records.
