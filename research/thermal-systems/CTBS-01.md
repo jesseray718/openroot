@@ -61,3 +61,17 @@ Stirling draws from hottest tank, rejects to coldest. Cascade auto-stages.
 - [AE-GFRC Spec](./AE-GFRC-01.md)
 - [H-003](../hypotheses/H-003.md)
 - [Zenodo DOI](https://doi.org/10.5281/zenodo.21210931)
+
+---
+
+## ⚠️ IMPORTANT DISCLAIMER
+All thermal capacity calculations are **THEORETICAL** based on ideal water properties. No full-scale battery cascade has been assembled or tested.
+
+Assumptions include:
+- Perfect insulation (real materials leak heat)
+- Uniform water mixing (stratification reduces effective storage)
+- Copper corrosion resistance long-term
+- Pumps/fans power draw not subtracted
+- Ambient temperature swings beyond ±10°F
+
+**Status: Research hypothesis pending empirical validation.**
