@@ -1,3 +1,5 @@
+> ⚠️ **STATUS: [THEORETICAL] — All performance claims are unvalidated concepts. No physical prototype has been tested. See WBTE-01-TEST-PROTOCOL.md for falsifiable test design.**
+
 # Aerated Glass-Fiber Reinforced Concrete (AE-GFRC-01)
 ### With Zirconium Substitution for Thermal Applications
 
