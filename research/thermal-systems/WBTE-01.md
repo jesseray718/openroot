@@ -1,3 +1,5 @@
+> ⚠️ **STATUS: [THEORETICAL] — All performance claims are unvalidated concepts. No physical prototype has been tested. See WBTE-01-TEST-PROTOCOL.md for falsifiable test design.**
+
 # Wet-Bulb Thermal Engine (WBTE-01)
 ### A Hybrid Thermal-Psychrometric Engine
 
