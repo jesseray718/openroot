@@ -45,7 +45,7 @@ Open-loop engine leveraging latent heat of evaporation to create sub-ambient col
 ## Performance (Validated H-003)
 - Nightly capture: 12.91 kWh/m²
 - 7-night cumulative (10m²): 82.98 kWh
-- Stirling discharge: 24.89 kWh @ 3.11 kW
+- Stirling discharge: 24.89 kWh @ 3.11 kW (H-003 SIMULATION - NO PHYSICAL PROTOTYPE YET)
 - Passive loss: 1.056 kWh/day
 - Peak ΔT: 105°F
 - Parasitic load: 0W
@@ -55,3 +55,19 @@ Open-loop engine leveraging latent heat of evaporation to create sub-ambient col
 - [AE-GFRC Spec](./AE-GFRC-01.md)
 - [H-003](../hypotheses/H-003.md)
 - [Zenodo DOI](https://doi.org/10.5281/zenodo.21210931)
+
+---
+
+## ⚠️ IMPORTANT DISCLAIMER
+All performance metrics above are **THEORETICAL CALCULATIONS** from hypothesis H-003 simulations. They have NOT been verified by laboratory testing or physical prototype measurements.
+
+Real-world variables NOT accounted for:
+- Weather variability beyond clear-sky conditions
+- Concrete curing shrinkage effects
+- Seal degradation over time
+- Heat exchanger fouling/clogging
+- Manufacturing tolerances and material impurities
+- Airflow resistance beyond laminar model assumptions
+- Stirling engine mechanical efficiency losses
+
+**Status: Research hypothesis pending empirical validation.** Do not cite as engineering spec without physical test data.
