@@ -8,7 +8,7 @@ The bounty board is **not** a list of prizes Jesse is offering. It is a concept 
 - Anyone contributes any amount ($0.20, $1, $5)
 - Whoever solves it first — openly, verifiably — claims the bounty
 - The solution becomes open-source (CC-BY-SA 4.0 / GPL v3)
-- The solver also earns ACRE (innovation token, minted only for verified new knowledge)
+- The solver also earns ACRE (innovation token — NOT YET DEPLOYED, conceptual only — would be minted only for verified new knowledge if implemented)
 
 **Why:** Consumerism and capitalism currently decide what gets invented. The bounty board replaces that with a protocol where human need sets the agenda — and the entire species can fund its own solutions collectively.
 
