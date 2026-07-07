@@ -1,0 +1,1 @@
+python3 ~/projects/openroot/bin/thermal_cascade_calc.py | tee /storage/emulated/0/Documents/terminal-logs/thermal-$(date +%Y%m%d-%H%M%S).log | termux-clipboard-set
