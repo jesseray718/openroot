@@ -37,7 +37,7 @@ Underground labyrinth filled with open-cell concrete forces air through pores. C
 Ask: CFD simulation or analytical derivation validating pore-level heat exchange. Time: 3-5 hrs.
 
 ### 3. Materials Science — AE-GFRC Pumpability
-Autonomous pneumatic pumping of aerated GFRC with zirconium substitution requires verified pressure curves. Need: mix design protocol, slump flow test, pump trial, compressive strength cubes, thermal conductivity test (ASTM C177).
+Autonomous pneumatic pumping of aerated GFRC with zirconium substitution requires verified pressure curves. Need: mix design protocol (OPC + Zr silicate + GFRC fibers + foaming agent + XANTHAN GUM as foam stabilizer — without xanthan gum the air bubbles collapse before set, destroying the open-cell structure), slump flow test, pump trial, compressive strength cubes, thermal conductivity test (ASTM C177).
 
 Ask: Lab procedure + predictive pump pressure model. Time: 5-8 hrs.
 
