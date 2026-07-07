@@ -47,16 +47,40 @@ Building the first node in a new climate zone, fixing a documented flaw, shippin
 Two independent validators approve every claim.
 Full design: tokens/ACRE_SPECIFICATION.md
 
-## Bounty Board
+## Bounty Board (Theoretical Framework)
 
-| Build | Bounty |
-|-------|--------|
-| Water purification | 2,000 ACRE |
-| Fridge | 5,000 ACRE |
-| First thermal loop node | 10,000 ACRE |
-| Tractor | 25,000 ACRE |
-| Bus | 40,000 ACRE |
-| Power plant | 150,000 ACRE |
+The Bounty Board is a **hypothetical framework** — not an active reward system. It proposes that human necessity, structured correctly, becomes the primary driver of innovation toward the maximum good of a system.
+
+**Core hypothesis:** When a system defines its greatest unmet needs as bounties — weighted by impact, urgency, and accessibility — it creates a natural allocation of human effort toward the nodes where work produces the highest systemic return.
+
+**How it would work (if implemented):**
+
+1. A need is identified and posted as a bounty (e.g., water purification for a region)
+2. The bounty is weighted by systemic impact: How many people does this serve? How critical is the need? What is the knowledge gap?
+3. Builders pursue the bounty. Innovation occurs.
+4. If and when the ACRE token is deployed, verified innovation earns ACRE — minted for new knowledge created, not repetition of existing work
+5. Two independent validators confirm the work is novel and functional
+
+**ACRE token status:** Conceptual. Not deployed. Solana integration is in progress. The tokenomics model exists in `tokens/ACRE_SPECIFICATION.md` but no tokens have been minted, pre-mined, or distributed. This page will be updated when the system is live.
+
+**Current hypothetical bounties (illustrative, not active):**
+
+| Need | Why It Matters | Theoretical Weight |
+| --- | --- | --- |
+| Water purification | Clean water is the most basic node of human survival | High |
+| Refrigeration | Food preservation, medicine storage — highest daily-life impact | High |
+| First thermal loop node | Proves the core thermal cascade hypothesis (H-003) | Critical |
+| Agricultural tractor | Multiplies human labor in food production | Medium |
+| Transit (bus) | Enables mobility and connection between nodes | Medium |
+| Power plant | Energy sovereignty at community scale | High |
+
+**The formula (proposed):**
+
+Bounty Value = Impact x Urgency x (1 - Existing_Solutions) / (Effort x Time_to_Deploy)
+
+This is not a job board. It is a theoretical map of where human ingenuity should flow next, guided by permaculture principles and agape mathematics — the greatest good for the greatest number of system nodes, per unit of human effort applied.
+
+---
 
 ## Hard Rules
 
