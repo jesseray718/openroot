@@ -1,1 +1,1 @@
-cb | tee ~/projects/openroot/docs/context/state.md && cd ~/projects/openroot && git add docs/context/state.md && git commit -m "docs: state.md rev-F — financial cascade FC-02 designed, paycheck script deployed" && git push origin main
+cb | tee ~/projects/openroot/docs/context/state.md && cd ~/projects/openroot && git add docs/context/state.md HELLO.md STRUCTURE.md && git commit -m "docs: rev-G — HELLO.md + STRUCTURE.md created, mesh biz model, financial cascade FC-02, context bridge updated" && git push origin main
