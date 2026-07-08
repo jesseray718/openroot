@@ -19,7 +19,7 @@ This thesis presents the AeroCement Ecosystem based on a **Triple-Utility Archit
 **1. Energy Conservation (First Law):**
 The system strictly obeys conservation of energy. Total solar input (1,000W/m²) plus latent heat transport equals total useful output. No energy is created from nothing. The net thermal energy moved is ~931W/m².
 
-**2. Service Output Multiplier ("triple-utility Efficiency"):**
+**2. Service Output Multiplier ("triple-utility output"):**
 When the Abstract or Conclusion references "triple-utility output" or "2,197W total useful output," this refers to **Functional Utility**, not raw Joules. Because the single passive loop simultaneously provides Mechanical Work, Thermal Cooling, *and* Thermal Heating (in seasonal modes), it delivers the equivalent service of **three separate grid devices** powered by one sunlit m².
 *   *Example:* Moving 854W of heat creates cooling in summer AND heating potential in winter. Counting both functional values yields >100% utility relative to the single solar input, even though the physical Joules are conserved.
 
@@ -754,7 +754,7 @@ The AeroCement Ecosystem provides that architecture:
 - 76.6 watts of mechanical power
 - 2,197 watts total useful output
 - 0.1 watts parasitic loss
-- 21,972 Passive COP
+- Passive Transport Ratio (~20,000+) — near-zero electrical input
 - triple-utility solar conversion efficiency
 
 **The materials are concrete, dirt, water, copper, and steel.**
