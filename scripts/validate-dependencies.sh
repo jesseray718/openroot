@@ -17,7 +17,7 @@ declare -a LAYERS=(
     "construction/SIKESTON-NODE-ZERO-IMPLEMENTATION.md"     # Layer 1: Mesh
     "technical/SMART-CONTRACT-IMPLEMENTATION-DETAILS.md"    # Layer 2: Contribution Ledger
     "construction/GEODESIC-DOME-AE-GFRC-HOUSING-SYSTEM.md"  # Layer 4: Shelter (Thermal is lighter)
-    "governance/CONTRIBUTOR-TRANSITION-AND-501C3-PREPAREDNESS-FRAMEWORK.md"
+    "core/CONTRIBUTOR-TRANSITION-AND-501C3-PREPAREDNESS-FRAMEWORK.md"
     "core/OPENROOT-SYSTEM-LEVEL-RISK-ASSESSMENT.md"
     "core/KEY-CONVERSATION-BRIEF.md"
     "SYSTEM-MAP.md"
