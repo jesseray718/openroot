@@ -62,7 +62,7 @@ class UNEClient:
             "popw_score": round(popw_score, 2),
             "acre_mint_sim": acre_mint,
             "h003_ref": f"{self.h003_nightly_kwh_per_m2} kWh/m2 nightly",
-            "timestamp": datetime.utcnow().isoformat() + "Z",
+            "timestamp": datetime.now(datetime.UTC).isoformat() + "Z",
             "note": "PoPW verified. Kingdom gates ACRE mint. Updates quadratic governance weight. Ties AeroCement H-003, AE-GFRC, permaculture stacks."
         }
 
