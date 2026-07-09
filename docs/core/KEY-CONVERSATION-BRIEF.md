@@ -2,6 +2,8 @@
 
 **One Human Family | July 2026**
 
+**See also:** [SYSTEM-MAP.md](../SYSTEM-MAP.md) for full system architecture and build order.
+
 ## The Core Inversion
 
 Most systems extract value at every layer (housing, energy, communication, food, care, governance).  
