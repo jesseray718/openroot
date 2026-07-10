@@ -4,17 +4,17 @@
 Developer is on a Samsung Galaxy A15 (Android, no root) using Termux as the primary terminal. No GUI IDE — everything is CLI or browser. Scripts must be paste-ready bash blocks requiring zero manual editing. Voice transcription artifacts are common in prompts — parse intent, never correct spelling aloud.
 
 ## Key Paths
-- Repo: ~/projects/openroot/
-- Scripts: ~/projects/openroot/bin/
-- Research: ~/projects/openroot/research/
-- Docs: ~/projects/openroot/docs/fractal-convergence/
-- Firmware: ~/projects/openroot/firmware/
-- Local models: ~/models/
+- Repo: $HOME/projects/openroot/
+- Scripts: $HOME/projects/openroot/bin/
+- Research: $HOME/projects/openroot/research/
+- Docs: $HOME/projects/openroot/docs/fractal-convergence/
+- Firmware: $HOME/projects/openroot/firmware/
+- Local models: $HOME/models/
 - Clipboard pipe: `termux-clipboard-set` for cross-app transfer
 
 ## Tech Stack
 - Python 3 (argparse, subcommands, no heavy deps — phone has limited storage)
-- Bash scripts in ~/bin/ (Termux-compatible shebang: #!/data/data/com.termux/files/usr/bin/bash)
+- Bash scripts in $HOME/bin/ (Termux-compatible shebang: #!/data/data/com.termux/files/usr/bin/bash)
 - Solana/Anchor (Rust) for ACRE smart contract
 - ESP32 + SX1262 LoRa for mesh nodes (Arduino C++)
 - llama.cpp for local LLMs (Qwen2.5 1.5B, GGUF q4_k_m)
@@ -25,7 +25,7 @@ Developer is on a Samsung Galaxy A15 (Android, no root) using Termux as the prim
 - Bash: use heredocs for file creation, avoid sed/ed (syntax errors on Termux)
 - Python: stdlib-first, avoid pip installs unless necessary
 - No /tmp paths — Termux restricts /tmp, use $TMPDIR or $HOME/tmp/
-- All file writes use absolute paths or ~ expansion (never \~)
+- All file writes use $HOME/ paths (never bare ~ or \\~)
 - Git: merge strategy (not rebase), push origin main
 - Output piped to `termux-clipboard-set` when useful
 
