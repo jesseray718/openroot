@@ -21,7 +21,7 @@ See: https://www.youtube.com/@Nighthawkinlight
 | Xanthan gum | 4g |
 | Activated carbon | 80g |
 | Water | 0.66 L |
-| Dish soap (foaming agent per Nighthawkinlight) | per method |
+| Dawn Ultra (or generic with matching ingredient profile) | per method |
 
 ## Form/Mold
 - Silicone-treated cardboard (cardboard sealed with silicone + acetone mix)
