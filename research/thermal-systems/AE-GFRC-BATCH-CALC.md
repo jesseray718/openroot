@@ -2,51 +2,41 @@
 **UNE:** DV.GEN.TH.AE01.BTC
 **Date:** 2026-07-09
 
+## Attribution
+Base aerated concrete method adapted from **Nighthawkinlight** (YouTube).
+Modification: addition of activated carbon as volumetric blackbody absorber.
+See: https://www.youtube.com/@Nighthawkinlight
+
 ## Mold Specifications
-- Dimensions: 12" × 12" × 2" (304.8mm × 304.8mm × 50.8mm)
-- Volume: 288 in³ = 4,719 cm³ = 0.00472 m³
-- Target density: ~800 kg/m³ (aerated, well below 1200 max)
-- Target batch mass: ~3.78 kg
+- Dimensions: 12" × 12" × 2"
+- Volume: 0.00472 m³
+- Target density: ~800 kg/m³
+- Batch mass: ~3.78 kg
 
 ## Batch Composition (2 kg cement base)
+| Material | Quantity |
+|---|---|
+| Cement Type I/II | 2.00 kg |
+| AR-glass fiber (≥16% ZrO₂) | 80g |
+| Xanthan gum | 4g |
+| Activated carbon | 80g |
+| Water | 0.66 L |
+| Dish soap (foaming agent per Nighthawkinlight) | per method |
 
-| Material | Ratio | Quantity |
-|----------|-------|----------|
-| Cement (Type I/II) | 1 part | 2.00 kg |
-| Glass fiber (AR, ≥16% ZrO₂) | 0.04 vol | ~80g (approx by volume) |
-| Xanthan gum | 0.2% cement wt | 4g |
-| Activated carbon | 4% cement wt (midpoint) | 80g |
-| Water | 0.33 L/kg cement | 0.66 L (660g) |
-| Foaming agent | 0.2% cement wt (midpoint) | 4g |
-
-**Estimated batch total:** ~3.43 kg (pre-foam)
-**Post-foam target:** ~3.78 kg (foam adds ~0.35 kg water+air)
+## Form/Mold
+- Silicone-treated cardboard (cardboard sealed with silicone + acetone mix)
+- Waterproof, release-free, disposable after cure
 
 ## Shopping List
-
-### Materials to Source
-- [ ] Portland Cement Type I/II — 1 bag (94 lb ~$12)
+- [ ] Portland Cement Type I/II — 1 bag (~$12)
 - [ ] AR-glass fiber chopped (≥16% ZrO₂) — 1 lb (~$15-25 online)
-- [ ] Xanthan gum (food grade) — small bag (~$5-8 grocery/Amazon)
-- [ ] Activated carbon powder (fine) — 1 lb (~$10-15 Amazon)
-- [ ] Protein-based foaming agent — 1 qt (~$20-30 concrete supply)
-- [ ] Vegetable oil (release agent) — already have likely
+- [ ] Xanthan gum — Walmart baking aisle (~$5-8)
+- [ ] Activated carbon powder — 1 lb (~$10-15)
+- [ ] Dish soap — already have likely
+- [ ] Cardboard (for mold)
+- [ ] Silicone + acetone (for mold treatment)
+- [ ] Scale 0.1g resolution (~$10)
+- [ ] IR thermometer (~$15-20)
+- [ ] 5gal bucket + drill paddle mixer
 
-### Equipment to Source
-- [ ] 5gal bucket
-- [ ] Drill paddle mixer attachment
-- [ ] Scale 0.1g resolution (jewelry scale ~$10)
-- [ ] Mold material (melamine or plywood 12×12×2)
-- [ ] Probe thermometer
-- [ ] Infrared thermometer (~$15-20)
-
-### Estimated Total Cost
-- Materials: ~$65-90
-- Equipment (if none owned): ~$45-60
-- **Grand total: ~$110-150**
-
-## Notes
-- Buy slightly extra of everything for 1 retry iteration
-- AR-glass fiber is the hardest to source locally — order online early
-- Activated carbon from aquarium supply works if powder form
-- Xanthan gum available in baking aisle at Walmart
+## Estimated Total: $80-120
