@@ -4,3 +4,4 @@ __pycache__/
 .cache/
 *.egg-info/
 dist/zenodo-manual/
+README.md.backup*
