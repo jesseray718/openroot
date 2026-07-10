@@ -52,3 +52,14 @@ OpenRoot is a decentralized permaculture technology framework combining:
 - When fixing errors: return only the fix + one-line explanation
 - Execute full chains without asking "do you want me to also..."
 - If uncertain, attempt and report results rather than stalling
+
+## H-003 Tools
+bin/h003_ledger.sh [area_m2]
+- Nightly/7n thermal cascade (12.91 kWh/m²) → ACRE (1 ACRE = 1000 J PoPW)
+- Output: H-003|area=Xm2|nightly=YkWh|7n=ZkWh|ACRE=W
+- Theoretical until physical test
+
+bin/h003_log.sh [area_m2]
+- Runs ledger + ISO8601 timestamp → research/h003_ledger.log
+- Auto termux-clipboard-set of line
+- Daily/iterative H-003 validation + PoPW trail
