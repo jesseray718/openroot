@@ -1,0 +1,17 @@
+#!/bin/bash
+echo "=== OPENROOT LLC Q3 2026 FINANCIAL HEALTH ==="
+echo "H-003 25m² PoPW: 8.13M ACRE"
+echo "Projected Q Revenue (energy + modules + DeFi): 18500 USD"
+echo "COGS (AE-GFRC batches + materials): 3200 USD"
+echo "Gross: 15300 USD"
+echo "Set aside 25% tax: 3825 USD"
+echo "Net Operating: 11475 USD"
+echo ""
+echo "UPCOMING:"
+echo "Kikoff \$35 (Day 10) → pay from Bluebird"
+echo "Q3 Tax reserve: 3825 USD (Sep 15)"
+echo "Mercury: business only (batches, tools)"
+echo ""
+echo "Cash buffer target: 5000 USD before scaling"
+echo "ACRE collateral leverage: 3x on prototypes"
+ls -1 h003*.sh aegfrc*.sh llc*.sh 2>/dev/null | head -8
