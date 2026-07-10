@@ -9,7 +9,7 @@ This document corrects the AE-GFRC mix protocol based on validated specification
 ## Corrected Material Ratios
 - Cement (Type I/II): 1 part
 - Sand (washed, fine): 0.8 parts
-- Glass fiber (alkali-resistant): 0.04 parts by volume
+- Glass fiber (alkali-resistant, ≥16% ZrO₂): 0.04 parts by volume
 - Xanthan gum: 0.2% by cement weight
 - Activated carbon: 3-5% by cement weight
 - Water: 0.33 L/kg cement (starting point — tune for workability)
