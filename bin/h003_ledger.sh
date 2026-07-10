@@ -7,4 +7,3 @@ SEVEN_KWH=$(awk "BEGIN{printf \"%.2f\", $NIGHTLY_KWH * 7}")
 JOULES=$(awk "BEGIN{printf \"%.0f\", $SEVEN_KWH * $JOULES_PER_KWH}")
 ACRE=$(awk "BEGIN{printf \"%.4f\", $JOULES / 1000}")
 printf "H-003|area=%sm2|nightly=%skWh|7n=%skWh|ACRE=%s\n" "$AREA" "$NIGHTLY_KWH" "$SEVEN_KWH" "$ACRE"
-printf "theoretical until physical test | 1 ACRE = 1000 J verified PoPW\n"

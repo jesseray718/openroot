@@ -11,3 +11,7 @@
 **Validation:** bin/h003_ledger.sh [area] for estimates; bin/h003_log.sh [area] → research/h003_ledger.log (timestamped PoPW trail). Update this file post-physical data.
 
 **Status:** Theoretical. Defensive publication. CC-BY-SA-4.0. Ties to AE-GFRC, ACRE tokenomics, thermal cascade.
+
+## Simulated Run 2026-07-09T21:07:02
+25 m² → 322.75 kWh nightly | 2259.25 kWh / 7 nights | 8,133,300 ACRE (theoretical @ 1 ACRE = 1000 J)
+
