@@ -3,6 +3,10 @@
 **Version:** 1.0 (Corrected)
 **Date:** 2026-07-09
 
+## Attribution
+Base aerated concrete method by **Nighthawkinlight** (https://www.youtube.com/@Nighthawkinlight).
+Modification: activated carbon added as volumetric blackbody absorber.
+
 ## Overview
 This document corrects the AE-GFRC mix protocol based on validated specifications and addresses the issues identified in the previous version.
 
@@ -29,7 +33,7 @@ This document corrects the AE-GFRC mix protocol based on validated specification
 4. Add any additional liquid additives
 
 ### Step 3: Foaming Process
-1. Add foaming agent (type and dosage TBD — protein-based recommended, ~0.1-0.3% by cement weight)
+1. Add dish soap foaming agent per Nighthawkinlight method
 2. Mix at consistent speed (300-500 RPM)
 3. Continue until desired foam consistency achieved
 4. Monitor foam stability
