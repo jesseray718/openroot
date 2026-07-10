@@ -13,15 +13,15 @@ Validate the corrected AE-GFRC mix protocol through physical testing and documen
 - Glass fiber: Alkali-resistant, ≥16% ZrO₂
 - Xanthan gum: Food grade
 - Activated carbon: Powder, fine
-- Foaming agent: Protein-based
+- Foaming agent: Dish soap (per Nighthawkinlight method)
 - Water: Clean, potable
 
 ### Equipment
 - Mixing vessel (5gal bucket)
 - Drill paddle mixer
 - Scale (0.1g resolution)
-- Mold (12"x12"x2")
-- Release agent (vegetable oil)
+- Mold: Silicone-treated cardboard (12"x12"x2")
+- Silicone + acetone mix (for cardboard mold treatment)
 - Thermometer (probe type)
 - Infrared thermometer
 - Camera/phone for documentation
