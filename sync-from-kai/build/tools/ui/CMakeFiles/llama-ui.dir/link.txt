@@ -1,0 +1,2 @@
+/data/data/com.termux/files/usr/bin/llvm-ar qc libllama-ui.a "CMakeFiles/llama-ui.dir/ui.cpp.o"
+/data/data/com.termux/files/usr/bin/llvm-ranlib libllama-ui.a
