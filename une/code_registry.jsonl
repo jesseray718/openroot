@@ -1,0 +1,7 @@
+{"code":"H-003","name":"Thermal Cascade","desc":"Nightly 12.91 kWh/m2 capture + Stirling 3.11 kW @ 93%","axioms":["AX-005","AX-017","AX-023"],"une":"H-003"}
+{"code":"ACRE","name":"ACRE Ledger","desc":"Append-only hash-chained PoPW claim mint","axioms":["AX-023","AX-031"],"une":"ACRE"}
+{"code":"MESH","name":"Mesh Nodes","desc":"Distributed une_protocol nodes + Kai9000","axioms":["AX-006","AX-019"],"une":"M-001"}
+{"code":"KENG","name":"Kingdom Engine","desc":"Axiom-governed DAO + quadratic voting","axioms":["AX-001","AX-031"],"une":"K-001"}
+{"code":"SYMREG","name":"Symbol Registry","desc":"36-symbol UNE base (0-9/A-Z/a-z)","axioms":["AX-002"],"une":"S-001"}
+{"code":"BEACON","name":"Falsification Signal","desc":"Public H-003 test + Appropedia/OKH","axioms":["AX-040"],"une":"B-001"}
+{"code":"LEDGER","name":"h003_ledger + ACRE","desc":"Thermal + PoPW claim integration","axioms":["AX-005","AX-023"],"une":"L-001"}
