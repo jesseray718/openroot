@@ -1,0 +1,7 @@
+{
+  "id": "task_1",
+  "name": "Analyze permaculture yield data",
+  "priority": "high",
+  "expertise": "data_analysis",
+  "dependencies": []
+}
