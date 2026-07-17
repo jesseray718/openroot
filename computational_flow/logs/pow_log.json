@@ -1,0 +1,66 @@
+[
+  {
+    "task_id": "task_1",
+    "team": "team_alpha",
+    "work_units": 2.5,
+    "timestamp": "2026-07-14T14:08:50-05:00",
+    "verified": false,
+    "source": "comp_flow_v2"
+  },
+  {
+    "task_id": "task_2",
+    "team": "team_beta",
+    "work_units": 1.0,
+    "timestamp": "2026-07-14T14:08:50-05:00",
+    "verified": false,
+    "source": "comp_flow_v2"
+  },
+  {
+    "task_id": "task_3",
+    "team": "team_gamma",
+    "work_units": 2.5,
+    "timestamp": "2026-07-14T14:08:51-05:00",
+    "verified": false,
+    "source": "comp_flow_v2"
+  },
+  {
+    "task_id": "task_4",
+    "team": "team_gamma",
+    "work_units": 2.5,
+    "timestamp": "2026-07-14T14:08:51-05:00",
+    "verified": false,
+    "source": "comp_flow_v2"
+  },
+  {
+    "task_id": "task_1",
+    "team": "team_alpha",
+    "work_units": 2.5,
+    "timestamp": "2026-07-14T14:13:23-05:00",
+    "verified": false,
+    "source": "comp_flow_v2"
+  },
+  {
+    "task_id": "task_2",
+    "team": "team_beta",
+    "work_units": 1.0,
+    "timestamp": "2026-07-14T14:13:23-05:00",
+    "verified": false,
+    "source": "comp_flow_v2"
+  },
+  {
+    "task_id": "task_3",
+    "team": "team_gamma",
+    "work_units": 2.5,
+    "timestamp": "2026-07-14T14:13:24-05:00",
+    "verified": false,
+    "source": "comp_flow_v2"
+  },
+  {
+    "task_id": "task_4",
+    "team": "team_gamma",
+    "work_units": 2.5,
+    "timestamp": "2026-07-14T14:13:24-05:00",
+    "verified": false,
+    "source": "comp_flow_v2"
+  }
+]
