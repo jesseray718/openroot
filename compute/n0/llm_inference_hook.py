@@ -26,3 +26,5 @@ if __name__ == "__main__":
     except:
         state = {}
     print(json.dumps(get_critique(state), indent=2))
+
+# CI test change - central hook for C1 dynamic scoring
