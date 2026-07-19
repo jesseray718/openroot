@@ -1,8 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/env python3
 """
 measure_llm_efficiency.py — OpenRoot n0 unit
-CONTRACT
-  Wraps any command and emits structured metrics (wall time, CPU time, tokens, energy).
 """
 import os, sys, json, time, subprocess, threading, argparse
 from datetime import datetime
