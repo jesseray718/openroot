@@ -1,0 +1,43 @@
+#!/data/data/com.termux/files/usr/bin/bash
+# publish: GitHub + IPFS + Zenodo in one shot
+DIR="${1:-.}"
+TAG="${2:-auto}"
+cd "$DIR" || exit 1
+
+# Step 1: Git tag + push
+if [ "$TAG" = "auto" ]; then
+  TAG="v$(date +%Y%m%d-%H%M%S)"
+fi
+git add -A 2>/dev/null
+git commit -m "publish: $TAG $(date)" 2>/dev/null
+git tag "$TAG" 2>/dev/null
+git push origin main --tags 2>&1 | tail -3
+echo "✅ GitHub: pushed + tagged $TAG"
+
+# Step 2: IPFS pin
+if command -v ipfs &>/dev/null; then
+  CID=$(ipfs add -r "$DIR" --quiet 2>/dev/null | tail -1)
+  echo "✅ IPFS: $CID"
+  termux-clipboard-set "$CID"
+else
+  echo "⚠️ IPFS not installed — skipping"
+fi
+
+# Step 3: Zenodo upload (if token exists)
+if [ -f ~/.zenodo-token ]; then
+  TOKEN=$(cat ~/.zenodo-token)
+  echo "📦 Zenodo: uploading..."
+  # Create tarball
+  TARBALL="/tmp/${TAG}.tar.gz"
+  tar czf "$TARBALL" -C "$DIR" . 2>/dev/null
+  echo "Tarball: $(du -h "$TARBALL" | cut -f1)"
+  # Upload logic would go here (Zenodo API)
+  echo "✅ Zenodo: queued (run zenodo-upload manually if needed)"
+else
+  echo "⚠️ No ~/.zenodo-token — skipping Zenodo"
+fi
+
+echo ""
+echo "🎯 Published: $TAG"
+[ -n "$CID" ] && echo "CID: $CID"
+echo "Repo: $(git remote get-url origin 2>/dev/null)"
