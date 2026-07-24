@@ -31,3 +31,14 @@
   ],
   "count": 1
 }
+{
+  "batch_results": [
+    {
+      "status": "confirmed",
+      "txid": "3tvXRUKqyW5VVjun6puWJ2xVJ8FHi1V2tTZKta9xAa1ZkSYgEvH1yYZjqNwgdtuxfuAJpJkbiXdLzoQCwBYWmxb5",
+      "memo": "UNE|GIT|dc7b33cb|1784921345",
+      "slot": 434981147
+    }
+  ],
+  "count": 1
+}
