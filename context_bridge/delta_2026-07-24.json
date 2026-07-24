@@ -1,0 +1,30 @@
+{
+  "ts": "2026-07-24T14:28:31-05:00",
+  "session": "2026-07-23 full cascade + ledger + swarm + UNE",
+  "status": "context_bridge_rebuilding",
+  "locked": [
+    "\u03c6-vortex chimney is master air-flow driver (H/D=\u03c6\u00b2, dc=D/\u03c6\u00b2)",
+    "Micro-Node sizes defined and modular",
+    "Black Locust RMH as parallel valved draft source",
+    "Discrete Stirling charges (5-8%) + flywheel + belt + alternator",
+    "Zero-energy cooling path fully specified",
+    "SQLite thermodynamic ledger (measured joules only)",
+    "\u03b7 = useful_joules / human_joules",
+    "ACRE mints only from ledger",
+    "Fractal swarm n_max = floor(ln R / ln p)",
+    "Landauer / Szil\u00e1rd / Bennett information-thermodynamic limits acknowledged",
+    "UNE 3-letter primitive concept + cooperation axiom still to be restated by user"
+  ],
+  "pending": [
+    "User restates compounding-cooperation equation and Jesus-translation axiom",
+    "Lock exact Micro-Node dimensions",
+    "Instrument first prototype",
+    "Wire ledger \u2192 ACRE",
+    "Rebuild clean context bridge from this delta + prior pieces"
+  ],
+  "paths": {
+    "bridge": "/data/data/com.termux/files/home/openroot/context_bridge/context.json",
+    "ledger": "/data/data/com.termux/files/home/openroot/ledger/thermo.db",
+    "state_py": "/data/data/com.termux/files/home/openroot/context_bridge/openroot_state.py"
+  }
+}
