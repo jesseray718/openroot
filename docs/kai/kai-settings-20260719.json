@@ -1,0 +1,2 @@
+termux-clipboard-get > ~/kai-settings.json
+jq . ~/kai-settings.json > /dev/null 2>&1 && echo "✅ valid now" || echo "❌ still bad"
