@@ -1,0 +1,2 @@
+#!/data/data/com.termux/files/usr/bin/bash
+exec python3 "$HOME/projects/openroot/src/openroot-core-v0.3.py" "$@"
