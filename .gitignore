@@ -5,3 +5,22 @@ __pycache__/
 *.egg-info/
 dist/zenodo-manual/
 README.md.backup*
+
+# OpenRoot session & sensitive files
+session_seeds/
+**/current_seed.json
+**/*_seed.json
+*.key
+*.pem
+*.p12
+private/
+.secrets/
+*.log
+h003_ledger.log
+ledger.jsonl
+context_bridge.jsonl
+*.sqlite
+*.db
+__pycache__/
+*.pyc
+.DS_Store
