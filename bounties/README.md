@@ -1,5 +1,6 @@
-# OpenRoot Bounty Board
+# Advancement Engine
 
+<<<<<<< HEAD
 ## Not a Prize Table — A Procurement Protocol
 
 The bounty board is **not** a list of prizes Jesse is offering. It is a concept for a new way the human species directs innovation:
@@ -41,3 +42,33 @@ Read [`BOUNTY-BOARD-CONCEPT.md`](BOUNTY-BOARD-CONCEPT.md) for the complete frame
 *The species procures its own solutions.*
 
 *CC-BY-SA 4.0 (docs) | GPL v3 (code) | No Patents. Ever.*
+=======
+This directory holds the concept and future protocol for the **OpenRoot Advancement Engine**.
+
+The old name “Bounty Board” is retired.  
+We no longer fund creators. We fund the next verified advance of the species.
+
+## Core Files
+
+- `ADVANCEMENT-ENGINE-CONCEPT.md` — the full concept (STEP, funding, thermodynamic proof)
+- Related token overview: `../tokens/OPENROOT_TOKENS.md`
+- WORK specification: `../tokens/WORK_SPECIFICATION.md`
+- Token weave: `../tokens/TOKEN_WEAVE.md`
+
+## Token Roles at a Glance
+
+| Token  | Role                                      |
+|--------|-------------------------------------------|
+| WORK   | Base unit of verified useful joules       |
+| STEP   | The directed next advance (this engine)   |
+| SKILL  | The people who actually build and measure |
+| ACRE   | Permanent innovation / knowledge record   |
+
+All live on one thermodynamic ledger.
+
+## Status
+
+Concept complete. Protocol, escrow, and first real STEP still needed.
+
+CC-BY-SA 4.0 (docs) | GPL v3 (code) | No patents.
+>>>>>>> 0558fa774bf318ee41800a7b6361ce6e5f35b6a5
