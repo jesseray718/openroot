@@ -1,0 +1,87 @@
+#!/data/data/com.termux/files/usr/bin/env python3
+"""or-manifest v0.1.1 — analyze-before-delete catalog.
+Rule: no delete unless manifested AND (archived to GitHub OR re-downloadable with URL recorded)."""
+import json,os,sys,hashlib,datetime,argparse
+from pathlib import Path
+MAN=Path.home()/".openroot"/"file_manifest.json"
+EXEMPT=("__pycache__","/.cache/",".git/objects")
+def now(): return datetime.datetime.now().isoformat(timespec="seconds")
+def load():
+    if MAN.exists(): return json.loads(MAN.read_text())
+    return {"meta":{"created":now()},"files":{}}
+def save(d):
+    d["meta"]["updated"]=now()
+    MAN.parent.mkdir(parents=True,exist_ok=True)
+    t=MAN.with_suffix(".tmp"); t.write_text(json.dumps(d,indent=1)); t.replace(MAN)
+def sha(p):
+    h=hashlib.sha256()
+    with open(p,"rb") as f:
+        for c in iter(lambda:f.read(1<<20),b""): h.update(c)
+    return h.hexdigest()
+def snippet(p,n=240):
+    try:
+        t=open(p,"rb").read(n).decode("utf-8","replace")
+        return "[binary]" if "\ufffd" in t[:40] else " ".join(t.split())[:180]
+    except Exception: return "[unreadable]"
+def scan(d,paths):
+    new=0
+    for r in paths:
+        r=Path(os.path.expanduser(r)).resolve()
+        it=[r] if r.is_file() else (p for p in r.rglob("*") if p.is_file())
+        for p in it:
+            k=str(p)
+            if any(x in k for x in EXEMPT): continue
+            st=p.stat(); old=d["files"].get(k,{})
+            if old.get("size")==st.st_size and old.get("mtime")==int(st.st_mtime): continue
+            e={"size":st.st_size,"mtime":int(st.st_mtime),
+               "sha256":sha(p) if st.st_size<300*2**20 else "big-skip",
+               "snippet":snippet(p),"status":"present",
+               "archived":old.get("archived",False),
+               "github_ref":old.get("github_ref",""),
+               "hf_url":old.get("hf_url","")}
+            if p.suffix==".gguf": e["policy"]="redownload"
+            d["files"][k]=e; new+=1
+    save(d); print(f"[SCAN] {new} new/changed | manifest tracks {len(d['files'])} files")
+def report(d,top):
+    live=[(k,v) for k,v in d["files"].items() if v["status"]=="present"]
+    live.sort(key=lambda x:-x[1]["size"])
+    print(f"[REPORT] {len(live)} present, {sum(v['size'] for _,v in live)/2**20:.0f}MB. Top {top}:")
+    for k,v in live[:top]:
+        ok="DEL-OK" if v["archived"] or (v.get("policy")=="redownload" and v["hf_url"]) else "LOCKED"
+        print(f" {v['size']/2**20:8.1f}MB {ok:6} {k}")
+def mark(d,path,ref,hf,arch):
+    k=str(Path(os.path.expanduser(path)).resolve())
+    if k not in d["files"]: print(f"[FAIL] not in manifest. Run: or-manifest scan {path}"); sys.exit(1)
+    e=d["files"][k]
+    if ref: e["github_ref"]=ref
+    if hf: e["hf_url"]=hf
+    if arch: e["archived"]=True
+    save(d); print(f"[MARK] archived={e['archived']} gh={e['github_ref'] or '-'} hf={e['hf_url'] or '-'}")
+def rm(d,path,force):
+    k=str(Path(os.path.expanduser(path)).resolve())
+    e=d["files"].get(k)
+    if not e:
+        print(f"[BLOCK] not manifested. Run: or-manifest scan {path}"); sys.exit(1)
+    ok=e["archived"] or (e.get("policy")=="redownload" and e["hf_url"])
+    if not ok and not force:
+        print("[BLOCK] not archived. Options:")
+        print(f"  or-manifest mark {path} --archived --github-ref <url>")
+        print(f"  or-manifest mark {path} --hf-url <url>   # re-downloadable")
+        print( "  or add --force (logged as forced)"); sys.exit(1)
+    os.remove(k)
+    e["status"]="deleted"; e["deleted"]=now(); e["forced"]=bool(force and not ok)
+    save(d); print(f"[DELETED] {k} ({e['size']/2**20:.1f}MB freed){' FORCED' if e['forced'] else ''}")
+def main():
+    ap=argparse.ArgumentParser(prog="or-manifest")
+    sub=ap.add_subparsers(dest="cmd")
+    s=sub.add_parser("scan"); s.add_argument("paths",nargs="+")
+    r=sub.add_parser("report"); r.add_argument("--top",type=int,default=20)
+    m=sub.add_parser("mark"); m.add_argument("path"); m.add_argument("--github-ref",default=""); m.add_argument("--hf-url",default=""); m.add_argument("--archived",action="store_true")
+    x=sub.add_parser("rm"); x.add_argument("path"); x.add_argument("--force",action="store_true")
+    a=ap.parse_args(); d=load()
+    if a.cmd=="scan": scan(d,a.paths)
+    elif a.cmd=="report": report(d,a.top)
+    elif a.cmd=="mark": mark(d,a.path,a.github_ref,a.hf_url,a.archived)
+    elif a.cmd=="rm": rm(d,a.path,a.force)
+    else: ap.print_help()
+if __name__=="__main__": main()

@@ -1,0 +1,20 @@
+      "https://zenodo.org/records/21210931",
+      "https://github.com/jesseray718/aerocement",
+      "https://github.com/jesseray718/openroot"
+    ],
+    "submitter": "Jesse",
+    "timestamp": "2026-07-09T02:27:23.976747+00:00Z",
+    "status": "mint_ready",
+    "validators": [
+      "Validator-Alpha",
+      "Validator-Beta"
+    ],
+    "notes": " | Validator-Alpha: Data validates multi-night radiative cooling + actionable humid-climate fix | Validator-Beta: Cross-checked vs Zenodo v0.4 dataset + SPEC-H003. Ready for v0.6 PR."
+  },
+  "acre_potential": "First Node new climate zone (15k-20k ACRE) \u2014 e.g. Sikeston Node Zero thermal data",
+  "mint_ready_for": "Solana + IPFS memo (after 3 validated nodes + legal)",
+  "governance_note": "Quadratic voting. No entity >2%. Community supreme. No pre-mine.",
+  "philosophy": "Proof of Innovation only. Builders advancing the commons get paid. Repetition earns zero."
+}
+
+Next real step: run aerocement/scripts/data_logger.py on A15 → replace evidence links → re-submit for actual claim.
