@@ -1,0 +1,7 @@
+{"ledger":"ACRE","seq":0,"timestamp":"2026-07-02T12:12:38Z",
+"founder":"Jesse Ray","github":"github.com/jesseray718","doi":"10.5281/zenodo.20639511",
+"mission":"Open-source appropriate technology: maximum good, most people, least effort.",
+"minting_rule":"ACRE is minted ONLY upon verified physical work. No premine. Supply at genesis: 0.",
+"status":"concept — hash-chained data-structure seed, not a live chain",
+"anchors":{"ipfs":"pending","archive_doi":"pending","solana_tx":"pending"},
+"prev":null}
