@@ -27,3 +27,4 @@ __pycache__/
 *.pyc
 .DS_Store
 >>>>>>> 0558fa774bf318ee41800a7b6361ce6e5f35b6a5
+library/kai-sandbox/models/*.gguf
