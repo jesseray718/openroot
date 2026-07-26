@@ -1,20 +1,21 @@
-# Your Personal Seed & Context Bridge
+# Human Seed & Context Bridge Builder
 
-Pour your heart out below. Write what matters to you, what you want to protect, what you want to build, and who you want to help.  
-There is no wrong answer.
+This page is for people who do not speak technical language.
+
+Write from the heart. There is no wrong answer.
 
 ---
 
-**My name or how I want to be known:**
+**How I want to be known:**
 
 
-**What I care about most right now:**
+**What I care about most:**
 
 
-**Who I want this work to help:**
+**Who I most want this work to help:**
 
 
-**What “better” looks like to me in five years:**
+**What “better” looks like to me:**
 
 
 **One thing I am willing to give or learn:**
@@ -22,11 +23,11 @@ There is no wrong answer.
 
 ---
 
-When you finish, give this page to the project.  
+When you finish, send this page back to the project.
 We will turn your words into:
 
-1. A short **Seed** (the pure heart of what you care about)
-2. A **Context Bridge** (how your seed connects to the rest of the work)
+1. A short **Seed** — the pure heart of what you care about
+2. A **Context Bridge** — how your seed connects to the rest of the living system
 
-You will receive both back.  
-They become part of the living system.
+You will receive both.
+They become part of OpenRoot.
