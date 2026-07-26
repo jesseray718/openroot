@@ -55,3 +55,14 @@ LIVE REPOS: openroot (hub, 9 topics) · aerocement (6 topics) · openroot-spoke-
 ARCHIVED: AeroCement_Ecosystem, open-cell-thermal-loop, open-cell-thermal-open-cell-the, aerocement-, OpenCell-Thermal-System, renaissance-protocol
 BLOCKED: PINATA_JWT + ZENODO_TOKEN + GROQ_API_KEY still empty in ~/.openroot-secrets · Oracle VM not provisioned · Zenodo toggle not flipped · repos not pinned · OSHWA not filed
 NEXT: fill secrets → Zenodo toggle + gh release create v0.1.0 → pin repos → provision Oracle ARM VM → build llama.cpp → EnergyPlus
+
+## STATE v7 — 2026-07-26
+ADDED: leveling-cooperative (autonomous capital pool)
+- Members invest capital only (never full credit file or SSN)
+- Transparent JSONL ledger + local nanobot decision coefficients
+- Fixed automatic hand-up percentage of every surplus
+- Zero external dependencies (pure bash + python3 stdlib)
+- No owners, no corporate extraction
+- Handbook + GET-TERMINAL-AND-RUN.sh for non-technical entry
+PATH: leveling-cooperative/
+COMMAND: cd $HOME/openroot/leveling-cooperative && bash handbook/GET-TERMINAL-AND-RUN.sh
