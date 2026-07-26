@@ -66,3 +66,10 @@ ADDED: leveling-cooperative (autonomous capital pool)
 - Handbook + GET-TERMINAL-AND-RUN.sh for non-technical entry
 PATH: leveling-cooperative/
 COMMAND: cd $HOME/openroot/leveling-cooperative && bash handbook/GET-TERMINAL-AND-RUN.sh
+
+## STATE v8 — 2026-07-26
+ADDED: Compounding Cooperation Equation (tribe-scale mutual survival)
+- docs/axioms/COMPOUNDING-COOPERATION.md
+- R(n) = s · (1 + ρ · γ · (n-1)) for n≈50
+- Multi-scale G(k) compounding
+- Integrated with Agape Rule (benefit measured at recipient only)
