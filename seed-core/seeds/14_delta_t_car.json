@@ -1,0 +1,21 @@
+{
+  "id": "14_delta_t_car",
+  "title": "The Delta-T Car",
+  "version": "0.1",
+  "type": "optimization_seed",
+  "intent": "Continue Aero-Disc thermal work into a fully passive vehicle that treats aerodynamic drag as the primary energy source via a deep φ-spiraling wet cone and low-ΔT heat engine.",
+  "eta_goal": "Turn a pure loss (drag) into a net positive work stream while remaining low-embodied-energy.",
+  "core_framing": [
+    "A deep golden-ratio (φ) spiraling cone forms the primary air path.",
+    "Closed-cell outer surface for structure; open-cell wet interior functions as continuous volumetric labyrinth.",
+    "Resulting temperature differential drives a low-ΔT Stirling or TEG array.",
+    "In the limit, aerodynamic power becomes the fuel rather than a pure loss."
+  ],
+  "optimized_query_patterns": [
+    "Size the φ-spiral cone and wet media for target frontal area and cruise speed so generated ΔT is usable by a realistic LTD engine."
+  ],
+  "constraints": ["Must remain coherent with Aero-Disc findings", "Safety and regulatory reality are first-class"],
+  "cross_links": ["openroot/volumetric/aero-disc", "Path B material system"],
+  "verification_notes": "Measured ΔT and power on instrumented subscale models.",
+  "next_physical_or_action": "Build a small φ-spiral wet cone test article and measure temperature rise in controlled airflow."
+}

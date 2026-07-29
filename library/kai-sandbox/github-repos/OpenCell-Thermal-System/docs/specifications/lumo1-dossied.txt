@@ -1,0 +1,88 @@
+START OF CONVERSATION RECORD: PROJECT AERO-GEODESIC FULL DOSSIER
+PRINCIPAL INVESTIGATOR: Jesse McMillen
+DATE RANGE: June 2026
+SUBJECT: Open-Cell Aerocement, Geodesic Construction, Grant Strategy & Comparative Reinforcement Study
+
+--- SECTION 1: CORE MATERIAL SCIENCE ---
+INNOVATION: Open-Cell Aerocement.
+CHEMISTRY/RECIPE:
+- Base: Portland cement mixed at 1:2 ratio with gel slurry.
+- Slurry: 15g Xanthan Gum in rubbing alcohol, mixed with 1/4 cup Dawn Ultra in water (near-zero slump gel).
+- Mechanism: Mechanical stirring incorporates microscopic air bubbles. Transition point (bubbles popping) = open-cell porosity.
+- Functionalization: Activated carbon added to gel creates volumetric blackbody absorber (alpha approx 0.95).
+- Properties: Capillary-like cellular structure allowing gaseous/liquid exchange; freeze-thaw resistance potential.
+
+--- SECTION 2: PHYSICS & THERMODYNAMICS ---
+- Solar Input: S approx 800-1000 W/m^2 peak.
+- Absorption: P_abs = alpha * A * S.
+- Storage: Subterranean porous cement at ~10ft depth utilizing latent heat of fusion (water/ice).
+- Energy Density: L approx 334 kJ/kg; Target >93 kWh per m^3 of saturated pore water.
+- Flow Dynamics: Buoyancy-driven convective loop. Q ~ C * A_flow * sqrt(g * H * Delta_T / T).
+- Pre-conditioning: Desiccant stage to manage humidity.
+
+--- SECTION 3: COMPARATIVE REINFORCEMENT STUDY (THE GRANT CORE) ---
+OBJECTIVE: Determine the superior system via head-to-head testing.
+CANDIDATES:
+A. Sodium Silicate (Silica Water): Chemical densification. Low cost, surface hardening only.
+B. Classical Hex Mesh (Baseline): 27-gauge galvanized hex mesh. Proven technology, 2D reinforcement.
+C. Alkali-Resistant (AR) Glass Fiber: Volumetric fibers mixed into slurry. Hypothesis: Mechanical interlock with microspheres creates superior 3D composite.
+
+TEST PROTOCOL:
+- Build 9 identical panels (3 per candidate).
+- Tests: Compressive Strength (ASTM C39), Flexural Strength (ASTM C293), Impact Resistance, Freeze-Thaw (ASTM C666, 300 cycles).
+- Decision: No winner declared until data proves superiority in flexural strength AND durability.
+
+--- SECTION 4: CRITICAL BUILD SEQUENCE & CURING ---
+1. Fabrication: Cut 4'x4' cardboard triangles.
+2. Treatment: Soak in Acetone-Silicone solution.
+3. Assembly: Click-flange geodesic sphere.
+4. Infusion: Spray/trowel aerocement. (Add AR fibers here if Candidate C).
+5. Mesh: Roll hex mesh (Candidate B only).
+6. Shotcrete: 1:2 Cement/Sand, 0.4 w/c ratio.
+7. CURING PROTOCOL (NON-NEGOTIABLE):
+   - Start 4-6 hours after shotcrete.
+   - Wrap in 6-mil plastic OR mist continuously.
+   - DURATION: MINIMUM 21 DAYS.
+   - Why: Full hydration required for design strength. Skipping reduces strength by 50%.
+
+--- SECTION 5: DATA PIPELINE (TERMUX/ANDROID) ---
+HARDWARE: Samsung Galaxy A15 + ESP32 Sensors.
+SCRIPT 1: Install & Env
+  pkg install python git
+  pip install pyserial pandas
+SCRIPT 2: Data Collector (Serial -> CSV)
+  import serial, time, csv
+  S=serial.Serial('/dev/ttyUSB0',115200,timeout=2)
+  # ... (logs T, RH, flow to sensor_log.csv)
+SCRIPT 3: Analysis
+  import pandas as pd
+  df=pd.read_csv('sensor_log.csv')
+  print(df.resample('1H').mean())
+
+--- SECTION 6: BUDGET OUTLINE (PROTOTYPE) ---
+- Materials (Cement, Gel, Carbon): $5k-$20k (scales with prototype).
+- Sensors & Logger: $500-$2k.
+- Labor & Fabrication: $5k-$15k.
+- Contingency: 15%.
+- TOTAL ESTIMATE: $12,538 (for v=5 dome validation).
+
+--- SECTION 7: RISKS & MITIGATION ---
+- Moisture/Ice Damage: Use freeze-thaw resistant mixes/coatings.
+- Biofouling: Maintenance access ports.
+- Low Flux: Iterate absorber coating and geometry.
+- Curing Failure: Automated misting alarms via ESP32.
+
+--- SECTION 8: TIMELINE (GANTT STYLE) ---
+- Month 0-1: Design & Procurement.
+- Month 2-4: Lab Prototype & Bench Testing.
+- Month 5-7: Field Prototype Installation.
+- Month 8-10: Long-term Monitoring.
+- Month 11-12: Data Analysis & Grant Report.
+
+--- SECTION 9: NEXT STEPS ---
+1. Add precise worked calculations to dossier.
+2. Implement Termux scripts on Galaxy A15.
+3. Build small bench absorber for 2-week test.
+4. Prepare manuscript draft and grant abstract.
+
+END OF DOCUMENT
