@@ -1,0 +1,38 @@
+=============================================================================
+THE AEROCIMENT ECOSYSTEM - COMMUNITY OWNERSHIP DECLARATION
+=============================================================================
+
+THIS DOCUMENT IS THE FOUNDATION OF CIVILIZATION 2.0.
+IT IS NOT PROPERTY. IT IS COMMONS.
+
+PART 1: HARDWARE, DESIGN, AND STRUCTURES
+-----------------------------------------
+All physical designs, blueprints, material specifications, and construction 
+protocols contained within this repository (including but not limited to: 
+aerocement mixes, dome geometries, labyrinth designs, aquaponics systems) 
+are licensed under the **Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)**.
+
+You are free to:
+- SHARE — Copy and redistribute the material in any medium or format.
+- ADAPT — Remix, transform, and build upon the material for any purpose, even commercially.
+
+Under the following terms:
+- ATTRIBUTION — You must give appropriate credit, provide a link to the license, 
+  and indicate if changes were made.
+- SHAREALIKE — If you remix, transform, or build upon the material, you must 
+  distribute your contributions under the same license as the original.
+
+NO PATENTS. NO TRADE SECRETS. NO RESTRICTIONS ON BUILDING.
+
+PART 2: SOFTWARE, CODE, AND DATA
+---------------------------------
+All software code, simulation scripts, data analysis tools, and smart contracts 
+associated with this ecosystem are licensed under the **GNU General Public License v3.0 (GPL v3)**.
+
+You are free to use, modify, and distribute the code, provided that any derivative 
+works also remain open source under the GPL v3.
+
+=============================================================================
+COPYRIGHT © 2026 JESSE MCMILLEN
+RELEASED AS IMMOVABLE COMMONS UNDER CC BY-SA 4.0 (HARDWARE) AND GPL V3 (SOFTWARE).
+=============================================================================

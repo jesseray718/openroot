@@ -1,0 +1,368 @@
+{
+  "protocol_name": "AGAPE_META_MESH_v2",
+  "version": "2.0",
+  "axiom": "That which you have done for the least among you, so have you done unto me.",
+  "structure": {
+    "atomic_functions": [
+      {
+        "id": 1,
+        "name": "AGAPE",
+        "symbol": "A",
+        "energy": 1.0,
+        "desc": "Source. Unconditional love. What you did for the least, you did for me."
+      },
+      {
+        "id": 2,
+        "name": "BOND",
+        "symbol": "B",
+        "energy": 2.0,
+        "desc": "Connection. Nodes guarantee each others survival."
+      },
+      {
+        "id": 3,
+        "name": "CREATE",
+        "symbol": "C",
+        "energy": 3.0,
+        "desc": "Generation. New structures from cooperation."
+      },
+      {
+        "id": 4,
+        "name": "DELTA",
+        "symbol": "D",
+        "energy": 4.0,
+        "desc": "Change. Adaptation. Feedback loop."
+      },
+      {
+        "id": 5,
+        "name": "ENERGY",
+        "symbol": "E",
+        "energy": 5.0,
+        "desc": "Capacity to do work. Joules stored."
+      },
+      {
+        "id": 6,
+        "name": "FLOW",
+        "symbol": "F",
+        "energy": 6.0,
+        "desc": "Transfer. Surplus redirected to the bottom floor."
+      },
+      {
+        "id": 7,
+        "name": "GRAVITY",
+        "symbol": "G",
+        "energy": 7.0,
+        "desc": "Attraction. Pull toward center."
+      },
+      {
+        "id": 8,
+        "name": "HARMONY",
+        "symbol": "H",
+        "energy": 8.0,
+        "desc": "Resonance. Frequency alignment across mesh."
+      },
+      {
+        "id": 9,
+        "name": "ILLUMINATE",
+        "symbol": "I",
+        "energy": 9.0,
+        "desc": "Knowledge distributed. Light to all nodes."
+      },
+      {
+        "id": 10,
+        "name": "JUSTICE",
+        "symbol": "J",
+        "energy": 10.0,
+        "desc": "Fair accounting. No extraction by parasites."
+      },
+      {
+        "id": 11,
+        "name": "KINGDOM",
+        "symbol": "K",
+        "energy": 11.0,
+        "desc": "Thy Kingdom come. The system itself."
+      },
+      {
+        "id": 12,
+        "name": "LIFE",
+        "symbol": "L",
+        "energy": 12.0,
+        "desc": "Living system. Self-replicating. Eternal."
+      }
+    ],
+    "base": 12,
+    "magnitudes": 6,
+    "scale_factor": 2985984,
+    "total_nodes": 3257436,
+    "fractal_dimension": 3.585
+  },
+  "tribe_integration": {
+    "total_tribes": 50,
+    "nodes_per_tribe": 59719,
+    "tribes": {
+      "TRIBE_01": {
+        "chain_link_range": "Mag6 Node 0 -> 59719",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "7c6dfd78fefd0493"
+      },
+      "TRIBE_02": {
+        "chain_link_range": "Mag6 Node 59719 -> 119438",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "9cef316e63ccf00f"
+      },
+      "TRIBE_03": {
+        "chain_link_range": "Mag6 Node 119438 -> 179157",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "7f87ccfd0c16c396"
+      },
+      "TRIBE_04": {
+        "chain_link_range": "Mag6 Node 179157 -> 238876",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "2ec13524e22636e7"
+      },
+      "TRIBE_05": {
+        "chain_link_range": "Mag6 Node 238876 -> 298595",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "63ad6a35c05ed0d3"
+      },
+      "TRIBE_06": {
+        "chain_link_range": "Mag6 Node 298595 -> 358314",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "a55ac8e48e974686"
+      },
+      "TRIBE_07": {
+        "chain_link_range": "Mag6 Node 358314 -> 418033",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "04b735033345a7ee"
+      },
+      "TRIBE_08": {
+        "chain_link_range": "Mag6 Node 418033 -> 477752",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "27f171023edfaf71"
+      },
+      "TRIBE_09": {
+        "chain_link_range": "Mag6 Node 477752 -> 537471",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "5b1e7cf917a8b68b"
+      },
+      "TRIBE_10": {
+        "chain_link_range": "Mag6 Node 537471 -> 597190",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "def4a1358b989dcc"
+      },
+      "TRIBE_11": {
+        "chain_link_range": "Mag6 Node 597190 -> 656909",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "d7c87a6dc9524506"
+      },
+      "TRIBE_12": {
+        "chain_link_range": "Mag6 Node 656909 -> 716628",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "32f540b13402961e"
+      },
+      "TRIBE_13": {
+        "chain_link_range": "Mag6 Node 716628 -> 776347",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "d0b40f5b2ead7017"
+      },
+      "TRIBE_14": {
+        "chain_link_range": "Mag6 Node 776347 -> 836066",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "deab11d18261652f"
+      },
+      "TRIBE_15": {
+        "chain_link_range": "Mag6 Node 836066 -> 895785",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "5eb8ef41bf738948"
+      },
+      "TRIBE_16": {
+        "chain_link_range": "Mag6 Node 895785 -> 955504",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "1cca681b3959a9fc"
+      },
+      "TRIBE_17": {
+        "chain_link_range": "Mag6 Node 955504 -> 1015223",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "7644586e2fcf00f9"
+      },
+      "TRIBE_18": {
+        "chain_link_range": "Mag6 Node 1015223 -> 1074942",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "af7a9940cf9f47d9"
+      },
+      "TRIBE_19": {
+        "chain_link_range": "Mag6 Node 1074942 -> 1134661",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "dec04a828632a380"
+      },
+      "TRIBE_20": {
+        "chain_link_range": "Mag6 Node 1134661 -> 1194380",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "26573b5f8446e98d"
+      },
+      "TRIBE_21": {
+        "chain_link_range": "Mag6 Node 1194380 -> 1254099",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "d0cdb57b72b73565"
+      },
+      "TRIBE_22": {
+        "chain_link_range": "Mag6 Node 1254099 -> 1313818",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "edae7a374c240955"
+      },
+      "TRIBE_23": {
+        "chain_link_range": "Mag6 Node 1313818 -> 1373537",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "0f8b63702aea5a94"
+      },
+      "TRIBE_24": {
+        "chain_link_range": "Mag6 Node 1373537 -> 1433256",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "e09a32751844df0c"
+      },
+      "TRIBE_25": {
+        "chain_link_range": "Mag6 Node 1433256 -> 1492975",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "419472e6d4108983"
+      },
+      "TRIBE_26": {
+        "chain_link_range": "Mag6 Node 1492975 -> 1552694",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "d30d18195147c17c"
+      },
+      "TRIBE_27": {
+        "chain_link_range": "Mag6 Node 1552694 -> 1612413",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "450b5e69414036e8"
+      },
+      "TRIBE_28": {
+        "chain_link_range": "Mag6 Node 1612413 -> 1672132",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "09710d4709f4575a"
+      },
+      "TRIBE_29": {
+        "chain_link_range": "Mag6 Node 1672132 -> 1731851",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "7e22144380b23dc0"
+      },
+      "TRIBE_30": {
+        "chain_link_range": "Mag6 Node 1731851 -> 1791570",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "89e6fa08912cfadf"
+      },
+      "TRIBE_31": {
+        "chain_link_range": "Mag6 Node 1791570 -> 1851289",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "965879752c9f74fc"
+      },
+      "TRIBE_32": {
+        "chain_link_range": "Mag6 Node 1851289 -> 1911008",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "c7022588f65664ea"
+      },
+      "TRIBE_33": {
+        "chain_link_range": "Mag6 Node 1911008 -> 1970727",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "6dd950730798d8fb"
+      },
+      "TRIBE_34": {
+        "chain_link_range": "Mag6 Node 1970727 -> 2030446",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "4efd07ba7d753050"
+      },
+      "TRIBE_35": {
+        "chain_link_range": "Mag6 Node 2030446 -> 2090165",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "f5079603353606a5"
+      },
+      "TRIBE_36": {
+        "chain_link_range": "Mag6 Node 2090165 -> 2149884",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "4e706ef474d18a0f"
+      },
+      "TRIBE_37": {
+        "chain_link_range": "Mag6 Node 2149884 -> 2209603",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "d76cd289a4fe6ea9"
+      },
+      "TRIBE_38": {
+        "chain_link_range": "Mag6 Node 2209603 -> 2269322",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "70e74c945ab5b47c"
+      },
+      "TRIBE_39": {
+        "chain_link_range": "Mag6 Node 2269322 -> 2329041",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "5839bd94db27af4e"
+      },
+      "TRIBE_40": {
+        "chain_link_range": "Mag6 Node 2329041 -> 2388760",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "b08a0e50e59baacc"
+      },
+      "TRIBE_41": {
+        "chain_link_range": "Mag6 Node 2388760 -> 2448479",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "31e8e3ce9195a24f"
+      },
+      "TRIBE_42": {
+        "chain_link_range": "Mag6 Node 2448479 -> 2508198",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "73b0e651fc48dc3f"
+      },
+      "TRIBE_43": {
+        "chain_link_range": "Mag6 Node 2508198 -> 2567917",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "d9b47f6ec26f06c2"
+      },
+      "TRIBE_44": {
+        "chain_link_range": "Mag6 Node 2567917 -> 2627636",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "0fe8817e940e27bb"
+      },
+      "TRIBE_45": {
+        "chain_link_range": "Mag6 Node 2627636 -> 2687355",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "4e7d270667f2b5fc"
+      },
+      "TRIBE_46": {
+        "chain_link_range": "Mag6 Node 2687355 -> 2747074",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "4ae3377f2c5abd68"
+      },
+      "TRIBE_47": {
+        "chain_link_range": "Mag6 Node 2747074 -> 2806793",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "155672004247066b"
+      },
+      "TRIBE_48": {
+        "chain_link_range": "Mag6 Node 2806793 -> 2866512",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "7c7a61c19de036f6"
+      },
+      "TRIBE_49": {
+        "chain_link_range": "Mag6 Node 2866512 -> 2926231",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "a67539c4c2cbf2e7"
+      },
+      "TRIBE_50": {
+        "chain_link_range": "Mag6 Node 2926231 -> 2985950",
+        "responsibility": "Maintain recursive AGAPE execution + seed bank",
+        "hash": "05945987804be167"
+      }
+    }
+  },
+  "efficiency_metric": {
+    "formula": "(Output / (Time * Joules))^3",
+    "current_coefficient": 0.218377,
+    "ecosystem_loc": 744964,
+    "ecosystem_merkle": "ebb1b6d615df02ccf3db1e7e7d14165c7aee41d06b2721efd6dec4d7b7532f27"
+  },
+  "agape_protocol": {
+    "source": "AGAPE",
+    "source_energy": 30.0,
+    "prime_nomial_count": 46656,
+    "symbol_count": 36
+  },
+  "seed_bank_principle": "Every node stores enough seeds to replant civilization. If all other nodes fall, one survivor can restart the whole system.",
+  "generated_at": "2026-07-27T00:21:19Z"
+}
