@@ -12,3 +12,4 @@ UNIFIED_REPORT.html
 __pycache__/
 *.pyc
 context_bridge/deepdive_report.json
+cloud_backup/
