@@ -152,3 +152,15 @@ Verify any future claims against these immutable records.
 
 > *"It is more blessed to give than to receive."* — Acts 20:35
 > *Proof: Computed on Samsung A15, pushed to GitHub.*
+
+### System Flow Sketch
+
+```mermaid
+flowchart LR
+    Air[Hot Outside Air] --> Des[Desiccant]
+    Des --> Lab[Labyrinth 0.50 m³]
+    Lab --> Cold[Cold Battery 4 m³]
+    Cold --> Disc[Aero-Disc 24.2 m²]
+    Disc --> Hot[Hot Battery 4 m³]
+    Hot --> Stirling[Stirling]
+    Stirling --> Work[Work + Heat]
