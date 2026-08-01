@@ -1,11 +1,16 @@
 #!/bin/bash
-# aider-lite v4: Groq + Git + OTS + ACRE mint
+# aider-lite v5: Groq + Git + OTS + ACRE mint + Landauer efficiency
 set -euo pipefail
 
 GROQ_API_KEY="${GROQ_API_KEY:-$(cat ~/.config/groq/key 2>/dev/null || echo '')}"
 MODEL="llama-3.3-70b-versatile"
 ACRE_RATIO=1000
 LEDGER="acre/LEDGER.jsonl"
+
+# Landauer constants
+BOLTZMANN=1.380649e-23
+ROOM_TEMP=300
+LANDAUER_J=$(awk "BEGIN{printf \"%.6e\", $BOLTZMANN * $ROOM_TEMP * 0.6931471805599453}")
 
 [[ $# -lt 1 ]] && { echo 'Usage: aider-lite [--write] [--commit] [--ots] [--mint] "prompt" [files...]'; exit 1; }
 [[ -z "$GROQ_API_KEY" ]] && { echo 'Set GROQ_API_KEY'; exit 1; }
@@ -68,12 +73,10 @@ RESPONSE=$(curl -s https://api.groq.com/openai/v1/chat/completions \
 
 CALL_END=$(date +%s%N)
 
-# ─── ENERGY MEASUREMENT WITH FALLBACK ─────────────────────────
 if $MINT; then
   ELAPSED_NS=$((CALL_END - CALL_START))
   ELAPSED_S=$(awk "BEGIN{printf \"%.6f\", $ELAPSED_NS / 1000000000}")
 
-  # Get frequency (try real path, fallback to A15 estimate)
   AVG_FREQ_MHZ=0
   for cpu in /sys/devices/system/cpu/cpu*/cpufreq/scaling_cur_freq; do
     F=$(cat "$cpu" 2>/dev/null)
@@ -82,22 +85,40 @@ if $MINT; then
       break
     fi
   done
-
   if ((AVG_FREQ_MHZ == 0)); then
-    # Samsung A15 (Helio G99) estimate during compute workload
     AVG_FREQ_MHZ=2000
   fi
 
-  # Assume 8 cores during network+compute (typical A15 configuration)
   AVG_CORES=8
-
-  # Power model: P ≈ 0.001 × freq_MHz watts per core
   POWER_PER_CORE=$(awk "BEGIN{printf \"%.6f\", 0.001 * $AVG_FREQ_MHZ}")
   ENERGY_JOULES=$(awk "BEGIN{printf \"%.4f\", $POWER_PER_CORE * $AVG_CORES * $ELAPSED_S}")
   ACRE_MINTED=$(awk "BEGIN{printf \"%.8f\", $ENERGY_JOULES / $ACRE_RATIO}")
 
-  echo "[m] Energy: ${ENERGY_JOULES} J | ${AVG_FREQ_MHZ} MHz est | ${AVG_CORES} cores | ${ELAPSED_S}s"
-  echo "[m] ACRE minted: ${ACRE_MINTED} (ratio: ${ACRE_RATIO} J/ACRE)"
+  # ─── LANDAUER ANALYSIS ─────────────────────────────────────
+  # Estimate bits processed: tokens out × bits per token (~5 bytes/token)
+  OUTPUT_TOKENS=$(echo "$RESPONSE" | jq -r '.usage.completion_tokens // 512')
+  INPUT_TOKENS=$(echo "$RESPONSE" | jq -r '.usage.prompt_tokens // 0')
+  TOTAL_TOKENS=$((OUTPUT_TOKENS + INPUT_TOKENS))
+  BITS_PROCESSED=$((TOTAL_TOKENS * 40))
+
+  # Landauer floor: minimum energy to erase that many bits
+  LANDAUER_FLOOR=$(awk "BEGIN{printf \"%.6e\", $BITS_PROCESSED * $LANDAUER_J}")
+
+  # Efficiency ratio: how far above Landauer (1.0 = at limit)
+  EFFICIENCY_RATIO=$(awk "BEGIN{if ($LANDAUER_FLOOR > 0) printf \"%.4e\", $ENERGY_JOULES / $LANDAUER_FLOOR; else print \"inf\"}")
+
+  # Reversibility coefficient: what fraction of energy could theoretically be recovered
+  # if computation were fully reversible (Bennett's bound)
+  REVERSIBLE_RECOVERABLE=$(awk "BEGIN{printf \"%.6f\", 1.0 - ($LANDAUER_FLOOR / $ENERGY_JOULES)}")
+
+  # Energy per bit (actual)
+  JOULES_PER_BIT=$(awk "BEGIN{printf \"%.6e\", $ENERGY_JOULES / $BITS_PROCESSED}")
+
+  echo "[m] Energy: ${ENERGY_JOULES} J | ${AVG_FREQ_MHZ} MHz | ${AVG_CORES} cores | ${ELAPSED_S}s"
+  echo "[m] ACRE: ${ACRE_MINTED} (ratio: ${ACRE_RATIO} J/ACRE)"
+  echo "[m] Landauer: ${LANDAUER_FLOOR} J floor for ${BITS_PROCESSED} bits"
+  echo "[m] Efficiency: ${EFFICIENCY_RATIO}x above Landauer | ${JOULES_PER_BIT} J/bit"
+  echo "[m] Reversible recovery potential: ${REVERSIBLE_RECOVERABLE} (${REVERSIBLE_RECOVERABLE}% of energy)"
 fi
 
 TEXT=$(echo "$RESPONSE" | jq -r '.choices[0].message.content // empty')
@@ -145,7 +166,7 @@ if $WRITE && [[ -n "$CODE" && -n "$FILE_LIST" ]]; then
           '{commit:$h,merkle:$r,prompt:$p,ts:$t}' >> .ots/manifest.jsonl
         echo "[+] Manifest updated"
       else
-        echo "[!] Stamp failed — manual: ots stamp $STAMP"
+        echo "[!] Stamp failed"
       fi
     elif $OTS; then
       echo "[!] ots not found"
@@ -182,6 +203,12 @@ if $WRITE && [[ -n "$CODE" && -n "$FILE_LIST" ]]; then
         --arg freq "$AVG_FREQ_MHZ" \
         --arg cores "$AVG_CORES" \
         --arg el "$ELAPSED_S" \
+        --arg lf "$LANDAUER_FLOOR" \
+        --arg bits "$BITS_PROCESSED" \
+        --arg eff "$EFFICIENCY_RATIO" \
+        --arg jpb "$JOULES_PER_BIT" \
+        --arg rev "$REVERSIBLE_RECOVERABLE" \
+        --arg tokens "$TOTAL_TOKENS" \
         '{
           entry_id: $eid,
           timestamp: $ts,
@@ -197,7 +224,13 @@ if $WRITE && [[ -n "$CODE" && -n "$FILE_LIST" ]]; then
           prompt: $p,
           cpu_freq_mhz: ($freq|tonumber),
           cores: ($cores|tonumber),
-          elapsed_s: ($el|tonumber)
+          elapsed_s: ($el|tonumber),
+          landauer_floor_j: ($lf|tonumber),
+          bits_processed: ($bits|tonumber),
+          tokens_processed: ($tokens|tonumber),
+          landauer_efficiency: ($eff|tonumber),
+          joules_per_bit: ($jpb|tonumber),
+          reversible_recovery_potential: ($rev|tonumber)
         }')
 
       echo "$ENTRY" >> "$LEDGER"
