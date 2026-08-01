@@ -13,3 +13,6 @@ __pycache__/
 *.pyc
 context_bridge/deepdive_report.json
 cloud_backup/
+*.log
+*.tmp
+*.swp
