@@ -1,7 +1,6 @@
 #!/bin/bash
-# Test script for hello world function
 set -e
-
+# Test script for hello world function
 hello_world() {
   # This script prints a greeting message
   echo "hello world"
