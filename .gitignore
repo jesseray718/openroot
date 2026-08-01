@@ -18,3 +18,4 @@ cloud_backup/
 *.swp
 scripts/*.bak.*
 .ots/*.txt
+sync-from-kai/models/*.gguf
