@@ -1,57 +1,26 @@
 # OpenRoot
 
-**Open-source superior energy production systems**
+**Thermodynamic ledger + Merkle commitments as the substrate for reverse computation.**
 
-OpenRoot designs and publishes fully open, single-person-scale thermal energy systems that capture, store, and convert more useful energy per square metre than conventional photovoltaics — while remaining passive, modular, and buildable with common materials.
+→ [HYPOTHESIS_REVERSE_COMPUTATION.md](HYPOTHESIS_REVERSE_COMPUTATION.md)
 
----
+Open-source appropriate-technology ecosystem: AeroCement volumetric exchangers, ferrocement domes, Black Locust RMH, UNE computational_flow, fractal nanobot lattice, PoPW / ACRE claims.
 
-## The Core System: Dual-Battery Thermal Architecture
+All work is joule-native. η = useful_joules / human_joules is the only performance language.
 
-Hot air is drawn through a desiccant, then through a subterranean volumetric open-cell aerocement labyrinth with massive internal surface area. Cold is extracted into a water tank. The air is then heated (by solar aero-disc or rocket mass heater) and the heat is extracted into a second water tank. Air exits near ambient temperature.
+## Current Live Artifacts
 
-The temperature difference between the two tanks drives mechanical work (Stirling or equivalent) and electricity. The entire primary cycle is passive.
+- **ACRE-0001** — verified at lattice order 12^12 (Seed Core + Aero-Disc absorption)
+- Thermodynamic ledger: `seed-core/ledger/eta_ledger.jsonl`
+- 16 foundational optimization seeds
+- `porous_exchanger_design.py` v2.2 (Aero-Disc sizing)
 
-### Two Implementations
+## Core Law
 
-**1. Solar Aero-Disc Version**  
-High-performance selective absorber + vortex/chimney effect.  
-Fully passive. Sun provides both energy and air flow.
+Every computational and physical process is measured, committed, and open to upstream replacement by a higher-η alternative.
 
-**2. Rocket Mass Heater + Black Locust Version**  
-Carbon-sequestering fuel. Works day or night. Extremely high combustion efficiency.
+## License
 
-Both versions feed the same dual-battery architecture and produce heat, cold, mechanical power, and electricity from one air stream.
-
----
-
-## Why This Is Superior to Photovoltaics
-
-- Captures 4–5× more total energy (heat + cold) per square metre than PV produces as electricity
-- Simultaneously produces both heat and cold
-- Delivers energy in the forms people actually use (heating + cooling) instead of forcing everything through electricity
-- Extracts mechanical work directly from temperature difference
-- Stores energy cheaply in water instead of batteries
-- Can run carbon-negative on coppiced Black Locust
-- Primary cycle requires almost no external energy input
-- Fully modular and single-person buildable
-- No rare materials or complex electronics required for core function
-
-### Theoretical Performance at 110°F (43°C)
-
-| Stream                        | Power          |
-|-------------------------------|----------------|
-| Heat captured & stored        | 1,800–2,400 W |
-| Cold captured & stored        | 1,200–1,800 W |
-| Mechanical work from ΔT       | 120–220 W     |
-| Electricity (after conversion)| 70–140 W      |
-| **Total useful services**     | **3,200–4,500 W** |
-
----
-
-## Design Principles
-
-Everything in OpenRoot flows from one goal:  
-**maximum useful energy services with minimum external input, published openly so anyone can build, improve, and interconnect the systems.**
-
-All schematics, calculations, and construction methods are released under open licenses so the work can be freely studied, replicated, and extended.
+Documentation & seeds: CC-BY-SA 4.0  
+Code: GPL-3.0  
+No patents. Defensive publication.
