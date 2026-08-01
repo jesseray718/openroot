@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 hello_world() {
   # This script prints a greeting message
