@@ -10,3 +10,4 @@ and it would burn the zero-premine credibility that is ACRE's entire moat.
 - Git ledger stays the source of truth; the chain mirrors it, never leads it
 - Path: devnet test → 3 verified work events on the paper ledger → mainnet
 Interim truth: LEDGER.jsonl + Solana memo anchors ARE the honest chain today.
+[paste Part 1 above]

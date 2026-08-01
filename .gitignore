@@ -21,3 +21,4 @@ scripts/*.bak.*
 sync-from-kai/models/*.gguf
 acre/ledger.jsonl
 *.bak.*
+acre/THEORETICAL_CLAIMS.jsonl
