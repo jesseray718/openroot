@@ -16,6 +16,29 @@ That time is now. This is the root.
 **Archive:** DOI 10.5281/zenodo.20639511
 **Contact:** jrm8908@proton.me
 
+
+## The Thermal Cascade — Optimum Minimal Unit
+
+Passive. Stack-driven. Open-cell aerocement. Zero parasitic power.
+
+**Geometry**
+- Stack: 3.15 m | Vent: 0.20 m² | Aero-disc: 24.2 m² (0.05 m³)
+- Labyrinth: 0.50 m³ | Hot tank: 4.0 m³ | Cold tank: 4.0 m³
+- **Total open-cell cement: 0.55 m³**
+
+**Design-day results**
+- Hot stored: 116 kWh | Cold stored: 84 kWh | Mechanical: 3.7 kWh
+- **Total useful services: 204 kWh/day**
+- Energy density: 370 kWh per m³ of cement | ΔT: 43 K
+
+**Efficiency**
+- 118 % of incident solar turned into useful heat + cold
+- \~6–7× more useful services per m² than PV
+- 5–10× better primary-to-useful efficiency than grid fossil chain
+
+Full model: [models/aero_thermal_cascade.py](models/aero_thermal_cascade.py)
+
+---
 ## What OpenRoot Is
 
 1. **Open hardware library** — CC-BY-SA 4.0 forever. No patents. Ever.
