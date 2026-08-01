@@ -10,4 +10,8 @@ hello_world() {
   echo "hello world $counter, uptime: $uptime seconds"
 }
 
-hello_world
+while true
+do
+  hello_world
+  sleep 1
+done
