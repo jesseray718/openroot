@@ -1,0 +1,12 @@
+#!/bin/bash
+echo "=== ACRE ENERGY DASHBOARD ==="
+echo "Total supply: $(jq -s '[.[].acre_minted] | add' acre/LEDGER.jsonl) ACRE"
+echo ""
+echo "By source:"
+grep '"work_type"' acre/LEDGER.jsonl | jq -r 'select(.work_type != null) | "\(.work_type): \(.acre_minted) ACRE (\(.energy_joules) J)"' | sort | uniq -c | sort -rn
+echo ""
+echo "Recent activity:"
+tail -5 acre/LEDGER.jsonl | jq -r '"\(.timestamp): \(.entry_id) [\(.work_type)]"'
+echo ""
+echo "Chain status: $(verify-chain acre/LEDGER.jsonl 2>&1 | grep STATUS)"
+echo "OTs stamps: $(ls .ots/*.ots 2>/dev/null | wc -l)"
