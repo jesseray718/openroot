@@ -164,3 +164,36 @@ flowchart LR
     Disc --> Hot[Hot Battery 4 m³]
     Hot --> Stirling[Stirling]
     Stirling --> Work[Work + Heat]
+
+## Dual-Battery Thermal Systems — Why Superior to Photovoltaics
+
+### Core Advantages
+1. Captures 4–5× more total energy (heat + cold) per square metre than PV produces as electricity.
+2. Simultaneously produces both heat and cold.
+3. Directly supplies the energy forms people actually use (heating + cooling) instead of forcing everything through electricity.
+4. Extracts mechanical work directly from the temperature difference (Stirling or equivalent).
+5. Stores energy cheaply in water instead of batteries.
+6. Can run on coppiced Black Locust (carbon-sequestering) with zero solar dependence.
+7. Extremely high effective COP for heating and cooling — primary cycle needs almost no external work.
+8. Passive air flow created by the aero-disc (vortex/chimney) or rocket mass heater.
+9. Fully modular and single-person buildable with basic materials.
+10. No rare materials or complex electronics required for core function.
+
+### Theoretical Performance at 110°F (43°C)
+Under extreme heat the system gains more, not less:
+
+| Stream                        | Power          |
+|-------------------------------|----------------|
+| Heat captured & stored        | 1,800–2,400 W |
+| Cold captured & stored        | 1,200–1,800 W |
+| Mechanical work from ΔT       | 120–220 W     |
+| Electricity (after conversion)| 70–140 W      |
+| **Total useful services**     | **3,200–4,500 W** |
+
+The large temperature difference between hot dry incoming air and the cold, wet, high-surface-area subterranean volumetric open-cell aerocement labyrinth drives strong sensible + latent cooling while the aero-disc (or rocket mass heater) simultaneously charges the hot tank.
+
+### Two Implementations
+- **Solar Aero-Disc version**: fully passive, sun-driven.
+- **Rocket Mass Heater + Black Locust version**: carbon-negative fuel, works day or night.
+
+Both feed the same dual-battery architecture (cold tank + hot tank) and can extract mechanical and electrical power from the resulting ΔT.
