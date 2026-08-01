@@ -16,3 +16,5 @@ cloud_backup/
 *.log
 *.tmp
 *.swp
+scripts/*.bak.*
+.ots/*.txt
