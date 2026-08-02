@@ -1,2 +1,156 @@
 #!/data/data/com.termux/files/usr/bin/bash
-exec python3 "$HOME/projects/openroot/src/openroot-core-v0.3.py" "$@"
+PC_IP="192.168.1.193"
+PC_OLLAMA="http://${PC_IP}:11434"
+SSH="jesse@${PC_IP}"
+
+case "$1" in
+
+  pull)
+    REPO="${2:-$HOME/openroot}"
+    ssh "$SSH" "cd ~/openroot/$REPO && git pull"
+    ;;
+
+  push)
+    REPO="${2:-$HOME/openroot}"
+    MSG="${3:-auto commit}"
+    ssh "$SSH" "cd ~/openroot/$REPO && git add -A && git commit -m '$MSG' && git push"
+    ;;
+
+  status)
+    REPO="${2:-$HOME/openroot}"
+    ssh "$SSH" "cd ~/openroot/$REPO && git status"
+    ;;
+
+  log)
+    REPO="${2:-$HOME/openroot}"
+    ssh "$SSH" "cd ~/openroot/$REPO && git log --oneline -10"
+    ;;
+
+  repos)
+    ssh "$SSH" "ls ~/openroot/"
+    ;;
+
+  review)
+    FILE="$2"
+    MODEL="${3:-qwen2.5-coder:7b}"
+    if [ -f "$FILE" ]; then
+      cat "$FILE" | curl -s "$PC_OLLAMA/api/generate" \
+        -d "{\"model\":\"$MODEL\",\"prompt\":\"Code review. Problems+fixes only:\\n$(cat -)\",\"stream\":false}" \
+        | jq -r '.response'
+    else
+      echo "File not found: $FILE"
+    fi
+    ;;
+
+  axiom)
+    FILE="$2"
+    if [ -f "$FILE" ]; then
+      CONTENT=$(cat "$FILE")
+      PAYLOAD=$(jq -n --arg model "${MODEL:-openroot}" --arg prompt "Verify OpenRoot axioms (modular, permaculture, reduce joules/output). PASS or FAIL:reason:\n$CONTENT" '{model:$model,prompt:$prompt,stream:false}')
+      curl -s "$PC_OLLAMA/api/generate" -d "$PAYLOAD" | jq -r '.response'
+    else
+      echo "File not found: $FILE"
+    fi
+    ;;
+
+  dive)
+    REPO="${2:-$HOME/openroot}"
+    MODEL="${3:-qwen2.5-coder:7b}"
+    echo "Running deep dive on $REPO..."
+    ssh "$SSH" "cd ~/openroot && bin/deep_dive.sh ~/openroot/$REPO $MODEL"
+    echo "Pulling logs..."
+    scp "$SSH:~/openroot/logs/dive_"*.log /sdcard/openroot/logs/ 2>/dev/null || true
+    LATEST=$(ls -t /sdcard/openroot/logs/dive_*.log 2>/dev/null | head -1)
+    [ -n "$LATEST" ] && tail -80 "$LATEST"
+    ;;
+
+  ask)
+    MODEL="${2:-qwen2.5-coder:7b}"
+    shift 2
+    QUESTION="$*"
+    curl -s "$PC_OLLAMA/api/chat" \
+      -d "{\"model\":\"$MODEL\",\"messages\":[{\"role\":\"user\",\"content\":\"$QUESTION\"}],\"stream\":false}" \
+      | jq -r '.message.content'
+    ;;
+
+  pipe)
+    MODEL="${2:-qwen2.5-coder:7b}"
+    shift 2
+    curl -s "$PC_OLLAMA/api/generate" \
+      -d "{\"model\":\"$MODEL\",\"prompt\":\"$(cat -)\",\"stream\":false}" \
+      | jq -r '.response'
+    ;;
+
+  clip)
+    MODEL="${2:-qwen2.5-coder:7b}"
+    PROMPT=$(termux-clipboard-get)
+    RESP=$(curl -s "$PC_OLLAMA/api/generate" \
+      -d "{\"model\":\"$MODEL\",\"prompt\":\"$PROMPT\",\"stream\":false}" \
+      | jq -r '.response')
+    echo "$RESP" | termux-clipboard-set
+    echo "$RESP"
+    echo "$(date '+%H:%M:%S') | $MODEL | ${PROMPT:0:60}..." >> /sdcard/openroot/logs/relay.log
+    ;;
+
+  bridge)
+    scp "$SSH:~/openroot/storage/context_bridge.json" /sdcard/openroot/storage/ 2>/dev/null
+    cat /sdcard/openroot/storage/context_bridge.json | jq '.'
+    ;;
+
+  lesson)
+    TEXT="$*"
+    scp "$SSH:~/openroot/storage/context_bridge.json" /tmp/bridge.json 2>/dev/null
+    jq --arg t "$TEXT" --arg d "$(date -I)" \
+      '.lessons += [{"date":$d,"insight":$t}]' /tmp/bridge.json > /tmp/bridge2.json
+    scp /tmp/bridge2.json "$SSH:~/openroot/storage/context_bridge.json"
+    cp /tmp/bridge2.json /sdcard/openroot/storage/context_bridge.json
+    echo "Lesson saved."
+    ;;
+
+  anchor)
+    REPO="${2:-$HOME/openroot}"
+    MERKLE=$(ssh "$SSH" "cd ~/openroot/$REPO && find . -not -path './.git/*' -type f -exec sha256sum {} \\; | sort | sha256sum | cut -c1-64")
+    COMMIT=$(ssh "$SSH" "cd ~/openroot/$REPO && git rev-parse HEAD")
+    echo "Repo: $REPO"
+    echo "Merkle: $MERKLE"
+    echo "Commit: $COMMIT"
+    ssh "$SSH" "echo '$MERKLE' | ots stamp" 2>/dev/null && echo "Anchored." || echo "Run 'ots upgrade' on PC to verify."
+    ;;
+
+  pc)
+    ssh "$SSH" "free -h; echo '---'; ollama list; echo '---'; uptime"
+    ;;
+
+  models)
+    curl -s "$PC_OLLAMA/api/tags" | jq -r '.models[].name'
+    ;;
+
+  exec)
+    shift
+    ssh "$SSH" "$*"
+    ;;
+
+  *)
+    echo "OpenRoot Controller — Usage:"
+    echo ""
+    echo "  or pull [repo]              git pull on PC"
+    echo "  or push [repo] [msg]        git add+commit+push on PC"
+    echo "  or status [repo]            git status"
+    echo "  or log [repo]               recent commits"
+    echo "  or repos                    list repos on PC"
+    echo ""
+    echo "  or review <file> [model]    code review via PC Ollama"
+    echo "  or axiom <file>             axiom check via openroot-assistant"
+    echo "  or dive [repo] [model]      full repo deep dive"
+    echo "  or ask [model] <question>   quick chat query"
+    echo "  or pipe [model]             pipe stdin to model"
+    echo "  or clip [model]             clipboard → model → clipboard"
+    echo ""
+    echo "  or bridge                   sync+show context bridge JSON"
+    echo "  or lesson <text>            save lesson to bridge"
+    echo "  or anchor [repo]            OTS stamp merkle root"
+    echo "  or pc                       PC health (RAM, models, uptime)"
+    echo "  or models                   list PC models"
+    echo "  or exec <cmd>               run arbitrary cmd on PC"
+    ;;
+esac
