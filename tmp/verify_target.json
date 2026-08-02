@@ -1,0 +1,19 @@
+{
+  "id": "core_atomic.py",
+  "source": "/data/data/com.termux/files/home/openroot/une/computational_flow/core_atomic.py",
+  "metrics": {
+    "lines": 1,
+    "chars": 17,
+    "functions": 0,
+    "classes": 0,
+    "imports": 0,
+    "complexity_score": 0,
+    "file_size_kb": 0.017,
+    "human_input_estimate": 0.0,
+    "time_budget": 10.0,
+    "useful_estimate": 0.002
+  },
+  "redundant_ratio": 0.0,
+  "downstream": 4,
+  "fractal_invariant": true
+}
