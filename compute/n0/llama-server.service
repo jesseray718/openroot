@@ -1,0 +1,13 @@
+[Unit]
+Description=llama.cpp server
+After=network.target
+
+[Service]
+Type=simple
+User=jesse
+ExecStart=/usr/local/bin/llama-server -m /opt/models/coder-1.5b-q4.gguf -c 4096 -ngl 0 -t 4 --host 0.0.0.0 --port 8080 --parallel 4
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
