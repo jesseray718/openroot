@@ -1,33 +1,11 @@
 {
-  "\u03b7": 0.14426119246876684,
-  "order": 8,
-  "merkle": "c9c3399c163893f61cd3198e76c0515d2df1158ceef16ae0e9c26f325837b46c",
-  "acre_claim": "PoCW:c9c3399c163893f6",
-  "acre": {
-    "type": "ACRE",
-    "version": "1",
-    "target": "/data/data/com.termux/files/home/openroot/une/computational_flow/core_atomic.py",
-    "\u03b7": 0.144261,
-    "order_reached": 8,
-    "merkle_root": "c9c3399c163893f61cd3198e76c0515d2df1158ceef16ae0e9c26f325837b46c",
-    "useful_joules": 0.08410000000000001,
-    "human_joules": 0.5829703648,
-    "traces": 47,
-    "timestamp": "2026-08-02T06:48:24Z",
-    "axioms_applied": [
-      "PERMA_05",
-      "SYNER_01",
-      "PERMA_03",
-      "SYNER_02",
-      "GEO_02",
-      "PERMA_01",
-      "AGAPE_01",
-      "PHYS_01",
-      "GEO_01",
-      "PERMA_04",
-      "PHYS_02",
-      "PERMA_02"
-    ],
-    "claim": "PoCW:c9c3399c163893f6"
-  }
+  "type": "ACRE",
+  "timestamp": "2026-08-03T00:31:32.291784+00:00",
+  "query": "Return only the current merkle root of the last successful ACRE and the measured useful_joules.",
+  "merkle_root": "828755ff56cfb3fc9091b98c0ec2ab77d2c8283944b790e9f78f3baab652518f",
+  "useful_joules": 824.5353,
+  "human_joules_proxy": 1.0,
+  "eta": 824.5353,
+  "amplify": "Amplify, sharpen, and make actionable.",
+  "host": "optiplex-3060"
 }
