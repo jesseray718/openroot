@@ -22,6 +22,22 @@ def get_api_key():
 API_KEY = get_api_key()
 
 async def call_llm(prompt: str, system: str = "") -> str:
+    # Prefer local OptiPlex llama-server
+    try:
+        req = urllib.request.Request(
+            "http://127.0.0.1:8080/v1/chat/completions",
+            data=json.dumps({
+                "model": "local",
+                "messages": [{"role": "system", "content": system}, {"role": "user", "content": prompt}],
+                "max_tokens": 1024,
+            }).encode(),
+            headers={"Content-Type": "application/json"}
+        )
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            return json.loads(resp.read())["choices"][0]["message"]["content"]
+    except Exception as e:
+        print(f"[LLM] local server failed: {e}", file=sys.stderr)
+
     if API_KEY:
         req = urllib.request.Request(
             "https://api.groq.com/openai/v1/chat/completions",
@@ -36,7 +52,7 @@ async def call_llm(prompt: str, system: str = "") -> str:
             with urllib.request.urlopen(req, timeout=30) as resp:
                 return json.loads(resp.read())["choices"][0]["message"]["content"]
         except Exception as e:
-            print(f"[LLM] API failed: {e}, using stub", file=sys.stderr)
+            print(f"[LLM] Groq failed: {e}, using stub", file=sys.stderr)
     return f"[stub:{system[:20]}] {prompt[:80]}..."
 
 async def nb_translate(ctx):
