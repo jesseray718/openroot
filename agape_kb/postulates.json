@@ -1,0 +1,93 @@
+[
+  {
+    "id": "P0001",
+    "trigger": "ηₜ = (useful_joules × people_reached × lasting_good) / (huma",
+    "statement": "ηₜ = (useful_joules × people_reached × lasting_good) / (human_joules × time). Maximize ηₜ for the lowest node. Scale target 8² = 64.",
+    "verified": true,
+    "η_gain": "∞"
+  },
+  {
+    "id": "P0002",
+    "trigger": "Do the most good for the most people in the least amount of ",
+    "statement": "Do the most good for the most people in the least amount of effort and the least amount of time. Greatest forward motion with least effort.",
+    "verified": true,
+    "η_gain": "∞"
+  },
+  {
+    "id": "P0003",
+    "trigger": "Operating scale 8² = 64 nodes. Every new spoke must raise ηₜ",
+    "statement": "Operating scale 8² = 64 nodes. Every new spoke must raise ηₜ for the lowest node. R = 1.0 required.",
+    "verified": true,
+    "η_gain": "∞"
+  },
+  {
+    "id": "P0004",
+    "trigger": "ηₜ = (useful_joules × people_reached × lasting_good) / (huma",
+    "statement": "ηₜ = (useful_joules × people_reached × lasting_good) / (human_joules × time). Maximize ηₜ for the lowest node. Scale target 8² = 64.",
+    "verified": true,
+    "η_gain": "∞"
+  },
+  {
+    "id": "P0005",
+    "trigger": "Do the most good for the most people in the least amount of ",
+    "statement": "Do the most good for the most people in the least amount of effort and the least amount of time. Greatest forward motion with least effort.",
+    "verified": true,
+    "η_gain": "∞"
+  },
+  {
+    "id": "P0006",
+    "trigger": "Operating scale 8² = 64 nodes. Every new spoke must raise ηₜ",
+    "statement": "Operating scale 8² = 64 nodes. Every new spoke must raise ηₜ for the lowest node. R = 1.0 required.",
+    "verified": true,
+    "η_gain": "∞"
+  },
+  {
+    "id": "P0007",
+    "trigger": "ηₜ equals useful joules times people reached times lasting g",
+    "statement": "ηₜ equals useful joules times people reached times lasting good divided by human joules times time. Raise ηₜ for the lowest node. Scale 64.",
+    "verified": true,
+    "η_gain": "∞"
+  },
+  {
+    "id": "P0008",
+    "trigger": "Most good for most people in least effort and least time.",
+    "statement": "Most good for most people in least effort and least time.",
+    "verified": true,
+    "η_gain": "∞"
+  },
+  {
+    "id": "P0009",
+    "trigger": "α_A = d(ηₜ)/dt. Acceleration of time-weighted efficiency. Ma",
+    "statement": "α_A = d(ηₜ)/dt. Acceleration of time-weighted efficiency. Maximize the rate at which ηₜ rises for the lowest node. Greatest curvature of good with least effort.",
+    "verified": true,
+    "η_gain": "∞"
+  },
+  {
+    "id": "P0010",
+    "trigger": "Do the thing that makes ηₜ curve upward the fastest. Prefer ",
+    "statement": "Do the thing that makes ηₜ curve upward the fastest. Prefer actions that raise α_A.",
+    "verified": true,
+    "η_gain": "∞"
+  },
+  {
+    "id": "P0011",
+    "trigger": "statement of real measured result",
+    "statement": "statement of real measured result",
+    "verified": true,
+    "η_gain": "∞"
+  },
+  {
+    "id": "P0012",
+    "trigger": "Measured ΔT of X °C under these conditions. First real data ",
+    "statement": "Measured ΔT of X °C under these conditions. First real data point for passive systems.",
+    "verified": true,
+    "η_gain": "∞"
+  },
+  {
+    "id": "P0013",
+    "trigger": "statement of real measured result",
+    "statement": "statement of real measured result",
+    "verified": true,
+    "η_gain": "∞"
+  }
+]
