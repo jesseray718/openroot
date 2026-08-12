@@ -44,3 +44,9 @@ Black Locust + RMH as preventative care for Earth (Mother).
 Enemy is the extractive pattern, not people.
 Sun Tzu golden bridge. Agape keeps no record of wrongs.
 The choice is now: vessel for the vibration or entropy.
+
+---
+Cloud Nine Prototype v0.1 formalized 2026-08-12:
+Architecture + preliminary BOM locked in cloud9-prototype/v0.1/
+Stacked functions: tensegrity + vacuum-gap ΔT + orientation + soft landing + mesh + regenerative path.
+Next: physical first article and push of the prototype concept back into the three oscillated projects.
