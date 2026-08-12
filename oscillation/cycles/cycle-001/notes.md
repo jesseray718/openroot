@@ -1,23 +1,19 @@
 # Working notes — Cycle-001
 
-Target repository:
-https://github.com/tinygs/tinyGS
-
-Fork URL:
-https://github.com/jesseray718/tinyGS
-
-Local clone path:
-$HOME/oscillation-targets/tinyGS
-
-Clone status: COMPLETE (2026-08-11)
+Target repository: https://github.com/tinygs/tinyGS
+Fork URL: https://github.com/jesseray718/tinyGS
+Local clone path: $HOME/oscillation-targets/tinyGS
+Clone status: COMPLETE
+Extraction status: STARTED 2026-08-11
 
 Key modules observed:
-(to be filled in next step)
+- Firmware core under tinyGS/
+- lib/ and include/ for radio and support code
+- platformio.ini as the build entry point
+- Extremely hardware-light design (ESP32 + LoRa)
 
 First improvement idea (OpenRoot → them):
-Low-cost / chicken-wire style antenna + passive mounting guidance for the lowest-node builder.
-Documentation and BOM simplification for people with almost no tools or money.
+Lowest-Node Antenna & Mounting Notes (scrap / chicken-wire / passive structures)
 
 First improvement idea (them → OpenRoot):
-Proven ultra-low-cost LoRa satellite reception stack that can sit on or beside a Node-001 physical unit.
-Real global network the lowest node can join with \~$20 of hardware.
+Real global LoRa satellite reception that can live on a Node-001 scale physical unit
