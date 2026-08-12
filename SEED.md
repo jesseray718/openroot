@@ -28,3 +28,10 @@ Shoots: straight, easy bundle/haul, no dry, no chop, ready to burn.
 Hard, rot-resistant, hottest-burning, excellent honey source.
 Powers RMH → thermal cascade → radiative exchange with 3 K sink.
 One of the greatest contributions of the full system.
+
+---
+Black Locust full system locked 2026-08-11:
+Fastest growing tree. Living roots sequester while coppice shoots are harvested (1% effort of traditional firewood). Hard, rot-resistant, hottest-burning, excellent honey. Core of regenerative agroforestry + carbon-negative power for the thermal cascade.
+
+Cloud Nine prototype direction locked 2026-08-11:
+Tensegrity + vacuum-gapped black absorber + radiative outer surface to 3 K sink. Altitude increases ΔT. Gyroscopic sun tracking + soft-landing autorotation fallback. Dirt + plants possible. ΔT is the core free-energy resource. Scales the same physics as Node-001.
