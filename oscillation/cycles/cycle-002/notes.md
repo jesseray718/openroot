@@ -1,18 +1,18 @@
 # Working notes — Cycle-002
 
-Target repository:
-https://github.com/meshtastic/firmware
-
-Fork URL: (to be filled)
-
-Local clone path:
-$HOME/oscillation-targets/meshtastic-firmware
+Target repository: https://github.com/meshtastic/firmware
+Fork URL: https://github.com/jesseray718/firmware
+Local clone path: $HOME/oscillation-targets/meshtastic-firmware
+Clone status: COMPLETE
+Extraction status: STARTED 2026-08-11
 
 Key modules observed:
-(to be filled after clone)
+- Large modular firmware codebase
+- Strong hardware abstraction
+- Proven offline mesh for low-resource users
 
 First improvement idea (OpenRoot → them):
-Lowest-node physical integration notes (how a Meshtastic node can live on/near a passive chicken-wire / Node-001 structure)
+Lowest-Node Physical Integration Notes (co-location with passive structures)
 
 First improvement idea (them → OpenRoot):
-Proven offline mesh that gives the lowest node real long-range communication without infrastructure
+Real offline long-range mesh that can link Node-001 units
