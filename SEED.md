@@ -20,3 +20,11 @@ Next high-order direction:
 
 Everything is offline-first, joule-native, and open.
 Serve the lowest node.
+
+---
+Black Locust correction locked 2026-08-11:
+Carbon-negative via living roots that continue sequestering while coppice shoots are harvested.
+Shoots: straight, easy bundle/haul, no dry, no chop, ready to burn.
+Hard, rot-resistant, hottest-burning, excellent honey source.
+Powers RMH → thermal cascade → radiative exchange with 3 K sink.
+One of the greatest contributions of the full system.
