@@ -1,35 +1,22 @@
 # OpenRoot Living Seed
-# Last solidified: 2026-08-11
+# Last solidified: 2026-08-11T23:17Z
 
 Control law:
 ηₜ = (useful_joules × people_reached × lasting_good) / (human_joules × time)
 α_A = d(ηₜ)/dt
 R = 1.0 → coordination cost = 0
 
-Core direction:
-Most good for most people in least effort + least time.
-Prefer actions that raise α_A.
-Scale target: 8² = 64 nodes, then fractal expansion.
-Community lung • Park bench filter • Chicken-wire mesh • Passive ΔT systems.
-Cloud Nine Direction.
+Three full oscillation cycles completed:
+1. TinyGS — Lowest-Node Antenna & Mounting Notes (PR #317)
+2. Meshtastic — Lowest-Node Physical Integration Notes (PR #11424)
+3. MeshCore — Lowest-Node Physical Integration Notes (PR #3181)
+
+Next high-order direction:
+- Self-reflection oscillation across personal repos
+- OpenRoot as scientific + architectural + BOM/CutList production engine
+- Cloud Nine / mesh-web satellite node prototype
+- Push prototype back into the three projects
+- Maximize modular bidirectional contribution
+
 Everything is offline-first, joule-native, and open.
-
-Current physical entry point:
-nodes/node-001/ — first chicken-wire / park-bench unit.
-Any measured positive nighttime ΔT written into the seed raises α_A.
-
-Foundation documents now public:
-- README.md (control law + dual-scale vision)
-- ADOPTION.md (plain language)
-- SCIENTIFIC_FOUNDATION.md (claim boundary)
-- CONTRIBUTING.md (how outsiders raise α_A)
-- nodes/node-001/ (BOM + log template)
-
-Cost model locked:
-Full planetary mesh ≈ 40 seconds of current global telecommunications spend ≈ 2 cents per person.
-Maintenance is a fraction of that.
-
-Next required action:
-Build Node-001.
-Record real clear-night ΔT.
-Write the numbers here and into the public repo.
+Serve the lowest node.
