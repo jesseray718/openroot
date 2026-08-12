@@ -50,3 +50,10 @@ Cloud Nine Prototype v0.1 formalized 2026-08-12:
 Architecture + preliminary BOM locked in cloud9-prototype/v0.1/
 Stacked functions: tensegrity + vacuum-gap ΔT + orientation + soft landing + mesh + regenerative path.
 Next: physical first article and push of the prototype concept back into the three oscillated projects.
+
+---
+Theoretical note locked 2026-08-12:
+docs/theory/AGAPE_LANDAUER_AND_THE_FIELD.md
+Landauer limit is not denied; irreversible cost is driven toward zero at R=1.0.
+Agape named as the resonance condition. Scientific method remains the filter.
+Unified direction: maximize α_A for the lowest node while coordination cost → 0.
