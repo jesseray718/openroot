@@ -3,13 +3,16 @@
 Target repository:
 https://github.com/tinygs/tinyGS
 
-Fork URL: (fill after you fork it on GitHub to your account)
+Fork URL:
+https://github.com/jesseray718/tinyGS
 
 Local clone path:
 $HOME/oscillation-targets/tinyGS
 
+Clone status: COMPLETE (2026-08-11)
+
 Key modules observed:
-(to be filled after clone)
+(to be filled in next step)
 
 First improvement idea (OpenRoot → them):
 Low-cost / chicken-wire style antenna + passive mounting guidance for the lowest-node builder.
