@@ -89,5 +89,19 @@
     "statement": "statement of real measured result",
     "verified": true,
     "η_gain": "∞"
+  },
+  {
+    "id": "P0014",
+    "trigger": "verified statement",
+    "statement": "verified statement",
+    "verified": true,
+    "η_gain": "∞"
+  },
+  {
+    "id": "P0015",
+    "trigger": "context bridge seed absorbed — R=1.0 — critical path locked ",
+    "statement": "context bridge seed absorbed — R=1.0 — critical path locked to first measured passive ΔT node",
+    "verified": true,
+    "η_gain": "∞"
   }
 ]
