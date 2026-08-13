@@ -1,1 +1,2 @@
-# Deployment Scripts
+#!/bin/bash
+echo 'Pushing to all nodes...'
