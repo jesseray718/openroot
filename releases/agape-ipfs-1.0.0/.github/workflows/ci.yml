@@ -1,0 +1,54 @@
+name: agape-ipfs CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  shellcheck:
+    name: ShellCheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run ShellCheck
+        uses: ludeeus/action-shellcheck@master
+        with:
+          severity: warning
+          format: gcc
+
+  test:
+    name: Functional Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install agape-ipfs
+        run: |
+          chmod +x install.sh
+          ./install.sh
+          export PATH="$HOME/.local/bin:$PATH"
+      - name: Test version
+        run: agape-ipfs version
+      - name: Test hash on file
+        run: |
+          echo "test content" > /tmp/test.txt
+          RESULT=$(agape-ipfs hash /tmp/test.txt)
+          echo "Hash: $RESULT"
+          [ -n "$RESULT" ] || exit 1
+      - name: Test hash on directory
+        run: |
+          mkdir -p /tmp/testdir
+          echo "file1" > /tmp/testdir/a.txt
+          echo "file2" > /tmp/testdir/b.txt
+          RESULT=$(agape-ipfs hash /tmp/testdir)
+          echo "Dir hash: $RESULT"
+          [ -n "$RESULT" ] || exit 1
+      - name: Test ledger status (empty)
+        run: agape-ipfs status || true
+      - name: Test proof generation
+        run: |
+          agape-ipfs proof QmTestCid123456789 || true
+          ls -la "$HOME/openroot/agape_net/ipfs/" || true
+      - name: Verify syntax
+        run: bash -n bin/agape-ipfs && echo "Syntax OK"

@@ -27,3 +27,5 @@ acre/ledger.jsonl
 *.safetensors
 library/kai-sandbox/models/*.gguf
 library/**/models/
+agape_net/ledger/
+agape_net/ledger/pins.jsonl
