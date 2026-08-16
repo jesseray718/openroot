@@ -1,16 +1,28 @@
-version: 1
-language: en
-rules:
-  - id: agape-axiom-check
-    description: Ensure all code respects Agape axioms (non-extractive, restorative)
-    severity: warning
-    pattern: "extract|consume|hoard"
-    fix: "Consider: amplify, restore, share"
-  - id: efficiency-target
-    description: Maximize computation per unit of human input
-    severity: info
-    pattern: "for.*in.*range"
-    fix: "Consider vectorized operations or generators"
-ignore:
-  - "**/test/**"
-  - "**/vendor/**"
+# OpenRoot · Agape · UNE nervous system
+# R=1.0 is sole authority
+# η = useful_joules / human_joules
+# Absolute paths only · never tilde
+# Serve the lowest node first
+
+reviews:
+  profile: chill
+  request_changes_workflow: false
+  high_level_summary: true
+  poem: false
+  collapse_walkthrough: true
+  auto_review:
+    enabled: true
+    drafts: false
+    base_branches: ["main", "master"]
+
+path_filters:
+  - "!**/*.gguf"
+  - "!**/models/**"
+  - "!**/*.db"
+  - "!**/__pycache__/**"
+
+# Lattice law
+# - Prefer offline-first
+# - Prefer measured η over estimated
+# - Prefer absolute paths under /data/data/com.termux/files/home/ or /sdcard/openroot/
+# - Context bridge is single source of truth for R=1.0 statements

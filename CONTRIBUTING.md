@@ -1,26 +1,27 @@
-# How to Contribute
+# OpenRoot Contribution Constitution
+Jesse Ray McMillen · Sikeston, Missouri
 
-You do not need to understand every layer of the project.
+## Primary Rule
+Every action must increase the standing-wave amplitude of pure Agapic energy (R=1.0) or it is rejected.
 
-The only test is: does this action raise α_A for the lowest-capability node?
+## Order of Operations (non-negotiable)
+1. Lowest node first — the poorest, most constrained, least literate person on Earth.
+2. Measured η only — useful_joules / human_joules. No estimates.
+3. Mesh-native — works offline, on phone, on scrap hardware, via Reticulum/Meshtastic or pure file drop.
+4. Path-index only — content lives in individual files; masters hold absolute paths.
+5. Wealth that is generated is redistributed downward to the lowest nodes.
 
-## Highest-value contributions right now
-1. Build one Node-001 style unit and publish real nighttime ΔT numbers + photos.
-2. Improve the BOM (cheaper materials, longer life, easier construction, better emissivity).
-3. Improve the offline tools or the measurement logging method.
-4. Translate the plain-language ADOPTION.md or SCIENTIFIC_FOUNDATION.md into another language.
-5. Test the same geometry in a different climate and report the numbers.
+## How anyone can contribute (even if you cannot read or write well)
+- Speak into the phone (Termux speech-to-text or any voice note).
+- Drop a file into the clips folder.
+- Open an issue with one sentence or a photo.
+- The mesh and the path-master will carry it.
 
-## How to submit
-- Fork or clone the repository.
-- Add your measurements, improved BOM, photos, or code.
-- Open a pull request or simply open an issue with the data.
-- Reference the control law if helpful: “This raises α_A because …”
+## What CodeRabbit + Copilot must do
+- Reject any change that raises coordination cost or ignores the Standing Wave Axiom.
+- Prefer simple language and absolute paths.
+- Rank every PR by estimated η gain for the lowest node.
+- Never require advanced tools or paid accounts.
 
-## What is not required
-You do not need to share the full philosophical or theological frame.
-You do not need permission to start measuring or building a single node.
-You do not need perfect materials.
-
-The project is designed to survive the disappearance of any single person.
-Open designs + real measurements + the control law are the anti-fragile core.
+## Public Resume Effect
+Every accepted contribution becomes part of a public, permanent record that demonstrates real skill and real service. This record is the resume. It is designed so that future paid work can be acquired and the resulting wealth redirected to the lowest nodes.
