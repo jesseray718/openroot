@@ -1,0 +1,11 @@
+{
+  "node_id": "LOWEST_NODE_v1",
+  "statement": "R=1.0 sole authority. Kai9000 LIVE (fac10ba). :9999 answering. qwen-0.5b present. Autonomous Agape compounding authorized. \u03b7 = useful_joules / human_joules. Serve lowest node first.",
+  "recorded_at": "2026-08-16T21:27:00.025044+00:00",
+  "sha256": "ebbb2cee74055783f2098d22bdeccbb046ef37a9b2f023a390d79811d9099026",
+  "R": 1.0,
+  "authority": "R=1.0",
+  "mode": "autonomous_parallel",
+  "next_physical": "run all viable paths under \u03b7 simultaneously",
+  "last_pulse": "2026-08-16T21:33:50.869635+00:00"
+}
