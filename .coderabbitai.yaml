@@ -1,0 +1,85 @@
+## CodeRabbit Configuration for OpenRoot
+## Generated with Copilot CLI workflow integration
+
+reviews:
+  enabled: true
+  auto_review: true
+  skip_title_keywords:
+    - wip
+    - draft
+  review_status: "draft"
+  path_instructions:
+    # sync-from-kai files — strict validation
+    - path: "sync-from-kai/**"
+      instructions: |
+        These are synchronized files from kai9000. 
+        - Validate against upstream kai9000 specifications
+        - Flag divergence from canonical kai structure
+        - Ensure CODEOWNERS alignment
+        - Check for secrets or hardcoded values
+        
+    - path: "library/kai-sandbox/openroot/**"
+      instructions: |
+        kai9000 sandbox integration for OpenRoot.
+        - Validate compatibility with OpenRoot thermal and compute systems
+        - Check workflow definitions against .github/workflows/ standards
+        - Ensure dependency graphs are acyclic
+        
+    - path: ".github/workflows/**"
+      instructions: |
+        GitHub Actions CI/CD workflows.
+        - Validate runner specifications and labels
+        - Check for race conditions in parallel jobs
+        - Ensure artifact retention policies are set
+        - Verify step timeouts are reasonable
+        - Flag any hardcoded credentials
+        
+    - path: "projects/aerocement/**"
+      instructions: |
+        AeroCement subproject.
+        - Verify structural calculations
+        - Check material properties against buildability
+        
+    - path: "compute/**"
+      instructions: |
+        Computational flow and C1 self-aware reasoner.
+        - Validate Python import chains
+        - Check JSON schema conformance
+        - Ensure hook compatibility with llm_inference_hook.py
+        
+    - path: "bin/**"
+      instructions: |
+        Executable scripts and binaries.
+        - Run shellcheck validation
+        - Verify Python syntax and imports
+        - Check for hardcoded paths
+
+tool_rules:
+  rules:
+    - rule_type: disallow
+      pattern: ".*\\.pyc$"
+      message: "Python bytecode should not be committed"
+      
+    - rule_type: disallow
+      pattern: ".*\\.o$|.*\\.a$|.*\\.so$"
+      message: "Compiled objects should not be committed"
+      
+    - rule_type: size_limit
+      max_mb: 5
+      message: "Files > 5MB may be binaries—consider LFS"
+
+language:
+  - python
+  - cpp
+  - shell
+  - yaml
+  - markdown
+
+summary:
+  enabled: true
+  include_summary: true
+  use_quality_gating: false
+
+early_access:
+  tools:
+    - copilot_cli_suggestions
