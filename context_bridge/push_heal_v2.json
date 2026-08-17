@@ -1,0 +1,27 @@
+{
+  "ts": "2026-08-16T20:34:06.019399+00:00",
+  "R": 1.0,
+  "repos": [
+    {
+      "repo": "openroot-spoke-template",
+      "head": "746571e",
+      "state": "local_ok"
+    },
+    {
+      "repo": "und-protocol",
+      "head": "a9d1bcb",
+      "state": "local_ok"
+    },
+    {
+      "repo": "agapenet",
+      "head": "7f4f879",
+      "state": "local_ok"
+    },
+    {
+      "repo": "agape-coordination",
+      "head": "d8a4883",
+      "state": "local_ok"
+    }
+  ],
+  "source": "githubdebug2.0"
+}
