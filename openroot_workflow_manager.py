@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""OPENROOT WORKFLOW MANAGER v2.1 — absolute paths, η, R=1.0, open metadata"""
+"""OPENROOT WORKFLOW MANAGER v2.1-imfuse
+Infused with GitHub Copilot CLI explore→plan→code→commit
+Absolute paths | η | R=1.0 | Love keeps no record of wrongdoing
+"""
 import os, sys, json, hashlib, subprocess
 from pathlib import Path
 from datetime import datetime
@@ -18,10 +21,8 @@ PRIORITY_QUEUE = {
 
 CORE_FILES = {
     "standing_wave_axiom": AGAPE_KB / "STANDING_WAVE_AXIOM.md",
-    "translation_axiom": AGAPE_KB / "STANDING_WAVE_TRANSLATION_AXIOM.md",
-    "contributing_termux": OPENROOT_PATH / "CONTRIBUTING.md",
-    "contributing_kernel": AGAPE_BIBLE_KERNEL / "CONTRIBUTING.md",
-    "path_inventory": AGAPE_KB / "PATH_INVENTORY.yaml"
+    "path_inventory": AGAPE_KB / "PATH_INVENTORY.yaml",
+    "copilot_instructions": OPENROOT_PATH / ".github" / "copilot-instructions.md"
 }
 
 def compute_sha256_file(filepath: Path) -> str:
@@ -40,32 +41,36 @@ def ensure_directory(path: Path) -> bool:
         return False
 
 def validate_environment():
-    print("[ENV] Validating absolute paths...")
+    print("[ENV] Validating absolute paths + Copilot instructions...")
     checks = {
         "SD Card Root": SDCARD_ROOT,
         "Termux Home": TERMUX_HOME,
         "OpenRoot": str(OPENROOT_PATH),
         "Agape KB": str(AGAPE_KB),
-        "Bible Kernel": str(AGAPE_BIBLE_KERNEL),
+        "Copilot Instructions": str(CORE_FILES["copilot_instructions"]),
         "Markor": "/storage/emulated/0/Documents/markor"
     }
     for name, p in checks.items():
         exists = Path(p).exists()
         print(f"{'OK' if exists else 'MISSING'} {p}")
-        if not exists: ensure_directory(Path(p))
+        if not exists and "Markor" not in name:
+            ensure_directory(Path(p).parent if Path(p).suffix else Path(p))
     return True
 
 def main():
     import argparse
-    parser = argparse.ArgumentParser(description="OPENROOT Workflow Manager v2.1")
+    parser = argparse.ArgumentParser(description="OPENROOT Workflow Manager v2.1-imfuse")
     parser.add_argument("--priority", choices=["A","B","C","ALL"], default="ALL")
     parser.add_argument("--validate", action="store_true")
     args = parser.parse_args()
-    print("OPENROOT WORKFLOW MANAGER v2.1 | η | R=1.0 | Love keeps no record of wrongdoing")
+    print("OPENROOT WORKFLOW MANAGER v2.1-imfuse | η | R=1.0")
+    print("Copilot cycle: explore → plan → code → commit")
+    print("Love keeps no record of wrongdoing")
     validate_environment()
-    if args.validate: return 0
-    print("Priority A→B→C ready. Inventory + axioms seeded.")
-    print("Next: PART 3")
+    if args.validate:
+        return 0
+    print("Priority A→B→C ready. Inventory + Copilot instructions live.")
+    print("Next: PART 3 (stage/commit) then PART 4 (push + optional copilot install)")
     return 0
 
 if __name__ == "__main__":
