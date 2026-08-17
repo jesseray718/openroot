@@ -70,7 +70,6 @@ def main():
     if args.validate:
         return 0
     print("Priority A→B→C ready. Inventory + Copilot instructions live.")
-    print("Next: PART 3 (stage/commit) then PART 4 (push + optional copilot install)")
     return 0
 
 if __name__ == "__main__":
