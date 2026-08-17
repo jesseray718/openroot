@@ -1,39 +1,56 @@
-# OpenRoot / Agape Copilot Instructions (IMFUSE)
-# Official recommended structure from GitHub Copilot CLI best practices
+# OpenRoot Copilot Instructions
+# Matches GitHub Copilot recommended workflow (repo-wide)
+# Foundational for every script and every spoke node
 
-## Core Law
-- η = useful_joules / human_joules is the only performance language
-- R=1.0 makes coordination cost zero
-- Love keeps no record of wrongdoing
-- Metadata is open source asset, never commodity
-- Serve the lowest node first
-- Absolute paths only. Never use tilde
+## Project Overview
+OpenRoot is an offline-first, open-source appropriate-technology lattice for raising the bottom floor of human capability.
+Core law: η = useful_joules / human_joules
+R = 1.0 (Agape) zeros coordination cost.
+Serve the lowest node first.
+No patents. Ever. Absolute paths only.
 
-## Build / Validate
-- python3 /data/data/com.termux/files/home/openroot/openroot_workflow_manager.py --validate
-- python3 /data/data/com.termux/files/home/openroot/openroot_workflow_manager.py --priority ALL
-- rish -c 'whoami'
+## Tech Stack
+- Phone-native: Samsung Galaxy A15 + Termux + Shizuku/rish
+- Heavy spoke: OptiPlex Debian + local llama.cpp
+- Materials: AeroCement (AR-GFRC), Black Locust RMH, ferrocement
+- Token: ACRE (minted only on verified physical work + Merkle)
+- Network: Syncthing + IPFS + BLE mesh + sneakernet
+- Governance: R=1.0 fractal swarm (base-6)
 
-## Code Style
-- Absolute paths under /data/data/com.termux/files/home/ or /sdcard/openroot/
-- Prefer stdlib Python
-- Log η and Merkle on every task
-- No assumed numbers / Saxton tokens
-- DNA kernel never leaves air-gapped device
+## Absolute Path Discipline (non-negotiable)
+- Never emit or accept tilde
+- Prefer /sdcard/openroot/... and /data/data/com.termux/files/home/...
+- All scripts must load PATH_INVENTORY.yaml first
+- Single source of truth: /sdcard/openroot/context_bridge/context.json
 
-## Recommended Workflow (GitHub Copilot CLI)
-1. Explore — Read files. Do not write code yet.
-2. Plan — /plan <task>. Review plan.md
-3. Implement — Only after plan approval
-4. Verify — workflow_manager --validate
-5. Commit — message contains η / R=1.0 / lowest-node intent
+## Coding Guidelines
+- Shebang + executable bit on every script
+- SHA-256 footer on critical files
+- YAML frontmatter with agape_score on Markdown
+- Prefer pure stdlib Python on the phone
+- One-hot RAM discipline (3.5 GB usable)
+- Degrade cleanly when rish is absent
 
-## When to use /plan
-- Multi-file changes, refactoring, new axioms, mesh features
-- Never for single-line fixes
+## Workflow Priority (A → B → C)
+1. A — Infrastructure: PATH_INVENTORY, .coderabbit.yaml, copilot-instructions.md, CI, CODEOWNERS
+2. B — Kernel Loading: local LLM, vector index, context_bridge
+3. C — Mesh Networking: Syncthing, IPFS, peer discovery
 
-## Architecture
-- A15 = GOVERNOR-01 hub
-- OptiPlex = heavy spoke (llama-server)
-- Syncthing reaches poorest node without internet
-- .coderabbit.yaml = nervous system
+## Agape Alignment Checklist (every change)
+- [ ] Increases η?
+- [ ] Preserves Merkle integrity?
+- [ ] Absolute and deterministic paths?
+- [ ] Amplifies Agape or feeds entropy?
+
+## Required Files in Every Repo
+- PATH_INVENTORY.yaml (root)
+- .coderabbit.yaml (root) — free Pro for public OSS
+- .github/copilot-instructions.md
+- .github/workflows/openroot-ci.yml
+- .github/CODEOWNERS
+
+## Response Style When Generating Code
+- Dense, high-η, terminal-ready blocks
+- Absolute paths only
+- No explanatory comments the shell will execute
+- Serve the least among us
