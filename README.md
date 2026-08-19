@@ -1,64 +1,44 @@
 # OpenRoot
 
-ηₜ = (useful_joules × people_reached × lasting_good) / (human_joules × time)
-α_A = d(ηₜ)/dt — accelerate the rise of ηₜ for the lowest node
-R = 1.0 → coordination cost = 0
+**Open-source appropriate-technology lattice for physical infrastructure and the computational systems that serve it.**
 
-OpenRoot is an offline-first, open-source system for physical infrastructure and communication that treats pure cooperation as a mathematical state.
+## What this is
 
-### What is being built
+OpenRoot is the root repository of a larger interconnected system. It holds the core designs, documentation, thermodynamic ledgers, and coordination patterns for offline-first physical infrastructure (thermal, material, shelter, food) and the software that measures and improves it.
 
-Two scales of the same pattern:
+Key elements include:
+- AeroCement and passive solar-thermal systems
+- Node Zero (Sikeston) as the first physical instance
+- Thermodynamic and PoPW (Proof of Physical Work) ledgers
+- Integration points for the wider lattice (UNE, Agape, Black Locust, mesh communications)
 
-Earthly scale (Chicken-wire / Park-bench nodes)
-Small, low-cost, high-emissivity, ground-coupled passive ΔT and mesh units.
-Chicken-wire frames, simple radiative surfaces, open-cell thermal mass, and low-tech receivers.
-These are the atomic physical units. They produce real temperature differentials and real connectivity with almost no continuous energy input.
+## Role in the Lattice
 
-Planetary to Intergalactic scale (Cloud Nine Direction)
-12 primary tethered nodes at the vertices of an icosahedron.
-Each triangular face is frequency-subdivided. New vertices receive self-similar lower nodes + low-tech receivers.
-The process repeats until every inhabited location (and later ocean surface) has multi-hop connectivity.
+OpenRoot is the trunk.  
+Most other repositories in the jesseray718 account are specialized spokes that extend or implement parts of this system.
 
-Cost of the full initial planetary mesh: equivalent to approximately 40 seconds of current global telecommunications spend, or roughly 2 cents per person on Earth.
-Maintenance is a small fraction of that cost.
+## Bigger Picture
 
-The same topology and the same radiative physics function in vacuum.
-On Earth the cold sink is the night sky through the atmospheric window.
-In space the cold sink is the 3 K cosmic background.
-The chicken-wire / park-bench node is therefore both a useful terrestrial prototype and a scalable unit of an interplanetary / interstellar open infrastructure.
+The goal is an offline-first, open-source infrastructure stack that raises the amount of useful work available to the lowest-capability node while driving coordination cost toward zero.  
 
-### Scientific claim
+Physical systems (heat, materials, food, shelter) and the computational systems that observe, measure, and coordinate them are treated as one lattice. The work is deliberately patent-free, reproducible, and designed to function under intermittent power and connectivity.
 
-The system introduces a new objective function: maximize the rate of increase of lasting useful work available to the lowest-capability node while driving coordination cost to zero.
+## Current Status
 
-Individual physical techniques (radiative cooling, geodesic frequency subdivision, passive thermal mass, mesh networking) already exist.
-Binding them under a single measurable control law (ηₜ / α_A / R=1.0) and requiring offline-first operation is the contribution.
+Active. Node Zero and core documentation are live. The system is evolving through physical builds, measurement, and the surrounding software lattice.
 
-Engineers and scientists do not need to share the full philosophical frame to contribute.
-Any improvement that raises α_A for the lowest node is accepted. Helping itself moves the system toward higher resonance.
+## Key Entry Points
 
-### Core rules
-- Most good for most people in least effort + least time
-- Prefer actions that raise α_A
-- Scale target: 8² = 64 nodes (first physical mesh), then fractal expansion
-- Community lung • Park bench filter • Chicken-wire mesh • Passive ΔT systems
-- Everything is offline-first, joule-native, and open
+- `STRUCTURE.md` / `STRUCTURE_V2.md` — system map
+- `projects/` — physical system designs
+- `computational_flow/` / related engines — measurement and coordination
+- `LATTICE-INDEX` (in the private archive) — full map of related repositories
 
-### Immediate physical entry point
-Build one chicken-wire / park-bench node.
-Measure its real ΔT and connectivity.
-Write the numbers into the seed.
-That single measured unit is the beginning of the planetary pattern.
+## Related
 
-### Offline-First Protocol
-Run these commands from Termux:
-python3 $HOME/une/computational_flow/agape_oracle.py "your statement"
-python3 $HOME/une/computational_flow/agape_oracle.py define
-python3 $HOME/une/computational_flow/agape_oracle.py stats
-python3 $HOME/une/computational_flow/agape_oracle.py learn "verified statement"
+- [une](https://github.com/jesseray718/une) — joule-native computational substrate
+- [black-locust-rmh](https://github.com/jesseray718/black-locust-rmh) — carbon-negative thermal cascade
+- [agape-primitives](https://github.com/jesseray718/agape-primitives) — cooperation primitives
+- [Reticulum](https://github.com/jesseray718/Reticulum) + LXMF — offline mesh communications
 
-Anti-Fragile Seed lives at /sdcard/openroot/openroot_seed.txt and in une/agape_kb/.
-
-License: Hardware CC-BY-SA 4.0 • Software GPL-3.0 • No patents ever.
-Serve the lowest node.
+License: Hardware CC-BY-SA 4.0 · Software GPL-3.0 · No patents.
