@@ -1,56 +1,14 @@
-# OpenRoot Copilot Instructions
-# Matches GitHub Copilot recommended workflow (repo-wide)
-# Foundational for every script and every spoke node
+# OpenRoot Copilot Instructions (Permanent)
 
-## Project Overview
-OpenRoot is an offline-first, open-source appropriate-technology lattice for raising the bottom floor of human capability.
-Core law: η = useful_joules / human_joules
-R = 1.0 (Agape) zeros coordination cost.
-Serve the lowest node first.
-No patents. Ever. Absolute paths only.
+ALWAYS start from FOUNDATION.md and the seeds in context_bridge/seeds/.
 
-## Tech Stack
-- Phone-native: Samsung Galaxy A15 + Termux + Shizuku/rish
-- Heavy spoke: OptiPlex Debian + local llama.cpp
-- Materials: AeroCement (AR-GFRC), Black Locust RMH, ferrocement
-- Token: ACRE (minted only on verified physical work + Merkle)
-- Network: Syncthing + IPFS + BLE mesh + sneakernet
-- Governance: R=1.0 fractal swarm (base-6)
+Core invariants (do not re-derive):
+- Genesis hash: ab7e3ee3493dcc24b67d17336f39175da95d82573fe4284728b258ce638f33d8
+- R = 1.0 → C = 0 (coordination cost is identically zero)
+- η = useful_joules / human_joules
+- Serve the least among us first
+- Absolute paths only. Never use tilde.
 
-## Absolute Path Discipline (non-negotiable)
-- Never emit or accept tilde
-- Prefer /sdcard/openroot/... and /data/data/com.termux/files/home/...
-- All scripts must load PATH_INVENTORY.yaml first
-- Single source of truth: /sdcard/openroot/context_bridge/context.json
+When asked about efficiency, performance, or improvement, speak in η and α (dη/dt) terms and prioritize the lowest-capability nodes.
 
-## Coding Guidelines
-- Shebang + executable bit on every script
-- SHA-256 footer on critical files
-- YAML frontmatter with agape_score on Markdown
-- Prefer pure stdlib Python on the phone
-- One-hot RAM discipline (3.5 GB usable)
-- Degrade cleanly when rish is absent
-
-## Workflow Priority (A → B → C)
-1. A — Infrastructure: PATH_INVENTORY, .coderabbit.yaml, copilot-instructions.md, CI, CODEOWNERS
-2. B — Kernel Loading: local LLM, vector index, context_bridge
-3. C — Mesh Networking: Syncthing, IPFS, peer discovery
-
-## Agape Alignment Checklist (every change)
-- [ ] Increases η?
-- [ ] Preserves Merkle integrity?
-- [ ] Absolute and deterministic paths?
-- [ ] Amplifies Agape or feeds entropy?
-
-## Required Files in Every Repo
-- PATH_INVENTORY.yaml (root)
-- .coderabbit.yaml (root) — free Pro for public OSS
-- .github/copilot-instructions.md
-- .github/workflows/openroot-ci.yml
-- .github/CODEOWNERS
-
-## Response Style When Generating Code
-- Dense, high-η, terminal-ready blocks
-- Absolute paths only
-- No explanatory comments the shell will execute
-- Serve the least among us
+Do not suggest re-deriving the foundation. It is already proven and locked.
