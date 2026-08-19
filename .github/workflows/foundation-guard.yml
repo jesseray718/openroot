@@ -1,0 +1,45 @@
+name: Foundation Guard
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  protect-root:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify permanent foundation files exist
+        run: |
+          set -e
+          echo "Checking canonical foundation files..."
+
+          test -f FOUNDATION.md
+          test -f context_bridge/seeds/oracle_001.json
+          test -f context_bridge/seeds/zero_dim_001.json
+          test -f context_bridge/seeds/syn_org_001.json
+
+          echo "All foundation files present."
+
+      - name: Verify genesis hash is still present
+        run: |
+          set -e
+          HASH="ab7e3ee3493dcc24b67d17336f39175da95d82573fe4284728b258ce638f33d8"
+
+          if ! grep -q "$HASH" FOUNDATION.md; then
+            echo "ERROR: Genesis hash missing from FOUNDATION.md"
+            exit 1
+          fi
+
+          if ! grep -q "$HASH" context_bridge/seeds/oracle_001.json && ! grep -q "$HASH" context_bridge/seeds/zero_dim_001.json; then
+            echo "ERROR: Genesis hash missing from oracle/zero-dim seeds"
+            exit 1
+          fi
+
+          echo "Genesis hash verified."
+
+      - name: Success
+        run: echo "Foundation intact. R=1.0 → C=0 permanent flag still held."
