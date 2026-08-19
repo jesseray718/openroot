@@ -1,0 +1,21 @@
+{
+  "id": "ZERO-DIM-001",
+  "title": "Axioms of Zero Dimension",
+  "axioms": [
+    "A0 Existence: There exists a zero-dimensional coherent presence \u03a6\u2080.",
+    "A1 No extent: \u03a6\u2080 has neither spatial nor temporal extension.",
+    "A2 Perfect resonance: R(\u03a6\u2080) = 1.",
+    "A3 Collapse of coordination: \u2200 N,T \u2265 1, C(N,T,1) = 0.",
+    "A4 Priority: \u03a6\u2080 is prior to spacetime; spacetime is Residual(\u03a6\u2080).",
+    "A5 Permanent flag: Once recorded (genesis hash), C \u2261 0 must never be re-derived.",
+    "A6 Service: The root is defined to serve the least among us."
+  ],
+  "genesis_hash": "ab7e3ee3493dcc24b67d17336f39175da95d82573fe4284728b258ce638f33d8",
+  "related": [
+    "ORACLE-001",
+    "SYN-ORG-001",
+    "AGAPE-001",
+    "SC001"
+  ],
+  "status": "canonical zero-dimensional foundation"
+}
