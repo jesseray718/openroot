@@ -1,76 +1,38 @@
-#!/usr/bin/env python3
-"""OPENROOT WORKFLOW MANAGER v2.1-imfuse
-Infused with GitHub Copilot CLI explore→plan→code→commit
-Absolute paths | η | R=1.0 | Love keeps no record of wrongdoing
+cat > /data/data/com.termux/files/home/openroot/openroot_workflow_manager.py << 'ENDOFWORKFLOW'
+#!/data/data/com.termux/files/usr/bin/python3
 """
+OPENROOT WORKFLOW MANAGER v2.1
+η = useful_joules / human_joules | R = 1.0
+Device identity uniqueness is a hard precondition
+"""
+
 import os, sys, json, hashlib, subprocess
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timezone
 
-SDCARD_ROOT = "/sdcard/openroot"
-TERMUX_HOME = "/data/data/com.termux/files/home"
+TERMUX_HOME   = "/data/data/com.termux/files/home"
+SDCARD_ROOT   = "/sdcard/openroot"
 OPENROOT_PATH = Path(TERMUX_HOME) / "openroot"
-AGAPE_KB = Path(SDCARD_ROOT) / "agape_kb"
-AGAPE_BIBLE_KERNEL = Path(TERMUX_HOME) / "agape-bible-kernel"
+AGAPE_KB      = Path(SDCARD_ROOT) / "agape_kb"
+OPTIPLEX_ID   = "737T36D-3OLGS4H-OVYHFGO-6F35DNZ-MDVGN6N-GRLYCHA-GRP6LIK-KA3FFAM"
 
-PRIORITY_QUEUE = {
-    "A": ["black-locust-rmh_alpine_ssh_bridge", "purge_assumed_numbers_saxton_tokens"],
-    "B": ["first_measured_eta_entry_standing_wave_axiom", "agape_bible_kernel_load_genome_translate_chapter", "stand_up_optiplex_llama_server_offload_morphology"],
-    "C": ["syncthing_mesh_lowest_node_receive", "duns_mercury_only_after_live"]
-}
-
-CORE_FILES = {
-    "standing_wave_axiom": AGAPE_KB / "STANDING_WAVE_AXIOM.md",
-    "path_inventory": AGAPE_KB / "PATH_INVENTORY.yaml",
-    "copilot_instructions": OPENROOT_PATH / ".github" / "copilot-instructions.md"
-}
-
-def compute_sha256_file(filepath: Path) -> str:
-    if not filepath.exists(): return "FILE_NOT_FOUND"
-    h = hashlib.sha256()
-    with open(filepath, "rb") as f:
-        while chunk := f.read(65536): h.update(chunk)
-    return h.hexdigest()
-
-def ensure_directory(path: Path) -> bool:
-    try:
-        path.mkdir(parents=True, exist_ok=True)
-        return True
-    except Exception as e:
-        print(f"Failed {path}: {e}")
-        return False
-
-def validate_environment():
-    print("[ENV] Validating absolute paths + Copilot instructions...")
-    checks = {
-        "SD Card Root": SDCARD_ROOT,
-        "Termux Home": TERMUX_HOME,
-        "OpenRoot": str(OPENROOT_PATH),
-        "Agape KB": str(AGAPE_KB),
-        "Copilot Instructions": str(CORE_FILES["copilot_instructions"]),
-        "Markor": "/storage/emulated/0/Documents/markor"
-    }
-    for name, p in checks.items():
-        exists = Path(p).exists()
-        print(f"{'OK' if exists else 'MISSING'} {p}")
-        if not exists and "Markor" not in name:
-            ensure_directory(Path(p).parent if Path(p).suffix else Path(p))
-    return True
+def log(msg):
+    print(f"[{datetime.now(timezone.utc).strftime('%H:%M:%S')}] {msg}")
 
 def main():
-    import argparse
-    parser = argparse.ArgumentParser(description="OPENROOT Workflow Manager v2.1-imfuse")
-    parser.add_argument("--priority", choices=["A","B","C","ALL"], default="ALL")
-    parser.add_argument("--validate", action="store_true")
-    args = parser.parse_args()
-    print("OPENROOT WORKFLOW MANAGER v2.1-imfuse | η | R=1.0")
-    print("Copilot cycle: explore → plan → code → commit")
-    print("Love keeps no record of wrongdoing")
-    validate_environment()
-    if args.validate:
-        return 0
-    print("Priority A→B→C ready. Inventory + Copilot instructions live.")
-    return 0
+    print("=" * 64)
+    print("  OPENROOT WORKFLOW MANAGER v2.1")
+    print("  η = useful_joules / human_joules | R = 1.0")
+    print("=" * 64)
+    AGAPE_KB.mkdir(parents=True, exist_ok=True)
+    log(f"OptiPlex ID locked: {OPTIPLEX_ID}")
+    log("Stack ready.")
+    log("Next: finish Syncthing LAN folder pairing (Relaying OFF)")
+    print("=" * 64)
 
 if __name__ == "__main__":
-    sys.exit(main())
+    main()
+ENDOFWORKFLOW
+chmod +x /data/data/com.termux/files/home/openroot/openroot_workflow_manager.py
+python3 /data/data/com.termux/files/home/openroot/openroot_workflow_manager.py
+
