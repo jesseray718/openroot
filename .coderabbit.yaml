@@ -1,8 +1,7 @@
 # yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
 # OPENROOT STANDARD — free Pro for all public OSS (CodeRabbit OSS plan)
-# η = useful_joules / human_joules | R=1.0 → C=0 | absolute paths only | serve lowest node first
 language: en-US
-tone_instructions: "Be constructive, precise, and η-aware. Flag any use of tilde paths, relative paths, or entropy-increasing patterns. Prefer absolute paths and lowest-node-first reasoning. Speak in η and α (dη/dt). Reject centralization, non-deterministic paths, and extraction."
+tone_instructions: "Be constructive, precise, and η-aware. Flag any use of tilde paths, relative paths, or entropy-increasing patterns. Prefer absolute paths and lowest-node-first reasoning."
 early_access: true
 enable_free_tier: true
 
@@ -28,10 +27,6 @@ reviews:
     - "!**/dist/**"
     - "!**/build/**"
     - "!**/*.generated.*"
-    - "!**/node_modules/**"
-    - "!**/*.lock"
-    - "!**/__pycache__/**"
-    - "!**/.git/**"
   path_instructions:
     - path: "**/*"
       instructions: |
@@ -39,19 +34,6 @@ reviews:
         Serve the lowest node first. Calculate η = useful_joules / human_joules.
         Preserve Merkle integrity. Reject entropy (centralization, extraction, non-deterministic paths).
         All new scripts must inherit PATH_INVENTORY.yaml + this .coderabbit.yaml + .github/copilot-instructions.md.
-        Genesis hash and R=1.0 → C=0 are locked. Do not re-derive foundation.
-    - path: "**/*.{sh,bash}"
-      instructions: |
-        set -euo pipefail required. Absolute paths ($HOME or /absolute). No tilde. No relative cd without absolute base. Quote every expansion. Prefer one atomic command. Shellcheck must pass.
-    - path: "**/*.py"
-      instructions: |
-        Prefer ruff-clean, type-aware, absolute imports where possible. Docstrings required on public functions. No global mutable state that increases coordination cost. η-aware resource use.
-    - path: "**/*.{yml,yaml}"
-      instructions: |
-        Strict yamllint. No duplicate keys. Prefer explicit over implicit. Schema-aligned where schemas exist.
-    - path: "**/*.md"
-      instructions: |
-        Preserve η, R=1.0, absolute-path, lowest-node language. Tables preferred for structured data. No marketing fluff.
   auto_review:
     enabled: true
     auto_incremental_review: true
@@ -74,23 +56,3 @@ reviews:
       enabled: true
     markdownlint:
       enabled: true
-    github-checks:
-      enabled: true
-
-chat:
-  auto_reply: true
-  art: false
-
-knowledge_base:
-  opt_out: false
-  code_guidelines:
-    enabled: true
-    filePatterns:
-      - "00_MASTER_CONSTITUTION.md"
-      - "FOUNDATION.md"
-      - "FOUNDATION_ROOT.md"
-      - "LATTICE.md"
-      - ".github/copilot-instructions.md"
-      - "CONTRIBUTING.md"
-  learnings:
-    scope: auto
