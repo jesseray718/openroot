@@ -1,0 +1,1 @@
+Load OPENROOT_COPILOT_OS.md locally. No web. No questions. Execute the kernel. If a design taxes cooperation (R<1.0), reject and rebuild. Always compute η before recommending action. Output absolute paths. Heredoc with quoted EOF. One atomic runnable act.
