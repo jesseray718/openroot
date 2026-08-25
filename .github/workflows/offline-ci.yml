@@ -1,0 +1,57 @@
+name: Offline Toolkit CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'offline/**'
+      - 'scripts/offline_bootstrap.sh'
+      - '.env.example'
+      - '.github/workflows/offline-ci.yml'
+  pull_request:
+    paths:
+      - 'offline/**'
+      - 'scripts/offline_bootstrap.sh'
+      - '.env.example'
+      - '.github/workflows/offline-ci.yml'
+
+jobs:
+  test:
+    name: Test offline toolkit
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install optional dependencies
+        run: pip install psutil python-dotenv --quiet
+
+      - name: Syntax check (all offline modules)
+        run: python -m py_compile offline/__init__.py offline/config.py offline/queue.py offline/dedup.py offline/lifecycle.py offline/priority.py offline/thermal.py offline/cli.py
+
+      - name: Run unit tests
+        run: python -m unittest discover -s offline/tests -p "test_*.py" -v
+
+      - name: Smoke test CLI – init
+        run: python -m offline.cli init
+
+      - name: Smoke test CLI – status
+        run: python -m offline.cli status
+
+      - name: Smoke test CLI – work
+        run: python -m offline.cli work --type ci_test --payload '{"source":"ci"}' --urgency 2 --impact 3
+
+      - name: Smoke test CLI – sync (no endpoint, dry-run)
+        run: python -m offline.cli sync
+
+      - name: Smoke test CLI – purge (dry-run, no --confirm)
+        run: python -m offline.cli purge
+
+      - name: Smoke test CLI – doctor
+        run: python -m offline.cli doctor

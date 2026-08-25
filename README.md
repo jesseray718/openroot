@@ -45,3 +45,42 @@ Core rules:
 Cycle: Observe → Measure → Score → Record → Amend
 
 ∅ → ◎ → Λ → c | R=1.0 | C=0 | Wisdom Accumulates | Love Restored
+
+
+---
+
+## Offline-First Toolkit — Quickstart
+
+Work productively with **zero internet connection**.
+
+### One-command bootstrap
+
+```bash
+bash scripts/offline_bootstrap.sh
+```
+
+### Daily commands (copy/paste)
+
+```bash
+# Check queue, dedup index, storage, and system pressure
+python3 -m offline.cli status
+
+# Add a work item to the local queue
+python3 -m offline.cli work --type task --payload '{"note":"my work item"}' --urgency 5 --impact 8
+
+# Sync queued work when back online (no-op if no endpoint set)
+python3 -m offline.cli sync
+
+# Purge expired soft-deleted records (dry-run first, then --confirm)
+python3 -m offline.cli purge
+python3 -m offline.cli purge --confirm
+
+# Validate local environment
+python3 -m offline.cli doctor
+```
+
+> **Fully offline:** `init`, `status`, `work`, `purge`, `doctor` require no internet.  
+> **Requires connectivity:** `sync` (only when `OFFLINE_SYNC_ENDPOINT` is set).
+
+See [`docs/offline-toolkit.md`](docs/offline-toolkit.md) for architecture details  
+and [`docs/runbook.md`](docs/runbook.md) for troubleshooting playbooks.
