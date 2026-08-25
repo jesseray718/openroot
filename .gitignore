@@ -35,3 +35,12 @@ agape_net/ledger/pins.jsonl
 =======
 .aider*
 >>>>>>> 629a5f4 (mesh: openroot hardened + OptiPlex unique ID HA4MSKC 20260821T112322Z)
+.ssh
+*.pem
+*.key
+__pycache__
+.syncthing.*.tmp
+ENDOFBRIDGE
+session_seeds
+ledger/live
+context_bridge/context.json
