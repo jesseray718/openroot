@@ -56,8 +56,10 @@ def evaluate_case(c: SystemCase) -> Dict[str, Any]:
     cool_unmet_J = clamp(c.cool_demand_J - cool_served_by_lab_J)
 
     # 3) DHW: first consume any remaining RMH heat
-    rmh_remaining_J = clamp(rmh_deliverable_heat_J - heat_served_by_rmh_J)
-    dhw_served_by_rmh_J = min(c.dhw_demand_J, rmh_remaining_J * c.eta_dhw_delivery)
+    # Calculate remaining on source-energy basis
+    heat_consumed_source_J = heat_served_by_rmh_J / max(c.eta_heat_delivery, 1e-9)
+    rmh_remaining_source_J = clamp(c.rmh_heat_available_J - heat_consumed_source_J)
+    dhw_served_by_rmh_J = min(c.dhw_demand_J, rmh_remaining_source_J * c.eta_dhw_delivery)
     dhw_unmet_J = clamp(c.dhw_demand_J - dhw_served_by_rmh_J)
 
     # 4) Electrical fallback only for unmet loads
