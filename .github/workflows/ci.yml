@@ -6,4 +6,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+<<<<<<< HEAD
       - run: echo "Add project tests here"
+=======
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -e .
+      - run: pip install pytest
+      - run: pytest
+>>>>>>> 30ec7156 (ci: run pytest instead of placeholder)
