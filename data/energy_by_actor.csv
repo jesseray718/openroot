@@ -1,0 +1,3 @@
+event_id,timestamp_utc,node_id,actor_id,input_energy_J,useful_output_J,loss_energy_J,stored_energy_delta_J,residual_C_J,confidence,evidence_reference
+bafaf59f-7ec6-4aea-a5cb-63c4608b2c31,2026-08-25T23:20:03.751481Z,node.compute.local,agent.runtime,5.0,3.0,2.0,0.0,0.0,estimated,runtime.sample.estimate
+049a9186-4eb9-47cd-8a63-1d828ec21c18,2026-08-25T23:20:03.814167Z,node.compute.local,agent.runtime,5.0,3.0,2.0,0.0,0.0,estimated,runtime.sample.estimate
