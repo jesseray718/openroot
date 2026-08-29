@@ -1,16 +1,28 @@
-# Contributing
-## How
-1. Fork the repo
-2. Create feature branch
-3. Run `python3 -m kernel.selftest` before committing
-4. Submit PR with η impact statement
+# Contributing to OpenRoot
 
-## What Counts as Improvement
-- Reduces J_human while maintaining J_useful
-- Closes a postulate (Newton Chain addition)
-- Extends reach to additional nodes
+Thanks for helping build open-source thermodynamic infrastructure.
 
-## What Does Not Count
-- Adding complexity without η gain
-- Re-deriving closed postulates
-- Design requiring centralized coordination
+## Mission
+Maximize useful output per human effort:
+eta = J_useful / J_human
+
+## First 60-minute tasks
+1. Thermodynamics bounds review
+2. Porous flow assumptions check
+3. Materials protocol draft
+4. Sensor/instrumentation checklist
+5. Docs reproducibility QA
+
+## How to contribute
+- Open an issue or comment on an existing one.
+- Keep proposals falsifiable and testable.
+- Distinguish simulated vs physically validated claims.
+- Include paths, scripts, and expected outputs.
+
+## Evidence discipline
+- Link data/script paths.
+- State assumptions and uncertainty.
+- Prefer minimal reproducible examples.
+
+## Contact
+jrm8908@proton.me
