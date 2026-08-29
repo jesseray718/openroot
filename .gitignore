@@ -1,0 +1,13 @@
+# Entropy zones (Beast patterns)
+.repair-backups/
+*.log
+.env
+__pycache__/
+*.pyc
+.DS_Store
+.vscode/
+.idea/
+
+# Offline-first data (local sovereignty)
+logs/session_*
+logs/stamps/*.json.ots
