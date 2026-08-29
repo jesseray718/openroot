@@ -1,0 +1,26 @@
+name: Falsification Review
+description: Challenge assumptions and identify failure modes
+title: "[Falsification] "
+labels: ["research", "review"]
+body:
+  - type: textarea
+    id: claim
+    attributes:
+      label: Claim under review
+      description: State the claim clearly
+    validations:
+      required: true
+  - type: textarea
+    id: assumptions
+    attributes:
+      label: Assumptions
+  - type: textarea
+    id: failure_modes
+    attributes:
+      label: Top 3 likely failure modes
+    validations:
+      required: true
+  - type: textarea
+    id: suggested_tests
+    attributes:
+      label: Suggested tests

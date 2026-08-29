@@ -1,0 +1,25 @@
+name: Experiment Proposal
+description: Propose a cheap, testable experiment
+title: "[Experiment] "
+labels: ["experiment"]
+body:
+  - type: input
+    id: hypothesis
+    attributes:
+      label: Hypothesis
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: Method
+    validations:
+      required: true
+  - type: textarea
+    id: instrumentation
+    attributes:
+      label: Instrumentation
+  - type: textarea
+    id: success
+    attributes:
+      label: Success criteria
