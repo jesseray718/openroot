@@ -62,3 +62,8 @@ You do not need to be perfect. You need to start.
 - Maintainer: jrm8908@proton.me
 - Repo: https://github.com/jesseray718/openroot
 - Discussions: see pinned “Start Here” thread
+
+## Thesis Release Bundle (2026-08-29)
+Packaged thesis corpus, core docs, outreach packets, and integrity manifests are included in:
+- `releases/thesis-20260829/`
+Contact: jrm8908@proton.me
