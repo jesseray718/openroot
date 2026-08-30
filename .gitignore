@@ -11,3 +11,21 @@ __pycache__/
 # Offline-first data (local sovereignty)
 logs/session_*
 logs/stamps/*.json.ots
+.aider.chat.history.md
+.aider.input.history
+.aider.tags.cache.v4/
+.syncthing.*.tmp
+logs/
+outbox/
+harvest/
+*.tmp
+
+# --- mesh/runtime lock 2026-08-30 ---
+inbox/
+dump/
+context_bridge/hive_runs/
+.stfolder
+.stversions
+*.gguf
+*.bin
+models/
