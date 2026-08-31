@@ -29,3 +29,6 @@ context_bridge/hive_runs/
 *.gguf
 *.bin
 models/
+
+# Local operational transcripts
+context/*_termux_session.txt
