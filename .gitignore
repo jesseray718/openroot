@@ -32,3 +32,8 @@ models/
 
 # Local operational transcripts
 context/*_termux_session.txt
+
+# Local Syncthing and runtime state
+.stignore
+agape_kb/engine_state.json
+closed-loop/ledger/*.jsonl
