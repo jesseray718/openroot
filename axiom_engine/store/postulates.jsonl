@@ -1,0 +1,6 @@
+{"category":"logic","flag":"FLAG-PO-04e42572b6dfb46a","grade":"OPEN","hash":"04e42572b6dfb46a1a11d18a16d2e0127370a33a4bde2e671179469a1052adae","id":"PO-MP","irreducible":false,"keys":["modus ponens"],"kind":"postulate","name":"modus_ponens","premises":["ID"],"proof":[],"source":"","statement":"From P implies Q and P, infer Q.","ts":1788254860.5939062}
+{"category":"construction","id":"AX-POSTULATE-1","keys":["draw"],"kind":"postulate","premises":[],"proof":[],"statement":"To draw a straight line from any point to any point."}
+{"category":"construction","id":"AX-POSTULATE-2","keys":["extend"],"kind":"postulate","premises":[],"proof":[],"statement":"To produce a finite straight line continuously in a straight line."}
+{"category":"construction","id":"AX-POSTULATE-3","keys":["circle"],"kind":"postulate","premises":[],"proof":[],"statement":"To describe a circle with any center and radius."}
+{"category":"equality","id":"AX-POSTULATE-4","keys":["right_angle"],"kind":"postulate","premises":[],"proof":[],"statement":"All right angles are equal to one another."}
+{"category":"parallel","id":"AX-POSTULATE-5","keys":["parallel"],"kind":"postulate","premises":[],"proof":[],"statement":"If a transversal makes interior angles less than two right angles on one side, lines meet on that side."}

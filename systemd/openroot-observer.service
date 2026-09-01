@@ -1,0 +1,15 @@
+[Unit]
+Description=OpenRoot PoPW Observer and Inference Engine
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/jesse/openroot
+ExecStart=/usr/bin/python3 /home/jesse/openroot/tools/observer_infer.py /home/jesse/.bash_history
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target
