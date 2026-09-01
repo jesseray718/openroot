@@ -20,7 +20,11 @@ jobs:
 
     - name: Compile Native Shared Library (libthermo.so)
       run: |
+copilot/fix-cxx-build-workflow
+       g++ -std=c++20 -O3 -fPIC -shared -Iinclude -o libthermo.so src/thermo_wrapper.cpp
+
         g++ -std=c++20 -O3 -fPIC -shared -fkeep-inline-functions -Iinclude -x c++ -o libthermo.so include/openroot/thermo.hpp
+main
 
     - name: Build C++ Benchmark Executable
       run: |
