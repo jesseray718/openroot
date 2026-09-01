@@ -1,3 +1,9 @@
+# OpenRoot Engine
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21887097.svg)](https://doi.org/10.5281/zenodo.21887097)
+[![Release](https://img.shields.io/github/v/release/jesseray718/openroot?include_prereleases)](https://github.com/jesseray718/openroot/releases/tag/v1.1.0-native-thermo)
+[![C++20 Native](https://img.shields.io/badge/Kernel-C%2B%2B20%20Native-blue.svg)](include/openroot/thermo.hpp)
+
 # OpenRoot
 
 OpenRoot is a living, open ecosystem for practical regeneration: science, engineering, agriculture, software, governance, and local community resilience.
