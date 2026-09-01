@@ -67,3 +67,6 @@ You do not need to be perfect. You need to start.
 Packaged thesis corpus, core docs, outreach packets, and integrity manifests are included in:
 - `releases/thesis-20260829/`
 Contact: jrm8908@proton.me
+
+## Knowledge Integration
+See `docs/knowledge/`.
