@@ -37,3 +37,6 @@ context/*_termux_session.txt
 .stignore
 agape_kb/engine_state.json
 closed-loop/ledger/*.jsonl
+
+# Nested une checkout — real repo is /home/jesse/github-mirror/une
+une/
