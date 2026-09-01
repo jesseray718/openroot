@@ -24,7 +24,7 @@ enum class TransitionStatus : std::uint8_t {
 
 template <typename T>
 concept ZeroDimNode = requires(T node) {
-    { node.id }      -> std::same_as<const node_id_t&>;
+    { node.id }      -> std::convertible_to<node_id_t>;
     { node.energy }  -> std::same_as<joules_t&>;
     { node.mass }    -> std::same_as<mass_ug_t&>;
     { node.entropy } -> std::same_as<entropy_fixed_t&>;
