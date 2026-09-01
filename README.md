@@ -1,3 +1,5 @@
+[![C++20 Thermodynamic Kernel CI](https://github.com/jesseray718/openroot/actions/workflows/cxx-build.yml/badge.svg)](https://github.com/jesseray718/openroot/actions/workflows/cxx-build.yml)
+
 # OpenRoot Engine
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21887097.svg)](https://doi.org/10.5281/zenodo.21887097)
