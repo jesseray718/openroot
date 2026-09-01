@@ -1,0 +1,48 @@
+{
+  "session_state_version": 1,
+  "generated": "2026-08-31T21:42:00-05:00",
+  "canon_source_of_truth": {
+    "repo": "https://github.com/jesseray718/openroot-foundation",
+    "ids": [
+      "N00",
+      "N01",
+      "N02",
+      "N03",
+      "N04",
+      "N05",
+      "N06",
+      "N07",
+      "N08",
+      "N09",
+      "N10",
+      "N11",
+      "N12",
+      "N13",
+      "N14",
+      "N15",
+      "N16"
+    ]
+  },
+  "paths": {
+    "mesh_ssh": "/home/jesse/openroot",
+    "mesh_a15": "/storage/emulated/0/openroot",
+    "knowledge": "/home/jesse/knowledge",
+    "downloads": "/storage/emulated/0/Download"
+  },
+  "coder_nodes": [
+    {
+      "host": "192.168.1.193",
+      "port": 11434,
+      "model": "qwen2.5-coder:7b",
+      "role": "server",
+      "status": "online"
+    }
+  ],
+  "next_action": "idle",
+  "hard_rules": [
+    "N14 model vs measured",
+    "N10 chain.jsonl + cas only",
+    "harvest before cleanup",
+    "Fork only on A15"
+  ]
+}
