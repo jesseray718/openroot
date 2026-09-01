@@ -1,0 +1,38 @@
+{
+  "n14": "C=0 is coord(N,T,1.0). Not measured mesh cost. Not open-to-all.",
+  "treat": "protect bottom nodes, do not extract, do not unique-ID wipe, do not share secrets",
+  "nodes": [
+    {
+      "id": "JW5PQXV",
+      "role": "box",
+      "host": "optiplex3060",
+      "lan": "192.168.1.193",
+      "coder": "192.168.1.193:11434",
+      "path": "/home/jesse/openroot",
+      "agape": true
+    },
+    {
+      "id": "WD53PPW",
+      "role": "phone",
+      "host": "SM-A156U",
+      "lan": "192.168.1.233",
+      "path": "/storage/emulated/0/openroot",
+      "agape": true
+    }
+  ],
+  "folder": "9wa5l-2o8fl",
+  "allow_ports_from_peers": [
+    22,
+    11434,
+    22000
+  ],
+  "deny": [
+    "unique-ID wipe",
+    "Termux syncthing serve",
+    "POST new syncthing folders",
+    "ufw allow 11434 from Anywhere",
+    "share /home/jesse/archive/phone-secrets",
+    "write first to phone HOME/openroot ghost",
+    "grand_unifying_script.py"
+  ]
+}
