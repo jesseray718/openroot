@@ -52,3 +52,8 @@ data/synergy_log.jsonl
 data/worldlines.jsonl
 data/branches.json
 axiom_engine/store/proofcache.json
+*.so
+*.o
+test_thermo
+__pycache__/
+.pytest_cache/
