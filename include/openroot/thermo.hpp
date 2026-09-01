@@ -85,3 +85,22 @@ template <ZeroDimNode Node = StateNode>
 }
 
 } // namespace openroot::thermo
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+[[nodiscard]] inline std::uint8_t openroot_execute_0d_transition(
+    openroot::thermo::StateNode* source,
+    openroot::thermo::StateNode* destination,
+    const openroot::thermo::FluxQuantum* flux) noexcept
+{
+    if (!source || !destination || !flux) return 255;
+    return static_cast<std::uint8_t>(
+        openroot::thermo::execute_0d_transition(*source, *destination, *flux)
+    );
+}
+
+#ifdef __cplusplus
+}
+#endif
