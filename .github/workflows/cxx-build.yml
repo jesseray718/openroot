@@ -1,0 +1,39 @@
+name: C++20 Thermodynamic Kernel CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Verify Header Syntax (C++20)
+      run: |
+        g++ -std=c++20 -Iinclude -fsyntax-only include/openroot/thermo.hpp
+
+    - name: Compile Native Shared Library (libthermo.so)
+      run: |
+        g++ -std=c++20 -O3 -fPIC -shared -fkeep-inline-functions -Iinclude -x c++ -o libthermo.so include/openroot/thermo.hpp
+
+    - name: Build C++ Benchmark Executable
+      run: |
+        g++ -std=c++20 -O3 -Iinclude test_thermo.cpp -o test_thermo
+
+    - name: Run Standalone C++ Benchmark
+      run: |
+        ./test_thermo
+
+    - name: Verify Python C-FFI Integration
+      run: |
+        python3 test_thermo.py
+
+    - name: Verify System Health & Theorem Graph
+      run: |
+        python3 system_health_check.py

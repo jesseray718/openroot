@@ -1,0 +1,15 @@
+{
+  "nodes": [
+    {
+      "host": "192.168.1.193",
+      "port": 11434,
+      "model": "qwen2.5-coder:7b",
+      "role": "server",
+      "device": "OptiPlex",
+      "registered": "2026-09-01T02:25:13Z",
+      "status": "pending"
+    }
+  ],
+  "last_sync": "2026-09-01T02:25:18Z",
+  "n14": "coder node is LAN inference, not a pad hang"
+}
