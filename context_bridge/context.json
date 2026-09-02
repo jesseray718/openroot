@@ -1,0 +1,11 @@
+{
+  "events": [
+    {
+      "timestamp": "2026-08-31T22:55:05.404311",
+      "system": "WaterProcurement",
+      "event": "MODERN_FAILURE",
+      "message": "Sensor offline - switching to primitive.",
+      "status": "fallback_active"
+    }
+  ]
+}
