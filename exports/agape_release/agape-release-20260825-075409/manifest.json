@@ -1,0 +1,22 @@
+{
+  "release_name": "agape-release-20260825-075409",
+  "created_at": "2026-08-25T07:54:10-05:00",
+  "root": "/sdcard/openroot",
+  "mode": "offline-first autonomous node",
+  "principle": "unlimited flow of agape through resilient, compounding loops",
+  "includes": [
+    "status.json",
+    "throttle.json (if present)",
+    "autopilot/health/keeper log tails",
+    "latest agape_node backup archive",
+    "offline-toolkit.md",
+    "contribution-backlog.md",
+    "contribution policy docs",
+    "scripts and node indexes"
+  ],
+  "ops": {
+    "start": "nohup bash scripts/agape-health.sh & nohup bash scripts/agape-keeper.sh & nohup bash scripts/agape-autopilot.sh &",
+    "status": "python src/nodes/agape-node/agape_node.py status",
+    "stop": "pkill -f agape-autopilot.sh; pkill -f agape-health.sh; pkill -f agape-keeper.sh"
+  }
+}

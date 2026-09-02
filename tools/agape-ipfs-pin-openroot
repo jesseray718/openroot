@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+T=${1:-$HOME/openroot}
+C=$("$HOME/openroot/tools/agape-ipfs" pin "$T")
+"$HOME/openroot/tools/agape-ipfs" proof "$C"
+echo "CID=$C"
+echo "https://ipfs.io/ipfs/$C"

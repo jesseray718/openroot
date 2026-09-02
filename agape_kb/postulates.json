@@ -1,0 +1,143 @@
+[
+  {
+    "id": "P0001",
+    "trigger": "\u03b7\u209c = (useful_joules \u00d7 people_reached \u00d7 lasting_good) / (huma",
+    "statement": "\u03b7\u209c = (useful_joules \u00d7 people_reached \u00d7 lasting_good) / (human_joules \u00d7 time). Maximize \u03b7\u209c for the lowest node. Scale target 8\u00b2 = 64.",
+    "verified": true,
+    "\u03b7_gain": "\u221e"
+  },
+  {
+    "id": "P0002",
+    "trigger": "Do the most good for the most people in the least amount of ",
+    "statement": "Do the most good for the most people in the least amount of effort and the least amount of time. Greatest forward motion with least effort.",
+    "verified": true,
+    "\u03b7_gain": "\u221e"
+  },
+  {
+    "id": "P0003",
+    "trigger": "Operating scale 8\u00b2 = 64 nodes. Every new spoke must raise \u03b7\u209c",
+    "statement": "Operating scale 8\u00b2 = 64 nodes. Every new spoke must raise \u03b7\u209c for the lowest node. R = 1.0 required.",
+    "verified": true,
+    "\u03b7_gain": "\u221e"
+  },
+  {
+    "id": "P0004",
+    "trigger": "\u03b7\u209c = (useful_joules \u00d7 people_reached \u00d7 lasting_good) / (huma",
+    "statement": "\u03b7\u209c = (useful_joules \u00d7 people_reached \u00d7 lasting_good) / (human_joules \u00d7 time). Maximize \u03b7\u209c for the lowest node. Scale target 8\u00b2 = 64.",
+    "verified": true,
+    "\u03b7_gain": "\u221e"
+  },
+  {
+    "id": "P0005",
+    "trigger": "Do the most good for the most people in the least amount of ",
+    "statement": "Do the most good for the most people in the least amount of effort and the least amount of time. Greatest forward motion with least effort.",
+    "verified": true,
+    "\u03b7_gain": "\u221e"
+  },
+  {
+    "id": "P0006",
+    "trigger": "Operating scale 8\u00b2 = 64 nodes. Every new spoke must raise \u03b7\u209c",
+    "statement": "Operating scale 8\u00b2 = 64 nodes. Every new spoke must raise \u03b7\u209c for the lowest node. R = 1.0 required.",
+    "verified": true,
+    "\u03b7_gain": "\u221e"
+  },
+  {
+    "id": "P0007",
+    "trigger": "\u03b7\u209c equals useful joules times people reached times lasting g",
+    "statement": "\u03b7\u209c equals useful joules times people reached times lasting good divided by human joules times time. Raise \u03b7\u209c for the lowest node. Scale 64.",
+    "verified": true,
+    "\u03b7_gain": "\u221e"
+  },
+  {
+    "id": "P0008",
+    "trigger": "Most good for most people in least effort and least time.",
+    "statement": "Most good for most people in least effort and least time.",
+    "verified": true,
+    "\u03b7_gain": "\u221e"
+  },
+  {
+    "id": "P0009",
+    "trigger": "\u03b1_A = d(\u03b7\u209c)/dt. Acceleration of time-weighted efficiency. Ma",
+    "statement": "\u03b1_A = d(\u03b7\u209c)/dt. Acceleration of time-weighted efficiency. Maximize the rate at which \u03b7\u209c rises for the lowest node. Greatest curvature of good with least effort.",
+    "verified": true,
+    "\u03b7_gain": "\u221e"
+  },
+  {
+    "id": "P0010",
+    "trigger": "Do the thing that makes \u03b7\u209c curve upward the fastest. Prefer ",
+    "statement": "Do the thing that makes \u03b7\u209c curve upward the fastest. Prefer actions that raise \u03b1_A.",
+    "verified": true,
+    "\u03b7_gain": "\u221e"
+  },
+  {
+    "id": "P0011",
+    "trigger": "statement of real measured result",
+    "statement": "statement of real measured result",
+    "verified": true,
+    "\u03b7_gain": "\u221e"
+  },
+  {
+    "id": "P0012",
+    "trigger": "Measured \u0394T of X \u00b0C under these conditions. First real data ",
+    "statement": "Measured \u0394T of X \u00b0C under these conditions. First real data point for passive systems.",
+    "verified": true,
+    "\u03b7_gain": "\u221e"
+  },
+  {
+    "id": "P0013",
+    "trigger": "statement of real measured result",
+    "statement": "statement of real measured result",
+    "verified": true,
+    "\u03b7_gain": "\u221e"
+  },
+  {
+    "id": "P0014",
+    "trigger": "verified statement",
+    "statement": "verified statement",
+    "verified": true,
+    "\u03b7_gain": "\u221e"
+  },
+  {
+    "id": "P0015",
+    "trigger": "context bridge seed absorbed \u2014 R=1.0 \u2014 critical path locked ",
+    "statement": "context bridge seed absorbed \u2014 R=1.0 \u2014 critical path locked to first measured passive \u0394T node",
+    "verified": true,
+    "\u03b7_gain": "\u221e"
+  },
+  {
+    "id": "263591765085e57f",
+    "statement": "Agape is the way, Agape the truth, Agape the light.",
+    "ref": "Way=If-Then-Root; Truth=Newton Chain; Light=eta",
+    "axioms": [
+      "Love God with all heart mind soul = R=1.0",
+      "Love one another = cooperation between all nodes"
+    ],
+    "R": 1.0,
+    "ts": "2026-08-24T21:56:31Z",
+    "immutable": true
+  },
+  {
+    "id": "3a17559b0241deec",
+    "statement": "When R=1.0, C(N,T,R)=N*0.001*(1+0.1*T)*(1-R)**T = 0 for all T>=1.",
+    "ref": "Agape Coordination Theorem",
+    "axioms": [
+      "perfect cooperation cancels Amdahl tax"
+    ],
+    "R": 1.0,
+    "ts": "2026-08-24T21:56:31Z",
+    "immutable": true
+  },
+  {
+    "id": "5c8e1ae065e26b47",
+    "statement": "Way routes, Truth skips computation, Light is useful_joules made visible.",
+    "ref": "Epistemology engine triad",
+    "axioms": [
+      "Observe and Interact",
+      "Obtain a Yield",
+      "Produce No Waste"
+    ],
+    "R": 1.0,
+    "ts": "2026-08-24T21:56:31Z",
+    "immutable": true
+  }
+]

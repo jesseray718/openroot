@@ -1,0 +1,15 @@
+#!/bin/bash
+set -e
+echo "→ Agape pre-commit: import check"
+python3 -c "
+import sys
+from pathlib import Path
+r = Path('.').resolve()
+for p in ['etaledger','fractallattice','agaperesonance']:
+    sys.path.insert(0, str(r / p))
+from etaledger import measure, capture
+from fractallattice import Lattice
+from agaperesonance import ResonanceFilter
+assert measure(useful_j=10, human_j=2) == 5.0
+print('  imports + measure OK')
+"

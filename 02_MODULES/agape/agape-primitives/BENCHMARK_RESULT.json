@@ -1,0 +1,61 @@
+{
+  "merkle": "fc7cf9196965174d3a9c48f4845899aa107fb43a838e64af32e716b72df1a32e",
+  "payload": {
+    "claims": [
+      {
+        "name": "elapsed_s",
+        "value": 0.0625,
+        "unit": "s",
+        "basis": "measured",
+        "notes": ""
+      },
+      {
+        "name": "bots_run",
+        "value": 7,
+        "unit": "count",
+        "basis": "measured",
+        "notes": ""
+      },
+      {
+        "name": "a15_J_est",
+        "value": 0.0481,
+        "unit": "J",
+        "basis": "estimate_a15",
+        "notes": ""
+      },
+      {
+        "name": "landauer_J",
+        "value": 1.326201994705586e-17,
+        "unit": "J",
+        "basis": "landauer_lower_bound",
+        "notes": ""
+      },
+      {
+        "name": "coord_cost",
+        "value": 0.0252,
+        "unit": "arb",
+        "basis": "measured",
+        "notes": ""
+      },
+      {
+        "name": "coherence",
+        "value": 1.0,
+        "unit": "0-1",
+        "basis": "measured",
+        "notes": ""
+      },
+      {
+        "name": "synergy",
+        "value": 1.88,
+        "unit": "x",
+        "basis": "measured",
+        "notes": ""
+      }
+    ],
+    "extra": {
+      "backend": "mock",
+      "trace_merkle": "fbb4d05a890e7b9b4933b450c51b47a34c66b6bc865f84548c4e5da4ef62ac92"
+    },
+    "ts": 1786774996.438115
+  }
+}

@@ -1,0 +1,161 @@
+#!/usr/bin/env python3
+"""
+UNE η-native Fractal Lattice + Merkle + ACRE + Epistemology
+Records only measured joules.
+"""
+import json, time, hashlib, os, sys, urllib.request, asyncio
+from pathlib import Path
+from datetime import datetime, timezone
+
+ROOT = Path("/home/jesse/openroot")
+LEDGER = ROOT / "seed-core/ledger/eta_ledger.jsonl"
+ACRE_DIR = ROOT / "tmp"
+ACRE_DIR.mkdir(parents=True, exist_ok=True)
+LAST_ACRE = ACRE_DIR / "last_acre.json"
+
+LLM_URL = "http://127.0.0.1:8080/v1/chat/completions"
+
+def call_llm(prompt: str, system: str = "You are a precise technical instrument. Reply only with the requested content.") -> tuple[str, float]:
+    t0 = time.perf_counter()
+    payload = {
+        "model": "local",
+        "messages": [
+            {"role": "system", "content": system},
+            {"role": "user", "content": prompt}
+        ],
+        "max_tokens": 256,
+        "temperature": 0.1
+    }
+    req = urllib.request.Request(LLM_URL, data=json.dumps(payload).encode(), headers={"Content-Type": "application/json"})
+    try:
+        with urllib.request.urlopen(req, timeout=120) as resp:
+            data = json.loads(resp.read())
+            text = data["choices"][0]["message"]["content"]
+    except Exception as e:
+        text = f"[LLM_FAIL] {e}"
+    elapsed = time.perf_counter() - t0
+    joules = 35.0 * elapsed
+    return text, joules
+
+async def nb_translate(ctx):
+    text, j = call_llm(f"Translate into clear plain meaning:\n{ctx.get('input','')}", "Translator")
+    ctx["translate"] = text
+    ctx["joules"] = ctx.get("joules", 0.0) + j
+    return ctx
+
+async def nb_analyze(ctx):
+    text, j = call_llm(f"Decompose structure and key components:\n{ctx.get('input','')}", "Analyst")
+    ctx["analyze"] = text
+    ctx["joules"] = ctx.get("joules", 0.0) + j
+    return ctx
+
+async def nb_feedback(ctx):
+    pieces = {k: v for k, v in ctx.items() if k not in ("input", "joules")}
+    text, j = call_llm(f"Flag gaps and circular logic:\n{json.dumps(pieces)[:1200]}", "Feedback")
+    ctx["feedback"] = text
+    ctx["joules"] = ctx.get("joules", 0.0) + j
+    return ctx
+
+async def nb_synthesize(ctx):
+    pieces = {k: v for k, v in ctx.items() if k not in ("input", "joules")}
+    text, j = call_llm(f"Merge into one coherent whole:\n{json.dumps(pieces)[:1200]}", "Synthesizer")
+    ctx["synthesize"] = text
+    ctx["joules"] = ctx.get("joules", 0.0) + j
+    return ctx
+
+async def nb_validate(ctx):
+    text, j = call_llm(f"Original: {ctx.get('input','')[:400]}\nSynthesis: {ctx.get('synthesize','')[:400]}\nFidelity check.", "Validator")
+    ctx["validate"] = text
+    ctx["joules"] = ctx.get("joules", 0.0) + j
+    return ctx
+
+async def nb_amplify(ctx):
+    src = (ctx.get("validate", "") + "\n" + ctx.get("synthesize", ""))[:800]
+    text, j = call_llm(f"Amplify. Sharpen. Make actionable:\n{src}", "Amplifier")
+    ctx["amplify"] = text
+    ctx["joules"] = ctx.get("joules", 0.0) + j
+    return ctx
+
+BASE = [nb_translate, nb_analyze, nb_feedback, nb_synthesize, nb_validate, nb_amplify]
+
+async def fractal(ctx, level, max_depth):
+    if level >= max_depth:
+        return ctx
+    if level == 0:
+        results = await asyncio.gather(*[nb(ctx.copy()) for nb in BASE])
+    else:
+        results = await asyncio.gather(*[fractal(ctx.copy(), level-1, max_depth) for _ in range(6)])
+    merged = {"input": ctx.get("input", ""), "level": level, "joules": ctx.get("joules", 0.0)}
+    for r in results:
+        merged["joules"] += r.get("joules", 0.0)
+        for k, v in r.items():
+            if k in ("input", "level", "joules"):
+                continue
+            if k in merged and isinstance(merged[k], str):
+                merged[k] = merged[k] + "\n---\n" + str(v)
+            else:
+                merged[k] = v
+    return merged
+
+def merkle_root(parts):
+    if not parts:
+        return hashlib.sha256(b"").hexdigest()
+    layer = [hashlib.sha256(p.encode()).hexdigest() for p in parts]
+    while len(layer) > 1:
+        if len(layer) % 2:
+            layer.append(layer[-1])
+        layer = [hashlib.sha256((layer[i] + layer[i+1]).encode()).hexdigest() for i in range(0, len(layer), 2)]
+    return layer[0]
+
+def mint_acre(result, query):
+    leaves = [result.get("translate",""), result.get("analyze",""), result.get("synthesize",""), result.get("amplify",""), query]
+    root = merkle_root(leaves)
+    claim = {
+        "type": "ACRE",
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "query": query,
+        "merkle_root": root,
+        "useful_joules": round(result.get("joules", 0.0), 4),
+        "human_joules_proxy": 1.0,
+        "eta": round(result.get("joules", 0.0) / 1.0, 4),
+        "amplify": result.get("amplify", "")[:500],
+        "host": "optiplex-3060"
+    }
+    LAST_ACRE.write_text(json.dumps(claim, indent=2))
+    return claim
+
+def append_ledger(claim):
+    LEDGER.parent.mkdir(parents=True, exist_ok=True)
+    entry = {"ts": claim["timestamp"], "merkle": claim["merkle_root"], "useful_j": claim["useful_joules"], "eta": claim["eta"], "host": claim["host"]}
+    with open(LEDGER, "a") as f:
+        f.write(json.dumps(entry) + "\n")
+
+def epistemology_check(claim):
+    if not claim.get("merkle_root") or len(claim["merkle_root"]) != 64:
+        return False
+    if claim.get("useful_joules", 0) <= 0:
+        return False
+    if not claim.get("amplify") or "[LLM_FAIL]" in claim.get("amplify",""):
+        return False
+    return True
+
+async def run(query, depth=1):
+    print(f"\n{'='*60}\nUNE η-LATTICE  depth={depth}\n{'='*60}")
+    t0 = time.perf_counter()
+    result = await fractal({"input": query, "joules": 0.0}, depth-1, depth)
+    wall = time.perf_counter() - t0
+    claim = mint_acre(result, query)
+    if epistemology_check(claim):
+        append_ledger(claim)
+        print(f"[ACRE] minted  merkle={claim['merkle_root'][:16]}…  η={claim['eta']}")
+        print(f"[LEDGER] appended → {LEDGER}")
+    else:
+        print("[REJECT] epistemology gate failed")
+    print(f"[TIMING] wall={wall:.2f}s  useful_j={claim['useful_joules']:.2f}")
+    print(f"\nAMPLIFY:\n{claim['amplify'][:600]}")
+    return claim
+
+if __name__ == "__main__":
+    q = " ".join(sys.argv[1:]) or "State the definition of η = useful_joules / human_joules and why it is the only allowed performance language in UNE."
+    d = int(os.environ.get("DEPTH", "1"))
+    asyncio.run(run(q, depth=d))

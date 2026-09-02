@@ -1,0 +1,27 @@
+{
+  "absorbed_at": "2026-08-16T18:36:55.473836+00:00",
+  "R": 1.0,
+  "eta": "useful_joules/human_joules",
+  "files": [
+    {
+      "name": "complete2.0.txt",
+      "bytes": 604,
+      "sha256": "cd92964d71ef2ce0ccc4bc10d269322a2f8fcde22e391ff86c95e24bed0b6efd"
+    },
+    {
+      "name": "complete3.0.txt",
+      "bytes": 32744,
+      "sha256": "a2de7afa0d16a5f59d55174a4251bab0c0517efe425d554562839f3f3e80dcee"
+    },
+    {
+      "name": "githubpushdebug.txt",
+      "bytes": 57454,
+      "sha256": "41270b011b4a9bb9f3664558e773baad5341b561f04ee372ae788d3b42178784"
+    },
+    {
+      "name": "todo.txt",
+      "bytes": 508,
+      "sha256": "f464e59379cbfa2f39b5b44bd9729f643d1fd59fb674f4b330ecb224607b8a7a"
+    }
+  ]
+}
