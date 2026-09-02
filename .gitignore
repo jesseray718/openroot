@@ -40,3 +40,25 @@ closed-loop/ledger/*.jsonl
 
 # Nested une checkout — real repo is /home/jesse/github-mirror/une
 une/
+chore/bulk-20260901
+
+
+private/
+**/private/
+*.osint
+*.osint.md
+
+# OpenRoot generated runtime data
+data/analytics.json
+data/synergy_log.jsonl
+data/worldlines.jsonl
+data/branches.json
+axiom_engine/store/proofcache.jsonchore/knowledge-unify-20260901-011802-openroot-
+=======
+*.so
+*.o
+test_thermo
+__pycache__/
+.pytest_c6ache/
+main
+ main
