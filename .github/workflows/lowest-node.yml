@@ -8,6 +8,9 @@ on:
   discussion:
     types: [created]
 
+permissions:
+  contents: read
+
 jobs:
   rank-and-label:
     runs-on: ubuntu-latest
