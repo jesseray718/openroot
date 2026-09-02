@@ -13,7 +13,7 @@ jobs:
       - name: Block large binaries / embedded .git
         run: |
           git diff --name-only origin/main...HEAD | while read f; do
-            if [[ "$f" =\~ \.git/ ]]; then
+            if [[ "$f" =~ \.git/ ]]; then
               echo "ERROR: Embedded .git directory detected: $f"
               exit 1
             fi

@@ -1,53 +1,233 @@
 {
-  "version": "1.1",
-  "resonance": 1.0,
-  "eta_law": "useful_joules / human_joules",
-  "lattice": {
-    "base": 6,
-    "tier": 4,
-    "nodes": 1296,
-    "coordination_cost_at_R1": 0
-  },
-  "principles": [
-    "Observe & Interact",
-    "Catch & Store Energy",
-    "Obtain a Yield",
-    "Apply Self-Regulation",
-    "Use Renewable Resources",
-    "Produce No Waste",
-    "Design from Patterns",
-    "Integrate Not Segregate",
-    "Use Small & Slow Solutions",
-    "Use & Value Diversity",
-    "Creatively Respond to Change"
-  ],
-  "master": "/sdcard/openroot/master/permaculture_lattice_master.md",
-  "last_run_report": "/sdcard/openroot/master/last_run_report.md",
-  "seed": "/sdcard/openroot/session_seeds/current_seed.json",
-  "termics": {
-    "clipboard_to_master": "/data/data/com.termux/files/home/bin/termics_clipboard_to_master.py",
-    "float": "/data/data/com.termux/files/home/bin/termics_float.py",
-    "run_last": "/data/data/com.termux/files/home/bin/termics-run-last"
-  },
-  "providers": {
-    "gemini": {
-      "role": "cloud reasoning + long context",
-      "inject_style": "system_instruction + structured facts",
-      "privacy": "google",
-      "preferred_format": "markdown_facts"
-    },
-    "lumo": {
-      "role": "private memory + project continuity (Proton)",
-      "inject_style": "memory_block + project context",
-      "privacy": "zero-access / Swiss",
-      "preferred_format": "plain_memory"
-    },
-    "grok": {
-      "role": "lattice orchestrator + termics loop",
-      "privacy": "xAI"
+  "version": "2.0",
+  "created": "2026-07-20",
+  "last_modified": "2026-07-26T14:09:00Z",
+  "project": {
+    "name": "OpenRoot",
+    "owner": "jesse",
+    "github": "github.com/jesseray718",
+    "vision": "Modular perfectly coded engineered computation using permaculture principles",
+    "core_principles": [
+      "observe_and_interact",
+      "catch_and_store_energy",
+      "obtain_yield",
+      "apply_self_regulation",
+      "use_renewable_resources",
+      "produce_no_waste",
+      "design_from_patterns_to_details",
+      "integrate_not_segregate",
+      "use_small_and_slow_solutions",
+      "use_and_value_diversity",
+      "use_edges_and_valuate_marginalia",
+      "creatively_use_and_respond_to_change"
+    ],
+    "spiritual_foundation": {
+      "source": "Yeshua teachings",
+      "commandment": "Love as I have loved you",
+      "approach": "Vessel for power flowing to the least among us"
     }
   },
-  "serve": "the least among us",
-  "absolute_paths_only": true,
-  "tilde_forbidden": true
+  "lessons": [
+    {
+      "id": "L001",
+      "timestamp": "2026-07-20T05:21:00-05:00",
+      "title": "OpenTimestamps requires immutable snapshots",
+      "body": "Live merkle_root.json rotates on every write, breaking OTS verification. Stamp immutable copies in logs/stamps/ instead.",
+      "category": "blockchain",
+      "severity": "critical"
+    },
+    {
+      "id": "L002",
+      "timestamp": "2026-07-20T05:33:00-05:00",
+      "title": "Positional args prevent keyword collision",
+      "body": "f5_record_inverse() rejects unexpected keyword 'state'. Pass state as positional arg {} instead.",
+      "category": "code",
+      "severity": "bug"
+    },
+    {
+      "id": "L003",
+      "timestamp": "2026-07-20T05:48:00-05:00",
+      "title": "ARM CPU frequency is dynamic across power states",
+      "body": "Helio G99 scales 650-2000 MHz. Idle (650 MHz) achieves eta=3.362 vs boost (2000 MHz) eta=1.098. Lower frequency = higher efficiency per useful output.",
+      "category": "energy",
+      "severity": "discovery"
+    },
+    {
+      "id": "L004",
+      "timestamp": "2026-07-20T06:10:00-05:00",
+      "title": "Structure enforcer self-matches its own patterns",
+      "body": "Regex patterns inside VIOLATIONS list match themselves. Fix: SELF_FILES set skips pattern definition files entirely. Also removed sys.exit(1) so commits proceed with warnings.",
+      "category": "tooling",
+      "severity": "bug"
+    },
+    {
+      "id": "L005",
+      "timestamp": "2026-07-20T06:20:00-05:00",
+      "title": "E=mc\u00b2 bridge is computable from Landauer",
+      "body": "f10_mass_equivalent(f7_landauer_cost(256)) = 8.189e-36 kg. Erasing 256 bits has measurable mass equivalent. Computation IS physical.",
+      "category": "physics",
+      "severity": "discovery"
+    },
+    {
+      "id": "L006",
+      "timestamp": "2026-07-21T18:26:00-05:00",
+      "title": "Orphaned .git in home dir consumed 4.6 GB",
+      "body": "A git init was accidentally run in home directory, creating a 4.6GB .git/objects folder. Nuked with rm -rf ~/.git, reclaimed 4.6GB instantly.",
+      "category": "storage",
+      "severity": "critical"
+    },
+    {
+      "id": "L007",
+      "timestamp": "2026-07-21T18:30:00-05:00",
+      "title": "JSON escapes break on backslash-tilde",
+      "body": "context.json had ~ which is invalid JSON escape. sed -i 's/~/~/g' fixed it. Never escape tildes in JSON strings.",
+      "category": "data",
+      "severity": "bug"
+    },
+    {
+      "id": "L008",
+      "timestamp": "2026-07-21T18:50:00-05:00",
+      "title": "Android kills Lumo on window switch",
+      "body": "Helio G99 limited RAM causes aggressive app eviction. Split-screen or battery unrestricted mode required for persistent AI sessions. Termux:Float as workaround.",
+      "category": "hardware",
+      "severity": "warning"
+    },
+    {
+      "id": "L009",
+      "timestamp": "2026-07-22T04:17:01Z",
+      "title": "solders+pynacl fail on Termux ARM",
+      "body": "solders requires Rust+maturin build that fails (missing dict_derive Cargo.toml). pynacl fails on memset_explicit undefined in Android NDK. Solution: use cryptography (prebuilt wheel) + base58 + requests for Solana Ed25519 signing.",
+      "category": "code",
+      "severity": "critical"
+    },
+    {
+      "id": "L010",
+      "timestamp": "2026-07-22T04:17:01Z",
+      "title": "Pure Python Solana memo anchor approach",
+      "body": "Built solana-memo-anchor.py using cryptography lib Ed25519PrivateKey for signing, base58 for encoding, requests for JSON-RPC. No Rust deps. Waiting for Phantom private key export to test. Script path: /data/data/com.termux/files/home/bin/solana-memo-anchor.py",
+      "category": "blockchain",
+      "severity": "discovery"
+    },
+    {
+      "id": "L011",
+      "timestamp": "2026-07-22T04:17:01Z",
+      "title": "bashrc orphaned function fragments cause cascading errors",
+      "body": "grep -v stripping function declarations leaves orphaned bodies with local keywords outside functions. Always delete full function range with sed /pattern/,/^}/d. Two separate orphaned blocks found: loglesson body + Auto-log every command body.",
+      "category": "tooling",
+      "severity": "bug"
+    }
+  ],
+  "system_state": {
+    "status": "rebuilding",
+    "last_session": "2026-08-01",
+    "pending_tasks": [
+      "User restates compounding-cooperation equation and Jesus-translation axiom",
+      "Lock exact Micro-Node dimensions",
+      "Instrument first prototype",
+      "Wire ledger \u2192 ACRE",
+      "Rebuild clean context bridge from this delta + prior pieces"
+    ]
+  },
+  "ai_memory": {
+    "preferences": {
+      "response_style": "Never use tilde (~) in any command given to this user",
+      "paths": "Always prefer absolute paths under /data/data/com.termux/files/home/",
+      "efficiency_language": "eta = useful_joules / human_joules is the only allowed scoring axis"
+    },
+    "learnings": [
+      "Sensor pipeline + conditions layer is the working observe-interact-measure-regulate loop",
+      "UNE is the active repo for computational_flow and GOVERNOR wiring",
+      "Lower CPU frequency achieves higher eta (3.362 at 650MHz vs 1.098 at 2000MHz)",
+      "Computation has measurable mass via Landauer + E=mc\u00b2",
+      "Bitcoin OTS confirmation takes 60-90 minutes for 6 blocks"
+    ]
+  },
+  "conversation_history": [
+    {
+      "id": "session_20260726_025610",
+      "timestamp": "2026-07-26T07:56:10Z",
+      "duration_minutes": 0,
+      "topics": [],
+      "artifacts_created": [],
+      "questions_asked": [],
+      "decisions_made": []
+    },
+    {
+      "id": "session_20260726_090859",
+      "timestamp": "2026-07-26T14:08:59Z",
+      "duration_minutes": 0,
+      "topics": [],
+      "artifacts_created": [],
+      "questions_asked": [],
+      "decisions_made": []
+    },
+    {
+      "ts": "2026-08-01T16:54:44-05:00",
+      "type": "rebuild_absorb",
+      "content": {
+        "ts": "2026-08-01T16:54:44-05:00",
+        "session": "2026-07-23 full cascade + ledger + swarm + UNE",
+        "status": "context_bridge_rebuilding",
+        "locked": [
+          "\u03c6-vortex chimney is master air-flow driver (H/D=\u03c6\u00b2, dc=D/\u03c6\u00b2)",
+          "Micro-Node sizes defined and modular",
+          "Black Locust RMH as parallel valved draft source",
+          "Discrete Stirling charges (5-8%) + flywheel + belt + alternator",
+          "Zero-energy cooling path fully specified",
+          "SQLite thermodynamic ledger (measured joules only)",
+          "\u03b7 = useful_joules / human_joules",
+          "ACRE mints only from ledger",
+          "Fractal swarm n_max = floor(ln R / ln p)",
+          "Landauer / Szil\u00e1rd / Bennett information-thermodynamic limits acknowledged",
+          "UNE 3-letter primitive concept + cooperation axiom still to be restated by user"
+        ],
+        "pending": [
+          "User restates compounding-cooperation equation and Jesus-translation axiom",
+          "Lock exact Micro-Node dimensions",
+          "Instrument first prototype",
+          "Wire ledger \u2192 ACRE",
+          "Rebuild clean context bridge from this delta + prior pieces"
+        ],
+        "paths": {
+          "bridge": "/data/data/com.termux/files/home/openroot/context_bridge/context.json",
+          "ledger": "/data/data/com.termux/files/home/openroot/ledger/thermo.db",
+          "state_py": "/data/data/com.termux/files/home/openroot/context_bridge/openroot_state.py"
+        }
+      }
+    },
+    {
+      "ts": "2026-08-01T17:00:17-05:00",
+      "type": "rebuild_absorb",
+      "content": {
+        "ts": "2026-08-01T17:00:17-05:00",
+        "session": "2026-07-23 full cascade + ledger + swarm + UNE",
+        "status": "context_bridge_rebuilding",
+        "locked": [
+          "\u03c6-vortex chimney is master air-flow driver (H/D=\u03c6\u00b2, dc=D/\u03c6\u00b2)",
+          "Micro-Node sizes defined and modular",
+          "Black Locust RMH as parallel valved draft source",
+          "Discrete Stirling charges (5-8%) + flywheel + belt + alternator",
+          "Zero-energy cooling path fully specified",
+          "SQLite thermodynamic ledger (measured joules only)",
+          "\u03b7 = useful_joules / human_joules",
+          "ACRE mints only from ledger",
+          "Fractal swarm n_max = floor(ln R / ln p)",
+          "Landauer / Szil\u00e1rd / Bennett information-thermodynamic limits acknowledged",
+          "UNE 3-letter primitive concept + cooperation axiom still to be restated by user"
+        ],
+        "pending": [
+          "User restates compounding-cooperation equation and Jesus-translation axiom",
+          "Lock exact Micro-Node dimensions",
+          "Instrument first prototype",
+          "Wire ledger \u2192 ACRE",
+          "Rebuild clean context bridge from this delta + prior pieces"
+        ],
+        "paths": {
+          "bridge": "/data/data/com.termux/files/home/openroot/context_bridge/context.json",
+          "ledger": "/data/data/com.termux/files/home/openroot/ledger/thermo.db",
+          "state_py": "/data/data/com.termux/files/home/openroot/context_bridge/openroot_state.py"
+        }
+      }
+    }
+  ]
 }

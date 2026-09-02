@@ -18,7 +18,7 @@ LLM_URL = "http://127.0.0.1:8080/v1/chat/completions"
 def call_llm(prompt: str, system: str = "You are a precise technical instrument. Reply only with the requested content.") -> tuple[str, float]:
     t0 = time.perf_counter()
     payload = {
-        "model": "llama3.1-8b",
+        "model": "coder-1.5b",
         "messages": [
             {"role": "system", "content": system},
             {"role": "user", "content": prompt}

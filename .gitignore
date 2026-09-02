@@ -1,5 +1,3 @@
-# or
-cat .gitignore
 # Large/unnecessary files
 github_clone_temp/
 absorbed/
@@ -23,15 +21,3 @@ scripts/*.bak.*
 sync-from-kai/models/*.gguf
 acre/ledger.jsonl
 *.bak.*
-<<<<<<< HEAD
-# Large models — never commit
-*.gguf
-*.bin
-*.safetensors
-library/kai-sandbox/models/*.gguf
-library/**/models/
-agape_net/ledger/
-agape_net/ledger/pins.jsonl
-=======
-.aider*
->>>>>>> 629a5f4 (mesh: openroot hardened + OptiPlex unique ID HA4MSKC 20260821T112322Z)
