@@ -40,6 +40,8 @@ closed-loop/ledger/*.jsonl
 
 # Nested une checkout — real repo is /home/jesse/github-mirror/une
 une/
+chore/bulk-20260901
+
 
 private/
 **/private/
@@ -59,3 +61,4 @@ test_thermo
 __pycache__/
 .pytest_c6ache/
 main
+ main
