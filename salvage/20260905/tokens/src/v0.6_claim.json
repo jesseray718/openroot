@@ -1,0 +1,18 @@
+{
+  "claim_id": "ACRE-20260709025503-HW",
+  "claim_type": "HW.VAL.NODE.ZERO",
+  "description": "First real H-003 thermal data burst at Sikeston Node Zero for v0.6 \u2014 avg DeltaT ~36C, humid validation, published",
+  "evidence": [
+    "ipfs://QmZmfrSwck8uuEuJGnULecUDW3mCn3gcAYfF97Ccffua9L",
+    "https://zenodo.org/records/21271517",
+    "https://github.com/jesseray718/openroot"
+  ],
+  "submitter": "Jesse",
+  "timestamp": "2026-07-09T02:55:03.652629+00:00Z",
+  "status": "approved",
+  "validators": [
+    "Validator-Alpha",
+    "Validator-Beta"
+  ],
+  "notes": " | Validator-Alpha: H-003 v0.6 data published to IPFS+Zenodo, humid-climate delta validated | Validator-Beta: Cross-checked vs SPEC-H003 and prior v0.4/v0.5 datasets"
+}

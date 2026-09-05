@@ -1,0 +1,1 @@
+/data/data/com.termux/files/usr/bin/c++ -O3 -DNDEBUG -Xlinker --dependency-file=CMakeFiles/llama-ui-embed.dir/link.d "CMakeFiles/llama-ui-embed.dir/embed.cpp.o" -o llama-ui-embed

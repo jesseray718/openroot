@@ -1,0 +1,44 @@
+{
+  "topology": {
+    "name": "Vesica Piscis Mesh v0.1",
+    "pattern": "flower_of_life",
+    "anchor_node": "DV.MSH.VP.ND00",
+    "nodes": [
+      {
+        "node_id": "DV.MSH.VP.ND00",
+        "role": "anchor",
+        "lat": 36.8722,
+        "lon": -89.5966,
+        "lora_freq_mhz": 915,
+        "location": "Node Zero — Sikeston, MO",
+        "status": "active",
+        "mesh_peers": ["DV.MSH.VP.ND01", "DV.MSH.VP.ND02"]
+      },
+      {
+        "node_id": "DV.MSH.VP.ND01",
+        "role": "relay",
+        "lat": null,
+        "lon": null,
+        "lora_freq_mhz": 915,
+        "location": "reserved",
+        "status": "provisioned",
+        "mesh_peers": ["DV.MSH.VP.ND00", "DV.MSH.VP.ND02"]
+      },
+      {
+        "node_id": "DV.MSH.VP.ND02",
+        "role": "sensor",
+        "lat": null,
+        "lon": null,
+        "lora_freq_mhz": 915,
+        "location": "reserved",
+        "status": "provisioned",
+        "mesh_peers": ["DV.MSH.VP.ND00", "DV.MSH.VP.ND01"]
+      }
+    ],
+    "backhaul": {
+      "protocol": "IPFS",
+      "method": "mesh_to_IPFS_gateway"
+    },
+    "timestamp": "2026-07-17T00:00:00Z"
+  }
+}

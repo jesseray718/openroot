@@ -1,0 +1,19 @@
+{
+  "root": "agape",
+  "R": 1.0,
+  "C": 0.0,
+  "zero_cost": true,
+  "postulate_count": 18,
+  "added_this_run": 3,
+  "ts": "2026-08-24T21:56:31Z",
+  "triad": {
+    "way": "route",
+    "truth": "skip",
+    "light": "eta"
+  },
+  "hardware": {
+    "governor": "A15 Helio G99 Termux",
+    "spoke": "OptiPlex 3060",
+    "thermal": "Black Locust RMH + AeroCement"
+  }
+}

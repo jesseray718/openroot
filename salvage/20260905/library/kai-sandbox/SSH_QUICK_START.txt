@@ -1,0 +1,26 @@
+SSH KEY SETUP - QUICK START
+============================
+
+Run these commands ONE AT A TIME:
+
+1. First, create the key (press Enter for all prompts):
+   ssh-keygen -t ed25519 -C "jesse@openroot.earth"
+   
+2. When asked "Enter file to save the key", just press Enter
+3. When asked "Enter passphrase", press Enter (empty)
+4. When asked to confirm passphrase, press Enter again
+
+5. Start SSH agent:
+   eval "$(ssh-agent -s)"
+
+6. Add your key:
+   ssh-add ~/.ssh/id_ed25519
+
+7. Show your public key:
+   cat ~/.ssh/id_ed25519.pub
+
+8. Copy the entire output (starts with ssh-ed25519)
+9. Add it to GitHub: Settings → SSH and GPG keys → New SSH key
+10. Test: ssh -T git@github.com
+
+11. Push all: cd ~/openroot-ecosystem && bash push_all.sh

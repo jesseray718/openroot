@@ -1,0 +1,3 @@
+# Node-001 ΔT Log
+# Format: YYYY-MM-DD HH:MM | surface_C | air_C | delta_C | notes
+

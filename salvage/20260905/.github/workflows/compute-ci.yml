@@ -1,0 +1,36 @@
+name: compute-ci
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'compute/**'
+      - 'bin/compute_c1_selfaware_reasoner'
+  pull_request:
+    paths:
+      - 'compute/**'
+      - 'bin/compute_c1_selfaware_reasoner'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Syntax + import check (all N0 atomics + hook)
+        run: |
+          python -m py_compile compute/n0/*.py
+          python -m py_compile bin/compute_c1_selfaware_reasoner
+
+      - name: Smoke test C1 loop (solar_thermal priority)
+        run: |
+          echo '{"keywords_matched": true, "joules": 120}' | \
+            python compute/n0/llm_inference_hook.py
+
+          python bin/compute_c1_selfaware_reasoner "increase solar thermal capture area for PoPW" | \
+            grep -q '"efficiency_score": 0.92'

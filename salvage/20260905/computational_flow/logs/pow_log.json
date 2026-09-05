@@ -1,0 +1,70 @@
+[
+  {
+    "task_id": "task_1",
+    "team": "team_alpha",
+    "work_units": 2.5,
+    "timestamp": "2026-07-14T14:08:50-05:00",
+    "verified": false,
+    "source": "comp_flow_v2"
+  },
+  {
+    "task_id": "task_2",
+    "team": "team_beta",
+    "work_units": 1.0,
+    "timestamp": "2026-07-14T14:08:50-05:00",
+    "verified": false,
+    "source": "comp_flow_v2"
+  },
+  {
+    "task_id": "task_3",
+    "team": "team_gamma",
+    "work_units": 2.5,
+    "timestamp": "2026-07-14T14:08:51-05:00",
+    "verified": false,
+    "source": "comp_flow_v2"
+  },
+  {
+    "task_id": "task_4",
+    "team": "team_gamma",
+    "work_units": 2.5,
+    "timestamp": "2026-07-14T14:08:51-05:00",
+    "verified": false,
+    "source": "comp_flow_v2"
+  },
+  {
+    "task_id": "task_1",
+    "team": "team_alpha",
+    "work_units": 2.5,
+    "timestamp": "2026-07-14T14:13:23-05:00",
+    "verified": false,
+    "source": "comp_flow_v2"
+  },
+  {
+    "task_id": "task_2",
+    "team": "team_beta",
+    "work_units": 1.0,
+    "timestamp": "2026-07-14T14:13:23-05:00",
+    "verified": false,
+    "source": "comp_flow_v2"
+  },
+  {
+    "task_id": "task_3",
+    "team": "team_gamma",
+    "work_units": 2.5,
+    "timestamp": "2026-07-14T14:13:24-05:00",
+    "verified": false,
+    "source": "comp_flow_v2"
+  },
+  {
+    "task_id": "task_4",
+    "team": "team_gamma",
+    "work_units": 2.5,
+    "timestamp": "2026-07-14T14:13:24-05:00",
+    "verified": false,
+    "source": "comp_flow_v2"
+  }
+]
+{"ts":"2026-07-17T19:56:31-05:00","task":"optimize current A15 + server LLM stack for sustained 70B-class inference while logging thermal impact and H-003 yield correlation","tier":\( TIER,"h003_kwh_m2":12.91,"compute_joules_est": \)((TIER*4200)),"verified_yield":1.18,"acre_mint":"yield_positive","physical_closure":"H-003 thermal cascade + Stirling + AE-GFRC domes","une":"task_decomposed","kingdom_role":"Engineer+Oracle"}
+{"ts":"2026-07-17T19:59:04-05:00","task":"optimize current A15 + server LLM stack for sustained 70B-class inference while logging thermal impact and H-003 yield correlation","tier":\( TIER,"h003_kwh_m2":12.91,"compute_joules_est": \)((TIER*4200)),"verified_yield":1.18,"acre_mint":"yield_positive","physical_closure":"H-003 thermal cascade + Stirling + AE-GFRC domes","une":"task_decomposed","kingdom_role":"Engineer+Oracle"}
+{"ts":"2026-07-17T20:35:49-05:00","task":"optimize current A15 + server LLM stack for sustained 70B-class inference while logging thermal impact and H-003 yield correlation","tier":2,"h003_kwh_m2":12.91,"verified_yield":1.18,"acre_mint":"yield_positive","physical_closure":"H-003 + bottom-tier OptiPlex"}
+{"ts":"2026-07-17T21:45:17-05:00","task":"optimize current A15 + server LLM stack for sustained 70B-class inference while logging thermal impact and H-003 yield correlation","tier":2,"h003_kwh_m2":12.91,"verified_yield":1.18,"acre_mint":"yield_positive","physical_closure":"H-003 + Stirling + AE-GFRC"}
