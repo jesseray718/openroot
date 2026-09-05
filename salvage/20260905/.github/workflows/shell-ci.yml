@@ -1,0 +1,22 @@
+name: shell-ci
+
+on:
+  push:
+    branches: [main]
+    paths: ['**/*.sh', 'bin/*', 'fractal-scale']
+  pull_request:
+    paths: ['**/*.sh', 'bin/*', 'fractal-scale']
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install shellcheck
+        run: sudo apt-get update && sudo apt-get install -y shellcheck
+
+      - name: Lint all shell scripts
+        run: |
+          find . -name '*.sh' -o -name 'fractal-scale' -o -path './bin/*' | \
+            xargs shellcheck --severity=warning || true

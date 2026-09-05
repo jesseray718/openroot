@@ -1,0 +1,19 @@
+=== ANDROID DEVICE INFO ===
+SM-A156U
+16
+
+=== STORAGE STATUS ===
+Filesystem       Size Used Avail Use% Mounted on
+/dev/block/dm-59  46G  13G   33G  29% /data/user/0
+/dev/fuse         46G  13G   33G  29% /storage/emulated
+
+=== INSTALLED PACKAGES ===
+152
+packages above
+
+=== KEY TOOLS ===
+Python 3.13.13
+git version 2.54.0
+
+=== CHECKING SENSORS ===
+No USB serial found yet

@@ -1,0 +1,50 @@
+{
+  "openroot_query": "test thermodynamic integration",
+  "timestamp": "2026-07-26T17:43:35-0500",
+  "current_participants": 1,
+  "latest_immortal_hash": "c00490559d7c317b",
+  "latest_ledger_entries": [
+    {
+      "type": "GENESIS",
+      "version": "thermo_ledger_v1",
+      "born": "2026-07-26T13:24:52-0500",
+      "node": "GOVERNOR-01",
+      "location": "Saxton, MO",
+      "foundation": {
+        "micro_node_aperture_m2": 12.0,
+        "chimney_m": 16.5,
+        "daily_baseline_kWh": 25.55,
+        "phi": 1.618034,
+        "system_eta": 0.55
+      },
+      "immortal_hash_at_genesis": "c2a5c04da4cf374d",
+      "rule": "Only measured joules may be written after this block. No estimates.",
+      "block_hash": "9e4a8bdaee1b0c86"
+    },
+    {
+      "ts": "2026-07-26T13:26:32-0500",
+      "type": "measurement",
+      "note": "first cascade ΔT = 18.4 K, flow ok",
+      "joules": 184000.0,
+      "kWh": 0.051111
+    },
+    {
+      "ts": "2026-07-26T13:26:32-0500",
+      "type": "note",
+      "note": "sensors placed on stage 1"
+    },
+    {
+      "ts": "2026-07-26T15:20:45-0500",
+      "type": "correction",
+      "corrects_line": 1,
+      "reason": "joules=184000 was dT*10^4 heuristic, not measured; no m_dot/cp/duration",
+      "voided_joules": 184000.0,
+      "rule": "measurements must carry m_dot_kg_s, cp_J_kgK, dT_K, duration_s, computed joules"
+    }
+  ],
+  "pending_tasks": [
+    "First cascade instrumentation STARTED — ledger live",
+    "Continue real measurements into thermo_ledger",
+    "Wire measured joules → ACRE mint claims"
+  ]
+}

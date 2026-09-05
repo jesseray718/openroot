@@ -1,0 +1,11 @@
+{
+  "type": "ACRE",
+  "timestamp": "2026-08-03T00:31:32.291784+00:00",
+  "query": "Return only the current merkle root of the last successful ACRE and the measured useful_joules.",
+  "merkle_root": "828755ff56cfb3fc9091b98c0ec2ab77d2c8283944b790e9f78f3baab652518f",
+  "useful_joules": 824.5353,
+  "human_joules_proxy": 1.0,
+  "eta": 824.5353,
+  "amplify": "Amplify, sharpen, and make actionable.",
+  "host": "optiplex-3060"
+}

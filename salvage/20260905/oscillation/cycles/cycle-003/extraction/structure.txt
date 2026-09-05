@@ -1,0 +1,76 @@
+=== MeshCore Structure Capture ===
+Date: 2026-08-12T04:09Z
+
+--- Top level ---
+total 145
+drwx------. 16 u0_a357 u0_a357 3452 Aug 11 23:08 .
+drwx------.  5 u0_a357 u0_a357 3452 Aug 11 23:08 ..
+-rw-------.  1 u0_a357 u0_a357 2462 Aug 11 23:08 .clang-format
+drwx------.  2 u0_a357 u0_a357 3452 Aug 11 23:08 .devcontainer
+-rw-------.  1 u0_a357 u0_a357    8 Aug 11 23:08 .envrc
+drwx------.  7 u0_a357 u0_a357 3452 Aug 11 23:08 .git
+drwx------.  4 u0_a357 u0_a357 3452 Aug 11 23:08 .github
+-rw-------.  1 u0_a357 u0_a357  255 Aug 11 23:08 .gitignore
+-rw-------.  1 u0_a357 u0_a357   16 Aug 11 23:08 CNAME
+-rw-------.  1 u0_a357 u0_a357 2142 Aug 11 23:08 CONTRIBUTING.md
+-rw-------.  1 u0_a357 u0_a357 7714 Aug 11 23:08 README.md
+-rw-------.  1 u0_a357 u0_a357  545 Aug 11 23:08 RELEASE.md
+-rw-------.  1 u0_a357 u0_a357 1822 Aug 11 23:08 SECURITY.md
+drwx------.  4 u0_a357 u0_a357 3452 Aug 11 23:08 arch
+drwx------.  3 u0_a357 u0_a357 3452 Aug 11 23:08 bin
+drwx------.  2 u0_a357 u0_a357 3452 Aug 11 23:08 boards
+-rwx------.  1 u0_a357 u0_a357 9161 Aug 11 23:08 build.sh
+-rw-------.  1 u0_a357 u0_a357 2288 Aug 11 23:08 build_as_lib.py
+-rw-------.  1 u0_a357 u0_a357  751 Aug 11 23:08 create-uf2.py
+-rw-------.  1 u0_a357 u0_a357  233 Aug 11 23:08 default.nix
+drwx------.  4 u0_a357 u0_a357 3452 Aug 11 23:08 docs
+drwx------.  8 u0_a357 u0_a357 3452 Aug 11 23:08 examples
+drwx------.  2 u0_a357 u0_a357 3452 Aug 11 23:08 include
+drwx------.  4 u0_a357 u0_a357 3452 Aug 11 23:08 lib
+-rw-------.  1 u0_a357 u0_a357  389 Aug 11 23:08 library.json
+-rw-------.  1 u0_a357 u0_a357 1087 Aug 11 23:08 license.txt
+drwx------.  2 u0_a357 u0_a357 3452 Aug 11 23:08 logo
+-rw-------.  1 u0_a357 u0_a357 1245 Aug 11 23:08 merge-bin.py
+-rw-------.  1 u0_a357 u0_a357  457 Aug 11 23:08 mkdocs.yml
+-rw-------.  1 u0_a357 u0_a357 5539 Aug 11 23:08 platformio.ini
+drwx------.  3 u0_a357 u0_a357 3452 Aug 11 23:08 src
+drwx------.  8 u0_a357 u0_a357 3452 Aug 11 23:08 test
+drwx------. 89 u0_a357 u0_a357 8192 Aug 11 23:08 variants
+
+--- Key directories ---
+drwx------. 16 u0_a357 u0_a357 3452 Aug 11 23:08 .
+drwx------.  5 u0_a357 u0_a357 3452 Aug 11 23:08 ..
+drwx------.  2 u0_a357 u0_a357 3452 Aug 11 23:08 .devcontainer
+drwx------.  7 u0_a357 u0_a357 3452 Aug 11 23:08 .git
+drwx------.  4 u0_a357 u0_a357 3452 Aug 11 23:08 .github
+drwx------.  4 u0_a357 u0_a357 3452 Aug 11 23:08 arch
+drwx------.  3 u0_a357 u0_a357 3452 Aug 11 23:08 bin
+drwx------.  2 u0_a357 u0_a357 3452 Aug 11 23:08 boards
+drwx------.  4 u0_a357 u0_a357 3452 Aug 11 23:08 docs
+drwx------.  8 u0_a357 u0_a357 3452 Aug 11 23:08 examples
+drwx------.  2 u0_a357 u0_a357 3452 Aug 11 23:08 include
+drwx------.  4 u0_a357 u0_a357 3452 Aug 11 23:08 lib
+drwx------.  2 u0_a357 u0_a357 3452 Aug 11 23:08 logo
+drwx------.  3 u0_a357 u0_a357 3452 Aug 11 23:08 src
+drwx------.  8 u0_a357 u0_a357 3452 Aug 11 23:08 test
+drwx------. 89 u0_a357 u0_a357 8192 Aug 11 23:08 variants
+
+--- docs/ (if present) ---
+total 230
+drwx------.  4 u0_a357 u0_a357  3452 Aug 11 23:08 .
+drwx------. 16 u0_a357 u0_a357  3452 Aug 11 23:08 ..
+drwx------.  2 u0_a357 u0_a357  3452 Aug 11 23:08 _assets
+drwx------.  2 u0_a357 u0_a357  3452 Aug 11 23:08 _stylesheets
+-rw-------.  1 u0_a357 u0_a357 27190 Aug 11 23:08 cli_commands.md
+-rw-------.  1 u0_a357 u0_a357 34325 Aug 11 23:08 companion_protocol.md
+-rw-------.  1 u0_a357 u0_a357   297 Aug 11 23:08 docs.md
+-rw-------.  1 u0_a357 u0_a357 63960 Aug 11 23:08 faq.md
+-rw-------.  1 u0_a357 u0_a357   507 Aug 11 23:08 index.md
+-rw-------.  1 u0_a357 u0_a357 14755 Aug 11 23:08 kiss_modem_protocol.md
+-rw-------.  1 u0_a357 u0_a357 10894 Aug 11 23:08 nrf52_power_management.md
+-rw-------.  1 u0_a357 u0_a357  1890 Aug 11 23:08 number_allocations.md
+-rw-------.  1 u0_a357 u0_a357  8834 Aug 11 23:08 packet_format.md
+-rw-------.  1 u0_a357 u0_a357 14923 Aug 11 23:08 payloads.md
+-rw-------.  1 u0_a357 u0_a357   954 Aug 11 23:08 qr_codes.md
+-rw-------.  1 u0_a357 u0_a357 11813 Aug 11 23:08 stats_binary_frames.md
+-rw-------.  1 u0_a357 u0_a357  1682 Aug 11 23:08 terminal_chat_cli.md

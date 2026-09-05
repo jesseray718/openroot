@@ -1,0 +1,35 @@
+{
+  "session": "2026-07-23 full thermal + swarm + ledger + Landauer",
+  "ts": "2026-07-24T14:28:31-05:00",
+  "breakthroughs": [
+    "Vortex chimney geometry locked to \u03c6 ratios (H/D=\u03c6\u00b2, dc=D/\u03c6\u00b2)",
+    "Air mass-flow from vortex is the master variable for the entire cascade",
+    "Cold path = desiccant + wet open-cell volumetric concrete labyrinth + ground heat sink + radiative lid",
+    "Hot and cold tanks sized 1:1.0\u20131.2, each holding \u22651.5\u00d7 daily weaker-source energy",
+    "Stirling uses discrete thermal charges only (5\u20138% of tank) + flywheel + high-torque belt + final alternator",
+    "TEGs only on residual \u0394T",
+    "One-person Micro-Node sizes defined and modular (can connect/disconnect from neighborhood bus)",
+    "Thermodynamic ledger records only instrumented useful joules (heat/cold/mech/elec/human)",
+    "ACRE mints solely from the thermodynamic ledger \u2014 no theoretical numbers allowed",
+    "\u03b7 = useful_joules / human_joules is the governing efficiency metric",
+    "Fractal swarm composition limited by n_max = floor(ln R / ln p)",
+    "Brownian ratchet / molecular motor duty-cycle controlled by measured efficiency from ledger",
+    "Landauer limit acknowledged; real CPU joules tracked separately",
+    "All bottlenecks evaluated through joules per unit time",
+    "Human labor is recorded in the same ledger so substitution by computation can be quantified"
+  ],
+  "formulas": {
+    "landauer": "E >= kT ln2 \u2248 2.87e-21 J/bit at 300 K",
+    "eta": "\u03b7 = useful_joules / human_joules",
+    "n_max": "n_max = floor(ln R / ln p)",
+    "duty_update": "new_duty = clamp(target + gain*(efficiency - soft_target), 0.12, 0.55)",
+    "mass_equivalent": "m = E / c\u00b2 \u2248 1.11e-17 kg per joule"
+  },
+  "pending": [
+    "Lock exact Micro-Node dimensions",
+    "Instrument first prototype (flow, \u0394T, shaft)",
+    "Start writing real measurements into thermo_ledger",
+    "Wire ledger \u2192 ACRE minting",
+    "Implement continuous duty-cycle + swarm loop driven by ledger"
+  ]
+}

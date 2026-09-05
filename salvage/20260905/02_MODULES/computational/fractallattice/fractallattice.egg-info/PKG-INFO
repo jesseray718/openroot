@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: fractallattice
+Version: 0.1.0
+Summary: Recursive 6-nanobot processing lattice for LLMs — depth over width, structure over scale
+Author: Jesse Ray (OpenRoot)
+License: GPL-3.0
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Requires-Dist: aiohttp>=3.8.0
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+Six nanobots (translate, analyze, feedback, synthesize, validate, amplify) process every input through different lenses, merge, and recurse. Makes small models act like big ones through structured fractal recursion.
