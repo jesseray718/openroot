@@ -40,11 +40,8 @@ def parse_float(x, default=None):
     try:
         if x is None or x == "":
             return default
-        val = float(x)
-        if not math.isfinite(val):
-            return default
-        return val
-    except (TypeError, ValueError):
+        return float(x)
+    except:
         return default
 
 def run_from_csv(input_csv: Path, output_csv: Path):
@@ -52,8 +49,7 @@ def run_from_csv(input_csv: Path, output_csv: Path):
     with input_csv.open("r", encoding="utf-8") as f:
         r = csv.DictReader(f)
         for row in r:
-            mode_val = row.get("mode", "")
-            mode = mode_val.strip().lower() if mode_val is not None else ""
+            mode = row.get("mode","").strip().lower()
             T_in = parse_float(row.get("T_in_C"))
             RH_in = parse_float(row.get("RH_in_pct"))
             T_out = parse_float(row.get("T_out_C"))

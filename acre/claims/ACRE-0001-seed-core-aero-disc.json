@@ -1,0 +1,18 @@
+{
+  "claim_id": "ACRE-0001",
+  "type": "PoPW_contextual_absorption",
+  "timestamp": "2026-08-01T16:19:00-05:00",
+  "actor": "jesse@openroot.earth",
+  "work_description": "Absorption of Aero-Disc volumetric exchanger primitive + complete Seed Core (16 foundational optimization seeds) into durable inter-session lattice",
+  "physical_component": "Aero-Disc Path A cardboard disc design + porous_exchanger_design.py v2.2 thermodynamic sizing under 5.6 Pa stack",
+  "contextual_component": "16 seeds + Thermodynamic Ledger Verification Protocol + Merkle root of seed set",
+  "merkle_root": "7572a83c6feae2fb4547b3c4a98b652e3ebeb95935f62f4cd26cd1eda05b85a3",
+  "eta_entries": 2,
+  "entropy_delta": "+3",
+  "next_physical": "Build first cardboard Aero-Disc and measure real \u0394P at 0.18 m\u00b3/s",
+  "status": "verified",
+  "lattice_order": "12^12",
+  "lattice_verified_at": "2026-08-01T16:22:00-05:00",
+  "claim_packet_hash": "7fa5afeeea375e055ac51995d4afd7d6601521b70b3d1aecc87a72f43830f307",
+  "verification_merkle": "f20403d25beeab5a5ce9047b0701401b5b472668fd02bd7ceb4712bede200eaa"
+}

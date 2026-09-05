@@ -1,0 +1,27 @@
+{
+  "deployment_id": "20260717T023721Z",
+  "timestamp": "2026-07-17T02:37:21Z",
+  "version": "Agape v0.1.0",
+  "components_deployed": [
+    "UNE Nomenclature Engine (une_resolve.py)",
+    "Kingdom Engine Validator (kingdom_validate.py)",
+    "ACRE Ledger (acre_ledger.sh, ledger.jsonl)",
+    "Vesica Piscis Mesh Topology (topology.json)",
+    "H-003 Thermal Cascade Integration (h003_integrate.sh)",
+    "Agape Orchestration Status (agape_status.py)"
+  ],
+  "paths": {
+    "bin": "/data/data/com.termux/files/home/projects/openroot/bin",
+    "acre": "/data/data/com.termux/files/home/projects/openroot/acre",
+    "mesh": "/data/data/com.termux/files/home/projects/openroot/mesh",
+    "research": "/data/data/com.termux/files/home/projects/openroot/research"
+  },
+  "verification": {
+    "une_resolver": "/data/data/com.termux/files/usr/bin/python3 /data/data/com.termux/files/home/projects/openroot/bin/une_resolve.py DV.GEN.TH.AE01",
+    "kingdom_engine": "/data/data/com.termux/files/usr/bin/python3 /data/data/com.termux/files/home/projects/openroot/bin/kingdom_validate.py --help",
+    "acre_ledger": "bash /data/data/com.termux/files/home/projects/openroot/bin/acre_ledger.sh",
+    "agape_status": "/data/data/com.termux/files/usr/bin/python3 /data/data/com.termux/files/home/projects/openroot/bin/agape_status.py"
+  },
+  "license": "CC-BY-SA 4.0 (docs) | GPL v3 (code) | No Patents. Ever.",
+  "copyright": "One Human Family (humanity collectively)"
+}

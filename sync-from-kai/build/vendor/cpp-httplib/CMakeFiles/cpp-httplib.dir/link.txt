@@ -1,0 +1,2 @@
+/data/data/com.termux/files/usr/bin/llvm-ar qc libcpp-httplib.a "CMakeFiles/cpp-httplib.dir/httplib.cpp.o"
+/data/data/com.termux/files/usr/bin/llvm-ranlib libcpp-httplib.a

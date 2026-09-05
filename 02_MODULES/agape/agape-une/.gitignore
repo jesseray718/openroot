@@ -1,0 +1,7 @@
+vendor_archive/
+quarantine/
+backups/
+logs/
+*.log
+*.pyc
+__pycache__/

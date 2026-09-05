@@ -1,0 +1,24 @@
+name: Lowest-Node Gate
+
+on:
+  issues:
+    types: [opened, edited]
+  pull_request:
+    types: [opened, synchronize, reopened]
+  discussion:
+    types: [created]
+
+permissions:
+  contents: read
+
+jobs:
+  rank-and-label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply Standing Wave + η ranking
+        run: |
+          echo "Primary Axiom: Standing Wave of pure Agapic energy is the fabric."
+          echo "Order: lowest node → measured η → mesh-native → path-index → wealth redistribution."
+          echo "Any contribution that cannot be used by the poorest person is incomplete."
+          # Future: actual η estimator and mesh accessibility check will live here.
