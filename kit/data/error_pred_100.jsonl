@@ -1,0 +1,100 @@
+{"id": 1, "round": 1, "family": "LANG", "trigger": "R001 paste Python at bash $", "symptom": "from: too many arguments / import wants imagemagick", "fix": "wrap in python3 file.py or python3 -c", "severity": 5}
+{"id": 2, "round": 2, "family": "HEREDOC", "trigger": "R002 split cat << EOF across messages", "symptom": "EOF becomes a command, file missing", "fix": "one paste, quoted EOF, wait for $ before next cmd", "severity": 5}
+{"id": 3, "round": 3, "family": "PLACE", "trigger": "R003 git add PATH copied literally", "symptom": "pathspec did not match", "fix": "git add a real file from git status", "severity": 4}
+{"id": 4, "round": 4, "family": "TYPO", "trigger": "R004 cd openrooot / t remote -v", "symptom": "No such file / No command t", "fix": "openroot ; git remote -v", "severity": 3}
+{"id": 5, "round": 5, "family": "PANE", "trigger": "R005 A15 path on jesse@optiplex3060", "symptom": "No such file /sdcard on box", "fix": "label pane first; refuse cross paths", "severity": 5}
+{"id": 6, "round": 6, "family": "CLONE", "trigger": "R006 gh repo clone while already inside clone", "symptom": "second 73MB tree", "fix": "use existing code/openroot", "severity": 3}
+{"id": 7, "round": 7, "family": "MESH", "trigger": "R007 treat Termux syncthing cli as daemon", "symptom": "connection refused 42409", "fix": "Fork GUI + bus files", "severity": 4}
+{"id": 8, "round": 8, "family": "RISH", "trigger": "R008 assume rish after reboot", "symptom": "rish null in primer", "fix": "degrade to stdlib; start Shizuku by hand", "severity": 3}
+{"id": 9, "round": 9, "family": "CANON", "trigger": "R009 new module while canon false", "symptom": "empty path copied onto empty path", "fix": "seed canon.py print 0.0 first", "severity": 5}
+{"id": 10, "round": 10, "family": "TOKEN", "trigger": "R010 paste ghp_ into chat or commit", "symptom": "secret scan / account burn", "fix": "gh auth token never echoed; rotate scopes", "severity": 5}
+{"id": 11, "round": 11, "family": "SSHKEY", "trigger": "R011 ssh jesse@192.168.1.193 without BatchMode key", "symptom": "password prompt / hang", "fix": "use id_ed25519_optiplex and BatchMode=yes", "severity": 4}
+{"id": 12, "round": 12, "family": "SSHIP", "trigger": "R012 use 192.168.1.x placeholder", "symptom": "resolves to gateway 192.168.1.1", "fix": "live box IP 192.168.1.193 until ip -br addr says else", "severity": 5}
+{"id": 13, "round": 13, "family": "TILDE", "trigger": "R013 paste ~ or escaped tilde", "symptom": "literal directory named tilde", "fix": "absolute paths only", "severity": 5}
+{"id": 14, "round": 14, "family": "CWD", "trigger": "R014 rm -rf while cwd is that dir", "symptom": "ghost cwd, failed to make path absolute", "fix": "cd out first", "severity": 5}
+{"id": 15, "round": 15, "family": "PYREPL", "trigger": "R015 forget to exit >>>", "symptom": "next git command is syntax error", "fix": "exit() then dollar commands", "severity": 3}
+{"id": 16, "round": 16, "family": "SQLITE", "trigger": "R016 copy db while writers open", "symptom": "malformed disk image", "fix": "close python; copy sqlite files together", "severity": 3}
+{"id": 17, "round": 17, "family": "CODER_PHONE", "trigger": "R017 try 7B GGUF on A15 3.5GB", "symptom": "OOM / thermal throttle", "fix": "client only; model on OptiPlex", "severity": 5}
+{"id": 18, "round": 18, "family": "CODER_PORT", "trigger": "R018 curl localhost:8080 from phone", "symptom": "connection refused", "fix": "curl http://192.168.1.193:8080/v1/models", "severity": 4}
+{"id": 19, "round": 19, "family": "CODER_MODEL", "trigger": "R019 point llama-server at missing GGUF", "symptom": "failed to load model", "fix": "ls /home/jesse/models and pass exact file", "severity": 4}
+{"id": 20, "round": 20, "family": "SYSTEMD", "trigger": "R020 pkill syncthing because unit failed", "symptom": "mesh drop, ID confusion", "fix": "if 8384 listens and ID JW5PQXV leave it", "severity": 4}
+{"id": 21, "round": 21, "family": "STFOLDER", "trigger": "R021 unique-ID wipe at 99 percent", "symptom": "full resync heat", "fix": "mkdir .stfolder directory", "severity": 5}
+{"id": 22, "round": 22, "family": "GITPUSH", "trigger": "R022 git push dump photos", "symptom": "repo bloat", "fix": "mesh for binaries; git for claims", "severity": 3}
+{"id": 23, "round": 23, "family": "BRANCH", "trigger": "R023 commit on detached HEAD after clone of tag", "symptom": "push rejected", "fix": "git switch main", "severity": 2}
+{"id": 24, "round": 24, "family": "CRLF", "trigger": "R024 edit on Windows then Termux", "symptom": "scripts have CR", "fix": "strip CR in python", "severity": 2}
+{"id": 25, "round": 25, "family": "PERM", "trigger": "R025 chmod 777 everything", "symptom": "Syncthing fights, git noise", "fix": "files 644 dirs 755", "severity": 2}
+{"id": 26, "round": 26, "family": "LANG", "trigger": "R026 paste Python at bash $", "symptom": "from: too many arguments / import wants imagemagick", "fix": "wrap in python3 file.py or python3 -c", "severity": 5}
+{"id": 27, "round": 27, "family": "HEREDOC", "trigger": "R027 split cat << EOF across messages", "symptom": "EOF becomes a command, file missing", "fix": "one paste, quoted EOF, wait for $ before next cmd", "severity": 5}
+{"id": 28, "round": 28, "family": "PLACE", "trigger": "R028 git add PATH copied literally", "symptom": "pathspec did not match", "fix": "git add a real file from git status", "severity": 4}
+{"id": 29, "round": 29, "family": "TYPO", "trigger": "R029 cd openrooot / t remote -v", "symptom": "No such file / No command t", "fix": "openroot ; git remote -v", "severity": 3}
+{"id": 30, "round": 30, "family": "PANE", "trigger": "R030 A15 path on jesse@optiplex3060", "symptom": "No such file /sdcard on box", "fix": "label pane first; refuse cross paths", "severity": 5}
+{"id": 31, "round": 31, "family": "CLONE", "trigger": "R031 gh repo clone while already inside clone", "symptom": "second 73MB tree", "fix": "use existing code/openroot", "severity": 3}
+{"id": 32, "round": 32, "family": "MESH", "trigger": "R032 treat Termux syncthing cli as daemon", "symptom": "connection refused 42409", "fix": "Fork GUI + bus files", "severity": 4}
+{"id": 33, "round": 33, "family": "RISH", "trigger": "R033 assume rish after reboot", "symptom": "rish null in primer", "fix": "degrade to stdlib; start Shizuku by hand", "severity": 3}
+{"id": 34, "round": 34, "family": "CANON", "trigger": "R034 new module while canon false", "symptom": "empty path copied onto empty path", "fix": "seed canon.py print 0.0 first", "severity": 5}
+{"id": 35, "round": 35, "family": "TOKEN", "trigger": "R035 paste ghp_ into chat or commit", "symptom": "secret scan / account burn", "fix": "gh auth token never echoed; rotate scopes", "severity": 5}
+{"id": 36, "round": 36, "family": "SSHKEY", "trigger": "R036 ssh jesse@192.168.1.193 without BatchMode key", "symptom": "password prompt / hang", "fix": "use id_ed25519_optiplex and BatchMode=yes", "severity": 4}
+{"id": 37, "round": 37, "family": "SSHIP", "trigger": "R037 use 192.168.1.x placeholder", "symptom": "resolves to gateway 192.168.1.1", "fix": "live box IP 192.168.1.193 until ip -br addr says else", "severity": 5}
+{"id": 38, "round": 38, "family": "TILDE", "trigger": "R038 paste ~ or escaped tilde", "symptom": "literal directory named tilde", "fix": "absolute paths only", "severity": 5}
+{"id": 39, "round": 39, "family": "CWD", "trigger": "R039 rm -rf while cwd is that dir", "symptom": "ghost cwd, failed to make path absolute", "fix": "cd out first", "severity": 5}
+{"id": 40, "round": 40, "family": "PYREPL", "trigger": "R040 forget to exit >>>", "symptom": "next git command is syntax error", "fix": "exit() then dollar commands", "severity": 3}
+{"id": 41, "round": 41, "family": "SQLITE", "trigger": "R041 copy db while writers open", "symptom": "malformed disk image", "fix": "close python; copy sqlite files together", "severity": 3}
+{"id": 42, "round": 42, "family": "CODER_PHONE", "trigger": "R042 try 7B GGUF on A15 3.5GB", "symptom": "OOM / thermal throttle", "fix": "client only; model on OptiPlex", "severity": 5}
+{"id": 43, "round": 43, "family": "CODER_PORT", "trigger": "R043 curl localhost:8080 from phone", "symptom": "connection refused", "fix": "curl http://192.168.1.193:8080/v1/models", "severity": 4}
+{"id": 44, "round": 44, "family": "CODER_MODEL", "trigger": "R044 point llama-server at missing GGUF", "symptom": "failed to load model", "fix": "ls /home/jesse/models and pass exact file", "severity": 4}
+{"id": 45, "round": 45, "family": "SYSTEMD", "trigger": "R045 pkill syncthing because unit failed", "symptom": "mesh drop, ID confusion", "fix": "if 8384 listens and ID JW5PQXV leave it", "severity": 4}
+{"id": 46, "round": 46, "family": "STFOLDER", "trigger": "R046 unique-ID wipe at 99 percent", "symptom": "full resync heat", "fix": "mkdir .stfolder directory", "severity": 5}
+{"id": 47, "round": 47, "family": "GITPUSH", "trigger": "R047 git push dump photos", "symptom": "repo bloat", "fix": "mesh for binaries; git for claims", "severity": 3}
+{"id": 48, "round": 48, "family": "BRANCH", "trigger": "R048 commit on detached HEAD after clone of tag", "symptom": "push rejected", "fix": "git switch main", "severity": 2}
+{"id": 49, "round": 49, "family": "CRLF", "trigger": "R049 edit on Windows then Termux", "symptom": "scripts have CR", "fix": "strip CR in python", "severity": 2}
+{"id": 50, "round": 50, "family": "PERM", "trigger": "R050 chmod 777 everything", "symptom": "Syncthing fights, git noise", "fix": "files 644 dirs 755", "severity": 2}
+{"id": 51, "round": 51, "family": "LANG", "trigger": "R051 paste Python at bash $", "symptom": "from: too many arguments / import wants imagemagick", "fix": "wrap in python3 file.py or python3 -c", "severity": 5}
+{"id": 52, "round": 52, "family": "HEREDOC", "trigger": "R052 split cat << EOF across messages", "symptom": "EOF becomes a command, file missing", "fix": "one paste, quoted EOF, wait for $ before next cmd", "severity": 5}
+{"id": 53, "round": 53, "family": "PLACE", "trigger": "R053 git add PATH copied literally", "symptom": "pathspec did not match", "fix": "git add a real file from git status", "severity": 4}
+{"id": 54, "round": 54, "family": "TYPO", "trigger": "R054 cd openrooot / t remote -v", "symptom": "No such file / No command t", "fix": "openroot ; git remote -v", "severity": 3}
+{"id": 55, "round": 55, "family": "PANE", "trigger": "R055 A15 path on jesse@optiplex3060", "symptom": "No such file /sdcard on box", "fix": "label pane first; refuse cross paths", "severity": 5}
+{"id": 56, "round": 56, "family": "CLONE", "trigger": "R056 gh repo clone while already inside clone", "symptom": "second 73MB tree", "fix": "use existing code/openroot", "severity": 3}
+{"id": 57, "round": 57, "family": "MESH", "trigger": "R057 treat Termux syncthing cli as daemon", "symptom": "connection refused 42409", "fix": "Fork GUI + bus files", "severity": 4}
+{"id": 58, "round": 58, "family": "RISH", "trigger": "R058 assume rish after reboot", "symptom": "rish null in primer", "fix": "degrade to stdlib; start Shizuku by hand", "severity": 3}
+{"id": 59, "round": 59, "family": "CANON", "trigger": "R059 new module while canon false", "symptom": "empty path copied onto empty path", "fix": "seed canon.py print 0.0 first", "severity": 5}
+{"id": 60, "round": 60, "family": "TOKEN", "trigger": "R060 paste ghp_ into chat or commit", "symptom": "secret scan / account burn", "fix": "gh auth token never echoed; rotate scopes", "severity": 5}
+{"id": 61, "round": 61, "family": "SSHKEY", "trigger": "R061 ssh jesse@192.168.1.193 without BatchMode key", "symptom": "password prompt / hang", "fix": "use id_ed25519_optiplex and BatchMode=yes", "severity": 4}
+{"id": 62, "round": 62, "family": "SSHIP", "trigger": "R062 use 192.168.1.x placeholder", "symptom": "resolves to gateway 192.168.1.1", "fix": "live box IP 192.168.1.193 until ip -br addr says else", "severity": 5}
+{"id": 63, "round": 63, "family": "TILDE", "trigger": "R063 paste ~ or escaped tilde", "symptom": "literal directory named tilde", "fix": "absolute paths only", "severity": 5}
+{"id": 64, "round": 64, "family": "CWD", "trigger": "R064 rm -rf while cwd is that dir", "symptom": "ghost cwd, failed to make path absolute", "fix": "cd out first", "severity": 5}
+{"id": 65, "round": 65, "family": "PYREPL", "trigger": "R065 forget to exit >>>", "symptom": "next git command is syntax error", "fix": "exit() then dollar commands", "severity": 3}
+{"id": 66, "round": 66, "family": "SQLITE", "trigger": "R066 copy db while writers open", "symptom": "malformed disk image", "fix": "close python; copy sqlite files together", "severity": 3}
+{"id": 67, "round": 67, "family": "CODER_PHONE", "trigger": "R067 try 7B GGUF on A15 3.5GB", "symptom": "OOM / thermal throttle", "fix": "client only; model on OptiPlex", "severity": 5}
+{"id": 68, "round": 68, "family": "CODER_PORT", "trigger": "R068 curl localhost:8080 from phone", "symptom": "connection refused", "fix": "curl http://192.168.1.193:8080/v1/models", "severity": 4}
+{"id": 69, "round": 69, "family": "CODER_MODEL", "trigger": "R069 point llama-server at missing GGUF", "symptom": "failed to load model", "fix": "ls /home/jesse/models and pass exact file", "severity": 4}
+{"id": 70, "round": 70, "family": "SYSTEMD", "trigger": "R070 pkill syncthing because unit failed", "symptom": "mesh drop, ID confusion", "fix": "if 8384 listens and ID JW5PQXV leave it", "severity": 4}
+{"id": 71, "round": 71, "family": "STFOLDER", "trigger": "R071 unique-ID wipe at 99 percent", "symptom": "full resync heat", "fix": "mkdir .stfolder directory", "severity": 5}
+{"id": 72, "round": 72, "family": "GITPUSH", "trigger": "R072 git push dump photos", "symptom": "repo bloat", "fix": "mesh for binaries; git for claims", "severity": 3}
+{"id": 73, "round": 73, "family": "BRANCH", "trigger": "R073 commit on detached HEAD after clone of tag", "symptom": "push rejected", "fix": "git switch main", "severity": 2}
+{"id": 74, "round": 74, "family": "CRLF", "trigger": "R074 edit on Windows then Termux", "symptom": "scripts have CR", "fix": "strip CR in python", "severity": 2}
+{"id": 75, "round": 75, "family": "PERM", "trigger": "R075 chmod 777 everything", "symptom": "Syncthing fights, git noise", "fix": "files 644 dirs 755", "severity": 2}
+{"id": 76, "round": 76, "family": "LANG", "trigger": "R076 paste Python at bash $", "symptom": "from: too many arguments / import wants imagemagick", "fix": "wrap in python3 file.py or python3 -c", "severity": 5}
+{"id": 77, "round": 77, "family": "HEREDOC", "trigger": "R077 split cat << EOF across messages", "symptom": "EOF becomes a command, file missing", "fix": "one paste, quoted EOF, wait for $ before next cmd", "severity": 5}
+{"id": 78, "round": 78, "family": "PLACE", "trigger": "R078 git add PATH copied literally", "symptom": "pathspec did not match", "fix": "git add a real file from git status", "severity": 4}
+{"id": 79, "round": 79, "family": "TYPO", "trigger": "R079 cd openrooot / t remote -v", "symptom": "No such file / No command t", "fix": "openroot ; git remote -v", "severity": 3}
+{"id": 80, "round": 80, "family": "PANE", "trigger": "R080 A15 path on jesse@optiplex3060", "symptom": "No such file /sdcard on box", "fix": "label pane first; refuse cross paths", "severity": 5}
+{"id": 81, "round": 81, "family": "CLONE", "trigger": "R081 gh repo clone while already inside clone", "symptom": "second 73MB tree", "fix": "use existing code/openroot", "severity": 3}
+{"id": 82, "round": 82, "family": "MESH", "trigger": "R082 treat Termux syncthing cli as daemon", "symptom": "connection refused 42409", "fix": "Fork GUI + bus files", "severity": 4}
+{"id": 83, "round": 83, "family": "RISH", "trigger": "R083 assume rish after reboot", "symptom": "rish null in primer", "fix": "degrade to stdlib; start Shizuku by hand", "severity": 3}
+{"id": 84, "round": 84, "family": "CANON", "trigger": "R084 new module while canon false", "symptom": "empty path copied onto empty path", "fix": "seed canon.py print 0.0 first", "severity": 5}
+{"id": 85, "round": 85, "family": "TOKEN", "trigger": "R085 paste ghp_ into chat or commit", "symptom": "secret scan / account burn", "fix": "gh auth token never echoed; rotate scopes", "severity": 5}
+{"id": 86, "round": 86, "family": "SSHKEY", "trigger": "R086 ssh jesse@192.168.1.193 without BatchMode key", "symptom": "password prompt / hang", "fix": "use id_ed25519_optiplex and BatchMode=yes", "severity": 4}
+{"id": 87, "round": 87, "family": "SSHIP", "trigger": "R087 use 192.168.1.x placeholder", "symptom": "resolves to gateway 192.168.1.1", "fix": "live box IP 192.168.1.193 until ip -br addr says else", "severity": 5}
+{"id": 88, "round": 88, "family": "TILDE", "trigger": "R088 paste ~ or escaped tilde", "symptom": "literal directory named tilde", "fix": "absolute paths only", "severity": 5}
+{"id": 89, "round": 89, "family": "CWD", "trigger": "R089 rm -rf while cwd is that dir", "symptom": "ghost cwd, failed to make path absolute", "fix": "cd out first", "severity": 5}
+{"id": 90, "round": 90, "family": "PYREPL", "trigger": "R090 forget to exit >>>", "symptom": "next git command is syntax error", "fix": "exit() then dollar commands", "severity": 3}
+{"id": 91, "round": 91, "family": "SQLITE", "trigger": "R091 copy db while writers open", "symptom": "malformed disk image", "fix": "close python; copy sqlite files together", "severity": 3}
+{"id": 92, "round": 92, "family": "CODER_PHONE", "trigger": "R092 try 7B GGUF on A15 3.5GB", "symptom": "OOM / thermal throttle", "fix": "client only; model on OptiPlex", "severity": 5}
+{"id": 93, "round": 93, "family": "CODER_PORT", "trigger": "R093 curl localhost:8080 from phone", "symptom": "connection refused", "fix": "curl http://192.168.1.193:8080/v1/models", "severity": 4}
+{"id": 94, "round": 94, "family": "CODER_MODEL", "trigger": "R094 point llama-server at missing GGUF", "symptom": "failed to load model", "fix": "ls /home/jesse/models and pass exact file", "severity": 4}
+{"id": 95, "round": 95, "family": "SYSTEMD", "trigger": "R095 pkill syncthing because unit failed", "symptom": "mesh drop, ID confusion", "fix": "if 8384 listens and ID JW5PQXV leave it", "severity": 4}
+{"id": 96, "round": 96, "family": "STFOLDER", "trigger": "R096 unique-ID wipe at 99 percent", "symptom": "full resync heat", "fix": "mkdir .stfolder directory", "severity": 5}
+{"id": 97, "round": 97, "family": "GITPUSH", "trigger": "R097 git push dump photos", "symptom": "repo bloat", "fix": "mesh for binaries; git for claims", "severity": 3}
+{"id": 98, "round": 98, "family": "BRANCH", "trigger": "R098 commit on detached HEAD after clone of tag", "symptom": "push rejected", "fix": "git switch main", "severity": 2}
+{"id": 99, "round": 99, "family": "CRLF", "trigger": "R099 edit on Windows then Termux", "symptom": "scripts have CR", "fix": "strip CR in python", "severity": 2}
+{"id": 100, "round": 100, "family": "PERM", "trigger": "R100 chmod 777 everything", "symptom": "Syncthing fights, git noise", "fix": "files 644 dirs 755", "severity": 2}
