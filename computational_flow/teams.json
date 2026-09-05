@@ -1,0 +1,14 @@
+{
+  "team_alpha": {
+    "expertise": ["data_analysis", "optimization"],
+    "capacity": 3
+  },
+  "team_beta": {
+    "expertise": ["documentation", "content_creation"],
+    "capacity": 2
+  },
+  "team_gamma": {
+    "expertise": ["coding", "automation"],
+    "capacity": 4
+  }
+}

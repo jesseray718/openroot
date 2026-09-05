@@ -1,0 +1,15 @@
+#!/data/data/com.termux/files/usr/bin/bash
+echo "=== OpenRoot Status ==="
+echo "Repo: $HOME/openroot"
+echo "Seed: /sdcard/openroot/openroot_seed.txt"
+echo
+echo "Latest commits:"
+cd $HOME/openroot && git log --oneline -5
+echo
+echo "Node-001 files:"
+ls -l $HOME/openroot/nodes/node-001/ 2>/dev/null || echo "missing"
+echo
+echo "Phone seed present:"
+ls -l /sdcard/openroot/openroot_seed.txt /sdcard/openroot/session_seeds/current_seed.json 2>/dev/null
+echo
+echo "Next physical action: build the frame and take one clear-night measurement."

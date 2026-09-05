@@ -1,80 +1,91 @@
-[![C++20 Thermodynamic Kernel CI](https://github.com/jesseray718/openroot/actions/workflows/cxx-build.yml/badge.svg)](https://github.com/jesseray718/openroot/actions/workflows/cxx-build.yml)
-
-# OpenRoot Engine
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21887097.svg)](https://doi.org/10.5281/zenodo.21887097)
-[![Release](https://img.shields.io/github/v/release/jesseray718/openroot?include_prereleases)](https://github.com/jesseray718/openroot/releases/tag/v1.1.0-native-thermo)
-[![C++20 Native](https://img.shields.io/badge/Kernel-C%2B%2B20%20Native-blue.svg)](include/openroot/thermo.hpp)
-
 # OpenRoot
 
-OpenRoot is a living, open ecosystem for practical regeneration: science, engineering, agriculture, software, governance, and local community resilience.
+**Thermodynamic ledger + Merkle commitments as the substrate for reverse computation.**
 
-We need specialists.  
-We need beginners.  
-We need people with tools, land, code, logistics, legal knowledge, financial insight, teaching skill, or honest effort.
+η = useful_joules / human_joules is the only performance language.
 
-If you want to help build a future that is more resilient, local, open, and life-serving: you have a place here.
+Open-source appropriate-technology ecosystem: AeroCement volumetric exchangers, ferrocement domes, Black Locust RMH, UNE computational_flow, fractal nanobot lattice, PoPW / ACRE claims.
 
-## Collaboration, Credit, and Stewardship
+---
 
-OpenRoot is built to collaborate.  
-I (project founder) actively welcome co-builders, shared authorship, and transfer of responsibility to those best suited for a task.
+# AeroCement — Open-Cell Volumetric Thermal Cascade
 
-- I will share credit fairly.
-- I will give explicit credit where due.
-- I am willing to step back from duties when another contributor can serve the project better.
-- The goal is mission success, not ego ownership.
+**The material breakthrough**
 
-If you contribute meaningfully, your contribution should be visible and credited.
+Opencell (AeroCement) is related to aircrete but does not collapse.
 
-## Inspiration and Thanks
+Traditional aircrete fails when the foam reaches critical mass: the bubbles pop and the entire structure falls in on itself. A simple thixotropic surfactant gel changes that failure point.
 
-Special thanks to **Ben** from YouTube channel **NighthawkInLight**:  
-https://www.youtube.com/@NighthawkInLight
+Mix:
+- Xanthan gum suspended in alcohol
+- Dawn Ultra
+- Water
 
-His work has materially influenced this project’s thinking and experimentation, especially:
-- Kitchen aircrete explorations
-- Acetone + silicone waterproofing explorations
+This produces a gel. Ratio: **1 part gel : 2 parts cement**.
 
-More broadly, his videos have been a major source of inspiration for practical, experimental thinking.
+As the mix is agitated, air is entrained. When it reaches the same critical point where ordinary aircrete collapses, the thixotropic gel locks the shape. The bubbles rupture, but the matrix remains. The result is a stable, breathable, fully interconnected open-cell concrete — every void is connected to every other void.
 
-## Everyone Has a Lane
+That single change turns a failed insulation foam into a high-surface-area heat exchanger that can be cast, pumped, or 3D-printed.
 
-- **Scientists** → validate claims, design experiments, improve rigor.
-- **Engineers & Architects** → build practical systems, plans, prototypes, and standards.
-- **Farmers & Growers** → field-test methods, seed stewardship, soil/water practices.
-- **Coders & AI Builders** → automation, tooling, data pipelines, interfaces.
-- **Legal / Policy / Governance** → licensing, compliance, cooperative structures.
-- **Finance / Accounting / Advisors** → sustainable funding, local wealth retention models.
-- **Educators / Organizers / Storytellers** → workshops, documentation, onboarding, events.
-- **Anyone new** → start small, learn fast, contribute meaningfully.
+**Why this matters — the triple-utility cascade**
 
-## Start in 60 Minutes
+1. **Heat**  
+   Paint the open-cell surface black or load it with activated charcoal. It becomes a volumetric blackbody that captures nearly all incident solar energy.  
+   Form a phi-spiral air path through the material. Stack effect + turbulence create a vortex at the outlet. Run the hot air through a copper coil inside an insulated ferrocement tank and the heat is stored.
 
-1. Read `community/lane-quiz.md`
-2. Pick one issue labeled `good first issue` or `help wanted`
-3. Submit one concrete output:
-   - data point
-   - doc improvement
-   - prototype fix
-   - local action report
+2. **Cold**  
+   The same open-cell matrix, kept wet and preceded by a desiccant, creates massive evaporative surface area (every pore, not just the tunnel walls). Hot dry air interacting with that surface drops to approximately 35–40 °F via the latent heat of vaporization, independent of ambient temperature as long as the air is dry enough. Store the cold side in a second insulated ferrocement tank.
 
-## Why This Matters
+3. **Work**  
+   The resulting ΔT drives a Stirling engine + flywheel for mechanical power and a TEG for electricity. Heat is used as heat, cold as cold, mechanical work as mechanical work. Electricity is reserved only for loads that truly require it.
 
-This project is designed to convert underused human potential into local, measurable, regenerative impact.  
-You do not need to be perfect. You need to start.
+The entire system is passive after construction. No grid, no pumps, no moving parts beyond the Stirling.
 
-## Contact
+**Carbon-negative variant**
 
-- Maintainer: jrm8908@proton.me
-- Repo: https://github.com/jesseray718/openroot
-- Discussions: see pinned “Start Here” thread
+Replace the solar absorber with a rocket mass heater fired on coppiced Black Locust (100× easier to harvest than conventional firewood and regenerates). The same open-cell cascade now runs on a renewable, carbon-negative fuel source while still delivering heat, cold, and shaft work.
 
-## Thesis Release Bundle (2026-08-29)
-Packaged thesis corpus, core docs, outreach packets, and integrity manifests are included in:
-- `releases/thesis-20260829/`
+**Structural and architectural uses**
+
+- Fill cardboard geodesic panels (acetone + silicone treated, flanged triangles) — 1v emergency shelter to 50v stadium scale.
+- Core material inside double-catenary stressed-skin ferrocement shells (pure compression geometry).
+- Stator-motor mixing produces finer, more uniform bubbles. Combined with alkali-resistant glass fiber (≥20 % zirconium) the mix can be lighter *and* stronger than conventional concrete, potentially pumpable over long distances with far less labor.
+
+This is the same direction NASA and others are exploring with nano-aerogels, achieved with off-the-shelf materials and open knowledge.
+
+**Open source & ACRE**
+
+Everything is published under CC-BY-SA (docs) / GPL-3 (code). No patents. Defensive publication is intentional.
+
+Work is measured in joules. Verified physical work mints ACRE claims. The same unit that quantifies energy captured also quantifies human contribution. As systems come online they effectively print their own coordination token — decentralized, open-source, and cooperative by design.
+
+**Current status**
+
+Theoretical physics validated. Mixes and cascade documented. First instrumented prototype waiting only on a build site in southeast Missouri.
+
+Workshop offers: free or materials-at-cost for anyone in the region who wants a working system and is willing to measure and share results.
+
+**Repository**  
+https://github.com/jesseray718/openroot
+
 Contact: jrm8908@proton.me
 
-## Knowledge Integration
-See `docs/knowledge/`.
+> “There shall come a time when the earth is weeping and the animals are suffering, and from all corners of the earth shall come a tribe of all colors, classes, and creeds, and through their actions they shall make the earth green again.”  
+> — Hopi prophecy
+
+## Current Live Artifacts
+
+- **ACRE-0001** — verified at lattice order 12^12 (Seed Core + Aero-Disc absorption)
+- Thermodynamic ledger: `seed-core/ledger/eta_ledger.jsonl`
+- 16 foundational optimization seeds
+- `porous_exchanger_design.py` v2.2 (Aero-Disc sizing)
+
+## Core Law
+
+Every computational and physical process is measured, committed, and open to upstream replacement by a higher-η alternative.
+
+## License
+
+Documentation & seeds: CC-BY-SA 4.0  
+Code: GPL-3.0  
+No patents. Defensive publication.

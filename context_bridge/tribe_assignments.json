@@ -1,0 +1,309 @@
+{
+  "generated_at": "2026-07-26T23:53:20Z",
+  "total_assignments": 30,
+  "tribes_active": 30,
+  "foundation_merkle": "ebb1b6d615df02ccf3db1e7e7d14165c7aee41d06b2721efd6dec4d7b7532f27",
+  "agape_source": "AGAPE = 30 \u2192 3 (Trinity)",
+  "assignments": [
+    {
+      "tribe": "TRIBE_01",
+      "tribe_energy_range": "0.0 \u2192 7.0",
+      "file_path": "projects/openroot/sync-from-kai/conversion/base.py",
+      "leverage": 3718.064,
+      "lines": 2641,
+      "purpose": "!/usr/bin/env python3",
+      "assignment_hash": "03e122262c177d01",
+      "directive": "Optimize projects/openroot/sync-from-kai/conversion/base.py \u2014 reduce LOC by 20%, increase throughput 2x, measure delta in joules"
+    },
+    {
+      "tribe": "TRIBE_02",
+      "tribe_energy_range": "7.0 \u2192 10.0",
+      "file_path": "openroot/sync-from-kai/conversion/base.py",
+      "leverage": 3718.064,
+      "lines": 2641,
+      "purpose": "!/usr/bin/env python3",
+      "assignment_hash": "92c8d26809e9d0db",
+      "directive": "Optimize openroot/sync-from-kai/conversion/base.py \u2014 reduce LOC by 20%, increase throughput 2x, measure delta in joules"
+    },
+    {
+      "tribe": "TRIBE_03",
+      "tribe_energy_range": "10.0 \u2192 11.0",
+      "file_path": "skills/llama.cpp/conversion/base.py",
+      "leverage": 3718.064,
+      "lines": 2641,
+      "purpose": "!/usr/bin/env python3",
+      "assignment_hash": "c55bb3a77b4146c9",
+      "directive": "Optimize skills/llama.cpp/conversion/base.py \u2014 reduce LOC by 20%, increase throughput 2x, measure delta in joules"
+    },
+    {
+      "tribe": "TRIBE_04",
+      "tribe_energy_range": "11.0 \u2192 13.0",
+      "file_path": "psbuild/psutil-5.9.8/psutil/tests/test_linux.py",
+      "leverage": 3488.1227,
+      "lines": 2350,
+      "purpose": "Linux specific tests.",
+      "assignment_hash": "6cb75eb94c771232",
+      "directive": "Optimize psbuild/psutil-5.9.8/psutil/tests/test_linux.py \u2014 reduce LOC by 20%, increase throughput 2x, measure delta in joules"
+    },
+    {
+      "tribe": "TRIBE_05",
+      "tribe_energy_range": "13.0 \u2192 14.0",
+      "file_path": "psutil_src/psutil-5.9.5/psutil/tests/test_linux.py",
+      "leverage": 3488.1227,
+      "lines": 2311,
+      "purpose": "Linux specific tests.",
+      "assignment_hash": "654958b3150775b7",
+      "directive": "Optimize psutil_src/psutil-5.9.5/psutil/tests/test_linux.py \u2014 reduce LOC by 20%, increase throughput 2x, measure delta in joules"
+    },
+    {
+      "tribe": "TRIBE_06",
+      "tribe_energy_range": "14.0 \u2192 15.0",
+      "file_path": "projects/openroot/sync-from-kai/examples/convert_legacy_llama.py",
+      "leverage": 3263.1273,
+      "lines": 1463,
+      "purpose": "!/usr/bin/env python3",
+      "assignment_hash": "3f4f81e8d1563d25",
+      "directive": "Optimize projects/openroot/sync-from-kai/examples/convert_legacy_llama.py \u2014 reduce LOC by 20%, increase throughput 2x, measure delta in joules"
+    },
+    {
+      "tribe": "TRIBE_07",
+      "tribe_energy_range": "15.0 \u2192 16.0",
+      "file_path": "psbuild/psutil-5.9.8/psutil/__init__.py",
+      "leverage": 3263.1273,
+      "lines": 2492,
+      "purpose": "psutil is a cross-platform library for retrieving information on\nrunning processes and system utiliz",
+      "assignment_hash": "8c61a20a77a9103d",
+      "directive": "Optimize psbuild/psutil-5.9.8/psutil/__init__.py \u2014 reduce LOC by 20%, increase throughput 2x, measure delta in joules"
+    },
+    {
+      "tribe": "TRIBE_08",
+      "tribe_energy_range": "16.0 \u2192 17.0",
+      "file_path": "psutil_src/psutil-5.9.5/psutil/__init__.py",
+      "leverage": 3263.1273,
+      "lines": 2426,
+      "purpose": "psutil is a cross-platform library for retrieving information on\nrunning processes and system utiliz",
+      "assignment_hash": "807ef3a089b68c04",
+      "directive": "Optimize psutil_src/psutil-5.9.5/psutil/__init__.py \u2014 reduce LOC by 20%, increase throughput 2x, measure delta in joules"
+    },
+    {
+      "tribe": "TRIBE_09",
+      "tribe_energy_range": "17.0 \u2192 18.0",
+      "file_path": "openroot/sync-from-kai/examples/convert_legacy_llama.py",
+      "leverage": 3263.1273,
+      "lines": 1463,
+      "purpose": "!/usr/bin/env python3",
+      "assignment_hash": "83d175d1f627f0fc",
+      "directive": "Optimize openroot/sync-from-kai/examples/convert_legacy_llama.py \u2014 reduce LOC by 20%, increase throughput 2x, measure delta in joules"
+    },
+    {
+      "tribe": "TRIBE_10",
+      "tribe_energy_range": "18.0 \u2192 19.0",
+      "file_path": "skills/llama.cpp/examples/convert_legacy_llama.py",
+      "leverage": 3263.1273,
+      "lines": 1463,
+      "purpose": "!/usr/bin/env python3",
+      "assignment_hash": "fe2cf2c1b0442bf4",
+      "directive": "Optimize skills/llama.cpp/examples/convert_legacy_llama.py \u2014 reduce LOC by 20%, increase throughput 2x, measure delta in joules"
+    },
+    {
+      "tribe": "TRIBE_11",
+      "tribe_energy_range": "19.0 \u2192 20.0",
+      "file_path": "projects/openroot/sync-from-kai/examples/llama-eval/llama-eval.py",
+      "leverage": 3043.1891,
+      "lines": 1591,
+      "purpose": "!/usr/bin/env python3",
+      "assignment_hash": "5e8bda1209020a25",
+      "directive": "Optimize projects/openroot/sync-from-kai/examples/llama-eval/llama-eval.py \u2014 reduce LOC by 20%, increase throughput 2x, measure delta in joules"
+    },
+    {
+      "tribe": "TRIBE_12",
+      "tribe_energy_range": "20.0 \u2192 21.0",
+      "file_path": "psbuild/psutil-5.9.8/psutil/tests/__init__.py",
+      "leverage": 3043.1891,
+      "lines": 2043,
+      "purpose": "Test utilities.",
+      "assignment_hash": "bfac0610b0110e93",
+      "directive": "Optimize psbuild/psutil-5.9.8/psutil/tests/__init__.py \u2014 reduce LOC by 20%, increase throughput 2x, measure delta in joules"
+    },
+    {
+      "tribe": "TRIBE_13",
+      "tribe_energy_range": "21.0 \u2192 22.0",
+      "file_path": "psbuild/psutil-5.9.8/psutil/tests/test_process.py",
+      "leverage": 3043.1891,
+      "lines": 1636,
+      "purpose": "Tests for psutil.Process class.",
+      "assignment_hash": "6aa6df13b1162e66",
+      "directive": "Optimize psbuild/psutil-5.9.8/psutil/tests/test_process.py \u2014 reduce LOC by 20%, increase throughput 2x, measure delta in joules"
+    },
+    {
+      "tribe": "TRIBE_14",
+      "tribe_energy_range": "22.0 \u2192 23.0",
+      "file_path": "psutil_src/psutil-5.9.5/psutil/tests/__init__.py",
+      "leverage": 3043.1891,
+      "lines": 1826,
+      "purpose": "Test utilities.",
+      "assignment_hash": "2f337dccaf9fdfab",
+      "directive": "Optimize psutil_src/psutil-5.9.5/psutil/tests/__init__.py \u2014 reduce LOC by 20%, increase throughput 2x, measure delta in joules"
+    },
+    {
+      "tribe": "TRIBE_15",
+      "tribe_energy_range": "23.0 \u2192 23.0",
+      "file_path": "openroot/sync-from-kai/examples/llama-eval/llama-eval.py",
+      "leverage": 3043.1891,
+      "lines": 1591,
+      "purpose": "!/usr/bin/env python3",
+      "assignment_hash": "674a9cbd8bb88d61",
+      "directive": "Optimize openroot/sync-from-kai/examples/llama-eval/llama-eval.py \u2014 reduce LOC by 20%, increase throughput 2x, measure delta in joules"
+    },
+    {
+      "tribe": "TRIBE_16",
+      "tribe_energy_range": "23.0 \u2192 24.0",
+      "file_path": "skills/llama.cpp/examples/llama-eval/llama-eval.py",
+      "leverage": 3043.1891,
+      "lines": 1591,
+      "purpose": "!/usr/bin/env python3",
+      "assignment_hash": "5709dca3ba11ac0f",
+      "directive": "Optimize skills/llama.cpp/examples/llama-eval/llama-eval.py \u2014 reduce LOC by 20%, increase throughput 2x, measure delta in joules"
+    },
+    {
+      "tribe": "TRIBE_17",
+      "tribe_energy_range": "24.0 \u2192 25.0",
+      "file_path": "psutil_src/psutil-5.9.5/psutil/tests/test_process.py",
+      "leverage": 2828.4271,
+      "lines": 1616,
+      "purpose": "Tests for psutil.Process class.",
+      "assignment_hash": "e37b03747e3f93e2",
+      "directive": "Optimize psutil_src/psutil-5.9.5/psutil/tests/test_process.py \u2014 reduce LOC by 20%, increase throughput 2x, measure delta in joules"
+    },
+    {
+      "tribe": "TRIBE_18",
+      "tribe_energy_range": "25.0 \u2192 26.0",
+      "file_path": "psbuild/psutil-5.9.8/psutil/tests/test_windows.py",
+      "leverage": 2689.5815,
+      "lines": 967,
+      "purpose": "Windows specific tests.",
+      "assignment_hash": "d4e956e588685947",
+      "directive": "Optimize psbuild/psutil-5.9.8/psutil/tests/test_windows.py \u2014 reduce LOC by 20%, increase throughput 2x, measure delta in joules"
+    },
+    {
+      "tribe": "TRIBE_19",
+      "tribe_energy_range": "26.0 \u2192 26.0",
+      "file_path": "psutil_src/psutil-5.9.5/psutil/_pslinux.py",
+      "leverage": 2618.9693,
+      "lines": 2265,
+      "purpose": "Linux platform implementation.",
+      "assignment_hash": "e06873270e2dcd09",
+      "directive": "Optimize psutil_src/psutil-5.9.5/psutil/_pslinux.py \u2014 reduce LOC by 20%, increase throughput 2x, measure delta in joules"
+    },
+    {
+      "tribe": "TRIBE_20",
+      "tribe_energy_range": "26.0 \u2192 27.0",
+      "file_path": "psbuild/psutil-5.9.8/psutil/_pslinux.py",
+      "leverage": 2414.9534,
+      "lines": 2366,
+      "purpose": "Linux platform implementation.",
+      "assignment_hash": "c50c1170da8a678a",
+      "directive": "Optimize psbuild/psutil-5.9.8/psutil/_pslinux.py \u2014 reduce LOC by 20%, increase throughput 2x, measure delta in joules"
+    },
+    {
+      "tribe": "TRIBE_21",
+      "tribe_energy_range": "27.0 \u2192 28.0",
+      "file_path": "psutil_src/psutil-5.9.5/psutil/tests/test_windows.py",
+      "leverage": 2406.908,
+      "lines": 898,
+      "purpose": "Windows specific tests.",
+      "assignment_hash": "334fe84bbea1a028",
+      "directive": "Optimize psutil_src/psutil-5.9.5/psutil/tests/test_windows.py \u2014 reduce LOC by 20%, increase throughput 2x, measure delta in joules"
+    },
+    {
+      "tribe": "TRIBE_22",
+      "tribe_energy_range": "28.0 \u2192 28.0",
+      "file_path": "psbuild/psutil-5.9.8/psutil/tests/test_system.py",
+      "leverage": 2296.4049,
+      "lines": 967,
+      "purpose": "Tests for system APIS.",
+      "assignment_hash": "3390748e1c0f137e",
+      "directive": "Optimize psbuild/psutil-5.9.8/psutil/tests/test_system.py \u2014 reduce LOC by 20%, increase throughput 2x, measure delta in joules"
+    },
+    {
+      "tribe": "TRIBE_23",
+      "tribe_energy_range": "28.0 \u2192 29.0",
+      "file_path": "psbuild/psutil-5.9.8/psutil/_common.py",
+      "leverage": 2160.2482,
+      "lines": 983,
+      "purpose": "Common objects shared by __init__.py and _ps*.py modules.",
+      "assignment_hash": "19c2c15b58c96d0d",
+      "directive": "Optimize psbuild/psutil-5.9.8/psutil/_common.py \u2014 reduce LOC by 20%, increase throughput 2x, measure delta in joules"
+    },
+    {
+      "tribe": "TRIBE_24",
+      "tribe_energy_range": "29.0 \u2192 30.0",
+      "file_path": "psutil_src/psutil-5.9.5/psutil/tests/test_system.py",
+      "leverage": 2034.4922,
+      "lines": 892,
+      "purpose": "Tests for system APIS.",
+      "assignment_hash": "248adf8ede6faaa5",
+      "directive": "Optimize psutil_src/psutil-5.9.5/psutil/tests/test_system.py \u2014 reduce LOC by 20%, increase throughput 2x, measure delta in joules"
+    },
+    {
+      "tribe": "TRIBE_25",
+      "tribe_energy_range": "30.0 \u2192 30.0",
+      "file_path": "openroot/sync-from-kai/tools/mtmd/legacy-models/minicpmv-convert-image-encoder-to-gguf.py",
+      "leverage": 2034.4922,
+      "lines": 892,
+      "purpose": "PyTorch Siglip model.",
+      "assignment_hash": "5985baa59b31be01",
+      "directive": "Optimize openroot/sync-from-kai/tools/mtmd/legacy-models/minicpmv-convert-image-encoder-to-gguf.py \u2014 reduce LOC by 20%, increase throughput 2x, measure delta in joules"
+    },
+    {
+      "tribe": "TRIBE_26",
+      "tribe_energy_range": "30.0 \u2192 31.0",
+      "file_path": "skills/llama.cpp/tools/mtmd/legacy-models/minicpmv-convert-image-encoder-to-gguf.py",
+      "leverage": 2034.4922,
+      "lines": 892,
+      "purpose": "PyTorch Siglip model.",
+      "assignment_hash": "ea0f4306233265d3",
+      "directive": "Optimize skills/llama.cpp/tools/mtmd/legacy-models/minicpmv-convert-image-encoder-to-gguf.py \u2014 reduce LOC by 20%, increase throughput 2x, measure delta in joules"
+    },
+    {
+      "tribe": "TRIBE_27",
+      "tribe_energy_range": "31.0 \u2192 32.0",
+      "file_path": "projects/openroot/sync-from-kai/scripts/compare-llama-bench.py",
+      "leverage": 2023.8577,
+      "lines": 1102,
+      "purpose": "!/usr/bin/env python3",
+      "assignment_hash": "dc6d1efb1cb2c198",
+      "directive": "Optimize projects/openroot/sync-from-kai/scripts/compare-llama-bench.py \u2014 reduce LOC by 20%, increase throughput 2x, measure delta in joules"
+    },
+    {
+      "tribe": "TRIBE_28",
+      "tribe_energy_range": "32.0 \u2192 32.0",
+      "file_path": "psbuild/psutil-5.9.8/psutil/tests/test_misc.py",
+      "leverage": 2023.8577,
+      "lines": 1014,
+      "purpose": "Miscellaneous tests.",
+      "assignment_hash": "d9aca5551a4d7d33",
+      "directive": "Optimize psbuild/psutil-5.9.8/psutil/tests/test_misc.py \u2014 reduce LOC by 20%, increase throughput 2x, measure delta in joules"
+    },
+    {
+      "tribe": "TRIBE_29",
+      "tribe_energy_range": "32.0 \u2192 33.0",
+      "file_path": "openroot/sync-from-kai/scripts/compare-llama-bench.py",
+      "leverage": 2023.8577,
+      "lines": 1102,
+      "purpose": "!/usr/bin/env python3",
+      "assignment_hash": "9627c0508379dccb",
+      "directive": "Optimize openroot/sync-from-kai/scripts/compare-llama-bench.py \u2014 reduce LOC by 20%, increase throughput 2x, measure delta in joules"
+    },
+    {
+      "tribe": "TRIBE_30",
+      "tribe_energy_range": "33.0 \u2192 34.0",
+      "file_path": "skills/llama.cpp/scripts/compare-llama-bench.py",
+      "leverage": 2023.8577,
+      "lines": 1102,
+      "purpose": "!/usr/bin/env python3",
+      "assignment_hash": "ce793fe5a0f828e5",
+      "directive": "Optimize skills/llama.cpp/scripts/compare-llama-bench.py \u2014 reduce LOC by 20%, increase throughput 2x, measure delta in joules"
+    }
+  ]
+}

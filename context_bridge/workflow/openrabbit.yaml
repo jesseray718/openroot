@@ -1,0 +1,5 @@
+# OpenRabbit / lattice placeholder
+# Canonical location for future OpenRabbit AI configuration and routing rules.
+# Keep real configuration here rather than duplicating across 35 repositories.
+lattice: openroot
+canonical_path: /sdcard/openroot/context_bridge/workflow/
