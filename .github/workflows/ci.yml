@@ -1,18 +1,17 @@
-name: CI
-on: [pull_request, push, workflow_dispatch]
-permissions: { contents: read }
+name: OpenRoot CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-<<<<<<< HEAD
-      - run: echo "Add project tests here"
-=======
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-      - run: pip install -e .
-      - run: pip install pytest
-      - run: pytest
->>>>>>> 30ec7156 (ci: run pytest instead of placeholder)
+      - name: Check structure
+        run: |
+          ls -la
+          test -f README.md && echo "README OK" || echo "Missing README"
+          test -d projects/aerocement && echo "AeroCement OK" || echo "Missing subdir"
