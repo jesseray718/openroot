@@ -1,4 +1,6 @@
 # OpenRoot
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20549528.svg)](https://doi.org/10.5281/zenodo.20549528)
 ### The Open Foundation for a Civilization That Works
 
 > *"There will come a time when the animals are suffering and the earth is weeping,*
