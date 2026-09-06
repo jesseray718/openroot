@@ -82,10 +82,20 @@ That single material change turns a failed insulation foam into high-S/V thermal
 | Water absorption | 15–25% by weight (wet labyrinth) | OPEN |
 | Internal S/V | target 500–2,000 m²/m³ in the filled labyrinth | OPEN |
 
-**Mix direction per cubic yard (starting recipe, not a certified mix):**
-Portland I/II 400–500 lb · fine sand passing #8 800–1,200 lb · water 200–250 lb (w/c 0.45–0.55) · pre-formed protein foam 6–8 cu ft · activated carbon 20–30 lb · optional silica fume 5–10% of cement · AR glass fiber 2–5% by volume for AE-GFRC.
+**Mix direction — NightHawkInLight gel (the public base).**
+Credit: [NightHawkInLight — Perfect Aircrete, Kitchen Ingredients](https://www.youtube.com/watch?v=z4_GxPHwqkA). Channel: [NightHawkInLight](https://www.youtube.com/@Nighthawkinlight). OpenRoot did not invent this gel. We add carbon, AR-glass, and the 21-day wet clock on top of it.
 
-Foam is **pre-formed**. Never dump foaming agent into the mixer. Paste first, fold foam. Over-mix collapses cells. One continuous lift. Cover and keep wet **21 days**. N13 is not optional.
+Gel, per \~1 L batch (volume, not a certified mix):
+15 g xanthan gum · splash of rubbing alcohol (or alcohol mouthwash) to pre-wet and kill clumps · 60 ml / ¼ cup Dawn Ultra (or a detergent with the same top ingredients) · 1 L water. Stir. Sit 5–10 min until it is a thick gel.
+
+Pour: **1 part gel : 2 parts Portland cement by volume.** It looks too dry, then goes liquid as bubbles form. More stirring → more air → lower density → more open cells. Less stirring → denser and stronger. Keep mixing past the closed-cell stage if you want interconnected voids for the labyrinth. Over-whip collapses the set.
+
+OpenRoot deltas (optional, not in the kitchen video):
+activated carbon / charcoal in the paste for α · AR glass fiber ≥20% Zr, 2–5% by volume · rotor-stator if you are chasing finer cells · optional sand later (NightHawkInLight has tested sand:cement up to 2:1 by volume; that is his update, not a hang here).
+
+One continuous lift. Cover and keep wet **21 days**. N13 is not optional.
+
+Do not substitute a pre-formed protein-foam / foam-generator yard mix and call it this gel. Those are two different air-entrainment paths.
 
 Full notes: [`MATERIAL_SCIENCE_NOTES.md`](https://github.com/jesseray718/openroot/blob/main/library/kai-sandbox/openroot-ecosystem/aerocement/docs/MATERIAL_SCIENCE_NOTES.md) · [wiki](https://github.com/jesseray718/openroot/wiki/Material-Science)
 Handbook seed: [`OPENROOT_HANDBOOK.md`](https://github.com/jesseray718/openroot/blob/main/OPENROOT_HANDBOOK.md) §4 (AERO-GFRC-001) · [wiki](https://github.com/jesseray718/openroot/wiki/Handbook)
