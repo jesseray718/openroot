@@ -141,3 +141,14 @@ Handbook: `OPENROOT_HANDBOOK.md`
 
 > There shall come a time when the earth is weeping and the animals are suffering, and from all corners of the earth shall come a tribe of all colors, classes, and creeds, and through their actions they shall make the earth green again.
 > — Hopi prophecy
+
+## Wiki
+
+- [Handbook](https://github.com/jesseray718/openroot/wiki/Handbook)
+- [Material science](https://github.com/jesseray718/openroot/wiki/Material-Science)
+- [AeroCement](https://github.com/jesseray718/openroot/wiki/AeroCement)
+- [Thermal cascade + RMH](https://github.com/jesseray718/openroot/wiki/Thermal-Cascade)
+- [AeroDisk](https://github.com/jesseray718/openroot/wiki/AeroDisk)
+- [Shelter](https://github.com/jesseray718/openroot/wiki/Shelter)
+- [Skills](https://github.com/jesseray718/openroot/wiki/Skills)
+- [Offline 7B coder](https://github.com/jesseray718/openroot/wiki/Offline-7B-Coder)
