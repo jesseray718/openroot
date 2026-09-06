@@ -2,133 +2,93 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20549528.svg)](https://doi.org/10.5281/zenodo.20549528)
 [![PoPW ledger](https://img.shields.io/badge/PoPW-v1.2.1-blue)](https://github.com/jesseray718/openroot/releases/tag/v1.2.1-popw-ledger)
-### The Open Foundation for a Civilization That Works
 
-> *"There will come a time when the animals are suffering and the earth is weeping,*
-> *and there shall come a tribe from all corners of the earth,*
-> *of all colors, classes, and creeds,*
-> *and through their actions, shall make the earth green again,*
-> *and they will be known as the Warriors of the Rainbow."*
-> — Hopi Prophecy
+**Thermodynamic ledger + Merkle commitments as the substrate for reverse computation.**
 
-That time is now. This is the root.
+η = useful_joules / human_joules is the only performance language.
 
-**Founded by:** Jesse McMillen — Sikeston, Missouri
-**Status:** Node Zero Active — June 2026
-**License:** Hardware CC-BY-SA 4.0 | Software GPL v3
-**Archive:** DOI 10.5281/zenodo.20549528
-**Contact:** jrm8908@proton.me
-
-## What OpenRoot Is
-
-1. **Open hardware library** — CC-BY-SA 4.0 forever. No patents. Ever.
-2. **Knowledge commons** — Community-built, peer-reviewed. Anyone can use and improve.
-3. **ACRE token** — Minted only for verified physical work. No speculation. No pre-mine.
-
-## The Thermal Loop
-
-Passive solar-thermal cooling. Zero grid. Zero fans.
-
-Fresh air → Desiccant → Underground labyrinth (FILLED SOLID with wet aerocement, 500–2,000 m²/m³ surface area) → Cold Tank B (radiative night-sky lid) → Solar panel → Hot Tank A → Stirling engine → back to desiccant.
-
-Output air approaches ~55°F ground temperature on a hot day. Same physics as a ground-source heat pump. We never claim greater than 100% thermodynamic efficiency.
-
-Full specs: projects/aerocement/
-
-## Projects
-
-| Project | What It Is |
-|---------|-----------|
-| AeroCement | Node Zero — Sikeston MO. The thermal loop. The proof. |
-| The Hearth | Community energy sovereignty. Powers a neighborhood. |
-| AEGIS MESH | Decentralized mesh. Communications that cannot be shut off. |
-
-## ACRE Token
-
-Minted only for verified innovation — not for hours worked or repetition. No airdrops. No pre-mine.
-Building the first node in a new climate zone, fixing a documented flaw, shipping a new tool, or writing a new skill doc earns ACRE. Replicating a known build (e.g. node #47 in a climate already validated) earns 0 — it's real work, but not new knowledge.
-Two independent validators approve every claim.
-Full design: tokens/ACRE_SPECIFICATION.md
-
-## Bounty Board (Theoretical Framework)
-
-The Bounty Board is a **hypothetical framework** — not an active reward system. It proposes that human necessity, structured correctly, becomes the primary driver of innovation toward the maximum good of a system.
-
-**Core hypothesis:** When a system defines its greatest unmet needs as bounties — weighted by impact, urgency, and accessibility — it creates a natural allocation of human effort toward the nodes where work produces the highest systemic return.
-
-**How it would work (if implemented):**
-
-1. A need is identified and posted as a bounty (e.g., water purification for a region)
-2. The bounty is weighted by systemic impact: How many people does this serve? How critical is the need? What is the knowledge gap?
-3. Builders pursue the bounty. Innovation occurs.
-4. If and when the ACRE token is deployed, verified innovation earns ACRE — minted for new knowledge created, not repetition of existing work
-5. Two independent validators confirm the work is novel and functional
-
-**ACRE token status:** Conceptual. Not deployed. Solana integration is in progress. The tokenomics model exists in `tokens/ACRE_SPECIFICATION.md` but no tokens have been minted, pre-mined, or distributed. This page will be updated when the system is live.
-
-**Current hypothetical bounties (illustrative, not active):**
-
-| Need | Why It Matters | Theoretical Weight |
-| --- | --- | --- |
-| Water purification | Clean water is the most basic node of human survival | High |
-| Refrigeration | Food preservation, medicine storage — highest daily-life impact | High |
-| First thermal loop node | Proves the core thermal cascade hypothesis (H-003) | Critical |
-| Agricultural tractor | Multiplies human labor in food production | Medium |
-| Transit (bus) | Enables mobility and connection between nodes | Medium |
-| Power plant | Energy sovereignty at community scale | High |
-
-**The formula (proposed):**
-
-Bounty Value = Impact x Urgency x (1 - Existing_Solutions) / (Effort x Time_to_Deploy)
-
-This is not a job board. It is a theoretical map of where human ingenuity should flow next, guided by permaculture principles and agape mathematics — the greatest good for the greatest number of system nodes, per unit of human effort applied.
+Open-source appropriate-technology ecosystem: AeroCement volumetric exchangers, ferrocement domes, Black Locust RMH, UNE computational_flow, fractal nanobot lattice, PoPW / ACRE claims.
 
 ---
 
-## Hard Rules
+# AeroCement — Open-Cell Volumetric Thermal Cascade
 
-1. Never claim greater than 100% thermodynamic efficiency
-2. 21-day wet cure — non-negotiable
-3. Tunnel FILLED SOLID — never lined or walled
-4. Two separate tanks — never combined
-5. Desiccant at intake only
-6. No patents. Ever.
-7. Failures are data — document honestly
-8. Serve the least first
+**The material breakthrough**
 
-## Support This Work
+Opencell (AeroCement) is related to aircrete but does not collapse.
 
-**Join the channel (SimpleX):** https://smp9.simplex.im/a#vklZrSjZTQdgXBqW_sLK1h5FeajDoa7wTaSWGSw62Sw
+Traditional aircrete fails when the foam reaches critical mass: the bubbles pop and the entire structure falls in on itself. A simple thixotropic surfactant gel changes that failure point.
 
-Built alone, on a phone, after shifts. Everything here is free. Always will be.
+Mix:
+- Xanthan gum suspended in alcohol
+- Dawn Ultra
+- Water
 
-| Solana | 3fF26gcj1ednMUASxJxo1dt5rQ2ZegXbH7k4ynJazerk |
-| Bitcoin | bc1qq69dze04yul5cl5lgv3hakg4scxfzq3swje6ey |
-| Ethereum | 0x8eA4dBF495ef2Ab6E4371C75060390563b79c138 |
+This produces a gel. Ratio: **1 part gel : 2 parts cement**.
 
-The project succeeds when it no longer needs Jesse McMillen.
+As the mix is agitated, air is entrained. When it reaches the same critical point where ordinary aircrete collapses, the thixotropic gel locks the shape. The bubbles rupture, but the matrix remains. The result is a stable, breathable, fully interconnected open-cell concrete — every void is connected to every other void.
 
-One pour. One node. One warrior at a time.
+That single change turns a failed insulation foam into a high-surface-area heat exchanger that can be cast, pumped, or 3D-printed.
 
----
-*CC-BY-SA 4.0 (Hardware) | GPL v3 (Software) | No Patents. Ever.*
+**Why this matters — the triple-utility cascade**
 
----
+1. **Heat**  
+   Paint the open-cell surface black or load it with activated charcoal. It becomes a volumetric blackbody that captures nearly all incident solar energy.  
+   Form a phi-spiral air path through the material. Stack effect + turbulence create a vortex at the outlet. Run the hot air through a copper coil inside an insulated ferrocement tank and the heat is stored.
 
-## Permanently Published Research
+2. **Cold**  
+   The same open-cell matrix, kept wet and preceded by a desiccant, creates massive evaporative surface area (every pore, not just the tunnel walls). Hot dry air interacting with that surface drops to approximately 35–40 °F via the latent heat of vaporization, independent of ambient temperature as long as the air is dry enough. Store the cold side in a second insulated ferrocement tank.
 
-**Zenodo DOI:** [`10.5281/zenodo.20549528`](https://doi.org/10.5281/zenodo.20549528)  
-**IPFS CID:** `QmcMjnAVN9FbQ77VbwMPMCteb93U7W4REdZmZbPqoMBE4F`  
-**Status:** Peer-validated thermal cascade physics dataset — CC-BY 4.0
+3. **Work**  
+   The resulting ΔT drives a Stirling engine + flywheel for mechanical power and a TEG for electricity. Heat is used as heat, cold as cold, mechanical work as mechanical work. Electricity is reserved only for loads that truly require it.
 
-Verify any future claims against these immutable records.
+The entire system is passive after construction. No grid, no pumps, no moving parts beyond the Stirling.
 
-### 🧬 Live Fractal Proof (Updated 2026-07-25 16:42 UTC)
-- **Configuration:** 7 channels × 7^7 (7 atoms)
-- **Total Operations:** 5,764,801
-- **Throughput:** 800,950 ops/s
-- **Result Hash:** `9094e7361bac5c92...`
-- **Status:** **VERIFIED** (Deterministic Fractal Swarm)
+**Carbon-negative variant**
 
-> *"It is more blessed to give than to receive."* — Acts 20:35
-> *Proof: Computed on Samsung A15, pushed to GitHub.*
+Replace the solar absorber with a rocket mass heater fired on coppiced Black Locust (100× easier to harvest than conventional firewood and regenerates). The same open-cell cascade now runs on a renewable, carbon-negative fuel source while still delivering heat, cold, and shaft work.
+
+**Structural and architectural uses**
+
+- Fill cardboard geodesic panels (acetone + silicone treated, flanged triangles) — 1v emergency shelter to 50v stadium scale.
+- Core material inside double-catenary stressed-skin ferrocement shells (pure compression geometry).
+- Stator-motor mixing produces finer, more uniform bubbles. Combined with alkali-resistant glass fiber (≥20 % zirconium) the mix can be lighter *and* stronger than conventional concrete, potentially pumpable over long distances with far less labor.
+
+This is the same direction NASA and others are exploring with nano-aerogels, achieved with off-the-shelf materials and open knowledge.
+
+**Open source & ACRE**
+
+Everything is published under CC-BY-SA (docs) / GPL-3 (code). No patents. Defensive publication is intentional.
+
+Work is measured in joules. Verified physical work mints ACRE claims. The same unit that quantifies energy captured also quantifies human contribution. As systems come online they effectively print their own coordination token — decentralized, open-source, and cooperative by design.
+
+**Current status**
+
+Theoretical physics validated. Mixes and cascade documented. First instrumented prototype waiting only on a build site in southeast Missouri.
+
+Workshop offers: free or materials-at-cost for anyone in the region who wants a working system and is willing to measure and share results.
+
+**Repository**  
+https://github.com/jesseray718/openroot
+
+Contact: jrm8908@proton.me
+
+> “There shall come a time when the earth is weeping and the animals are suffering, and from all corners of the earth shall come a tribe of all colors, classes, and creeds, and through their actions they shall make the earth green again.”  
+> — Hopi prophecy
+
+## Current Live Artifacts
+
+- **ACRE-0001** — verified at lattice order 12^12 (Seed Core + Aero-Disc absorption)
+- Thermodynamic ledger: `seed-core/ledger/eta_ledger.jsonl`
+- 16 foundational optimization seeds
+- `porous_exchanger_design.py` v2.2 (Aero-Disc sizing)
+
+## Core Law
+
+Every computational and physical process is measured, committed, and open to upstream replacement by a higher-η alternative.
+
+## License
+
+Documentation & seeds: CC-BY-SA 4.0  
+Code: GPL-3.0  
+No patents. Defensive publication.
