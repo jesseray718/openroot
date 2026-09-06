@@ -1,0 +1,10 @@
+*.pdf
+*.aux
+*.log
+*.out
+*.toc
+*.gz
+build/
+.env
+__pycache__/
+*.pyc

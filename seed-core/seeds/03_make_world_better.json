@@ -1,0 +1,21 @@
+{
+  "id": "03_make_world_better",
+  "title": "How to Make the World a Better Place",
+  "version": "0.1",
+  "type": "optimization_seed",
+  "intent": "Rank interventions by actual increase in ordered useful complexity and reduction of suffering for the least among us.",
+  "eta_goal": "Replace vague idealism with η-ranked, measurable action.",
+  "core_framing": [
+    "Better is defined as higher ordered complexity that serves life and reduces extractive entropy.",
+    "Local, verifiable improvements compound; global rhetoric without local fruit does not.",
+    "The least among us are the preferred beneficiaries of any η gain."
+  ],
+  "optimized_query_patterns": [
+    "What is the highest-η action I can take this week that measurably improves conditions for someone with less power than I have?",
+    "Does this intervention increase or decrease total systemic entropy?"
+  ],
+  "constraints": ["Fruit must be observable", "No virtue signaling without corresponding joules"],
+  "cross_links": ["06_survive_thrive_lift", "08_agape_source"],
+  "verification_notes": "Before/after measures of local useful complexity or suffering reduction.",
+  "next_physical_or_action": "Execute one small, measurable improvement for a concrete person or place within seven days."
+}

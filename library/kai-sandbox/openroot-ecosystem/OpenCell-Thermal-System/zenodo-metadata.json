@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "title": "OpenCell Thermal-Mechanical Energy System: Zero-Electric Cooling and Direct Farm Power",
+    "description": "An open-source thermal energy system providing zero-electric cooling and direct mechanical power for farms and homes. Uses OpenCell Aerocement for solar thermal capture, subterranean cold loops for passive refrigeration, and Stirling/Rocket Mass engines for mechanical work transmission.",
+    "creators": [
+      {
+        "name": "Jesse Mcmillen",
+        "affiliation": "OpenCell Project"
+      }
+    ],
+    "access_right": "open",
+    "license": "cc-by-nc-sa-4.0",
+    "upload_type": "project",
+    "keywords": [
+      "renewable energy",
+      "thermal energy",
+      "zero-electric cooling",
+      "open source",
+      "agriculture",
+      "rural resilience",
+      "Stirling engine",
+      "passive cooling",
+      "solar thermal",
+      "farm technology"
+    ],
+    "communities": [
+      {
+        "identifier": "open-source-energy"
+      },
+      {
+        "identifier": "rural-resilience"
+      }
+    ],
+    "related_identifiers": [],
+    "version": "1.0.0",
+    "publication_date": "2026-06-05",
+    "notes": "This project is licensed under CC-BY-NC-SA 4.0. Commercial derivatives require licensing agreement with the OpenCell Project. Physics validated through theoretical modeling and prototype testing.",
+ "local_updated": "2026-06-05"
+
+  }
+}
