@@ -72,7 +72,7 @@ That single material change turns a failed insulation foam into high-S/V thermal
 
 | Property | Design range | Status |
 | --- | --- | --- |
-| Compressive strength | 2,500–4,000 psi after 21-day wet cure | OPEN until ASTM C39 |
+| Compressive strength | H1 target ≥15 MPa after 21-day wet cure | OPEN until ASTM C39 |
 | Dry density | 50–90 lb/ft³ foamed; AE-GFRC structural target ≤ 1,200 kg/m³ | OPEN |
 | Open-cell porosity | 65–80% interconnected | OPEN |
 | Pore diameter | 0.5–5 mm typical | OPEN |

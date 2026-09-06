@@ -24,7 +24,6 @@ Pane for evidence paths: SSH clone `/home/jesse/src/openroot-integrate` or `/hom
 | C16 | Duct friction 0.1 W | DEMO | placeholder; replace with measured ΔP·V | N14 |
 | C17 | Charcoal-infused open-cell pours exist | DEMO | prototype pours; not a strength hang | N08 |
 | C18 | Mix 1 part gel : 2 parts cement holds interconnected voids past ordinary aircrete collapse | OPEN | needs pour series + C138 / C231 or C457 | N08 N13 |
-| C19 | Compressive strength 2,500–4,000 psi after 21-day wet cure | OPEN | ASTM C39 | N13 N08 |
 | C20 | AE-GFRC dry density ≤ 1,200 kg/m³ with ≥15 MPa and C1550 toughness | OPEN | H1; C39 + C1550 + C138 | N08 |
 | C21 | Open-cell porosity 65–80% interconnected | OPEN | C231 / C457 plus permeability | N08 |
 | C22 | Internal S/V 500–2,000 m²/m³ in the filled labyrinth | OPEN | geometry + image analysis on a core | N08 |
