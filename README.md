@@ -51,6 +51,50 @@ That is the whole argument. Everything else is organs, mix, and measurement.
 
 ---
 
+## 1.34 — joules parked vs sun-on-face vs grid vs PV
+
+Peak noon, **1 m² collector**, AM1.5. **MODEL**, not a pad hang. One hour = 3.6 MJ of incident sun on that face.
+
+Open-loop stack. Solar or RMH pays the chimney. Outdoor air and ground donate coolth. Heat used as heat. Cold used as cold. Shaft used as shaft. Electric only where electric is required.
+
+| Book | Power | Joules in 1 peak hour | What it is |
+| --- | --- | --- | --- |
+| Sun on this face | 1000 W | **3.60 MJ** | incident AM1.5 |
+| Hot Tank A (collector heat parked) | 931 W | **3.35 MJ** | sun that hit the face, stored as heat |
+| Coolth into ground / Tank B (35°C outdoor → 12.8°C ground class) | 413 W | **1.49 MJ** | weather + dirt, **not** extra sun |
+| **Parked heat + harvested coolth** | **1344 W** | **4.84 MJ** | **service ratio 1.34** vs sun-on-face |
+| Latent at 0.5 kg/h | 314 W | 1.13 MJ | exported in vapor unless condensed — do not add as a second tank pile |
+| Stirling + belt/alternator if you spend ΔT | \~60 W_e | 0.22 MJ electric | takes a slice of the hot book; do not add it on top of 3.35 MJ heat |
+
+**1.34 = (3.35 MJ heat + 1.49 MJ coolth) / 3.60 MJ sun-on-face.**
+Multi-reservoir harvest. Not 134% efficient sunlight. Not 220%. Grade: MEASURED only after H-003.
+
+### Same sun, same hour, other machines
+
+| Path | What you hold after 1 peak hour on 1 m² | vs 3.60 MJ on the face |
+| --- | --- | --- |
+| This node, grade-matched | 3.35 MJ heat + 1.49 MJ coolth | **1.34 service** |
+| Silicon PV module + inverter | 0.65–0.79 MJ electric (180–220 W) | 0.18–0.22 |
+| That PV burned as resistance heat | 0.65–0.79 MJ heat | 0.18–0.22 |
+| That PV into a heat pump COP 3–3.5 | 1.9–2.8 MJ heat **or** cold, not both from the same watt | 0.54–0.77 |
+| That PV into a motor at 85% | 0.55–0.67 MJ shaft | 0.15–0.19 |
+
+### Grid (different denominator — fuel, not this tile)
+
+Plant 33–40% of fuel → electric. Wires keep \~94%. Motor keeps \~80% of that.
+
+- Fuel → shaft at the house: **\~0.10–0.26** of the primary joules (old coal + cheap motor at the low end; better plant + good motor at the high end).
+- Fuel → resistance heat in the house: **\~0.30–0.38** of the primary joules.
+- Most household kWh are already heat. The tax is buying that heat as electrons.
+
+### Why the 1.34 matters
+
+PV is good at volts. Grid is good at shipping volts. Both force you to buy grade back. This node parks the sun as **heat** and mines the intake as **cold** on the same stack, with almost no conversion loss on those two streams. That is the consumer-side difference.
+
+Do not print 1.34 as thermodynamic efficiency (N14). Do not add latent 314 W into the 4.84 MJ pile. 2°C / 35°F air is a target, not this table. Steam / RMH boiler is a separate organ and a separate book.
+
+---
+
 ## AeroCement — Open-Cell Volumetric Material
 
 Opencell (AeroCement) is related to aircrete but does not collapse at critical foam mass.
