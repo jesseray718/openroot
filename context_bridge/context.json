@@ -63,7 +63,7 @@
     {
       "id": "L005",
       "timestamp": "2026-07-20T06:20:00-05:00",
-      "title": "E=mc\u00b2 bridge is computable from Landauer",
+      "title": "E=mc² bridge is computable from Landauer",
       "body": "f10_mass_equivalent(f7_landauer_cost(256)) = 8.189e-36 kg. Erasing 256 bits has measurable mass equivalent. Computation IS physical.",
       "category": "physics",
       "severity": "discovery"
@@ -118,14 +118,102 @@
     }
   ],
   "system_state": {
-    "status": "rebuilding",
-    "last_session": "2026-08-01",
+    "status": "shell_cleaned + solana_pending_key",
+    "last_session": "2026-07-22",
+    "une_repo": "/data/data/com.termux/files/home/une",
+    "une_commits": [
+      "fe64b0a",
+      "e9fbd87",
+      "cc5a50a",
+      "89a6cdc",
+      "8ed909d",
+      "6c8079e",
+      "052ff6c",
+      "568fe5c",
+      "80629d2",
+      "7466169",
+      "e79ab8c",
+      "81b35e0",
+      "8f3fe6d",
+      "ff37a60",
+      "c37d244"
+    ],
+    "une_commit_count": 15,
+    "bitcoin_anchors": {
+      "snapshot_1": {
+        "file": "merkle_root_20260720_052112.json.ots",
+        "calendar": "finney.calendar.eternitywall.com",
+        "tx": "c523f17a147317649fe21f8a4c00b918453c297eea2289f801df9f047d4011c1",
+        "status": "CONFIRMED"
+      },
+      "snapshot_2": {
+        "file": "merkle_root_20260720_053321.json.ots",
+        "calendar": "alice.btc.calendar.opentimestamps.org",
+        "tx": "bd9abda44d62e3d1ca7eaf05ddfd726bf9e01565335bcd7142323f13c38badfc",
+        "status": "CONFIRMED"
+      },
+      "snapshot_3": {
+        "file": "merkle_root_20260720_054822.json.ots",
+        "calendar": "alice.btc.calendar.opentimestamps.org",
+        "tx": "bd9abda44d62e3d1ca7eaf05ddfd726bf9e01565335bcd7142323f13c38badfc",
+        "status": "CONFIRMED"
+      }
+    },
+    "energy_measurements": {
+      "cpu_min_mhz": 650,
+      "cpu_max_mhz": 2000,
+      "eta_idle": 3.362,
+      "eta_boost": 1.098,
+      "landauer_256_bits_j": 7.36E-19,
+      "mass_256_bits_kg": 8.189E-36,
+      "kai_heartbeat_j": 0.26234
+    },
     "pending_tasks": [
-      "User restates compounding-cooperation equation and Jesus-translation axiom",
-      "Lock exact Micro-Node dimensions",
-      "Instrument first prototype",
-      "Wire ledger \u2192 ACRE",
-      "Rebuild clean context bridge from this delta + prior pieces"
+      "Install Solana CLI and send first memo anchor transaction",
+      "Wire real Kai heartbeat to arm_energy (replace placeholder)",
+      "Bring OptiPlex Debian node online for heavy jobs",
+      "Deploy UneMerkleAnchor.sol on Polygon for EVM anchoring",
+      "IPFS pin kai-settings.json via Pinata"
+    ],
+    "completed_tasks": [
+      "Built UNE core_atomic.py v1.2 with 11 functions (f1-f11)",
+      "Created arm_energy.py reading real CPU frequency scaling",
+      "Derived 5 testable postulates from 7 refined axioms",
+      "Injected postulates into Merkle audit trail (8+ entries)",
+      "Created stamp_snapshot.sh for immutable OTS submissions",
+      "All 3 Bitcoin OTS snapshots CONFIRMED (finney + alice calendars)",
+      "Implemented E=mc² bridge: f10_mass_equivalent + f11_landauer_mass",
+      "Built kai_measure.py for heartbeat joule instrumentation",
+      "Fixed structure enforcer self-match (SELF_FILES skip + non-blocking)",
+      "Recovered 4.6GB by removing orphaned home .git directory",
+      "Fixed context.json JSON parse error (backslash-tilde escape)",
+      "Wired auto_score into Termux:Boot (30-auto-score)",
+      "Created context_bridge.sh immortal context manager",
+      "Built sensor logger with A-M state labels",
+      "Built jq sensor-monitor + auto_score condition to possibility loop",
+      "Added permaculture joule scorer"
+    ],
+    "known_issues": [
+      "termux-clipboard-set unreliable on Android 10+",
+      "/tmp does not exist in Termux — use $PREFIX/tmp",
+      "Symlinks from Termux home to /sdcard may fail on FUSE",
+      "Never use tilde (~) in commands for this user",
+      "Android kills Lumo on window switch due to RAM pressure",
+      "ots verify requires local Bitcoin node — use mempool.space API instead",
+      "Solana CLI not yet installed on Termux",
+      "kai_measure.py uses sleep(0.1) placeholder, not real inference"
+    ],
+    "success_patterns": [
+      "File-based workflow replaces unreliable clipboard",
+      "heredoc with quoted EOF prevents variable expansion",
+      "Single JSON file compounds all context",
+      "Absolute paths only (no ~)",
+      "Short wake-lock only around Termux:API calls",
+      "A-M labeled states make condition to possibility deterministic",
+      "eta = useful_joules / human_joules is the only performance language",
+      "SELF_FILES set prevents enforcer self-matching",
+      "Stamp immutable copies before OTS submission, never stamp live files",
+      "Lesson numbering preserves institutional knowledge across sessions"
     ]
   },
   "ai_memory": {
@@ -138,7 +226,7 @@
       "Sensor pipeline + conditions layer is the working observe-interact-measure-regulate loop",
       "UNE is the active repo for computational_flow and GOVERNOR wiring",
       "Lower CPU frequency achieves higher eta (3.362 at 650MHz vs 1.098 at 2000MHz)",
-      "Computation has measurable mass via Landauer + E=mc\u00b2",
+      "Computation has measurable mass via Landauer + E=mc²",
       "Bitcoin OTS confirmation takes 60-90 minutes for 6 blocks"
     ]
   },
@@ -160,74 +248,6 @@
       "artifacts_created": [],
       "questions_asked": [],
       "decisions_made": []
-    },
-    {
-      "ts": "2026-08-01T16:54:44-05:00",
-      "type": "rebuild_absorb",
-      "content": {
-        "ts": "2026-08-01T16:54:44-05:00",
-        "session": "2026-07-23 full cascade + ledger + swarm + UNE",
-        "status": "context_bridge_rebuilding",
-        "locked": [
-          "\u03c6-vortex chimney is master air-flow driver (H/D=\u03c6\u00b2, dc=D/\u03c6\u00b2)",
-          "Micro-Node sizes defined and modular",
-          "Black Locust RMH as parallel valved draft source",
-          "Discrete Stirling charges (5-8%) + flywheel + belt + alternator",
-          "Zero-energy cooling path fully specified",
-          "SQLite thermodynamic ledger (measured joules only)",
-          "\u03b7 = useful_joules / human_joules",
-          "ACRE mints only from ledger",
-          "Fractal swarm n_max = floor(ln R / ln p)",
-          "Landauer / Szil\u00e1rd / Bennett information-thermodynamic limits acknowledged",
-          "UNE 3-letter primitive concept + cooperation axiom still to be restated by user"
-        ],
-        "pending": [
-          "User restates compounding-cooperation equation and Jesus-translation axiom",
-          "Lock exact Micro-Node dimensions",
-          "Instrument first prototype",
-          "Wire ledger \u2192 ACRE",
-          "Rebuild clean context bridge from this delta + prior pieces"
-        ],
-        "paths": {
-          "bridge": "/data/data/com.termux/files/home/openroot/context_bridge/context.json",
-          "ledger": "/data/data/com.termux/files/home/openroot/ledger/thermo.db",
-          "state_py": "/data/data/com.termux/files/home/openroot/context_bridge/openroot_state.py"
-        }
-      }
-    },
-    {
-      "ts": "2026-08-01T17:00:17-05:00",
-      "type": "rebuild_absorb",
-      "content": {
-        "ts": "2026-08-01T17:00:17-05:00",
-        "session": "2026-07-23 full cascade + ledger + swarm + UNE",
-        "status": "context_bridge_rebuilding",
-        "locked": [
-          "\u03c6-vortex chimney is master air-flow driver (H/D=\u03c6\u00b2, dc=D/\u03c6\u00b2)",
-          "Micro-Node sizes defined and modular",
-          "Black Locust RMH as parallel valved draft source",
-          "Discrete Stirling charges (5-8%) + flywheel + belt + alternator",
-          "Zero-energy cooling path fully specified",
-          "SQLite thermodynamic ledger (measured joules only)",
-          "\u03b7 = useful_joules / human_joules",
-          "ACRE mints only from ledger",
-          "Fractal swarm n_max = floor(ln R / ln p)",
-          "Landauer / Szil\u00e1rd / Bennett information-thermodynamic limits acknowledged",
-          "UNE 3-letter primitive concept + cooperation axiom still to be restated by user"
-        ],
-        "pending": [
-          "User restates compounding-cooperation equation and Jesus-translation axiom",
-          "Lock exact Micro-Node dimensions",
-          "Instrument first prototype",
-          "Wire ledger \u2192 ACRE",
-          "Rebuild clean context bridge from this delta + prior pieces"
-        ],
-        "paths": {
-          "bridge": "/data/data/com.termux/files/home/openroot/context_bridge/context.json",
-          "ledger": "/data/data/com.termux/files/home/openroot/ledger/thermo.db",
-          "state_py": "/data/data/com.termux/files/home/openroot/context_bridge/openroot_state.py"
-        }
-      }
     }
   ]
 }

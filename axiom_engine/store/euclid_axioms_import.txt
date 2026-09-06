@@ -1,0 +1,10 @@
+{"category":"construction","id":"AX-EUCLID-POST1","keys":["draw","straight_line"],"kind":"axiom","premises":[],"proof":[],"statement":"To draw a straight line from any point to any point."}
+{"category":"construction","id":"AX-EUCLID-POST2","keys":["extend","continuity"],"kind":"axiom","premises":[],"proof":[],"statement":"To produce a finite straight line continuously in a straight line."}
+{"category":"construction","id":"AX-EUCLID-POST3","keys":["circle","center","distance"],"kind":"axiom","premises":[],"proof":[],"statement":"To describe a circle with any center and distance."}
+{"category":"equality","id":"AX-EUCLID-POST4","keys":["right_angle","equality"],"kind":"axiom","premises":[],"proof":[],"statement":"That all right angles are equal to one another."}
+{"category":"parallel","id":"AX-EUCLID-POST5","keys":["parallel_postulate","convergence"],"kind":"axiom","premises":[],"proof":[],"statement":"If a straight line falling on two straight lines makes the interior angles on the same side less than two right angles, the two straight lines, if produced indefinitely, meet on that side."}
+{"category":"equality","id":"AX-EUCLID-CN1","keys":["transitive","equality"],"kind":"axiom","premises":[],"proof":[],"statement":"Things which are equal to the same thing are also equal to one another."}
+{"category":"equality","id":"AX-EUCLID-CN2","keys":["addition","wholes"],"kind":"axiom","premises":[],"proof":[],"statement":"If equals be added to equals, the wholes are equal."}
+{"category":"equality","id":"AX-EUCLID-CN3","keys":["subtraction","remainders"],"kind":"axiom","premises":[],"proof":[],"statement":"If equals be subtracted from equals, the remainders are equal."}
+{"category":"equality","id":"AX-EUCLID-CN4","keys":["coincidence","superposition"],"kind":"axiom","premises":[],"proof":[],"statement":"Things which coincide with one another are equal to one another."}
+{"category":"magnitude","id":"AX-EUCLID-CN5","keys":["whole","part","magnitude"],"kind":"axiom","premises":[],"proof":[],"statement":"The whole is greater than the part."}

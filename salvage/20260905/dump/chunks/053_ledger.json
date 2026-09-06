@@ -1,0 +1,7 @@
+{
+  "chunk_id": "053_ledger",
+  "ts": "2026-07-26T14:14:40",
+  "source": "/sdcard/openroot/context_bridge/thermo_ledger.jsonl",
+  "content": "{\"type\": \"GENESIS\", \"version\": \"thermo_ledger_v1\", \"born\": \"2026-07-26T13:24:52-0500\", \"node\": \"GOVERNOR-01\", \"location\": \"Saxton, MO\", \"foundation\": {\"micro_node_aperture_m2\": 12.0, \"chimney_m\": 16.5, \"daily_baseline_kWh\": 25.55, \"phi\": 1.618034, \"system_eta\": 0.55}, \"immortal_hash_at_genesis\": \"c2a5c04da4cf374d\", \"rule\": \"Only measured joules may be written after this block. No estimates.\", \"block_hash\": \"9e4a8bdaee1b0c86\"}\n{\"ts\": \"2026-07-26T13:26:32-0500\", \"type\": \"measurement\", \"note\": \"first cascade \\u0394T = 18.4 K, flow ok\", \"joules\": 184000.0, \"kWh\": 0.051111}\n{\"ts\": \"2026-07-26T13:26:32-0500\", \"type\": \"note\", \"note\": \"sensors placed on stage 1\"}\n",
+  "priority": "ledger"
+}

@@ -1,0 +1,100 @@
+ENDSCRIPT
+
+chmod +x /data/data/com.termux/files/home/une/computational_flow/tier4_github_scan.py
+echo "✅ Script rewritten and ready."
+cat > /data/data/com.termux/files/home/une/computational_flow/tier4_github_scan.py << 'ENDSCRIPT'
+#!/usr/bin/env python3
+import os, sys, json, time, subprocess
+from datetime import datetime
+
+USER = "jesseray718"
+REPOS = ["une", "openroot", "aerocement"]
+TEMP = "/sdcard/openroot/github_clone_temp"
+CORPUS = "/data/data/com.termux/files/home/une/wisdom/wisdom_corpus.json"
+LOG = "/sdcard/openroot/session_seeds/tier4_scan_log.jsonl"
+MODEL = "qwen2.5:1.5b"
+
+def freq():
+    try:
+        with open("/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq") as f:
+            return int(f.read().strip())/1000.0
+    except: return 0
+
+def energy(sec, f): return 0.5 * ((f/650)**1.5) * sec
+
+def clone():
+    print(">>> Cloning repos...")
+    os.makedirs(TEMP, exist_ok=True)
+    for r in REPOS:
+        p = os.path.join(TEMP, r)
+        if os.path.exists(p):
+            subprocess.run(["git", "-C", p, "pull"], check=True, capture_output=True)
+        else:
+            subprocess.run(["git", "clone", f"https://github.com/{USER}/{r}.git", p], check=True, capture_output=True)
+    print(">>> Done.")
+
+def chunks(fp, lim=2048):
+    try:
+        txt = open(fp, errors='ignore').read()
+        if len(txt)//4 <= lim: return [txt]
+        lines = txt.split('\n')
+        out, cur, ln = [], [], 0
+        for l in lines:
+            if ln + len(l)//4 > lim:
+                out.append('\n'.join(cur)); cur, ln = [l], len(l)//4
+            else: cur.append(l); ln += len(l)//4
+        if cur: out.append('\n'.join(cur))
+        return out
+    except: return ["Err"]
+
+def bot(chunk, fp):
+    prm = f"Analyze {fp}:\n{chunk[:2500]}...\nJSON: {{'p':[],'a':[],'s':'','l':''}}"
+    try:
+        r = subprocess.run(["ollama", "run", MODEL, prm], capture_output=True, text=True, timeout=120)
+        out = r.stdout.replace("```json","").replace("```","").strip()
+        try: d = json.loads(out)
+        except: d = {"raw": out}
+    except Exception as e: d = {"err": str(e)}
+    return {"f": fp, "res": d}
+
+def main():
+    print("="*50); print("TIER 4 SCAN"); print("="*50)
+    clone()
+    tot_tok, res = 0, []
+    for r in REPOS:
+        rp = os.path.join(TEMP, r)
+        if not os.path.exists(rp): continue
+        print(f">>> Scanning {r}...")
+        for root, _, files in os.walk(rp):
+            if '.git' in root: continue
+            for f in files:
+                if f.endswith(('.py','.sh','.md','.json','.txt')):
+                    fp = os.path.join(root, f)
+                    for c in chunks(fp):
+                        tot_tok += len(c)//4
+                        res.append(bot(c, fp))
+                        if len(res)%5==0: print(f"   Processed {len(res)} chunks...")
+    
+    # Update corpus
+    lessons = [x["res"].get("l") for x in res if isinstance(x.get("res"),dict) and x["res"].get("l")]
+    if lessons:
+        try:
+            with open(CORPUS) as f: data = json.load(f)
+        except: data = {"entries":[]}
+        if "entries" not in data: data["entries"] = []
+        data["entries"].append({"ts": datetime.utcnow().isoformat()+"Z", "src": "scan", "lessons": lessons})
+        with open(CORPUS, 'w') as f: json.dump(data, f, indent=2)
+        print(f"Added {len(lessons)} lessons to corpus.")
+    
+    print("="*50)
+    print(f"FILES: {len(res)} | TOKENS: {tot_tok:,}")
+    print("Scan complete.")
+
+if __name__ == "__main__": main()
+ENDSCRIPT
+
+chmod +x /data/data/com.termux/files/home/une/computational_flow/tier4_github_scan.py
+echo "✅ Script rewritten and ready."
+python3 /data/data/com.termux/files/home/une/computational_flow/tier4_github_scan.py
+# In a second tab, prevent Android from killing it
+termux-wake-lock

@@ -1,0 +1,7 @@
+{
+  "chunk_id": "001_foundation_root",
+  "ts": "2026-07-26T13:04:41",
+  "source": "FOUNDATION_ROOT.md",
+  "content": "# Foundation Root Declaration\n\nThe single source of truth for UNE foundation is:\n\n$UNE_ROOT  (= /data/data/com.termux/files/home/une)\n\n- computational_flow/\n- foundation/\n- wisdom/\n- core_atomic.py\n- absorbers, swarm, hierarchical_controller, agape_*, fractal_*\n\nThe nested openroot/une/ is a stub only. Do not use it.\nAll foundation work happens in $UNE_ROOT.\nOpenRoot modules grow from this root.\n",
+  "priority": "foundation"
+}
