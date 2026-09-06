@@ -1,0 +1,15 @@
+[Unit]
+Description=llama.cpp server (OptiPlex heavy spoke)
+After=network.target
+
+[Service]
+Type=simple
+User=jesse
+ExecStart=/usr/local/bin/llama-server -m /opt/models/coder-1.5b-q4.gguf -c 8192 -ngl 0 -t 4 --host 0.0.0.0 --port 8080 --parallel 1 --alias coder-1.5b
+Restart=always
+RestartSec=3
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

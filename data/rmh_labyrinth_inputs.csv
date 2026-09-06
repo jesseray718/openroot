@@ -1,0 +1,4 @@
+trial_id,timestamp_utc,elapsed_monotonic_s,mode,T_in_C,RH_in_pct,T_out_C,RH_out_pct,airflow_m3_s,fan_power_W,pump_power_W,water_use_L_h,T_hot_store_C,T_cold_store_C,heat_demand_J,cool_demand_J,dhw_demand_J,fuel_mass_kg,LHV_MJ_per_kg,irradiance_W_m2,collector_area_m2,confidence,evidence_reference,notes
+A1,2026-08-25T20:00:00Z,0,cooling,38,20,24,70,0.40,85,30,2.0,,,,70000000,25000000,,,,measured,trial.A1.sample,start
+A1,2026-08-25T20:01:00Z,60,cooling,37.5,22,24.2,69,0.40,84,30,2.1,,,,70000000,25000000,,,,measured,trial.A1.sample,steady
+A1,2026-08-25T20:02:00Z,120,cooling,37.0,24,24.4,68,0.40,84,29,2.0,,,,70000000,25000000,,,,measured,trial.A1.sample,steady

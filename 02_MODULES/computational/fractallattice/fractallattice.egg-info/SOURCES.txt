@@ -1,0 +1,9 @@
+README.md
+setup.py
+fractallattice/__init__.py
+fractallattice/core.py
+fractallattice.egg-info/PKG-INFO
+fractallattice.egg-info/SOURCES.txt
+fractallattice.egg-info/dependency_links.txt
+fractallattice.egg-info/requires.txt
+fractallattice.egg-info/top_level.txt

@@ -1,15 +1,14 @@
-# What We Are Building (Plain Language)
+# OpenRoot — Human Door
 
-We are building floating structures and tiny flying mesh nodes that can work together without a central boss.
+This is the simple entrance.
 
-Think of it like this:
+We are building light, strong floating structures and small flying mesh nodes that work together without a central boss.
 
-- A very light, strong ball made of strings and rods (tensegrity) that can float in the air when the air inside is a little warmer than outside.
-- Twelve small flying nodes arranged like the points of a soccer-ball shape. They talk to each other and form a mesh network in the sky.
-- Everything is designed so that the useful work done is greater than the human effort put in (we call that η).
+The goal is simple:
+Do more useful work for the people who have the least, with the least possible human effort.
 
-This is not science fiction for billionaires.  
-It is open tools for regular people who want better shelter, better energy, and better ways to connect.
+You do not need to know code, physics, or GitHub.
+You only need to care.
 
-You do not need to understand code or physics to help.  
-You only need to care about making something good for the people who have the least.
+If you want to understand what this is in plain language, start here.
+If you want to put your own heart into the work, use the Human Seed Builder.

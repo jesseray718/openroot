@@ -1,0 +1,34 @@
+#!/bin/bash
+# fix-chain: Repair broken hash links in ACRE ledger
+LEDGER="${1:-acre/LEDGER.jsonl}"
+[[ ! -f "$LEDGER" ]] && { echo "Not found: $LEDGER"; exit 1; }
+
+BACKUP="${LEDGER}.bak.$(date +%s)"
+cp "$LEDGER" "$BACKUP"
+echo "Backup: $BACKUP"
+
+TMP=$(mktemp)
+PREV_HASH=""
+LINE_NUM=0
+
+while IFS= read -r line; do
+  [[ -z "$line" ]] && continue
+  ((LINE_NUM++))
+
+  if ((LINE_NUM == 1)); then
+    # Genesis entry — no previous
+    FIXED=$(echo "$line" | jq -c '.previous_hash = ""')
+  else
+    # Chain to previous line's hash
+    FIXED=$(echo "$line" | jq -c --arg h "$PREV_HASH" '.previous_hash = $h')
+  fi
+
+  echo "$FIXED" >> "$TMP"
+  PREV_HASH=$(echo -n "$FIXED" | sha256sum | awk '{print $1}')
+
+done < "$LEDGER"
+
+mv "$TMP" "$LEDGER"
+echo "Fixed $LINE_NUM entries"
+echo "Verifying..."
+verify-chain "$LEDGER"

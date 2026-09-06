@@ -1,33 +1,35 @@
 #!/usr/bin/env python3
 """
-Queryable Offline Agent
-Tries local LLM first, then falls back to offline knowledge synthesis.
+Queryable Offline Agent — OpenRoot
+Tries local LLM first, then falls back to pure offline knowledge synthesis.
 Zero external dependencies for the fallback path.
-Agape source code • Lowest node first
+Agape source code · Lowest node first · η-aware
 """
 
-import os, sys, json, re, urllib.request
+import os, sys, json, re
 from pathlib import Path
 
 ROOT = Path("/data/data/com.termux/files/home/openroot")
 LOCAL_LLM = os.environ.get("LOCAL_LLM_URL", "http://127.0.0.1:8080")
+RANK_FILE = ROOT / "context_bridge" / "offline_rank.json"
 
 SOUL = """Do the most good for the most nodes per unit of human effort.
 Agape is source code: benefit measured only at the recipient.
 Lowest node first. Unnecessary suffering is the primary error signal.
-Knowledge and tools remain open and dependency-free."""
+Knowledge and tools remain open and dependency-free.
+Prefer measured joules and physical circuit closure over pure virtual loops."""
 
 def call_local_llm(prompt: str) -> str | None:
-    """Try local OpenAI-compatible endpoint. Return None on failure."""
     try:
+        import urllib.request
         data = json.dumps({
             "model": "local",
             "messages": [
                 {"role": "system", "content": SOUL},
                 {"role": "user", "content": prompt}
             ],
-            "max_tokens": 1024,
-            "temperature": 0.3
+            "max_tokens": 1200,
+            "temperature": 0.25
         }).encode()
         req = urllib.request.Request(
             f"{LOCAL_LLM}/v1/chat/completions",
@@ -35,97 +37,107 @@ def call_local_llm(prompt: str) -> str | None:
             headers={"Content-Type": "application/json"},
             method="POST"
         )
-        with urllib.request.urlopen(req, timeout=45) as resp:
+        with urllib.request.urlopen(req, timeout=50) as resp:
             return json.loads(resp.read())["choices"][0]["message"]["content"]
     except Exception:
         return None
 
-def load_knowledge(limit=12):
-    """Pull the highest-signal local files for offline synthesis."""
-    candidates = [
-        ROOT / "BRIDGE.md",
-        ROOT / "case-study" / "docs" / "SYSTEM-WIRING.md",
-        ROOT / "case-study" / "docs" / "AGAPE-CORRECTIVE.md",
-        ROOT / "case-study" / "docs" / "REDIRECTION-OS.md",
-        ROOT / "case-study" / "docs" / "FLOOR-RISING-SIMULATION.md",
-        ROOT / "docs" / "axioms" / "COMPOUNDING-COOPERATION.md",
-        ROOT / "THESIS.md",
-        ROOT / "nanobot_team_blueprint.md",
+def load_ranked_knowledge(limit: int = 14) -> list[tuple[str, str]]:
+    """Return list of (path, text) from offline rank or fallback core files."""
+    knowledge = []
+
+    # Prefer ranked results if they exist
+    if RANK_FILE.exists():
+        try:
+            ranked = json.loads(RANK_FILE.read_text())[:limit]
+            for item in ranked:
+                p = ROOT / item["path"]
+                if p.exists() and p.suffix.lower() in {".md", ".py", ".sh", ".txt", ".json"}:
+                    try:
+                        text = p.read_text(encoding="utf-8", errors="ignore")[:12000]
+                        knowledge.append((item["path"], text))
+                    except Exception:
+                        pass
+        except Exception:
+            pass
+
+    # Always include these high-signal cores if not already present
+    core = [
+        "BRIDGE.md",
+        "START-HERE.md",
+        "FOUNDATION.md",
+        "nanobot_team_blueprint.md",
+        "projects/cloud9/README.md",
+        "seed-core/README.md",
     ]
-    chunks = []
-    for p in candidates:
-        if p.exists():
-            try:
-                text = p.read_text(encoding="utf-8", errors="ignore")[:3000]
-                chunks.append(f"### {p.name}\n{text}")
-            except Exception:
-                pass
-    return "\n\n".join(chunks[:limit])
+    existing = {k[0] for k in knowledge}
+    for rel in core:
+        if rel not in existing:
+            p = ROOT / rel
+            if p.exists():
+                try:
+                    knowledge.append((rel, p.read_text(encoding="utf-8", errors="ignore")[:8000]))
+                except Exception:
+                    pass
 
-def offline_synthesize(question: str) -> str:
-    """Pure offline answer from local knowledge + Agape framing."""
-    knowledge = load_knowledge()
-    # Very simple keyword-guided extraction
-    q = question.lower()
-    relevant = []
-    for block in knowledge.split("### "):
-        if any(w in block.lower() for w in re.findall(r"\w+", q) if len(w) > 3):
-            relevant.append(block[:800])
-    body = "\n---\n".join(relevant[:4]) if relevant else knowledge[:2000]
+    return knowledge
 
-    return f"""[OFFLINE SYNTHESIS — no local LLM detected]
+def offline_synthesize(query: str, knowledge: list[tuple[str, str]]) -> str:
+    """Very lightweight offline synthesis — no model required."""
+    q_lower = query.lower()
+    hits = []
 
-Question: {question}
+    for path, text in knowledge:
+        score = 0
+        for word in re.findall(r"[a-z0-9]{3,}", q_lower):
+            if word in text.lower():
+                score += 1
+        if score > 0:
+            # take the most relevant paragraphs
+            paras = [p.strip() for p in text.split("\n\n") if p.strip()]
+            best = sorted(paras, key=lambda p: sum(1 for w in q_lower.split() if w in p.lower()), reverse=True)[:2]
+            hits.append((score, path, "\n\n".join(best)))
 
-Agape framing: benefit is measured only at the recipient. Lowest node first.
+    hits.sort(reverse=True)
 
-Relevant local knowledge:
-{body}
+    if not hits:
+        return (
+            "No strong offline match found.\n"
+            "Try running: python3 bin/offline_rank.py\n"
+            "Then ask again, or start a local LLM and set LOCAL_LLM_URL."
+        )
 
----
-Next action suggestions:
-- If this is about capital → check leveling-cooperative or business-leveling ledgers
-- If this is about knowledge rank → run: python3 bin/offline_rank.py
-- If this is about system state → cat BRIDGE.md
-- For real generative depth, start a local model and set LOCAL_LLM_URL
-"""
-
-def answer(question: str) -> str:
-    print("Trying local LLM...", file=sys.stderr)
-    result = call_local_llm(question)
-    if result:
-        return f"[LOCAL LLM]\n{result}"
-    print("Local LLM unavailable — using offline knowledge synthesis.", file=sys.stderr)
-    return offline_synthesize(question)
+    out = [f"Offline synthesis for: {query}\n"]
+    out.append("Sources (ranked by keyword overlap):\n")
+    for score, path, snippet in hits[:6]:
+        out.append(f"── {path} (score {score}) ──")
+        out.append(snippet[:900])
+        out.append("")
+    out.append("— end offline synthesis —")
+    return "\n".join(out)
 
 def main():
-    print("=" * 56)
-    print("Queryable Offline Agent")
-    print("Local LLM first → offline knowledge fallback")
-    print("=" * 56)
-    print(SOUL)
-    print()
+    if len(sys.argv) < 2:
+        print("Usage: python3 bin/query_agent.py \"your question\"")
+        print("Optional: LOCAL_LLM_URL=http://127.0.0.1:8080 python3 bin/query_agent.py \"...\"")
+        sys.exit(1)
 
-    if len(sys.argv) > 1:
-        q = " ".join(sys.argv[1:])
-        print(answer(q))
+    query = " ".join(sys.argv[1:])
+    print(f"Query: {query}\n")
+
+    # 1. Try local LLM
+    print("Trying local LLM...")
+    answer = call_local_llm(query)
+    if answer:
+        print("── Local LLM response ──")
+        print(answer)
         return
 
-    print("Type a question and press Enter. Type 'quit' to exit.\n")
-    while True:
-        try:
-            q = input("query> ").strip()
-        except (EOFError, KeyboardInterrupt):
-            print("\nYield obtained.")
-            break
-        if not q:
-            continue
-        if q.lower() in ("quit", "exit", "q"):
-            print("Yield obtained.")
-            break
-        print()
-        print(answer(q))
-        print()
+    # 2. Offline fallback
+    print("Local LLM unavailable → offline synthesis\n")
+    knowledge = load_ranked_knowledge()
+    print(f"Loaded {len(knowledge)} knowledge nodes")
+    print(offline_synthesize(query, knowledge))
 
 if __name__ == "__main__":
     main()

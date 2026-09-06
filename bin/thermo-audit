@@ -1,0 +1,53 @@
+#!/bin/bash
+# thermo-audit: Unified thermodynamic efficiency for ALL ACRE entries
+LEDGER="${1:-acre/LEDGER.jsonl}"
+[[ ! -f "$LEDGER" ]] && { echo "No ledger"; exit 1; }
+
+BOLTZMANN=1.380649e-23
+ROOM_TEMP=298
+LANDAUER_J=$(awk "BEGIN{printf \"%.6e\", $BOLTZMANN * $ROOM_TEMP * 0.6931471805599453}")
+
+# Thermal Carnot constants (h003 rocket mass heater)
+T_HOT=873   # ~600°C combustion
+T_COLD=298  # ~25°C ambient
+CARNOT_MAX=$(awk "BEGIN{printf \"%.4f\", 1.0 - ($T_COLD / $T_HOT)}")
+
+echo "=== THERMODYNAMIC AUDIT ==="
+echo "Landauer floor: ${LANDAUER_J} J/bit at ${ROOM_TEMP}K"
+echo "Carnot max (thermal): ${CARNOT_MAX} (T_hot=${T_HOT}K, T_cold=${T_COLD}K)"
+echo "---"
+
+jq -s -r '
+  .[] |
+  {
+    entry_id: .entry_id,
+    work_type: .work_type,
+    energy_j: .energy_joules,
+    acre: .acre_minted,
+    bits: (.bits_processed // 0),
+    landauer_floor: (.landauer_floor_j // 0),
+    efficiency: (.landauer_efficiency // 0),
+    recovery: (.reversible_recovery_potential // 0),
+    joules_per_bit: (.joules_per_bit // 0),
+    source: .source
+  } |
+  "\(.entry_id) | \(.work_type) | \(.energy_j) J | \(.acre) ACRE | bits=\(.bits) | eff=\(.efficiency) | recover=\(.recovery) | j/bit=\(.joules_per_bit)"
+' "$LEDGER"
+
+echo "---"
+echo "Computing unified metrics..."
+
+# Compute summary stats
+jq -s -r '
+  {
+    total_energy: ([.[].energy_joules] | add),
+    total_acre: ([.[].acre_minted] | add),
+    total_bits: ([.[] | .bits_processed // 0] | add),
+    total_landauer_floor: ([.[] | .landauer_floor_j // 0] | add),
+    entries: length,
+    thermal_entries: ([.[] | select(.work_type | contains("thermal"))] | length),
+    compute_entries: ([.[] | select(.work_type | contains("computation"))] | length),
+    avg_recovery: (([.[] | .reversible_recovery_potential // 0] | add) / length)
+  } |
+  "Total energy: \(.total_energy) J\nTotal ACRE: \(.total_acre)\nTotal bits: \(.total_bits)\nLandauer floor sum: \(.total_landauer_floor) J\nEntries: \(.entries) (thermal=\(.thermal_entries), compute=\(.compute_entries))\nAvg recovery potential: \(.avg_recovery)"
+' "$LEDGER"

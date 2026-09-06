@@ -1,29 +1,23 @@
+# Large/unnecessary files
+github_clone_temp/
+absorbed/
+*.ots
+*.jsonl
+dossier.json
+dossier_light.json
+dossier_report.html
+dossier_charts.html
+dossier_visualizations.json
+UNIFIED_REPORT.html
 __pycache__/
 *.pyc
-*.pyo
-.cache/
-*.egg-info/
-dist/zenodo-manual/
-README.md.backup*
-<<<<<<< HEAD
-=======
-
-# OpenRoot session & sensitive files
-session_seeds/
-**/current_seed.json
-**/*_seed.json
-*.key
-*.pem
-*.p12
-private/
-.secrets/
+context_bridge/deepdive_report.json
+cloud_backup/
 *.log
-h003_ledger.log
-ledger.jsonl
-context_bridge.jsonl
-*.sqlite
-*.db
-__pycache__/
-*.pyc
-.DS_Store
->>>>>>> 0558fa774bf318ee41800a7b6361ce6e5f35b6a5
+*.tmp
+*.swp
+scripts/*.bak.*
+.ots/*.txt
+sync-from-kai/models/*.gguf
+acre/ledger.jsonl
+*.bak.*
