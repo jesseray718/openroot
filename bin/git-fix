@@ -1,0 +1,36 @@
+#!/data/data/com.termux/files/usr/bin/bash
+# git-fix: auto-diagnose and repair common git issues
+cd "${GIT_DIR:-$PWD}"
+BRANCH=$(git branch --show-current 2>/dev/null)
+REMOTE=$(git remote get-url origin 2>/dev/null)
+
+echo "🔍 Branch: $BRANCH | Remote: $REMOTE"
+
+# Fix 1: Unpushed commits with no upstream
+if git rev-parse @{u} 2>/dev/null; then
+  echo "✅ Upstream set"
+else
+  echo "🔧 Setting upstream..."
+  git push --set-upstream origin "$BRANCH" 2>&1
+fi
+
+# Fix 2: Divergent branches (merge strategy)
+AHEAD=$(git rev-list --count @{u}..HEAD 2>/dev/null || echo 0)
+BEHIND=$(git rev-list --count HEAD..@{u} 2>/dev/null || echo 0)
+if [ "$AHEAD" -gt 0 ] && [ "$BEHIND" -gt 0 ]; then
+  echo "🔧 Diverged: $AHEAD ahead, $BEHIND behind — merging"
+  git pull --no-rebase origin "$BRANCH" 2>&1
+  git push origin "$BRANCH" 2>&1
+elif [ "$AHEAD" -gt 0 ]; then
+  echo "🔧 Pushing $AHEAD commits..."
+  git push origin "$BRANCH" 2>&1
+elif [ "$BEHIND" -gt 0 ]; then
+  echo "🔧 Pulling $BEHIND commits..."
+  git pull --no-rebase origin "$BRANCH" 2>&1
+else
+  echo "✅ In sync"
+fi
+
+# Fix 3: Report status
+git status -s 2>/dev/null | head -10
+echo "✅ git-fix complete"

@@ -1,2 +1,0 @@
-#!/usr/bin/env bash
-exec "$HOME/openroot/tools/agape-ipfs" status

@@ -1,4 +1,0 @@
-timestamp_utc,dt_s,ambient_C,source_solar_W,source_fuel_W,source_electric_W,source_human_W,source_pumping_W,source_controls_W,source_maintenance_W,eta_capture,eta_transfer,store_mass_kg,store_cp_J_per_kgK,store_T_min_C,store_T_max_C,store_T_C,U_W_per_m2K,A_m2,load_high_temp_W,load_dhw_W,load_drying_W,load_space_heat_W,load_low_temp_W,Tmin_high_temp_C,Tmin_dhw_C,Tmin_drying_C,Tmin_space_heat_C,Tmin_low_temp_C,reliability_R,confidence,evidence_reference
-2026-08-26T00:00:00Z,60,30,6000,0,80,0,30,10,0,0.62,0.88,4000,880,35,85,62,0.45,22,800,500,350,900,300,75,55,45,35,25,0.95,modeled,seed.row.1
-2026-08-26T00:01:00Z,60,30,6200,0,80,0,30,10,0,0.62,0.88,4000,880,35,85,62,0.45,22,800,500,350,900,300,75,55,45,35,25,0.95,modeled,seed.row.2
-2026-08-26T00:02:00Z,60,29.8,6100,0,80,0,30,10,0,0.62,0.88,4000,880,35,85,62,0.45,22,800,500,350,900,300,75,55,45,35,25,0.95,modeled,seed.row.3

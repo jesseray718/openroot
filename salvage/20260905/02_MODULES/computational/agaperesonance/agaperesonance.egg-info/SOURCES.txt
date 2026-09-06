@@ -1,8 +1,0 @@
-README.md
-setup.py
-agaperesonance/__init__.py
-agaperesonance/core.py
-agaperesonance.egg-info/PKG-INFO
-agaperesonance.egg-info/SOURCES.txt
-agaperesonance.egg-info/dependency_links.txt
-agaperesonance.egg-info/top_level.txt

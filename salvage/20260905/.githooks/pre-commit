@@ -1,5 +1,0 @@
-#!/data/data/com.termux/files/usr/bin/bash
-# Simple structure + joule-language enforcer
-if git diff --cached --name-only | grep -qE '\.(py|sh|md)$'; then
-  echo "[hook] checking staged files..."
-fi

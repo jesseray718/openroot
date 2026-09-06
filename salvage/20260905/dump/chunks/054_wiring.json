@@ -1,7 +1,0 @@
-{
-  "chunk_id": "054_wiring",
-  "ts": "2026-07-26T14:14:40",
-  "source": "/data/data/com.termux/files/home/openroot/context_bridge/ledger_wiring.json",
-  "content": "{\n  \"name\": \"measured_joules_to_ACRE_wiring\",\n  \"version\": \"1.0\",\n  \"flow\": [\n    \"sensor (\u0394T, flow, pressure, shaft)\",\n    \"\u2192 local measurement script\",\n    \"\u2192 append to /sdcard/openroot/context_bridge/thermo_ledger.jsonl\",\n    \"\u2192 hive reads ledger\",\n    \"\u2192 ACRE mint claim (only on verified physical work)\"\n  ],\n  \"ledger_path\": \"/sdcard/openroot/context_bridge/thermo_ledger.jsonl\",\n  \"sync_targets\": [\n    \"$OPENROOT_ROOT/context_bridge/thermo_ledger.jsonl\",\n    \"/sdcard/openroot/context_bridge/thermo_ledger.jsonl\"\n  ],\n  \"append_only\": true,\n  \"copy_command\": \"cp /sdcard/openroot/context_bridge/thermo_ledger.jsonl $OPENROOT_ROOT/context_bridge/\",\n  \"status\": \"live\"\n}\n",
-  "priority": "wiring"
-}

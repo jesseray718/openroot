@@ -1,9 +1,0 @@
-OPENROOT DOCUMENT INVENTORY
-Generated: Mon Aug 31 07:24:23 PM CDT 2026
-
-FILE                                                          SIZE bytes
-------------------------------------------------------- ----------
-./CONTRIBUTING.md                                              728
-./dump/aside-20260830/README.md                               2826
-./.pytest_cache/README.md                                      302
-./README.md                                                   2826

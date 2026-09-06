@@ -1,7 +1,0 @@
-{
-  "chunk_id": "003_FOUNDATION",
-  "ts": "2026-07-26T13:10:13",
-  "source": "/data/data/com.termux/files/home/openroot/FOUNDATION.md",
-  "content": "# Foundation\n\nThis repository obeys the UNE core rules:\n\n- Only base units: joules (J), seconds (s), kilograms (kg)\n- Core equation: \u03b7 = useful_joules / human_joules\n- All new functions must pass the executable axioms in `une/axioms.py`\n- Vision language belongs in a clearly separated `vision.md` or `docs/vision.md`\n\nCanonical source: https://github.com/jesseray718/une\n",
-  "priority": "core"
-}

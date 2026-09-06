@@ -1,5 +1,8 @@
 blank_issues_enabled: true
 contact_links:
-  - name: OpenRoot External Thesis Release
-    url: https://github.com/jesseray718/openroot-thesis-release
-    about: Core release bundle and packets
+  - name: Read the Specs First
+    url: https://github.com/jesseray718/openroot/tree/main/research
+    about: Review WBTE-01, CTBS-01, AE-GFRC-01 before posting
+  - name: Published Dataset
+    url: https://zenodo.org/records/21225683
+    about: Zenodo DOI 10.5281/zenodo.21225683

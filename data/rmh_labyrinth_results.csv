@@ -1,4 +1,0 @@
-trial_id,timestamp_utc,mode,cooling_power_W,electric_input_W,cop_like,confidence,evidence_reference
-A1,2026-08-25T20:00:00Z,cooling,936.4682774968333,115.0,8.143202413015942,trial.A1.sample,start
-A1,2026-08-25T20:01:00Z,cooling,1359.6484840134929,114.0,11.926741087837657,trial.A1.sample,steady
-A1,2026-08-25T20:02:00Z,cooling,1739.7420433282286,113.0,15.39594728609052,trial.A1.sample,steady

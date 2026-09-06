@@ -1,9 +1,0 @@
-{
-  "title": "Thermal Cascade System: Multi-Night Radiative Cooling Accumulator",
-  "upload_type": "dataset",
-  "description": "Simulation code and performance metrics for deep-space radiative cooling system achieving 7-night cold accumulation in insulated thermal mass.",
-  "creators": [{"name": "Ray, Jesse"}],
-  "keywords": ["radiative cooling", "thermal battery", "deep space heat sink", "permaculture energy"],
-  "license": "GPL-3.0",
-  "access_rights": "open"
-}

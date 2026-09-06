@@ -1,0 +1,47 @@
+#!/data/data/com.termux/files/usr/bin/bash
+# une-scribe: voice → UNE-named markdown document
+# Usage: une-scribe AX.KNW.SYS
+PREFIX="${1:-AX.MISC}"
+TIMESTAMP=$(date +%y%m%d%H%M)
+FILENAME="${PREFIX}.${TIMESTAMP}.md"
+DOCDIR="$HOME/docs/une"
+mkdir -p "$DOCDIR"
+
+echo "🎙️ 15s — speak your document now"
+DUR=15
+W="$HOME/.cache/lumo/mic-$$.wav"
+T="$HOME/.cache/lumo/transcript.txt"
+mkdir -p "$HOME/.cache/lumo"
+termux-microphone-record -d -f "$W" -l "$DUR" 2>/dev/null
+sleep $((DUR + 2))
+ffmpeg -y -i "$W" -ar 16000 -ac 1 "$HOME/.cache/lumo/a16.wav" 2>/dev/null
+source ~/.config/aiq/config.sh 2>/dev/null
+curl -s https://api.groq.com/openai/v1/audio/transcriptions \
+  -H "Authorization: Bearer $GROQ_API_KEY" \
+  -F file="@$HOME/.cache/lumo/a16.wav" -F model="whisper-large-v3" 2>/dev/null | \
+  jq -r '.text // empty' 2>/dev/null > "$T"
+
+CONTENT=$(cat "$T")
+if [ -z "$CONTENT" ]; then
+  echo "❌ No transcription"
+  exit 1
+fi
+
+cat > "$DOCDIR/$FILENAME" << DOC
+# $PREFIX
+
+**Date:** $(date "+%Y-%m-%d %H:%M")
+**Author:** Jesse Ray (jesseray718)
+**License:** CC-BY-SA 4.0
+
+---
+
+$CONTENT
+
+---
+*Captured via une-scribe nanobot*
+DOC
+
+echo "✅ Saved: $DOCDIR/$FILENAME"
+echo "📄 ${CONTENT:0:100}..."
+rm -f "$W" "$HOME/.cache/lumo/a16.wav"

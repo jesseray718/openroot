@@ -1,0 +1,19 @@
+#!/data/data/com.termux/files/usr/bin/bash
+# fix-it: take last command output or clipboard → diagnose → fix in clipboard
+ERR=$(termux-clipboard-get 2>/dev/null)
+[ -z "$ERR" ] && { echo "Copy an error first, then run fix-it"; exit 1; }
+
+PROMPT="I got this error in Termux on Android (bash). Give me ONLY the fix command, no explanation:
+$ERR"
+
+echo "🤖 Diagnosing..."
+source ~/.config/aiq/config.sh 2>/dev/null
+FIX=$(aiq "$PROMPT" --provider groq 2>/dev/null | head -20)
+
+if [ -n "$FIX" ]; then
+  termux-clipboard-set "$FIX"
+  echo "✅ Fix in clipboard — type 'pp' to apply:"
+  echo "$FIX" | head -5
+else
+  echo "❌ Couldn't diagnose"
+fi

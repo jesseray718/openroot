@@ -1,8 +1,0 @@
-{
-  "role": "optional_high_speed_inference_bridge",
-  "status": "available_but_not_required",
-  "R": 1.0,
-  "eta_gain": "reduces human_joules on long context when local LLM is RAM-constrained",
-  "privacy_note": "prefer Lumo or local lattice; Groq is secondary",
-  "created_at": "2026-08-16T20:34:07.618071+00:00"
-}

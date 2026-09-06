@@ -1,6 +1,0 @@
-__pycache__/
-*.pyc
-*.o
-.pio/
-.vscode/
-*.bin

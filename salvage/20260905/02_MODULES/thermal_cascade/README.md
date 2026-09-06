@@ -1,1 +1,0 @@
-# Thermal Cascade Logic

@@ -1,9 +1,0 @@
-  backup/pr13-conflict-state                     [m 1a8a0aa4 or38 (#39) (#41)
-  chore/bulk-20260901                            [m 5d6f907f chore: sync remaining local updates
-  chore/knowledge-unify-20260901-011802-openroot-[m e2f1ac54 Add unified energy package modules
-  chore/my-change                                [m 5d6f907f chore: sync remaining local updates
-  chore/rmh-report-updates                       [m 5d6f907f chore: sync remaining local updates
-  main                                           [m 72bb8dfe [[34morigin/main[m: behind 22] fix(systemd): run canonical observer inference module
-  pin/20260904-palm                              [m f4c0c1c0 add palm.py, mix pin, public stack bootstrap
-  pr-13-recover                                  [m 9dab2d1e ops: add agape super-command for autonomous offline operations
-* [32mpr13-keep                                      [m 5dc25d9e [[34morigin/main[m: ahead 1] Unified State: 5430 files, 54178 connections, Merkle 982e539b

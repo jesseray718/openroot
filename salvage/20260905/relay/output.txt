@@ -1,7 +1,0 @@
-==========================================
-  CLIIP RELAY COMPLETE
-  SESSION: 20260721_145720_nometa
-  CONTEXT: AUTO_ROUTE
-  OUTPUT: 438 bytes in clipboard
-==========================================
-Paste back to Lumo window. Next command queued.

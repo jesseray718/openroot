@@ -1,5 +1,0 @@
-ONE-TIME HUMAN STEP (browser):
-1. Open https://github.com/apps/coderabbitai
-2. Install → Only select repositories → choose jesseray718/openroot (and any other openroot-* spokes)
-3. Authorize. Done forever.
-After that every PR is auto-reviewed under the YAML above.

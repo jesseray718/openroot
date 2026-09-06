@@ -1,80 +1,121 @@
-[![C++20 Thermodynamic Kernel CI](https://github.com/jesseray718/openroot/actions/workflows/cxx-build.yml/badge.svg)](https://github.com/jesseray718/openroot/actions/workflows/cxx-build.yml)
-
-# OpenRoot Engine
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21887097.svg)](https://doi.org/10.5281/zenodo.21887097)
-[![Release](https://img.shields.io/github/v/release/jesseray718/openroot?include_prereleases)](https://github.com/jesseray718/openroot/releases/tag/v1.1.0-native-thermo)
-[![C++20 Native](https://img.shields.io/badge/Kernel-C%2B%2B20%20Native-blue.svg)](include/openroot/thermo.hpp)
-
 # OpenRoot
+### The Open Foundation for a Civilization That Works
 
-OpenRoot is a living, open ecosystem for practical regeneration: science, engineering, agriculture, software, governance, and local community resilience.
+> *"There will come a time when the animals are suffering and the earth is weeping,*
+> *and there shall come a tribe from all corners of the earth,*
+> *of all colors, classes, and creeds,*
+> *and through their actions, shall make the earth green again,*
+> *and they will be known as the Warriors of the Rainbow."*
+> — Hopi Prophecy
 
-We need specialists.  
-We need beginners.  
-We need people with tools, land, code, logistics, legal knowledge, financial insight, teaching skill, or honest effort.
+That time is now. This is the root.
 
-If you want to help build a future that is more resilient, local, open, and life-serving: you have a place here.
+**Founded by:** Jesse McMillen — Sikeston, Missouri
+**Status:** Node Zero Active — June 2026
+**License:** Hardware CC-BY-SA 4.0 | Software GPL v3
+**Archive:** DOI 10.5281/zenodo.20549528
+**Contact:** jrm8908@proton.me
 
-## Collaboration, Credit, and Stewardship
+## What OpenRoot Is
 
-OpenRoot is built to collaborate.  
-I (project founder) actively welcome co-builders, shared authorship, and transfer of responsibility to those best suited for a task.
+1. **Open hardware library** — CC-BY-SA 4.0 forever. No patents. Ever.
+2. **Knowledge commons** — Community-built, peer-reviewed. Anyone can use and improve.
+3. **ACRE token** — Minted only for verified physical work. No speculation. No pre-mine.
 
-- I will share credit fairly.
-- I will give explicit credit where due.
-- I am willing to step back from duties when another contributor can serve the project better.
-- The goal is mission success, not ego ownership.
+## The Thermal Loop
 
-If you contribute meaningfully, your contribution should be visible and credited.
+Passive solar-thermal cooling. Zero grid. Zero fans.
 
-## Inspiration and Thanks
+Fresh air → Desiccant → Underground labyrinth (FILLED SOLID with wet aerocement, 500–2,000 m²/m³ surface area) → Cold Tank B (radiative night-sky lid) → Solar panel → Hot Tank A → Stirling engine → back to desiccant.
 
-Special thanks to **Ben** from YouTube channel **NighthawkInLight**:  
-https://www.youtube.com/@NighthawkInLight
+Output air approaches ~55°F ground temperature on a hot day. Same physics as a ground-source heat pump. We never claim greater than 100% thermodynamic efficiency.
 
-His work has materially influenced this project’s thinking and experimentation, especially:
-- Kitchen aircrete explorations
-- Acetone + silicone waterproofing explorations
+Full specs: projects/aerocement/
 
-More broadly, his videos have been a major source of inspiration for practical, experimental thinking.
+## Projects
 
-## Everyone Has a Lane
+| Project | What It Is |
+|---------|-----------|
+| AeroCement | Node Zero — Sikeston MO. The thermal loop. The proof. |
+| The Hearth | Community energy sovereignty. Powers a neighborhood. |
+| AEGIS MESH | Decentralized mesh. Communications that cannot be shut off. |
 
-- **Scientists** → validate claims, design experiments, improve rigor.
-- **Engineers & Architects** → build practical systems, plans, prototypes, and standards.
-- **Farmers & Growers** → field-test methods, seed stewardship, soil/water practices.
-- **Coders & AI Builders** → automation, tooling, data pipelines, interfaces.
-- **Legal / Policy / Governance** → licensing, compliance, cooperative structures.
-- **Finance / Accounting / Advisors** → sustainable funding, local wealth retention models.
-- **Educators / Organizers / Storytellers** → workshops, documentation, onboarding, events.
-- **Anyone new** → start small, learn fast, contribute meaningfully.
+## ACRE Token
 
-## Start in 60 Minutes
+Minted only for verified innovation — not for hours worked or repetition. No airdrops. No pre-mine.
+Building the first node in a new climate zone, fixing a documented flaw, shipping a new tool, or writing a new skill doc earns ACRE. Replicating a known build (e.g. node #47 in a climate already validated) earns 0 — it's real work, but not new knowledge.
+Two independent validators approve every claim.
+Full design: tokens/ACRE_SPECIFICATION.md
 
-1. Read `community/lane-quiz.md`
-2. Pick one issue labeled `good first issue` or `help wanted`
-3. Submit one concrete output:
-   - data point
-   - doc improvement
-   - prototype fix
-   - local action report
+## Bounty Board (Theoretical Framework)
 
-## Why This Matters
+The Bounty Board is a **hypothetical framework** — not an active reward system. It proposes that human necessity, structured correctly, becomes the primary driver of innovation toward the maximum good of a system.
 
-This project is designed to convert underused human potential into local, measurable, regenerative impact.  
-You do not need to be perfect. You need to start.
+**Core hypothesis:** When a system defines its greatest unmet needs as bounties — weighted by impact, urgency, and accessibility — it creates a natural allocation of human effort toward the nodes where work produces the highest systemic return.
 
-## Contact
+**How it would work (if implemented):**
 
-- Maintainer: jrm8908@proton.me
-- Repo: https://github.com/jesseray718/openroot
-- Discussions: see pinned “Start Here” thread
+1. A need is identified and posted as a bounty (e.g., water purification for a region)
+2. The bounty is weighted by systemic impact: How many people does this serve? How critical is the need? What is the knowledge gap?
+3. Builders pursue the bounty. Innovation occurs.
+4. If and when the ACRE token is deployed, verified innovation earns ACRE — minted for new knowledge created, not repetition of existing work
+5. Two independent validators confirm the work is novel and functional
 
-## Thesis Release Bundle (2026-08-29)
-Packaged thesis corpus, core docs, outreach packets, and integrity manifests are included in:
-- `releases/thesis-20260829/`
-Contact: jrm8908@proton.me
+**ACRE token status:** Conceptual. Not deployed. Solana integration is in progress. The tokenomics model exists in `tokens/ACRE_SPECIFICATION.md` but no tokens have been minted, pre-mined, or distributed. This page will be updated when the system is live.
 
-## Knowledge Integration
-See `docs/knowledge/`.
+**Current hypothetical bounties (illustrative, not active):**
+
+| Need | Why It Matters | Theoretical Weight |
+| --- | --- | --- |
+| Water purification | Clean water is the most basic node of human survival | High |
+| Refrigeration | Food preservation, medicine storage — highest daily-life impact | High |
+| First thermal loop node | Proves the core thermal cascade hypothesis (H-003) | Critical |
+| Agricultural tractor | Multiplies human labor in food production | Medium |
+| Transit (bus) | Enables mobility and connection between nodes | Medium |
+| Power plant | Energy sovereignty at community scale | High |
+
+**The formula (proposed):**
+
+Bounty Value = Impact x Urgency x (1 - Existing_Solutions) / (Effort x Time_to_Deploy)
+
+This is not a job board. It is a theoretical map of where human ingenuity should flow next, guided by permaculture principles and agape mathematics — the greatest good for the greatest number of system nodes, per unit of human effort applied.
+
+---
+
+## Hard Rules
+
+1. Never claim greater than 100% thermodynamic efficiency
+2. 21-day wet cure — non-negotiable
+3. Tunnel FILLED SOLID — never lined or walled
+4. Two separate tanks — never combined
+5. Desiccant at intake only
+6. No patents. Ever.
+7. Failures are data — document honestly
+8. Serve the least first
+
+## Support This Work
+
+**Join the channel (SimpleX):** https://smp9.simplex.im/a#vklZrSjZTQdgXBqW_sLK1h5FeajDoa7wTaSWGSw62Sw
+
+Built alone, on a phone, after shifts. Everything here is free. Always will be.
+
+| Solana | 3fF26gcj1ednMUASxJxo1dt5rQ2ZegXbH7k4ynJazerk |
+| Bitcoin | bc1qq69dze04yul5cl5lgv3hakg4scxfzq3swje6ey |
+| Ethereum | 0x8eA4dBF495ef2Ab6E4371C75060390563b79c138 |
+
+The project succeeds when it no longer needs Jesse McMillen.
+
+One pour. One node. One warrior at a time.
+
+---
+*CC-BY-SA 4.0 (Hardware) | GPL v3 (Software) | No Patents. Ever.*
+
+---
+
+## Permanently Published Research
+
+**Zenodo DOI:** [`10.5281/zenodo.20549528`](https://doi.org/10.5281/zenodo.20549528)  
+**IPFS CID:** `QmcMjnAVN9FbQ77VbwMPMCteb93U7W4REdZmZbPqoMBE4F`  
+**Status:** Peer-validated thermal cascade physics dataset — CC-BY 4.0
+
+Verify any future claims against these immutable records.

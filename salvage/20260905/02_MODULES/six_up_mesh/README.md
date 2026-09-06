@@ -1,1 +1,0 @@
-# Six-Up Mesh Protocol

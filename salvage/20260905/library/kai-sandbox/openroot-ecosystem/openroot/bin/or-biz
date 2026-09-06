@@ -1,2 +1,0 @@
-#!/data/data/com.termux/files/usr/bin/bash
-exec python3 "$HOME/projects/openroot/src/openroot-business-v0.4.py" "$@"
