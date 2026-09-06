@@ -42,8 +42,8 @@ AR-GFRC in the paste. Combined with the open-cell matrix the mix can be lighter 
 
 That single material change turns a failed insulation foam into high-S/V thermal mass and structure.
 
-Full notes: `library/kai-sandbox/openroot-ecosystem/aerocement/docs/MATERIAL_SCIENCE_NOTES.md`  
-Handbook seed: `OPENROOT_HANDBOOK.md` §4 (AERO-GFRC-001)
+Full notes: [`MATERIAL_SCIENCE_NOTES.md`](https://github.com/jesseray718/openroot/blob/main/library/kai-sandbox/openroot-ecosystem/aerocement/docs/MATERIAL_SCIENCE_NOTES.md) · [wiki](https://github.com/jesseray718/openroot/wiki/Material-Science)  
+Handbook seed: [`OPENROOT_HANDBOOK.md`](https://github.com/jesseray718/openroot/blob/main/OPENROOT_HANDBOOK.md) §4 (AERO-GFRC-001) · [wiki](https://github.com/jesseray718/openroot/wiki/Handbook)
 
 ---
 
@@ -88,7 +88,7 @@ Use AeroDisks:
 
 Do not pour the labyrinth and call it an AeroDisk. Disks are above-grade solar stack panels. The labyrinth is below-grade wet volumetric exchanger.
 
-Ledger pointer: `seed-core/ledger/eta_ledger.jsonl`
+Ledger pointer: [`seed-core/ledger/eta_ledger.jsonl`](https://github.com/jesseray718/openroot/blob/main/seed-core/ledger/eta_ledger.jsonl)
 
 ---
 
@@ -135,9 +135,9 @@ Workshop offer: free or materials-at-cost for anyone in the region who will meas
 - Zenodo: https://doi.org/10.5281/zenodo.20549528
 - IPFS CID: `QmcMjnAVN9FbQ77VbwMPMCteb93U7W4REdZmZbPqoMBE4F`
 
-Skills: `/home/jesse/openroot/skills-library` and `library/kai-sandbox/skills/`  
-Workflows: `workflow/`  
-Handbook: `OPENROOT_HANDBOOK.md`
+Skills: [`library/kai-sandbox/skills/`](https://github.com/jesseray718/openroot/tree/main/library/kai-sandbox/skills) · [wiki](https://github.com/jesseray718/openroot/wiki/Skills)  
+Workflows: [`workflow/`](https://github.com/jesseray718/openroot/tree/main/workflow)  
+Handbook: [`OPENROOT_HANDBOOK.md`](https://github.com/jesseray718/openroot/blob/main/OPENROOT_HANDBOOK.md) · [wiki](https://github.com/jesseray718/openroot/wiki/Handbook)
 
 > There shall come a time when the earth is weeping and the animals are suffering, and from all corners of the earth shall come a tribe of all colors, classes, and creeds, and through their actions they shall make the earth green again.
 > — Hopi prophecy
