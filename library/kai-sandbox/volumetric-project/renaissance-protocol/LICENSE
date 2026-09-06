@@ -1,0 +1,61 @@
+cat > LICENSE << 'ENDOFFILE'
+# RENAISSANCE PROTOCOL LICENSE (RPL)
+# Based on GNU Affero General Public License v3.0 (AGPLv3) with Patent Grant
+
+Copyright (c) 2026 Jesse McMillen
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+1. COMMERCIAL USE ALLOWED:
+
+You may use this technology to start a business, sell services, or build
+products. You may charge for your labor, installation, and maintenance.
+You MAY NOT charge for the right to use the core technology itself.
+
+2. NO PATENT MONOPOLY:
+
+The core technology (Aerocement Passive Thermal Kingdom, Spiral Labyrinth,
+Stirling Trench, Natalus Panel, Continuous Shoot Harvest, and related methods)
+is hereby dedicated to the public domain regarding patent rights. No entity
+may obtain a patent on the core technology described in this repository.
+
+3. COPYLEFT (SHARE ALIKE):
+
+If you modify this software or documentation and distribute it (or use it
+to provide a service over a network), you MUST release your modifications
+under this same license. You cannot close the source code of improvements.
+
+4. PATENT RETALIATION:
+
+If you initiate patent litigation against anyone alleging that this
+Software infringes your patent, your license to use this Software
+terminates immediately.
+
+5. NO WARRANTY:
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY.
+
+6. ATTRIBUTION:
+
+You must give appropriate credit to the original authors, provide a link
+to this license, and indicate if changes were made. You may do so in any
+reasonable manner, but not in any way that suggests the licensor endorses
+you or your use.
+
+This license grants perpetual, worldwide, non-exclusive, royalty-free
+permission to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software to any person who uses, modifies, or
+distributes this technology, provided they do not assert patent rights
+against others for using this technology.
+
+If any entity attempts to patent any aspect of this Core Technology,
+they are hereby excluded from the benefits of this license.
+ENDOFFILE
