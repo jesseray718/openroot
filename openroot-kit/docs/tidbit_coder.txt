@@ -1,0 +1,3 @@
+## T008 7B lives on the box
+llama-server on jesse@optiplex3060. Models in /home/jesse/models. Phone is client via http://192.168.1.193:8080/v1
+

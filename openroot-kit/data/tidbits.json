@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "source": "openroot-kit",
+  "tidbits": [
+    {
+      "id": "T001",
+      "module": "pane",
+      "title": "Two panes",
+      "pane": "BOTH",
+      "eta_note": "wrong pane wastes a full session",
+      "body": "A15 paths start /data/data/com.termux or /storage/emulated/0. SSH paths start /home/jesse. Refuse the other."
+    },
+    {
+      "id": "T002",
+      "module": "shell",
+      "title": "Bash is not Python",
+      "pane": "A15",
+      "eta_note": "one language per prompt",
+      "body": "$ means bash. python3 file.py runs a file. python3 alone opens >>>. Never paste def/import at $."
+    },
+    {
+      "id": "T003",
+      "module": "git",
+      "title": "One working tree",
+      "pane": "A15",
+      "eta_note": "second clone is waste heat",
+      "body": "Use /data/data/com.termux/files/home/code/openroot. Leave /data/data/com.termux/files/home/src/openroot idle. Mesh is not git."
+    },
+    {
+      "id": "T004",
+      "module": "git",
+      "title": "git add takes a real path",
+      "pane": "BOTH",
+      "eta_note": "placeholders are agent defects",
+      "body": "git add /data/data/com.termux/files/home/code/openroot/bin/probe.json  then git status. Never git add PATH."
+    },
+    {
+      "id": "T005",
+      "module": "gh",
+      "title": "gh is the API, git is the diary",
+      "pane": "BOTH",
+      "eta_note": "auth already ok 2026-09-02",
+      "body": "gh auth status. gh repo list jesseray718 --limit 10. Push only hangs. Do not push dump/."
+    },
+    {
+      "id": "T006",
+      "module": "mesh",
+      "title": "Fork is the phone daemon",
+      "pane": "A15",
+      "eta_note": "Termux syncthing cli is not truth",
+      "body": "Mesh path /storage/emulated/0/openroot. IDs WD53PPW phone, JW5PQXV box. Recreate .stfolder as a directory if stall at 99 percent."
+    },
+    {
+      "id": "T007",
+      "module": "ssh",
+      "title": "Phone to OptiPlex",
+      "pane": "A15",
+      "eta_note": "BatchMode already worked 2026-08-30",
+      "body": "ssh -i /data/data/com.termux/files/home/.ssh/id_ed25519_optiplex -o BatchMode=yes jesse@192.168.1.193 hostname"
+    },
+    {
+      "id": "T008",
+      "module": "coder",
+      "title": "7B lives on the box",
+      "pane": "SSH",
+      "eta_note": "A15 3.5GB cannot host 7B Q4 plus OS",
+      "body": "llama-server on jesse@optiplex3060. Models in /home/jesse/models. Phone is client via http://192.168.1.193:8080/v1"
+    },
+    {
+      "id": "T009",
+      "module": "canon",
+      "title": "canon path still empty",
+      "pane": "A15",
+      "eta_note": "primer said canon false",
+      "body": "Need /data/data/com.termux/files/home/openroot/canon/src/canon.py printing 0.0 before new modules."
+    },
+    {
+      "id": "T010",
+      "module": "sqlite",
+      "title": "ledger is local",
+      "pane": "BOTH",
+      "eta_note": "WAL file next to db is normal",
+      "body": "A15 db /data/data/com.termux/files/home/code/openroot/kit/openroot_kit.sqlite  SSH db /home/jesse/openroot/kit/openroot_kit.sqlite  Not the same file unless meshed on purpose."
+    },
+    {
+      "id": "T011",
+      "module": "token",
+      "title": "shrink the PAT",
+      "pane": "A15",
+      "eta_note": "plain text ghp_ with delete_repo",
+      "body": "Replace god token with repo+workflow+read:org. Never paste the token into chat."
+    },
+    {
+      "id": "T012",
+      "module": "heredoc",
+      "title": "quoted EOF is one paste",
+      "pane": "A15",
+      "eta_note": "split paste writes nothing",
+      "body": "cat > FILE << 'EOF' then every line then EOF then the run line. If prompt shows > you are inside the heredoc. Finish it."
+    }
+  ]
+}

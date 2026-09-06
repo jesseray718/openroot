@@ -1,0 +1,26 @@
+[
+  {
+    "repo": "openroot-release",
+    "missing": [],
+    "created": []
+  },
+  {
+    "repo": "wisdom-scaffold",
+    "missing": [],
+    "created": []
+  },
+  {
+    "repo": "canonical",
+    "missing": [
+      "LICENSE"
+    ],
+    "created": []
+  },
+  {
+    "repo": "jesseray718",
+    "missing": [
+      "LICENSE"
+    ],
+    "created": []
+  }
+]
