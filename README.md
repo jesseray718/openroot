@@ -2,93 +2,142 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20549528.svg)](https://doi.org/10.5281/zenodo.20549528)
 [![PoPW ledger](https://img.shields.io/badge/PoPW-v1.2.1-blue)](https://github.com/jesseray718/openroot/releases/tag/v1.2.1-popw-ledger)
+[![thermo](https://img.shields.io/badge/thermo-v1.1.0-blue)](https://github.com/jesseray718/openroot/releases/tag/v1.1.0-native-thermo)
+[![CI](https://github.com/jesseray718/openroot/actions/workflows/tests.yml/badge.svg)](https://github.com/jesseray718/openroot/actions/workflows/tests.yml)
+[![License: GPL v3](https://img.shields.io/badge/code-GPL--3.0-blue.svg)](LICENSE)
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/docs-CC--BY--SA--4.0-lightgrey.svg)](LICENSE-docs.md)
 
-**Thermodynamic ledger + Merkle commitments as the substrate for reverse computation.**
+Open-source hardware that lives on open-source software.  
+**Updates are advancements.** The repo is the growing web: each verified file, mix, ledger line, and skill is a node. No patents. Ever.
 
-η = useful_joules / human_joules is the only performance language.
+η = useful_joules / human_joules. We never claim greater than 100% thermodynamic efficiency.
 
-Open-source appropriate-technology ecosystem: AeroCement volumetric exchangers, ferrocement domes, Black Locust RMH, UNE computational_flow, fractal nanobot lattice, PoPW / ACRE claims.
+**Founded by:** Jesse McMillen — Sikeston, Missouri  
+**Archive:** [DOI 10.5281/zenodo.20549528](https://doi.org/10.5281/zenodo.20549528)  
+**Contact:** jrm8908@proton.me
 
 ---
 
-# AeroCement — Open-Cell Volumetric Thermal Cascade
+## What OpenRoot Is
 
-**The material breakthrough**
+1. **Open hardware library** — CC-BY-SA 4.0 docs / GPL-3.0 code.
+2. **Knowledge commons** — handbook, skills, seeds, workflows. Anyone can run and improve them offline.
+3. **PoPW / ACRE** — claims minted only for verified physical work. No pre-mine. No speculation.
 
-Opencell (AeroCement) is related to aircrete but does not collapse.
+Core organs: AeroCement volumetric exchangers, AeroDisk solar stack-effect panels, ferrocement domes and double-catenary stressed-skin shells, Black Locust coppice RMH, UNE computational_flow, fractal lattice, PoPW ledger.
 
-Traditional aircrete fails when the foam reaches critical mass: the bubbles pop and the entire structure falls in on itself. A simple thixotropic surfactant gel changes that failure point.
+---
 
-Mix:
-- Xanthan gum suspended in alcohol
-- Dawn Ultra
-- Water
+## AeroCement — Open-Cell Volumetric Material
 
-This produces a gel. Ratio: **1 part gel : 2 parts cement**.
+Opencell (AeroCement) is related to aircrete but does not collapse at critical foam mass.
 
-As the mix is agitated, air is entrained. When it reaches the same critical point where ordinary aircrete collapses, the thixotropic gel locks the shape. The bubbles rupture, but the matrix remains. The result is a stable, breathable, fully interconnected open-cell concrete — every void is connected to every other void.
+A thixotropic surfactant gel locks the matrix when ordinary aircrete bubbles would pop and the pour would fall in. Mix direction (already documented): xanthan in alcohol + Dawn Ultra + water → gel. Ratio **1 part gel : 2 parts cement**. Agitation entrains air. At the old collapse point the gel holds shape. Voids stay interconnected. The pour becomes a stable, breathable open-cell heat exchanger that can be cast, pumped, or printed.
 
-That single change turns a failed insulation foam into a high-surface-area heat exchanger that can be cast, pumped, or 3D-printed.
+**Stator-motor mixing + closest packing.**  
+A rotor-stator drives bubble diameter down and bubble count up toward densest equal-sphere packing (HCP / FCC, coordination 12, packing fraction π/(3√2) ≈ 74%). Real foam is polydisperse, so true close-pack is a target, not a claim. Halving radius doubles surface area per volume. Finer cells raise capillary area and spread stress.
 
-**Why this matters — the triple-utility cascade**
+**Alkali-resistant glass fiber, ≥20% zirconium.**  
+AR-GFRC in the paste. Combined with the open-cell matrix the mix can be lighter and stronger than ordinary concrete, and potentially pumpable over long distances with less labor.
+
+That single material change turns a failed insulation foam into high-S/V thermal mass and structure.
+
+Full notes: `library/kai-sandbox/openroot-ecosystem/aerocement/docs/MATERIAL_SCIENCE_NOTES.md`  
+Handbook seed: `OPENROOT_HANDBOOK.md` §4 (AERO-GFRC-001)
+
+---
+
+## Thermal Cascade (Heat / Cold / Work)
+
+Same open-cell matrix, three jobs. Passive after construction. No grid fans. No pumps on the thermal loop.
 
 1. **Heat**  
-   Paint the open-cell surface black or load it with activated charcoal. It becomes a volumetric blackbody that captures nearly all incident solar energy.  
-   Form a phi-spiral air path through the material. Stack effect + turbulence create a vortex at the outlet. Run the hot air through a copper coil inside an insulated ferrocement tank and the heat is stored.
+   Paint the open-cell surface black or load activated charcoal. Volumetric absorber. Phi-spiral air path. Stack effect + turbulence. Dump heat into a copper coil inside an insulated ferrocement tank.
 
 2. **Cold**  
-   The same open-cell matrix, kept wet and preceded by a desiccant, creates massive evaporative surface area (every pore, not just the tunnel walls). Hot dry air interacting with that surface drops to approximately 35–40 °F via the latent heat of vaporization, independent of ambient temperature as long as the air is dry enough. Store the cold side in a second insulated ferrocement tank.
+   Same matrix, kept wet, air dried first by desiccant. Evaporative area is every pore, not only tunnel walls. Store cold in a **second** insulated ferrocement tank. Two tanks. Never combined.
 
 3. **Work**  
-   The resulting ΔT drives a Stirling engine + flywheel for mechanical power and a TEG for electricity. Heat is used as heat, cold as cold, mechanical work as mechanical work. Electricity is reserved only for loads that truly require it.
+   The ΔT drives a Stirling + flywheel for shaft work and a TEG only where electricity is actually required. Heat as heat. Cold as cold. Work as work.
 
-The entire system is passive after construction. No grid, no pumps, no moving parts beyond the Stirling.
+**Hard geometry of the loop**
 
-**Carbon-negative variant**
+Fresh air → desiccant → underground labyrinth **FILLED SOLID** with wet AeroCement (target 500–2,000 m²/m³) → Cold Tank B (radiative night-sky lid) → hot side / absorber → Hot Tank A → Stirling → back to desiccant.
 
-Replace the solar absorber with a rocket mass heater fired on coppiced Black Locust (100× easier to harvest than conventional firewood and regenerates). The same open-cell cascade now runs on a renewable, carbon-negative fuel source while still delivering heat, cold, and shaft work.
+Output air aims at ground temperature on a hot day. Same physics class as a ground-source heat pump. We do not claim magic COP.
 
-**Structural and architectural uses**
+### Black Locust coppice RMH (carbon-negative heat source)
 
-- Fill cardboard geodesic panels (acetone + silicone treated, flanged triangles) — 1v emergency shelter to 50v stadium scale.
-- Core material inside double-catenary stressed-skin ferrocement shells (pure compression geometry).
-- Stator-motor mixing produces finer, more uniform bubbles. Combined with alkali-resistant glass fiber (≥20 % zirconium) the mix can be lighter *and* stronger than conventional concrete, potentially pumpable over long distances with far less labor.
+Replace or back the solar absorber with a rocket mass heater fired on **coppiced Black Locust**. Locust coppice is far easier to harvest than conventional firewood and regenerates. Same open-cell cascade: RMH supplies the hot end; labyrinth + wet AeroCement still do cold and storage; Stirling still takes the ΔT. Heat, cold, and shaft work stay in one loop. Fuel is a renewable, coppiced input — not a grid.
 
-This is the same direction NASA and others are exploring with nano-aerogels, achieved with off-the-shelf materials and open knowledge.
+RMH + labyrinth comparison and H-003 live in `projects/aerocement/` and the aerocement calc package.
 
-**Open source & ACRE**
+---
 
-Everything is published under CC-BY-SA (docs) / GPL-3 (code). No patents. Defensive publication is intentional.
+## AeroDisk — separate organ (solar stack-effect panels)
 
-Work is measured in joules. Verified physical work mints ACRE claims. The same unit that quantifies energy captured also quantifies human contribution. As systems come online they effectively print their own coordination token — decentralized, open-source, and cooperative by design.
+AeroDisk is **not** the underground labyrinth and **not** the RMH.
 
-**Current status**
+It is a panel / disk absorber for **stack-effect solar air**. Dark, high-S/V open-cell or plated faces sit in sun. Heated air rises through a designed throat. Chimney / stack effect is the pump. No fan.
 
-Theoretical physics validated. Mixes and cascade documented. First instrumented prototype waiting only on a build site in southeast Missouri.
+Use AeroDisks:
 
-Workshop offers: free or materials-at-cost for anyone in the region who wants a working system and is willing to measure and share results.
+- as the hot-side collector feeding Hot Tank A
+- as roof or wall panels that preheat the cascade
+- as ACRE-0001 “Seed Core + Aero-Disc absorption” artifacts
 
-**Repository**  
-https://github.com/jesseray718/openroot
+Do not pour the labyrinth and call it an AeroDisk. Disks are above-grade solar stack panels. The labyrinth is below-grade wet volumetric exchanger.
 
-Contact: jrm8908@proton.me
+Ledger pointer: `seed-core/ledger/eta_ledger.jsonl`
 
-> “There shall come a time when the earth is weeping and the animals are suffering, and from all corners of the earth shall come a tribe of all colors, classes, and creeds, and through their actions they shall make the earth green again.”  
+---
+
+## Shelter — ferrocement, domes, catenary stress-skin
+
+- Cardboard geodesic panels (acetone + silicone treated, flanged triangles): 1v emergency shelter to large geodesic.
+- **Double-catenary stressed-skin ferrocement shells** — pure compression geometry. AeroCement as core inside the skins.
+- Thin ferrocement tanks and domes as the insulated vessels on both sides of the cascade.
+
+Monolithic stress-skin catenary arch: self-supporting shell, no frame. The open-cell core is fill, not the compression skin.
+
+---
+
+## ACRE / PoPW
+
+Work is measured in joules. Verified physical work mints ACRE claims. Two independent validators. Replicating a known node in an already-validated climate earns 0 new knowledge mint.
+
+Release: [v1.2.1-popw-ledger](https://github.com/jesseray718/openroot/releases/tag/v1.2.1-popw-ledger)
+
+---
+
+## Hard Rules
+
+1. Never claim greater than 100% thermodynamic efficiency
+2. 21-day wet cure — non-negotiable
+3. Tunnel FILLED SOLID — never lined or walled
+4. Two separate tanks — never combined
+5. Desiccant at intake only
+6. AeroDisk ≠ labyrinth ≠ RMH. Name the organ you are building.
+7. No patents. Ever.
+8. Failures are data — document honestly
+9. Serve the least first
+
+---
+
+## Status
+
+Theoretical physics of the cascade documented. Mixes documented. First instrumented prototype waits on a southeast Missouri build site.
+
+Workshop offer: free or materials-at-cost for anyone in the region who will measure and share results.
+
+## Permanently published
+
+- Zenodo: https://doi.org/10.5281/zenodo.20549528
+- IPFS CID: `QmcMjnAVN9FbQ77VbwMPMCteb93U7W4REdZmZbPqoMBE4F`
+
+Skills: `/home/jesse/openroot/skills-library` and `library/kai-sandbox/skills/`  
+Workflows: `workflow/`  
+Handbook: `OPENROOT_HANDBOOK.md`
+
+> There shall come a time when the earth is weeping and the animals are suffering, and from all corners of the earth shall come a tribe of all colors, classes, and creeds, and through their actions they shall make the earth green again.
 > — Hopi prophecy
-
-## Current Live Artifacts
-
-- **ACRE-0001** — verified at lattice order 12^12 (Seed Core + Aero-Disc absorption)
-- Thermodynamic ledger: `seed-core/ledger/eta_ledger.jsonl`
-- 16 foundational optimization seeds
-- `porous_exchanger_design.py` v2.2 (Aero-Disc sizing)
-
-## Core Law
-
-Every computational and physical process is measured, committed, and open to upstream replacement by a higher-η alternative.
-
-## License
-
-Documentation & seeds: CC-BY-SA 4.0  
-Code: GPL-3.0  
-No patents. Defensive publication.
