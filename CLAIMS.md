@@ -11,7 +11,7 @@ Pane for evidence paths: SSH clone `/home/jesse/src/openroot-integrate` or `/hom
 | C03 | Face-to-air transfer 0.95 after reflection and edge loss | MODEL | ledger `TRANSFER_EFF`; no duct traverse yet | N14 |
 | C04 | Net to airflow at design point is 931 W/m² (1000×0.98×0.95) | MODEL | ledger `q_net_to_air_w`; also `aerocement_calc` locked constant | N14 |
 | C05 | First-Law budget is 931 W in = shaft work + heat-to-ground + loss | MODEL | ledger residual `-0.0000 W` | N14 |
-| C06 | Latent enthalpy at 0.5 kg/h evaporation is \~314 W/m² of **transport**, not new solar input | MODEL | ledger `q_latent_transport_w`; condensation returns the same joules | N14 |
+| C06 | Latent \~314 W/m² is transport + open-loop harvest of outdoor-air wet-bulb / ground, gated by stack paid with solar or RMH — not extra collector watts | MODEL | ledger `q_latent_transport_w`; control volume must list outdoor air + ground | N14 |
 | C07 | Adding 931 + 314 and calling it 1245 W created | REJECT | water cycle is form change, not a second sun | N14 |
 | C08 | Adding heat + cooling + shaft work and calling it 2197 W or 220% efficiency | REJECT | service-count ≠ heat-engine η | N14 |
 | C09 | Passive transport ratio written as COP = 21,972 | REJECT | near-zero electrical watts on the loop is a ratio of convenience, not an engine | N14 |

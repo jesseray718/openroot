@@ -150,7 +150,9 @@ Peak AM1.5 design point, per m² of collector face. These are **model numbers**.
 | 5 | First-Law budget from the sun | **931 W in = work + heat-to-ground + loss** | conservation |
 
 **Do not add 931 + 314 and call it “1245 W created.”**
-The 314 W of latent enthalpy is solar energy that changed form when dry air evaporated water off wet pores. When that vapor condenses, the same joules reappear as heat. Net water-cycle energy added to the closed books is zero. The benefit is **enhanced transport** and the chance of sub-wet-bulb air — not a second sun.
+The 314 W figure is latent **transport** at a model evaporation rate. In a closed loop that would only be form change. This loop is open. Solar or RMH pays the stack pump. Stack-driven outdoor air then exchanges sensible and latent enthalpy with the wet labyrinth, the ground, and (if the lid is a sky-window emitter) the night sky. Those joules are real. They are not joules the collector face created.
+
+Service from all reservoirs can exceed collector input. That is multi-reservoir harvest, not solar η > 100%.
 
 **Do not add heat + cooling + shaft work and call it 2197 W or “220% efficiency.”**
 Moving 854 W of heat into ground mass is one physical stream. Calling that same stream “heating service” in winter and “cooling service” in summer is a **service count**. Service count is allowed in a grant packet if labeled as service. It is forbidden as thermodynamic efficiency (N14).
