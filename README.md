@@ -13,7 +13,7 @@ That time is now. This is the root.
 **Founded by:** Jesse McMillen — Sikeston, Missouri
 **Status:** Node Zero Active — June 2026
 **License:** Hardware CC-BY-SA 4.0 | Software GPL v3
-**Archive:** DOI 10.5281/zenodo.20639511
+**Archive:** DOI 10.5281/zenodo.20549528
 **Contact:** jrm8908@proton.me
 
 ## What OpenRoot Is
@@ -114,7 +114,7 @@ One pour. One node. One warrior at a time.
 
 ## Permanently Published Research
 
-**Zenodo DOI:** [`10.5281/zenodo.21210931`](https://doi.org/10.5281/zenodo.21210931)  
+**Zenodo DOI:** [`10.5281/zenodo.20549528`](https://doi.org/10.5281/zenodo.20549528)  
 **IPFS CID:** `QmcMjnAVN9FbQ77VbwMPMCteb93U7W4REdZmZbPqoMBE4F`  
 **Status:** Peer-validated thermal cascade physics dataset — CC-BY 4.0
 
