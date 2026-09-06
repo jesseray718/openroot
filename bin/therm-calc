@@ -1,0 +1,31 @@
+#!/data/data/com.termux/files/usr/bin/bash
+# therm-calc: voice → thermal physics calculation → clipboard
+# Uses thermal_cascade_v2.py context as system prompt
+DUR="${1:-20}"
+C="$HOME/.cache/lumo"
+mkdir -p "$C"
+W="$C/mic-$$.wav"
+T="$C/transcript.txt"
+
+echo "🎙️ ${DUR}s — speak your thermal calculation"
+termux-microphone-record -d -f "$W" -l "$DUR" 2>/dev/null
+sleep $((DUR + 2))
+ffmpeg -y -i "$W" -ar 16000 -ac 1 "$C/a16.wav" 2>/dev/null
+source ~/.config/aiq/config.sh 2>/dev/null
+curl -s https://api.groq.com/openai/v1/audio/transcriptions \
+  -H "Authorization: Bearer $GROQ_API_KEY" \
+  -F file="@$C/a16.wav" -F model="whisper-large-v3" 2>/dev/null | \
+  jq -r '.text // empty' 2>/dev/null > "$T"
+QUESTION=$(cat "$T")
+[ -z "$QUESTION" ] && { echo "❌ No transcription"; exit 1; }
+echo "📝 Question: ${QUESTION:0:100}..."
+
+SYS="You are a thermal physics calculator for the OpenRoot thermal cascade system. Context: volumetric open-cell blackbody concrete solar panels capture ~95-98% solar energy. Air flows through underground labyrinth filled with open-cell concrete into insulated hot battery storage. Embedded thermoelectric generators and Stirling engines discharge stored heat. System is NOT closed-loop — it breathes ambient air. Deep space (3K) serves as cold sink for Carnot efficiency. Give only numerical results and formulas, no fluff."
+
+ANSWER=$(aiq "$QUESTION" --provider groq --system "$SYS" 2>/dev/null)
+[ -n "$ANSWER" ] && {
+  termux-clipboard-set "$ANSWER"
+  echo "$ANSWER" | head -c 300 | termux-tts-speak 2>/dev/null
+  echo "✅ Result: ${ANSWER:0:150}..."
+} || echo "❌ Calculation failed"
+rm -f "$W" "$C/a16.wav"

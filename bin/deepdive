@@ -1,0 +1,28 @@
+#!/data/data/com.termux/files/usr/bin/bash
+# deepdive: scan directory → markdown report → clipboard
+DIR="${1:-.}"
+NAME=$(basename "$DIR")
+OUT="/tmp/dd-$$"
+{
+echo "# Deep Dive: $NAME"
+echo "Path: $(realpath "$DIR")"
+echo "Date: $(date)"
+echo ""
+echo "## Tree"
+find "$DIR" -type f -not -path '*/.git/*' -not -path '*/node_modules/*' -not -path '*/__pycache__/*' | sort | head -200
+echo ""
+echo "## File Count"
+find "$DIR" -type f -not -path '*/.git/*' | wc -l
+echo ""
+echo "## Recent Changes"
+cd "$DIR" 2>/dev/null && git log --oneline -20 2>/dev/null
+echo ""
+echo "## Top Words (excluding code syntax)"
+grep -rh '' "$DIR" --include='*.md' --include='*.py' --include='*.sh' --include='*.txt' 2>/dev/null | \
+  tr '[:upper:]' '[:lower:]' | tr -cs 'a-z' '\n' | \
+  grep -vE '^(the|a|an|to|of|in|for|and|or|is|it|on|at|by|with|from|this|that|def|import|self|class|return|if|else|elif|print)$' | \
+  sort | uniq -c | sort -rn | head -50
+} > "$OUT" 2>/dev/null
+cat "$OUT" | termux-clipboard-set
+echo "✅ Deep dive in clipboard ($(wc -l < "$OUT") lines)"
+rm -f "$OUT"
