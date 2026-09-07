@@ -359,11 +359,11 @@ Instrument before you advertise. Cheap sensors beat another manifesto.
 
 ## Status
 
-Mesh spine (same thought, not a second manifesto): [SPINE.md](SPINE.md). Grade MODEL until H-003.
+Mesh spine (same thought, not a second manifesto): [SPINE.md](SPINE.md). All cascade numbers are MODEL until H-003.
 
-Theoretical physics of the cascade documented. Mixes documented. Charcoal open-cell pours exist. First **instrumented** prototype waits on a southeast Missouri build site.
+Sample AeroCement blocks exist. No instrumented Node Zero has been poured.
 
-Workshop offer: free or materials-at-cost for anyone in the region who will measure and share results.
+Workshop offer: materials-at-cost in southeast Missouri for anyone who will measure and share results.
 
 ---
 
