@@ -1,0 +1,4 @@
+#!/bin/bash
+export OPENROOT_ROOT=/home/jesse/openroot
+export PYTHONPATH=/home/jesse/openroot/src
+exec /usr/bin/python3 /home/jesse/openroot/src/openroot_optimizer/coder_run.py "$@"
