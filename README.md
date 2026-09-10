@@ -412,6 +412,8 @@ One pour. One node. One warrior at a time.
 
 *CC-BY-SA 4.0 (Hardware) | GPL v3 (Software) | No Patents. Ever.*
 
+## 🌐 Main Site: https://jesseray718.github.io
+
 ## 🚀 Start Here
 
 **New to this project?** Start with these resources:
