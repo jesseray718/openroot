@@ -1,4 +1,6 @@
 [![Sponsor](https://img.shields.io/badge/Sponsor-this_project-ff69b4?logo=github&style=for-the-badge)](https://github.com/sponsors/jesseray718)
+[![GitHub stars](https://img.shields.io/github/stars/jesseray718/openroot?style=social)](https://github.com/jesseray718/openroot/stargazers)
+
 # OpenRoot
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20549528.svg)](https://doi.org/10.5281/zenodo.20549528)
