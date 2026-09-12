@@ -1,4 +1,71 @@
-[![Sponsor](https://img.shields.io/badge/Sponsor-this_project-ff69b4?logo=github&style=for-the-badge)](https://github.com/sponsors/jesseray718)
+# OpenRoot
+
+**Open-source appropriate technology: shelter, heat, cooling, and shaft work — from dirt, water, sunlight, and coppice wood.**
+
+[PHOTO — replace with one real photograph: pour day, a finished panel, or a dome rib. This slot is the highest-value 100KB on the repo.]
+
+OpenRoot is a buildable hardware library: designs, mix recipes, bills of materials, and test protocols — CC-BY-SA 4.0 for docs, GPL-3.0 for code, no patents ever. Every load-bearing claim is graded and paired with a stated falsifier. If a number matters, there is a test that could break it.
+
+## Core organs
+
+| Organ | What it does | Where it lives |
+|---|---|---|
+| AeroCement | Open-cell cement volumetric exchangers — thermal mass that breathes | `aerocement/` |
+| AeroDisk | Solar stack-effect panels — capture as heat, gravity moves the air | `aerocement/` |
+| Cooling labyrinth | Wet open-cell underground passages — latent heat as transport, not a second sun | `aerocement/` |
+| Domes & shells | Ferrocement domes, double-catenary stressed-skin structures | `03_NODES/` |
+| Black Locust RMH | Coppice-fed rocket mass heaters | `black-locust-rmh/` |
+| UNE / PoPW | Computational flow and verified-work ledger | `computational_flow/`, `PoPW ledger` |
+
+## The premise (architecture, not gadget)
+
+Grid mechanical work from fuel is typically ~10–26% after plant, line, and motor conversions. That is an architecture tax, not a law of nature.
+
+The OpenRoot architecture:
+
+1. **Capture solar (or coppice fire) as heat** — not as grid electricity first.
+2. **Move air by stack effect.** Gravity is free. The sun (or the RMH) makes the density difference.
+3. **Store in dirt and water.** Two tanks. Never one.
+4. **Use latent heat of water as a transport mechanism** — not as a second sun.
+5. **Extract shaft work from ΔT** (Stirling + flywheel). Electricity only where electricity is required.
+6. **Use heat as heat. Cold as cold. Work as work.**
+
+That is the whole argument. Everything else is organs, mix, and measurement.
+
+## Start here
+
+1. [`MANIFEST.md`](MANIFEST.md) — what this tree is
+2. [`CLAIMS.md`](CLAIMS.md) — every load-bearing number, graded, with falsifiers
+3. [`INTEGRATION.md`](INTEGRATION.md) — sister trees and live paths
+4. [`INTEGRATION_CHECKLIST.md`](INTEGRATION_CHECKLIST.md) — four boxes
+
+## Verification discipline
+
+η = useful_joules / human_joules. Heat-engine η, actuator η, EROI, and simulation scores are four different quantities (N14). **We never claim greater than 100% thermodynamic efficiency.** Where the system delivers more than the sunlight that strikes the collector, it is because it also moves environmental heat — the same accounting a ground-source heat pump uses, and we state the boundary openly.
+
+## Honesty policy
+
+Claims are minted only for verified physical work. No pre-mine, no speculation. Each hypothesis carries its falsifier:
+
+| ID | Claim (abridged) | Falsifier |
+|---|---|---|
+| H1 | AE-GFRC ≥15 MPa at dry density ≤1,200 kg/m³, pumpable 1,609 m | fails C39/C1550/C1716 at that density or distance |
+| H2 | Spherical voids beat mined lightweight aggregate on strength-to-weight | measured specific strength below LWAC control |
+
+Full table in [`CLAIMS.md`](CLAIMS.md).
+
+## License, support, contact
+
+CC-BY-SA 4.0 (hardware/docs) · GPL-3.0 (software) · No patents. Ever.
+Support options (incl. donation addresses): [`SUPPORT.md`](SUPPORT.md)
+Contact: jrm8908@proton.me · Archive: DOI 10.5281/zenodo.20549528
+Founded by Jesse McMillen — Sikeston, Missouri. Node Zero: southeast Missouri.
+
+> The project succeeds when it no longer needs Jesse McMillen.
+
+
+<!-- ===== ORIGINAL (preserve, prune duplicates by hand) ===== -->
+
 [![GitHub stars](https://img.shields.io/github/stars/jesseray718/openroot?style=social)](https://github.com/jesseray718/openroot/stargazers)
 
 # OpenRoot
