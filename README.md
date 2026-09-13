@@ -469,7 +469,6 @@ Handbook: [`OPENROOT_HANDBOOK.md`](https://github.com/jesseray718/openroot/blob/
 
 ## Support
 
-**SimpleX:** https://smp9.simplex.im/a#vklZrSjZTQdgXBqW_sLK1h5FeajDoa7wTaSWGSw62Sw
 
 | Solana | 3fF26gcj1ednMUASxJxo1dt5rQ2ZegXbH7k4ynJazerk |
 | Bitcoin | bc1qq69dze04yul5cl5lgv3hakg4scxfzq3swje6ey |
@@ -508,3 +507,41 @@ This is part of the **OpenRoot Ecosystem**:
 
 ---
 
+ HEAD
+
+## Knowledge Integration
+See `docs/knowledge/`.
+
+## THE GAMEPLAN — OpenRoot Development Framework (Sep 13, 2026)
+
+> Living document. Honest-reporting system: claims marked VERIFIED or PENDING only.
+
+### VERIFIED — What We Shipped
+- [x] **Thermal Product API LIVE** — 31 whitelisted endpoints on :8788. End-to-end compute verified: Carnot(400K/300K) = 0.25 exact.
+- [x] **Canonical Index** — 7,564 Python files mesh-wide collapsed to 2,324 unique via SHA256 content addressing.
+- [x] **A15 Rescue COMPLETE** — 1,355 unique .py files (26MB) secured on OptiPlex. Phone single-point-of-failure ELIMINATED.
+- [x] **128GB SanDisk Import COMPLETE** — 119,518 files / 66.4GB, count-exact verified on OptiPlex (usb128-import-20260913).
+- [x] **Vault Recovery Pipeline** — 6 giant tarballs located + stream-cracker built (memory-safe, CONFIRM=1 gated).
+- [x] **Formal Logic Engine** — axiom/definition/theorem chain verified GREEN, Merkle-anchored 68/68, HARD-MODE premise termination enforced.
+
+### PENDING — In Flight Now
+- [ ] **Vault Deep-Crack** — plan-mode scan of all archives incl. OpenRootArchives/*.tar.xz, then extraction folded into canonical index.
+- [ ] **recall rebuild over the 66GB import** — fold usb128-import-20260913 into canonical_index.db.
+
+### NEXT — The Ledger of Human Knowledge
+- [ ] **knowledge_ledger.py** — signed append-only ledger on SQLite with deterministic JSONL mirror and Merkle head anchoring.
+- [ ] **Tiered Graduation Gate** — Tier 0 public inbox → auto-validate → review → canonical chain. Everything graduates through transparent, open-source scripts.
+- [ ] **Bounty Board** — flagship bounties with empty falsifiable_claims until calc models fill them.
+
+### FLAGSHIP BOUNTIES (Tier 0 — Awaiting Falsifiable Math)
+- [ ] **Universal Clean Water Protocol** — microplastic-free vessel + filtration for every man, woman, and child on Earth. ENTRY CONDITION: materials + lifecycle cost model.
+- [ ] **Food Preservation Grid** — AeroCement aeroponic towers + tilapia aquaponics + freeze-drying driven by thermal-cascade waste heat.
+- [ ] **Global Mesh Telecom** — icosahedral geodesic-frequency satellite lattice (12 vertices, subdivision 10n²+2 per frequency). ENTRY CONDITION: per-person cost model must be COMPUTED.
+- [ ] **Cloud Nine Stations** — solar-thermal buoyant tensegrity spheres, ground-tethered, icosahedral placement.
+
+### ARCHITECTURE — Why This Holds
+SQLite = enforcement layer (append-only triggers, chain-walk queries, FTS5 search).
+JSONL mirror = public audit face (diffable, GitHub-anchorable).
+Merkle head = seal (third-party timestamp, later OP_RETURN anchoring).
+Dedup BEFORE chaining: only canonical survivors earn ledger entries. This is a library, not a landfill.
+ 5ac449c (README: append gameplan framework + verified status ledger (Sep 13 rescue session))
