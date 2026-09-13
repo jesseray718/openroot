@@ -21,3 +21,7 @@ scripts/*.bak.*
 sync-from-kai/models/*.gguf
 acre/ledger.jsonl
 *.bak.*
+
+# compiled artifacts — regenerate locally, never track
+sync-from-kai/build/
+sync-from-kai/models/
