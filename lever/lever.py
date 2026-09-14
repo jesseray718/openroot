@@ -139,11 +139,20 @@ def prune(commit=False):
 def joules(seconds=10, label="compute"):
     tdp = float(os.environ.get("CPU_WATTS", os.environ.get("BOX_TDP", "65")))
     def cpu_sample():
-        with open("/proc/stat") as f: parts = [float(x) for x in f.readline().split()[1:]]
-        idle = parts[3] + (parts[4] if len(parts) > 4 else 0)
-        return sum(parts), idle
+        try:
+            with open("/proc/stat") as f: parts = [float(x) for x in f.readline().split()[1:]]
+            idle = parts[3] + (parts[4] if len(parts) > 4 else 0)
+            return sum(parts), idle
+        except OSError:
+            return None, None   # Android denies /proc/stat; caller falls back to loadavg
     t1, i1 = cpu_sample(); time.sleep(seconds); t2, i2 = cpu_sample()
-    util = max(0.0, min(1.0, 1 - ((i2 - i1) / (t2 - t1)))) if t2 > t1 else 0.0
+    if t1 is None or t2 is None:
+        cores = os.cpu_count() or 8
+        try: la = float(open("/proc/loadavg").read().split()[0])
+        except Exception: la = cores * 0.25
+        util = max(0.0, min(1.0, la / cores))   # loadavg estimate, marked MODEL-grade
+    else:
+        util = max(0.0, min(1.0, 1 - ((i2 - i1) / (t2 - t1)))) if t2 > t1 else 0.0
     watts = tdp * (0.15 + 0.85 * util)   # idle floor + utilization draw
     j = watts * seconds
     c = conn()
