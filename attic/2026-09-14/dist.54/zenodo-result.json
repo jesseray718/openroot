@@ -1,0 +1,65 @@
+{
+  "created": "2026-07-10T10:29:40.452969+00:00",
+  "modified": "2026-07-10T10:29:40.720347+00:00",
+  "id": 21294113,
+  "conceptrecid": "21294112",
+  "doi": "10.5281/zenodo.21294113",
+  "conceptdoi": "10.5281/zenodo.21294112",
+  "doi_url": "https://doi.org/10.5281/zenodo.21294113",
+  "metadata": {
+    "title": "OpenRoot Core Unification Framework v1.0 — AX.UNI.FND.001",
+    "doi": "10.5281/zenodo.21294113",
+    "publication_date": "2026-07-10",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Jesse McMillen",
+        "affiliation": null
+      }
+    ],
+    "license": "cc-zero",
+    "imprint_publisher": "Zenodo",
+    "upload_type": "dataset",
+    "prereserve_doi": {
+      "doi": "10.5281/zenodo.21294113",
+      "recid": 21294113
+    }
+  },
+  "title": "OpenRoot Core Unification Framework v1.0 — AX.UNI.FND.001",
+  "links": {
+    "self": "https://zenodo.org/api/records/21294113",
+    "html": "https://zenodo.org/records/21294113",
+    "doi": "https://doi.org/10.5281/zenodo.21294113",
+    "parent_doi": "https://doi.org/10.5281/zenodo.21294112",
+    "badge": "https://zenodo.org/badge/doi/10.5281%2Fzenodo.21294113.svg",
+    "conceptbadge": "https://zenodo.org/badge/doi/10.5281%2Fzenodo.21294112.svg",
+    "files": "https://zenodo.org/api/records/21294113/files",
+    "bucket": "https://zenodo.org/api/files/96f11598-92e5-44e1-ae67-bac89de261ae",
+    "latest_draft": "https://zenodo.org/api/deposit/depositions/21294113",
+    "latest_draft_html": "https://zenodo.org/deposit/21294113",
+    "publish": "https://zenodo.org/api/deposit/depositions/21294113/actions/publish",
+    "edit": "https://zenodo.org/api/deposit/depositions/21294113/actions/edit",
+    "discard": "https://zenodo.org/api/deposit/depositions/21294113/actions/discard",
+    "newversion": "https://zenodo.org/api/deposit/depositions/21294113/actions/newversion",
+    "record": "https://zenodo.org/api/records/21294113",
+    "record_html": "https://zenodo.org/record/21294113",
+    "latest": "https://zenodo.org/api/records/21294113/versions/latest",
+    "latest_html": "https://zenodo.org/records/21294113/latest"
+  },
+  "record_id": 21294113,
+  "owner": 1683951,
+  "files": [
+    {
+      "id": "cb9b91af-dda1-4630-bd5e-aed30766bab5",
+      "filename": "unified-systems-v1.0.tar.gz",
+      "filesize": 109,
+      "checksum": "787bd2281ad36a0292053e25d4dc97c6",
+      "links": {
+        "self": "https://zenodo.org/api/records/21294113/files/cb9b91af-dda1-4630-bd5e-aed30766bab5",
+        "download": "https://zenodo.org/api/records/21294113/draft/files/unified-systems-v1.0.tar.gz/content"
+      }
+    }
+  ],
+  "state": "done",
+  "submitted": true
+}

@@ -1,0 +1,2 @@
+/data/data/com.termux/files/usr/bin/llvm-ar qc libllama-common-base.a "CMakeFiles/llama-common-base.dir/build-info.cpp.o"
+/data/data/com.termux/files/usr/bin/llvm-ranlib libllama-common-base.a

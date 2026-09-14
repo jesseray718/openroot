@@ -1,0 +1,2 @@
+/data/data/com.termux/files/usr/bin/llvm-ar qc libgguf-model-data.a "CMakeFiles/gguf-model-data.dir/gguf-model-data.cpp.o"
+/data/data/com.termux/files/usr/bin/llvm-ranlib libgguf-model-data.a

@@ -1,0 +1,3 @@
+=== OPENROOT UNIFIED PUBLISHER ===
+?? tokens/src/mint_ready_demo_H003_NodeZero.json
+[1.5/4] Creating artifact...

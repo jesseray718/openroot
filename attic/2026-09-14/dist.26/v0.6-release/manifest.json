@@ -1,0 +1,25 @@
+{
+  "version": "v0.6",
+  "date": "2026-07-09",
+  "author": "Jesse McMillen / One Human Family",
+  "license": "CC-BY-SA-4.0 (docs) / GPL-3.0 (code)",
+  "contents": {
+    "acre_validator.py": "ACRE PoPW validator v0.2 — submit/approve/finalize/demo",
+    "mint_ready_demo_H003_NodeZero.json": "Demo mint-ready record for H-003 Node Zero",
+    "SYSTEM-MAP.md": "Architecture diagram + dependency chain + feedback loops",
+    "ECOSYSTEM-MAP.md": "Full repo inventory, Four Engines, ACRE status, leverage points",
+    "NODE-SPLIT-FINANCIAL-STRUCTURE.md": "Full system cost split across 50 people + credit strategy",
+    "thermal_summary.csv": "H-003 Node Zero simulated sensor data (20 readings, avg ΔT 36°C)",
+    "thermal_readings.jsonl": "Raw JSONL thermal log"
+  },
+  "prior_artifacts": {
+    "v0.4": {
+      "zenodo": "10.5281/zenodo.21210931",
+      "ipfs": "QmcMjnAVN9FbQ77VwMPMCteb93U7W4REdZmZbPqoMBE4F"
+    },
+    "v0.5": {
+      "zenodo": "10.5281/zenodo.21225683",
+      "ipfs": "QmVJxfQmFoTVDp1GRui8bEKJ7x7J154h8RX3EmxQBcCrBt"
+    }
+  }
+}

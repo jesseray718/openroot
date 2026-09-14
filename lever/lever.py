@@ -126,10 +126,20 @@ def prune(commit=False):
     if commit and os.environ.get("CONFIRM") == "1":
         qdir = os.path.join(ROOT, "attic", now()[:10]); os.makedirs(qdir, exist_ok=True)
         moved = 0
+        import shutil
+        seq = 0
         for (p,) in c.execute("SELECT path FROM quarantine WHERE moved IS NULL"):
             if os.path.exists(p):
-                import shutil; shutil.move(p, os.path.join(qdir, os.path.basename(p))); moved += 1
+                base = os.path.basename(p.rstrip("/")) or "item"
+                dst = os.path.join(qdir, base)
+                while os.path.exists(dst):           # basename collision -> uniquify
+                    seq += 1; dst = os.path.join(qdir, base + "." + str(seq))
+                shutil.move(p, dst); moved += 1
                 c.execute("UPDATE quarantine SET moved=? WHERE path=?", (now(), p))
+            else:
+                c.execute("UPDATE quarantine SET moved=? WHERE path=?",  # reconcile half-moves
+                          ("RECONCILED-" + now() + " (source gone)", p))
+        c.commit()
         c.commit()
         print(f"[prune][CONFIRM] {moved} items moved to attic/{now()[:10]}")
         r = sh(f"gh repo create jesseray718/openroot-quarantine --private --confirm 2>/dev/null || true")

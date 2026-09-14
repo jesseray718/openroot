@@ -1,0 +1,40 @@
+{
+  "title": "Black Locust Coppicing + Rocket Mass Heater: Carbon-Negative Energy System Specification v1.0",
+  "upload_type": "publication",
+  "publication_type": "other",
+  "description": "Full specification for DV.GEN.BL.RMH.001 — a carbon-negative, dispatchable thermal node that integrates black locust coppice forestry with Rocket Mass Heaters into the OpenRoot H-003 Thermal Cascade. Produces verifiable thermal kWh and soil carbon sequestration as PoPW outputs for ACRE tokenization.",
+  "creators": [
+    {
+      "name": "McMillen, Jesse",
+      "affiliation": "OpenRoot",
+      "orcid": ""
+    }
+  ],
+  "keywords": [
+    "black locust",
+    "coppice",
+    "rocket mass heater",
+    "carbon negative",
+    "thermal energy",
+    "PoPW",
+    "ACRE",
+    "H-003",
+    "OpenRoot",
+    "permaculture",
+    "soil carbon"
+  ],
+  "license": "CC-BY-4.0",
+  "access_right": "open",
+  "communities": [
+    {
+      "identifier": "openroot"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "relation": "isSupplementTo",
+      "identifier": "https://github.com/jesseray718/openroot/blob/main/docs/specs/black-locust-carbon-negative-energy-v1.md",
+      "resource_type": "publication-report"
+    }
+  ]
+}
