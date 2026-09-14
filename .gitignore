@@ -25,3 +25,4 @@ acre/ledger.jsonl
 # compiled artifacts — regenerate locally, never track
 sync-from-kai/build/
 sync-from-kai/models/
+*.db
