@@ -146,11 +146,21 @@ def joules(seconds=10, label="compute"):
             idle = parts[3] + (parts[4] if len(parts) > 4 else 0)
             return sum(parts), idle
         except OSError:
-            return None, None   # Android denies /proc/stat; caller falls back to loadavg
+            pass   # untrusted_app: SELinux blocks /proc/stat (Android 8+)
+        try:       # rish runs in shell domain (uid 2000) where /proc/stat IS readable
+            import subprocess
+            out = subprocess.run(["rish", "-c", "cat /proc/stat"],
+                                 capture_output=True, text=True, timeout=15).stdout
+            parts = [float(x) for x in out.split("\n")[0].split()[1:]]
+            idle = parts[3] + (parts[4] if len(parts) > 4 else 0)
+            return sum(parts), idle
+        except Exception:
+            return None, None   # caller falls back to loadavg estimate
     t1, i1 = cpu_sample(); time.sleep(seconds); t2, i2 = cpu_sample()
     if t1 is None or t2 is None:
         cores = os.cpu_count() or 8
         try: la = float(open("/proc/loadavg").read().split()[0])
+        # NOTE: reaching here means rish failed too — joules row is MODEL-grade estimate
         except Exception: la = cores * 0.25
         util = max(0.0, min(1.0, la / cores))   # loadavg estimate, marked MODEL-grade
     else:
