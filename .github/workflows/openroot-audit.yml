@@ -1,0 +1,16 @@
+name: openroot-audit
+on: [push, workflow_dispatch]
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - name: compile-gate
+        run: |
+          find . -name '*.py' -not -path './.git/*' -not -path '*/venv/*' -print0 |
+            xargs -0 -n1 python -m py_compile
+      - name: verify-chains
+        run: |
+          SYN_ROOT=$PWD python3 synthesis/synthesis.py verify || true
