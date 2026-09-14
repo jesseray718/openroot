@@ -1,4 +1,4 @@
-# OPENROOT LIVING STATE — 2026-09-14T06:54:44Z
+# OPENROOT LIVING STATE — 2026-09-14T06:59:37Z
 > auto-regenerated; do not hand-edit.
 ## Resume: chain d849685ae3f72610 (6 blocks, verify: synthesis/synthesis.py verify)
 ## ACRE mint gate: 0 J MEASURED — thermal instrumentation is the standing blocker
@@ -15,15 +15,11 @@
 
 Bounties open: 1 | compute joules logged: 116.9
 ## Recent commits
+aac6a39 heal: reseed ledger after rebase data-loss; untrack *.db; close write-authority (verified); forge v0.1 wired
+022d7d9 pulse: state refresh
 0556a31 pulse: state refresh
-1025ac0 pulse: state refresh
-a71c22a pulse: state refresh
 ## Dirty tree
-M .gitignore
- M PERMACULTURE.md
-D  data/terminal_mining.db
-D  lever/db/lever.db
-?? bin/circuit_forge.py
+(clean)
 
 Writer node: OptiPlex /home/jesse/src/openroot | A15 read-only verify
 Concepts: synthesis/SYNTHESIS_CARD.md + docs/concepts/CONCEPTS_INDEX.md
