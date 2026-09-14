@@ -3,7 +3,7 @@
 import collections, datetime, glob, hashlib, os, re, sqlite3, subprocess
 LOGS = "/storage/emulated/0/Documents/terminal-logs"
 DB = os.path.expanduser("~/src/openroot/data/terminal_mining.db")
-PAT = re.compile(r'^\$\s+(.*)$|^\$\s*(.+)$')
+PAT = re.compile(r"^\S*\s*\$\s+(.*)$")  # prompt-anchored
 def sh(c): return subprocess.run(c, shell=True, capture_output=True, text=True).stdout.strip()
 os.makedirs(os.path.dirname(DB), exist_ok=True)
 c = sqlite3.connect(DB)
