@@ -1,4 +1,4 @@
-# OPENROOT LIVING STATE — 2026-09-14T06:12:13Z
+# OPENROOT LIVING STATE — 2026-09-14T06:14:16Z
 > auto-regenerated; do not hand-edit.
 ## Resume: chain d849685ae3f72610 (6 blocks, verify: synthesis/synthesis.py verify)
 ## ACRE mint gate: 0 J MEASURED — thermal instrumentation is the standing blocker
@@ -12,15 +12,13 @@
 
 Bounties open: 1 | compute joules logged: 116.9
 ## Recent commits
+d82f743 fix: collision-proof prune w/ half-move reconciliation; mining regex widened; gate rerun
+0afbcfc pulse: state refresh
 a7cc07f pulse: state refresh
-2d3a709 pulse: state refresh
-6f104c7 meter: layered phone joules reading pending rish probe
 ## Dirty tree
-D 02_MODULES/computational/agaperesonance/agaperesonance/__pycache__/__init__.cpython-314.pyc
- D 02_MODULES/computational/agaperesonance/agaperesonance/__pycache__/core.cpython-314.pyc
- D 02_MODULES/computational/etaledger/etaledger/__pycache__/__init__.cpython-314.pyc
- D 02_MODULES/computational/etaledger/etaledger/__pycache__/core.cpython-314.pyc
- D 02_MODULES/computational/fractallattice/fractallattice/__pycache__/__init__.cpython-314.pyc
+M PERMACULTURE.md
+ M data/terminal_mining.db
+ M lever/db/lever.db
 
 Writer node: OptiPlex /home/jesse/src/openroot | A15 read-only verify
 Concepts: synthesis/SYNTHESIS_CARD.md + docs/concepts/CONCEPTS_INDEX.md
