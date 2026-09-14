@@ -1,25 +1,25 @@
-# OPENROOT LIVING STATE — 2026-09-14T05:59:07Z
+# OPENROOT LIVING STATE — 2026-09-14T06:01:59Z
 > auto-regenerated; do not hand-edit.
 ## Resume: chain d849685ae3f72610 (6 blocks, verify: synthesis/synthesis.py verify)
 ## ACRE mint gate: 0 J MEASURED — thermal instrumentation is the standing blocker
 
 ## Least-resistance queue (fire first)
-- [finance] **prepaid-number + TOTP** (resistance 0.15)
-- [node] **OptiPlex write-authority** (resistance 0.2)
-- [need] **MEASURED joule row** (resistance 0.45)
-- [node] **A15 7B-serving probe** (resistance 0.5)
-- [path] **autonomous voice scheduler** (resistance 0.75)
-- [finance] **SaaS/API monetization** (resistance 0.8)
-- [resource_opensrc] **github-sponsors + CI badges** (resistance 0.9)
-- [path] **Big Beautiful Bill research** (resistance 1.0)
+- [permaculture] **P03 Obtain a Yield** (resistance 1.55)
+- [permaculture] **P04 Self-Regulation & Accept Feedback** (resistance 1.55)
+- [permaculture] **P06 Produce No Waste** (resistance 1.55)
+- [permaculture] **P07 Design From Patterns to Details** (resistance 1.55)
+- [permaculture] **P11 Use Edges & Value the Marginal** (resistance 1.55)
 
-Bounties open: 1 | compute joules logged: 0
+Bounties open: 1 | compute joules logged: 116.9
 ## Recent commits
-22432d7 gate: 12 permaculture principles computationally checked; grants matrix skeleton; audit fired; specs regenerated
-bab2f12 pulse: state refresh
-0ed0c00 pulse: state refresh
+c46babb pulse: state refresh
+039400c gate: 12 permaculture principles computationally checked; grants matrix skeleton; audit fired; specs regenerated
+e7e4426 pulse: state refresh
 ## Dirty tree
-(clean)
+M PERMACULTURE.md
+ M lever/db/lever.db
+ M lever/lever.py
+?? lever/audits/repo-hygiene-2026-09-14T060157Z.md
 
 Writer node: OptiPlex /home/jesse/src/openroot | A15 read-only verify
 Concepts: synthesis/SYNTHESIS_CARD.md + docs/concepts/CONCEPTS_INDEX.md
