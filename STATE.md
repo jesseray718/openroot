@@ -1,4 +1,4 @@
-# OPENROOT LIVING STATE — 2026-09-14T06:01:59Z
+# OPENROOT LIVING STATE — 2026-09-14T06:04:11Z
 > auto-regenerated; do not hand-edit.
 ## Resume: chain d849685ae3f72610 (6 blocks, verify: synthesis/synthesis.py verify)
 ## ACRE mint gate: 0 J MEASURED — thermal instrumentation is the standing blocker
@@ -12,14 +12,11 @@
 
 Bounties open: 1 | compute joules logged: 116.9
 ## Recent commits
+5295196 debug: push divergence healed, LEVER_LOCAL bypass, box joule baseline, models registered, gate rerun
+e3fe13c pulse: state refresh
 c46babb pulse: state refresh
-039400c gate: 12 permaculture principles computationally checked; grants matrix skeleton; audit fired; specs regenerated
-e7e4426 pulse: state refresh
 ## Dirty tree
-M PERMACULTURE.md
- M lever/db/lever.db
- M lever/lever.py
-?? lever/audits/repo-hygiene-2026-09-14T060157Z.md
+(clean)
 
 Writer node: OptiPlex /home/jesse/src/openroot | A15 read-only verify
 Concepts: synthesis/SYNTHESIS_CARD.md + docs/concepts/CONCEPTS_INDEX.md
