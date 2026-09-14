@@ -26,3 +26,8 @@ acre/ledger.jsonl
 sync-from-kai/build/
 sync-from-kai/models/
 *.db
+*.tar.gz
+data/rescue_staging/
+attic/
+*.egg-info
+*.bak
