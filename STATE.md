@@ -1,19 +1,25 @@
-# OPENROOT LIVING STATE — 2026-09-14T05:33:51Z
+# OPENROOT LIVING STATE — 2026-09-14T05:37:01Z
 > auto-regenerated; do not hand-edit.
-## Resume: chain none (0 blocks, verify: synthesis/synthesis.py verify)
+## Resume: chain d849685ae3f72610 (6 blocks, verify: synthesis/synthesis.py verify)
 ## ACRE mint gate: 0 J MEASURED — thermal instrumentation is the standing blocker
 
 ## Least-resistance queue (fire first)
+- [finance] **prepaid-number + TOTP** (resistance 0.15)
+- [node] **OptiPlex write-authority** (resistance 0.2)
+- [need] **MEASURED joule row** (resistance 0.45)
+- [node] **A15 7B-serving probe** (resistance 0.5)
+- [path] **autonomous voice scheduler** (resistance 0.75)
+- [finance] **SaaS/API monetization** (resistance 0.8)
+- [resource_opensrc] **github-sponsors + CI badges** (resistance 0.9)
+- [path] **Big Beautiful Bill research** (resistance 1.0)
 
-Bounties open: 0 | compute joules logged: 0
+Bounties open: 1 | compute joules logged: 0
 ## Recent commits
+98e801f deploy: synthesis+lever from phone tarball; pulse engine online
+d01b111 pulse: state refresh
 17a72d1 README: append gameplan framework + verified status ledger (Sep 13 rescue session)
-b718da9 canon: Opencell Thermal System design canon v1 + session close-out bridge
-69294cc hygiene: untrack compiled artifacts (build/, models/); reclaim ~430 MB from every clone
 ## Dirty tree
-?? bin/resume.sh
-?? bin/state_pulse.py
-?? dist/openroot-synth-lever-20260914.tar.xz
+(clean)
 
 Writer node: OptiPlex /home/jesse/src/openroot | A15 read-only verify
 Concepts: synthesis/SYNTHESIS_CARD.md + docs/concepts/CONCEPTS_INDEX.md
