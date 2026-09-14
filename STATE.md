@@ -1,4 +1,4 @@
-# OPENROOT LIVING STATE — 2026-09-14T06:04:11Z
+# OPENROOT LIVING STATE — 2026-09-14T06:09:13Z
 > auto-regenerated; do not hand-edit.
 ## Resume: chain d849685ae3f72610 (6 blocks, verify: synthesis/synthesis.py verify)
 ## ACRE mint gate: 0 J MEASURED — thermal instrumentation is the standing blocker
@@ -12,11 +12,12 @@
 
 Bounties open: 1 | compute joules logged: 116.9
 ## Recent commits
-5295196 debug: push divergence healed, LEVER_LOCAL bypass, box joule baseline, models registered, gate rerun
-e3fe13c pulse: state refresh
-c46babb pulse: state refresh
+2d3a709 pulse: state refresh
+6f104c7 meter: layered phone joules reading pending rish probe
+e7a2a4a meter: layered phone joules reading (direct -> rish shell-domain -> loadavg); phone node synced
 ## Dirty tree
-(clean)
+M lever/db/lever.db
+?? attic/
 
 Writer node: OptiPlex /home/jesse/src/openroot | A15 read-only verify
 Concepts: synthesis/SYNTHESIS_CARD.md + docs/concepts/CONCEPTS_INDEX.md
