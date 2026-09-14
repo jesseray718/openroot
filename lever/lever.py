@@ -32,7 +32,9 @@ def conn():
     os.makedirs(os.path.dirname(DB), exist_ok=True)
     c = sqlite3.connect(DB); c.executescript(SCHEMA); return c
 def sh(cmd, **kw): return subprocess.run(shlex.split(cmd), capture_output=True, text=True, **kw)
-def ssh(cmd): return sh(f"ssh -o ConnectTimeout=8 {BOX} {shlex.quote(cmd)}")
+def ssh(cmd):
+    if os.environ.get("LEVER_LOCAL") == "1": return sh(cmd)  # on the box itself, no ssh hop
+    return sh(f"ssh -o ConnectTimeout=8 {BOX} {shlex.quote(cmd)}")
 
 # ---------- repos: gh snapshot ----------
 def repos():
