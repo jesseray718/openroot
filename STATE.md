@@ -1,4 +1,4 @@
-# OPENROOT LIVING STATE — 2026-09-14T05:44:00Z
+# OPENROOT LIVING STATE — 2026-09-14T05:49:03Z
 > auto-regenerated; do not hand-edit.
 ## Resume: chain d849685ae3f72610 (6 blocks, verify: synthesis/synthesis.py verify)
 ## ACRE mint gate: 0 J MEASURED — thermal instrumentation is the standing blocker
@@ -15,11 +15,11 @@
 
 Bounties open: 1 | compute joules logged: 0
 ## Recent commits
+0a0403b pulse: state refresh
 a329c0e pulse: state refresh
 d164a5e pulse: state refresh
-98e801f deploy: synthesis+lever from phone tarball; pulse engine online
 ## Dirty tree
-(clean)
+?? bin/seal_notes.sh
 
 Writer node: OptiPlex /home/jesse/src/openroot | A15 read-only verify
 Concepts: synthesis/SYNTHESIS_CARD.md + docs/concepts/CONCEPTS_INDEX.md
