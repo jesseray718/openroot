@@ -1,4 +1,4 @@
-# OPENROOT LIVING STATE — 2026-09-16T02:36:27Z
+# OPENROOT LIVING STATE — 2026-09-16T02:41:31Z
 > auto-regenerated; do not hand-edit.
 ## Resume: chain d849685ae3f72610 (6 blocks, verify: synthesis/synthesis.py verify)
 ## ACRE mint gate: 0 J MEASURED — thermal instrumentation is the standing blocker
@@ -15,9 +15,9 @@
 
 Bounties open: 1 | compute joules logged: 116.9
 ## Recent commits
+cbc80cc pulse: state refresh
 7767e56 pulse: state refresh
 bc874e8 pulse: state refresh
-c93322b pulse: state refresh
 ## Dirty tree
 (clean)
 
