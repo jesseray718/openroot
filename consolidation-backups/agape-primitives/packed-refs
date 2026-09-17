@@ -1,0 +1,8 @@
+# pack-refs with: peeled fully-peeled sorted 
+3c2caa5536a7d7666838f876c5eaa554ca1b091c refs/heads/chore/uplift-v4-20260828-020649
+71b03d2cae280c169cac634ba2f4470d279fdabb refs/heads/chore/uplift-v4-20260828-053524
+5c2bc82739132981af54a93af8d04a31886827ce refs/heads/ci/shared-python-quality
+81408767cc653f95272f90fc424b8b0f2097ddea refs/heads/main
+4fd499b8a10bb16c91c6035b6036381bce547798 refs/heads/master
+3c2caa5536a7d7666838f876c5eaa554ca1b091c refs/pull/1/head
+71b03d2cae280c169cac634ba2f4470d279fdabb refs/pull/2/head

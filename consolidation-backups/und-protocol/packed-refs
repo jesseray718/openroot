@@ -1,0 +1,6 @@
+# pack-refs with: peeled fully-peeled sorted 
+53395a184934c051d24721febff6fb234684ecf7 refs/heads/chore/uplift-v4-20260828-020649
+cea531740c179b44adb77a690ba6d4dc9bd37f57 refs/heads/chore/uplift-v4-20260828-053524
+47c112508022d389cbde1d6c4baae2aa05d5ef9d refs/heads/main
+53395a184934c051d24721febff6fb234684ecf7 refs/pull/1/head
+cea531740c179b44adb77a690ba6d4dc9bd37f57 refs/pull/2/head
