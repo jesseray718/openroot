@@ -1,0 +1,17 @@
+# pack-refs with: peeled fully-peeled sorted 
+b35593b44d7b03ade9502bad13676c558b40139f refs/heads/chore/foundation-uplift-20260828-225816
+96ef7e9751b68839727f42480c1e6a04b1686786 refs/heads/chore/foundation-uplift-20260828-230544
+4907a7dfa77e35f17d808fb751fefe04fc3bf467 refs/heads/chore/uplift-baseline-20260828-234402
+c00a05cef9907157a2f333884c30b685f0d6c585 refs/heads/chore/uplift-v4-20260828-020649
+0025674e63cd8a41a166ec19d59a6d56e3c31489 refs/heads/chore/uplift-v4-20260828-053524
+41abe72252e00ec14571be43bff33d2b7cc90802 refs/heads/ci/shared-python-quality
+90b4cccc136589e4030efe015b63f6a95e591e2f refs/heads/main
+c00a05cef9907157a2f333884c30b685f0d6c585 refs/pull/1/head
+0025674e63cd8a41a166ec19d59a6d56e3c31489 refs/pull/2/head
+b35593b44d7b03ade9502bad13676c558b40139f refs/pull/3/head
+96ef7e9751b68839727f42480c1e6a04b1686786 refs/pull/4/head
+4907a7dfa77e35f17d808fb751fefe04fc3bf467 refs/pull/5/head
+7a4ab8e70c56fe2974c615d8093a4b007530d88b refs/pull/6/head
+6def54f0d2763ee996780affd3199d6fe2d2db8b refs/pull/7/head
+41abe72252e00ec14571be43bff33d2b7cc90802 refs/pull/8/head
+7f512a148cadda9089e606497dc3829d47336df9 refs/pull/9/head

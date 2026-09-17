@@ -1,0 +1,24 @@
+# pack-refs with: peeled fully-peeled sorted 
+eec3d011383ae0d80082ac31f66f0e9f7434718e refs/heads/chore/knowledge-unify-20260901-011802-aerocement-
+5db2fa6b7689bf9bd14fc38e0bcf2904c6a88a94 refs/heads/chore/uplift-baseline-20260828-234509
+6f180502d4415f614448f34a85134ae77dee3c84 refs/heads/chore/uplift-lite-20260827-231056
+3ddf54ebcbcb74abfb0644cd209e6f635edb5d68 refs/heads/chore/uplift-lite-20260827-231618
+c0510a49f91003ff7d74b5a47eedbd7dae5eb727 refs/heads/chore/uplift-lite-20260828-011224
+cd88e209b21c7e9d45f6342a08df040f615d0f12 refs/heads/chore/uplift-lite-20260828-012150
+7fa928c772fca21d9ac32b12e1e64321aad0a784 refs/heads/chore/uplift-lite-20260828-015227
+afdcccf44c012a01c2976cb8f84cdc088e3e16f6 refs/heads/chore/uplift-v4-20260828-020649
+c546fdf404b74cd76ba15c971064b24b51231719 refs/heads/chore/uplift-v4-20260828-053524
+b4a6618ca58fc5aabd8547ebcb4665b3ba1559f0 refs/heads/main
+342a12fb7a83eece821deb408a8c740922c2bab8 refs/heads/thesis-restructure
+6f180502d4415f614448f34a85134ae77dee3c84 refs/pull/1/head
+f9a294bbbb96a12a2959917289db5869e2ddc20d refs/pull/10/head
+ca10c7ad5a2dd705da455c745fb1434321ecbfb3 refs/pull/11/head
+3ddf54ebcbcb74abfb0644cd209e6f635edb5d68 refs/pull/2/head
+c0510a49f91003ff7d74b5a47eedbd7dae5eb727 refs/pull/3/head
+cd88e209b21c7e9d45f6342a08df040f615d0f12 refs/pull/4/head
+7fa928c772fca21d9ac32b12e1e64321aad0a784 refs/pull/5/head
+afdcccf44c012a01c2976cb8f84cdc088e3e16f6 refs/pull/6/head
+c546fdf404b74cd76ba15c971064b24b51231719 refs/pull/7/head
+5db2fa6b7689bf9bd14fc38e0bcf2904c6a88a94 refs/pull/8/head
+c5f25cda1cded8c3a3bbc169471f79f2d3db2ea2 refs/pull/9/head
+07c52becbe2f0d5741e0d3ab9232772a146a5abf refs/tags/v1.0.0

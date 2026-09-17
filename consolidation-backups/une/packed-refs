@@ -1,0 +1,13 @@
+# pack-refs with: peeled fully-peeled sorted 
+036c9c1ff466a0d8c92e68127ba1cdf648510637 refs/heads/agape/add-coordination-theorem
+c00eb69a268b6e632ef2479801006eec7ae30934 refs/heads/chore/uplift-v4-20260828-020649
+8640f7700af042980ef0ccad7b187c5a5aff4226 refs/heads/chore/uplift-v4-20260828-053524
+f66ee4d0e64936d2576e12a30b5ba2ae5c208f09 refs/heads/main
+c00eb69a268b6e632ef2479801006eec7ae30934 refs/pull/7/head
+8640f7700af042980ef0ccad7b187c5a5aff4226 refs/pull/8/head
+57e1122d0e49611c14543326fdd4893ac6b4cb78 refs/tags/v0.3.0-dense
+23d3419f646dac522717227f285b046d1fa1288f refs/tags/v1.0-fractal-scaling
+^62d0251b089e99d0ad80d4881186309d4199ff49
+61df1d0f2f0fb2e78b736a63a4119e543dc84803 refs/tags/v1.1-mesh-expansion
+2322eb8e928fdba60dd02a2d3ef419031232f5f9 refs/tags/v1.2-recovery
+^e6a1baf6489e86d5a046042f5cfb874c8eababf4
