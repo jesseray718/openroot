@@ -31,9 +31,11 @@ CLUSTERS = {
 }
 
 def q(ident):  # quote sqlite identifier
+    """Return an escaped SQLite identifier enclosed in double quotes."""
     return '"' + ident.replace('"', '""') + '"'
 
 def scan_dbs():
+    """Return configured keyword-cluster matches from local SQLite ledgers."""
     hits = []
     for db in sorted(glob.glob(os.path.join(DATA_DIR, "*.db"))):
         if os.path.basename(db) == os.path.basename(CACHE_DB):
@@ -92,6 +94,7 @@ def scan_files():
         return []
 
 def ollama(prompt, model, timeout=600):
+    """Submit a prompt to a local Ollama model and return its response text."""
     payload = json.dumps({"model": model, "prompt": prompt, "stream": False})
     req = urllib.request.Request(OLLAMA_URL, data=payload.encode(),
                                  headers={"Content-Type": "application/json"})
@@ -99,6 +102,7 @@ def ollama(prompt, model, timeout=600):
         return json.loads(r.read())["response"]
 
 def ensure_cache():
+    """Initialize the proof cache schema and return an open connection."""
     con = sqlite3.connect(CACHE_DB)
     con.row_factory = sqlite3.Row
     con.execute("""CREATE TABLE IF NOT EXISTS proofs (
@@ -109,7 +113,11 @@ def ensure_cache():
     return con
 
 def prove(statement):
-    """Cache-first theorem prover. PROVED -> never recomputed."""
+    """Return a cached or newly graded proof result for a statement.
+
+    Cached successful and failed results are not recomputed. Failures while
+    generating or grading a new proof produce an ``UNBANKED`` result.
+    """
     tid = hashlib.sha256(statement.encode()).hexdigest()[:16]
     con = ensure_cache()
     row = con.execute(
@@ -150,6 +158,7 @@ def prove(statement):
         con.close()
 
 def main():
+    """Scan local knowledge sources, exercise the proof cache, and write a report."""
     print("[stage 1] scanning sqlite ledgers in %s" % DATA_DIR)
     db_hits = scan_dbs()
     print("[stage 2] sweeping repo text files (%d ledger hits so far)"

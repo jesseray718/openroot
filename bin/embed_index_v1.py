@@ -19,6 +19,7 @@ EXTS = (".md", ".json", ".jsonl", ".py", ".sh", ".txt")
 CHUNK_CHARS = 1500
 
 def iter_files():
+    """Yield indexable file paths below the repository root."""
     for cur, dirs, files in os.walk(ROOT):
         dirs[:] = [d for d in dirs if d not in SKIP_DIRS]
         for f in files:
@@ -26,6 +27,7 @@ def iter_files():
                 yield os.path.join(cur, f)
 
 def chunk_text(text):
+    """Return chunks formed while accumulating the input's lines."""
     paras, buf = [], ""
     for line in text.splitlines(keepends=True):
         buf += line
@@ -35,9 +37,12 @@ def chunk_text(text):
         paras.append(buf)
     return paras
 
-def sha(t): return hashlib.sha256(t.encode("utf-8", "replace")).hexdigest()
+def sha(t):
+    """Return the SHA-256 digest of text encoded as UTF-8 with replacement."""
+    return hashlib.sha256(t.encode("utf-8", "replace")).hexdigest()
 
 def build():
+    """Embed previously unseen repository chunks and store them in the index."""
     con = sqlite3.connect(DB)
     con.execute("""CREATE TABLE IF NOT EXISTS chunks (
         sha256 TEXT PRIMARY KEY, path TEXT, chunk TEXT, embedding BLOB)""")
@@ -66,6 +71,7 @@ def build():
           "%d total chunks" % (new, skipped, new + skipped))
 
 def query(qtext, k=5):
+    """Print the top indexed chunks ranked by cosine similarity to a query."""
     con = sqlite3.connect(DB)
     rows = con.execute("SELECT path, chunk, embedding FROM chunks").fetchall()
     con.close()
@@ -85,6 +91,7 @@ def query(qtext, k=5):
         print("  %.3f  %s :: %s" % (score, path, chunk[:110].replace("\n", " ")))
 
 def main():
+    """Run query mode, or build the index and execute demonstration queries."""
     if len(sys.argv) > 1:              # query mode — instant, no rebuild
         query(" ".join(sys.argv[1:])); return
     print("[stage-1] incremental embed of %s (exts: %s)" % (ROOT, ",".join(EXTS)))
