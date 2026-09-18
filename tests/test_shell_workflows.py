@@ -72,6 +72,16 @@ class ShellWorkflowTests(unittest.TestCase):
         self.assertIn("[FAIL]", rejected.stdout)
         self.assertIn("[HELD]", rejected.stdout)
 
+    def test_hype_gate_rejects_greater_than_claims(self):
+        manuscript = self.root / "unsupported-comparison.md"
+        manuscript.write_text("Measured efficiency > the published benchmark.\n")
+
+        rejected = self.run_script("hype_gate.sh", str(manuscript))
+
+        self.assertEqual(1, rejected.returncode)
+        self.assertIn("[FAIL] >", rejected.stdout)
+        self.assertIn("[HELD]", rejected.stdout)
+
     def test_abstract_grade_sends_only_abstract_body_and_has_offline_fallback(self):
         manuscript = self.root / "paper.md"
         manuscript.write_text(
