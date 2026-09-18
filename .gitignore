@@ -1,3 +1,4 @@
 .aider.tags.cache.v4/
 *.pyc
 __pycache__/
+sdcard-sync
