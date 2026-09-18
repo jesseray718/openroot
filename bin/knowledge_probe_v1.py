@@ -31,9 +31,11 @@ CLUSTERS = {
 }
 
 def q(ident):  # quote sqlite identifier
+    """Return an SQLite identifier with embedded quotes escaped."""
     return '"' + ident.replace('"', '""') + '"'
 
 def scan_dbs():
+    """Return concept-cluster matches from readable ledgers except the proof cache."""
     hits = []
     for db in sorted(glob.glob(os.path.join(DATA_DIR, "*.db"))):
         if os.path.basename(db) == os.path.basename(CACHE_DB):
@@ -78,7 +80,10 @@ def scan_dbs():
     return hits
 
 def scan_files():
-    """Bounded grep sweep of repo text (excludes .git, venv)."""
+    """Return text-file paths found by a bounded concept-cluster grep sweep.
+
+    Sweep failures are reported and produce an empty result.
+    """
     pattern = "|".join(re.escape(t) for ts in CLUSTERS.values() for t in ts)
     cmd = ["grep", "-rilE", pattern, "--include=*.md", "--include=*.json",
            "--include=*.jsonl", "--include=*.py", "--include=*.sh",
@@ -92,6 +97,7 @@ def scan_files():
         return []
 
 def ollama(prompt, model, timeout=600):
+    """Send a nonstreaming generation request and return the response text."""
     payload = json.dumps({"model": model, "prompt": prompt, "stream": False})
     req = urllib.request.Request(OLLAMA_URL, data=payload.encode(),
                                  headers={"Content-Type": "application/json"})
@@ -99,6 +105,7 @@ def ollama(prompt, model, timeout=600):
         return json.loads(r.read())["response"]
 
 def ensure_cache():
+    """Initialize the proof cache and return its open SQLite connection."""
     con = sqlite3.connect(CACHE_DB)
     con.row_factory = sqlite3.Row
     con.execute("""CREATE TABLE IF NOT EXISTS proofs (
@@ -109,7 +116,11 @@ def ensure_cache():
     return con
 
 def prove(statement):
-    """Cache-first theorem prover. PROVED -> never recomputed."""
+    """Return the cached or newly model-graded status for a statement.
+
+    Previously proved and failed statements are not recomputed. New results are
+    saved in the proof cache; model failures return an ``UNBANKED`` status.
+    """
     tid = hashlib.sha256(statement.encode()).hexdigest()[:16]
     con = ensure_cache()
     row = con.execute(
@@ -150,6 +161,7 @@ def prove(statement):
         con.close()
 
 def main():
+    """Scan ledgers and files, exercise the proof cache, and write the probe report."""
     print("[stage 1] scanning sqlite ledgers in %s" % DATA_DIR)
     db_hits = scan_dbs()
     print("[stage 2] sweeping repo text files (%d ledger hits so far)"
