@@ -12,9 +12,11 @@ CONFIRM = os.environ.get("CONFIRM", "0") == "1"
 SEED_FILE = CTX_BRIDGE / ("session-" + datetime.now().strftime("%Y%m%d_%H%M%S") + "-unified.md")
 
 def log(stage, msg, status="[ok]"):
+    """Print a formatted workflow status message."""
     print("   %s %s: %s" % (status, stage, msg))
 
 def sha256_file(p):
+    """Return the SHA-256 hex digest of a file's contents."""
     h = hashlib.sha256()
     with open(p, "rb") as f:
         for chunk in iter(lambda: f.read(8192), b""):
@@ -22,6 +24,7 @@ def sha256_file(p):
     return h.hexdigest()
 
 def init_dbs():
+    """Create the data directory and initialize the research and lesson ledgers."""
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     conn = sqlite3.connect(DATA_DIR / "research.db")
     c = conn.cursor()
@@ -98,6 +101,7 @@ TEMPLATE = """# {sub}: Measurement Protocol and Results
 BANNED = [r"free\s+energy|over.?unity|perpetual", r"breakthrough|revolutionary", r"unprecedented|miracle", r"magna.?flux|zero.?point"]
 
 def hype_gate(md_path):
+    """Report banned phrases in a Markdown file and return whether none were found."""
     text = Path(md_path).read_text()
     fails = []
     for pat in BANNED:
@@ -113,6 +117,10 @@ def hype_gate(md_path):
     return True
 
 def run(cmd, input_text=None, timeout=120):
+    """Run a command and return its exit code and stripped standard output.
+
+    Process-launch and timeout errors are converted to ``(1, "")``.
+    """
     try:
         r = subprocess.run(cmd, input=input_text, capture_output=True, text=True, timeout=timeout)
         return r.returncode, r.stdout.strip()
@@ -120,6 +128,7 @@ def run(cmd, input_text=None, timeout=120):
         return 1, ""
 
 def ollama_run(model, prompt, input_text=None, timeout=120):
+    """Run an Ollama prompt and return its output or an offline sentinel."""
     try:
         r = subprocess.run(["ollama", "run", model, prompt], input=input_text, capture_output=True, text=True, timeout=timeout)
         if r.returncode == 0 and r.stdout.strip():
@@ -128,6 +137,11 @@ def ollama_run(model, prompt, input_text=None, timeout=120):
         pass
     return "UNAVAILABLE (model offline)"
 def main():
+    """Build workflow artifacts, audit visibility, and record a session handoff.
+
+    When ``CONFIRM=1``, nonpublic repositories found by the visibility audit are
+    changed to public.
+    """
     os.chdir(WORKSPACE)
     print("[canary-head] unified_workflow_v1 paste intact")
     init_dbs()
