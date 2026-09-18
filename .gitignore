@@ -26,3 +26,13 @@ acre/ledger.jsonl
 sync-from-kai/build/
 sync-from-kai/models/
 *.db
+
+# heredoc-corruption artifacts + live DB sidecars + gate files
+PYEOF
+THRESH
+continue
+if
+return
+*.sqlite-shm
+*.sqlite-wal
+*.suggested.md
