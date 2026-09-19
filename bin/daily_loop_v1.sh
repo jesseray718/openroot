@@ -14,7 +14,7 @@ case "${1:-}" in
     bash bin/task_recall.sh "$2"
     "${SQLITE_PARAMS[@]}" data/lessons.db \
       "INSERT INTO tasks (description, lesson_ids, outcome)
-       SELECT ?, '', 'pending' WHERE NOT EXISTS
+       SELECT ?, '[]', 'pending' WHERE NOT EXISTS
        (SELECT 1 FROM tasks WHERE description=? AND outcome='pending')" "$2" "$2"
     echo "[gate] lessons above are your constraints. work the task now."
     echo "       when done: daily_loop_v1.sh finish $ '?' '<ok|new_mistake|repeat_mistake>' '[what happened]'"
