@@ -6,3 +6,7 @@ sdcard-sync
 # runtime writable state — regenerate, never track
 data/*.db
 !data/env_map.json
+
+venv/
+consolidation-backups/
+*.tar.gz
