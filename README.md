@@ -20,3 +20,10 @@ https://github.com/jesseray718/openroot/releases
 
 ## License
 GPL-3.0 code, CC-BY-SA-4.0 docs.
+
+## Contributors
+
+OpenRoot is built by its contributors. Shared credit is the doctrine.
+
+<!-- CONTRIBUTORS-TABLE-START -->
+[Reh1t](https://github.com/Reh1t) — LLM <!-- CONTRIBUTORS-TABLE-END --> SQLite RAG integration (PR #63)\n<!-- CONTRIBUTORS-TABLE-END -->
