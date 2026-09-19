@@ -145,6 +145,29 @@ class ShellWorkflowTests(unittest.TestCase):
             self.assertEqual(1, con.execute("SELECT COUNT(*) FROM tasks").fetchone()[0])
             self.assertEqual("it's data", con.execute("SELECT mistake FROM lessons").fetchone()[0])
 
+    def test_daily_loop_keeps_empty_lesson_ids_as_json_when_task_succeeds(self):
+        self.create_lessons_db()
+        recall = self.bin_dir / "task_recall.sh"
+        recall.write_text("#!/usr/bin/env bash\nexit 0\n")
+        recall.chmod(0o755)
+
+        started = self.run_script("daily_loop_v1.sh", "start", "successful task")
+        self.assertEqual(0, started.returncode, started.stderr)
+        with sqlite3.connect(self.root / "data/lessons.db") as con:
+            self.assertEqual(
+                ("[]", "pending"),
+                con.execute("SELECT lesson_ids, outcome FROM tasks").fetchone(),
+            )
+
+        finished = self.run_script("daily_loop_v1.sh", "finish", "successful task", "ok")
+        self.assertEqual(0, finished.returncode, finished.stderr)
+        with sqlite3.connect(self.root / "data/lessons.db") as con:
+            self.assertEqual(
+                ("[]", "ok"),
+                con.execute("SELECT lesson_ids, outcome FROM tasks").fetchone(),
+            )
+            self.assertEqual(0, con.execute("SELECT COUNT(*) FROM lessons").fetchone()[0])
+
     def test_daily_loop_rejects_start_without_description(self):
         self.create_lessons_db()
         result = self.run_script("daily_loop_v1.sh", "start")
