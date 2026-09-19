@@ -1,0 +1,135 @@
+=== OpenRoot gh_audit digest 2026-09-19T16:31:52Z ===
+report_dir: reports/gh_audit_20260919_111830
+-- repo inventory (name|default|archived|updated|desc|license) (46 lines)
+openroot	main	false	2026-09-19T13:51:05Z	Off-grid passive solar + opencell concrete thermal systems — open hardware, permaculture computation, PoPW-verified	NONE
+und-protocol	main	false	2026-09-18T01:09:33Z	Universal Native Descriptor (und) — high-density symbolic protocol for offline edge LLMs + Newton Chain thermodynamic verification. Zero-heap C + pure Python.	NONE
+openroot-spoke-template	main	false	2026-09-18T03:00:50Z	[SPOKE of openroot-canon] canonical: https://github.com/jesseray718/openroot-canon	NONE
+agape-ipfs	master	false	2026-09-18T03:00:50Z	[SPOKE of openroot-canon] canonical: https://github.com/jesseray718/openroot-canon	NONE
+wisdom-scaffold	main	false	2026-09-18T03:00:51Z	[SPOKE of openroot-canon] canonical: https://github.com/jesseray718/openroot-canon	NONE
+agapenet	main	false	2026-09-18T03:00:52Z	[SPOKE of openroot-canon] canonical: https://github.com/jesseray718/openroot-canon	NONE
+agape-coordination	main	false	2026-09-18T03:00:52Z	[SPOKE of openroot-canon] canonical: https://github.com/jesseray718/openroot-canon	NONE
+openroot-product	master	false	2026-09-18T03:00:53Z	[SPOKE of openroot-canon] canonical: https://github.com/jesseray718/openroot-canon	NONE
+openroot-ecosystem	main	false	2026-09-18T03:00:54Z	[SPOKE of openroot-canon] canonical: https://github.com/jesseray718/openroot-canon	NONE
+jesseray718	main	false	2026-09-12T05:21:21Z		NONE
+OpenCell-Thermal-System	main	false	2026-09-18T03:00:55Z	[SPOKE of openroot-canon] canonical: https://github.com/jesseray718/openroot-canon	NONE
+fractallattice	master	false	2026-09-18T03:00:56Z	[SPOKE of openroot-canon] canonical: https://github.com/jesseray718/openroot-canon	NONE
+oscillation-mesh	main	false	2026-09-18T03:00:57Z	[SPOKE of openroot-canon] canonical: https://github.com/jesseray718/openroot-canon	NONE
+agaperesonance	master	false	2026-09-18T03:00:58Z	[SPOKE of openroot-canon] canonical: https://github.com/jesseray718/openroot-canon	NONE
+jesseray718.github.io	main	false	2026-09-11T22:07:47Z	Personal GitHub Pages site	NONE
+aerocement	main	false	2026-09-10T04:20:23Z	Open-source lightweight foamed concrete (AR-GFRC) for single-story walls. Drill-and-bucket buildable.	NONE
+canonical	main	false	2026-09-18T03:00:58Z	[SPOKE of openroot-canon] canonical: https://github.com/jesseray718/openroot-canon	NONE
+aerocement-calc	main	false	2026-09-10T03:59:48Z		NONE
+une	main	false	2026-09-18T03:00:59Z	[SPOKE of openroot-canon] canonical: https://github.com/jesseray718/openroot-canon	NONE
+renaissance-protocol	main	false	2026-09-18T03:01:00Z	[SPOKE of openroot-canon] canonical: https://github.com/jesseray718/openroot-canon	NONE
+openroot-foundation	main	false	2026-09-18T03:01:01Z	[SPOKE of openroot-canon] canonical: https://github.com/jesseray718/openroot-canon	NONE
+openroot-thesis	main	false	2026-09-18T03:01:02Z	[SPOKE of openroot-canon] canonical: https://github.com/jesseray718/openroot-canon	NONE
+.github	main	false	2026-09-12T14:47:01Z	Shared GitHub Actions workflows for jesseray718 repositories	NONE
+agape-crossover-key	main	false	2026-09-18T03:01:02Z	[SPOKE of openroot-canon] canonical: https://github.com/jesseray718/openroot-canon	NONE
+agape-une	main	false	2026-09-18T03:01:03Z	[SPOKE of openroot-canon] canonical: https://github.com/jesseray718/openroot-canon	NONE
+etaledger	master	false	2026-09-02T23:25:00Z		NONE
+openroot-canon	main	false	2026-09-18T03:04:19Z	OpenRoot canonical node — the whole-goal constitution: permaculture-principled computation, Agape-aligned engineering, appropriate technology for energy sovereignty. Trunk of the OpenRoot spoke network.	NONE
+agape-primitives	master	false	2026-09-18T03:01:05Z	[SPOKE of openroot-canon] canonical: https://github.com/jesseray718/openroot-canon	NONE
+skills-introduction-to-github	main	false	2026-09-05T16:09:22Z	Exercise: Introduction to GitHub	NONE
+jesseray718-archive	main	false	2026-09-03T20:50:27Z		NONE
+kai-memory	master	false	2026-09-03T03:40:37Z		NONE
+axiom-library	main	false	2026-09-03T03:40:33Z	Canonical axioms/postulates/checkflags	NONE
+kai9000	main	false	2026-09-03T03:41:20Z		NONE
+black-locust-rmh	main	false	2026-09-01T06:52:32Z	Black Locust Rocket Mass Heater (DV.GEN.BL.RMH.001) — carbon-negative thermal cascade for OpenRoot H-003 + AE-GFRC domes	NONE
+markor	master	false	2026-09-01T06:52:47Z	Text editor - Notes & ToDo (for Android) - Markdown, todo.txt, plaintext, math, ..	NONE
+AeroCement_Ecosystem	main	false	2026-09-01T06:38:00Z	[ARCHIVED] merged into github.com/jesseray718/openroot	NONE
+Reticulum	master	false	2026-08-30T07:08:26Z	The cryptography-based networking stack for building unstoppable networks with LoRa, Packet Radio, WiFi and everything in between.	NONE
+RNode_Firmware	master	false	2026-08-30T15:55:52Z	RNode is an open, free and flexible digital radio interface with many uses	NONE
+LXMF	master	false	2026-08-30T15:55:55Z	A universal, distributed and secure messaging protocol for Reticulum	NONE
+tinyGS	main	false	2026-08-29T11:19:13Z	📡 Open Ground Station Network  🛰	NONE
+MeshCore	main	false	2026-08-29T10:20:20Z	A new lightweight, hybrid routing mesh protocol for packet radios	NONE
+firmware	develop	false	2026-08-29T11:19:24Z	The official firmware for Meshtastic, an open-source, off-grid mesh communication system.	NONE
+civilization2.0	main	true	2026-09-12T14:47:17Z	Civilization 2.0: open-source framework for resilient community infrastructure — appropriate technology, decentralized systems, permaculture design.	NONE
+open-cell-thermal-loop		true	2026-09-12T14:47:18Z	[ARCHIVED] merged into github.com/jesseray718/openroot	NONE
+open-cell-thermal-open-cell-the		true	2026-09-12T14:47:20Z	[ARCHIVED] merged into github.com/jesseray718/openroot	NONE
+aerocement-		true	2026-09-12T14:47:21Z	[ARCHIVED] merged into github.com/jesseray718/openroot	NONE
+
+-- ahead/NCA branches — EYES ONLY, never auto-delete (47 lines)
+und-protocol|chore/uplift-v4-20260828-020649|+1
+und-protocol|chore/uplift-v4-20260828-053524|+1
+openroot-spoke-template|chore/uplift-v4-20260828-020649|+1
+openroot-spoke-template|ci/shared-python-quality|+4
+wisdom-scaffold|coderabbit/improve-changed-function-docstrings/8b19c9eb|+1
+wisdom-scaffold|coderabbit/test-pull-request-changes/53f1efe6|+1
+agapenet|chore/uplift-v4-20260828-020649|+1
+agapenet|chore/uplift-v4-20260828-053524|+1
+agapenet|ci/shared-python-quality|+1
+agape-coordination|chore/uplift-baseline-20260828-234515|+1
+agape-coordination|chore/uplift-v4-20260828-020649|+2
+agape-coordination|ci/shared-python-quality|+6
+jesseray718|agape-synergetic-engineering|+1
+jesseray718|chore/uplift-v4-20260828-020649|+1
+jesseray718|chore/uplift-v4-20260828-053524|+1
+OpenCell-Thermal-System|chore/foundation-uplift-20260827-205905|+3
+OpenCell-Thermal-System|chore/foundation-uplift-20260828-225816|+1
+OpenCell-Thermal-System|chore/foundation-uplift-20260828-230544|+1
+OpenCell-Thermal-System|chore/uplift-baseline-20260828-234024|+1
+OpenCell-Thermal-System|chore/uplift-lite-20260827-231618|+1
+OpenCell-Thermal-System|chore/uplift-lite-20260828-011224|+1
+OpenCell-Thermal-System|chore/uplift-lite-20260828-012150|+1
+OpenCell-Thermal-System|chore/uplift-lite-20260828-015227|+1
+OpenCell-Thermal-System|chore/uplift-v4-20260828-020649|+1
+OpenCell-Thermal-System|chore/uplift-v4-20260828-053524|+1
+OpenCell-Thermal-System|coderabbit/add-pull-request-tests/7aea0d1b|+4
+OpenCell-Thermal-System|dependabot/github_actions/actions/checkout-7|+3
+fractallattice|chore/foundation-uplift-20260828-225816|+1
+fractallattice|chore/foundation-uplift-20260828-230544|+1
+fractallattice|chore/uplift-baseline-20260828-234351|+1
+fractallattice|chore/uplift-v4-20260828-020649|+1
+fractallattice|chore/uplift-v4-20260828-053524|+1
+fractallattice|ci/shared-python-quality|+15
+fractallattice|main|+11
+oscillation-mesh|chore/foundation-uplift-20260828-225816|+1
+oscillation-mesh|chore/foundation-uplift-20260828-230544|+2
+oscillation-mesh|chore/uplift-baseline-20260828-234407|+1
+oscillation-mesh|chore/uplift-v4-20260828-020649|+1
+oscillation-mesh|chore/uplift-v4-20260828-053524|+1
+aerocement|chore/knowledge-unify-20260901-011802-aerocement-|+1
+aerocement|chore/uplift-baseline-20260828-234509|+1
+aerocement|chore/uplift-lite-20260827-231056|+1
+aerocement|chore/uplift-lite-20260827-231618|+1
+aerocement|chore/uplift-lite-20260828-011224|+1
+aerocement|chore/uplift-lite-20260828-012150|+1
+aerocement|chore/uplift-lite-20260828-015227|+1
+aerocement|chore/uplift-v4-20260828-020649|+1
+
+-- identical branches — CONFIRM=1 delete candidates (5 lines)
+agape-ipfs|chore/uplift-v4-20260828-020649
+agape-coordination|chore/uplift-v4-20260828-053524
+jesseray718|feat/profile-clarity
+aerocement|chore/uplift-v4-20260828-053524
+aerocement|thesis-restructure
+
+-- stale (90d+) branches (0 lines)
+
+-- closed-unmerged PRs — resurrection candidates: ABSENT
+
+-- hygiene flags (no license/desc) (0 lines)
+
+-- run log tail (last 25 lines)
+nohup: ignoring input
+[gate] start 2026-09-19T16:18:30Z CONFIRM=0 -> /home/jesse/openroot/reports/gh_audit_20260919_111830
+[banked] inventory: 46 repos (default branches resolved, not assumed)
+[gate] scanning openroot
+[gate] scanning und-protocol
+[gate] scanning openroot-spoke-template
+[gate] scanning agape-ipfs
+[gate] scanning wisdom-scaffold
+[gate] scanning agapenet
+[gate] scanning agape-coordination
+[gate] scanning openroot-product
+[gate] scanning openroot-ecosystem
+[gate] scanning jesseray718
+[gate] scanning OpenCell-Thermal-System
+[gate] scanning fractallattice
+[gate] scanning oscillation-mesh
+[gate] scanning agaperesonance
+[gate] scanning jesseray718.github.io
+[gate] scanning aerocement
+[held] DIED at line 33 (exit 1)
+
+[exit=0]
