@@ -1,5 +1,9 @@
 # OpenRoot
 
+<!-- [PHOTO] slot: replace with maintainer photo, ~400px, alt="Jesse Ray, OpenRoot" -->
+![Maintainer](TODO-photo-path)
+
+
 Open-source hardware blockchain + local AI agent orchestration.
 Maximize eta = J_useful / J_human. Falsifiable claims only.
 
