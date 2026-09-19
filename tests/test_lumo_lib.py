@@ -95,7 +95,7 @@ class LumoLibTests(unittest.TestCase):
         self.assertTrue(row[6])
 
     def test_proved_cache_entry_never_recomputes(self):
-        first = mock.Mock(side_effect=["saved proof", "PASS"])
+        first = mock.Mock(side_effect=["saved proof", "VERDICT: PASS"])
         with mock.patch.object(self.module, "ollama_generate", first):
             self.module.prove("cached theorem")
 
@@ -117,6 +117,14 @@ class LumoLibTests(unittest.TestCase):
             second = self.module.prove("false theorem")
         generate.assert_not_called()
         self.assertEqual({"statement": "false theorem", "status": "FAILED"}, second)
+
+    def test_prove_requires_exact_pass_verdict_on_first_line(self):
+        with mock.patch.object(
+            self.module,
+            "ollama_generate",
+            side_effect=["bad proof", "VERDICT: FAIL\nFIX: PASS appears here"],
+        ):
+            self.assertEqual("FAILED", self.module.prove("strict verdict")["status"])
 
     def test_model_failure_returns_unbanked_and_does_not_poison_cache(self):
         with mock.patch.object(self.module, "ollama_generate", side_effect=OSError("offline")):

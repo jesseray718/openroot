@@ -70,7 +70,8 @@ def prove(statement):
             "Reply first line VERDICT: PASS or VERDICT: FAIL, "
             "second line FIX: none or a correction.\nSTATEMENT: %s\nPROOF: %s"
             % (statement, draft), model=MODEL_GRADER)
-        status = "PROVED" if "PASS" in verdict.upper() else "FAILED"
+        first_line = verdict.splitlines()[0] if verdict.splitlines() else ""
+        status = "PROVED" if first_line == "VERDICT: PASS" else "FAILED"
         con.execute("INSERT OR REPLACE INTO proofs VALUES (?,?,?,?,?,?,?,?)",
             (tid, statement, status, draft, verdict, MODEL_BUILDER,
              hashlib.sha256(draft.encode()).hexdigest(),

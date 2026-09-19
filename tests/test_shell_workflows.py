@@ -28,6 +28,9 @@ class ShellWorkflowTests(unittest.TestCase):
         destination = self.bin_dir / name
         destination.write_text(source)
         destination.chmod(0o755)
+        helper = REPO_ROOT / "bin/sqlite_params.py"
+        if helper.exists():
+            (self.bin_dir / helper.name).write_text(helper.read_text())
         self.env["OPENROOT_TEST_ROOT"] = str(self.root)
         return destination
 
@@ -71,6 +74,13 @@ class ShellWorkflowTests(unittest.TestCase):
         self.assertEqual(1, rejected.returncode)
         self.assertIn("[FAIL]", rejected.stdout)
         self.assertIn("[HELD]", rejected.stdout)
+
+        percent = self.root / "percent.md"
+        percent.write_text("Efficiency exceeds 100% according to the draft.\n")
+        self.assertEqual(1, self.run_script("hype_gate.sh", str(percent)).returncode)
+        greater = self.root / "greater.md"
+        greater.write_text("Measured x > y.\n")
+        self.assertEqual(0, self.run_script("hype_gate.sh", str(greater)).returncode)
 
     def test_abstract_grade_sends_only_abstract_body_and_has_offline_fallback(self):
         manuscript = self.root / "paper.md"
@@ -120,6 +130,21 @@ class ShellWorkflowTests(unittest.TestCase):
         self.assertEqual(("new_mistake", "[1]"), task)
         self.assertEqual(("new_mistake", "missed calibration", "session"), lesson)
 
+    def test_daily_loop_binds_sql_like_task_values(self):
+        self.create_lessons_db()
+        recall = self.bin_dir / "task_recall.sh"
+        recall.write_text("#!/usr/bin/env bash\nexit 0\n")
+        recall.chmod(0o755)
+        task = "test O'Brien'); DROP TABLE tasks; --"
+        self.assertEqual(0, self.run_script("daily_loop_v1.sh", "start", task).returncode)
+        self.assertEqual(
+            0,
+            self.run_script("daily_loop_v1.sh", "finish", task, "new_mistake", "it's data").returncode,
+        )
+        with sqlite3.connect(self.root / "data/lessons.db") as con:
+            self.assertEqual(1, con.execute("SELECT COUNT(*) FROM tasks").fetchone()[0])
+            self.assertEqual("it's data", con.execute("SELECT mistake FROM lessons").fetchone()[0])
+
     def test_daily_loop_rejects_start_without_description(self):
         self.create_lessons_db()
         result = self.run_script("daily_loop_v1.sh", "start")
@@ -151,6 +176,19 @@ class ShellWorkflowTests(unittest.TestCase):
             rows = con.execute("SELECT attempt, accepted FROM iterations ORDER BY attempt").fetchall()
         self.assertEqual([(1, 0), (2, 1)], rows)
 
+    def test_refinement_v2_binds_document_and_requires_exact_pass_line(self):
+        self.create_lessons_db()
+        (self.root / "docs").mkdir()
+        self.fake_command(
+            "ollama",
+            'cat >/dev/null\ncase "$*" in *qwen2.5-coder*) echo draft;; *) printf "NOTE: VERDICT: PASS\\nFIX: no\\n";; esac',
+        )
+        doc = "O'Brien'); DROP TABLE iterations; --"
+        result = self.run_script("refinement_loop_v2.sh", doc, "rubric", "1")
+        self.assertEqual(1, result.returncode)
+        with sqlite3.connect(self.root / "data/refinement.db") as con:
+            self.assertEqual(doc, con.execute("SELECT doc_ref FROM iterations").fetchone()[0])
+
     def test_refinement_v3_fails_fast_when_builder_is_offline(self):
         self.create_lessons_db()
         self.fake_command("ollama", "cat >/dev/null; exit 1")
@@ -159,6 +197,22 @@ class ShellWorkflowTests(unittest.TestCase):
         self.assertIn("[held] 7B offline", result.stdout)
         with sqlite3.connect(self.root / "data/refinement.db") as con:
             self.assertEqual(0, con.execute("SELECT COUNT(*) FROM iterations").fetchone()[0])
+
+    def test_refinement_v3_binds_sql_like_document_values(self):
+        self.create_lessons_db()
+        (self.root / "docs").mkdir()
+        self.fake_command(
+            "ollama",
+            'case "$*" in *qwen2.5-coder*) echo draft;; *) printf "VERDICT: PASS\\nFIX: NONE\\n";; esac',
+        )
+        doc = "O'Brien'); DELETE FROM iterations; --"
+        result = self.run_script("refinement_loop_v3.sh", doc, "rubric", "1")
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        with sqlite3.connect(self.root / "data/refinement.db") as con:
+            self.assertEqual(
+                (doc, 1, 1),
+                con.execute("SELECT doc_ref, attempt, accepted FROM iterations").fetchone(),
+            )
 
     def test_fleet_check_reports_green_when_models_ledgers_refs_and_agents_are_ready(self):
         (self.root / "data").mkdir()
@@ -184,6 +238,7 @@ class ShellWorkflowTests(unittest.TestCase):
         self.fake_command(
             "git",
             'case " $* " in\n'
+            '  *" rev-parse --show-toplevel "*) echo "$OPENROOT_TEST_ROOT" ;;\n'
             '  *" status --porcelain "*) exit 0 ;;\n'
             '  *" status --short "*) exit 0 ;;\n'
             '  *" rev-parse --short "*) echo abc1234 ;;\n'
@@ -195,6 +250,14 @@ class ShellWorkflowTests(unittest.TestCase):
         self.assertEqual(0, result.returncode, result.stderr)
         self.assertIn("[VERIFY PASS] fleet GREEN", result.stdout)
         self.assertNotIn("model missing", result.stdout)
+
+    def test_fleet_check_missing_script_prevents_green_result(self):
+        (self.root / "data").mkdir()
+        self.fake_command("git", 'case " $* " in *" rev-parse --show-toplevel "*) echo "$OPENROOT_TEST_ROOT";; *) echo same;; esac')
+        self.fake_command("curl", "exit 1")
+        result = self.run_script("fleet_check_v1.sh")
+        self.assertIn("bin/onepass_v3.sh missing", result.stdout)
+        self.assertNotIn("[VERIFY PASS]", result.stdout)
 
     def test_weekly_audit_banks_metrics_report_when_model_is_offline(self):
         self.create_lessons_db()
@@ -245,6 +308,24 @@ class ShellWorkflowTests(unittest.TestCase):
         self.assertEqual(9, len(manuscripts))
         self.assertTrue(all("measurements pending" in path.read_text() for path in manuscripts))
         self.assertIn("claims already registered (9)", second.stdout)
+        self.assertIn("subsystem='thixo_gel'", (self.root / "docs/research/thixo-foam.md").read_text())
+
+    def test_research_ready_migrates_legacy_claims_schema(self):
+        (self.root / "data").mkdir()
+        (self.root / "context_bridge").mkdir()
+        with sqlite3.connect(self.root / "data/research.db") as con:
+            con.execute("CREATE TABLE claims (id INTEGER PRIMARY KEY, subsystem TEXT, claim TEXT, status TEXT)")
+        self.fake_command(
+            "git",
+            'case " $* " in *"rev-parse --short master"*) echo abc1234;; *"diff --cached --stat"*) echo changed;; esac',
+        )
+        result = self.run_script("research_ready_v1.sh")
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        with sqlite3.connect(self.root / "data/research.db") as con:
+            columns = {row[1] for row in con.execute("PRAGMA table_info(claims)")}
+            indexes = {row[1] for row in con.execute("PRAGMA index_list(claims)")}
+        self.assertTrue({"instrument", "lit_anchor", "target_metric"} <= columns)
+        self.assertIn("idx_claims_identity", indexes)
 
 
 if __name__ == "__main__":

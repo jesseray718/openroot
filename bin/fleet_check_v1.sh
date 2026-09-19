@@ -2,7 +2,8 @@
 set -u
 export GIT_PAGER=cat PAGER=cat
 export OLLAMA_HOST=http://localhost:11434
-cd /home/jesse/openroot
+REPO_ROOT=$(git -C "$(dirname -- "${BASH_SOURCE[0]}")" rev-parse --show-toplevel) || exit 1
+cd "$REPO_ROOT" || exit 1
 echo "[canary-head] fleet_check_v1 paste intact"
 HEALTH=0
 
@@ -50,7 +51,11 @@ fi
 
 echo "[stage-5] agent loop scripts present"
 for S in task_recall.sh lessons_v1.sh mesh_recruit_v1.sh mesh_publish_v2.sh onepass_v3.sh; do
-  [ -f "bin/$S" ] && echo "   [ok] bin/$S" || echo "   [held] bin/$S missing"; 
+  if [ -f "bin/$S" ]; then
+    echo "   [ok] bin/$S"
+  else
+    echo "   [held] bin/$S missing"; HEALTH=1
+  fi
 done
 
 echo ""

@@ -7,9 +7,8 @@ while IFS= read -r LINE; do
   MATCH=$(grep -inE "$LINE" "$FILE" || true)
   if [ -n "$MATCH" ]; then echo "   [FAIL] $LINE"; echo "$MATCH"; CODE=1; fi
 done <<'BANNED'
->
 free energy|over.?unity|perpetual
-more than 100\\%|exceeds 100\\%|breakthrough|revolutionary
+more than 100%|exceeds 100%|breakthrough|revolutionary
 unprecedented|miracle|game.?changing.{0,20}efficien
 magna.?flux|zero.?point
 BANNED

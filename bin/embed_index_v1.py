@@ -31,7 +31,7 @@ def chunk_text(text):
     paras, buf = [], ""
     for line in text.splitlines(keepends=True):
         buf += line
-        if len(buf) >= CHUNK_CHARS:
+        while len(buf) >= CHUNK_CHARS:
             paras.append(buf[:CHUNK_CHARS]); buf = buf[CHUNK_CHARS:]
     if buf.strip():
         paras.append(buf)
@@ -41,34 +41,63 @@ def sha(t):
     """Return the SHA-256 digest of text encoded as UTF-8 with replacement."""
     return hashlib.sha256(t.encode("utf-8", "replace")).hexdigest()
 
+def valid_embedding(vector):
+    """Return whether vector is a non-empty sequence of finite numbers."""
+    return (isinstance(vector, (list, tuple)) and bool(vector) and
+            all(isinstance(value, (int, float)) and not isinstance(value, bool)
+                and math.isfinite(value) for value in vector))
+
 def build():
     """Embed previously unseen repository chunks and store them in the index."""
-    con = sqlite3.connect(DB)
-    con.execute("""CREATE TABLE IF NOT EXISTS chunks (
-        sha256 TEXT PRIMARY KEY, path TEXT, chunk TEXT, embedding BLOB)""")
-    known = {r[0] for r in con.execute("SELECT sha256 FROM chunks")}
-    embedded_total, new, skipped = 0, 0, 0
-    for path in iter_files():
-        try:
-            with open(path, encoding="utf-8", errors="replace") as fh:
-                text = fh.read()
-        except OSError:
-            continue
-        for chunk in chunk_text(text):
-            ckey = sha(path + "\x00" + chunk)
-            if ckey in known:
-                skipped += 1; continue
-            vec = embed(chunk)
-            con.execute("INSERT OR REPLACE INTO chunks VALUES (?,?,?,?)",
-                        (ckey, os.path.relpath(path, ROOT),
-                         chunk[:400], json.dumps(vec).encode()))
-            new += 1
-            embedded_total += 1
-            if new % 250 == 0:
-                con.commit()   # v1.1: batch-commit so crashed runs resume, not restart
-    con.commit(); con.close()
-    print("[banked] embeddings.db: %d new, %d unchanged (skipped), "
-          "%d total chunks" % (new, skipped, new + skipped))
+    con = None
+    current = set()
+    new, skipped = 0, 0
+    try:
+        con = sqlite3.connect(DB)
+        con.execute("""CREATE TABLE IF NOT EXISTS chunks (
+            sha256 TEXT PRIMARY KEY, path TEXT, chunk TEXT, embedding BLOB)""")
+        known = {r[0] for r in con.execute("SELECT sha256 FROM chunks")}
+        for path in iter_files():
+            try:
+                with open(path, encoding="utf-8", errors="replace") as fh:
+                    text = fh.read()
+            except OSError as exc:
+                print("[held] index scan could not read %s: %s" % (path, exc))
+                con.commit()
+                return False
+            for chunk in chunk_text(text):
+                ckey = sha(path + "\x00" + chunk)
+                current.add(ckey)
+                if ckey in known:
+                    skipped += 1; continue
+                try:
+                    vec = embed(chunk)
+                    if not valid_embedding(vec):
+                        raise ValueError("Ollama returned an empty or non-numeric vector")
+                except Exception as exc:
+                    print("[held] embedding failed for %s: %s" %
+                          (os.path.relpath(path, ROOT), exc))
+                    return False
+                con.execute("INSERT OR REPLACE INTO chunks VALUES (?,?,?,?)",
+                            (ckey, os.path.relpath(path, ROOT),
+                             chunk[:400], json.dumps(vec).encode()))
+                new += 1
+                if new % 250 == 0:
+                    con.commit()   # v1.1: batch-commit so crashed runs resume, not restart
+        stale = known - current
+        con.executemany("DELETE FROM chunks WHERE sha256=?",
+                        ((ckey,) for ckey in stale))
+        con.commit()
+        print("[banked] embeddings.db: %d new, %d unchanged (skipped), "
+              "%d stale removed, %d total chunks" %
+              (new, skipped, len(stale), new + skipped))
+        return True
+    except (sqlite3.Error, OSError) as exc:
+        print("[held] embedding index build failed: %s" % exc)
+        return False
+    finally:
+        if con is not None:
+            con.close()
 
 def query(qtext, k=5):
     """Print the top indexed chunks ranked by cosine similarity to a query."""
@@ -76,8 +105,14 @@ def query(qtext, k=5):
     rows = con.execute("SELECT path, chunk, embedding FROM chunks").fetchall()
     con.close()
     if not rows:
-        print("[held] index empty — run build first"); return
-    qv = embed(qtext)
+        print("[held] index empty — run build first"); return False
+    try:
+        qv = embed(qtext)
+        if not valid_embedding(qv):
+            raise ValueError("Ollama returned an empty or non-numeric vector")
+    except Exception as exc:
+        print("[held] query embedding failed for %r: %s" % (qtext, exc))
+        return False
     scored = []
     for path, chunk, blob in rows:
         cv = json.loads(bytes(blob))
@@ -89,21 +124,25 @@ def query(qtext, k=5):
     print("[query] %r — top %d of %d chunks" % (qtext, k, len(rows)))
     for score, path, chunk in scored[:k]:
         print("  %.3f  %s :: %s" % (score, path, chunk[:110].replace("\n", " ")))
+    return True
 
 def main():
     """Run query mode, or build the index and execute demonstration queries."""
     if len(sys.argv) > 1:              # query mode — instant, no rebuild
-        query(" ".join(sys.argv[1:])); return
+        return 0 if query(" ".join(sys.argv[1:])) else 1
     print("[stage-1] incremental embed of %s (exts: %s)" % (ROOT, ",".join(EXTS)))
-    build()
+    if not build():
+        return 1
     print("[stage-2] semantic search demo — replaces grep sweep")
     for concept in ("synergetics isotropic vector matrix",
                     "newton chain mechanics",
                     "agape nodes coordination cooperation",
                     "core atomic functions"):
-        query(concept, k=3)
+        if not query(concept, k=3):
+            return 1
     print("[exit=0]")
+    return 0
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
 # [exit=0]

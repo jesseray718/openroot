@@ -76,6 +76,14 @@ class KnowledgeProbeTests(unittest.TestCase):
             pass
         self.assertEqual([], self.module.scan_dbs())
 
+    def test_scan_dbs_reports_and_skips_corrupt_database(self):
+        (self.data / "corrupt.db").write_text("not sqlite")
+        output = io.StringIO()
+        with contextlib.redirect_stdout(output):
+            self.assertEqual([], self.module.scan_dbs())
+        self.assertIn(str(self.data / "corrupt.db"), output.getvalue())
+        self.assertIn("skipping database", output.getvalue())
+
     def test_scan_files_returns_nonempty_paths_and_builds_bounded_grep(self):
         completed = subprocess.CompletedProcess([], 0, stdout="/one.md\n\n/two.py\n", stderr="")
         with mock.patch.object(self.module.subprocess, "run", return_value=completed) as run:
@@ -127,6 +135,12 @@ class KnowledgeProbeTests(unittest.TestCase):
         with mock.patch.object(self.module, "ollama", side_effect=OSError("offline")):
             unavailable = self.module.prove("unknown")
         self.assertEqual("UNBANKED", unavailable["status"])
+
+    def test_prove_requires_exact_pass_verdict_on_first_line(self):
+        with mock.patch.object(
+            self.module, "ollama", side_effect=["proof", "VERDICT: FAIL\nFIX: contains PASS"]
+        ):
+            self.assertEqual("FAILED", self.module.prove("not a pass")["status"])
 
     def test_main_writes_bounded_report_with_zero_hit_sections(self):
         hit = {

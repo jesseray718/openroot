@@ -48,9 +48,29 @@ class UnifiedWorkflowTests(unittest.TestCase):
             manuscripts = {row[1] for row in con.execute("PRAGMA table_info(manuscripts)")}
         with sqlite3.connect(self.module.DATA_DIR / "lessons.db") as con:
             lessons = {row[1] for row in con.execute("PRAGMA table_info(lessons)")}
-        self.assertTrue({"subsystem", "claim", "status", "created_at"} <= claims)
-        self.assertTrue({"subsystem", "path", "stage", "created_at"} <= manuscripts)
-        self.assertTrue({"domain", "mistake", "root_cause", "correction", "cost", "source"} <= lessons)
+            tasks = {row[1] for row in con.execute("PRAGMA table_info(tasks)")}
+        self.assertTrue({"subsystem", "claim", "status", "instrument", "lit_anchor", "target_metric"} <= claims)
+        self.assertTrue({"subsystem", "path", "stage"} <= manuscripts)
+        self.assertTrue({"domain", "mistake", "root_cause", "correction", "cost", "source", "verified"} <= lessons)
+        self.assertTrue({"description", "lesson_ids", "outcome"} <= tasks)
+
+    def test_init_dbs_migrates_existing_ledgers_and_enforces_claim_identity(self):
+        self.module.DATA_DIR.mkdir()
+        with sqlite3.connect(self.module.DATA_DIR / "research.db") as con:
+            con.execute("CREATE TABLE claims (id INTEGER PRIMARY KEY, subsystem TEXT, claim TEXT, status TEXT)")
+            con.execute("INSERT INTO claims (subsystem, claim) VALUES ('same', 'claim')")
+            con.execute("INSERT INTO claims (subsystem, claim) VALUES ('same', 'claim')")
+        with sqlite3.connect(self.module.DATA_DIR / "lessons.db") as con:
+            con.execute("CREATE TABLE lessons (id INTEGER PRIMARY KEY, domain TEXT, mistake TEXT)")
+        self.module.init_dbs()
+        with sqlite3.connect(self.module.DATA_DIR / "research.db") as con:
+            self.assertEqual(1, con.execute("SELECT COUNT(*) FROM claims").fetchone()[0])
+            con.execute("INSERT OR IGNORE INTO claims (subsystem, claim) VALUES ('same', 'claim')")
+            self.assertEqual(1, con.execute("SELECT COUNT(*) FROM claims").fetchone()[0])
+        with sqlite3.connect(self.module.DATA_DIR / "lessons.db") as con:
+            columns = {row[1] for row in con.execute("PRAGMA table_info(lessons)")}
+            self.assertIn("verified", columns)
+            self.assertTrue(con.execute("SELECT name FROM sqlite_master WHERE name='tasks'").fetchone())
 
     def test_hype_gate_accepts_clean_text_and_reports_every_banned_match(self):
         clean = self.root / "clean.md"
@@ -125,16 +145,33 @@ class UnifiedWorkflowTests(unittest.TestCase):
             lesson = con.execute("SELECT domain, mistake FROM lessons").fetchone()
         self.assertEqual(("workflow", "large paste truncated over ssh"), lesson)
         self.assertEqual("Three measured sentences.\n", (self.root / "drafts/hero_draft.md").read_text())
-        for title, slug in self.module.MANUSCRIPTS:
+        for title, subsystem, slug in self.module.MANUSCRIPTS:
             text = (self.module.DOCS_DIR / "research" / (slug + ".md")).read_text()
             self.assertIn(title, text)
-            self.assertIn("subsystem='%s'" % slug, text)
+            self.assertIn("subsystem='%s'" % subsystem, text)
         seed = self.module.SEED_FILE.read_text()
         self.assertIn("- claims: 9 registered", seed)
         self.assertIn("- HEAD: abc1234", seed)
         digest, filename = (self.root / "seed_master.log").read_text().split()
         self.assertEqual(hashlib.sha256(self.module.SEED_FILE.read_bytes()).hexdigest(), digest)
         self.assertEqual(self.module.SEED_FILE.name, filename)
+
+    def test_existing_manuscript_is_registered_and_hype_failure_stops_session(self):
+        path = self.module.DOCS_DIR / "research/thixo-foam.md"
+        path.parent.mkdir(parents=True)
+        path.write_text("A revolutionary claim")
+        with mock.patch.object(self.module, "ollama_run") as ollama, mock.patch.object(
+            self.module, "run"
+        ) as run:
+            self.assertEqual(1, self.module.main())
+        ollama.assert_not_called()
+        run.assert_not_called()
+        with sqlite3.connect(self.module.DATA_DIR / "research.db") as con:
+            row = con.execute(
+                "SELECT subsystem FROM manuscripts WHERE path=?", (str(path),)
+            ).fetchone()
+        self.assertEqual(("thixo_gel",), row)
+        self.assertFalse(self.module.SEED_FILE.exists())
 
 
 if __name__ == "__main__":

@@ -38,6 +38,7 @@ class EmbedIndexTests(unittest.TestCase):
         self.assertEqual(["abcde", "f\n"], self.module.chunk_text("abcdef\n"))
         self.assertEqual([], self.module.chunk_text("   \n"))
         self.assertEqual(["abc\nd", "ef\n"], self.module.chunk_text("abc\ndef\n"))
+        self.assertEqual(["abcde", "fghij", "k"], self.module.chunk_text("abcdefghijk"))
 
     def test_iter_files_filters_extensions_and_prunes_skip_directories(self):
         (self.root / "keep").mkdir()
@@ -72,9 +73,38 @@ class EmbedIndexTests(unittest.TestCase):
         with mock.patch.object(self.module, "iter_files", return_value=paths), mock.patch.object(
             self.module, "embed", return_value=[0.5]
         ):
-            self.module.build()
+            self.assertFalse(self.module.build())
         with sqlite3.connect(self.module.DB) as con:
             self.assertEqual(1, con.execute("SELECT COUNT(*) FROM chunks").fetchone()[0])
+
+    def test_build_removes_stale_chunks_only_after_a_complete_scan(self):
+        path = self.root / "a.md"
+        path.write_text("old")
+        with mock.patch.object(self.module, "embed", return_value=[1.0]):
+            self.assertTrue(self.module.build())
+        path.write_text("new")
+        with mock.patch.object(self.module, "embed", return_value=[2.0]):
+            self.assertTrue(self.module.build())
+        with sqlite3.connect(self.module.DB) as con:
+            self.assertEqual(["new"], [row[0] for row in con.execute("SELECT chunk FROM chunks")])
+
+        with mock.patch.object(self.module, "embed", side_effect=OSError("offline")):
+            path.write_text("newer")
+            self.assertFalse(self.module.build())
+        with sqlite3.connect(self.module.DB) as con:
+            self.assertEqual(["new"], [row[0] for row in con.execute("SELECT chunk FROM chunks")])
+
+    def test_build_and_query_reject_invalid_embedding_responses(self):
+        (self.root / "a.md").write_text("alpha")
+        output = io.StringIO()
+        with mock.patch.object(self.module, "embed", return_value=[]), contextlib.redirect_stdout(output):
+            self.assertFalse(self.module.build())
+        self.assertIn("empty or non-numeric", output.getvalue())
+
+        with sqlite3.connect(self.module.DB) as con:
+            con.execute("INSERT INTO chunks VALUES (?, ?, ?, ?)", ("x", "a.md", "alpha", b"[1.0]"))
+        with mock.patch.object(self.module, "embed", return_value=["bad"]), contextlib.redirect_stdout(output):
+            self.assertFalse(self.module.query("alpha"))
 
     def test_query_ranks_cosine_similarity_and_ignores_zero_vectors(self):
         with sqlite3.connect(self.module.DB) as con:

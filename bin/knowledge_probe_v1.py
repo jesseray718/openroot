@@ -40,9 +40,10 @@ def scan_dbs():
     for db in sorted(glob.glob(os.path.join(DATA_DIR, "*.db"))):
         if os.path.basename(db) == os.path.basename(CACHE_DB):
             continue  # v1.1: self-referential - theorem statements contain search terms
-        con = sqlite3.connect("file:%s?mode=ro" % db, uri=True)
-        con.row_factory = sqlite3.Row
+        con = None
         try:
+            con = sqlite3.connect("file:%s?mode=ro" % db, uri=True)
+            con.row_factory = sqlite3.Row
             tables = [r[0] for r in con.execute(
                 "SELECT name FROM sqlite_master WHERE type='table'")]
             for table in tables:
@@ -75,8 +76,11 @@ def scan_dbs():
                                 cluster=cluster, term=term,
                                 rowid="match %d" % n,
                                 snippet=snippet))
+        except sqlite3.Error as exc:
+            print("[held] skipping database %s: %s" % (db, exc))
         finally:
-            con.close()
+            if con is not None:
+                con.close()
     return hits
 
 def scan_files():
@@ -142,7 +146,8 @@ def prove(statement):
             "Reply first line VERDICT: PASS or VERDICT: FAIL, "
             "second line FIX: none or a correction.\nSTATEMENT: %s\nPROOF: %s"
             % (statement, draft), MODEL_GRADER)
-        status = "PROVED" if "PASS" in verdict.upper() else "FAILED"
+        first_line = verdict.splitlines()[0] if verdict.splitlines() else ""
+        status = "PROVED" if first_line == "VERDICT: PASS" else "FAILED"
         con.execute("INSERT OR REPLACE INTO proofs VALUES (?,?,?,?,?,?,?,?)",
             (tid, statement, status, draft, verdict, MODEL_BUILDER,
              hashlib.sha256(draft.encode()).hexdigest(),
