@@ -11,3 +11,4 @@ venv/
 consolidation-backups/
 *.tar.gz
 !data/species.db
+.env
