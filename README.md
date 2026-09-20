@@ -38,6 +38,24 @@
 | **Finance** | Credit-building, ACRE token | PRF-001 routing, PoWr minting, thermodynamic ledger |
 
 **Permaculture principle:** Each engine serves multiple functions. Each node generates surplus. Nothing extracted, nothing wasted.
+---
+
+## The Floor-Lift Economy
+
+**The spread between top and bottom is a speed limit on compound human growth.**
+
+Utility of a delivered benefit scales with (1 − recipient_percentile)² — the same artifact routed to the bottom decile carries ~25x the systemic value weight of routing it to the top decile. Routing beats volume.
+
+**Verified demo** (contribution_tier_v2.py, ids d1579005 vs 50c984a5): floor_lift 67.05 bottom-routed vs 2.5 premium-routed — identical 100 units of aggregate benefit, 26x systemic value gap.
+
+| Tool | Function |
+|------|----------|
+| `bin/contribution_tier_v2.py` | Bottom-floor weighted grading, FLOOR_LIFT as primary metric |
+| `bin/openrouter_client_v1.py` | Live API tier routing under a $0.50 hard spend cap |
+| `bin/tier_dispatch_v1.py` | 5-tier escalator, hash-idempotent queue |
+
+Release: `v2026.09.20-floorlift` · Milestone 6 open · Quadratic exponent is a falsifiable hypothesis (agape_cascade validation pending).
+
 
 ---
 
