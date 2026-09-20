@@ -1,0 +1,146 @@
+{
+  "jesseray718/openroot": {
+    "master_head": "89563927ef4ef873352d4f6a24153738dfcfd8a3",
+    "default": "main"
+  },
+  "jesseray718/wisdom-scaffold": {
+    "master_head": "b38f3c762e7ef10d9129e1201a58ff5f3b468072",
+    "default": "main"
+  },
+  "jesseray718/oscillation-mesh": {
+    "master_head": "dfd2f7a452cf8aeb36be1fedc2618b818e4c3fcf",
+    "default": "main"
+  },
+  "jesseray718/openroot-product": {
+    "master_head": "1f29cacb6243da14e7925d5683fcefc43f5c1578",
+    "default": "master"
+  },
+  "jesseray718/openroot-ecosystem": {
+    "master_head": "cba3fa1297148e1a009188ca8f19b5df2669049a",
+    "default": "main"
+  },
+  "jesseray718/kai9000": {
+    "master_head": "0ece0e3065e4185210355ae323db10b1eba5151a",
+    "default": "main"
+  },
+  "jesseray718/kai-memory": {
+    "master_head": "e5ef7d31367330536c8e43c40c68d3b4f18f3e8f",
+    "default": "master"
+  },
+  "jesseray718/jesseray718.github.io": {
+    "master_head": "83a4b21ff3f7bc2b3d6257f96b82b3b4052313e9",
+    "default": "main"
+  },
+  "jesseray718/jesseray718-archive": {
+    "master_head": "bd1570c5111ce708fd68266022cc83cabf6fb453",
+    "default": "main"
+  },
+  "jesseray718/fractallattice": {
+    "master_head": "cc2e542efa49ee38df3fa0c3e27d5beb95da737c",
+    "default": "master"
+  },
+  "jesseray718/etaledger": {
+    "master_head": "0ab67aa8ec93255309afafa466bacf0f4d0dc6f1",
+    "default": "master"
+  },
+  "jesseray718/axiom-library": {
+    "master_head": "b6f5b4125a6d1dbca1e7d1da983305895ff30762",
+    "default": "main"
+  },
+  "jesseray718/agaperesonance": {
+    "master_head": "24daff95fce4b3757a739118a45a4613d81e3c23",
+    "default": "master"
+  },
+  "jesseray718/agapenet": {
+    "master_head": "44b259bc9cdc36ded1b8639306330efc9a754917",
+    "default": "main"
+  },
+  "jesseray718/agape-primitives": {
+    "master_head": "a0f6cc39b27c4fb5f29fa99505685eff1b6668ce",
+    "default": "master"
+  },
+  "jesseray718/agape-crossover-key": {
+    "master_head": "ea2b8925add5207d37d4ab0520cc28870f49dc92",
+    "default": "main"
+  },
+  "jesseray718/.github": {
+    "master_head": "ab0bb784b0721fa0ade7836e70cc49bad99ba4bf",
+    "default": "main"
+  },
+  "jesseray718/und-protocol": {
+    "master_head": "43fb5214bfcde8b56c44bf74a8feec5c5c61806b",
+    "default": "main"
+  },
+  "jesseray718/openroot-spoke-template": {
+    "master_head": "cb9ddb1d67bc1fc1c05fe3162ee326dbccdac7f2",
+    "default": "main"
+  },
+  "jesseray718/agape-ipfs": {
+    "master_head": "f02be7e929ae42f429fd88809f52d55a85cf2c45",
+    "default": "master"
+  },
+  "jesseray718/agape-coordination": {
+    "master_head": "66271027905eed38dbb9b0d2e361b4afcc375f27",
+    "default": "main"
+  },
+  "jesseray718/jesseray718": {
+    "master_head": "16533dd55430afb6d0f135e945a2093f3d7f6fb9",
+    "default": "main"
+  },
+  "jesseray718/OpenCell-Thermal-System": {
+    "master_head": "a9bfe175b64ececb7dcbbf19abba2b60ff6b1dfe",
+    "default": "main"
+  },
+  "jesseray718/aerocement": {
+    "master_head": "b4a6618ca58fc5aabd8547ebcb4665b3ba1559f0",
+    "default": "main"
+  },
+  "jesseray718/canonical": {
+    "master_head": "2b83c35ede94b0d9f67edd870721249fe8d28fa2",
+    "default": "main"
+  },
+  "jesseray718/aerocement-calc": {
+    "master_head": "f7c75af0ffd9e85b1d9fe96eea6efc8b8d6d0cd8",
+    "default": "main"
+  },
+  "jesseray718/une": {
+    "master_head": "f66ee4d0e64936d2576e12a30b5ba2ae5c208f09",
+    "default": "main"
+  },
+  "jesseray718/renaissance-protocol": {
+    "master_head": "91f58c4bacafa497d293f770799a21bf73579d7e",
+    "default": "main"
+  },
+  "jesseray718/openroot-foundation": {
+    "master_head": "90b4cccc136589e4030efe015b63f6a95e591e2f",
+    "default": "main"
+  },
+  "jesseray718/openroot-thesis": {
+    "master_head": "8503b2dabac84e8c4ef163306775d25831ba7ce6",
+    "default": "main"
+  },
+  "jesseray718/agape-une": {
+    "master_head": "e3b4805e4a4f7d28c10f1d356a7558764b70a676",
+    "default": "main"
+  },
+  "jesseray718/openroot-canon": {
+    "master_head": "5b6df5f2f475e46c91de992f15c6dd31ba14e4e0",
+    "default": "main"
+  },
+  "jesseray718/skills-introduction-to-github": {
+    "master_head": "47c8c90de2bf65aa954987ee95bfda890fab094a",
+    "default": "main"
+  },
+  "jesseray718/black-locust-rmh": {
+    "master_head": "542b0124855c36afc0fa75e25dec61eb25719d07",
+    "default": "main"
+  },
+  "jesseray718/AeroCement_Ecosystem": {
+    "master_head": "13a9f3441d767b521b0d449662e4608f40077c43",
+    "default": "main"
+  },
+  "jesseray718/civilization2.0": {
+    "master_head": "7155853e1a06e4a9425969be82149bb8ed39813f",
+    "default": "main"
+  }
+}
