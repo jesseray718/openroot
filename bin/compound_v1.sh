@@ -4,6 +4,7 @@
 # fresh boot-seed for next session from LIVE repo state (staleness-proof).
 # Usage: bin/compound_v1.sh   (dry-run default; CONFIRM=1 writes)
 set -u
+CONFIRM="${CONFIRM:-0}"
 export GIT_PAGER=cat
 REPO=/home/jesse/openroot
 TS=$(date +%Y%m%d_%H%M%S)
@@ -12,7 +13,7 @@ SRC="compound-v1.1-${TS}"
 python3 - "$REPO" "$SRC" "$CONFIRM" <<'PYEOF'
 import sqlite3, sys, hashlib, datetime, os, glob
 repo, src = sys.argv[1], sys.argv[2]
-confirm = os.environ.get("CONFIRM", "0") == "1"
+confirm = os.getenv("CONFIRM", "0") == "1"
 con = sqlite3.connect(f"{repo}/data/lessons.db")
 
 # ---- [gate] staleness probe FIRST ----
