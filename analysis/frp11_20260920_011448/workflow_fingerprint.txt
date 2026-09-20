@@ -1,0 +1,3 @@
+OpenCell-Thermal-System python-quality.yml sha={"message":"Not Found","documentation_url":"https://docs.github.com/rest/repos/contents#get-repository-content","status":"404"}absent
+openroot-thesis python-quality.yml sha={"message":"Not Found","documentation_url":"https://docs.github.com/rest/repos/contents#get-repository-content","status":"404"}absent
+agapenet python-quality.yml sha={"message":"Not Found","documentation_url":"https://docs.github.com/rest/repos/contents#get-repository-content","status":"404"}absent

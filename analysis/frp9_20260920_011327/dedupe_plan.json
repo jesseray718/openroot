@@ -1,0 +1,810 @@
+{
+  "kept_trees": 81,
+  "duplicate_prune_candidates": [
+    {
+      "repo": "oscillation-mesh",
+      "branch": "chore/uplift-v4-20260828-053524",
+      "kept_sibling": "chore/uplift-v4-20260828-020649",
+      "tree": "0c5baf4e1f08",
+      "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+    },
+    {
+      "repo": "kai9000",
+      "branch": "chore/foundation-uplift-20260828-230544",
+      "kept_sibling": "chore/foundation-uplift-20260828-225816",
+      "tree": "5b15fb861499",
+      "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+    },
+    {
+      "repo": "kai9000",
+      "branch": "chore/uplift-v4-20260828-053524",
+      "kept_sibling": "chore/uplift-v4-20260828-020649",
+      "tree": "111970d56bb2",
+      "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+    },
+    {
+      "repo": "kai-memory",
+      "branch": "chore/uplift-v4-20260828-053524",
+      "kept_sibling": "chore/uplift-v4-20260828-020649",
+      "tree": "5df50c41e2a2",
+      "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+    },
+    {
+      "repo": "jesseray718-archive",
+      "branch": "chore/foundation-uplift-20260828-230544",
+      "kept_sibling": "chore/foundation-uplift-20260828-225816",
+      "tree": "0b890207835d",
+      "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+    },
+    {
+      "repo": "jesseray718-archive",
+      "branch": "chore/uplift-v4-20260828-053524",
+      "kept_sibling": "chore/uplift-v4-20260828-020649",
+      "tree": "7b831ed95eb1",
+      "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+    },
+    {
+      "repo": "fractallattice",
+      "branch": "chore/foundation-uplift-20260828-230544",
+      "kept_sibling": "chore/foundation-uplift-20260828-225816",
+      "tree": "f9d9319a7191",
+      "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+    },
+    {
+      "repo": "fractallattice",
+      "branch": "chore/uplift-v4-20260828-053524",
+      "kept_sibling": "chore/uplift-v4-20260828-020649",
+      "tree": "9d956ece87de",
+      "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+    },
+    {
+      "repo": "fractallattice",
+      "branch": "main",
+      "kept_sibling": "ci/shared-python-quality",
+      "tree": "7bde251b09a1",
+      "subject": "ci: add shared Python quality workflow (#8)"
+    },
+    {
+      "repo": "etaledger",
+      "branch": "chore/foundation-uplift-20260828-230544",
+      "kept_sibling": "chore/foundation-uplift-20260828-225816",
+      "tree": "ef057bc0e5f4",
+      "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+    },
+    {
+      "repo": "etaledger",
+      "branch": "chore/uplift-v4-20260828-053524",
+      "kept_sibling": "chore/uplift-v4-20260828-020649",
+      "tree": "4df55cbc9ee1",
+      "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+    },
+    {
+      "repo": "axiom-library",
+      "branch": "chore/foundation-uplift-20260828-230544",
+      "kept_sibling": "chore/foundation-uplift-20260828-225816",
+      "tree": "f9b3508ba410",
+      "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+    },
+    {
+      "repo": "axiom-library",
+      "branch": "chore/uplift-v4-20260828-053524",
+      "kept_sibling": "chore/uplift-v4-20260828-020649",
+      "tree": "c093215a7f92",
+      "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+    },
+    {
+      "repo": "agapenet",
+      "branch": "chore/uplift-v4-20260828-053524",
+      "kept_sibling": "chore/uplift-v4-20260828-020649",
+      "tree": "3b1c63417483",
+      "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+    },
+    {
+      "repo": "und-protocol",
+      "branch": "chore/uplift-v4-20260828-053524",
+      "kept_sibling": "chore/uplift-v4-20260828-020649",
+      "tree": "e529d79fd1ec",
+      "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+    },
+    {
+      "repo": "jesseray718",
+      "branch": "chore/uplift-v4-20260828-053524",
+      "kept_sibling": "chore/uplift-v4-20260828-020649",
+      "tree": "28860a9328c4",
+      "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+    },
+    {
+      "repo": "OpenCell-Thermal-System",
+      "branch": "chore/foundation-uplift-20260828-230544",
+      "kept_sibling": "chore/foundation-uplift-20260828-225816",
+      "tree": "ce305698027e",
+      "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+    },
+    {
+      "repo": "OpenCell-Thermal-System",
+      "branch": "chore/uplift-lite-20260828-011224",
+      "kept_sibling": "chore/uplift-lite-20260827-231618",
+      "tree": "3030ad9d8e6b",
+      "subject": "chore: uplift lite baseline"
+    },
+    {
+      "repo": "OpenCell-Thermal-System",
+      "branch": "chore/uplift-lite-20260828-012150",
+      "kept_sibling": "chore/uplift-lite-20260827-231618",
+      "tree": "3030ad9d8e6b",
+      "subject": "chore: uplift lite baseline"
+    },
+    {
+      "repo": "OpenCell-Thermal-System",
+      "branch": "chore/uplift-lite-20260828-015227",
+      "kept_sibling": "chore/uplift-lite-20260827-231618",
+      "tree": "3030ad9d8e6b",
+      "subject": "chore: uplift lite baseline"
+    },
+    {
+      "repo": "OpenCell-Thermal-System",
+      "branch": "chore/uplift-v4-20260828-053524",
+      "kept_sibling": "chore/uplift-v4-20260828-020649",
+      "tree": "c8502ea7d7e8",
+      "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+    },
+    {
+      "repo": "aerocement",
+      "branch": "chore/uplift-lite-20260827-231618",
+      "kept_sibling": "chore/uplift-lite-20260827-231056",
+      "tree": "cd82eba31843",
+      "subject": "chore: uplift lite baseline"
+    },
+    {
+      "repo": "aerocement",
+      "branch": "chore/uplift-lite-20260828-011224",
+      "kept_sibling": "chore/uplift-lite-20260827-231056",
+      "tree": "cd82eba31843",
+      "subject": "chore: uplift lite baseline"
+    },
+    {
+      "repo": "aerocement",
+      "branch": "chore/uplift-lite-20260828-012150",
+      "kept_sibling": "chore/uplift-lite-20260827-231056",
+      "tree": "cd82eba31843",
+      "subject": "chore: uplift lite baseline"
+    },
+    {
+      "repo": "aerocement",
+      "branch": "chore/uplift-lite-20260828-015227",
+      "kept_sibling": "chore/uplift-lite-20260827-231056",
+      "tree": "cd82eba31843",
+      "subject": "chore: uplift lite baseline"
+    },
+    {
+      "repo": "canonical",
+      "branch": "chore/foundation-uplift-20260828-230544",
+      "kept_sibling": "chore/foundation-uplift-20260828-225816",
+      "tree": "856339059abb",
+      "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+    },
+    {
+      "repo": "canonical",
+      "branch": "chore/uplift-v4-20260828-053524",
+      "kept_sibling": "chore/uplift-v4-20260828-020649",
+      "tree": "8e1dc6560fa0",
+      "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+    },
+    {
+      "repo": "aerocement-calc",
+      "branch": "chore/foundation-uplift-20260828-230544",
+      "kept_sibling": "chore/foundation-uplift-20260828-225816",
+      "tree": "f74117dbc245",
+      "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+    },
+    {
+      "repo": "une",
+      "branch": "chore/uplift-v4-20260828-053524",
+      "kept_sibling": "chore/uplift-v4-20260828-020649",
+      "tree": "d865260dd47c",
+      "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+    },
+    {
+      "repo": "renaissance-protocol",
+      "branch": "chore/uplift-v4-20260828-053524",
+      "kept_sibling": "chore/uplift-v4-20260828-020649",
+      "tree": "0e6e7b8dffa1",
+      "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+    },
+    {
+      "repo": "openroot-foundation",
+      "branch": "chore/uplift-v4-20260828-053524",
+      "kept_sibling": "chore/uplift-v4-20260828-020649",
+      "tree": "42b030e9210a",
+      "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+    },
+    {
+      "repo": "agape-une",
+      "branch": "chore/foundation-uplift-20260828-230544",
+      "kept_sibling": "chore/foundation-uplift-20260828-225816",
+      "tree": "c0131a3956dc",
+      "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+    },
+    {
+      "repo": "agape-une",
+      "branch": "chore/uplift-v4-20260828-053524",
+      "kept_sibling": "chore/uplift-v4-20260828-020649",
+      "tree": "d2e39ff339ea",
+      "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+    },
+    {
+      "repo": "openroot-canon",
+      "branch": "chore/foundation-uplift-20260828-230544",
+      "kept_sibling": "chore/foundation-uplift-20260828-225816",
+      "tree": "2ef121999a6b",
+      "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+    },
+    {
+      "repo": "openroot-canon",
+      "branch": "chore/uplift-v4-20260828-053524",
+      "kept_sibling": "chore/uplift-v4-20260828-020649",
+      "tree": "604a21163a80",
+      "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+    },
+    {
+      "repo": "skills-introduction-to-github",
+      "branch": "chore/foundation-uplift-20260828-225816",
+      "kept_sibling": "dontknow",
+      "tree": "a409a08a3223",
+      "subject": "10behind (#15)"
+    },
+    {
+      "repo": "skills-introduction-to-github",
+      "branch": "chore/uplift-v4-20260828-053524",
+      "kept_sibling": "chore/uplift-v4-20260828-020649",
+      "tree": "43bd70bad317",
+      "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+    },
+    {
+      "repo": "black-locust-rmh",
+      "branch": "chore/uplift-v4-20260828-053524",
+      "kept_sibling": "chore/uplift-v4-20260828-020649",
+      "tree": "ae6556c7c191",
+      "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+    },
+    {
+      "repo": "AeroCement_Ecosystem",
+      "branch": "chore/foundation-uplift-20260828-224849",
+      "kept_sibling": "chore/foundation-uplift-20260827-205905",
+      "tree": "2ed7aa57d89d",
+      "subject": "chore: baseline CI + AI advisory + security governance"
+    },
+    {
+      "repo": "AeroCement_Ecosystem",
+      "branch": "chore/uplift-lite-20260827-231618",
+      "kept_sibling": "chore/uplift-lite-20260827-231056",
+      "tree": "7ca792a7d684",
+      "subject": "chore: uplift lite baseline"
+    },
+    {
+      "repo": "AeroCement_Ecosystem",
+      "branch": "chore/uplift-lite-20260828-011224",
+      "kept_sibling": "chore/uplift-lite-20260827-231056",
+      "tree": "7ca792a7d684",
+      "subject": "chore: uplift lite baseline"
+    },
+    {
+      "repo": "AeroCement_Ecosystem",
+      "branch": "chore/uplift-lite-20260828-012150",
+      "kept_sibling": "chore/uplift-lite-20260827-231056",
+      "tree": "7ca792a7d684",
+      "subject": "chore: uplift lite baseline"
+    },
+    {
+      "repo": "AeroCement_Ecosystem",
+      "branch": "chore/uplift-lite-20260828-015227",
+      "kept_sibling": "chore/uplift-lite-20260827-231056",
+      "tree": "7ca792a7d684",
+      "subject": "chore: uplift lite baseline"
+    },
+    {
+      "repo": "AeroCement_Ecosystem",
+      "branch": "chore/uplift-v4-20260828-053524",
+      "kept_sibling": "chore/uplift-v4-20260828-020649",
+      "tree": "65ee14422647",
+      "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+    }
+  ],
+  "unique_active": [
+    {
+      "repo": "oscillation-mesh",
+      "branch": "chore/foundation-uplift-20260828-225816",
+      "ahead": 1,
+      "behind": 6,
+      "last_commit": "2026-08-29T04:03:11Z",
+      "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)",
+      "url": "https://github.com/jesseray718/oscillation-mesh/compare/main...chore/foundation-uplift-20260828-225816",
+      "age_days": 22,
+      "tree": "50c1051925d68cf23d2c8521514d9128af1a6591"
+    },
+    {
+      "repo": "oscillation-mesh",
+      "branch": "chore/foundation-uplift-20260828-230544",
+      "ahead": 2,
+      "behind": 5,
+      "last_commit": "2026-08-30T16:31:09Z",
+      "subject": "chore: resolve merge conflict in SECURITY.md",
+      "url": "https://github.com/jesseray718/oscillation-mesh/compare/main...chore/foundation-uplift-20260828-230544",
+      "age_days": 20,
+      "tree": "d60ce7643c9b90818dfdb903954129232850f944"
+    },
+    {
+      "repo": "oscillation-mesh",
+      "branch": "chore/uplift-baseline-20260828-234407",
+      "ahead": 1,
+      "behind": 6,
+      "last_commit": "2026-08-29T04:44:08Z",
+      "subject": "chore: add baseline community health files",
+      "url": "https://github.com/jesseray718/oscillation-mesh/compare/main...chore/uplift-baseline-20260828-234407",
+      "age_days": 22,
+      "tree": "73d09356947b741920ac965bbc1e64fe1633f4f5"
+    },
+    {
+      "repo": "kai-memory",
+      "branch": "chore/foundation-uplift-20260828-230544",
+      "ahead": 1,
+      "behind": 4,
+      "last_commit": "2026-08-29T04:10:27Z",
+      "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)",
+      "url": "https://github.com/jesseray718/kai-memory/compare/master...chore/foundation-uplift-20260828-230544",
+      "age_days": 22,
+      "tree": "7120591fd3f38b840bd568abf2afe6a06ba1c16c"
+    },
+    {
+      "repo": "fractallattice",
+      "branch": "chore/uplift-baseline-20260828-234351",
+      "ahead": 1,
+      "behind": 4,
+      "last_commit": "2026-08-29T04:43:51Z",
+      "subject": "chore: add baseline community health files",
+      "url": "https://github.com/jesseray718/fractallattice/compare/master...chore/uplift-baseline-20260828-234351",
+      "age_days": 22,
+      "tree": "1cdf7742e7bb46b8a49df8051294b7483142beca"
+    },
+    {
+      "repo": "etaledger",
+      "branch": "chore/uplift-baseline-20260828-234346",
+      "ahead": 1,
+      "behind": 3,
+      "last_commit": "2026-08-29T04:43:46Z",
+      "subject": "chore: add baseline community health files",
+      "url": "https://github.com/jesseray718/etaledger/compare/master...chore/uplift-baseline-20260828-234346",
+      "age_days": 22,
+      "tree": "f44e1bcaf7d04938f1f02b883735054816d3c2c7"
+    },
+    {
+      "repo": "etaledger",
+      "branch": "ci/shared-python-quality",
+      "ahead": 11,
+      "behind": 7,
+      "last_commit": "2026-09-09T07:53:50Z",
+      "subject": "ci: add shared Python quality workflow",
+      "url": "https://github.com/jesseray718/etaledger/compare/master...ci/shared-python-quality",
+      "age_days": 10,
+      "tree": "dc1e30ceb99a85e5d7c7e2713bb7af561bfcb061"
+    },
+    {
+      "repo": "etaledger",
+      "branch": "main",
+      "ahead": 10,
+      "behind": 7,
+      "last_commit": "2026-08-16T03:04:15Z",
+      "subject": "eta: CodeRabbit lattice nervous system (R=1.0) sync",
+      "url": "https://github.com/jesseray718/etaledger/compare/master...main",
+      "age_days": 35,
+      "tree": "2cf226d1199c55752845306b1f56b5c7beee4cb6"
+    },
+    {
+      "repo": "agapenet",
+      "branch": "ci/shared-python-quality",
+      "ahead": 1,
+      "behind": 832,
+      "last_commit": "2026-09-09T07:53:35Z",
+      "subject": "ci: add shared Python quality workflow",
+      "url": "https://github.com/jesseray718/agapenet/compare/main...ci/shared-python-quality",
+      "age_days": 10,
+      "tree": "37505c5fe55646cee3951213de1406e6da26cea9"
+    },
+    {
+      "repo": "agape-primitives",
+      "branch": "chore/uplift-v4-20260828-020649",
+      "ahead": 1,
+      "behind": 4,
+      "last_commit": "2026-08-28T07:08:20Z",
+      "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)",
+      "url": "https://github.com/jesseray718/agape-primitives/compare/master...chore/uplift-v4-20260828-020649",
+      "age_days": 22,
+      "tree": "11b79b96f9fb312a06ee9601c2cfac7c787aab36"
+    },
+    {
+      "repo": "agape-primitives",
+      "branch": "ci/shared-python-quality",
+      "ahead": 5,
+      "behind": 4,
+      "last_commit": "2026-09-09T07:53:29Z",
+      "subject": "ci: add shared Python quality workflow",
+      "url": "https://github.com/jesseray718/agape-primitives/compare/master...ci/shared-python-quality",
+      "age_days": 10,
+      "tree": "d87c36b0800fd8d298e811a7084205681db27687"
+    },
+    {
+      "repo": "agape-primitives",
+      "branch": "main",
+      "ahead": 4,
+      "behind": 4,
+      "last_commit": "2026-08-25T02:15:38Z",
+      "subject": "stage: route local + SD-owned artifacts into agape-primitives 2026-08-24",
+      "url": "https://github.com/jesseray718/agape-primitives/compare/master...main",
+      "age_days": 26,
+      "tree": "a99f6e323db922c36577926429b0b9147ab6f890"
+    },
+    {
+      "repo": ".github",
+      "branch": "ci/baseline-ruff-correctness",
+      "ahead": 1,
+      "behind": 2,
+      "last_commit": "2026-09-09T20:11:00Z",
+      "subject": "ci: rerun shared correctness baseline after central merge",
+      "url": "https://github.com/jesseray718/.github/compare/main...ci/baseline-ruff-correctness",
+      "age_days": 10,
+      "tree": "87badda09fee2447e16e12d1e7c8baa6617d7d14"
+    },
+    {
+      "repo": "openroot-spoke-template",
+      "branch": "chore/uplift-v4-20260828-020649",
+      "ahead": 1,
+      "behind": 844,
+      "last_commit": "2026-08-28T07:10:12Z",
+      "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)",
+      "url": "https://github.com/jesseray718/openroot-spoke-template/compare/main...chore/uplift-v4-20260828-020649",
+      "age_days": 22,
+      "tree": "e9f5d0580734ac8f7d6dc14af55998bd48d1d368"
+    },
+    {
+      "repo": "openroot-spoke-template",
+      "branch": "ci/shared-python-quality",
+      "ahead": 4,
+      "behind": 836,
+      "last_commit": "2026-09-13T06:39:08Z",
+      "subject": "test: document quality workflow helpers and cases",
+      "url": "https://github.com/jesseray718/openroot-spoke-template/compare/main...ci/shared-python-quality",
+      "age_days": 6,
+      "tree": "6c7607a49c48a9a4c4a3f4938abe62b2fbca1c6a"
+    },
+    {
+      "repo": "agape-coordination",
+      "branch": "chore/uplift-baseline-20260828-234515",
+      "ahead": 1,
+      "behind": 837,
+      "last_commit": "2026-08-29T04:45:15Z",
+      "subject": "chore: add baseline community health files",
+      "url": "https://github.com/jesseray718/agape-coordination/compare/main...chore/uplift-baseline-20260828-234515",
+      "age_days": 22,
+      "tree": "e58e885fdd0c6eb861730989a947335e261ffffa"
+    },
+    {
+      "repo": "agape-coordination",
+      "branch": "chore/uplift-v4-20260828-020649",
+      "ahead": 2,
+      "behind": 834,
+      "last_commit": "2026-09-01T21:19:57Z",
+      "subject": "Merge branch 'main' into chore/uplift-v4-20260828-020649",
+      "url": "https://github.com/jesseray718/agape-coordination/compare/main...chore/uplift-v4-20260828-020649",
+      "age_days": 18,
+      "tree": "9dad65ee23e5ba0f6196ba28e13c8fab6451f090"
+    },
+    {
+      "repo": "agape-coordination",
+      "branch": "ci/shared-python-quality",
+      "ahead": 6,
+      "behind": 833,
+      "last_commit": "2026-09-09T08:46:58Z",
+      "subject": "ci: rerun after no-tests policy",
+      "url": "https://github.com/jesseray718/agape-coordination/compare/main...ci/shared-python-quality",
+      "age_days": 10,
+      "tree": "92f7c35399e06dbda9277362f14d2c1015271a73"
+    },
+    {
+      "repo": "jesseray718",
+      "branch": "agape-synergetic-engineering",
+      "ahead": 1,
+      "behind": 45,
+      "last_commit": "2026-08-05T15:39:30Z",
+      "subject": "agape-synergetic-engineering: Oracle front-and-center on profile",
+      "url": "https://github.com/jesseray718/jesseray718/compare/main...agape-synergetic-engineering",
+      "age_days": 45,
+      "tree": "febf03acb87cc56ee58d48bb4ddf485d22d9144a"
+    },
+    {
+      "repo": "OpenCell-Thermal-System",
+      "branch": "chore/foundation-uplift-20260827-205905",
+      "ahead": 3,
+      "behind": 0,
+      "last_commit": "2026-09-10T22:07:54Z",
+      "subject": "Merge branch 'main' into chore/foundation-uplift-20260827-205905",
+      "url": "https://github.com/jesseray718/OpenCell-Thermal-System/compare/main...chore/foundation-uplift-20260827-205905",
+      "age_days": 9,
+      "tree": "80cc04b3dd52b246d92e2dae15c913156030e4b5"
+    },
+    {
+      "repo": "OpenCell-Thermal-System",
+      "branch": "chore/uplift-baseline-20260828-234024",
+      "ahead": 1,
+      "behind": 5,
+      "last_commit": "2026-08-29T04:40:24Z",
+      "subject": "chore: add baseline community health files",
+      "url": "https://github.com/jesseray718/OpenCell-Thermal-System/compare/main...chore/uplift-baseline-20260828-234024",
+      "age_days": 22,
+      "tree": "473b6571f97bff95573d5edc7e5f90c64d909be0"
+    },
+    {
+      "repo": "OpenCell-Thermal-System",
+      "branch": "coderabbit/add-pull-request-tests/7aea0d1b",
+      "ahead": 4,
+      "behind": 0,
+      "last_commit": "2026-09-11T22:03:52Z",
+      "subject": "test(ci): add checkout v7 workflow regression tests",
+      "url": "https://github.com/jesseray718/OpenCell-Thermal-System/compare/main...coderabbit/add-pull-request-tests/7aea0d1b",
+      "age_days": 8,
+      "tree": "d2f89dd36254ca11dd9e257fe1db3c300b7c0e46"
+    },
+    {
+      "repo": "OpenCell-Thermal-System",
+      "branch": "dependabot/github_actions/actions/checkout-7",
+      "ahead": 3,
+      "behind": 0,
+      "last_commit": "2026-09-11T02:23:27Z",
+      "subject": "test: validate checkout v7 workflow steps",
+      "url": "https://github.com/jesseray718/OpenCell-Thermal-System/compare/main...dependabot/github_actions/actions/checkout-7",
+      "age_days": 9,
+      "tree": "2ae509f36977bc1512cda434a591dbd0cc4b75d5"
+    },
+    {
+      "repo": "aerocement",
+      "branch": "chore/knowledge-unify-20260901-011802-aerocement-",
+      "ahead": 1,
+      "behind": 11,
+      "last_commit": "2026-09-01T06:18:21Z",
+      "subject": "chore(knowledge): unify wisdom artifacts",
+      "url": "https://github.com/jesseray718/aerocement/compare/main...chore/knowledge-unify-20260901-011802-aerocement-",
+      "age_days": 18,
+      "tree": "a24ccb7f913e4144fbe7d164db5d421c468d504a"
+    },
+    {
+      "repo": "aerocement",
+      "branch": "chore/uplift-baseline-20260828-234509",
+      "ahead": 1,
+      "behind": 14,
+      "last_commit": "2026-08-29T04:45:09Z",
+      "subject": "chore: add baseline community health files",
+      "url": "https://github.com/jesseray718/aerocement/compare/main...chore/uplift-baseline-20260828-234509",
+      "age_days": 22,
+      "tree": "9b8a3c249f1c41eb82d6927dff4713a5caf13e9a"
+    },
+    {
+      "repo": "aerocement",
+      "branch": "chore/uplift-v4-20260828-020649",
+      "ahead": 1,
+      "behind": 16,
+      "last_commit": "2026-08-28T07:07:58Z",
+      "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)",
+      "url": "https://github.com/jesseray718/aerocement/compare/main...chore/uplift-v4-20260828-020649",
+      "age_days": 22,
+      "tree": "1e52caafa6d4a4f66640a7a78690c961d3b17ae1"
+    },
+    {
+      "repo": "canonical",
+      "branch": "chore/uplift-baseline-20260828-234340",
+      "ahead": 1,
+      "behind": 10,
+      "last_commit": "2026-08-29T04:43:41Z",
+      "subject": "chore: add baseline community health files",
+      "url": "https://github.com/jesseray718/canonical/compare/main...chore/uplift-baseline-20260828-234340",
+      "age_days": 22,
+      "tree": "5f1806cfd129e3ce957168a3afaab4d31adeb598"
+    },
+    {
+      "repo": "aerocement-calc",
+      "branch": "chore/uplift-baseline-20260828-234323",
+      "ahead": 1,
+      "behind": 8,
+      "last_commit": "2026-08-29T04:43:23Z",
+      "subject": "chore: add baseline community health files",
+      "url": "https://github.com/jesseray718/aerocement-calc/compare/main...chore/uplift-baseline-20260828-234323",
+      "age_days": 22,
+      "tree": "b57ce003cb4cc2eab5bef43096bc36ba520bd65d"
+    },
+    {
+      "repo": "aerocement-calc",
+      "branch": "chore/uplift-v4-20260828-020649",
+      "ahead": 1,
+      "behind": 9,
+      "last_commit": "2026-08-28T07:08:05Z",
+      "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)",
+      "url": "https://github.com/jesseray718/aerocement-calc/compare/main...chore/uplift-v4-20260828-020649",
+      "age_days": 22,
+      "tree": "732ced92a982c8a8cb94c9ceab15ba5768a8980d"
+    },
+    {
+      "repo": "aerocement-calc",
+      "branch": "ci/shared-python-quality",
+      "ahead": 1,
+      "behind": 3,
+      "last_commit": "2026-09-09T07:53:40Z",
+      "subject": "ci: add shared Python quality workflow",
+      "url": "https://github.com/jesseray718/aerocement-calc/compare/main...ci/shared-python-quality",
+      "age_days": 10,
+      "tree": "1ef7b1497589d6a02129532bfd4cca1ec6811fd4"
+    },
+    {
+      "repo": "openroot-foundation",
+      "branch": "chore/foundation-uplift-20260828-225816",
+      "ahead": 1,
+      "behind": 11,
+      "last_commit": "2026-08-29T04:03:05Z",
+      "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)",
+      "url": "https://github.com/jesseray718/openroot-foundation/compare/main...chore/foundation-uplift-20260828-225816",
+      "age_days": 22,
+      "tree": "5e45a9bb8b6e01df5ff99ce5b3b71941b44f4431"
+    },
+    {
+      "repo": "openroot-foundation",
+      "branch": "chore/foundation-uplift-20260828-230544",
+      "ahead": 2,
+      "behind": 10,
+      "last_commit": "2026-08-31T03:14:41Z",
+      "subject": "chore: resolve merge conflict in SECURITY.md",
+      "url": "https://github.com/jesseray718/openroot-foundation/compare/main...chore/foundation-uplift-20260828-230544",
+      "age_days": 20,
+      "tree": "8b2d1fba0ee5bf6cf75a1771d5b845e6b4da1b43"
+    },
+    {
+      "repo": "openroot-foundation",
+      "branch": "chore/uplift-baseline-20260828-234402",
+      "ahead": 1,
+      "behind": 11,
+      "last_commit": "2026-08-29T04:44:02Z",
+      "subject": "chore: add baseline community health files",
+      "url": "https://github.com/jesseray718/openroot-foundation/compare/main...chore/uplift-baseline-20260828-234402",
+      "age_days": 22,
+      "tree": "d5a2575a1fc552660b429dd27710240862e8bd24"
+    },
+    {
+      "repo": "openroot-foundation",
+      "branch": "ci/shared-python-quality",
+      "ahead": 6,
+      "behind": 7,
+      "last_commit": "2026-09-09T08:46:55Z",
+      "subject": "ci: rerun after no-tests policy",
+      "url": "https://github.com/jesseray718/openroot-foundation/compare/main...ci/shared-python-quality",
+      "age_days": 10,
+      "tree": "f22ca4fbdf30e7c58d9fbc05b6e524ed2564282c"
+    },
+    {
+      "repo": "openroot-thesis",
+      "branch": "ci/shared-python-quality",
+      "ahead": 6,
+      "behind": 0,
+      "last_commit": "2026-09-09T20:12:04Z",
+      "subject": "ci: rerun shared correctness baseline after central merge",
+      "url": "https://github.com/jesseray718/openroot-thesis/compare/main...ci/shared-python-quality",
+      "age_days": 10,
+      "tree": "fdd5e225527a5dbfd2526d5b7645aaae7750fe90"
+    },
+    {
+      "repo": "openroot-thesis",
+      "branch": "copilot/ensure-maximum-utilization-of-ai",
+      "ahead": 1,
+      "behind": 15,
+      "last_commit": "2026-08-30T16:06:50Z",
+      "subject": "Add weak-node uplift simulation workflow",
+      "url": "https://github.com/jesseray718/openroot-thesis/compare/main...copilot/ensure-maximum-utilization-of-ai",
+      "age_days": 20,
+      "tree": "e27ea66e88796b35a5ca8243fac8c3bccf47c1a8"
+    },
+    {
+      "repo": "openroot-thesis",
+      "branch": "copilot/restructure-populate-openroot-thesis",
+      "ahead": 1,
+      "behind": 16,
+      "last_commit": "2026-08-30T15:46:12Z",
+      "subject": "Populate openroot-thesis: THESIS.md, all docs, Python code, README, QUICKSTART",
+      "url": "https://github.com/jesseray718/openroot-thesis/compare/main...copilot/restructure-populate-openroot-thesis",
+      "age_days": 20,
+      "tree": "722e5efcc481c1b89e68ed7d7febccca2d7eccf4"
+    },
+    {
+      "repo": "agape-une",
+      "branch": "chore/uplift-baseline-20260828-234329",
+      "ahead": 1,
+      "behind": 5,
+      "last_commit": "2026-08-29T04:43:29Z",
+      "subject": "chore: add baseline community health files",
+      "url": "https://github.com/jesseray718/agape-une/compare/main...chore/uplift-baseline-20260828-234329",
+      "age_days": 22,
+      "tree": "31dcbc981d962ebe2fc0646145aec10d73c70ac1"
+    },
+    {
+      "repo": "openroot-canon",
+      "branch": "chore/uplift-baseline-20260828-234357",
+      "ahead": 1,
+      "behind": 4,
+      "last_commit": "2026-08-29T04:43:57Z",
+      "subject": "chore: add baseline community health files",
+      "url": "https://github.com/jesseray718/openroot-canon/compare/main...chore/uplift-baseline-20260828-234357",
+      "age_days": 22,
+      "tree": "4b305a94ab8466188c17f82c9988bd45e6277539"
+    },
+    {
+      "repo": "openroot-canon",
+      "branch": "ci/shared-python-quality",
+      "ahead": 1,
+      "behind": 0,
+      "last_commit": "2026-09-09T07:53:45Z",
+      "subject": "ci: add shared Python quality workflow",
+      "url": "https://github.com/jesseray718/openroot-canon/compare/main...ci/shared-python-quality",
+      "age_days": 10,
+      "tree": "da3b67510d8fa91894dcc3d255a2f6d2d75d4bdf"
+    },
+    {
+      "repo": "skills-introduction-to-github",
+      "branch": "chore/foundation-uplift-20260828-230544",
+      "ahead": 2,
+      "behind": 9,
+      "last_commit": "2026-08-30T07:19:00Z",
+      "subject": "Merge origin/main: resolve SECURITY.md conflict",
+      "url": "https://github.com/jesseray718/skills-introduction-to-github/compare/main...chore/foundation-uplift-20260828-230544",
+      "age_days": 20,
+      "tree": "fbce34f32b324337618599da254995343f8cfff6"
+    },
+    {
+      "repo": "skills-introduction-to-github",
+      "branch": "chore/uplift-baseline-20260828-234414",
+      "ahead": 1,
+      "behind": 10,
+      "last_commit": "2026-08-29T04:44:14Z",
+      "subject": "chore: add baseline community health files",
+      "url": "https://github.com/jesseray718/skills-introduction-to-github/compare/main...chore/uplift-baseline-20260828-234414",
+      "age_days": 22,
+      "tree": "28317558053e9b5f31c67f6ec39272a4ecf45e4f"
+    },
+    {
+      "repo": "AeroCement_Ecosystem",
+      "branch": "chore/foundation-uplift-20260828-225816",
+      "ahead": 1,
+      "behind": 1,
+      "last_commit": "2026-08-29T04:01:12Z",
+      "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)",
+      "url": "https://github.com/jesseray718/AeroCement_Ecosystem/compare/main...chore/foundation-uplift-20260828-225816",
+      "age_days": 22,
+      "tree": "ff1a30591dbcb42f6b0e5c27e983e7d8965e0615"
+    },
+    {
+      "repo": "AeroCement_Ecosystem",
+      "branch": "chore/foundation-uplift-20260828-230544",
+      "ahead": 1,
+      "behind": 1,
+      "last_commit": "2026-08-29T04:08:47Z",
+      "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)",
+      "url": "https://github.com/jesseray718/AeroCement_Ecosystem/compare/main...chore/foundation-uplift-20260828-230544",
+      "age_days": 22,
+      "tree": "8acaeffe24fd6336dca8ddc4e997488ecce8d193"
+    },
+    {
+      "repo": "AeroCement_Ecosystem",
+      "branch": "chore/uplift-baseline-20260828-234015",
+      "ahead": 1,
+      "behind": 1,
+      "last_commit": "2026-08-29T04:40:15Z",
+      "subject": "chore: add baseline community health files",
+      "url": "https://github.com/jesseray718/AeroCement_Ecosystem/compare/main...chore/uplift-baseline-20260828-234015",
+      "age_days": 22,
+      "tree": "38784a9cbb65d86279cdbcf57c94ecac4e73aeb2"
+    }
+  ]
+}

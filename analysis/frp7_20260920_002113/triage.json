@@ -1,0 +1,1138 @@
+{
+  "held_prs": [
+    {
+      "author": {
+        "id": "U_kgDOETZyYg",
+        "is_bot": false,
+        "login": "jesseray718",
+        "name": "jesse mcmillen"
+      },
+      "body": "",
+      "createdAt": "2026-09-11T22:06:08Z",
+      "files": [
+        {
+          "path": ".github/workflows/ci.yml",
+          "additions": 4,
+          "deletions": 0
+        },
+        {
+          "path": ".github/workflows/openrabbitai.yml",
+          "additions": 1,
+          "deletions": 1
+        },
+        {
+          "path": "tests/__init__.py",
+          "additions": 1,
+          "deletions": 0
+        },
+        {
+          "path": "tests/test_checkout_workflows.py",
+          "additions": 91,
+          "deletions": 0
+        },
+        {
+          "path": "tests/test_workflow_checkout_versions.py",
+          "additions": 84,
+          "deletions": 0
+        }
+      ],
+      "isDraft": false,
+      "mergeStateStatus": "UNSTABLE",
+      "mergeable": "MERGEABLE",
+      "number": 18,
+      "state": "OPEN",
+      "title": "Refs/heads/coderabbit/add pull request tests/7aea0d1b",
+      "why_held": "UNSTABLE",
+      "draft": false
+    },
+    {
+      "author": {
+        "is_bot": true,
+        "login": "app/coderabbitai"
+      },
+      "body": "Adds unittest coverage for the CI and OpenRabbitAI workflows, verifying checkout steps exist, use v7, have valid step syntax, and contain no merge-conflict debris.\n\nValidation: `python -m unittest tests.test_workflow_checkout_versions` ran but failed with 4 failures because both workflows still contain checkout v4 references and branch/conflict debris.\n\n[View coding task](https://app.coderabbit.ai/code/tasks/7aea0d1b-262d-445a-a5ca-a85f19ccd619?source=coding_agent_github_pr_description)\n\n<!-- This is an auto-generated comment: release notes by coderabbit.ai -->\n\n## Summary by CodeRabbit\n\n- **Tests**\n  - Added automated checks to verify that affected workflows use the required checkout action version.\n  - Added validation for correctly formatted checkout steps.\n  - Added safeguards to detect merge-conflict remnants in workflow files.\n  - Improved failure diagnostics by identifying the affected workflow and line number.\n\n<!-- end of auto-generated comment: release notes by coderabbit.ai -->",
+      "createdAt": "2026-09-11T02:25:59Z",
+      "files": [
+        {
+          "path": "tests/__init__.py",
+          "additions": 1,
+          "deletions": 0
+        },
+        {
+          "path": "tests/test_workflow_checkout_versions.py",
+          "additions": 84,
+          "deletions": 0
+        }
+      ],
+      "isDraft": false,
+      "mergeStateStatus": "UNSTABLE",
+      "mergeable": "MERGEABLE",
+      "number": 16,
+      "state": "OPEN",
+      "title": "Add regression tests for checkout v7 workflows",
+      "why_held": "UNSTABLE",
+      "draft": false
+    },
+    {
+      "author": {
+        "id": "U_kgDOETZyYg",
+        "is_bot": false,
+        "login": "jesseray718",
+        "name": "jesse mcmillen"
+      },
+      "body": "",
+      "createdAt": "2026-09-10T22:05:31Z",
+      "files": [
+        {
+          "path": ".github/workflows/ci.yml",
+          "additions": 5,
+          "deletions": 0
+        },
+        {
+          "path": ".github/workflows/openrabbitai.yml",
+          "additions": 3,
+          "deletions": 0
+        }
+      ],
+      "isDraft": false,
+      "mergeStateStatus": "UNSTABLE",
+      "mergeable": "MERGEABLE",
+      "number": 15,
+      "state": "OPEN",
+      "title": "Chore/foundation uplift 20260827 205905",
+      "why_held": "UNSTABLE",
+      "draft": false
+    },
+    {
+      "author": {
+        "is_bot": true,
+        "login": "app/dependabot"
+      },
+      "body": "Bumps [actions/checkout](https://github.com/actions/checkout) from 4 to 7.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/actions/checkout/releases\">actions/checkout's releases</a>.</em></p>\n<blockquote>\n<h2>v7.0.0</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>block checking out fork pr for pull_request_target and workflow_run by <a href=\"https://github.com/aiqiaoy\"><code>@\u200baiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2454\">actions/checkout#2454</a></li>\n<li>Bump actions/publish-immutable-action from 0.0.3 to 0.0.4 in the minor-actions-dependencies group across 1 directory by <a href=\"https://github.com/dependabot\"><code>@\u200bdependabot</code></a>[bot] in <a href=\"https://redirect.github.com/actions/checkout/pull/2458\">actions/checkout#2458</a></li>\n<li>Bump flatted from 3.3.1 to 3.4.2 by <a href=\"https://github.com/dependabot\"><code>@\u200bdependabot</code></a>[bot] in <a href=\"https://redirect.github.com/actions/checkout/pull/2460\">actions/checkout#2460</a></li>\n<li>Bump js-yaml from 4.1.0 to 4.2.0 by <a href=\"https://github.com/dependabot\"><code>@\u200bdependabot</code></a>[bot] in <a href=\"https://redirect.github.com/actions/checkout/pull/2461\">actions/checkout#2461</a></li>\n<li>Bump <code>@\u200bactions/core</code> and <code>@\u200bactions/tool-cache</code> and Remove uuid by <a href=\"https://github.com/dependabot\"><code>@\u200bdependabot</code></a>[bot] in <a href=\"https://redirect.github.com/actions/checkout/pull/2459\">actions/checkout#2459</a></li>\n<li>upgrade module to esm and update dependencies by <a href=\"https://github.com/aiqiaoy\"><code>@\u200baiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2463\">actions/checkout#2463</a></li>\n<li>Bump the minor-npm-dependencies group across 1 directory with 3 updates by <a href=\"https://github.com/dependabot\"><code>@\u200bdependabot</code></a>[bot] in <a href=\"https://redirect.github.com/actions/checkout/pull/2462\">actions/checkout#2462</a></li>\n<li>getting ready for checkout v7 release by <a href=\"https://github.com/aiqiaoy\"><code>@\u200baiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2464\">actions/checkout#2464</a></li>\n<li>update error wording by <a href=\"https://github.com/aiqiaoy\"><code>@\u200baiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2467\">actions/checkout#2467</a></li>\n</ul>\n<h2>New Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/aiqiaoy\"><code>@\u200baiqiaoy</code></a> made their first contribution in <a href=\"https://redirect.github.com/actions/checkout/pull/2454\">actions/checkout#2454</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/actions/checkout/compare/v6.0.3...v7.0.0\">https://github.com/actions/checkout/compare/v6.0.3...v7.0.0</a></p>\n<h2>v6.1.0</h2>\n<h2>What's Changed</h2>\n<ul>\n<li><strong>[BREAKING]</strong> backport <code>allow-unsafe-pr-checkout</code> to v6 by <a href=\"https://github.com/aiqiaoy\"><code>@\u200baiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2500\">actions/checkout#2500</a></li>\n<li>backport fixes to releases-v6 by <a href=\"https://github.com/aiqiaoy\"><code>@\u200baiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2527\">actions/checkout#2527</a></li>\n</ul>\n<p><a href=\"https://github.blog/changelog/2026-06-18-safer-pull_request_target-defaults-for-github-actions-checkout/\">https://github.blog/changelog/2026-06-18-safer-pull_request_target-defaults-for-github-actions-checkout/</a> for more details about this breaking change</p>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/actions/checkout/compare/v6.0.3...v6.1.0\">https://github.com/actions/checkout/compare/v6.0.3...v6.1.0</a></p>\n<h2>v6.0.3</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>Update changelog by <a href=\"https://github.com/ericsciple\"><code>@\u200bericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2357\">actions/checkout#2357</a></li>\n<li>fix: expand merge commit SHA regex and add SHA-256 test cases by <a href=\"https://github.com/yaananth\"><code>@\u200byaananth</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2414\">actions/checkout#2414</a></li>\n<li>Fix checkout init for SHA-256 repositories by <a href=\"https://github.com/yaananth\"><code>@\u200byaananth</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2439\">actions/checkout#2439</a></li>\n<li>Update changelog for v6.0.3 by <a href=\"https://github.com/yaananth\"><code>@\u200byaananth</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2446\">actions/checkout#2446</a></li>\n</ul>\n<h2>New Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/yaananth\"><code>@\u200byaananth</code></a> made their first contribution in <a href=\"https://redirect.github.com/actions/checkout/pull/2414\">actions/checkout#2414</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/actions/checkout/compare/v6...v6.0.3\">https://github.com/actions/checkout/compare/v6...v6.0.3</a></p>\n<h2>v6.0.2</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>Add orchestration_id to git user-agent when ACTIONS_ORCHESTRATION_ID is set by <a href=\"https://github.com/TingluoHuang\"><code>@\u200bTingluoHuang</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2355\">actions/checkout#2355</a></li>\n<li>Fix tag handling: preserve annotations and explicit fetch-tags by <a href=\"https://github.com/ericsciple\"><code>@\u200bericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2356\">actions/checkout#2356</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/actions/checkout/compare/v6.0.1...v6.0.2\">https://github.com/actions/checkout/compare/v6.0.1...v6.0.2</a></p>\n<h2>v6.0.1</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>Update all references from v5 and v4 to v6 by <a href=\"https://github.com/ericsciple\"><code>@\u200bericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2314\">actions/checkout#2314</a></li>\n<li>Add worktree support for persist-credentials includeIf by <a href=\"https://github.com/ericsciple\"><code>@\u200bericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2327\">actions/checkout#2327</a></li>\n<li>Clarify v6 README by <a href=\"https://github.com/ericsciple\"><code>@\u200bericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2328\">actions/checkout#2328</a></li>\n</ul>\n<!-- raw HTML omitted -->\n</blockquote>\n<p>... (truncated)</p>\n</details>\n<details>\n<summary>Changelog</summary>\n<p><em>Sourced from <a href=\"https://github.com/actions/checkout/blob/main/CHANGELOG.md\">actions/checkout's changelog</a>.</em></p>\n<blockquote>\n<h1>Changelog</h1>\n<h2>v7.0.1</h2>\n<ul>\n<li>Skip running unsafe pr check if input is default by <a href=\"https://github.com/aiqiaoy\"><code>@\u200baiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2518\">actions/checkout#2518</a></li>\n<li>Trim only ascii whitespace for branch by <a href=\"https://github.com/aiqiaoy\"><code>@\u200baiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2521\">actions/checkout#2521</a></li>\n<li>Escape values passed to --unset by <a href=\"https://github.com/aiqiaoy\"><code>@\u200baiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2530\">actions/checkout#2530</a></li>\n<li>Various dependency updates</li>\n</ul>\n<h2>v7.0.0</h2>\n<ul>\n<li>Block checking out fork PR for pull_request_target and workflow_run by <a href=\"https://github.com/aiqiaoy\"><code>@\u200baiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2454\">actions/checkout#2454</a></li>\n<li>Various dependency updates</li>\n</ul>\n<h2>v6.0.3</h2>\n<ul>\n<li>Fix checkout init for SHA-256 repositories by <a href=\"https://github.com/yaananth\"><code>@\u200byaananth</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2439\">actions/checkout#2439</a></li>\n<li>fix: expand merge commit SHA regex and add SHA-256 test cases by <a href=\"https://github.com/yaananth\"><code>@\u200byaananth</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2414\">actions/checkout#2414</a></li>\n</ul>\n<h2>v6.0.2</h2>\n<ul>\n<li>Fix tag handling: preserve annotations and explicit fetch-tags by <a href=\"https://github.com/ericsciple\"><code>@\u200bericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2356\">actions/checkout#2356</a></li>\n</ul>\n<h2>v6.0.1</h2>\n<ul>\n<li>Add worktree support for persist-credentials includeIf by <a href=\"https://github.com/ericsciple\"><code>@\u200bericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2327\">actions/checkout#2327</a></li>\n</ul>\n<h2>v6.0.0</h2>\n<ul>\n<li>Persist creds to a separate file by <a href=\"https://github.com/ericsciple\"><code>@\u200bericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2286\">actions/checkout#2286</a></li>\n<li>Update README to include Node.js 24 support details and requirements by <a href=\"https://github.com/salmanmkc\"><code>@\u200bsalmanmkc</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2248\">actions/checkout#2248</a></li>\n</ul>\n<h2>v5.0.1</h2>\n<ul>\n<li>Port v6 cleanup to v5 by <a href=\"https://github.com/ericsciple\"><code>@\u200bericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2301\">actions/checkout#2301</a></li>\n</ul>\n<h2>v5.0.0</h2>\n<ul>\n<li>Update actions checkout to use node 24 by <a href=\"https://github.com/salmanmkc\"><code>@\u200bsalmanmkc</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2226\">actions/checkout#2226</a></li>\n</ul>\n<h2>v4.3.1</h2>\n<ul>\n<li>Port v6 cleanup to v4 by <a href=\"https://github.com/ericsciple\"><code>@\u200bericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2305\">actions/checkout#2305</a></li>\n</ul>\n<h2>v4.3.0</h2>\n<ul>\n<li>docs: update README.md by <a href=\"https://github.com/motss\"><code>@\u200bmotss</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/1971\">actions/checkout#1971</a></li>\n<li>Add internal repos for checking out multiple repositories by <a href=\"https://github.com/mouismail\"><code>@\u200bmouismail</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/1977\">actions/checkout#1977</a></li>\n<li>Documentation update - add recommended permissions to Readme by <a href=\"https://github.com/benwells\"><code>@\u200bbenwells</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2043\">actions/checkout#2043</a></li>\n<li>Adjust positioning of user email note and permissions heading by <a href=\"https://github.com/joshmgross\"><code>@\u200bjoshmgross</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2044\">actions/checkout#2044</a></li>\n<li>Update README.md by <a href=\"https://github.com/nebuk89\"><code>@\u200bnebuk89</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2194\">actions/checkout#2194</a></li>\n<li>Update CODEOWNERS for actions by <a href=\"https://github.com/TingluoHuang\"><code>@\u200bTingluoHuang</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2224\">actions/checkout#2224</a></li>\n<li>Update package dependencies by <a href=\"https://github.com/salmanmkc\"><code>@\u200bsalmanmkc</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2236\">actions/checkout#2236</a></li>\n</ul>\n<h2>v4.2.2</h2>\n<ul>\n<li><code>url-helper.ts</code> now leverages well-known environment variables by <a href=\"https://github.com/jww3\"><code>@\u200bjww3</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/1941\">actions/checkout#1941</a></li>\n<li>Expand unit test coverage for <code>isGhes</code> by <a href=\"https://github.com/jww3\"><code>@\u200bjww3</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/1946\">actions/checkout#1946</a></li>\n</ul>\n<h2>v4.2.1</h2>\n<ul>\n<li>Check out other refs/* by commit if provided, fall back to ref by <a href=\"https://github.com/orhantoy\"><code>@\u200borhantoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/1924\">actions/checkout#1924</a></li>\n</ul>\n<!-- raw HTML omitted -->\n</blockquote>\n<p>... (truncated)</p>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/actions/checkout/commit/3d3c42e5aac5ba805825da76410c181273ba90b1\"><code>3d3c42e</code></a> prep v7.0.1 release (<a href=\"https://redirect.github.com/actions/checkout/issues/2531\">#2531</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/28802689a136bfcdb721715abd713740beecbe07\"><code>2880268</code></a> escape values passed to --unset (<a href=\"https://redirect.github.com/actions/checkout/issues/2530\">#2530</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/12cd2235efa0937479335606d7c3ac9f6c0973b1\"><code>12cd223</code></a> trim only ascii whitespace for branch (<a href=\"https://redirect.github.com/actions/checkout/issues/2521\">#2521</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/62661c4e71a304b2823ed026347b8d34c3eac541\"><code>62661c4</code></a> skip running unsafe pr check if input is default (<a href=\"https://redirect.github.com/actions/checkout/issues/2518\">#2518</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/e8d4307400f9427dba7cb98e488d6ab85f1cec5f\"><code>e8d4307</code></a> Bump the minor-actions-dependencies group with 2 updates (<a href=\"https://redirect.github.com/actions/checkout/issues/2499\">#2499</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/631c942040754b6e095e929c1677c07e10ed4f87\"><code>631c942</code></a> eslint 9 (<a href=\"https://redirect.github.com/actions/checkout/issues/2474\">#2474</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/4f1f4aec02e41874fa0262ea8ff5172d7978ad1e\"><code>4f1f4ae</code></a> Bump actions/upload-artifact from 4 to 7 (<a href=\"https://redirect.github.com/actions/checkout/issues/2476\">#2476</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/ba097532fb203f7e88c9c3c0b899b49469908a92\"><code>ba09753</code></a> Bump actions/checkout from 6 to 7 (<a href=\"https://redirect.github.com/actions/checkout/issues/2488\">#2488</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/b9e0990d219a03df7633c93f6f005a8fecbcab22\"><code>b9e0990</code></a> Bump docker/login-action from 3.3.0 to 4.2.0 (<a href=\"https://redirect.github.com/actions/checkout/issues/2479\">#2479</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/e8cb398be4a550817e382abf69e4c12c76fce1f2\"><code>e8cb398</code></a> Bump docker/build-push-action from 6.5.0 to 7.2.0 (<a href=\"https://redirect.github.com/actions/checkout/issues/2478\">#2478</a>)</li>\n<li>Additional commits viewable in <a href=\"https://github.com/actions/checkout/compare/v4...v7\">compare view</a></li>\n</ul>\n</details>\n<br />\n\n\n[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=actions/checkout&package-manager=github_actions&previous-version=4&new-version=7)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)\n\nDependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.\n\n[//]: # (dependabot-automerge-start)\n[//]: # (dependabot-automerge-end)\n\n---\n\n<details>\n<summary>Dependabot commands and options</summary>\n<br />\n\nYou can trigger Dependabot actions by commenting on this PR:\n- `@dependabot rebase` will rebase this PR\n- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it\n- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency\n- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)\n\n\n</details>\n\n<!-- This is an auto-generated comment: release notes by coderabbit.ai -->\n## Summary by CodeRabbit\n\n- **Chores**\n  - Updated automated workflow checkout steps to use the latest configured action version.\n  - Standardized checkout configuration across supported workflows for more consistent automation behavior.\n\n- **Tests**\n  - Added automated validation to confirm checkout steps are present, correctly structured, and consistently configured.\n  - Added regression coverage to help prevent workflow configuration issues in future changes.\n<!-- end of auto-generated comment: release notes by coderabbit.ai -->",
+      "createdAt": "2026-08-29T10:34:41Z",
+      "files": [
+        {
+          "path": ".github/workflows/ci.yml",
+          "additions": 4,
+          "deletions": 0
+        },
+        {
+          "path": ".github/workflows/openrabbitai.yml",
+          "additions": 1,
+          "deletions": 1
+        },
+        {
+          "path": "tests/test_checkout_workflows.py",
+          "additions": 91,
+          "deletions": 0
+        }
+      ],
+      "isDraft": false,
+      "mergeStateStatus": "UNSTABLE",
+      "mergeable": "MERGEABLE",
+      "number": 12,
+      "state": "OPEN",
+      "title": "chore(deps): bump actions/checkout from 4 to 7",
+      "why_held": "UNSTABLE",
+      "draft": false
+    },
+    {
+      "author": {
+        "id": "U_kgDOETZyYg",
+        "is_bot": false,
+        "login": "jesseray718",
+        "name": "jesse mcmillen"
+      },
+      "body": "Adds the repository caller for the organization shared Python quality workflow.\n\n<!-- This is an auto-generated comment: release notes by coderabbit.ai -->\n\n## Summary by CodeRabbit\n\n* **Chores**\n  * Updated automated Python quality checks to scan source files from the repository root.\n\n<!-- end of auto-generated comment: release notes by coderabbit.ai -->",
+      "createdAt": "2026-09-09T07:51:54Z",
+      "files": [
+        {
+          "path": ".github/workflows/quality.yml",
+          "additions": 1,
+          "deletions": 1
+        }
+      ],
+      "isDraft": false,
+      "mergeStateStatus": "UNSTABLE",
+      "mergeable": "MERGEABLE",
+      "number": 5,
+      "state": "OPEN",
+      "title": "ci: add shared Python quality workflow",
+      "why_held": "UNSTABLE",
+      "draft": false
+    }
+  ],
+  "owned_branches": {
+    "oscillation-mesh": {
+      "default": "main",
+      "branches": [
+        {
+          "branch": "chore/foundation-uplift-20260828-225816",
+          "sha": "dc12694a8109621aa87cafe8590d45ef20287731",
+          "last_commit": "2026-08-29T04:03:11Z",
+          "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+        },
+        {
+          "branch": "chore/foundation-uplift-20260828-230544",
+          "sha": "746ada31b2b685c5564ef277ec59af2d342d51cf",
+          "last_commit": "2026-08-30T16:31:09Z",
+          "subject": "chore: resolve merge conflict in SECURITY.md"
+        },
+        {
+          "branch": "chore/uplift-baseline-20260828-234407",
+          "sha": "84f7d537182e6486ec295f8f1964525dc7335d27",
+          "last_commit": "2026-08-29T04:44:08Z",
+          "subject": "chore: add baseline community health files"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-020649",
+          "sha": "65d84de2c75fc8783be8c1df9ee7b9638fc915c3",
+          "last_commit": "2026-08-28T07:10:18Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-053524",
+          "sha": "f768ca81f82bfc28e45c31d2628d162eed1a441a",
+          "last_commit": "2026-08-28T10:38:54Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        }
+      ]
+    },
+    "kai9000": {
+      "default": "main",
+      "branches": [
+        {
+          "branch": "chore/foundation-uplift-20260828-225816",
+          "sha": "6b6559768554c3ce8e046ef735e3bfbaa332dfab",
+          "last_commit": "2026-08-29T04:02:51Z",
+          "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+        },
+        {
+          "branch": "chore/foundation-uplift-20260828-230544",
+          "sha": "f4d3dc932ae1374f00773c4a8d4ff761d1344da2",
+          "last_commit": "2026-08-29T04:10:33Z",
+          "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-020649",
+          "sha": "bafe8880769090aeab781c67bf71c1627b50cdbd",
+          "last_commit": "2026-08-28T07:09:34Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-053524",
+          "sha": "dea4e0ea4611bdeb867f1f1942cfa082d759ed8b",
+          "last_commit": "2026-08-28T10:38:16Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        }
+      ]
+    },
+    "kai-memory": {
+      "default": "master",
+      "branches": [
+        {
+          "branch": "chore/foundation-uplift-20260828-230544",
+          "sha": "5f06ec9b31c0645cbc94869025fe505c29e50be5",
+          "last_commit": "2026-08-29T04:10:27Z",
+          "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-020649",
+          "sha": "e81bde7f569f8c37cea126ddf9aece41b484a865",
+          "last_commit": "2026-08-28T07:09:29Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-053524",
+          "sha": "01b32267463a7b2ecf775b392231dd92599f58a2",
+          "last_commit": "2026-08-28T10:38:11Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        }
+      ]
+    },
+    "jesseray718-archive": {
+      "default": "main",
+      "branches": [
+        {
+          "branch": "chore/foundation-uplift-20260828-225816",
+          "sha": "16431aa1c3691730c622c29af253acd44c5ab601",
+          "last_commit": "2026-08-29T04:02:37Z",
+          "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+        },
+        {
+          "branch": "chore/foundation-uplift-20260828-230544",
+          "sha": "bb0ab2c84c1699208cc18a2c3ad9fbf08e87d099",
+          "last_commit": "2026-08-29T04:10:19Z",
+          "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-020649",
+          "sha": "95776191f46d8fe50e8f35d4b20fe607bb7dd3e3",
+          "last_commit": "2026-08-28T07:09:22Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-053524",
+          "sha": "1dcf1fe80ebd4cee0da69b15987f2d67427c0789",
+          "last_commit": "2026-08-28T10:38:04Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        }
+      ]
+    },
+    "fractallattice": {
+      "default": "master",
+      "branches": [
+        {
+          "branch": "chore/foundation-uplift-20260828-225816",
+          "sha": "66ffb1d2b2c485d92304fd2d9fc6956b4304ad7c",
+          "last_commit": "2026-08-29T04:02:22Z",
+          "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+        },
+        {
+          "branch": "chore/foundation-uplift-20260828-230544",
+          "sha": "29cb0c5be39e7a7775257bff77425a06b8568205",
+          "last_commit": "2026-08-29T04:10:02Z",
+          "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+        },
+        {
+          "branch": "chore/uplift-baseline-20260828-234351",
+          "sha": "9b575e4f769bdfb109f7a0e7f2e2848e13b2146b",
+          "last_commit": "2026-08-29T04:43:51Z",
+          "subject": "chore: add baseline community health files"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-020649",
+          "sha": "79c0926330338645c3eec60686f4c249195c12eb",
+          "last_commit": "2026-08-28T07:09:06Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-053524",
+          "sha": "2022c42a4796fe150c46fa6b7a158abe2740292b",
+          "last_commit": "2026-08-28T10:37:45Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "ci/shared-python-quality",
+          "sha": "97857a3850d453c9e335521517c25baea7e28f86",
+          "last_commit": "2026-09-09T08:35:09Z",
+          "subject": "ci: run unittest discovery from tests directory"
+        },
+        {
+          "branch": "main",
+          "sha": "3bf568510317fb8993f68170aa1ed57f4ee5a21b",
+          "last_commit": "2026-09-10T21:54:07Z",
+          "subject": "ci: add shared Python quality workflow (#8)"
+        }
+      ]
+    },
+    "etaledger": {
+      "default": "master",
+      "branches": [
+        {
+          "branch": "chore/foundation-uplift-20260828-225816",
+          "sha": "5c9db2ad4c52e9acb12422452627c68c07a0bd14",
+          "last_commit": "2026-08-29T04:02:16Z",
+          "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+        },
+        {
+          "branch": "chore/foundation-uplift-20260828-230544",
+          "sha": "552c0e7eff9f86a9588204bb8d04274e5af6c324",
+          "last_commit": "2026-08-29T04:09:56Z",
+          "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+        },
+        {
+          "branch": "chore/uplift-baseline-20260828-234346",
+          "sha": "095f6a0a15704d27a901a7e7e6625b36c45a334b",
+          "last_commit": "2026-08-29T04:43:46Z",
+          "subject": "chore: add baseline community health files"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-020649",
+          "sha": "2c31f7745c93ac95365e3f0bab3721f8bc701b17",
+          "last_commit": "2026-08-28T07:09:01Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-053524",
+          "sha": "4517567e5aa4cdc3131ceadf241e5d1e24eb6dfe",
+          "last_commit": "2026-08-28T10:37:40Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "ci/shared-python-quality",
+          "sha": "83a513b01e8a6caaa12bf6d04e00348f4de893ca",
+          "last_commit": "2026-09-09T07:53:50Z",
+          "subject": "ci: add shared Python quality workflow"
+        },
+        {
+          "branch": "main",
+          "sha": "8d30faea545ace48fb324956492db995893d3716",
+          "last_commit": "2026-08-16T03:04:15Z",
+          "subject": "eta: CodeRabbit lattice nervous system (R=1.0) sync"
+        }
+      ]
+    },
+    "axiom-library": {
+      "default": "main",
+      "branches": [
+        {
+          "branch": "chore/foundation-uplift-20260828-225816",
+          "sha": "cc941c54b548fe9130321ca5b59cbde0e50c0be6",
+          "last_commit": "2026-08-29T04:02:04Z",
+          "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+        },
+        {
+          "branch": "chore/foundation-uplift-20260828-230544",
+          "sha": "0c55eac351a872f42b9c7cea5358c08090be0734",
+          "last_commit": "2026-08-29T04:09:43Z",
+          "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-020649",
+          "sha": "55ebdb9782c41e137aa4515531baf351031eb5ef",
+          "last_commit": "2026-08-28T07:08:41Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-053524",
+          "sha": "4686c48eec70977cca560ea5af4c0e93b4b3abef",
+          "last_commit": "2026-08-28T10:37:25Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        }
+      ]
+    },
+    "agapenet": {
+      "default": "main",
+      "branches": [
+        {
+          "branch": "chore/knowledge-unify-20260901",
+          "sha": "96bfd6fd29d181ea0a13d8f95b64757b9975402f",
+          "last_commit": "2026-09-01T06:06:56Z",
+          "subject": "chore(knowledge): unify wisdom artifacts and integration notes"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-020649",
+          "sha": "24863b28dd66751c424d761a5c195a6a60286257",
+          "last_commit": "2026-08-28T07:08:29Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-053524",
+          "sha": "fda5584fccd13d85f365ffa351e0d7922e4b91a1",
+          "last_commit": "2026-08-28T10:37:14Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "ci/shared-python-quality",
+          "sha": "c174377fae723975e42680249c97cb0d8a56a7f4",
+          "last_commit": "2026-09-09T07:53:35Z",
+          "subject": "ci: add shared Python quality workflow"
+        }
+      ]
+    },
+    "agape-primitives": {
+      "default": "master",
+      "branches": [
+        {
+          "branch": "chore/uplift-v4-20260828-020649",
+          "sha": "3c2caa5536a7d7666838f876c5eaa554ca1b091c",
+          "last_commit": "2026-08-28T07:08:20Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-053524",
+          "sha": "71b03d2cae280c169cac634ba2f4470d279fdabb",
+          "last_commit": "2026-08-28T10:37:04Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "ci/shared-python-quality",
+          "sha": "5c2bc82739132981af54a93af8d04a31886827ce",
+          "last_commit": "2026-09-09T07:53:29Z",
+          "subject": "ci: add shared Python quality workflow"
+        },
+        {
+          "branch": "main",
+          "sha": "81408767cc653f95272f90fc424b8b0f2097ddea",
+          "last_commit": "2026-08-25T02:15:38Z",
+          "subject": "stage: route local + SD-owned artifacts into agape-primitives 2026-08-24"
+        }
+      ]
+    },
+    "agape-crossover-key": {
+      "default": "main",
+      "branches": [
+        {
+          "branch": "chore/uplift-v4-20260828-053524",
+          "sha": "9f45ee08d8b8b1d6ba5689c463de83451b6834ae",
+          "last_commit": "2026-08-28T10:36:59Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        }
+      ]
+    },
+    ".github": {
+      "default": "main",
+      "branches": [
+        {
+          "branch": "ci/baseline-ruff-correctness",
+          "sha": "2f70e1a5a01c3237be680a551ac1b68fb9a03762",
+          "last_commit": "2026-09-09T20:11:00Z",
+          "subject": "ci: rerun shared correctness baseline after central merge"
+        }
+      ]
+    },
+    "und-protocol": {
+      "default": "main",
+      "branches": [
+        {
+          "branch": "chore/uplift-v4-20260828-020649",
+          "sha": "53395a184934c051d24721febff6fb234684ecf7",
+          "last_commit": "2026-08-28T07:10:49Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-053524",
+          "sha": "cea531740c179b44adb77a690ba6d4dc9bd37f57",
+          "last_commit": "2026-08-28T10:39:09Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        }
+      ]
+    },
+    "openroot-spoke-template": {
+      "default": "main",
+      "branches": [
+        {
+          "branch": "chore/uplift-v4-20260828-020649",
+          "sha": "d3d3755821b34e7329c04e51ada366b4a55e0a01",
+          "last_commit": "2026-08-28T07:10:12Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "ci/shared-python-quality",
+          "sha": "1405eddbf4207eaa91bf8c5fab4a701e2e7f2e07",
+          "last_commit": "2026-09-13T06:39:08Z",
+          "subject": "test: document quality workflow helpers and cases"
+        }
+      ]
+    },
+    "agape-ipfs": {
+      "default": "master",
+      "branches": [
+        {
+          "branch": "chore/uplift-v4-20260828-020649",
+          "sha": "536e1308b5c869dc01fb5afbe1bd9ea5af00f907",
+          "last_commit": "2026-08-28T07:11:58Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        }
+      ]
+    },
+    "agape-coordination": {
+      "default": "main",
+      "branches": [
+        {
+          "branch": "chore/uplift-baseline-20260828-234515",
+          "sha": "659001944928b33861157bc4ae1b281b74c5f22e",
+          "last_commit": "2026-08-29T04:45:15Z",
+          "subject": "chore: add baseline community health files"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-020649",
+          "sha": "6c08ba4df0e4bddb0dec00ddbf618d975e0b4e70",
+          "last_commit": "2026-09-01T21:19:57Z",
+          "subject": "Merge branch 'main' into chore/uplift-v4-20260828-020649"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-053524",
+          "sha": "c2153bd28e6aa19d26e0ded700faabe07a2478d6",
+          "last_commit": "2026-08-28T10:36:54Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "ci/shared-python-quality",
+          "sha": "f5c2fd5b2caf64abbaa13738071a6ba72de89b80",
+          "last_commit": "2026-09-09T08:46:58Z",
+          "subject": "ci: rerun after no-tests policy"
+        }
+      ]
+    },
+    "jesseray718": {
+      "default": "main",
+      "branches": [
+        {
+          "branch": "agape-synergetic-engineering",
+          "sha": "e006165d0026f1cd8699513d9d6b002efcbdaded",
+          "last_commit": "2026-08-05T15:39:30Z",
+          "subject": "agape-synergetic-engineering: Oracle front-and-center on profile"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-020649",
+          "sha": "eab3a8541547392ab3778c1f64671805cd932788",
+          "last_commit": "2026-08-28T07:09:10Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-053524",
+          "sha": "c7b86f0772b6ec2b0eddcd0ae81ac5c1c8485a4d",
+          "last_commit": "2026-08-28T10:37:51Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "feat/profile-clarity",
+          "sha": "a467a13099353d3cdec74860e2976442cd57f7fc",
+          "last_commit": "2026-09-01T21:39:22Z",
+          "subject": "Update employment context in README"
+        }
+      ]
+    },
+    "OpenCell-Thermal-System": {
+      "default": "main",
+      "branches": [
+        {
+          "branch": "chore/foundation-uplift-20260827-205905",
+          "sha": "53ec6bdc80409f44f6f4e63dc31dca397ef5b769",
+          "last_commit": "2026-09-10T22:07:54Z",
+          "subject": "Merge branch 'main' into chore/foundation-uplift-20260827-205905"
+        },
+        {
+          "branch": "chore/foundation-uplift-20260828-225816",
+          "sha": "48aee011c4269ed98a92dc6abb72feb7aaf06ea0",
+          "last_commit": "2026-08-29T04:01:18Z",
+          "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+        },
+        {
+          "branch": "chore/foundation-uplift-20260828-230544",
+          "sha": "11428567aad7fc804f7ffa01a3a5b280d86d15a7",
+          "last_commit": "2026-08-29T04:08:54Z",
+          "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+        },
+        {
+          "branch": "chore/uplift-baseline-20260828-234024",
+          "sha": "e67801cc6ee7d64b52df527d2ddcf111a7d23a63",
+          "last_commit": "2026-08-29T04:40:24Z",
+          "subject": "chore: add baseline community health files"
+        },
+        {
+          "branch": "chore/uplift-lite-20260827-231618",
+          "sha": "4e548eacd0c4ac301bfb4463bae083648d1dfbf6",
+          "last_commit": "2026-08-28T04:17:37Z",
+          "subject": "chore: uplift lite baseline"
+        },
+        {
+          "branch": "chore/uplift-lite-20260828-011224",
+          "sha": "19956fd94aedcb46afb71a15c59f2433058ce9f3",
+          "last_commit": "2026-08-28T06:13:43Z",
+          "subject": "chore: uplift lite baseline"
+        },
+        {
+          "branch": "chore/uplift-lite-20260828-012150",
+          "sha": "0cf488cfd15ff0ccde581f3fd39a0bae96fe7746",
+          "last_commit": "2026-08-28T06:23:06Z",
+          "subject": "chore: uplift lite baseline"
+        },
+        {
+          "branch": "chore/uplift-lite-20260828-015227",
+          "sha": "21b936de8e8c10caf7ed67528a92014edb27f0e3",
+          "last_commit": "2026-08-28T06:53:46Z",
+          "subject": "chore: uplift lite baseline"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-020649",
+          "sha": "dad8eac1b8e32fcbb66437ed408458ffa72e21aa",
+          "last_commit": "2026-08-28T07:07:52Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-053524",
+          "sha": "f17d35eb523b63d5aa810f6fd502555140e56c96",
+          "last_commit": "2026-08-28T10:36:35Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "coderabbit/add-pull-request-tests/7aea0d1b",
+          "sha": "f301101f4ced4b3f81ced239f7208e0dc811b804",
+          "last_commit": "2026-09-11T22:03:52Z",
+          "subject": "test(ci): add checkout v7 workflow regression tests"
+        },
+        {
+          "branch": "dependabot/github_actions/actions/checkout-7",
+          "sha": "cff13cde23ad9308bdfd5412e7d48bdc3ab07394",
+          "last_commit": "2026-09-11T02:23:27Z",
+          "subject": "test: validate checkout v7 workflow steps"
+        }
+      ]
+    },
+    "aerocement": {
+      "default": "main",
+      "branches": [
+        {
+          "branch": "chore/knowledge-unify-20260901-011802-aerocement-",
+          "sha": "eec3d011383ae0d80082ac31f66f0e9f7434718e",
+          "last_commit": "2026-09-01T06:18:21Z",
+          "subject": "chore(knowledge): unify wisdom artifacts"
+        },
+        {
+          "branch": "chore/uplift-baseline-20260828-234509",
+          "sha": "5db2fa6b7689bf9bd14fc38e0bcf2904c6a88a94",
+          "last_commit": "2026-08-29T04:45:09Z",
+          "subject": "chore: add baseline community health files"
+        },
+        {
+          "branch": "chore/uplift-lite-20260827-231056",
+          "sha": "6f180502d4415f614448f34a85134ae77dee3c84",
+          "last_commit": "2026-08-28T04:12:56Z",
+          "subject": "chore: uplift lite baseline"
+        },
+        {
+          "branch": "chore/uplift-lite-20260827-231618",
+          "sha": "3ddf54ebcbcb74abfb0644cd209e6f635edb5d68",
+          "last_commit": "2026-08-28T04:18:18Z",
+          "subject": "chore: uplift lite baseline"
+        },
+        {
+          "branch": "chore/uplift-lite-20260828-011224",
+          "sha": "c0510a49f91003ff7d74b5a47eedbd7dae5eb727",
+          "last_commit": "2026-08-28T06:17:21Z",
+          "subject": "chore: uplift lite baseline"
+        },
+        {
+          "branch": "chore/uplift-lite-20260828-012150",
+          "sha": "cd88e209b21c7e9d45f6342a08df040f615d0f12",
+          "last_commit": "2026-08-28T06:23:56Z",
+          "subject": "chore: uplift lite baseline"
+        },
+        {
+          "branch": "chore/uplift-lite-20260828-015227",
+          "sha": "7fa928c772fca21d9ac32b12e1e64321aad0a784",
+          "last_commit": "2026-08-28T06:54:27Z",
+          "subject": "chore: uplift lite baseline"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-020649",
+          "sha": "afdcccf44c012a01c2976cb8f84cdc088e3e16f6",
+          "last_commit": "2026-08-28T07:07:58Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-053524",
+          "sha": "c546fdf404b74cd76ba15c971064b24b51231719",
+          "last_commit": "2026-08-28T10:36:40Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "thesis-restructure",
+          "sha": "342a12fb7a83eece821deb408a8c740922c2bab8",
+          "last_commit": "2026-08-29T10:18:47Z",
+          "subject": "chore: add baseline community health files (#8)"
+        }
+      ]
+    },
+    "canonical": {
+      "default": "main",
+      "branches": [
+        {
+          "branch": "chore/foundation-uplift-20260828-225816",
+          "sha": "a67a17e81f6cd4c3d8e3f8554b6ebf46e9710420",
+          "last_commit": "2026-08-29T04:02:10Z",
+          "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+        },
+        {
+          "branch": "chore/foundation-uplift-20260828-230544",
+          "sha": "f92254b366159cacbb0c27471466b8fe727597b1",
+          "last_commit": "2026-08-29T04:09:50Z",
+          "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+        },
+        {
+          "branch": "chore/uplift-baseline-20260828-234340",
+          "sha": "38ef3ce61383f23edae80b7fecca65f485da76f6",
+          "last_commit": "2026-08-29T04:43:41Z",
+          "subject": "chore: add baseline community health files"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-020649",
+          "sha": "d53f01e1767a3c6731a38631c01dd99891f3f8ef",
+          "last_commit": "2026-08-28T07:08:55Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-053524",
+          "sha": "345cc06093ece1d91fdbd645fa33bcd633537ed2",
+          "last_commit": "2026-08-28T10:37:35Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        }
+      ]
+    },
+    "aerocement-calc": {
+      "default": "main",
+      "branches": [
+        {
+          "branch": "chore/foundation-uplift-20260828-225816",
+          "sha": "d968be8eb6f759b6f03dda3983f88fe7b77d3a6d",
+          "last_commit": "2026-08-29T04:01:45Z",
+          "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+        },
+        {
+          "branch": "chore/foundation-uplift-20260828-230544",
+          "sha": "550793ed84e21ab24490ba89e3876860ba6adf27",
+          "last_commit": "2026-08-29T04:09:24Z",
+          "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+        },
+        {
+          "branch": "chore/uplift-baseline-20260828-234323",
+          "sha": "4ac439575e39b1192bcb0ce0ee0e9b018f88836a",
+          "last_commit": "2026-08-29T04:43:23Z",
+          "subject": "chore: add baseline community health files"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-020649",
+          "sha": "9a6e1032f369a7fa05041feb7cecc0af04769a54",
+          "last_commit": "2026-08-28T07:08:05Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "ci/shared-python-quality",
+          "sha": "87aca919aa1653f881b4fdc52a36266011eef1c9",
+          "last_commit": "2026-09-09T07:53:40Z",
+          "subject": "ci: add shared Python quality workflow"
+        }
+      ]
+    },
+    "une": {
+      "default": "main",
+      "branches": [
+        {
+          "branch": "agape/add-coordination-theorem",
+          "sha": "036c9c1ff466a0d8c92e68127ba1cdf648510637",
+          "last_commit": "2026-08-04T04:31:52Z",
+          "subject": "feat: Feature Agape Theorem front and center"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-020649",
+          "sha": "c00eb69a268b6e632ef2479801006eec7ae30934",
+          "last_commit": "2026-08-28T07:11:38Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-053524",
+          "sha": "8640f7700af042980ef0ccad7b187c5a5aff4226",
+          "last_commit": "2026-08-28T10:39:25Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        }
+      ]
+    },
+    "renaissance-protocol": {
+      "default": "main",
+      "branches": [
+        {
+          "branch": "chore/uplift-v4-20260828-020649",
+          "sha": "aa3e83b1771476ccbee02bfc17385f94dc1396c8",
+          "last_commit": "2026-08-28T07:10:24Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-053524",
+          "sha": "f580b76ed55aaccce5a503b62fc2992ba081f35a",
+          "last_commit": "2026-08-28T10:38:59Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        }
+      ]
+    },
+    "openroot-foundation": {
+      "default": "main",
+      "branches": [
+        {
+          "branch": "chore/foundation-uplift-20260828-225816",
+          "sha": "b35593b44d7b03ade9502bad13676c558b40139f",
+          "last_commit": "2026-08-29T04:03:05Z",
+          "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+        },
+        {
+          "branch": "chore/foundation-uplift-20260828-230544",
+          "sha": "96ef7e9751b68839727f42480c1e6a04b1686786",
+          "last_commit": "2026-08-31T03:14:41Z",
+          "subject": "chore: resolve merge conflict in SECURITY.md"
+        },
+        {
+          "branch": "chore/uplift-baseline-20260828-234402",
+          "sha": "4907a7dfa77e35f17d808fb751fefe04fc3bf467",
+          "last_commit": "2026-08-29T04:44:02Z",
+          "subject": "chore: add baseline community health files"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-020649",
+          "sha": "c00a05cef9907157a2f333884c30b685f0d6c585",
+          "last_commit": "2026-08-28T07:10:05Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-053524",
+          "sha": "0025674e63cd8a41a166ec19d59a6d56e3c31489",
+          "last_commit": "2026-08-28T10:38:43Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "ci/shared-python-quality",
+          "sha": "41abe72252e00ec14571be43bff33d2b7cc90802",
+          "last_commit": "2026-09-09T08:46:55Z",
+          "subject": "ci: rerun after no-tests policy"
+        }
+      ]
+    },
+    "openroot-thesis": {
+      "default": "main",
+      "branches": [
+        {
+          "branch": "ci/shared-python-quality",
+          "sha": "c7ca8ec0a3bc78e5099f5e0f70da70a79f366a6e",
+          "last_commit": "2026-09-09T20:12:04Z",
+          "subject": "ci: rerun shared correctness baseline after central merge"
+        },
+        {
+          "branch": "copilot/ensure-maximum-utilization-of-ai",
+          "sha": "708d86c6357345467b7690e01266e4f11c775a93",
+          "last_commit": "2026-08-30T16:06:50Z",
+          "subject": "Add weak-node uplift simulation workflow"
+        },
+        {
+          "branch": "copilot/restructure-openroot-thesis-repo",
+          "sha": "89c231bfa77cd3b82d0af9727249604b5ad28af8",
+          "last_commit": "2026-08-30T00:45:24Z",
+          "subject": "Initial commit"
+        },
+        {
+          "branch": "copilot/restructure-populate-openroot-thesis",
+          "sha": "0f06cebafe4fa2fe80bbcd3169ab2e65dfff2474",
+          "last_commit": "2026-08-30T15:46:12Z",
+          "subject": "Populate openroot-thesis: THESIS.md, all docs, Python code, README, QUICKSTART"
+        },
+        {
+          "branch": "copilot/squash-and-merge-green-checks",
+          "sha": "a32283e1aa0fe94b79d7d36e0eaff69cb5114138",
+          "last_commit": "2026-08-30T16:09:07Z",
+          "subject": "Add weak-node uplift simulation workflow (#2)"
+        }
+      ]
+    },
+    "agape-une": {
+      "default": "main",
+      "branches": [
+        {
+          "branch": "chore/foundation-uplift-20260828-225816",
+          "sha": "7b2d75995cc9d74c429b94073aa1073dc8771960",
+          "last_commit": "2026-08-29T04:01:51Z",
+          "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+        },
+        {
+          "branch": "chore/foundation-uplift-20260828-230544",
+          "sha": "dc892bef576307534db860b88b84a0dafb878706",
+          "last_commit": "2026-08-29T04:09:30Z",
+          "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+        },
+        {
+          "branch": "chore/uplift-baseline-20260828-234329",
+          "sha": "bcbded3be8ede316a5f8004c34f9bba722034c05",
+          "last_commit": "2026-08-29T04:43:29Z",
+          "subject": "chore: add baseline community health files"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-020649",
+          "sha": "635e64524c40e1f256aed648eff6ed3a2b9c6d2a",
+          "last_commit": "2026-08-28T07:08:24Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-053524",
+          "sha": "d98633106b294b68ba215cbcb9ef1c115d0e1556",
+          "last_commit": "2026-08-28T10:37:09Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        }
+      ]
+    },
+    "openroot-canon": {
+      "default": "main",
+      "branches": [
+        {
+          "branch": "chore/foundation-uplift-20260828-225816",
+          "sha": "9f0601e4c10c9beccf493be9b24ea2904c2d449c",
+          "last_commit": "2026-08-29T04:02:58Z",
+          "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+        },
+        {
+          "branch": "chore/foundation-uplift-20260828-230544",
+          "sha": "d5ae8ef71fa4754e8527dcc2bf3f321bdf426a38",
+          "last_commit": "2026-08-29T04:10:39Z",
+          "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+        },
+        {
+          "branch": "chore/uplift-baseline-20260828-234357",
+          "sha": "89e652e144d917a51d9c2524e9bf2ac272b401ee",
+          "last_commit": "2026-08-29T04:43:57Z",
+          "subject": "chore: add baseline community health files"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-020649",
+          "sha": "cc3c4d866e23301731bca206b07903865b871126",
+          "last_commit": "2026-08-28T07:09:59Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-053524",
+          "sha": "9fa7ad8726209761106df97f1bd46acb1b1fa81d",
+          "last_commit": "2026-08-28T10:38:38Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "ci/shared-python-quality",
+          "sha": "80dac109407337cd94a175cc3d30f21febf8014d",
+          "last_commit": "2026-09-09T07:53:45Z",
+          "subject": "ci: add shared Python quality workflow"
+        }
+      ]
+    },
+    "skills-introduction-to-github": {
+      "default": "main",
+      "branches": [
+        {
+          "branch": "chore/foundation-uplift-20260828-225816",
+          "sha": "4c4d0c4d189fbc88b0fe9335f2c3d1c08b6b294f",
+          "last_commit": "2026-09-05T16:39:58Z",
+          "subject": "10behind (#15)"
+        },
+        {
+          "branch": "chore/foundation-uplift-20260828-230544",
+          "sha": "45d679ed86d3990c837642b08b916639dfa0b86b",
+          "last_commit": "2026-08-30T07:19:00Z",
+          "subject": "Merge origin/main: resolve SECURITY.md conflict"
+        },
+        {
+          "branch": "chore/uplift-baseline-20260828-234414",
+          "sha": "36273ef283a8e00bfa803db18438cfcc4d961fb1",
+          "last_commit": "2026-08-29T04:44:14Z",
+          "subject": "chore: add baseline community health files"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-020649",
+          "sha": "c328e3596adcbea96a75950e27cb77443b9a5556",
+          "last_commit": "2026-08-28T07:10:31Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-053524",
+          "sha": "b3a78b03e554fe27235f12302d292b44e0a6d832",
+          "last_commit": "2026-08-28T10:39:04Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "dontknow",
+          "sha": "05f517b9d2b581e30818f149126b26a18ba58ffe",
+          "last_commit": "2026-09-05T16:15:28Z",
+          "subject": "Merge branch 'chore/foundation-uplift-20260828-225816' into dontknow"
+        }
+      ]
+    },
+    "black-locust-rmh": {
+      "default": "main",
+      "branches": [
+        {
+          "branch": "chore/uplift-v4-20260828-020649",
+          "sha": "3a5a930f99fd85c08b1c06ac2d7fdbf53817a38c",
+          "last_commit": "2026-08-28T07:08:48Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-053524",
+          "sha": "75c8701d5cdd0aa6850d81b5d4540e19bc9764ac",
+          "last_commit": "2026-08-28T10:37:31Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        }
+      ]
+    },
+    "AeroCement_Ecosystem": {
+      "default": "main",
+      "branches": [
+        {
+          "branch": "chore/foundation-uplift-20260827-205905",
+          "sha": "2ec674184c897a6ba202f3b8466944e854cdb6d2",
+          "last_commit": "2026-08-28T02:01:09Z",
+          "subject": "chore: baseline CI + AI advisory + security governance"
+        },
+        {
+          "branch": "chore/foundation-uplift-20260828-224849",
+          "sha": "6bd7d12973a799b6c5f0c8f8178bfcb1a69957e0",
+          "last_commit": "2026-08-29T03:50:46Z",
+          "subject": "chore: baseline CI + AI advisory + security governance"
+        },
+        {
+          "branch": "chore/foundation-uplift-20260828-225816",
+          "sha": "9aad4336a413d7b7fae7ebc799e971bdde0e02a6",
+          "last_commit": "2026-08-29T04:01:12Z",
+          "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+        },
+        {
+          "branch": "chore/foundation-uplift-20260828-230544",
+          "sha": "7dec5f0c3a259555c9ffa0fda820dc154417b67d",
+          "last_commit": "2026-08-29T04:08:47Z",
+          "subject": "chore: foundation uplift baseline (ci/codeowners/security/dependabot/openrabbit)"
+        },
+        {
+          "branch": "chore/uplift-baseline-20260828-234015",
+          "sha": "545e941d1f0e08bdd07874bf57ed135b7e2044d9",
+          "last_commit": "2026-08-29T04:40:15Z",
+          "subject": "chore: add baseline community health files"
+        },
+        {
+          "branch": "chore/uplift-lite-20260827-231056",
+          "sha": "7459da8b6f3b31d8d3ab408fc8264812c310c987",
+          "last_commit": "2026-08-28T04:11:57Z",
+          "subject": "chore: uplift lite baseline"
+        },
+        {
+          "branch": "chore/uplift-lite-20260827-231618",
+          "sha": "c1b648c73cbada5d230821e43e2498905178cdd2",
+          "last_commit": "2026-08-28T04:17:25Z",
+          "subject": "chore: uplift lite baseline"
+        },
+        {
+          "branch": "chore/uplift-lite-20260828-011224",
+          "sha": "0d646b81cbae1cf2598fb317cfcbf0e9b8f97148",
+          "last_commit": "2026-08-28T06:13:32Z",
+          "subject": "chore: uplift lite baseline"
+        },
+        {
+          "branch": "chore/uplift-lite-20260828-012150",
+          "sha": "778d7732e83d48ce77a87b60c3da33a4b8e76f96",
+          "last_commit": "2026-08-28T06:22:56Z",
+          "subject": "chore: uplift lite baseline"
+        },
+        {
+          "branch": "chore/uplift-lite-20260828-015227",
+          "sha": "6537c31b4aa58ecc833041d643d084a8d0bdd5cb",
+          "last_commit": "2026-08-28T06:53:35Z",
+          "subject": "chore: uplift lite baseline"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-020649",
+          "sha": "57c5867f1f23bda60ee343c4803d3900e6d8324c",
+          "last_commit": "2026-08-28T07:07:47Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        },
+        {
+          "branch": "chore/uplift-v4-20260828-053524",
+          "sha": "2a0ae013e0a52846803172662523c2ef49f23565",
+          "last_commit": "2026-08-28T10:36:30Z",
+          "subject": "chore: uplift v4 baseline (CI + OpenRabbitAI + FUNDING)"
+        }
+      ]
+    }
+  },
+  "fork_branch_counts": {
+    "markor": 0,
+    "Reticulum": 9,
+    "RNode_Firmware": 12,
+    "LXMF": 10,
+    "tinyGS": 16,
+    "MeshCore": 12,
+    "firmware": 219
+  },
+  "prune_candidates": []
+}

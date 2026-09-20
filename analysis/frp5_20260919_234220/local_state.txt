@@ -1,0 +1,17 @@
+== HEAD ==
+87294a0a6636ec8ad745ef344106b9c6d57a17b0
+== origin/main ==
+87294a0a6636ec8ad745ef344106b9c6d57a17b0
+== ahead/behind ==
+0	0
+== status porcelain ==
+?? analysis/frp5_20260919_233659/
+?? analysis/frp5_20260919_234220/
+?? bin/frp5_deep_audit.sh
+== bin tracked files ==
+count=88
+== GOALS.md ==
+present
+== MASTER_TODO.md ==
+present
+quarantine branch absent from origin
