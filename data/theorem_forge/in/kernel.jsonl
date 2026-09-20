@@ -1,0 +1,14 @@
+{"id":"N00","type":"axiom","statement":"A claim is load-bearing only if it has an id, a grade, and a path to evidence. Unidentified sentences are not kernel.","atomic":true,"smuggles":[],"notes":"source lock; openroot-canon N00"}
+{"id":"N01","type":"axiom","statement":"The only performance measure is eta = useful_joules / human_joules. Other scores are commentary.","atomic":true,"smuggles":[],"notes":"une-joule-native core law"}
+{"id":"N03","type":"definition","statement":"C(N,T,R) := N * 0.001 * (1 + 0.1*T) * (1-R)^T is a model function, not a measured physical energy.","atomic":true,"smuggles":[],"notes":"MODEL"}
+{"id":"N04","type":"definition","statement":"R in [0,1] is the cooperation parameter of C. R=1.0 is the algebraic point where (1-R)^T = 0 for T>=1.","atomic":true,"smuggles":[],"notes":"algebraic"}
+{"id":"N06","type":"postulate","statement":"Irreversible bit erasure costs at least kT ln 2 joules (Landauer). Computation is physical.","atomic":true,"smuggles":[],"notes":"physics floor"}
+{"id":"N07","type":"postulate","statement":"Least-first: write the smallest live path that already exists before inventing a new tree. Empty directories are not a repo.","atomic":true,"smuggles":[],"notes":"phone-burned"}
+{"id":"N09","type":"postulate","statement":"Proof-of-physical-work (PoPW) outranks proof-of-text. Mass, photo, pad log beat a demo row.","atomic":true,"smuggles":[],"notes":"PoPW"}
+{"id":"N10","type":"postulate","statement":"The chain is local chain.jsonl plus content-addressed store. A public ledger host is not existence of a hang.","atomic":true,"smuggles":[],"notes":"not Solana"}
+{"id":"N11","type":"postulate","statement":"Need-gate: a tree is integrated only when MANIFEST, CLAIMS, INTEGRATION notes exist and claims are graded.","atomic":true,"smuggles":[],"notes":"need-gate"}
+{"id":"N12","type":"postulate","statement":"Edges and marginals are first-class sites of yield.","atomic":true,"smuggles":[],"notes":"edges"}
+{"id":"N14","type":"axiom","statement":"Efficiency language is reservoir-scoped. Heat-engine eta, act eta, EROI, service-ratio, and fractal efficiency_per_joule must not be summed as one number.","atomic":true,"smuggles":[],"notes":"N14"}
+{"id":"N16","type":"axiom","statement":"Feedback is heat. A lock does not rewrite itself. Regulation acts on the next act, not on the already-hung blob.","atomic":true,"smuggles":[],"notes":"N16"}
+{"id":"P17","type":"postulate","statement":"Absolute paths only. Tilde and placeholder paths are defects of the emitter.","atomic":true,"smuggles":[],"notes":"paths"}
+{"id":"P18","type":"postulate","statement":"Design from patterns to details. Climate, pulse, and slope precede tanks, gel, lid, coil.","atomic":true,"smuggles":[],"notes":"Holmgren 7"}

@@ -20,11 +20,11 @@
 
 | If you want... | Click here | Why |
 |----------------|------------|-----|
-| **Plain-language intro** | [START-HERE.md](START-HERE.md) | No jargon — credit, energy, what to do this week |
-| **Full thesis** | [THESIS.md](THESIS.md) | The complete thermodynamic argument |
-| **Hardware builds** | [aerocement/](aerocement/) | Volumetric blackbody concrete recipes |
-| **Talent alignment** | [TALENT-ALIGNMENT-PROMPT.md](TALENT-ALIGNMENT-PROMPT.md) | Map ANY skill to the Four Engines |
-| **Community standards** | [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) | How we treat each other |
+| **Plain-language intro** | [START-HERE.md](./START-HERE.md) | No jargon — credit, energy, what to do this week |
+| **Full thesis** | [THESIS.md](./THESIS.md) | The complete thermodynamic argument |
+| **Hardware builds** | [aerocement/](./aerocement/) | Volumetric blackbody concrete recipes |
+| **Talent alignment** | [TALENT-ALIGNMENT-PROMPT.md](./TALENT-ALIGNMENT-PROMPT.md) | Map ANY skill to the Four Engines |
+| **Community standards** | [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) | How we treat each other |
 
 ---
 
@@ -91,7 +91,7 @@ The ledger proves every claim with measurable joules:
 
 ## Contributing
 
-**Shared credit is the doctrine.** See [CONTRIBUTING.md](CONTRIBUTING.md) and [START-HERE.md](START-HERE.md).
+**Shared credit is the doctrine.** See [CONTRIBUTING.md](./CONTRIBUTING.md) and [START-HERE.md](./START-HERE.md).
 
 ### How to Join
 1. Read the talent alignment prompt above
