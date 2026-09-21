@@ -78,7 +78,7 @@ if CONFIRM:
         say(f"[banked] staging: git add {add_files}")
         subprocess.run(["git","add"]+[k for k in ledger.keys()], cwd=OPENROOT)
         say(f"[banked] commiting: git commit -m '...provisional message...'")
-        proc = subprocess.run(["git","commit","-m",proposed_msg[:300]+"...", cwd=OPENROOT], capture_output=True, text=True)
+        proc = subprocess.run(["git","commit","-m",proposed_msg[:300]+"..."], cwd=OPENROOT, capture_output=True, text=True)
         if proc.returncode == 0:
             new_head = subprocess.run(["git","rev-parse","--short","HEAD"],capture_output=True,text=True).stdout.strip()
             say(f"[banked] COMMIT SUCCESSFUL: {new_head}")
