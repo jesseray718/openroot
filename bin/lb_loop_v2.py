@@ -35,7 +35,7 @@ STAGES = [
     ("doc_compiler", ["python3", "bin/doc_compile.py"]),
     ("agent_loop",   ["bash", "bin/agent.sh"]),
     ("stack_gate",   ["bash", "bin/lb_stack_gate_all.sh"]),
-    ("team_gate",    ["bash", "bin/team_gate_v2.sh"]),
+    ("team_gate",   ["bash", "bin/lb_team_gate_call.sh"]),
 ]
 AUDITED_ONLY = [("refinery", ["bash", "bin/refine_next.sh"])]
 MIN_LINES = 15
