@@ -12,3 +12,7 @@ consolidation-backups/
 *.tar.gz
 !data/species.db
 .env
+data/*.log
+data/hive_registry.json
+data/team_gate.db
+data/*.db
