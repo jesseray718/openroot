@@ -17,10 +17,10 @@
 3. **Falsifiable claims only, no hype.** Absorbance framed as COP-boundary, never ">100% of solar."
 4. **Two-pane law, fork-only.** Delete merged branches instantly.
 
-## Verified State (snapshot 20260921_161947)
+## Verified State (snapshot 20260921_162046)
 | Metric | Value |
 |---|---|
-| HEAD | f2e6fc9a (= origin/main, CI green) |
+| HEAD | a1ea652a (= origin/main, CI green) |
 | Latest release | v1.0.0 — Public Launch |
 | bin/ instruments | 172 tracked, all py_compile + bash -n green |
 | Roadmap | GOALS.md + MASTER_TODO.md (rebuilt 2026-09-21) |
