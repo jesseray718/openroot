@@ -81,7 +81,9 @@ def main():
             except Exception as e:
                 print(f"  {m} [{cls}] FAIL {type(e).__name__}")
     print("[STAGE:elect] tiniest-capable equivalent per class = min(params among PASS, tie->fastest)")
-    for cls, rows in registry["classes"].items():
+    for cls in list(registry["classes"]):
+        rows = registry["classes"][cls]              # list of probe rows
+        registry["classes"][cls] = {"rows": rows}    # wrap: multi_router reads [cls]["elected"]
         passing = [r for r in rows if r["verdict"] == "PASS"]
         if passing:
             lead = sorted(passing, key=lambda r: (r["params_b"], r["ms"]))[0]
