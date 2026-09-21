@@ -75,9 +75,12 @@ def main():
     if PIDFILE.exists():
         old_pid = PIDFILE.read_text().strip()
         try:
-            os.kill(int(old_pid), 0)
-            print(f"[bot] already running pid={old_pid}, exiting")
-            return
+            if int(old_pid) == os.getpid():
+                pass  # M6 fix: pidfile holds OUR OWN pid (launcher race) — take over
+            else:
+                os.kill(int(old_pid), 0)
+                print(f"[bot] already running pid={old_pid}, exiting")
+                return
         except (ValueError, ProcessLookupError, PermissionError):
             pass  # stale pid, take over
     PIDFILE.write_text(str(os.getpid()))
