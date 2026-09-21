@@ -1,0 +1,59 @@
+{
+  "canary": "PUB_READY_V2_20260921_201300",
+  "apply": true,
+  "repo": "jesseray718/openroot",
+  "milestone": "v2.9 Cascade Grid Sweep",
+  "issues": [
+    {
+      "title": "[PRIORITY-HIGH] Update README.md to showcase OpenRoot strengths and achievements",
+      "num": "73",
+      "url": "https://github.com/jesseray718/openroot/issues/73"
+    },
+    {
+      "title": "Create OpenRoot landing page on GitHub Pages",
+      "num": "74",
+      "url": "https://github.com/jesseray718/openroot/issues/74"
+    },
+    {
+      "title": "[AUDIT] Repository hygiene: branches, tags, untracked files",
+      "num": "75",
+      "url": "https://github.com/jesseray718/openroot/issues/75"
+    },
+    {
+      "title": "[CRITICAL] Set up CI/CD pipeline for automated testing",
+      "num": "76",
+      "url": "https://github.com/jesseray718/openroot/issues/76"
+    },
+    {
+      "title": "Implement GitHub Issue templates",
+      "num": "77",
+      "url": "https://github.com/jesseray718/openroot/issues/77"
+    },
+    {
+      "title": "[DOC] Create ARCHITECTURE.md documenting system design",
+      "num": "78",
+      "url": "https://github.com/jesseray718/openroot/issues/78"
+    },
+    {
+      "title": "[DOC] Document thermal/energy projects for peer review readiness",
+      "num": "79",
+      "url": "https://github.com/jesseray718/openroot/issues/79"
+    },
+    {
+      "title": "[LEGAL] Verify licenses, SPDX headers, and compliance",
+      "num": "80",
+      "url": "https://github.com/jesseray718/openroot/issues/80"
+    },
+    {
+      "title": "Create public dashboard for project metrics",
+      "num": "81",
+      "url": "https://github.com/jesseray718/openroot/issues/81"
+    },
+    {
+      "title": "Implement changelog with automated release notes",
+      "num": "82",
+      "url": "https://github.com/jesseray718/openroot/issues/82"
+    }
+  ],
+  "created_at": "2026-09-21T20:13:41.201784+00:00"
+}
