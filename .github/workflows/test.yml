@@ -1,0 +1,27 @@
+name: Instruments Before Builders
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Python compile all bin/ scripts
+        run: |
+          FAIL=0
+          for f in bin/*.py; do
+            [ -f "$f" ] || continue
+            python3 -m py_compile "$f" || { echo "::error::$f failed py_compile"; FAIL=1; }
+          done
+          [ "$FAIL" -eq 0 ] && echo "[PASS] all py_compile" || exit 1
+      - name: Bash syntax all bin/ scripts
+        run: |
+          FAIL=0
+          for f in bin/*.sh; do
+            [ -f "$f" ] || continue
+            bash -n "$f" || { echo "::error::$f failed bash -n"; FAIL=1; }
+          done
+          [ "$FAIL" -eq 0 ] && echo "[PASS] all bash -n" || exit 1
