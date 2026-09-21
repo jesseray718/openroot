@@ -9,6 +9,7 @@ from datetime import datetime, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB = os.path.join(ROOT, "data", "router_ledger.db")
+OLLAMA_BASE = os.environ.get("OLLAMA_HOST", "http://localhost:11434")
 
 # ---- provider registry: talents DECLARED, router refuses anything else ----
 PROVIDERS = {
@@ -25,7 +26,7 @@ PROVIDERS = {
         "allows": {"synth": "synthesize multi-document context into one doc",
                    "summarize": "compress a long doc"},
         "strength": "long-context reading and synthesis. NO executable code authorship."},
-    "openrouter":    {"api": "openrouter", "model": "meta-llama/llama-3.2-3b-instruct:free",
+    "openrouter":    {"api": "openrouter", "model": None,  # resolved at runtime
         "allows": {"draft": "bulk low-stakes drafting",
                    "translate": "translation", "outline": "structure an outline"},
         "strength": "cheap bulk text. NO math proofs, NO code."},
@@ -49,7 +50,7 @@ def db():
 
 def ollama(model, prompt, timeout=180):
     body = json.dumps({"model": model, "prompt": prompt, "stream": False}).encode()
-    req = urllib.request.Request("http://localhost:11434/api/generate", data=body,
+    req = urllib.request.Request(OLLAMA_BASE.rstrip("/") + "/api/generate", data=body,
                                  headers={"Content-Type": "application/json"})
     t0 = time.time()
     with urllib.request.urlopen(req, timeout=timeout) as r:
@@ -72,14 +73,32 @@ def call_gemini(prompt):
                    {"contents": [{"parts": [{"text": prompt}]}]})
     return out["candidates"][0]["content"]["parts"][0]["text"], ms, "ok"
 
+def resolve_openrouter_model():
+    """Runtime pick: env override > cheapest live :free slug. Never trust hardcoded slugs."""
+    if os.environ.get("OPENROUTER_MODEL"):
+        return os.environ["OPENROUTER_MODEL"], "env-override"
+    k = os.environ.get("OPENROUTER_API_KEY")
+    if not k: return None, "[HELD] OPENROUTER_API_KEY unset"
+    try:
+        hdr = {"Authorization": f"Bearer {k}"}
+        out, _ = rest("https://openrouter.ai/api/v1/models", hdr, {})
+        frees = [m["id"] for m in out["data"]
+                 if str(m.get("pricing", {}).get("prompt", "1")) == "0"]
+        frees.sort()   # deterministic
+        return (frees[0], f"auto-picked of {len(frees)} free") if frees else (None, "no free models")
+    except Exception as e:
+        return None, f"[HELD] model-list {type(e).__name__}: {e}"
+
 def call_openrouter(prompt):
     k = os.environ.get("OPENROUTER_API_KEY")
     if not k: return None, 0, "[HELD] OPENROUTER_API_KEY unset"
+    model, how = resolve_openrouter_model()
+    if not model: return None, 0, f"[HELD] {how}"
     out, ms = rest("https://openrouter.ai/api/v1/chat/completions",
         {"Authorization": f"Bearer {k}", "Content-Type": "application/json"},
-        {"model": PROVIDERS["openrouter"]["model"],
+        {"model": model,
          "messages": [{"role": "user", "content": prompt}]})
-    return out["choices"][0]["message"]["content"], ms, "ok"
+    return out["choices"][0]["message"]["content"] + f" [via {model}]", ms, "ok"
 
 def dispatch(provider, task_class, task_text, rnd, task_id, con):
     p = PROVIDERS[provider]
@@ -94,7 +113,7 @@ def dispatch(provider, task_class, task_text, rnd, task_id, con):
         if p["api"] == "ollama":
             if task_class == "embed":
                 body = json.dumps({"model": p["model"], "input": task_text}).encode()
-                req = urllib.request.Request("http://localhost:11434/api/embeddings",
+                req = urllib.request.Request(OLLAMA_BASE.rstrip("/") + "/api/embeddings",
                         data=body, headers={"Content-Type": "application/json"})
                 t0 = time.time()
                 with urllib.request.urlopen(req, timeout=60) as r:
@@ -172,6 +191,19 @@ def main():
         {"id": "t3", "class": "plan",      "text": "Plan mistake-to-solution binding patch for lb_loop_v2."},
         {"id": "t4", "class": "outline",   "text": "Outline a SARE grant framing doc for OpenCell."}]
     print(f"[BOOT] {len(tasks)} tasks, {args.rounds} rounds, {len(PROVIDERS)} providers")
+    print(f"[PREFLIGHT] ollama_base={OLLAMA_BASE}")
+    # cheap liveness probes — dead lanes degrade gracefully, never burn a round mid-task
+    try:
+        import urllib.request as _u
+        with _u.urlopen(OLLAMA_BASE.rstrip("/") + "/api/tags", timeout=5) as r:
+            alive = len(json.loads(r.read()).get("models", []))
+        print(f"[PREFLIGHT] ollama ALIVE — {alive} models loaded")
+    except Exception as e:
+        print(f"[PREFLIGHT] ollama DEAD ({type(e).__name__}) — set OLLAMA_HOST=http://100.122.169.43:11434 from termux")
+    m, how = resolve_openrouter_model()
+    print(f"[PREFLIGHT] openrouter model: {m or 'NONE'} ({how})")
+    print(f"[PREFLIGHT] gemini: {'armed' if os.environ.get('GEMINI_API_KEY') else 'HELD — no key'}")
+    print(f"[PREFLIGHT] lumo_manual: armed (paste bridge)")
     for rnd in range(1, args.rounds+1):
         print(f"\n===== ROUTER ROUND {rnd}/{args.rounds} =====")
         denied = []
