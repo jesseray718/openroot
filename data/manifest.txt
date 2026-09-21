@@ -117,6 +117,7 @@
 /home/jesse/openroot/bin/openroot_public_readiness.py
 /home/jesse/openroot/bin/openroot_unified_launch_v1.sh
 /home/jesse/openroot/bin/openrouter_client_v1.py
+/home/jesse/openroot/bin/pathway_chain_test.sh
 /home/jesse/openroot/bin/popw_hang.py
 /home/jesse/openroot/bin/popw_ledger.py
 /home/jesse/openroot/bin/pr59_reopen_squash_v2.py
@@ -133,10 +134,12 @@
 /home/jesse/openroot/bin/refinement_loop_v2.sh
 /home/jesse/openroot/bin/refinement_loop_v3.sh
 /home/jesse/openroot/bin/refine_next.sh
+/home/jesse/openroot/bin/register_pathway.sh
 /home/jesse/openroot/bin/relay_v1.py
 /home/jesse/openroot/bin/repo_clean_v1.sh
 /home/jesse/openroot/bin/rescue_a15_unique.py
 /home/jesse/openroot/bin/research_ready_v1.sh
+/home/jesse/openroot/bin/resolve_pathway.sh
 /home/jesse/openroot/bin/resolve_pr58_final.py
 /home/jesse/openroot/bin/resolve_pr58_v1.sh
 /home/jesse/openroot/bin/restore_readme_profile_landing_v1.py

@@ -1,7 +1,3 @@
+ M context_bridge/drift_report_20260921.txt
  M data/env_map.json
-?? context_bridge/drift_report_20260921.txt
-?? context_bridge/readme_backup_20260921_154022/
-?? context_bridge/strays/
-?? data/manifest.txt
-?? data/router_memory/
-?? human_gate_bundle/
+ M data/manifest.txt
