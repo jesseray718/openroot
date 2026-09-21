@@ -5,6 +5,7 @@ consolidation-backups/
 data/bot_loop.log
 data_bot_state.json
 data/*.db
+data/.env
 !data/env_map.json
 data/hive_ledger.db
 data/hive_registry.json
