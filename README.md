@@ -1,3 +1,17 @@
+# OpenRoot — Floor-Lift Economy, Four Engines, Superlinear Orchestration
+
+## Core Thesis
+
+**The spread between top and bottom is a speed limit on compound human growth.**
+
+Same artifact, routed differently: 26x difference in systemic value. Controlled demo:
+`floor_lift 67.05` (bottom-third routing) vs `2.5` (premium routing) — identical 100-unit benefit.
+
+Metric: `floor_lift = Σ (benefit_i × (1 - percentile_i/100)²)` — graded by routing, not volume.
+Live infrastructure: tier-0 deterministic gates → tier-4 big-brain (Qwen 72B) under a $0.50 hard
+spend cap, CONFIRM=1 human gate, lessons.db sha-chained mistake→solution memory.
+
+---
 # OpenRoot — The Thermodynamic Commons
 
 **Physical infrastructure + the computational swarm that serves it.**
