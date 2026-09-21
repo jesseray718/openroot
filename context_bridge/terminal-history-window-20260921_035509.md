@@ -85,3 +85,6 @@ Boundary: 24h, approximated by mtime + canary timestamps.
 ## Bridge state
 (no bridge state yet)
 
+
+## Client-side typed commands (Termux history)
+      472  { history 1 | grep 'ssh optiplex' | tail -300; } > /sdcard/ssh_history_dump.txt && scp /sdcard/ssh_history_dump.txt optiplex:/tmp/client_ssh_history.txt && ssh optiplex 'cd ~/openroot && DOC=$(ls -t context_bridge/terminal-history-window-*.md | head -1) && echo "" >> $DOC && echo "## Client-side typed commands (Termux history)" >> $DOC && sed "s/^/    /" /tmp/client_ssh_history.txt >> $DOC && git add $DOC && git commit -m "[recover] client-side ssh history appended - window complete" && git push origin main && echo "[BANKED] client half sealed, [exit=0]"'
