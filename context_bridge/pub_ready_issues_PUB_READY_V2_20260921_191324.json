@@ -1,0 +1,59 @@
+{
+  "canary": "PUB_READY_V2_20260921_191324",
+  "apply": false,
+  "repo": "jesseray718/openroot",
+  "milestone": "v2.9 Cascade Grid Sweep",
+  "issues": [
+    {
+      "title": "[PRIORITY-HIGH] Update README.md to showcase OpenRoot strengths and achievements",
+      "num": null,
+      "dry_run": true
+    },
+    {
+      "title": "Create OpenRoot landing page on GitHub Pages",
+      "num": null,
+      "dry_run": true
+    },
+    {
+      "title": "[AUDIT] Repository hygiene: branches, tags, untracked files",
+      "num": null,
+      "dry_run": true
+    },
+    {
+      "title": "[CRITICAL] Set up CI/CD pipeline for automated testing",
+      "num": null,
+      "dry_run": true
+    },
+    {
+      "title": "Implement GitHub Issue templates",
+      "num": null,
+      "dry_run": true
+    },
+    {
+      "title": "[DOC] Create ARCHITECTURE.md documenting system design",
+      "num": null,
+      "dry_run": true
+    },
+    {
+      "title": "[DOC] Document thermal/energy projects for peer review readiness",
+      "num": null,
+      "dry_run": true
+    },
+    {
+      "title": "[LEGAL] Verify licenses, SPDX headers, and compliance",
+      "num": null,
+      "dry_run": true
+    },
+    {
+      "title": "Create public dashboard for project metrics",
+      "num": null,
+      "dry_run": true
+    },
+    {
+      "title": "Implement changelog with automated release notes",
+      "num": null,
+      "dry_run": true
+    }
+  ],
+  "created_at": "2026-09-21T19:13:25.539089+00:00"
+}
