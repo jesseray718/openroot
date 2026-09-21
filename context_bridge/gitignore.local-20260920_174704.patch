@@ -1,0 +1,9 @@
+diff --git a/.gitignore b/.gitignore
+index 564833da..b946da24 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -11,3 +11,4 @@ venv/
+ consolidation-backups/
+ *.tar.gz
+ !data/species.db
++.env

@@ -1,1 +1,6 @@
 [warmup] loading coder model into RAM (past stalls were cold loads, not failures)
+READY
+[loop] attempt 1/5 — draft (popw-accounted)
+[loop] attempt 1/5 — grade (popw-accounted)
+[loop] attempt 1 verdict: PASS
+[DONE] PASS at attempt 1 — POPW report appended to context_bridge/POPW.report
