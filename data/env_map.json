@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-09-20T20:25:12.771783+00:00",
-  "machine": "localhost",
-  "user": "unknown",
-  "python_version": "3.14.6",
+  "timestamp": "2026-09-21T23:01:42.577592+00:00",
+  "machine": "optiplex3060",
+  "user": "jesse",
+  "python_version": "3.12.3",
   "ollama_url": "http://localhost:11434",
   "agent_model": "qwen2.5-coder:7b",
   "grader_model": "qwen2.5:3b",
   "embed_model": "nomic-embed-text",
-  "home": "/data/data/com.termux/files/home",
+  "home": "/home/jesse",
   "git_user": "",
   "git_email": ""
 }
