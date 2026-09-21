@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-21T04:11:27.446508+00:00",
+  "generated": "2026-09-21T04:48:30.061723+00:00",
   "ollama_base": "http://localhost:11434",
   "classes": {
     "classify": {
@@ -7,32 +7,32 @@
         {
           "model": "openroot-coder:latest",
           "params_b": 8.0,
-          "ms": 35697.0,
+          "ms": 34215.7,
           "verdict": "PASS"
         },
         {
           "model": "qwen2.5:3b",
           "params_b": 3.0,
-          "ms": 29125.2,
+          "ms": 30952.9,
           "verdict": "PASS"
         },
         {
           "model": "qwen2.5-coder:7b",
           "params_b": 7.0,
-          "ms": 6869.3,
+          "ms": 6740.6,
           "verdict": "PASS"
         },
         {
           "model": "openroot-assistant:latest",
           "params_b": 8.0,
-          "ms": 119163.4,
+          "ms": 111071.0,
           "verdict": "PASS"
         }
       ],
       "elected": {
         "model": "qwen2.5:3b",
         "params_b": 3.0,
-        "ms": 29125.2,
+        "ms": 30952.9,
         "verdict": "PASS"
       }
     },
@@ -41,32 +41,32 @@
         {
           "model": "openroot-coder:latest",
           "params_b": 8.0,
-          "ms": 1508.5,
+          "ms": 3778.7,
           "verdict": "PASS"
         },
         {
           "model": "qwen2.5:3b",
           "params_b": 3.0,
-          "ms": 756.5,
+          "ms": 1480.9,
           "verdict": "PASS"
         },
         {
           "model": "qwen2.5-coder:7b",
           "params_b": 7.0,
-          "ms": 1449.3,
+          "ms": 3669.7,
           "verdict": "PASS"
         },
         {
           "model": "openroot-assistant:latest",
           "params_b": 8.0,
-          "ms": 1136.8,
-          "verdict": "FAIL"
+          "ms": 3158.6,
+          "verdict": "PASS"
         }
       ],
       "elected": {
         "model": "qwen2.5:3b",
         "params_b": 3.0,
-        "ms": 756.5,
+        "ms": 1480.9,
         "verdict": "PASS"
       }
     },
@@ -75,32 +75,32 @@
         {
           "model": "openroot-coder:latest",
           "params_b": 8.0,
-          "ms": 3271.2,
+          "ms": 3262.5,
           "verdict": "PASS"
         },
         {
           "model": "qwen2.5:3b",
           "params_b": 3.0,
-          "ms": 1282.1,
+          "ms": 1552.6,
           "verdict": "PASS"
         },
         {
           "model": "qwen2.5-coder:7b",
           "params_b": 7.0,
-          "ms": 3946.6,
+          "ms": 7197.8,
           "verdict": "PASS"
         },
         {
           "model": "openroot-assistant:latest",
           "params_b": 8.0,
-          "ms": 6394.7,
+          "ms": 6105.8,
           "verdict": "PASS"
         }
       ],
       "elected": {
         "model": "qwen2.5:3b",
         "params_b": 3.0,
-        "ms": 1282.1,
+        "ms": 1552.6,
         "verdict": "PASS"
       }
     },
@@ -109,32 +109,32 @@
         {
           "model": "openroot-coder:latest",
           "params_b": 8.0,
-          "ms": 3996.8,
+          "ms": 5662.1,
           "verdict": "PASS"
         },
         {
           "model": "qwen2.5:3b",
           "params_b": 3.0,
-          "ms": 1249.3,
+          "ms": 2725.7,
           "verdict": "PASS"
         },
         {
           "model": "qwen2.5-coder:7b",
           "params_b": 7.0,
-          "ms": 3294.6,
+          "ms": 2537.5,
           "verdict": "PASS"
         },
         {
           "model": "openroot-assistant:latest",
           "params_b": 8.0,
-          "ms": 5631.8,
-          "verdict": "PASS"
+          "ms": 5258.2,
+          "verdict": "FAIL"
         }
       ],
       "elected": {
         "model": "qwen2.5:3b",
         "params_b": 3.0,
-        "ms": 1249.3,
+        "ms": 2725.7,
         "verdict": "PASS"
       }
     },
@@ -143,32 +143,32 @@
         {
           "model": "openroot-coder:latest",
           "params_b": 8.0,
-          "ms": 2425.7,
+          "ms": 2497.1,
           "verdict": "PASS"
         },
         {
           "model": "qwen2.5:3b",
           "params_b": 3.0,
-          "ms": 1183.9,
+          "ms": 1180.9,
           "verdict": "PASS"
         },
         {
           "model": "qwen2.5-coder:7b",
           "params_b": 7.0,
-          "ms": 2336.9,
+          "ms": 2336.8,
           "verdict": "PASS"
         },
         {
           "model": "openroot-assistant:latest",
           "params_b": 8.0,
-          "ms": 7283.6,
+          "ms": 11703.2,
           "verdict": "PASS"
         }
       ],
       "elected": {
         "model": "qwen2.5:3b",
         "params_b": 3.0,
-        "ms": 1183.9,
+        "ms": 1180.9,
         "verdict": "PASS"
       }
     },
@@ -177,16 +177,10 @@
         {
           "model": "nomic-embed-text:latest",
           "params_b": 0.1,
-          "ms": 5512.8,
-          "verdict": "PASS"
+          "ms": 5104.1,
+          "verdict": "FAIL-zerodim"
         }
-      ],
-      "elected": {
-        "model": "nomic-embed-text:latest",
-        "params_b": 0.1,
-        "ms": 5512.8,
-        "verdict": "PASS"
-      }
+      ]
     }
   }
 }

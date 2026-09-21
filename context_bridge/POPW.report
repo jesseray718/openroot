@@ -1,0 +1,5 @@
+[draft] calls=1 prompt_tok=1581 eval_tok=1622 joules=21866J
+[grade] calls=1 prompt_tok=1676 eval_tok=2 joules=3418J
+[smoke] calls=1 prompt_tok=34 eval_tok=2 joules=1909J
+[warmup] calls=1 prompt_tok=34 eval_tok=2 joules=1062J
+[TOTAL] eval_tok=1628 J=28255 efficiency=17.356 J/eval_token (source tagged per-event)
