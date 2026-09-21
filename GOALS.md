@@ -1,15 +1,19 @@
-# GOALS — OpenRoot
+# OpenRoot Goals
 
-Regenerated 20260921_160638 from verified session queue + context_bridge remnants (original lost in history rewrite; remnants in session-2026-09-16-* files). Lumo-assisted, human-gated — REVIEW BEFORE TRUSTING.
+**Vision:** Build self-similar, anti-fragile distributed network amplifying Agape energy.
 
-## Mission
-Open-source hardware blockchain: local-first AI orchestration + passive energy systems, structured to lift the economic bottom floor. eta = J_useful/J_human. Falsifiable claims only.
+## Core Objectives
+1. **Local Sovereign** — Run everything offline-first, no cloud dependency
+2. **Agape Amplification** — Compound J_useful/J_human > 1 via parallel workflows
+3. **Bottom Floor Lift** — Economic cascade routing prioritizes nodes below equality line
+4. **Proof of Physical Work** — Thermal ledgers, solar absorbers, passive cooling
+5. **Mistake-to-Solution Chain** — SHA256 hash errors to resolutions, never recompute
 
-## Active Goals
-1. **Public-readiness hardening** — CI green (DONE 2026-09-21), docs refreshed (DONE), quarantine discipline established (DONE)
-2. **Contributor pipeline** — support Reh1t on issue #53 (RAG ingestion); history was force-pushed, their clone is stale
-3. **GOALS/TODO restoration** — this file (DONE pending human gate)
-4. **Profile polish** — pin 4 repos on profile, [PHOTO] slot in README
-5. **aerocement-panel-v0** — standalone repo with build evidence
-6. **SARE grant framing** — COP-boundary language, no >100% thermo
-7. **Weekly cadence** — onepass_v3.sh every week
+## Success Metrics
+- 📊 ETA ≥ 37.5× for bottom-node routing vs top-node
+- 🔥 OpenCell 95%+ absorbance (COP-boundary, not >100%)
+- ⚡ 7B builder / 3B grader iteration loops with <5% failure rate
+- 🧠 FTS5 + Nomic Embed semantic search <100ms latency
+
+---
+**Status:** Public launch state (2026-09-21)

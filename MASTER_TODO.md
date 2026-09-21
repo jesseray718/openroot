@@ -1,19 +1,24 @@
-# MASTER TODO — OpenRoot (20260921_160638)
+# Master Todo — OpenRoot
 
-Provenance: rebuilt from session-closeout queue (context_bridge/session-cicd-closeout-20260921_160334.md). Regeneration used setup_restore_v1 strategy.
+## Immediate Queue (Priority Order)
+- [ ] Verify/commit bin/ directory (check `git ls-files bin/ | wc -l`)
+- [ ] Rebuild GOALS.md + MASTER_TODO from context_bridge remnants
+- [ ] Support Reh1t PR #53 (RAG ingestion — history force-push impact)
+- [ ] Pin 4 repos on profile (UI task)
+- [ ] Add PHOTO to README (docs/img/ + markdown embed)
+- [ ] aerocement-panel-v0 standalone repo with build evidence
+- [ ] SARE grant framing (passive energy systems)
+- [ ] Weekly onepass_v3.sh execution
 
-## Now (this week)
-- [ ] Human-gate review of regenerated GOALS.md + this file, then commit
-- [ ] Reh1t issue #53: welcome comment + explain force-push history (git fetch && git reset --hard origin/main)
-- [ ] Pin 4 repos on profile (gh api /user/pins or manual) + [PHOTO] slot in README
-- [ ] Ingest 3 lessons from 2026-09-21 into lesson chain (py_compile /dev/stdin false-fail; no-op sed false-pass; double-comma edit)
+## Simulation Versions
+- [x] cascade-v1.0 (degenerate floor cap flaw)
+- [ ] cascade-v2.0 (fix SOL 300×100 > floor cap 100×100)
+- [ ] lb-loop v1 (lightbeam superlinear compounding)
 
-## Next (2 weeks)
-- [ ] aerocement-panel-v0 standalone repo with build evidence + BOM
-- [ ] Quarantine triage: fix or formally retire hive_live_convergence_v1.sh (quote line 76) and refinement_loop_v1.sh (EOF line 99); delete workflow_recover.sh (garbage)
-- [ ] SARE grant framing doc — COP-boundary language only
-- [ ] Fix agape_cascade floor-cap flaw before any v2 claims (cap 100x100 < SOL 300x100)
+## Documentation
+- [ ] Update README with PoPW badges
+- [ ] Zenodo integration DOI
+- [ ] CI/CD workflow tests
 
-## Standing cadence
-- [ ] Weekly: onepass_v3.sh (env_map, manifest regen, drift, next-move, seed, commit)
-- [ ] Every session: handoff seal in context_bridge/ with sha256
+---
+**Last Updated:** 2026-09-21
