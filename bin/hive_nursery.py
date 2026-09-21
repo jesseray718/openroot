@@ -28,8 +28,8 @@ def gen(model, prompt, opts=None):
 PROBES = {
  "classify": ("Reply with the single word CODE and nothing else.",
               lambda o: bool(re.search(r"\bCODE\b", o.strip()[:20]))),
- "code-edit": ("Output only the fixed line: print('ok')",
-               lambda o: "print('ok')" in o),
+ "code-edit": ("Fix this code. Output ONLY the corrected code, nothing else:\nfor i in range(10)\n    print(i\n",
+               lambda o: "range(10):" in o and "print(i)" in o and len(o.strip()) < 400),
  "draft":     ("Write one sentence containing the word lattice.",
                lambda o: "lattice" in o.lower() and 3 < len(o.split()) < 60),
  "outline":   ("Output exactly two lines each starting with SUBTASK:",
@@ -66,7 +66,8 @@ def main():
                 t0=time.time(); d=len(api("/api/embeddings",
                     {"model": m, "input": "probe"})["embedding"]); ms=(time.time()-t0)*1000
                 registry["classes"].setdefault("embed", []).append(
-                    {"model": m, "params_b": size_of(m), "ms": round(ms,1), "verdict": "PASS"})
+                    {"model": m, "params_b": size_of(m), "ms": round(ms,1),
+                     "verdict": "PASS" if d > 0 else "FAIL-zerodim"})
                 print(f"  {m} [embed] PASS {ms:.0f}ms ({d}-dim)")
             except Exception as e: print(f"  {m} [embed] FAIL {type(e).__name__}")
             continue

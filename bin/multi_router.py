@@ -87,6 +87,16 @@ def resolve_openrouter_model():
         frees.sort()   # deterministic
         return (frees[0], f"auto-picked of {len(frees)} free") if frees else (None, "no free models")
     except Exception as e:
+        try:  # models endpoint is public - auth header may be the problem
+            req = urllib.request.Request("https://openrouter.ai/api/v1/models")
+            with urllib.request.urlopen(req, timeout=30) as r:
+                out = json.loads(r.read())
+            frees = [m["id"] for m in out["data"]
+                     if str(m.get("pricing", {}).get("prompt", "1")) == "0"]
+            frees.sort()
+            if frees: return frees[0], f"auto via unauth list ({len(frees)} free)"
+        except Exception as e2:
+            pass
         return None, f"[HELD] model-list {type(e).__name__}: {e}"
 
 def call_openrouter(prompt):
