@@ -34,7 +34,7 @@ STAGES = [
     ("compound",     ["bash", "bin/compound_v1.sh"]),
     ("doc_compiler", ["python3", "bin/doc_compile.py"]),
     ("agent_loop",   ["bash", "bin/agent.sh"]),
-    ("stack_gate",   ["bash", "bin/lb_stack_sweep.sh"]),
+    ("stack_gate",   ["bash", "bin/lb_stack_gate_all.sh"]),
     ("team_gate",    ["bash", "bin/team_gate_v2.sh"]),
 ]
 AUDITED_ONLY = [("refinery", ["bash", "bin/refine_next.sh"])]
@@ -73,13 +73,15 @@ def norm(text):
 def fingerprint(text): return hashlib.sha256(norm(text).encode()).hexdigest()[:16]
 
 def inputs_sig(stage):
-    """Extra input signature (doc_compiler depends on .md corpus)."""
+    import hashlib as _h
     sig = ""
     if stage == "doc_compiler":
+        excl = [x for x in os.environ.get("LB_DOC_EXCLUDE", "context_bridge/*doc_compile*").split(",") if x]
         for p in sorted(ROOT.rglob("*.md")):
             if ".git" in str(p): continue
-            s = p.stat()
-            sig += f"{p.name}:{s.st_mtime_ns};"
+            rel = p.relative_to(ROOT).as_posix()
+            if any(Path(rel).match(e) for e in excl): continue
+            sig += f"{rel}:{_h.sha256(p.read_bytes()).hexdigest()[:12]};"
     return sig
 
 def state_sha(stage, cmd):
