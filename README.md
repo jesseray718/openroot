@@ -2,7 +2,7 @@
 
 **Open-source hardware blockchain — Proof of Physical Work.** Local-first AI agent orchestration meets open hardware: passive energy systems, mesh networks, and a contribution ledger that raises the economic bottom floor. Efficiency target: **eta = J_useful / J_human** — never claim >100% thermodynamics.
 
-[![Release v1.0.0](https://img.shields.io/badge/release-v1.0.0-6d4aff)](https://github.com/jesseray718/openroot/releases/tag/v1.0.0)
+[![Release v1.0.0](https://img.shields.io/badge/release-v1.0.0-6d4aff)](https://github.com/jesseray718/openroot/tree/8a012b2a)
 ![CI](https://github.com/jesseray718/openroot/actions/workflows/test.yml/badge.svg)
 [![License: GPL-3.0](https://img.shields.io/badge/code-GPL--3.0-blue)](LICENSE)
 [![Docs: CC-BY-SA-4.0](https://img.shields.io/badge/docs-CC--BY--SA--4.0-green)](LICENSE)
@@ -43,7 +43,7 @@ Agent path: atomic spec → 7B edit → diff gate → py_compile → grep verify
 - **agape_cascade** economy sims (known floor-cap flaw, fix precedes v2 claims)
 
 ## Contributing
-Fork only, two-pane review, read SCOPE.md first. Every PR must pass the CI gates. Commit messages assert — only grep verifies. See [releases](https://github.com/jesseray718/openroot/releases/tag/v1.0.0) for the changelog.
+Fork only, two-pane review, read SCOPE.md first. Every PR must pass the CI gates. Commit messages assert — only grep verifies. See [releases](https://github.com/jesseray718/openroot/tree/8a012b2a) for the changelog.
 
 ## License
 Code GPL-3.0 · Docs CC-BY-SA-4.0 · SPDX headers required.
