@@ -2,12 +2,16 @@
 .aider.tags.cache.v4/
 bot_loop.pid
 consolidation-backups/
+data/bot_loop.log
 data_bot_state.json
 data/*.db
 !data/env_map.json
+data/hive_ledger.db
 data/hive_registry.json
 data/lessons.db
 data/*.log
+data/matthew_nodes.json
+data/parallel_ideas.jsonl
 !data/species.db
 data/team_gate.db
 .env
@@ -17,3 +21,4 @@ __pycache__/
 sdcard-sync
 *.tar.gz
 venv/
+workareas/
