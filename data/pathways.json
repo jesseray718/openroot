@@ -1,0 +1,12 @@
+{
+  "pathway_version": "1.0",
+  "nodes": {
+    "SPEC-FERROCEMENT-TANK-01": {
+      "solution_ref": "02d8aa04",
+      "description": "Ferrocement water vault reinforcement lattice & layup ratios",
+      "category": "infrastructure_spec",
+      "registered_at": "2026-09-21T23:38:20Z",
+      "proof_hash": "e0338de2382e60e1118271227c53a541e0bb939a6773c5b90a0f62232c7f8ae2"
+    }
+  }
+}
