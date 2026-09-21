@@ -1,18 +1,18 @@
-.aider.tags.cache.v4/
-*.pyc
-__pycache__/
-sdcard-sync
 
-# runtime writable state — regenerate, never track
+.aider.tags.cache.v4/
+bot_loop.pid
+consolidation-backups/
+data_bot_state.json
 data/*.db
 !data/env_map.json
-
-venv/
-consolidation-backups/
-*.tar.gz
-!data/species.db
-.env
-data/*.log
 data/hive_registry.json
+data/*.log
+!data/species.db
 data/team_gate.db
-data/*.db
+.env
+*.pyc
+__pycache__/
+# runtime writable state — regenerate, never track
+sdcard-sync
+*.tar.gz
+venv/
