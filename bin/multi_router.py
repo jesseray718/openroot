@@ -182,9 +182,32 @@ def self_memory(rnd, con, denied):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--rounds", type=int, default=int(os.environ.get("ROUTER_ROUNDS", "3")))
+    ap.add_argument("--registry", default=os.path.join(ROOT, "data", "hive_registry.json"),
+                    help="hive nursery registry — elected tiny models replace defaults")
     ap.add_argument("--tasks", default=os.path.join(ROOT, "data", "router_tasks.json"))
     args = ap.parse_args()
     con = db()
+    if os.path.exists(args.registry):   # HIVE: elected tiniest-capable per class
+        reg = json.load(open(args.registry))
+        for prov, p in PROVIDERS.items():
+            if p["api"] != "ollama": continue
+            cls = next(iter(p["allows"]))
+            el = reg.get("classes", {}).get(cls, {}).get("elected")
+            if el and el["model"] != p["model"]:
+                print(f"[HIVE] {prov}: {p['model']} -> {el['model']} "
+                      f"(certified {el['params_b']}b, {el['ms']}ms)")
+                p["model"] = el["model"]
+    MAX_DEPTH = int(os.environ.get("ROUTER_DEPTH", "2")); MAX_TASKS = int(os.environ.get("ROUTER_MAX_TASKS", "40"))
+    def expand(res_text, tid):
+        """recursive router: SUBTASK lines become new routed tasks (guarded)"""
+        subs = []
+        for line in str(res_text).splitlines():
+            if line.strip().startswith("SUBTASK:"):
+                txt = line.strip()[8:].strip()
+                if len(all_ids) < MAX_TASKS and len(tid.split(".")) <= MAX_DEPTH and txt:
+                    nid = f"{tid}.{len(subs)+1}"; all_ids.append(nid)
+                    subs.append({"id": nid, "class": "auto", "text": txt})
+        return subs
     tasks = json.load(open(args.tasks)) if os.path.exists(args.tasks) else [
         {"id": "t1", "class": "draft",     "text": "Draft a 5-line README blurb for OpenRoot lb_loop."},
         {"id": "t2", "class": "classify",  "text": "Is this task a code edit or a summary?"},
@@ -204,7 +227,9 @@ def main():
     print(f"[PREFLIGHT] openrouter model: {m or 'NONE'} ({how})")
     print(f"[PREFLIGHT] gemini: {'armed' if os.environ.get('GEMINI_API_KEY') else 'HELD — no key'}")
     print(f"[PREFLIGHT] lumo_manual: armed (paste bridge)")
+    all_ids = [t["id"] for t in tasks]
     for rnd in range(1, args.rounds+1):
+        new_tasks = []
         print(f"\n===== ROUTER ROUND {rnd}/{args.rounds} =====")
         denied = []
         # ingest lumo outbox replies from prior round as context
@@ -220,8 +245,12 @@ def main():
             ctx = t["text"] + (f"\n\nPRIOR LUMO GUIDANCE:\n{lumo_context}" if lumo_context and prov=="lumo_manual" else "")
             print(f"  {t['id']} [{tc}] -> {prov}: ", end="")
             res = dispatch(prov, tc, ctx, rnd, t["id"], con)
+            for sub in expand(res, t["id"]):   # recursion here — depth+budget capped
+                print(f"    [SPAWN] {sub['id']}: {sub['text'][:50]}")
+                new_tasks.append(sub)
             if "DENIED" in res or "HELD" in res: denied.append((t["id"], tc, prov))
             print(res[:120])
+        tasks = tasks + new_tasks   # spawned subtasks join next round
         mp = self_memory(rnd, con, denied)
         print(f"  [MEMORY] fresh self-instructions banked: {mp}")
     print("\n[LEDGER] capability/speed totals")
