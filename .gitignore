@@ -6,6 +6,7 @@ data_bot_state.json
 data/*.db
 !data/env_map.json
 data/hive_registry.json
+data/lessons.db
 data/*.log
 !data/species.db
 data/team_gate.db
