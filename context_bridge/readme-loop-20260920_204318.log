@@ -3,3 +3,9 @@
 [loop] attempt 2/5 — draft (timeout 120)
 [loop] coder offline/slow — attempt 2 skipped
 [loop] attempt 3/5 — draft (timeout 120)
+[loop] coder offline/slow — attempt 3 skipped
+[loop] attempt 4/5 — draft (timeout 120)
+[loop] coder offline/slow — attempt 4 skipped
+[loop] attempt 5/5 — draft (timeout 120)
+[loop] coder offline/slow — attempt 5 skipped
+[HELD] exhausted — inbox notified, corpus indexed
