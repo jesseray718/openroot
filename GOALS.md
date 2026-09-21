@@ -1,146 +1,15 @@
-# GOALS.md — REBUILD DRAFT 20260920_032224
+# GOALS — OpenRoot
 
-> Primary source: reports/goals_draft/
-> Curated only; no corpus sweep.
+Regenerated 20260921_160638 from verified session queue + context_bridge remnants (original lost in history rewrite; remnants in session-2026-09-16-* files). Lumo-assisted, human-gated — REVIEW BEFORE TRUSTING.
 
-## Tasks (140)
-- SINGLE TRUNK: main is the only default; branches preserved as archival workstreams (16 non-stale, diagnostic 2026-09-19).
-- AUDIT INSTRUMENTS BEFORE BUILDERS — gates get tested more than the code they gate.
-- Human is only commit gate; every script dry-runs by default (CONFIRM=1 mutates).
-- Filter-repo aftercare: repo ~15MiB cap, no >50M blobs ever re-enter history.
-- Local-sovereignty stack: Ollama 7B-builder/3B-grader/FTS5/nomic-embed; no cloud dependency.
-- A: Local AI stack compounding (theorem_compounder, MCP surface, refinement loops)
-- B: AeroCement/OpenCell physical validation (panel casts, logging, SARE grant framing)
-- C: Community growth (Reh1t onboarding, README/GRLE visibility, profile pinning)
-- [ ] GOALS.md + MASTER_TODO: THIS REBUILD — review drafts in reports/goals_draft/
-- [ ] Reh1t PR #53 (RAG ingestion): gentle first contact — note force-pushed history, their clone is stale
-- [ ] Profile: pin 4 repos + [PHOTO] slot in openroot README
-- [ ] aerocement-panel-v0 standalone repo with build evidence
-- [ ] SARE grant framing (COP-boundary language)
-- [ ] weekly onepass_v3.sh cadence
-- files audited: 37, gates: py_compile+stack_gate+bash -n+pytest, HELD=1
-- origin/main was d8ac6d06; origin/master was 08c913c6
-- thixo-foam.md:4 fix attempted; coderabbit commits 24bc1a7/08c913c audited via stat
-- openroot @ 38004c62 = origin/main (unchanged this session)
-- gh CLI authed as jesseray718 on optiplex3060
-- Fleet size: **46 repos** inventoried with real default branches resolved
-- jq `$branch` undefined inside jq string (no --arg) — scan produced 0 rows
-- Hardcoded `main` default branch — miscompares non-main repos
-- Nonexistent REST pins endpoint — pins are GraphQL `pinItem` only, cap 6
-- `$OWNER` undefined in interactive paste — blind delete attempt (fail-safe)
-- DELETE 404 on slash-bearing branch names — needs `%2F` or `git push --delete`
-- `shutil.system` — fabricated stdlib function (assert-without-verify, false pass)
-- sed digest-wiring pattern missed twice — automation abandoned, manual = equilibrium
-- `gh_audit_v2.sh` line 33, exit 1, deterministic 4/4 deaths after
-- **Required evidence before next fix attempt:**
-- Python auto-patch attempt FAILED silently (grep on tail showed no insertion).
-- **Hygiene flags complete-ish** — check `hygiene_flags.tsv` for NO_LICENSE/NO_DESC
-- **5 identical branches** — deletion attempted 2x, blocked by slash-encoding;
-- **Pins (cap 6)** — GraphQL `pinItem` mutation scripted but unexecuted:
-- **Ahead branches (eyes-only)** — partial `unmerged_ahead.tsv` through `aerocement`;
-- `sed -n '30,36p' bin/gh_audit_v2.sh` → paste output to Lumo → surgical 3-line fix
-- Attach `lumo_digest_*.txt` to Lumo chat for triage
-- Decide: fix-and-rerun audit vs. triage partial corpse (recommend BOTH —
-- Execute pins + identical-branch deletion via `git push --delete`
-- Commit this file + scripts to openroot (human is commit gate)
-- Long API-bound runs launch detached (`nohup`/`disown`/redirect) or don't launch
-- Never `rm -rf` with a glob matching current-year outputs — exact dir or `find -mtime`
-- No variables in pastes that only exist inside scripts ($OWNER lesson)
-- When fix #2 is needed for fix #1, stop automating — manual is the equilibrium (η-rule)
-- Launcher pattern: Termux → Tailscale SSH → nohup → verify PID → disconnect freely
-- Resonance: fleet hygiene audit = permaculture principle 1 (observe & interact);
-- Entropy check: 4 dead audit runs burned ~1 human-hour; single line-33 fix
-- Next Move: reveal line 33, patch once, full corpus, then the consolidation queue
-- VERIFIED: PR #63 squash-merged (Reh1t, issue #53 closed); HEAD lineage 591bbc10 -> 181702a9
-- ARTIFACTS:
-- bin/pr_intake.sh sha256:7844f623fe14c6c87f4a6715ec95c58174daa90a054ae8a60e17c200f597c430
-- bin/readme_contributors.sh sha256:9cc62375c2393724f1643df963663745169ec26c5c1455495a29538639eaab5f
-- bin/license_fleet_continue_v1.py sha256:0a9f5417ce6b8e69960e634e7c4b968a7bd110d519e9ed86b054ce8acecfa1f1
-- BROKEN: repo pinning via gh REST is a nonexistent endpoint (fleet_hygiene_v1 lesson); pins need GraphQL user.pinnedItems mutation or manual web UI
-- NEXT: 1) CONFIRM=1 run license fleet, 2) pin 4 repos on profile (web UI or GraphQL), 3) aerocement-panel-v0 standalone repo, 4) weekly onepass_v3.sh
-- agents: 5 | tasks: 34
-- pyc hygiene fixed, lesson 2 logged, GOOD_FIRST_ISSUES.md generated
-- next: rebuild GOALS.md from session-20260918_015240.md remnant; wire embeddings
-- GOOD_FIRST_ISSUES.md (clean table, permaculture process section)
-- GOALS.md rebuilt from remnant context_bridge/session-20260918_015240.md
-- lesson 3: 3B prompt-drift; correction: chunk <=8 items or escalate to 7B
-- 3 GitHub issues published (pyranometer rig, README fix, COP instrumentation, embeddings)
-- 58566153 feat(mesh): clean recruit board + 3B-drift lesson + GOALS remnant rebuild (sqlite-backed, permaculture-aligned)
-- 1ac59d36 feat(mesh): agent-ledger + lessons-learned loop + 34-task recruit board (sqlite-memory, 7b/3b/human triad; 3-authored, gates passed)
-- remote sync: PASS
-- 3B ranking rubric failed at 20-item scale (lesson 3 logged)
-- 1) kill_tmp junk cleanup in repo root if any remain
-- 2) README [PHOTO] slot + contact email decision
-- 3) wire embeddings task for Reh1t issue #53 support
-- 4) aerocement-panel-v0 standalone repo with build evidence
-- lesson 3 was NOT logged (sql arity bug: 6 values / 5 cols) — now fixed + grep-verified
-- GOALS.md was hollow (3 lines) — replaced with honest reconstruction skeleton
-- lessons: 3
-- HEAD at fix commit (see git log)
-- GOALS.md rebuilt from remnant mission brief (82 lines, grep-verified)
-- hwchain.py status: not built — next highest-eta item
-- lessons: 3 | HEAD: b3974f84
-- report: reports/lesson_audit-20260918.md
-- HEAD: d8ac6d06
-- claims registered: 9 (all honestly 'asserted')
-- manuscripts scaffolded: 9
-- gates installed: hype_gate.sh, abstract_grade.sh
-- HEAD: 4e295a57 = origin/master (pushed)
-- commits today: 66fd941a, 2ee2e690, 4e295a57
-- repo visibility: 5/5 public (openroot flipped private->public via CONFIRM=1)
-- refinement loop v3 tested end-to-end: attempt 1/3 PASS, grader format fixed
-- bin/unified_workflow_v1.py (claims register + manuscripts + gates + hero, 205 lines)
-- bin/refinement_loop_v2.sh + v3.sh (7B draft -> 3B grade -> FIX feeds forward)
-- data/refinement.db (iterations ledger: doc_ref, attempt, attempt_path, grade, accepted)
-- docs/research/ 9 manuscript skeletons + hype/abstract gates (earlier commit)
-- paste chains over SSH: cd gets "too many arguments" from hidden chars - use single-line commands or tmux
-- SSH dropped ~4x today - run work inside tmux on optiplex3060 from now on
-- 3B grader sometimes emits "Line2:" instead of "FIX:" - if loop stalls, widen grep to ^(FIX|Line2):
-- drafts/hero_draft.md + bin/profile_update_v1.sh untracked - decide commit vs ignore
-- rebuild GOALS.md + MASTER_TODO from context_bridge remnants (setup_restore_v1.sh gate-verified SAFE)
-- first real loop: opencell-absorber.md abstract rubric (purpose, method+instrument, measurements-pending with uncertainty, implication)
-- pin repos + profile photo via web UI
-- Reh1t PR #53 - treat gently, their clone is stale post-force-push
-- HEAD: 92e363ba = origin/master (2 commits tonight: e1c4d6ee, 92e363ba)
-- proof cache never-recompute: verified 2x (cache-hit both prove calls across runs)
-- .gitignore mystery: closed — +sdcard-sync (mobile sync artifact, benign, unbanked)
-- bin/knowledge_probe_v1.py + data/proof_cache.db + analysis/knowledge_probe_report_2026-09-18.md
-- bin/lumo_lib.py (shared: ollama_generate / prove / embed)
-- bin/embed_index_v1.py (semantic index, batch-commit v1.1)
-- data/embeddings.db untracked by design (regenerable, regen < download)
-- embed build 1-2hr ETA on CPU, ~1 chunk/sec — backgrounded, check exit=0
-- data/research.db grew 20K->28K: UNIDENTIFIED — check .tables before next commit
-- ssh paste corruption persists: single-line commands only for investigation
-- confirm embed build [exit=0] + warm query latency, retire grep sweep in probe
-- research.db identification
-- Reh1t PR #53 — embedding substrate now exists for RAG work
-- GOALS.md rebuild (setup_restore_v1.sh, gate-verified SAFE)
-- bench test hardware ordering (still highest-leverage physical item)
-- PR #62 merged: cf54988d (14 master commits replayed onto banked main)
-- master + recovery-20260919-072007 deleted (local+remote)
-- evac pool restored: 400756 files, quote-artifacts purged
-- main == origin/main @ cf54988d
-- community files live: README/CONTRIBUTING/SECURITY/CODE_OF_CONDUCT
-- rebuild GOALS.md + MASTER_TODO from context_bridge remnants
-- support Reh1t PR #53 (clone predates force-push)
-- pin 4 repos on profile
-- bin/queue_advance_v1.py — mines context_bridge (recency*frequency), 7B-forge/3B-grade loop
-- bin/goals_rebuild_v1.sh — remnant miner, drafts->CONFIRM promote. Executed clean twice.
-- reports/goals_draft/ — task_rank.tsv (16 tasks, recency-weighted), task_freq.tsv (12, raw),
-- bin/seal_session_v1.sh — this triage+handoff seal.
-- bin/pin_repos_v1.sh — profile pin tool, staged separately.
-- main @ 1ec3e352 = origin/main (rebuilt GOALS.md + triaged MASTER_TODO.md, pushed)
-- Issue #53 comment posted: 2026-09-19T13:40:10Z, id IC_kwDOTGdzqc8AAAABVkUqcw / 5742340723,
-- Issue #53 = "Dev Contributors — Local LLM Agents + RAG Tooling", assignee Reh1t (Rehan Tariq), OPEN.
-- 16 branches preserved (eyes-only rule; unique-commit overlap verified, not deleted).
-- OPERATOR INPUTS UNGATED: "#53" was misread as PR (it is an ISSUE). Both 7B and 3B
-- GRADER SHAPE-OVER-SUBSTANCE: 3B scored a draft containing a factual inversion
-- PASTE FAILURE MODES: fenced markdown wrappers break heredoc pastes (terminator never
-- stack_gate.sh v2 recovery — unresolved (carried)
-- quarantine-pulse-20260918 branch on GitHub — deletion deferred (carried)
-- agape_cascade v1.x floor-cap degeneracy — fix before v2 (carried, todo #18)
-- Run pin_repos_v1.sh -> CONFIRM=1 (pins: openroot, wisdom-scaffold, openroot-ecosystem,
-- Replace README TODO-photo-path with real photo
-- aerocement-panel-v0 standalone repo with build evidence
-- Watch #53 for Reh1t reply; review their PR promptly when it lands
-- Next onepass: verify MASTER_TODO <= 18 tasks, re-triage drift
+## Mission
+Open-source hardware blockchain: local-first AI orchestration + passive energy systems, structured to lift the economic bottom floor. eta = J_useful/J_human. Falsifiable claims only.
+
+## Active Goals
+1. **Public-readiness hardening** — CI green (DONE 2026-09-21), docs refreshed (DONE), quarantine discipline established (DONE)
+2. **Contributor pipeline** — support Reh1t on issue #53 (RAG ingestion); history was force-pushed, their clone is stale
+3. **GOALS/TODO restoration** — this file (DONE pending human gate)
+4. **Profile polish** — pin 4 repos on profile, [PHOTO] slot in README
+5. **aerocement-panel-v0** — standalone repo with build evidence
+6. **SARE grant framing** — COP-boundary language, no >100% thermo
+7. **Weekly cadence** — onepass_v3.sh every week

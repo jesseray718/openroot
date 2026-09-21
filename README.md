@@ -15,7 +15,7 @@
 ## Verified State (auto-generated 20260921_154522)
 | Metric | Value |
 |---|---|
-| HEAD | a51371d3 (ahead 0, behind 0 vs origin/main) |
+| HEAD | 5aebbe45 (fresh snapshot 20260921_160638; see DOCS.md) |
 | bin/ scripts | 86 Python, 80 Bash |
 | SQLite ledgers in data/ | 35 |
 | Markdown docs | 33750 |

@@ -26,3 +26,7 @@ sdcard-sync
 *.tar.gz
 venv/
 workareas/
+
+# session junk (2026-09-21 clean state policy)
+*.log
+/tmp_orphan_
