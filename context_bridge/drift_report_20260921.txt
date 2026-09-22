@@ -1,3 +1,23 @@
+ M bin/daily_loop_v1.sh
+ M bin/fleet_check_v1.sh
+ M bin/fuse_router_lb_seal_v1.sh
+ M bin/goals_rebuild_v4.sh
+ M bin/key_setup_fuse_v2.sh
+ M bin/lb_commit_seal_v2.sh
+ M bin/lessons_v1.sh
+ M bin/mesh_fix_v3.sh
+ M bin/mesh_publish_v2.sh
+ M bin/mesh_recruit_v1.sh
+ M bin/mesh_refine_v1.sh
+ M bin/mesh_ship_v2.sh
+ M bin/pathway_chain_test.sh
+ M bin/profile_update_v1.sh
+ M bin/recover_v1.sh
+ M bin/refinement_loop_v3.sh
+ M bin/research_ready_v1.sh
+ M bin/resolve_pr58_v1.sh
+ M bin/weekly_audit_v1.sh
+ M bin/write_context_bridge.sh
  M context_bridge/drift_report_20260921.txt
  M data/env_map.json
  M data/manifest.txt

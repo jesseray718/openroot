@@ -143,6 +143,7 @@
 /home/jesse/openroot/bin/resolve_pr58_final.py
 /home/jesse/openroot/bin/resolve_pr58_v1.sh
 /home/jesse/openroot/bin/restore_readme_profile_landing_v1.py
+/home/jesse/openroot/bin/rollout_openroot.sh
 /home/jesse/openroot/bin/run_handoff_v1.sh
 /home/jesse/openroot/bin/run_triage.py
 /home/jesse/openroot/bin/seal_session_v1.sh
