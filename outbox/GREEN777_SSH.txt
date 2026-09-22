@@ -1,4 +1,4 @@
-# GREEN777 SSH optiplex3060  2026-09-21T22:07:52
+# GREEN777 SSH optiplex3060  2026-09-21T22:35:05
 # 777 file = world-writable + executable. This is the real smell.
 
 == 777 REGULAR FILES count=0 ==
@@ -79,6 +79,8 @@
 664  file        2698  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/litellm/integrations/greenscale.py
 600  file        5662  /home/jesse/openroot/attic/rescue_staging_vendor/0777_seven_symbols_recovery.py
 755  file        2755  /home/jesse/openroot/bin/find_green777.py
+664  file       16082  /home/jesse/openroot/outbox/GREEN777_SSH.txt
+664  file          47  /home/jesse/openroot/outbox/GREEN777_SSH_find.txt
 664  file       14834  /home/jesse/wisdom-scaffold/.venv/lib/python3.12/site-packages/torch/cuda/green_contexts.py
 664  file         179  /home/jesse/wisdom-scaffold/.venv/lib/python3.12/site-packages/material/templates/.icons/material/greenhouse.svg
 664  file         877  /home/jesse/wisdom-scaffold/.venv/lib/python3.12/site-packages/material/templates/.icons/simple/greenhouse.svg
