@@ -1,0 +1,87 @@
+# GREEN777 SSH optiplex3060  2026-09-21T22:07:52
+# 777 file = world-writable + executable. This is the real smell.
+
+== 777 REGULAR FILES count=0 ==
+
+== 777 DIRECTORIES count=0 ==
+
+== WORLD-WRITABLE EXECUTABLES (any mode, other-write + x) count=0 ==
+
+== NAME HIT *777* or green* ==
+660  file       23324  /home/jesse/openroot/data/sdcard-sync/salvage/20260912-134943/repo-root/salvage/20260912-134943/repo-root/library/kai-sandbox/volumetric-project/renaissance-protocol/docs/energy/greenlight.md
+660  file       23324  /home/jesse/openroot/data/sdcard-sync/salvage/20260912-134943/repo-root/salvage/20260912-134943/repo-root/library/kai-sandbox/github-repos/renaissance-protocol/docs/energy/greenlight.md
+660  file         711  /home/jesse/openroot/data/sdcard-sync/salvage/20260912-134943/repo-root/volumetric/aero-disc/design/GREENHOUSE_GAP.md
+660  file       23324  /home/jesse/openroot/data/sdcard-sync/salvage/20260912-134943/repo-root/library/kai-sandbox/volumetric-project/renaissance-protocol/docs/energy/greenlight.md
+660  file       23324  /home/jesse/openroot/data/sdcard-sync/salvage/20260912-134943/repo-root/library/kai-sandbox/github-repos/renaissance-protocol/docs/energy/greenlight.md
+660  file         711  /home/jesse/openroot/data/sdcard-sync/volumetric/aero-disc/design/GREENHOUSE_GAP.md
+660  file       23324  /home/jesse/openroot/data/sdcard-sync/library/kai-sandbox/volumetric-project/renaissance-protocol/docs/energy/greenlight.md
+660  file       23324  /home/jesse/openroot/data/sdcard-sync/library/kai-sandbox/github-repos/renaissance-protocol/docs/energy/greenlight.md
+664  file       38520  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/logs/gh_upgrade/run_1789385777.json
+755  file       23324  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/usb128-import-20260913/Desktop/openroot/library/kai-sandbox/volumetric-project/renaissance-protocol/docs/energy/greenlight.md
+755  file       23324  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/usb128-import-20260913/Desktop/openroot/library/kai-sandbox/github-repos/renaissance-protocol/docs/energy/greenlight.md
+755  file    76219045  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/usb128-import-20260913/snap/.syncthing.pack-38ca39ec3dbba48e06567770fce1189a97265ef1.pack.tmp
+755  file       49152  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/usb128-import-20260913/snap/firefox/common/.mozilla/firefox/vnvnlq1y.default/storage/permanent/chrome/idb/2823318777ntouromlalnodry--naod.sqlite
+755  file       32768  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/usb128-import-20260913/snap/firefox/common/.mozilla/firefox/vnvnlq1y.default/storage/permanent/chrome/idb/2823318777ntouromlalnodry--naod.sqlite-shm
+755  file           0  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/usb128-import-20260913/snap/firefox/common/.mozilla/firefox/vnvnlq1y.default/storage/permanent/chrome/idb/2823318777ntouromlalnodry--naod.sqlite-wal
+755  file       12000  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/usb128-import-20260913/snap/optiplex-archive/New-folder/Alarms/openroot (2)/context_chunks/paste_777.txt
+755  file         152  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/usb128-import-20260913/snap/optiplex-archive/New-folder/Alarms/openroot_usb_stage/termux-home/.ipfs/blocks/NG/CIQBZSZSMFQMKZZ5GNXDM7DP3N2DGSXT2GPBQ3UHHY2T777GH6Z7NGA.data
+755  file         233  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/usb128-import-20260913/snap/optiplex-archive/New-folder/Alarms/openroot_usb_stage/termux-home/.ipfs/blocks/VN/CIQNYHFAFFX3WDH4M4DGBW5BBUYQGK5D4KDFKNKVXTQ777H6OXFTVNI.data
+755  file         149  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/usb128-import-20260913/snap/optiplex-archive/New-folder/Alarms/openroot_usb_stage/termux-home/.ipfs/blocks/RB/CIQGNJMU3LAT2RAU3KC5UWTNTQNXEPGQ6NA5P6N6777KCAX3WQDLRBQ.data
+755  file         695  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/usb128-import-20260913/snap/optiplex-archive/New-folder/Alarms/openroot_usb_stage/termux-home/.ipfs/blocks/MD/CIQAKVMVMVGTDH4CRDZFFKLW6BR6FOLJ3JX777TK3WX6KA2LIITIMDA.data
+755  file         711  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/usb128-import-20260913/snap/github/openroot/volumetric/aero-disc/design/GREENHOUSE_GAP.md
+755  file       23324  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/usb128-import-20260913/snap/github/openroot/library/kai-sandbox/volumetric-project/renaissance-protocol/docs/energy/greenlight.md
+755  file       23324  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/usb128-import-20260913/snap/github/openroot/library/kai-sandbox/github-repos/renaissance-protocol/docs/energy/greenlight.md
+755  file       23324  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/usb128-import-20260913/snap/github/renaissance-protocol/docs/energy/greenlight.md
+755  file       23324  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/usb128-import-20260913/snap/kai/kai-sandbox/volumetric-project/renaissance-protocol/docs/energy/greenlight.md
+755  file       23324  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/usb128-import-20260913/snap/kai/kai-sandbox/github-repos/renaissance-protocol/docs/energy/greenlight.md
+600  file         711  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/6e2794435c50c198/backups/openroot_20260726_0134/volumetric/aero-disc/design/GREENHOUSE_GAP.md
+660  file       23324  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/6e2794435c50c198/backups/openroot_20260726_0134/library/kai-sandbox/volumetric-project/renaissance-protocol/docs/energy/greenlight.md
+660  file       23324  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/6e2794435c50c198/backups/openroot_20260726_0134/library/kai-sandbox/github-repos/renaissance-protocol/docs/energy/greenlight.md
+600  file       23324  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/21740fc1beae7e41/repos/renaissance-protocol/docs/energy/greenlight.md
+600  file         152  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/salvage/.ipfs/blocks/NG/CIQBZSZSMFQMKZZ5GNXDM7DP3N2DGSXT2GPBQ3UHHY2T777GH6Z7NGA.data
+600  file         233  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/salvage/.ipfs/blocks/VN/CIQNYHFAFFX3WDH4M4DGBW5BBUYQGK5D4KDFKNKVXTQ777H6OXFTVNI.data
+600  file         149  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/salvage/.ipfs/blocks/RB/CIQGNJMU3LAT2RAU3KC5UWTNTQNXEPGQ6NA5P6N6777KCAX3WQDLRBQ.data
+600  file         695  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/salvage/.ipfs/blocks/MD/CIQAKVMVMVGTDH4CRDZFFKLW6BR6FOLJ3JX777TK3WX6KA2LIITIMDA.data
+660  file       23324  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/62e74bc558124f5a/openroot/github_clone_temp/openroot/library/kai-sandbox/volumetric-project/renaissance-protocol/docs/energy/greenlight.md
+660  file       23324  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/62e74bc558124f5a/openroot/github_clone_temp/openroot/library/kai-sandbox/github-repos/renaissance-protocol/docs/energy/greenlight.md
+600  file         152  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/2773033765a97642/.ipfs/blocks/NG/CIQBZSZSMFQMKZZ5GNXDM7DP3N2DGSXT2GPBQ3UHHY2T777GH6Z7NGA.data
+600  file         233  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/2773033765a97642/.ipfs/blocks/VN/CIQNYHFAFFX3WDH4M4DGBW5BBUYQGK5D4KDFKNKVXTQ777H6OXFTVNI.data
+600  file         149  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/2773033765a97642/.ipfs/blocks/RB/CIQGNJMU3LAT2RAU3KC5UWTNTQNXEPGQ6NA5P6N6777KCAX3WQDLRBQ.data
+600  file         695  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/2773033765a97642/.ipfs/blocks/MD/CIQAKVMVMVGTDH4CRDZFFKLW6BR6FOLJ3JX777TK3WX6KA2LIITIMDA.data
+600  file       23324  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/2773033765a97642/repos/renaissance-protocol/docs/energy/greenlight.md
+600  file         711  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/2773033765a97642/openroot/volumetric/aero-disc/design/GREENHOUSE_GAP.md
+600  file       23324  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/2773033765a97642/openroot/library/kai-sandbox/volumetric-project/renaissance-protocol/docs/energy/greenlight.md
+600  file       23324  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/2773033765a97642/openroot/library/kai-sandbox/github-repos/renaissance-protocol/docs/energy/greenlight.md
+600  file         711  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/39fd90eb77f4f4b7/openroot.pre-consolidation-backup/volumetric/aero-disc/design/GREENHOUSE_GAP.md
+600  file       23324  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/39fd90eb77f4f4b7/openroot.pre-consolidation-backup/library/kai-sandbox/volumetric-project/renaissance-protocol/docs/energy/greenlight.md
+600  file       23324  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/39fd90eb77f4f4b7/openroot.pre-consolidation-backup/library/kai-sandbox/github-repos/renaissance-protocol/docs/energy/greenlight.md
+600  file         152  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/47e70cbefe5f924e/.ipfs/blocks/NG/CIQBZSZSMFQMKZZ5GNXDM7DP3N2DGSXT2GPBQ3UHHY2T777GH6Z7NGA.data
+600  file         233  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/47e70cbefe5f924e/.ipfs/blocks/VN/CIQNYHFAFFX3WDH4M4DGBW5BBUYQGK5D4KDFKNKVXTQ777H6OXFTVNI.data
+600  file         149  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/47e70cbefe5f924e/.ipfs/blocks/RB/CIQGNJMU3LAT2RAU3KC5UWTNTQNXEPGQ6NA5P6N6777KCAX3WQDLRBQ.data
+600  file         695  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/47e70cbefe5f924e/.ipfs/blocks/MD/CIQAKVMVMVGTDH4CRDZFFKLW6BR6FOLJ3JX777TK3WX6KA2LIITIMDA.data
+600  file       23324  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/47e70cbefe5f924e/repos/renaissance-protocol/docs/energy/greenlight.md
+600  file       23324  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/47e70cbefe5f924e/kai_inbox/volumetric-project/renaissance-protocol/docs/energy/greenlight.md
+600  file       23324  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/47e70cbefe5f924e/kai_inbox/github-repos/renaissance-protocol/docs/energy/greenlight.md
+600  file        5662  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/9535263a7d1e3db2/0777_seven_symbols_recovery.py
+664  file         711  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/6209acd3bf4899ef/openroot/volumetric/aero-disc/design/GREENHOUSE_GAP.md
+664  file       23324  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/6209acd3bf4899ef/openroot/library/kai-sandbox/volumetric-project/renaissance-protocol/docs/energy/greenlight.md
+664  file       23324  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/6209acd3bf4899ef/openroot/library/kai-sandbox/github-repos/renaissance-protocol/docs/energy/greenlight.md
+644  file         114  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/d3ea52e7b6e968de/Greenwich
+644  file         114  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/d3ea52e7b6e968de/Etc/Greenwich
+600  file         152  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/e130e3cb1a1f7fbd/.ipfs/blocks/NG/CIQBZSZSMFQMKZZ5GNXDM7DP3N2DGSXT2GPBQ3UHHY2T777GH6Z7NGA.data
+600  file         233  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/e130e3cb1a1f7fbd/.ipfs/blocks/VN/CIQNYHFAFFX3WDH4M4DGBW5BBUYQGK5D4KDFKNKVXTQ777H6OXFTVNI.data
+600  file         149  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/e130e3cb1a1f7fbd/.ipfs/blocks/RB/CIQGNJMU3LAT2RAU3KC5UWTNTQNXEPGQ6NA5P6N6777KCAX3WQDLRBQ.data
+600  file         695  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/e130e3cb1a1f7fbd/.ipfs/blocks/MD/CIQAKVMVMVGTDH4CRDZFFKLW6BR6FOLJ3JX777TK3WX6KA2LIITIMDA.data
+600  file       23324  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/e130e3cb1a1f7fbd/repos/renaissance-protocol/docs/energy/greenlight.md
+600  file         711  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/e130e3cb1a1f7fbd/openroot/volumetric/aero-disc/design/GREENHOUSE_GAP.md
+600  file       23324  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/e130e3cb1a1f7fbd/openroot/library/kai-sandbox/volumetric-project/renaissance-protocol/docs/energy/greenlight.md
+600  file       23324  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/e130e3cb1a1f7fbd/openroot/library/kai-sandbox/github-repos/renaissance-protocol/docs/energy/greenlight.md
+664  file        2698  /home/jesse/openroot/consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/litellm/integrations/greenscale.py
+600  file        5662  /home/jesse/openroot/attic/rescue_staging_vendor/0777_seven_symbols_recovery.py
+755  file        2755  /home/jesse/openroot/bin/find_green777.py
+664  file       14834  /home/jesse/wisdom-scaffold/.venv/lib/python3.12/site-packages/torch/cuda/green_contexts.py
+664  file         179  /home/jesse/wisdom-scaffold/.venv/lib/python3.12/site-packages/material/templates/.icons/material/greenhouse.svg
+664  file         877  /home/jesse/wisdom-scaffold/.venv/lib/python3.12/site-packages/material/templates/.icons/simple/greenhouse.svg
+664  file        8333  /home/jesse/wisdom-scaffold/.venv/lib/python3.12/site-packages/material/templates/.icons/simple/greensock.svg
+
+# errors=0
