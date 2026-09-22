@@ -36,8 +36,8 @@ bin/register_pathway.sh \
 # 4. Pathway Resolution Lookup
 echo -e "\necho "echo "[STEP 4/5] Testing dynamic pathway resolution..."
 # Temporarily mock mistake hash to verify lookup logic
-if MATCH=$(jq -r ".nodes[\"${TEST_MISTAKE_HASH}\"]" data/pathways.json 2>/dev/null); then
-  echo "⚡ CACHE HIT SUCCESSFUL for signature: ${TEST_MISTAKE_HASH}"
+if MATCH=$(jq -r ".nodes[\"${TEST_MISTAKE_HASH:-"none"}\"]" data/pathways.json 2>/dev/null); then
+  echo "⚡ CACHE HIT SUCCESSFUL for signature: ${TEST_MISTAKE_HASH:-"none"}"
   echo "$MATCH" | jq .
 else
   echo "❌ Dynamic pathway resolution failed!"
