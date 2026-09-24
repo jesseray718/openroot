@@ -1,0 +1,45 @@
+{
+  "canary": "STACKTESTV1",
+  "generated_at": "2026-09-24T11:29:07.972420+00:00",
+  "author": "Jesse McMillen Ray",
+  "results": [
+    {
+      "layer": "fts5",
+      "test": "FTS5 exact-hit query",
+      "ms": 0.46,
+      "detail": "-> ['thermal_frontier_v1.json', 'thermal_frontier_v2_water.json']"
+    },
+    {
+      "layer": "cache",
+      "test": "sha-cache HIT lookup",
+      "ms": 0.21,
+      "detail": "payload OK, speedup-vs-hash 0.2x"
+    },
+    {
+      "layer": "cache",
+      "test": "sha-cache MISS derive (stand-in)",
+      "ms": 0.04,
+      "detail": "novel work escalates to 7B"
+    },
+    {
+      "layer": "router",
+      "test": "dispatch 'euler overshoot' -> FTS5 (NO model call)",
+      "ms": 0.45,
+      "detail": "-> low-flow Euler step divergence; filter t"
+    },
+    {
+      "layer": "model",
+      "test": "qwen2.5-coder:7b generate",
+      "ms": 32337.97,
+      "detail": "tokens=27 -> \"7B BUILDER ALIVE. The FTS5 cache triad consists of\""
+    },
+    {
+      "layer": "model",
+      "test": "qwen2.5:3b generate",
+      "ms": 5347.62,
+      "detail": "tokens=8 -> \"3B GRADER ALIVE.\""
+    }
+  ],
+  "subsecond_layers": 4,
+  "total_tests": 6
+}

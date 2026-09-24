@@ -1,0 +1,120 @@
+{
+  "version": "FRONTV2WATER",
+  "timestamp": "2026-09-24T06:13:09.291838",
+  "sink_C": 50.0,
+  "eff": 0.75,
+  "physical_cap_C": 350.0,
+  "top10": [
+    {
+      "n_ch": 16,
+      "n_p": 24,
+      "ch_d_cm": 30,
+      "chimney_m": 8,
+      "temp_C": 83.1,
+      "flow_kgs": 0.636,
+      "q_water_W": 15844,
+      "aperture_m2": 120,
+      "kwh_day_5sun": 79.2
+    },
+    {
+      "n_ch": 24,
+      "n_p": 24,
+      "ch_d_cm": 25,
+      "chimney_m": 12,
+      "temp_C": 82.7,
+      "flow_kgs": 0.6422,
+      "q_water_W": 15841,
+      "aperture_m2": 120,
+      "kwh_day_5sun": 79.2
+    },
+    {
+      "n_ch": 28,
+      "n_p": 24,
+      "ch_d_cm": 25,
+      "chimney_m": 8,
+      "temp_C": 82.6,
+      "flow_kgs": 0.6454,
+      "q_water_W": 15839,
+      "aperture_m2": 120,
+      "kwh_day_5sun": 79.2
+    },
+    {
+      "n_ch": 40,
+      "n_p": 24,
+      "ch_d_cm": 20,
+      "chimney_m": 15,
+      "temp_C": 84.2,
+      "flow_kgs": 0.6139,
+      "q_water_W": 15839,
+      "aperture_m2": 120,
+      "kwh_day_5sun": 79.2
+    },
+    {
+      "n_ch": 12,
+      "n_p": 24,
+      "ch_d_cm": 30,
+      "chimney_m": 15,
+      "temp_C": 84.5,
+      "flow_kgs": 0.6094,
+      "q_water_W": 15835,
+      "aperture_m2": 120,
+      "kwh_day_5sun": 79.2
+    },
+    {
+      "n_ch": 24,
+      "n_p": 24,
+      "ch_d_cm": 25,
+      "chimney_m": 10,
+      "temp_C": 84.6,
+      "flow_kgs": 0.6068,
+      "q_water_W": 15832,
+      "aperture_m2": 120,
+      "kwh_day_5sun": 79.2
+    },
+    {
+      "n_ch": 28,
+      "n_p": 24,
+      "ch_d_cm": 25,
+      "chimney_m": 6,
+      "temp_C": 85.2,
+      "flow_kgs": 0.5968,
+      "q_water_W": 15817,
+      "aperture_m2": 120,
+      "kwh_day_5sun": 79.1
+    },
+    {
+      "n_ch": 32,
+      "n_p": 24,
+      "ch_d_cm": 25,
+      "chimney_m": 6,
+      "temp_C": 81.5,
+      "flow_kgs": 0.6663,
+      "q_water_W": 15814,
+      "aperture_m2": 120,
+      "kwh_day_5sun": 79.1
+    },
+    {
+      "n_ch": 20,
+      "n_p": 24,
+      "ch_d_cm": 25,
+      "chimney_m": 15,
+      "temp_C": 85.3,
+      "flow_kgs": 0.594,
+      "q_water_W": 15812,
+      "aperture_m2": 120,
+      "kwh_day_5sun": 79.1
+    },
+    {
+      "n_ch": 16,
+      "n_p": 24,
+      "ch_d_cm": 30,
+      "chimney_m": 6,
+      "temp_C": 85.7,
+      "flow_kgs": 0.588,
+      "q_water_W": 15800,
+      "aperture_m2": 120,
+      "kwh_day_5sun": 79.0
+    }
+  ],
+  "note": "Note: compute_flow overshoots above ~341C radiative equilibrium; filtered"
+}

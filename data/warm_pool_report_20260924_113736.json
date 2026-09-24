@@ -1,0 +1,28 @@
+{
+  "canary": "WARMPOOLV1",
+  "generated_at": "2026-09-24T11:37:36.727029+00:00",
+  "author": "Jesse McMillen Ray",
+  "results": [
+    {
+      "model": "qwen2.5-coder:7b",
+      "label": "COLD?",
+      "ms": 19950.5,
+      "tokens": 2,
+      "tok_per_s": 0.1
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "label": "WARM",
+      "ms": 675.3,
+      "tokens": 2,
+      "tok_per_s": 3.0
+    },
+    {
+      "model": "qwen2.5:3b",
+      "label": "GRADER",
+      "ms": 3608.5,
+      "tokens": 2,
+      "tok_per_s": 0.6
+    }
+  ]
+}
