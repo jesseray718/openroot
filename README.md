@@ -147,7 +147,7 @@ Please keep contributions specific, documented, testable where possible, and res
 
 OpenRoot uses a dual-license model:
 
-- **Code and software:** GPL-3.0-or-later.
+- **Code and software:** GPL-3.0-only.
 - **Documentation, research, open-hardware designs, technical literature, workflows, diagrams, and other non-code project material:** CC BY-SA 4.0.
 
 This keeps the software free and copyleft while ensuring that the knowledge, documentation, and design commons remain shareable and share-alike.
