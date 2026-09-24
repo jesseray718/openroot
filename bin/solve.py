@@ -57,14 +57,11 @@ def save_jsonl(path, records):
 
 # ---------- embeddings (pillar: semantic retrieval) ----------
 def embed(text):
-    payload = json.dumps({"model": "nomic-embed-text", "prompt": text})
-    r = subprocess.run(["curl", "-s", "-X", "POST", EMBED_URL,
-                        "-H", "Content-Type: application/json", "-d", payload],
-                       capture_output=True, text=True, timeout=60)
-    try:
-        return json.loads(r.stdout)["embedding"]
-    except Exception:
-        return None
+    """EMBEDCACHEV1: persistent vector cache — cache hits cost zero Ollama calls."""
+    import sys as _sys, os as _os
+    _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+    from embed_cache import embed_cached
+    return embed_cached([text])[0]
 
 def cosine(v1, v2):
     dot = sum(a * b for a, b in zip(v1, v2))
@@ -239,12 +236,15 @@ def route(task):
     draft = ollama_call("qwen2.5-coder:7b", build_prompt)
     t1 = time.time()
     print(f"\n--- DRAFT (7B, {t1-t0:.0f}s) ---\n{draft[:1500]}\n")
-    grade_prompt = ("Rate 1-10 and justify in 3 sentences. Criteria: correctness vs the grounding "
-                    "facts, completeness, falsifiability. Flag ANY invented project, skill, or "
-                    "link not supported by the grounding. Task:\n" + task +
-                    "\n\nSubmission:\n" + draft[:3000])
-    grade = ollama_call("qwen2.5:3b", grade_prompt, 250)
-    print(f"--- GRADE (3B, {time.time()-t1:.0f}s) ---\n{grade[:600]}\n")
+    import sys as _sg, os as _og
+    _sg.path.insert(0, _og.path.dirname(_og.path.abspath(__file__)))
+    from grade_guard import grade_guarded
+    grade_verdict, grade = grade_guarded(
+        lambda p: ollama_call("qwen2.5:3b", p, 250), task, draft)
+    if grade_verdict == "ERROR":
+        print("[held] grader contract failed — draft NOT proposed, escalate")
+        return
+    print(f"--- GRADE (3B, {time.time()-t1:.0f}s) ---\nverdict={grade_verdict}\n{grade[:600]}\n")
     cache_store(task, f"DRAFT:\n{draft}\n\nGRADE:\n{grade}", "7B+3B-grounded", "proposed")
     print("[held] PROPOSED — review, then: CONFIRM=1 python3 bin/solve.py verify "
           f"<{task_key(task)[:8]}>")

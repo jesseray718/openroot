@@ -84,7 +84,11 @@ def grade_guarded(call_fn, task: str, candidate: str):
     Returns (verdict, raw_response_or_detail). Verdict 'ERROR' = escalate.
     """
     base_prompt = (
-        f"{CONTRACT}\n--- TASK ---\n{task[:2000]}\n"
+        f"{CONTRACT}\n--- GRADING CRITERIA ---\n"
+        "Judge correctness against grounding facts, completeness, and falsifiability. "
+        "FAIL any submission that invents a project, skill, link, or fact unsupported "
+        "by the task or your judgment of plausibility.\n"
+        f"--- TASK ---\n{task[:2000]}\n"
         f"--- CANDIDATE UNDER REVIEW ---\n{candidate[:6000]}\n"
     )
     prompt = base_prompt
