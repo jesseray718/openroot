@@ -1,49 +1,155 @@
 # OpenRoot
 
-**Open-source hardware blockchain — Proof of Physical Work.** Local-first AI agent orchestration meets open hardware: passive energy systems, mesh networks, and a contribution ledger that raises the economic bottom floor. Efficiency target: **eta = J_useful / J_human** — never claim >100% thermodynamics.
+**OpenRoot is an open-source technology commons for preserving, validating, improving, and implementing knowledge that can materially improve the world.**
 
-[![Release v1.0.0](https://img.shields.io/badge/release-v1.0.0-6d4aff)](https://github.com/jesseray718/openroot/tree/8a012b2a)
-![CI](https://github.com/jesseray718/openroot/actions/workflows/test.yml/badge.svg)
-[![License: GPL-3.0](https://img.shields.io/badge/code-GPL--3.0-blue)](LICENSE)
-[![Docs: CC-BY-SA-4.0](https://img.shields.io/badge/docs-CC--BY--SA--4.0-green)](LICENSE)
+The project is building a verifiable coordination layer for open hardware, engineering research, technical literature, experimental records, workflows, local computation, and practical infrastructure.
 
-## 📷 Proof of Physical Work
-<!-- [PHOTO] Insert build-evidence photo here: aerocement sample, thermal labyrinth test rig, or dome frame.
-     Recommended: docs/img/popw-hero.jpg — photo is the badge for hardware projects. -->
+OpenRoot is not only a software repository. It is an effort to make useful technology easier to study, reproduce, improve, share, and put into practice.
 
-## Doctrine (read before contributing)
-1. **AUDIT INSTRUMENTS BEFORE BUILDERS** — gates test on real files. A file that survived is not a product.
-2. **Human is the only commit gate.** AI authors; only grep + gates + human verify.
-3. **Falsifiable claims only, no hype.** Absorbance framed as COP-boundary, never ">100% of solar."
-4. **Two-pane law, fork-only.** Delete merged branches instantly.
+## Mission
 
-## Verified State (snapshot 20260921_162046)
-| Metric | Value |
-|---|---|
-| HEAD | a1ea652a (= origin/main, CI green) |
-| Latest release | v1.0.0 — Public Launch |
-| bin/ instruments | 172 tracked, all py_compile + bash -n green |
-| Roadmap | GOALS.md + MASTER_TODO.md (rebuilt 2026-09-21) |
+OpenRoot exists to help keep high-value technical knowledge open and actionable.
 
-## Hardware
-- **Primary node:** OptiPlex 3060 (Ubuntu 24.04, user `jesse`, LAN 192.168.1.193, Tailscale 100.122.169.43)
-- **Mobile node:** Samsung A15 + Termux + Shizuku/aShell
-- **Firmware targets:** nRF52, nRF54L15, STM32 · SBC experiments: Orange Pi clusters
+Many important ideas are fragmented across documents, conversations, prototypes, local machines, abandoned repositories, and closed platforms. Even when a design is publicly visible, it is often difficult to determine:
 
-## Local AI Stack (no cloud dependency)
-Ollama @ localhost:11434 — `qwen2.5-coder:7b` (builder), `qwen2.5:3b` (grader), `nomic-embed-text` (embeddings).
-Agent path: atomic spec → 7B edit → diff gate → py_compile → grep verify → human-gated commit → push_guard → push.
+- What the design actually claims.
+- Which assumptions it depends on.
+- What was tested.
+- What changed between versions.
+- Which materials, energy, labor, and tools are required.
+- Whether someone else can reproduce or improve it.
+- How it connects to related systems and evidence.
 
-## Engineering Programs
-- **OpenCell aerocement** solar absorber (95%+ claimed absorbance; COP-boundary framing)
-- **Thermal labyrinth** passive cooling (35°F drop from 120°F inlet, measured)
-- **Stirling engines** at ΔT > 80°C on solar/waste heat
-- **Geodesic domes** (E = 30·V² BOM truth table, verified)
-- **axiom_engine** — 53 axioms / 56 defs, JSONL, SHA-256 chain-verified
-- **agape_cascade** economy sims (known floor-cap flaw, fix precedes v2 claims)
+OpenRoot is being developed to provide durable, transparent records for that work.
+
+## What OpenRoot supports
+
+OpenRoot is intended to support:
+
+- Open hardware designs and build documentation.
+- Engineering notes, scientific literature, and technical references.
+- Reproducible experiments and measured results.
+- Design iteration, version history, and evidence trails.
+- Workflows for fabrication, testing, repair, and maintenance.
+- Distributed collaboration around practical technology.
+- Local-first computing, AI-assisted research, and knowledge retrieval.
+- Resource, energy, cost, labor, and usefulness accounting.
+- Open technology that strengthens local and community-scale capability.
+
+## Thermal Cascade
+
+A central example is the **Thermal Cascade**: an appropriate-technology system intended to improve how thermal energy is captured, transferred, stored, and used.
+
+OpenRoot provides a place to develop and protect the surrounding knowledge commons:
+
+- Design rationale and system architecture.
+- Thermal models and assumptions.
+- Build methods, materials, and constraints.
+- Measurements, tests, failures, and revisions.
+- Literature references and prior art.
+- Implementation workflows and maintenance knowledge.
+- Open collaboration without losing provenance.
+
+The goal is not to make claims that cannot be tested. The goal is to preserve the chain from idea to design, design to experiment, experiment to evidence, and evidence to real-world implementation.
+
+## Verifiable knowledge workflows
+
+OpenRoot uses versioned files, hashes, structured records, Git history, and local data stores to make technical work inspectable.
+
+```text
+Question or need
+        │
+        ▼
+Research, design, and literature review
+        │
+        ▼
+Open hardware / workflow / experiment
+        │
+        ▼
+Measurements, observations, and results
+        │
+        ▼
+Versioned evidence and reproducible records
+        │
+        ▼
+Improved designs and shared practical capability
+```
+
+This is the “blockchain” aspect of OpenRoot: not speculation or tokenization, but a durable chain of provenance, evidence, revisions, and accountable collaboration.
+
+## Local-first infrastructure
+
+OpenRoot uses local-first tools to support the knowledge commons:
+
+- Local AI models for research assistance, drafting, coding, review, and analysis.
+- SQLite and JSONL records for durable structured state.
+- Shared context tools for coordination across local terminals and work windows.
+- Git-reviewed source, designs, and documentation.
+- Human-gated operations for commits, pushes, recovery actions, remote access, and other consequential changes.
+
+The automation serves the work. It does not replace human responsibility for evidence, safety, implementation, or governance.
+
+## Design principles
+
+### Open by default
+
+Useful knowledge should remain available for people to inspect, learn from, reproduce, adapt, and improve.
+
+### Evidence over assertion
+
+Claims should connect to sources, assumptions, test conditions, measurements, calculations, and versioned records.
+
+### Reproducibility
+
+A design becomes more useful when another person can understand what was done, obtain the needed inputs, repeat the process, and compare results.
+
+### Human authority
+
+Automation may assist with searching, drafting, analysis, routing, and verification. Humans retain authority over safety-critical decisions, physical implementation, publishing, spending, remote access, and irreversible changes.
+
+### Appropriate technology
+
+OpenRoot favors technology that is understandable, repairable, resource-aware, locally adaptable, and capable of improving real conditions.
+
+### Useful-output accounting
+
+A guiding idea is:
+
+```text
+η = J_useful / J_human
+```
+
+where \(J_{\text{useful}}\) represents useful output and \(J_{\text{human}}\) represents the human effort required to create it.
+
+The purpose is not maximizing computation for its own sake. The purpose is increasing useful, durable capability per unit of human effort and available resources.
+
+## Current status
+
+OpenRoot is an active experimental build.
+
+Current work includes local coordination tools, shared context, reproducible records, AI-assisted research workflows, ledger reconciliation, and documentation for appropriate-technology systems. The project is still evolving, and published material should be read as an open working system rather than finished engineering certification.
 
 ## Contributing
-Fork only, two-pane review, read SCOPE.md first. Every PR must pass the CI gates. Commit messages assert — only grep verifies. See [releases](https://github.com/jesseray718/openroot/tree/8a012b2a) for the changelog.
 
-## License
-Code GPL-3.0 · Docs CC-BY-SA-4.0 · SPDX headers required.
+Contributions are welcome from people working in:
+
+- Open-source software and local AI.
+- Open hardware and fabrication.
+- Thermal systems, energy, shelter, food, water, and resilient infrastructure.
+- Engineering research and technical documentation.
+- Scientific literature review and reproducible experiments.
+- Distributed systems, mesh networks, and decentralized coordination.
+- Knowledge management, archival systems, and evidence provenance.
+
+Please keep contributions specific, documented, testable where possible, and respectful of the project’s open licensing and evidence-first approach.
+
+## Licensing
+
+OpenRoot uses a dual-license model:
+
+- **Code and software:** GPL-3.0-or-later.
+- **Documentation, research, open-hardware designs, technical literature, workflows, diagrams, and other non-code project material:** CC BY-SA 4.0.
+
+This keeps the software free and copyleft while ensuring that the knowledge, documentation, and design commons remain shareable and share-alike.
+
+See [LICENSE](LICENSE) and project file headers for the applicable license.
