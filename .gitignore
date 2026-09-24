@@ -70,3 +70,6 @@ workareas/
 !data/*.example.json
 !data/*.example.jsonl
 !data/.env.example
+
+# Local exploratory and debug archives
+local_archive/
