@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+import json
+from pathlib import Path
 """
 smart_router.py - FIXED VERSION
 Assign tasks to optimal model (7B, 3B, or Lumo)
@@ -17,6 +19,20 @@ MODELS = {
     "local_3b": {"provider": "ollama", "endpoint": "http://localhost:11434/api/generate", "model": "qwen2.5:3b"},
     "lumo": {"provider": "lumo_inbox", "endpoint": "/lumo_inbox", "model": "external"}
 }
+
+# Routing weights — read from model_registry.json (audited bench state)
+MODEL_REGISTRY_PATH = Path("/home/jesse/openroot/data/model_registry.json")
+MODEL_REGISTRY = json.load(open(MODEL_REGISTRY_PATH)) if MODEL_REGISTRY_PATH.exists() else None
+
+def get_model_for_role(role: str):
+    """Route role → model name from verified weights. Returns None if no model graded PASS."""
+    if not MODEL_REGISTRY:
+        return None
+    candidates = MODEL_REGISTRY.get("routing_table", {}).get(role, [])
+    for m in candidates:
+        if MODEL_REGISTRY["models"].get(m, {}).get("grade") == "PASS":
+            return m
+    return None  # no eligible model
 
 def classify_query(query):
     """Route decision heuristic"""
