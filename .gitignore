@@ -43,3 +43,30 @@ ctx_backup_*/
 .vscode/
 .idea/
 .DS_Store
+
+# OpenRoot machine-local runtime and coordination state
+.aider.tags.cache.v4/
+bot_loop.pid
+consolidation-backups/
+data/bot_loop.log
+data_bot_state.json
+data/bridge_state.json
+data/.env
+data/.last_window_sha
+data/hive_ledger.db
+data/hive_registry.json
+data/lessons.db
+data/matthew_nodes.json
+data/parallel_ideas.jsonl
+data/router_keywords.json
+data/sdcard-sync/
+data/team_gate.db
+sdcard-sync/
+workareas/
+
+# Keep intentionally versioned data schemas/examples available
+!data/env_map.json
+!data/species.db
+!data/*.example.json
+!data/*.example.jsonl
+!data/.env.example
