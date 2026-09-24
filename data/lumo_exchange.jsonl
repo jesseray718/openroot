@@ -1,0 +1,3 @@
+{"ts": "2026-09-23T21:19:16.949529", "topic": "send", "query": "design What's the highest-eta action for my OpenRoot recovery state?", "context": {}, "status": "pending", "canary": "LUMO_BRIDGE_V1", "hash": "6806616190763f2a"}
+{"ts": "2026-09-23T21:27:12.400732", "topic": "routing", "query": "Analyze my merged ledger for patterns", "context": {}, "status": "pending", "canary": "LUMO_BRIDGE_V1", "hash": "faaa9b8a6bcbf518"}
+{"ts": "2026-09-23T21:27:44.138628", "topic": "send", "query": "analysis What's the highest-eta action in my ideas ledger?", "context": {}, "status": "pending", "canary": "LUMO_BRIDGE_V1", "hash": "230b3b49f883e44e"}
