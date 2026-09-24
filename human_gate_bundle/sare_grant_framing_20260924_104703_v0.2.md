@@ -3,7 +3,7 @@ Status: DRAFT v0.2 (staged, human-gated) | License: CC-BY-SA-4.0 | Tier: $15k
 
 ## The problem (producer-facing)
 Small diversified farms in the Missouri Bootheel and southeast Missouri pay
-their thinnest margins twice: winter heat (tilapia water, quair airspace,
+their thinnest margins twice: winter heat (tilapia water, quail airspace,
 microgreens benches) purchased as propane, and summer losses (heat-stressed
 livestock and stagnant cash flow between harvests). The energy floor is the
 margin floor — and the smallholder pays the highest effective rate.
@@ -44,7 +44,7 @@ Nutrient cascade closes the loop: near-zero-waste operation.
 2. Aerocement mix spec + construction drawings (plain-language)
 3. Raw instrumented dataset, sha-chained, in-repo
 4. Replication guide + field-day demonstration; farmers replicate the
-   ENERGY CASCade or any component independently (modular by design)
+   ENERGY CASCADE or any component independently (modular by design)
 
 ## Credibility (negative results published)
 The audited simulation REFUSES unphysical performance: v6.3 sweep found
