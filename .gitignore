@@ -1,32 +1,45 @@
-
-.aider.tags.cache.v4/
-bot_loop.pid
-consolidation-backups/
-data/bot_loop.log
-data_bot_state.json
-data/bridge_state.json
-data/*.db
-data/.env
-!data/env_map.json
-data/hive_ledger.db
-data/hive_registry.json
-data/.last_window_sha
-data/lessons.db
-data/*.log
-data/matthew_nodes.json
-data/parallel_ideas.jsonl
-data/router_keywords.json
-!data/species.db
-data/team_gate.db
-.env
-*.pyc
+# OpenRoot local runtime state
 __pycache__/
-# runtime writable state — regenerate, never track
-sdcard-sync
-*.tar.gz
-venv/
-workareas/
+*.py[cod]
+*.so
 
-# session junk (2026-09-21 clean state policy)
+# Python environments and tooling
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local logs and process state
+logs/
 *.log
-/tmp_orphan_
+*.pid
+*.lock
+
+# Local databases and SQLite sidecars
+data/*.db
+data/*.db-*
+state/
+*.sqlite
+*.sqlite3
+
+# Generated / local runtime data
+data/orchestrator/
+data/*.jsonl
+ledger/
+lumo_inbox/
+
+# Local backups and recovery snapshots
+backups/
+ctx_backup_*/
+*.backup_*
+*.bak.*
+*~
+
+# Editor and operating-system artifacts
+.vscode/
+.idea/
+.DS_Store
