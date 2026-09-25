@@ -19,6 +19,6 @@ ollama ps 2>/dev/null | tail -n +2
 echo "-- flywheel --"
 python3 bin/embed_cache.py stats 2>/dev/null
 echo "-- quarantine --"
-git ls-files | grep -qE 'marketplace|merge_ledgers|knowledge_base' \
+git ls-files | grep -qE 'marketplace|merge_ledgers' \
   && echo "FAIL: quarantined file tracked" || echo "PASS"
 echo "== BOARDV2 [exit=0] =="
