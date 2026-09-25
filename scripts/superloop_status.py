@@ -92,5 +92,8 @@ lines.extend([
 ])
 
 OUT.parent.mkdir(parents=True, exist_ok=True)
+while lines and not lines[-1].strip():
+    lines.pop()
+
 OUT.write_text("\n".join(lines) + "\n", encoding="utf-8")
 print(OUT)

@@ -1,11 +1,11 @@
 <!-- SPDX-License-Identifier: CC-BY-SA-4.0 -->
 # OpenRoot Superloop Dashboard
 
-- Generated UTC: `2026-09-25T11:42:25.992361+00:00`
+- Generated UTC: `2026-09-25T11:43:16.449217+00:00`
 - Branch: `chore/superloop-ci-cd-foundation`
-- HEAD: `c3d60d288fee`
-- Working tree: `6 changed/untracked path(s); details intentionally omitted`
-- Last commit: `c3d60d28 2026-09-25T06:37:58-05:00 chore: add superloop CI governance foundation`
+- HEAD: `d28d5fce6de9`
+- Working tree: `5 changed/untracked path(s); details intentionally omitted`
+- Last commit: `d28d5fce 2026-09-25T06:42:50-05:00 fix(ci): scope validation to changed files`
 
 ## Command Flow Health
 
@@ -28,4 +28,3 @@
 
 - Never publish tokens, secrets, raw prompts, raw command history, private paths, private IPs, databases, or telemetry.
 - The public status pulse is a redacted summary, not a source of authority.
-
