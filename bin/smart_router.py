@@ -116,3 +116,31 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+# --- SUPERLOOPV4-REGISTRY-HOOK (mined routing weights) ---
+import json as _json
+from pathlib import Path as _Path
+_REGISTRY = _Path("/home/jesse/openroot/data/model_registry.json")
+
+def _registry_bucket_for(hint):
+    import re
+    B = [("gitops", r"\b(git|gh|commit|pr)\b"), ("model", r"(ollama|11434|qwen|infer)"),
+         ("author", r"(heredoc|write|draft|doc)"), ("exec", r"(execute|run|compile|smoke)"),
+         ("gate", r"(gate|verify|grade|test)"), ("net", r"(curl|fetch|network)"),
+         ("bridge", r"\b(ssh|scp)\b"), ("system", r"(process|daemon|disk)")]
+    for n, p in B:
+        if re.search(p, hint, re.I):
+            return n
+    return "other"
+
+def route_by_registry(task_hint, fallback=None):
+    try:
+        reg = _json.loads(_REGISTRY.read_text())
+        b = _registry_bucket_for(task_hint)
+        rw = reg.get("routing_weights", {}).get(b, {})
+        return {"bucket": b, "route_to": rw.get("route_to", fallback or "lumo"),
+                "pref_model": rw.get("pref_model", ""), "source": "registry"}
+    except Exception:
+        return {"bucket": "unknown", "route_to": fallback or "lumo",
+                "pref_model": "", "source": "fallback"}

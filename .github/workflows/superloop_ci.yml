@@ -1,0 +1,26 @@
+# CI gate for the superloop layer. Canary: [SUPERLOOPV4]
+name: superloop-ci
+on:
+  pull_request:
+    paths: ['bin/superloop_*.py', 'bin/smart_router.py', 'data/model_registry.json']
+  push:
+    branches: [main]
+    paths: ['bin/superloop_*.py', 'bin/smart_router.py', 'data/model_registry.json']
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: py_compile + SPDX check
+        run: |
+          STATUS=0
+          for f in bin/superloop_*.py bin/smart_router.py; do
+            [ -f "$f" ] || continue
+            python3 -m py_compile "$f" && echo "[PASS] $f" || { echo "[FAIL] $f"; STATUS=1; }
+            grep -q "SPDX-License-Identifier: GPL-3.0" "$f" || { echo "[FAIL] no SPDX: $f"; STATUS=1; }
+          done
+          exit $STATUS
+      - name: registry sanity (skip if untracked)
+        run: |
+          [ -f data/model_registry.json ] || { echo "[PASS] no registry committed — skip"; exit 0; }
+          python3 -c "import json; r=json.load(open('data/model_registry.json')); assert 'routing_weights' in r; print('[PASS] registry:', len(r['routing_weights']), 'buckets')"
