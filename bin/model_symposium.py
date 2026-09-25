@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # model_symposium.py — model-to-model Q&A rounds over the RAG index to surface
 # leverageable synergies. 3B probes, 7B grounds in retrieved context, 3B grades.
 # Output: leverage_report.md ranked by "eta gain" estimate.

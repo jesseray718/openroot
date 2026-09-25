@@ -1,4 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/python3
+# SPDX-License-Identifier: GPL-3.0-only
 """OPENROOT BOT LOOP v1.0 — canary [botloop-v1-ok]
 
 Autonomous watch->sync->refine->absorb cycle.

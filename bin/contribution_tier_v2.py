@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """contribution_tier_v2.py — Bottom-floor weighted contribution grading
 Core law: utility of benefit scales with (1 - recipient_percentile)^2.
 Same benefit delivered to bottom decile = ~25x the weighted value of top decile.

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # SPDX-License-Identifier: GPL-3.0
 """multi_router v1 — many cheap loops, comfort-zone enforcement, per-round self-memory.
 Usage: python3 bin/multi_router.py [--rounds N] [--smoke]

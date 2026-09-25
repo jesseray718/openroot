@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # SPDX-License-Identifier: GPL-3.0
 # fix_planetary_math_v1.py — correct geodesic-frequency-to-Earth-subdivision math,
 # add wood-satellite spec, Cloud 9 vacuum-tensegrity spec, cost analysis.

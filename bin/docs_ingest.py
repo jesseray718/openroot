@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # SPDX-License-Identifier: GPL-3.0
 """
 docs_ingest.py - Build/rebuild FTS5 knowledge corpus for local retrieval

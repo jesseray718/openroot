@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # SPDX-License-Identifier: GPL-3.0
 # init_knowledge_db.py — Local FTS5 & Document Indexer for Local LLM RAG
 

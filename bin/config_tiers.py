@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """config_tiers.py — Configure API keys for tier routing
 Uses your existing keys: OpenRouter (free tier), Gemini (trial), Grok (xAPI)
 Before enabling tier 4 spending, set CONFIRM=1 and verify current pricing.

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """light_cone_router.py — Route tasks to optimal model by complexity score"""
 import sys, json, math
 from datetime import datetime

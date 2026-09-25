@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """openrouter_client_v1.py — Live OpenRouter calls for the LB loop
 Models (real catalog pricing, verified 2026-09-20 from /api/v1/models):
   tier 2: mistralai/mistral-nemo          $0.019/$0.03  per M tok

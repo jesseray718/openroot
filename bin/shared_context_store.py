@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """
 shared_context_store.py - Cross-window state persistence v1.0
 Stores/retrieves data accessible by all Lumo windows via SQLite

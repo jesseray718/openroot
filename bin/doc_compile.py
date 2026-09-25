@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """doc_compile.py — Cross-device document compiler (A15/Termux + OptiPlex)
 Scans ALL new/modified .md/.txt docs in past 24h for the detected machine,
 compiles into one timestamped doc in ~/openroot/context_bridge/.

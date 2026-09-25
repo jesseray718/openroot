@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # asset_preclassify_v2.py — pass-2 rules (extensions, dirs, skips) + shelves
 # then optional ASSIGN=1: chunked 7B propose-from-shelf -> 3B grade -> scribe gate
 import json, glob, os, hashlib, sys, time, urllib.request

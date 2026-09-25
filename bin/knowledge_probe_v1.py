@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # SPDX-License-Identifier: GPL-3.0-or-later
 """knowledge_probe_v1.py — cross-ledger keyword search + theorem proof cache.
 

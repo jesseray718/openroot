@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """terminal_log_rag.py — RAG ingestion for Reh1t #53"""
 import os, sys
 from pathlib import Path

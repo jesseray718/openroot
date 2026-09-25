@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """
 sync_validator.py - Compare ledgers across Termux/OptiPlex
 Run on both devices, compare outputs

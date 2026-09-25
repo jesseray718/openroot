@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """lumo_bridge_bot_v1.py - relay bot: hybrid loop <-> Lumo packets.
 BRIDGEBOTV1 canary.
 

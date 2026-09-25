@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # SPDX-License-Identifier: GPL-3.0-or-later
 # OpenRoot — jesseray718
 # PANE: SSH — stack status v2: fixed probes (POST /api/show, correct generate opts), true FTS5 count, full model rank

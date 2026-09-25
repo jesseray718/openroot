@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # universal_unpack.py — consume unpack_list manifest: extract unique archives,
 # hash every file, merge into the newest universal_index DB. Idempotent per archive.
 # Jesse Ray / OpenRoot | v1.0 | pairs with universal_index_pipeline.py

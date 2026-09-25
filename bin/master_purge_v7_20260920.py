@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # master_purge_v7_20260920.py — retry fleet master purge via correct mechanisms:
 #   A) 29 dangling-master deletes: REST unencoded path -> git push --delete fallback
 #   B) 3 both-branch repos (agape-primitives, etaledger, fractallattice): default->main

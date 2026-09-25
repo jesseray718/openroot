@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # goals_rebuild_v1_20260920.py — recover/rebuild GOALS.md + MASTER_TODO from remnants.
 # Stage A: hunt for setup_restore_v1.sh (boot-seed claimed it exists; VERDICT BY SEARCH).
 # Stage B: ingest all 3 salvaged_tasks files, dedupe, diff v2 runs to find newest additions.

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # SPDX-License-Identifier: GPL-3.0
 # restore_content_v1.py — Restore README, Profile, Landing page after v2 rewrite
 # Restores: badges (PoPW, Thermal Ledger, Zenodo, CI/CD), hardware overview,

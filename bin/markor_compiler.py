@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """
 Markor Document Fetcher & Compiler
 Fetches new/updated documents from past 24 hours and compiles into single output

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # SPDX-License-Identifier: GPL-3.0-or-later
 # OpenRoot — jesseray718
 # PANE: SSH — discover last-7-day scripts, reconcile vs git, then 7B/3B team review of profile/landing/consolidation

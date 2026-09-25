@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """lesson_stage_v1.py - staging chain + graduation gateway for lessons.db
 
 Foundational entry point. Main chain stays append-only and immutable.

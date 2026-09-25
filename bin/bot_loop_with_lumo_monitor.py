@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """
 Wrapper: bot_loop + continuous Lumo inbox monitoring
 Runs original bot_loop in background, monitors Lumo inbox simultaneously

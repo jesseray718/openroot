@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # SPDX-License-Identifier: GPL-3.0
 """agape_cascade_v23.py - seed reserves, floor ratchet, shock survival.
 

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # git_push_delete_v9_20260920.py — brute-force master deletion via git protocol.
 # Direct `git push origin --delete master` bypasses REST API limitations entirely.
 # Skips repos where master=DEFAULT (those need default flip FIRST, handled separately).

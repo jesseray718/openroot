@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # SPDX-License-Identifier: GPL-3.0
 # openroot triage_100 v1 — classify + gate the 100-action list, execute the A15-safe
 # digital subset, bank field queue. Idempotent. Absolute paths only. No measured claims.

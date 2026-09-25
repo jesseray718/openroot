@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # SPDX-License-Identifier: GPL-3.0-or-later
 """llm_rag_integration.py — Bridges local LLMs with the SQLite RAG index.
 Usage: python3 llm_rag_integration.py "<your query>"

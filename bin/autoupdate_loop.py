@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0-only
 import os, json, time, sqlite3, hashlib, subprocess, urllib.request
 LOOP_SECS = 1800
 ROOTS = ["/storage/emulated/0/openroot"]

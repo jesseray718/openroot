@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # SPDX-License-Identifier: GPL-3.0
 """POPW ledger: account tokens + joules for every model call.
 RAPL microjoules when readable; TDP*walltime estimate fallback (tagged 'estimate',

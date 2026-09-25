@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # SPDX-License-Identifier: GPL-3.0-or-later
 """openroot_mcp_v1.py — local-sovereignty MCP surface over existing OpenRoot tooling."""
 import sqlite3, subprocess

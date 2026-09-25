@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # SPDX-License-Identifier: GPL-3.0-or-later
 # resolve_pr58_final.py — catch up local master, audit PR #58, merge behind CONFIRM=1
 import subprocess, os, sys, pathlib, shutil

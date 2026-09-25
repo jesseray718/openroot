@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # goals_rebuild_v3_20260920.py — curated sources only. No corpus sweep.
 # Sources: 1) reports/goals_draft/*.md (prior rebuild attempt, survived)
 #          2) context_bridge/session-*.md (Sept-16 remnants)

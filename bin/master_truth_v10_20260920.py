@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # master_truth_v10_20260920.py — resolve the phantom-master standoff.
 # DIAGNOSIS: repos whose master was renamed to main keep an API/web REDIRECT on the
 # old name. GET /branches/master returns 200 (redirect) = FALSE PRESENT, while

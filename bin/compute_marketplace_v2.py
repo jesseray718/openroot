@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """
 compute_marketplace.py v2 - Fixed version with proper Ollama handling
 """

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # SPDX-License-Identifier: GPL-3.0-or-later
 """lumo_lib.py — shared primitives for the OpenRoot local stack.
 ollama_generate / prove (cache-first, never recompute) / embed (nomic).

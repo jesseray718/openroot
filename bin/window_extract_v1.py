@@ -1,4 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/python3
+# SPDX-License-Identifier: GPL-3.0-only
 """SUPERLINEAR WINDOW EXTRACTOR v1.0 — canary [winext-v1-ok]
 
 Extracts every script, command, mistake, and canary from a saved chat-session

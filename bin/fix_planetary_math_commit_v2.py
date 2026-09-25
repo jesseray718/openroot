@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # SPDX-License-Identifier: GPL-3.0
 # fix_planetary_math_commit_v2.py — stage ONLY files that exist on disk, commit,
 # push. Fixes v1's fatal pathspec abort on missing START-HERE.md.

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """
 OpenRoot Cycle Recovery & Consolidation Script v1.1
 Fixed: Path concatenation bug, cycle.sh path detection

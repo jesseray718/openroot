@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # secure_and_commit_v4_20260920.py — READ-ONLY PREVIEW. Hash existing GOALS/MASTER_TODO/TASK,
 # compare against rebuild drafts, propose commit message with provenance. CONFIRM=1 executes commit.
 import hashlib, pathlib, subprocess, sys, datetime, json, os

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """keyword_router_v1.py - FTS5 keyword pathways + multi-model loop hive
 with Lumo inbox. KWRTV1 canary.
 

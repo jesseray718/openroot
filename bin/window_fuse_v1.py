@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """window_fuse_v1.py - window extraction + isolated fresh-mind fusion workarea
 + Matthew 25:40 floor-lift optimizer. WINFUSEV1 canary.
 

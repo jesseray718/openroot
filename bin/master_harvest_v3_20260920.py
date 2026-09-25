@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # master_harvest_v3_20260920.py — READ-ONLY. Classify compare failures, bank master head
 # SHAs, hunt openroot master for the lost "todo automation v2.0" commit. Mutates NOTHING.
 import json, os, subprocess, sys, datetime, hashlib, pathlib

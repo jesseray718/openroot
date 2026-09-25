@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # SPDX-License-Identifier: GPL-3.0
 # session_seal_v2.py — seal 2026-09-19 session: bank PR-intake tooling, capture stray
 # report dir, fix license_fleet offline source, write context_bridge handoff.

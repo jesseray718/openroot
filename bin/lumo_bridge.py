@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """
 lumo_bridge.py - Connect local bot_loop to Lumo inbox
 Sends queries via webhook/API, receives responses into ledger

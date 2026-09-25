@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # [canary] paste intact
 # cosmo_rack.py — Tier-2 rack the 0D cosmology: retire misbadged theorems,
 # append correctly-typed records, never edit in place (hash discipline).

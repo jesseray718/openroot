@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # goals_rebuild_v2_20260920.py — v1 crashed (format-string bug) AND salvage dumps are EMPTY.
 # New source of truth: context_bridge/session-2026-09-16-*.md (boot-seed-verified remnants)
 # plus a repo-wide sweep for task-checklist lines. f-strings throughout (bug-class fix).

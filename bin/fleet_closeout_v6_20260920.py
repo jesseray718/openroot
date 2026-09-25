@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # fleet_closeout_v6_20260920.py — purge superseded drafts, evidence-commit today's artifacts,
 # then fleet master deletion (29 dangling) + master->main renames (7 default=master) from ledger.
 # Order: commits BEFORE remote mutations. DRY-RUN default; CONFIRM=1 executes everything.

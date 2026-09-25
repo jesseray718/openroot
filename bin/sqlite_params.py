@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """Execute one SQLite statement with command-line values bound as parameters."""
 
 import sqlite3

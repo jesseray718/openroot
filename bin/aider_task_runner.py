@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """aider_task_runner.py — Atomic spec → 7B edit → gate → commit"""
 import subprocess, sys, os
 from datetime import datetime

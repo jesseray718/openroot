@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """push_guard.py — Guard against unseen web-UI commits before push"""
 import subprocess, sys, json
 

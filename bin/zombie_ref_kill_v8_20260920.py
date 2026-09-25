@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # zombie_ref_kill_v8_20260920.py — kill ghost master refs (targets stripped by filter-repo)
 # Mechanism: retarget ref to main's live head SHA (force), THEN delete. Verifies via BOTH
 # branches + refs endpoints. Prints full API error bodies — no silent false-positives.

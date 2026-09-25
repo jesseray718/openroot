@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # SPDX-License-Identifier: GPL-3.0
 # pr59_reopen_squash_v2.py - reopen PR #59, squash-merge, delete branch. Dry-run unless CONFIRM=1.
 import json, os, subprocess, sys

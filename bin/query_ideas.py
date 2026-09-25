@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """
 query_ideas.py - Search parallel_ideas.jsonl with filters
 """

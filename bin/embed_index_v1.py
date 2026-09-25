@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # SPDX-License-Identifier: GPL-3.0-or-later
 """embed_index_v1.py — semantic repo index via nomic-embed-text.
 Replaces the grep concept-sweep with vector search (ms, concept not substring).

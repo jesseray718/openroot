@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """agape_cascade_v2.py - the thesis as simulation. AGCA2V2 canary.
 Fixes v1.x bug: floor cap (100x100) sat BELOW supply line (300x100),
 so tiers never activated - all v1 runs degenerated and proved nothing.

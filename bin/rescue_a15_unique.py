@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """Rescue: back up canonical files that exist ONLY on this A15 to the OptiPlex."""
 import sys, os, sqlite3, tarfile, subprocess, warnings
 from pathlib import Path

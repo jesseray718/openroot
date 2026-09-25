@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """
 AGAPE CRYPTOGRAPHIC VERSION CHAIN
 Append-only. Never destroys. Always chains. Forkable. Mergeable.

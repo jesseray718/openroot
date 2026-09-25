@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # relay_v1.py — Template Relay: capability-masked multi-actor fill loop.
 # SPDX-License-Identifier: GPL-3.0
 # Node-agnostic DB path: OPENROOT_DIR env, Termux, or OptiPlex.

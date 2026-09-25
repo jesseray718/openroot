@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # agape_qa_engine.py — SQLite + FTS5 + nomic-embed RAG Q&A over the OpenRoot corpus
 # Jesse Ray / OpenRoot v1.0 | DB does retrieval (microseconds), model reads only top-K chunks
 # Commands: embed | stats | ask "question" | chat | templates

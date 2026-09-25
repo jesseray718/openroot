@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # SPDX-License-Identifier: GPL-3.0-or-later
 # license_fleet_continue_v1.py — fleet licensing from per-repo ground truth
 # [canary] license_fleet_continue_v1_CANARY_MARKER

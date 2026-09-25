@@ -1,4 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/python3
+# SPDX-License-Identifier: GPL-3.0-only
 """MOBILE_TO_OPTIPLEX_UNIFIER v2.0 — canary [unify-v2-ok]"""
 import json, hashlib, time, subprocess, pathlib, sys
 from datetime import datetime, timezone

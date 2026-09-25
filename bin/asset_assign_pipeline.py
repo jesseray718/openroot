@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # asset_assign_pipeline.py — SQLite inventory -> 7B draft -> 3B grade -> scribe-gated assignments
 # jesse ray / openroot | reads only unless ASSIGN=1
 import os, json, sqlite3, hashlib, glob, sys, time, urllib.request

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """
 solve.py v2 - Cache-first task router (OpenRoot superlinear engine)
 CANARY: SOLVE_V3_20260924

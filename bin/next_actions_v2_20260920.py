@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # next_actions_v2_20260920.py — stale-master triage (delete-if-behind), forks excluded;
 # widened GOALS/MASTER_TODO salvage. Dry-run default, CONFIRM=1 executes deletions.
 import json, os, subprocess, sys, datetime, hashlib, pathlib, re

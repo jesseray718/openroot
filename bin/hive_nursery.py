@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # SPDX-License-Identifier: GPL-3.0
 """hive_nursery v1 — warming staging area + certified tiniest-capable hive.
 Warms installed models, runs falsifiable talent probes, elects per-class leaders,

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # SPDX-License-Identifier: GPL-3.0
 """FTS5 QA router, cached pathways, doc staging. Keys from env ONLY.
 Usage: index | ask "<q>" | stage <file> | cache-report

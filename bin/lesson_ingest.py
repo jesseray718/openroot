@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """lesson_ingest.py — idempotent lesson chain ingest. Usage:
 lesson_ingest.py "<mistake>" "<root_cause>" "<correction>" [domain]
 Removes the ssh-heredoc quoting fragility that ate two ingest attempts."""

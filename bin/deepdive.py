@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """
 deepdive.py - Scans all JSONL ledgers for content
 Jesse Ray (OpenRoot) - GPL-3.0

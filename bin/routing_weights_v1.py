@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # SPDX-License-Identifier: GPL-3.0-or-later
 # OpenRoot — jesseray718
 # PANE: SSH — routing weights v1: write model_registry.json, patch smart_router.py to read it

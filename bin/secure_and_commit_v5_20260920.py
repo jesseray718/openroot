@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # secure_and_commit_v5_20260920.py — hash GOALS/MASTER_TODO/TASK, stage + commit with
 # provenance. Quoting hardened: no multi-line f-strings, no nested-quote f-expressions.
 # DRY-RUN default; CONFIRM=1 executes commit. Human is the only commit gate before CONFIRM.

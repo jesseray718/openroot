@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """
 OpenRoot Cycle Manager v20260922
 Handles save/resume cycles with REPO_NAME auto-detection

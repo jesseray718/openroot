@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # SPDX-License-Identifier: GPL-3.0
 # force_merge_push_v1.py — fetch origin/main, merge into local main (no rebase),
 # resolve fast-forward or create merge commit, then push. Handles "fetch first" rejects.

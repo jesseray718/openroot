@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """contribution_tier_v1.py — Blockchain-light contribution grading for human benefit
 Tiers:
   T0 = theoretical idea (no implementation)

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """tier_dispatch_v1.py — Budget-aware tier router for the LB loop
 Local free checkpoints grade everything. Only problems that survive all
 local gates get staged for the paid big brain. Every dispatch is logged

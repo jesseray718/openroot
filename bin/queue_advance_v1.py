@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # SPDX-License-Identifier: GPL-3.0-or-later
 """queue_advance_v1.py — mines context_bridge (recency*frequency), forges PR53
 comment via 7B, grades via 3B, gh posts only on CONFIRM=1. Dry-run default.

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # OpenRoot Unified Workflow Controller v2026-09-18
 import os, sys, json, hashlib, sqlite3, subprocess, re
 from datetime import datetime
