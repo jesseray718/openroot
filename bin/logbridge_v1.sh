@@ -91,7 +91,8 @@ BAD=$(git ls-files | grep -Ei 'quarantine|merge_ledgers|warm_models|live-[0-9]{8
 if [ -n "$BAD" ]; then
   if [ "${CONFIRM:-0}" = "1" ]; then
     echo "$BAD" | xargs -r git rm --cached -q
-    git commit -m "[FIX] untrack quarantine-state files (runtime state stays on disk) — AI-assisted, human-gated"
+    # [held] staged-not-committed: git commit -m "[FIX] untrack quarantine-state files (runtime state stays on disk) — AI-assisted, human-gated"
+echo "[held] staged-not-committed (was: git commit) — human gate required"
     echo "$TAG [banked] untracked: $(echo "$BAD" | tr '\n' ' ')" | tee -a "$LOGOUT"
   else
     echo "$BAD" | sed 's/^/  DRY-RUN would untrack: /' | tee -a "$LOGOUT"
