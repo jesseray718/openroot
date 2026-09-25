@@ -1,0 +1,6 @@
+[Unit]
+Description=OpenRoot mistake compost report
+[Service]
+Type=oneshot
+WorkingDirectory=/home/jesse/openroot
+ExecStart=/usr/bin/python3 /home/jesse/openroot/bin/mistake_engine_v1.py compost

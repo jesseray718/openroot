@@ -1,0 +1,6 @@
+[Unit]
+Description=OpenRoot adversarial evidence court
+[Service]
+Type=oneshot
+WorkingDirectory=/home/jesse/openroot
+ExecStart=/home/jesse/openroot/bin/dispatch_court_v6.sh
