@@ -1,9 +1,19 @@
-# OpenRoot local runtime state
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+# Environment, credentials, and local keys
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.kdbx
+*.age
+
+# Python, test, and editor state
 __pycache__/
 *.py[cod]
-*.so
-
-# Python environments and tooling
 .venv/
 venv/
 env/
@@ -12,75 +22,73 @@ env/
 .ruff_cache/
 .coverage
 htmlcov/
-
-# Local logs and process state
-logs/
-*.log
-*.pid
-*.lock
-
-# Local databases and SQLite sidecars
-data/*.db
-data/*.db-*
-state/
-*.sqlite
-*.sqlite3
-
-# Generated / local runtime data
-data/orchestrator/
-data/*.jsonl
-ledger/
-lumo_inbox/
-
-# Local backups and recovery snapshots
-backups/
-ctx_backup_*/
-*.backup_*
-*.bak.*
-*~
-
-# Editor and operating-system artifacts
 .vscode/
 .idea/
 .DS_Store
 
-# OpenRoot machine-local runtime and coordination state
-.aider.tags.cache.v4/
-bot_loop.pid
-consolidation-backups/
-data/bot_loop.log
-data_bot_state.json
-data/bridge_state.json
-data/.env
-data/.last_window_sha
-data/hive_ledger.db
-data/hive_registry.json
-data/lessons.db
-data/matthew_nodes.json
-data/parallel_ideas.jsonl
-data/router_keywords.json
-data/sdcard-sync/
-data/team_gate.db
-sdcard-sync/
-workareas/
+# Local runtime / process state
+logs/
+runtime/
+tmp/
+cache/
+state/
+*.log
+*.pid
+*.lock
+*.tmp
+*.swp
+*~
 
-# Keep intentionally versioned data schemas/examples available
-!data/env_map.json
-!data/species.db
+# Databases and sidecars
+*.db
+*.sqlite
+*.sqlite3
+*.db-shm
+*.db-wal
+
+# Local backups and accidental editor copies
+*.bak
+*.bak.*
+*.backup_*
+/MASTER_TODO.md.bak.*
+/README.md.bak.*
+
+# Local generated / operational state
+/archive/
+/consolidation-backups/
+/ctx_backup_*/
+/ledger/
+/local_archive/
+/lumo_inbox/
+/workareas/
+/recovery/
+/reports/
+/data/sdcard-sync/
+/data/orchestrator/
+/data/.last_window_sha
+/data/bridge_state.json
+/data/cost_ledger.jsonl
+/data/debate_ledger.jsonl
+/data/drift_alerts.jsonl
+/data/lessons.jsonl
+/data/log_feed.jsonl
+/data/orchestrator_decisions.jsonl
+/data/parallel_ideas.jsonl
+/data/router_keywords.json
+/data/solve_cache.jsonl
+/data/superlinear_ledger.jsonl
+/data/superloop_commands.jsonl
+/data_bot_state.json
+/bot_loop.pid
+/context_bridge/*.log
+/context_bridge/private/
+/context_bridge/*.private.*
+/context_bridge/quarantine/
+/context_bridge/quarantine-docs-*/
+
+# Explicitly retain intended versioned examples and schemas
 !data/*.example.json
 !data/*.example.jsonl
 !data/.env.example
-
-# Local exploratory and debug archives
-local_archive/
-
-# runtime state — on disk, never tracked (doctrine)
-knowledge_base.db
-*.db.live-*
-data/log_feed.db
-data/log_feed.jsonl
-logs/ci_payload_*.json
-knowledge_base.db
-bin/quarantine_pyfails_final_v2/
-context_bridge/quarantine-docs-*/
-context_bridge/quarantine/
+!data/env_map.json
+!data/species.db
