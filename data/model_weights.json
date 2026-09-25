@@ -1,0 +1,47 @@
+{
+  "generated": "2026-09-24T01:10:43.514106",
+  "results": {
+    "route": [
+      {
+        "model": "qwen2.5:3b",
+        "tok_per_s": 28.4,
+        "wall_s": 3.6,
+        "out_chars": 6,
+        "weight": 0.2745
+      }
+    ],
+    "grade": [
+      {
+        "model": "qwen2.5:3b",
+        "tok_per_s": 14.6,
+        "wall_s": 3.8,
+        "out_chars": 201,
+        "weight": 0.2633
+      }
+    ],
+    "draft": [
+      {
+        "model": "qwen2.5:3b",
+        "tok_per_s": 14.6,
+        "wall_s": 3.5,
+        "out_chars": 261,
+        "weight": 0.2828
+      }
+    ],
+    "build": [
+      {
+        "model": "qwen2.5-coder:7b",
+        "tok_per_s": 6.5,
+        "wall_s": 57.0,
+        "out_chars": 529,
+        "weight": 0.0175
+      }
+    ]
+  },
+  "recommended_stack": {
+    "route": "qwen2.5:3b",
+    "grade": "qwen2.5:3b",
+    "draft": "qwen2.5:3b",
+    "build": "qwen2.5-coder:7b"
+  }
+}

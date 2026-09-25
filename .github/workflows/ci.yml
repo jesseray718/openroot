@@ -1,0 +1,46 @@
+name: openroot-ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Syntax gate (py_compile all bin/*.py)
+        run: |
+          FAIL=0
+          for f in bin/*.py; do
+            python3 -m py_compile "$f" || { echo "FAIL $f"; FAIL=1; }
+          done
+          exit $FAIL
+      - name: SPDX license header gate
+        run: |
+          FAIL=0
+          for f in bin/*.py; do
+            grep -q "SPDX-License-Identifier: GPL-3.0-only" "$f" || { echo "NO-SPDX $f"; FAIL=1; }
+          done
+          exit $FAIL
+      - name: Shell syntax gate (bash -n all bin/*.sh)
+        run: |
+          FAIL=0
+          for f in bin/*.sh; do
+            bash -n "$f" || { echo "FAIL $f"; FAIL=1; }
+          done
+          exit $FAIL
+      - name: Cache integrity smoke
+        run: |
+          python3 - <<'PY'
+          import sqlite3, sys, os
+          db = "data/pathway_cache.db"
+          if os.path.exists(db):
+              c = sqlite3.connect(db)
+              print("[ci] pathways:", c.execute("SELECT COUNT(*) FROM pathways").fetchone()[0])
+          else:
+              print("[ci] pathway cache db not shipped (expected - runtime state)")
+          PY

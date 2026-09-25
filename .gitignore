@@ -73,3 +73,7 @@ workareas/
 
 # Local exploratory and debug archives
 local_archive/
+
+# runtime state — on disk, never tracked (doctrine)
+knowledge_base.db
+*.db.live-*
