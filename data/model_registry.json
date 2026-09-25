@@ -1,95 +1,116 @@
 {
-  "version": "v1",
-  "generated_at": "20260924_163424",
-  "doctrine_notes": [
-    "Instruments audited before builders (bench --bench passed).",
-    "Custom openroot-* models FAIL py_compile \u2014 NOT ROUTED for authoring.",
-    "nomic-embed-text never co-loaded with 7B+indexer (RAM constraint on OptiPlex 16GB)."
+  "generated": "2026-09-25T10:53:47.626770+00:00",
+  "bucket_counts": {
+    "other": 196,
+    "author": 4,
+    "exec": 5,
+    "vars": 14,
+    "system": 6,
+    "builtin": 5,
+    "files": 1,
+    "bridge": 2,
+    "gitops": 2,
+    "model": 5,
+    "assistant": 7,
+    "gate": 2,
+    "net": 1
+  },
+  "transition_weights": [
+    {
+      "rule": "other->other",
+      "count": 181
+    },
+    {
+      "rule": "vars->other",
+      "count": 5
+    },
+    {
+      "rule": "author->exec",
+      "count": 3
+    },
+    {
+      "rule": "builtin->vars",
+      "count": 3
+    },
+    {
+      "rule": "other->assistant",
+      "count": 3
+    },
+    {
+      "rule": "assistant->assistant",
+      "count": 3
+    },
+    {
+      "rule": "other->system",
+      "count": 3
+    },
+    {
+      "rule": "other->author",
+      "count": 2
+    },
+    {
+      "rule": "exec->vars",
+      "count": 2
+    },
+    {
+      "rule": "vars->system",
+      "count": 2
+    }
   ],
-  "models": {
-    "qwen2.5-coder:7b": {
-      "role": "AUTHOR",
-      "size_gb": 4,
-      "grade": "PASS",
-      "lineage": "known-good 5-for-5 (session 2026-09-18 onward)",
-      "latency_s": null,
-      "usage_policy": "primary author, no exceptions until re-bench",
-      "co_load_rules": "ok with 3B, forbidden with nomic+indexer"
+  "routing_weights": {
+    "bridge": {
+      "route_to": "smart_router",
+      "pref_model": "7b"
     },
-    "openroot-coder:latest": {
-      "role": "UNVERIFIED_AUTHOR",
-      "size_gb": 4,
-      "grade": "FAIL",
-      "lineage": "custom, py_compile=FAIL at 51.7s (bench 2026-09-24 162648)",
-      "latency_s": 51.7,
-      "usage_policy": "DO NOT ROUTE authoring work \u2014 can produce non-compiling output",
-      "co_load_rules": "none"
+    "gitops": {
+      "route_to": "smart_router",
+      "pref_model": "7b"
     },
-    "qwen2.5:3b": {
-      "role": "GRADER",
-      "size_gb": 1,
-      "grade": "PASS",
-      "lineage": "known-good grader",
-      "latency_s": 0.4,
-      "usage_policy": "grading/validation only",
-      "co_load_rules": "ok with 7B author, ok with nomic"
+    "model": {
+      "route_to": "qwen2.5-coder:7b",
+      "pref_model": "7b"
     },
-    "openroot-assistant:latest": {
-      "role": "UNVERIFIED_GRADE",
-      "size_gb": 4,
-      "grade": "FAIL",
-      "lineage": "custom, py_compile=FAIL at 122.4s (bench 2026-09-24 162648)",
-      "latency_s": 122.4,
-      "usage_policy": "DO NOT ROUTE grading work \u2014 unreliable",
-      "co_load_rules": "none"
+    "author": {
+      "route_to": "7b",
+      "pref_model": "7b"
     },
-    "deepseek-r1:1.5b": {
-      "role": "THINK",
-      "size_gb": 1,
-      "grade": "OPEN",
-      "lineage": "chain-of-thought specialist, not yet bench-tested",
-      "latency_s": null,
-      "usage_policy": "reasoning-chain drafts only, never code authoring",
-      "co_load_rules": "ok with anyone"
+    "exec": {
+      "route_to": "3b",
+      "pref_model": "3b"
     },
-    "llama3.2:1b": {
-      "role": "TINY",
-      "size_gb": 1,
-      "grade": "OPEN",
-      "lineage": "keyword routing / pinger only",
-      "latency_s": null,
-      "usage_policy": "routing/pinging, never authoring or grading",
-      "co_load_rules": "ok with anyone"
+    "gate": {
+      "route_to": "team_gate",
+      "pref_model": "3b"
     },
-    "nomic-embed-text:latest": {
-      "role": "EMBED",
-      "size_gb": 0,
-      "grade": "PASS",
-      "lineage": "FTS5 pair, required for RAG",
-      "latency_s": null,
-      "usage_policy": "embedding service only",
-      "co_load_rules": "FORBIDDEN with 7B author + indexer active (RAM overflow risk)"
+    "system": {
+      "route_to": "local_shell",
+      "pref_model": "none"
+    },
+    "net": {
+      "route_to": "smart_router",
+      "pref_model": "7b"
+    },
+    "files": {
+      "route_to": "local_shell",
+      "pref_model": "none"
+    },
+    "nav": {
+      "route_to": "local_shell",
+      "pref_model": "none"
+    },
+    "vars": {
+      "route_to": "local_shell",
+      "pref_model": "none"
+    },
+    "builtin": {
+      "route_to": "local_shell",
+      "pref_model": "none"
+    },
+    "other": {
+      "route_to": "lumo",
+      "pref_model": "max"
     }
   },
-  "routing_table": {
-    "AUTHOR": [
-      "qwen2.5-coder:7b"
-    ],
-    "GRADE": [
-      "qwen2.5:3b"
-    ],
-    "THINK": [
-      "deepseek-r1:1.5b"
-    ],
-    "TINY": [
-      "llama3.2:1b"
-    ],
-    "EMBED": [
-      "nomic-embed-text:latest"
-    ],
-    "UNVERIFIED": [
-      "openroot-coder:latest",
-      "openroot-assistant:latest"
-    ]
-  }
+  "dominant_bucket": "other",
+  "recalled_n": 250
 }
