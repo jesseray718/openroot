@@ -9,8 +9,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-TEXT_SUFFIXES = {".py", ".sh", ".js", ".ts", ".go", ".c", ".h", ".yaml", ".yml"}
-SPDX_REQUIRED = {".py", ".sh", ".js", ".ts", ".go", ".c", ".h"}
+CHECKABLE_TEXT_SUFFIXES = {
+    ".py", ".sh", ".js", ".ts", ".go", ".c", ".h", ".yaml", ".yml", ".json", ".md", ".txt"
+}
+
+SPDX_REQUIRED_SUFFIXES = {
+    ".py", ".sh", ".js", ".ts", ".go", ".c", ".h"
+}
+
 SECRET_PATTERNS = [
     re.compile(r"ghp_[A-Za-z0-9]{20,}"),
     re.compile(r"github_pat_[A-Za-z0-9_]{20,}"),
@@ -18,55 +24,117 @@ SECRET_PATTERNS = [
     re.compile(r"-----BEGIN (?:RSA |EC |OPENSSH |PGP )?PRIVATE KEY-----"),
 ]
 
-def tracked_paths():
-    output = subprocess.check_output(
-        ["git", "ls-files"],
+def git_stdout(*args):
+    result = subprocess.run(
+        ["git", *args],
         cwd=ROOT,
         text=True,
-        stderr=subprocess.STDOUT,
+        capture_output=True,
+        check=True,
     )
-    return [ROOT / item for item in output.splitlines() if item]
+    return result.stdout
 
-def is_authored(path):
-    try:
-        relative = path.relative_to(ROOT)
-    except ValueError:
+def verify_revision(revision):
+    result = subprocess.run(
+        ["git", "rev-parse", "--verify", "--quiet", revision],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+    )
+    if result.returncode != 0:
+        raise SystemExit(f"Cannot resolve Git revision: {revision}")
+
+def changed_paths(base_revision):
+    if not base_revision:
+        return [Path(line) for line in git_stdout("ls-files").splitlines() if line]
+
+    verify_revision(base_revision)
+
+    output = git_stdout(
+        "diff",
+        "--diff-filter=ACMR",
+        "--name-only",
+        f"{base_revision}...HEAD",
+    )
+
+    return [Path(line) for line in output.splitlines() if line]
+
+def requires_spdx(relative_path):
+    if relative_path.suffix.lower() not in SPDX_REQUIRED_SUFFIXES:
         return False
-    if relative.parts and relative.parts[0] == "bin":
-        name = path.name
-        if re.match(r"^\d{4}_", name):
-            return False
+
+    parts = relative_path.parts
+
+    if not parts:
+        return False
+
+    if parts[0] in {
+        "archive",
+        "attic",
+        "data",
+        "vendor",
+        "third_party",
+        "node_modules",
+        "tmp",
+    }:
+        return False
+
+    if parts[0] == "bin" and re.match(r"^\d{4}_", relative_path.name):
+        return False
+
     return True
 
-failures = []
-counts = {"python": 0, "json": 0, "shell": 0, "spdx": 0, "text": 0}
+def read_text(path):
+    return path.read_text(encoding="utf-8", errors="replace")
 
-for path in tracked_paths():
+base = sys.argv[1] if len(sys.argv) > 1 else None
+errors = []
+
+counts = {
+    "paths": 0,
+    "python": 0,
+    "json": 0,
+    "shell": 0,
+    "spdx": 0,
+    "text": 0,
+}
+
+for relative_path in changed_paths(base):
+    path = ROOT / relative_path
+
     if not path.is_file():
         continue
 
-    rel = path.relative_to(ROOT)
     suffix = path.suffix.lower()
 
+    if suffix not in CHECKABLE_TEXT_SUFFIXES:
+        continue
+
+    counts["paths"] += 1
+
     try:
-        text = path.read_text(encoding="utf-8", errors="replace")
+        text = read_text(path)
     except OSError as exc:
-        failures.append(f"Read error: {rel}: {exc}")
+        errors.append(f"Read error: {relative_path}: {exc}")
         continue
 
     if suffix == ".py":
         counts["python"] += 1
         try:
-            ast.parse(text, filename=str(rel))
+            ast.parse(text, filename=str(relative_path))
         except SyntaxError as exc:
-            failures.append(f"Python syntax error: {rel}:{exc.lineno}:{exc.offset}: {exc.msg}")
+            errors.append(
+                f"Python syntax error: {relative_path}:{exc.lineno}:{exc.offset}: {exc.msg}"
+            )
 
     if suffix == ".json":
         counts["json"] += 1
         try:
             json.loads(text)
         except json.JSONDecodeError as exc:
-            failures.append(f"JSON error: {rel}:{exc.lineno}:{exc.colno}: {exc.msg}")
+            errors.append(
+                f"JSON error: {relative_path}:{exc.lineno}:{exc.colno}: {exc.msg}"
+            )
 
     if suffix == ".sh":
         counts["shell"] += 1
@@ -77,21 +145,24 @@ for path in tracked_paths():
             capture_output=True,
         )
         if check.returncode != 0:
-            failures.append(f"Shell syntax error: {rel}: {check.stderr.strip()}")
+            errors.append(
+                f"Shell syntax error: {relative_path}: {check.stderr.strip()}"
+            )
 
-    if suffix in SPDX_REQUIRED and is_authored(path):
+    if requires_spdx(relative_path):
         counts["spdx"] += 1
         if "SPDX-License-Identifier:" not in text[:4096]:
-            failures.append(f"Missing SPDX marker: {rel}")
+            errors.append(f"Missing SPDX marker: {relative_path}")
 
-    if suffix in TEXT_SUFFIXES or suffix in {".json", ".md", ".txt"}:
-        counts["text"] += 1
-        for pattern in SECRET_PATTERNS:
-            if pattern.search(text):
-                failures.append(f"Possible secret pattern: {rel}")
+    counts["text"] += 1
+    for pattern in SECRET_PATTERNS:
+        if pattern.search(text):
+            errors.append(f"Possible secret pattern: {relative_path}")
 
-print("Preflight scanned: " + ", ".join(f"{key}={value}" for key, value in counts.items()))
+print("Preflight changed-file scan: " + ", ".join(
+    f"{key}={value}" for key, value in counts.items()
+))
 
-if failures:
-    print("\n".join(failures), file=sys.stderr)
+if errors:
+    print("\n".join(errors), file=sys.stderr)
     raise SystemExit(1)
