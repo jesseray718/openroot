@@ -80,3 +80,4 @@ knowledge_base.db
 data/log_feed.db
 data/log_feed.jsonl
 logs/ci_payload_*.json
+knowledge_base.db
