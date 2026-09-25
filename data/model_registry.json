@@ -1,13 +1,11 @@
 {
-  "generated": "2026-09-25T10:53:47.626770+00:00",
+  "generated": "2026-09-25T11:00:01.607180+00:00",
   "bucket_counts": {
-    "other": 196,
+    "other": 213,
     "author": 4,
     "exec": 5,
-    "vars": 14,
     "system": 6,
-    "builtin": 5,
-    "files": 1,
+    "files": 3,
     "bridge": 2,
     "gitops": 2,
     "model": 5,
@@ -18,18 +16,34 @@
   "transition_weights": [
     {
       "rule": "other->other",
-      "count": 181
+      "count": 191
     },
     {
-      "rule": "vars->other",
+      "rule": "other->system",
       "count": 5
+    },
+    {
+      "rule": "system->other",
+      "count": 5
+    },
+    {
+      "rule": "exec->other",
+      "count": 4
+    },
+    {
+      "rule": "other->author",
+      "count": 3
     },
     {
       "rule": "author->exec",
       "count": 3
     },
     {
-      "rule": "builtin->vars",
+      "rule": "other->files",
+      "count": 3
+    },
+    {
+      "rule": "files->other",
       "count": 3
     },
     {
@@ -39,22 +53,6 @@
     {
       "rule": "assistant->assistant",
       "count": 3
-    },
-    {
-      "rule": "other->system",
-      "count": 3
-    },
-    {
-      "rule": "other->author",
-      "count": 2
-    },
-    {
-      "rule": "exec->vars",
-      "count": 2
-    },
-    {
-      "rule": "vars->system",
-      "count": 2
     }
   ],
   "routing_weights": {
@@ -91,18 +89,6 @@
       "pref_model": "7b"
     },
     "files": {
-      "route_to": "local_shell",
-      "pref_model": "none"
-    },
-    "nav": {
-      "route_to": "local_shell",
-      "pref_model": "none"
-    },
-    "vars": {
-      "route_to": "local_shell",
-      "pref_model": "none"
-    },
-    "builtin": {
       "route_to": "local_shell",
       "pref_model": "none"
     },
