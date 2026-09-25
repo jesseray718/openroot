@@ -77,3 +77,6 @@ local_archive/
 # runtime state — on disk, never tracked (doctrine)
 knowledge_base.db
 *.db.live-*
+data/log_feed.db
+data/log_feed.jsonl
+logs/ci_payload_*.json
