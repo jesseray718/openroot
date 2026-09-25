@@ -1,0 +1,97 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+name: OpenRoot Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "New release tag, for example v0.1.0"
+        required: true
+        type: string
+      title:
+        description: "GitHub Release title"
+        required: true
+        type: string
+      prerelease:
+        description: "Mark as prerelease"
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: openroot-release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    name: Validate, tag, and publish reviewed release
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: release
+
+    steps:
+      - name: Validate requested tag
+        env:
+          TAG: ${{ inputs.tag }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          printf '%s' "$TAG" | grep -Eq '^v[0-9]+(\.[0-9]+){1,2}([-.][0-9A-Za-z.-]+)?$'
+
+      - name: Check out protected release source
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run deterministic release gates
+        run: |
+          python scripts/superloop_preflight.py
+          python scripts/validate_registry.py
+          python scripts/superloop_status.py
+
+      - name: Refuse existing tag
+        env:
+          TAG: ${{ inputs.tag }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git rev-parse -q --verify "refs/tags/$TAG" >/dev/null; then
+            echo "Refusing to overwrite existing tag: $TAG" >&2
+            exit 1
+          fi
+
+      - name: Create annotated tag
+        env:
+          TAG: ${{ inputs.tag }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git tag -a "$TAG" -m "OpenRoot $TAG"
+          git push origin "refs/tags/$TAG"
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ inputs.tag }}
+          TITLE: ${{ inputs.title }}
+          PRERELEASE: ${{ inputs.prerelease }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          args=(release create "$TAG" --title "$TITLE" --generate-notes)
+          if [ "$PRERELEASE" = "true" ]; then
+            args+=(--prerelease)
+          fi
+          gh "${args[@]}"
