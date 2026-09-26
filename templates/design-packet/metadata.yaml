@@ -1,0 +1,20 @@
+# SPDX-License-Identifier: CC-BY-SA-4.0
+schema_version: "1.0"
+design_id: "{{DESIGN_ID}}"
+name: "{{DESIGN_NAME}}"
+slug: "{{DESIGN_SLUG}}"
+version: "0.1.0"
+status: "draft"
+evidence_level: "L0"
+maintainer: "{{MAINTAINER}}"
+last_reviewed: "{{DATE}}"
+
+licenses:
+  documentation: "CC-BY-SA-4.0"
+  hardware: "CERN-OHL-S-2.0"
+  code: "GPL-3.0-or-later"
+
+claim_boundary: >-
+  This packet is an early design record. It is not a field-validated
+  performance guarantee and is not professional structural, electrical,
+  plumbing, pressure-vessel, food-safety, health, legal, or safety guidance.

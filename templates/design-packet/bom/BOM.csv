@@ -1,0 +1,2 @@
+reference,part_name,description,quantity,unit,specification,material_or_grade,manufacturer_part_number,source_or_make,cost_estimate_usd,currency,alternatives,design_file,criticality,notes
+EX-001,Example component,Replace with actual component,1,each,Required dimensions/rating,Material or grade,Part number,Local/source/make,0.00,USD,Document alternatives,designs/drawings/example.svg,required,Document verification requirements
