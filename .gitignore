@@ -92,3 +92,6 @@ state/
 !data/.env.example
 !data/env_map.json
 !data/species.db
+
+# Local hourly superloop/permaculture pulse reports
+/context_bridge/permaculture-*.md
