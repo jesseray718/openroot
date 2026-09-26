@@ -129,6 +129,20 @@ OpenRoot is an active experimental build.
 
 Current work includes local coordination tools, shared context, reproducible records, AI-assisted research workflows, ledger reconciliation, and documentation for appropriate-technology systems. The project is still evolving, and published material should be read as an open working system rather than finished engineering certification.
 
+## Explore the ecosystem
+
+OpenRoot is the public hub for a focused ecosystem of open-hardware design packets,
+local-first open-source tools, and evidence-preserving practical documentation.
+
+- **[Repository map](docs/REPOSITORIES.md)** — active projects, templates,
+  governance/reference material, archive boundaries, and external forks.
+- **[Design-packet template](https://github.com/jesseray718/openroot-design-packet-template)** —
+  the reproducible baseline for open-hardware projects.
+- **[Open hardware status](docs/OPEN_HARDWARE_STATUS.md)** — current public
+  maturity boundaries for hardware work.
+- **[Design packets](docs/DESIGN_PACKETS.md)** — the evidence-gated path from
+  concept to a buildable, testable public design.
+
 ## Contributing
 
 Contributions are welcome from people working in:
@@ -153,3 +167,19 @@ OpenRoot uses a dual-license model:
 This keeps the software free and copyleft while ensuring that the knowledge, documentation, and design commons remain shareable and share-alike.
 
 See [LICENSE](LICENSE) and project file headers for the applicable license.
+
+
+## Project status and release discipline
+
+OpenRoot uses evidence-gated design packets, human-reviewed releases, and
+read-only CI decision support. A passing workflow validates repository checks;
+it does not prove physical performance, safety, field readiness, certification,
+or regulatory compliance.
+
+- [Open hardware status](docs/OPEN_HARDWARE_STATUS.md)
+- [Design packets](docs/DESIGN_PACKETS.md)
+- [Evidence levels](docs/EVIDENCE_LEVELS.md)
+- [Permaculture Router](docs/PERMACULTURE_ROUTER.md)
+- [Project roadmap](docs/PROJECT_ROADMAP.md)
+- [Release process](docs/RELEASE_PROCESS.md)
+- [Changelog](CHANGELOG.md)
