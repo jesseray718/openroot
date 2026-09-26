@@ -1,0 +1,175 @@
+version: 1
+title: OpenRoot Permaculture Principle Router
+status: experimental
+governance:
+  automation_role: "observe, validate, score, recommend, report"
+  human_role: "approve commits, releases, public claims, physical actions, evidence promotion"
+  forbidden_autonomy:
+    - commit
+    - push
+    - release
+    - delete
+    - modify_live_runtime_state
+    - operate_physical_equipment
+    - promote_evidence_level
+    - make_public_performance_claims
+principles:
+  P01:
+    name: Observe and interact
+    purpose: Reduce uncertainty before intervention.
+    activation:
+      - missing_measurements
+      - uncertainty_above_threshold
+      - changed_context
+    outputs:
+      - observation_plan
+      - measurement_request
+      - uncertainty_register
+  P02:
+    name: Catch and store energy
+    purpose: Retain useful surplus flows before they dissipate.
+    activation:
+      - surplus_flow_exists
+      - storage_capacity_exists
+    outputs:
+      - capture_candidate
+      - storage_candidate
+  P03:
+    name: Obtain a yield
+    purpose: Define and measure durable useful output.
+    activation:
+      - measurable_yield_defined
+    outputs:
+      - yield_metric
+      - yield_horizon
+  P04:
+    name: Apply self-regulation and accept feedback
+    purpose: Keep the system within safe and intended bounds.
+    activation:
+      - feedback_missing
+      - metric_out_of_bounds
+      - stop_condition_missing
+    outputs:
+      - feedback_loop
+      - stop_conditions
+      - review_gate
+  P05:
+    name: Use and value renewable resources and services
+    purpose: Prefer renewable, local, repairable, regenerative inputs where justified.
+    activation:
+      - renewable_option_viable
+      - lifecycle_benefit_positive
+    outputs:
+      - renewable_substitution
+      - local_service_option
+  P06:
+    name: Produce no waste
+    purpose: Treat avoidable losses and byproducts as candidate inputs.
+    activation:
+      - waste_stream_detected
+      - reuse_path_exists
+    outputs:
+      - reuse_path
+      - cascade_link
+  P07:
+    name: Design from patterns to details
+    purpose: Establish the system boundary, flows, dependencies, and constraints before detail expansion.
+    activation:
+      - system_map_missing
+      - detail_before_pattern
+    outputs:
+      - system_map
+      - boundary_definition
+      - dependency_graph
+  P08:
+    name: Integrate rather than segregate
+    purpose: Connect compatible nodes when transfer value exceeds total connection burden.
+    activation:
+      - compatible_nodes_exist
+      - connection_value_positive
+    outputs:
+      - integration_candidate
+      - input_output_link
+  P09:
+    name: Use small and slow solutions
+    purpose: Match intervention scale to evidence, reversibility, and risk.
+    activation:
+      - intervention_exceeds_evidence
+      - low_reversibility
+      - elevated_risk
+    outputs:
+      - pilot_plan
+      - rollback_plan
+      - scope_reduction
+  P10:
+    name: Use and value diversity
+    purpose: Reduce single points of failure and increase adaptive capacity.
+    activation:
+      - concentration_risk_high
+    outputs:
+      - redundancy_plan
+      - alternate_path
+  P11:
+    name: Use edges and value the marginal
+    purpose: Inspect interfaces, overlooked users, boundary losses, and low-resource opportunities.
+    activation:
+      - edge_opportunity_detected
+    outputs:
+      - edge_scan
+      - marginal_value_candidate
+  P12:
+    name: Creatively use and respond to change
+    purpose: Adapt assumptions and plans to meaningful changes in conditions.
+    activation:
+      - change_detected
+      - adaptation_option_exists
+    outputs:
+      - adaptation_plan
+      - assumption_revision
+routing:
+  hard_gates:
+    - id: evidence_risk_gate
+      rule: "risk_level > evidence_level"
+      result: HOLD_FOR_REVIEW
+    - id: safety_review_gate
+      rule: "risk_level >= 2 and safety_review_complete == false"
+      result: HOLD_FOR_REVIEW
+    - id: observation_gate
+      rule: "missing_measurements == true and intervention_scale > 1"
+      result: HOLD_FOR_REVIEW
+    - id: reversibility_gate
+      rule: "reversibility < 0.70 and intervention_scale > 1"
+      result: HOLD_FOR_REVIEW
+  route_edges:
+    - [P01, P04]
+    - [P01, P07]
+    - [P01, P09]
+    - [P01, P12]
+    - [P02, P03]
+    - [P02, P06]
+    - [P02, P08]
+    - [P03, P04]
+    - [P04, P01]
+    - [P04, P09]
+    - [P04, P12]
+    - [P05, P02]
+    - [P05, P06]
+    - [P05, P10]
+    - [P06, P02]
+    - [P06, P08]
+    - [P07, P08]
+    - [P07, P10]
+    - [P07, P11]
+    - [P08, P03]
+    - [P08, P06]
+    - [P08, P10]
+    - [P09, P01]
+    - [P09, P04]
+    - [P10, P04]
+    - [P10, P12]
+    - [P11, P02]
+    - [P11, P06]
+    - [P11, P08]
+    - [P12, P01]
+    - [P12, P04]
+    - [P12, P09]
