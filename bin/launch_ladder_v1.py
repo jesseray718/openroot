@@ -110,8 +110,8 @@ STAGES = [
         "name": "contributor_seal",
         "desc": "Reh1t PR #53 resolved with credit — goodwill is scarcest asset",
         "maturity": "human",  # TRUE human-only: judgment cannot be automated
-        "checks": ['gh pr view 53 --repo jesseray718/openroot --json state -q .state | grep -qi merged'],
-        "calib": {"cmd": "gh pr view 53 --repo jesseray718/openroot --json state,author,title", "timeout": 60},
+        "checks": ['gh pr view 63 --repo jesseray718/openroot --json state -q .state | grep -qi merged'],
+        "calib": {"cmd": "gh pr view 63 --repo jesseray718/openroot --json state,author,title", "timeout": 60},
         "runner": {"cmd": "echo '[gate] PR 53 merge is HUMAN-ADJUDICATED'", "timeout": 60, "human_only": True},
     },
     {

@@ -40,3 +40,5 @@ approval, deployment readiness, or field validation.
 - Permaculture Router v0.1 decision-support implementation.
 - Read-only open-hardware preview and CI validation path.
 
+
+- Added contributor credit: Rehan Tariq (@Reh1t) — LLM & SQLite RAG integration (PR #63).

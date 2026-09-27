@@ -183,3 +183,11 @@ or regulatory compliance.
 - [Project roadmap](docs/PROJECT_ROADMAP.md)
 - [Release process](docs/RELEASE_PROCESS.md)
 - [Changelog](CHANGELOG.md)
+
+---
+
+## Contributors
+
+- **Rehan Tariq ([@Reh1t](https://github.com/Reh1t))** — Initial LLM & SQLite RAG integration,
+  zero-dependency design ([PR #63](https://github.com/jesseray718/openroot/pull/63), issue #53).
+  First external code contribution to OpenRoot.
