@@ -123,8 +123,8 @@ STAGES = [
         "runner": {"cmd": "echo '[gate] finalize README + gh release create'", "timeout": 120, "human_only": True},
     },
     {
-        "name": "public_face",
-        "desc": "profile pinned repos + README photo slot + stranger-readable front page",
+        "name": "open_invitation",
+        "desc": "public invitation: graded contribution pipeline + shared credit enforced by architecture",
         "maturity": "human",  # identity-level judgment
         "checks": ["test -s README.md && grep -qi 'aerocement\\|OpenCell\\|agape' README.md"],
         "calib": {"cmd": "grep -ci 'four engines\\|openroot' README.md", "timeout": 30},

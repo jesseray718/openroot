@@ -187,6 +187,7 @@ or regulatory compliance.
 ---
 
 ## Contributors
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the graded pathway and credit covenant.
 
 - **Rehan Tariq ([@Reh1t](https://github.com/Reh1t))** — Initial LLM & SQLite RAG integration,
   zero-dependency design ([PR #63](https://github.com/jesseray718/openroot/pull/63), issue #53).
