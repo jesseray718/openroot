@@ -508,3 +508,19 @@ This is part of the **OpenRoot Ecosystem**:
 
 ---
 
+
+
+## Project status and release discipline
+
+OpenRoot uses evidence-gated design packets, human-reviewed releases, and
+read-only CI decision support. A passing workflow validates repository checks;
+it does not prove physical performance, safety, field readiness, certification,
+or regulatory compliance.
+
+- [Open hardware status](OPEN_HARDWARE_STATUS.md)
+- [Design packets](DESIGN_PACKETS.md)
+- [Evidence levels](EVIDENCE_LEVELS.md)
+- [Permaculture Router](PERMACULTURE_ROUTER.md)
+- [Project roadmap](PROJECT_ROADMAP.md)
+- [Release process](RELEASE_PROCESS.md)
+- [Changelog](../CHANGELOG.md)

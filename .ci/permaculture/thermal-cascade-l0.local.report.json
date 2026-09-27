@@ -1,0 +1,348 @@
+{
+  "active_principles": {
+    "P01": {
+      "active": true,
+      "name": "Observe and interact",
+      "purpose": "Reduce uncertainty before intervention.",
+      "reasons": [
+        "missing_measurements=True",
+        "uncertainty=0.90",
+        "change_detected=False"
+      ]
+    },
+    "P02": {
+      "active": true,
+      "name": "Catch and store energy",
+      "purpose": "Retain useful surplus flows before they dissipate.",
+      "reasons": [
+        "surplus_flow=1.000",
+        "storage_capacity=0.500"
+      ]
+    },
+    "P03": {
+      "active": false,
+      "name": "Obtain a yield",
+      "purpose": "Define and measure durable useful output.",
+      "reasons": []
+    },
+    "P04": {
+      "active": true,
+      "name": "Apply self-regulation and accept feedback",
+      "purpose": "Keep the system within safe and intended bounds.",
+      "reasons": [
+        "feedback_exists=False",
+        "metric_out_of_bounds=False",
+        "stop_conditions_defined=False"
+      ]
+    },
+    "P05": {
+      "active": true,
+      "name": "Use and value renewable resources and services",
+      "purpose": "Prefer renewable, local, repairable, regenerative inputs where justified.",
+      "reasons": [
+        "renewable_option_viable=True",
+        "lifecycle_benefit=0.400"
+      ]
+    },
+    "P06": {
+      "active": true,
+      "name": "Produce no waste",
+      "purpose": "Treat avoidable losses and byproducts as candidate inputs.",
+      "reasons": [
+        "waste_stream_detected=True",
+        "reuse_path_exists=True"
+      ]
+    },
+    "P07": {
+      "active": true,
+      "name": "Design from patterns to details",
+      "purpose": "Establish system boundary, flows, dependencies, and constraints before detail expansion.",
+      "reasons": [
+        "system_map_exists=False",
+        "intervention_scale=2"
+      ]
+    },
+    "P08": {
+      "active": true,
+      "name": "Integrate rather than segregate",
+      "purpose": "Connect compatible nodes when transfer value exceeds total connection burden.",
+      "reasons": [
+        "compatible_nodes=2",
+        "connection_value=0.700",
+        "connection_cost=0.300"
+      ]
+    },
+    "P09": {
+      "active": true,
+      "name": "Use small and slow solutions",
+      "purpose": "Match intervention scale to evidence, reversibility, and risk.",
+      "reasons": [
+        "intervention_scale=2",
+        "evidence_level=1",
+        "reversibility=0.80",
+        "risk_level=2"
+      ]
+    },
+    "P10": {
+      "active": false,
+      "name": "Use and value diversity",
+      "purpose": "Reduce single points of failure and increase adaptive capacity.",
+      "reasons": []
+    },
+    "P11": {
+      "active": true,
+      "name": "Use edges and value the marginal",
+      "purpose": "Inspect interfaces, overlooked users, boundary losses, and low-resource opportunities.",
+      "reasons": [
+        "edge_opportunity_score=0.80"
+      ]
+    },
+    "P12": {
+      "active": false,
+      "name": "Creatively use and respond to change",
+      "purpose": "Adapt assumptions and plans to meaningful changes in conditions.",
+      "reasons": []
+    }
+  },
+  "active_routes": [
+    {
+      "from": "P01",
+      "from_name": "Observe and interact",
+      "to": "P04",
+      "to_name": "Apply self-regulation and accept feedback"
+    },
+    {
+      "from": "P01",
+      "from_name": "Observe and interact",
+      "to": "P07",
+      "to_name": "Design from patterns to details"
+    },
+    {
+      "from": "P01",
+      "from_name": "Observe and interact",
+      "to": "P09",
+      "to_name": "Use small and slow solutions"
+    },
+    {
+      "from": "P02",
+      "from_name": "Catch and store energy",
+      "to": "P06",
+      "to_name": "Produce no waste"
+    },
+    {
+      "from": "P02",
+      "from_name": "Catch and store energy",
+      "to": "P08",
+      "to_name": "Integrate rather than segregate"
+    },
+    {
+      "from": "P04",
+      "from_name": "Apply self-regulation and accept feedback",
+      "to": "P01",
+      "to_name": "Observe and interact"
+    },
+    {
+      "from": "P04",
+      "from_name": "Apply self-regulation and accept feedback",
+      "to": "P09",
+      "to_name": "Use small and slow solutions"
+    },
+    {
+      "from": "P05",
+      "from_name": "Use and value renewable resources and services",
+      "to": "P02",
+      "to_name": "Catch and store energy"
+    },
+    {
+      "from": "P05",
+      "from_name": "Use and value renewable resources and services",
+      "to": "P06",
+      "to_name": "Produce no waste"
+    },
+    {
+      "from": "P06",
+      "from_name": "Produce no waste",
+      "to": "P02",
+      "to_name": "Catch and store energy"
+    },
+    {
+      "from": "P06",
+      "from_name": "Produce no waste",
+      "to": "P08",
+      "to_name": "Integrate rather than segregate"
+    },
+    {
+      "from": "P07",
+      "from_name": "Design from patterns to details",
+      "to": "P08",
+      "to_name": "Integrate rather than segregate"
+    },
+    {
+      "from": "P07",
+      "from_name": "Design from patterns to details",
+      "to": "P11",
+      "to_name": "Use edges and value the marginal"
+    },
+    {
+      "from": "P08",
+      "from_name": "Integrate rather than segregate",
+      "to": "P06",
+      "to_name": "Produce no waste"
+    },
+    {
+      "from": "P09",
+      "from_name": "Use small and slow solutions",
+      "to": "P01",
+      "to_name": "Observe and interact"
+    },
+    {
+      "from": "P09",
+      "from_name": "Use small and slow solutions",
+      "to": "P04",
+      "to_name": "Apply self-regulation and accept feedback"
+    },
+    {
+      "from": "P11",
+      "from_name": "Use edges and value the marginal",
+      "to": "P02",
+      "to_name": "Catch and store energy"
+    },
+    {
+      "from": "P11",
+      "from_name": "Use edges and value the marginal",
+      "to": "P06",
+      "to_name": "Produce no waste"
+    },
+    {
+      "from": "P11",
+      "from_name": "Use edges and value the marginal",
+      "to": "P08",
+      "to_name": "Integrate rather than segregate"
+    }
+  ],
+  "context": {
+    "claimed_outputs": [],
+    "context_kind": "intake",
+    "description": "Initial L0/L1 intake context. It records a hypothesis and routing state only. It is not a physical test plan, performance claim, prototype certification, or physical-system validation record.",
+    "evidence_artifacts": [],
+    "evidence_label": "L1 — documented source, calculation, simulation, or design rationale",
+    "evidence_level": 1,
+    "name": "OpenRoot Thermal Cascade L0/L1 intake",
+    "risk_level": 2,
+    "tags": [
+      "thermal",
+      "design-packet",
+      "L0",
+      "L1",
+      "human-review-required"
+    ]
+  },
+  "decision": "HOLD_FOR_HUMAN_REVIEW",
+  "engine": "OpenRoot Permaculture Router v0.1.0",
+  "gates": [
+    {
+      "gate": "evidence_risk_gate",
+      "message": "Risk level 2 exceeds evidence level 1. Reduce scope, gather evidence, or require explicit human review.",
+      "severity": "block"
+    },
+    {
+      "gate": "safety_review_gate",
+      "message": "Safety review is incomplete for a risk level of 2 or greater. Do not execute or scale a physical intervention.",
+      "severity": "block"
+    },
+    {
+      "gate": "observation_gate",
+      "message": "Measurements are missing while intervention scale exceeds a minimal pilot. Observe and measure before expanding.",
+      "severity": "block"
+    },
+    {
+      "gate": "stop_condition_gate",
+      "message": "Safe stop conditions are not defined for a nonzero risk context. Define stop conditions before testing.",
+      "severity": "block"
+    },
+    {
+      "gate": "feedback_gate",
+      "message": "Feedback, bounds, or stop conditions are incomplete. Add monitoring before any action beyond observation.",
+      "severity": "warning"
+    }
+  ],
+  "generated_at_utc": "2026-09-26T05:53:18+00:00",
+  "governance": {
+    "automatic_evidence_promotion_permitted": false,
+    "automatic_execution_permitted": false,
+    "automatic_git_mutation_permitted": false,
+    "automatic_release_permitted": false,
+    "human_approval_required": true
+  },
+  "invariants": [
+    "Evidence level may not be promoted by this router.",
+    "CI validation does not establish physical performance or safety.",
+    "L0/L1 contexts must not be presented as documented physical validation.",
+    "High-risk or irreversible actions require explicit human review.",
+    "Runtime state must not be automatically committed or released."
+  ],
+  "mode": "read-only decision support",
+  "recommended_actions": [
+    {
+      "action": "Collect the smallest set of measurements that removes the highest-impact uncertainty.",
+      "artifact": "Dated raw-data record with conditions, instrument, units, and caveats.",
+      "principles": "P01",
+      "priority": "P0"
+    },
+    {
+      "action": "Draw or update the system boundary: inputs, outputs, nodes, flows, dependencies, hazards, and excluded claims.",
+      "artifact": "System map or boundary diagram linked from the design packet.",
+      "principles": "P07",
+      "priority": "P0"
+    },
+    {
+      "action": "Define measurable operating bounds, feedback metrics, safe stop conditions, and human escalation criteria.",
+      "artifact": "Test protocol with explicit stop conditions and review requirements.",
+      "principles": "P04",
+      "priority": "P0"
+    },
+    {
+      "action": "Reduce the intervention to a reversible, single-node, low-risk pilot that is proportionate to the evidence level.",
+      "artifact": "Pilot plan, rollback plan, and expected evidence artifact.",
+      "principles": "P09",
+      "priority": "P0"
+    },
+    {
+      "action": "Map the surplus or waste stream, quantify it, and test one safe route for capture, storage, or reuse.",
+      "artifact": "Flow estimate with source, sink, transfer loss, and storage limits.",
+      "principles": "P02 + P06",
+      "priority": "P1"
+    },
+    {
+      "action": "Evaluate whether one node output can become another node input without increasing maintenance or risk disproportionately.",
+      "artifact": "Node-to-node interface specification and compatibility check.",
+      "principles": "P06 + P08",
+      "priority": "P1"
+    },
+    {
+      "action": "Compare renewable, local, repairable, and regenerative alternatives against lifecycle burden and reliability.",
+      "artifact": "Option comparison with maintenance, cost, repairability, and dependency notes.",
+      "principles": "P05",
+      "priority": "P1"
+    },
+    {
+      "action": "Inspect interfaces, boundary losses, neglected users, low-resource nodes, and underused surplus streams.",
+      "artifact": "Edge-opportunity inventory ranked by benefit, effort, and risk.",
+      "principles": "P11",
+      "priority": "P1"
+    }
+  ],
+  "report_version": 1,
+  "scores": {
+    "active_principle_fraction": 0.75,
+    "evidence_confidence": 0.2,
+    "governance_penalty": 1.0,
+    "integration_score": 1.0,
+    "lifecycle_burden_score": 0.475,
+    "node_reach_score": 0.5283,
+    "resilience_score": 0.35,
+    "safe_opportunity_score": 0.0,
+    "yield_score": 0.0
+  },
+  "source_context": "data/router_examples/thermal-cascade-l0.json"
+}
