@@ -1,0 +1,14 @@
+[Unit]
+Description=OpenRoot RAPL counter sampler (root: reads /sys/class/powercap)
+After=network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/python3 /home/jesse/openroot/bin/openroot_rapl_sampler_v1.py --interval 5
+WorkingDirectory=/home/jesse/openroot
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
