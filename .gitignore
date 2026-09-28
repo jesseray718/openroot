@@ -95,3 +95,5 @@ state/
 
 # Local hourly superloop/permaculture pulse reports
 /context_bridge/permaculture-*.md
+data/superloop_chains.json
+context_bridge/superloop_DASHBOARD.md
