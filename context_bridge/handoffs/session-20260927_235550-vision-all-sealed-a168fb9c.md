@@ -24,4 +24,4 @@
 3. Widen dedup ROOTS to excluded dirs + add A15 roots (Termux run, scp merge to shared ledger shape)
 4. Wire dedup_stream_latest.json + dedup_ledger.db into FTS5/oracle intake as fuel
 - New incident: repo-scoped deploy key denied aerocement-calc push; fix=HTTPS remote + gh credential helper
-- Aerocement PR state: (fill in the URL gh pr view printed)
+- Aerocement PR state: OPEN #9 https://github.com/jesseray718/aerocement-calc/pull/9
