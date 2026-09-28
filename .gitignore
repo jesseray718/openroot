@@ -97,3 +97,4 @@ state/
 /context_bridge/permaculture-*.md
 data/superloop_chains.json
 context_bridge/superloop_DASHBOARD.md
+data/model_registry.json

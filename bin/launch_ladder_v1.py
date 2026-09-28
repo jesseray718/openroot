@@ -56,7 +56,7 @@ STAGES = [
             "test -f bin/mistake_engine_v1.py",
             "python3 -m py_compile bin/mistake_engine_v1.py",
         ],
-        "calib": {"cmd": "python3 bin/mistake_engine_v1.py list 2>&1 | head -5 || echo 'engine alive'", "timeout": 60},
+        "calib": {"cmd": "python3 bin/mistake_engine_v1.py compost 2>&1 | head -5 || echo 'engine alive'", "timeout": 60},
         "runner": {"cmd": "python3 bin/mistake_engine_v1.py compost", "timeout": 60},
     },
     {
@@ -172,7 +172,7 @@ def calibrate(con, st):
     if not ok:
         report_mistake(con, st["name"], f"calibration: {out}"); return False
     con.execute("UPDATE stages SET status='calibrated', last_action='calibration PASSED (real, bounded)', "
-                "last_ts=?, evidence=? WHERE name=?", (now(), out[:200], st["name"]))
+                "last_ts=?, evidence=? WHERE name=? AND status!='verified'", (now(), out[:200], st["name"]))
     con.commit()
     print(f"[banked] calibration PASSED → {st['name']} promoted to CALIBRATED")
     return True
@@ -192,7 +192,7 @@ def run_stage(con, st):
     if not ok2:
         report_mistake(con, st["name"], ev); return False
     con.execute("UPDATE stages SET status='verified', checks_ok=1, last_action='run+verify GREEN', "
-                "last_ts=?, evidence=? WHERE name=?", (now(), ev[:200], st["name"]))
+                "last_ts=?, evidence=? WHERE name=? AND status!='verified'", (now(), ev[:200], st["name"]))
     con.commit()
     print(f"[banked] {st['name']} VERIFIED GREEN — success endured")
     # AUTO-TRIGGER next calibration
