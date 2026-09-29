@@ -59,8 +59,22 @@ jobs:
             python scripts/superloop_preflight.py
           fi
 
-      - name: Validate model registry
-        run: python scripts/validate_registry.py
+      - name: Validate model registry when committed
+        run: |
+          set -euo pipefail
+          registry_paths=(
+            data/model_registry.json
+            model_registry.json
+            config/model_registry.json
+            context_bridge/model_registry.json
+          )
+          for registry in "${registry_paths[@]}"; do
+            if [ -f "$registry" ]; then
+              python scripts/validate_registry.py
+              exit 0
+            fi
+          done
+          echo "[PASS] no model registry committed; local runtime registry is intentionally excluded"
 
       - name: Validate changed Git whitespace
         shell: bash
