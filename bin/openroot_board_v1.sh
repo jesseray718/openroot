@@ -88,3 +88,4 @@ else
   echo "$CANARY [held] read-only — CONFIRM=1 also pushes if ahead"
 fi
 echo "$CANARY [exit=0]"
+RBT_PID=$(pgrep -f 'bash.*reply_bot_v1.sh' | head -1); [ -n "$RBT_PID" ] && echo "reply_bot: LIVE pid $RBT_PID ($(ls context_bridge/lumo_inbox/digests | wc -l) digests)" || echo "reply_bot: DEAD — restart: nohup bash bin/reply_bot_v1.sh > logs/replybot_daemon.log 2>&1 &"
