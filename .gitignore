@@ -98,3 +98,10 @@ state/
 data/superloop_chains.json
 context_bridge/superloop_DASHBOARD.md
 data/model_registry.json
+# [HARDEN] never accidentally track bulk harvests (added 20260930 after 4GB push rejection)
+data/kai_import_*.tar.gz
+context_bridge/a15_backup/
+context_bridge/kai_deep_harvest_*/
+context_bridge/concept_sweeps/
+context_bridge/grep_sweep_*/
+*.tar.zst
