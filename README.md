@@ -192,3 +192,6 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the graded pathway and credit covenan
 - **Rehan Tariq ([@Reh1t](https://github.com/Reh1t))** — Initial LLM & SQLite RAG integration,
   zero-dependency design ([PR #63](https://github.com/jesseray718/openroot/pull/63), issue #53).
   First external code contribution to OpenRoot.
+(KAI9000 ROUTING STACK block)
+(CORRECTED Executor block above — bot runner, not aider)
+(RUNNER + LUMO INBOX + API TIER remainder: escalation rule, key doctrine, feedback loop)
