@@ -212,7 +212,13 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the graded pathway and credit covenan
 | API tier (external providers) | 1-5 s | ~5% | Local cascade exhaustion only |
 
 ### Data Flow
-User Query ├─ fp5s lookup → Hit → Return ranked docs (80%+ routing decisions here) ├─ Miss → SQLite FTS5 → Hit → Expand context → 3B grader summary ├─ Miss → Nomic Embed → Hit → Top-k vectors → Model selection └─ Miss → Register new tidbit seed → Compost to mistake engine
+```
+User Query
+  ├─ fp5s lookup → Hit → Return ranked docs (80%+ routing decisions here)
+  ├─ Miss → SQLite FTS5 → Hit → Expand context → 3B grader summary
+  ├─ Miss → Nomic Embed → Hit → Top-k vectors → Model selection
+  └─ Miss → Register new tidbit seed → Compost to mistake engine
+```
 
 ### Components (file inventory)
 
