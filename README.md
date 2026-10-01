@@ -198,3 +198,110 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the graded pathway and credit covenan
 (KAI9000 ROUTING STACK block)
 (CORRECTED Executor block above — bot runner, not aider)
 (RUNNER + LUMO INBOX + API TIER remainder: escalation rule, key doctrine, feedback loop)
+---[BEGIN KAI9000 ROUTING STACK ARCHITECTURE]---
+
+## Kai9000 Knowledge Router (fp5s + SQLite FTS5 + Nomic Embed + Tiny AI Team)
+
+### Three-Layer Cascade (local-first, API-on-demand)
+
+| Layer | Latency | Hit Rate | Trigger |
+|-------|---------|----------|---------|
+| fp5s (keyword inverted index) | <10 ms | ~50% | Exact term match in `data/fp5s_index.json` |
+| SQLite FTS5 (full-text) | <50 ms | ~30% | Phrase/proximity search across `context_bridge/` |
+| Nomic Embed (dense vector) | <200 ms | ~15% | Cosine similarity >0.72 in `data/neo_index.db` |
+| API tier (external providers) | 1-5 s | ~5% | Local cascade exhaustion only |
+
+### Data Flow
+User Query ├─ fp5s lookup → Hit → Return ranked docs (80%+ routing decisions here) ├─ Miss → SQLite FTS5 → Hit → Expand context → 3B grader summary ├─ Miss → Nomic Embed → Hit → Top-k vectors → Model selection └─ Miss → Register new tidbit seed → Compost to mistake engine
+
+### Components (file inventory)
+
+| File | Role |
+|------|------|
+| `data/fp5s_index.json` | Keyword → document path inverted index |
+| `data/team_gate.db` | SQLite FTS5 virtual tables + routing metadata |
+| `data/neo_index.db` | Nomic dense embeddings + cosine similarity index |
+| `bin/light_cone_router.py` | Cascade orchestrator + model selector |
+| `bin/kai_ingest_bridge_v1.py` | New file → full cascade (fp5s + FTS5 + Nomic) |
+| `bin/kai_search_v1.py` | Interactive query interface |
+| `bin/kai_queue_bridge_v1.py` | Batch ingest pipeline |
+| `data/kai_corpus_index.txt` | Manifest of all indexed assets |
+
+### Routing Doctrine
+
+1. **Local first, always.** API calls cost fiat + privacy — leave sovereign boundary.
+2. **Hash-verified integrity.** Every indexed asset receives SHA256 fingerprint; dedupe by hash before reindex.
+3. **Routing miss becomes learning opportunity.** Failed queries logged to `mistake_solutions/` → manual annotation → fp5s hotpatch → router improves.
+
+### Model Selection Table
+
+| Model | Specialty | Entry Point |
+|-------|-----------|-------------|
+| qwen2.5-coder:7b | Code edits, shell scripts, config generation | `local:7b` |
+| qwen2.5:3b | Grading, syntax check, diff sanity, smoke tests | `local:3b` |
+| nomic-embed-text | Dense embeddings only (never generates) | retriever only |
+| deepseek-reasoning | Complex proofs, axiomatic chains, theorem validation | `api:deepseek` |
+| Gemini | Long-context synthesis, multimodal | `api:gemini` |
+| Grok | Rapid ideation, contrarian passes | `api:grok` |
+| Perplexity | Live web-grounded research | `perplexity_outbox/` → runner |
+
+### Security Boundaries
+
+- **API keys live in environment variables or `.env` (gitignored).** Never in scripts, never in inbox payloads, never in committed files.
+- **genetic/genomic data** excluded from index by `.gitignore` + hardcoded filter in ingest bridge.
+- **Hash-verified integrity chain** prevents tampering (sha256 chain on `neo_index.db` header).
+
+### Performance Targets
+
+| Metric | Target | p95 Actual |
+|--------|--------|------------|
+| fp5s lookup | <10 ms | TBD |
+| FTS5 query | <50 ms | TBD |
+| Nomic embed | <200 ms | TBD |
+| Total cascade | <300 ms | TBD |
+| Index coverage | >95% | TBD |
+
+---[END KAI9000 ROUTING STACK ARCHITECTURE]---
+
+---[BEGIN BOT RUNNER + LUMO INBOX + API TIER]---
+
+## The Executor: Bot Runner (custom, NOT aider)
+
+**The inbox queue is drained by a purpose-built bot runner (the tinycrew superloop processor), NOT by `aider_task_runner.py`.** That script exists in bin/ as a helper but is not the trunk.
+
+### Architecture
+
+| Component | Path | Role |
+|-----------|------|------|
+| State cursor | `.tinycrew/` | Loop cursors, processed markers — host-local, do not purge |
+| Model roster | `model_registry/` | Available models + capability mappings |
+| Inbound queue | `context_bridge/lumo_inbox/inbound/inbound_queue.jsonl` | Every task as queued JSON line |
+| Reply envelopes | `context_bridge/lumo_inbox/outbound/` | id echoes request id for correlation |
+| Session seeds | `context_bridge/lumo_inbox/session-seed-*` | Cross-session continuity anchors |
+| Digests | `context_bridge/lumo_inbox/digests/` | Compaction input, rolling summaries |
+
+### Dispatch Rules (bot runner logic)
+
+1. Pop entry from `inbound/inbound_queue.jsonl` (advance cursor — idempotent on re-run)
+2. Resolve `model_target`:
+   - `local:7b` → `qwen2.5-coder:7b` via Ollama localhost:11434 (code tasks)
+   - `local:3b` → `qwen2.5:3b` (grading, smoke tests)
+   - `api:<provider>` → external call using env-injected keys
+   - `lumo` → parked as session seed for next Lumo conversation
+3. Diff/grade gate on outputs (3B grades, human is the only commit gate)
+4. Write reply envelope to `outbound/`, log joules + latency to `data/cost_ledger.jsonl`
+5. Compost any failure shape to the mistake engine before retry
+
+### API Tier Escalation Rule
+
+**Local cascade exhausted → escalate to external API.** Never the other way around. An API call that retrieves answerable-by-cache data is a routing miss and gets composted.
+
+### Credential Doctrine (SECURITY — READ TWICE)
+
+1. Keys live in environment variables or `.env` (gitignored). NEVER in scripts, inbox payloads, or committed files.
+2. Any script needing a key reads it at runtime (`os.environ` / `source .env.sh`). Key never persists in place git can touch.
+3. Push-guard flags any `inbound_queue.jsonl` or reply containing provider names in credential format — raw keys quarantine to `quarantine_handoff_corrupt/`.
+4. Keys rotate on schedule: update env + verify one smoke call through runner, nothing else changes.
+5. Docs describe the instrument, not the key. This appendix asserts keys are env-injected; grep verifies the assertion.
+
+---[END BOT RUNNER + LUMO INBOX + API TIER]---
