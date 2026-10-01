@@ -1,0 +1,69 @@
+=== LOCAL WORK SNAPSHOT MANIFEST ===
+created_utc=2026-10-01T23:24:07Z
+source_branch=docs/public-contract-v1
+source_head=42cf6ddb145a8e3f9a312fe5b6bedff86550b9be
+
+=== STATUS ===
+ M .gitignore
+ M README.md
+ M SECURITY.md
+ M data/superlinear/rapl_samples.jsonl
+?? MASTER_TODO.md.bak.20260924_160603
+?? MASTER_TODO.md.bak.20260924_160905
+?? README.md.bak.20260924_164115
+?? README.md.bak.20260924_164302
+?? artifacts/
+?? bin/cache_pathway_orchestrator_v1.py.bak.20260924_204517
+?? bin/smart_router.py.bak.20260925_060857
+?? bin/superlinear_optimize_v1.sh.bak.20260928_161746
+?? bin/superlinear_setup.py.bak.20260923_223214
+?? bin/superlinear_setup.py.bak.20260923_223348
+?? context_bridge/compost-20261001_053009.md
+?? context_bridge/court-v6-report-20261001_040010.md
+?? context_bridge/mistake_solutions/b1a37e490c1a49af.md
+?? context_bridge/refinement_loop_v1.sh.bak.20260928T150420Z
+?? context_bridge/superloop_DASHBOARD.md
+?? data/bridge_state.json
+?? data/doc_gaps.json
+?? data/model_registry.json
+?? data/router_keywords.json
+?? data/superloop_chains.json
+?? data_bot_state.json
+?? docs/newton_chain/
+?? ledger/
+?? model_registry/
+
+=== TRACKED MODIFIED FILE HASHES ===
+f06b61ab429a454a3e013dfac36e7d6552960eb44eb9b1b6a32e177d12c446d1  .gitignore
+a808e66a89bfed6e18b61ac894c5bfd5c9ad42dafba5ed32f71bf119eb525679  README.md
+c64b113a05b6fb23380173d7c86e8f278c0891353e5b3bc9efc807a637893f92  SECURITY.md
+6ff657efdb4bb880824fe75d84b62fd3f57ce2e02d67f350710e7a6af049bd79  data/superlinear/rapl_samples.jsonl
+
+=== UNTRACKED REGULAR FILE HASHES ===
+2563fccbb302483a86cf09b8deaa6b6a0f37719d46ac8f1f083fa1bc7a5976c6  MASTER_TODO.md.bak.20260924_160603
+e3925dd806d6558c8c73ffe931610e5fc536f513ce808127c021cf06b11b3b79  MASTER_TODO.md.bak.20260924_160905
+7aa0e63bb70303f1227750f72ca792c457820d951be4f3dbfc6e0280b31ec3ba  README.md.bak.20260924_164115
+7aa0e63bb70303f1227750f72ca792c457820d951be4f3dbfc6e0280b31ec3ba  README.md.bak.20260924_164302
+5377d4ce3e074fa95c3bd831493f2f9b837619181579e056ab63ffa47d6d5ade  artifacts/newton_chain/intake_20260929T103216Z.jsonl
+2c5d39ce83d356f6271419b20f2f221c5317883ca391cf0fee5f5ce1595f03dd  artifacts/newton_chain/intake_20260929T103216Z.summary.json
+498f6eb12f6cb46bf7527987b29af7f3f8a5de6f9eaf0e286683b6e5b036bb59  bin/cache_pathway_orchestrator_v1.py.bak.20260924_204517
+32c49b1f0af0cd27675e95c4284ea35601fce8a35747fb49585a3edc91bb93be  bin/smart_router.py.bak.20260925_060857
+cf9a824aeb7c5f351be92ecf04b38c83091e235146a880ae63b7da50d740546a  bin/superlinear_optimize_v1.sh.bak.20260928_161746
+ad03640cf44d8d9854ae2811e31724857e3704372513f6d461fd503860a835a6  bin/superlinear_setup.py.bak.20260923_223214
+2d6eff93fcaaa5fe5f94985fcae12023feb4c4e943139f86fa780b58da8fed57  bin/superlinear_setup.py.bak.20260923_223348
+fc6ff1093af63b3acfcabe22c713285cb044aeb127562d7f369676065f7f1276  context_bridge/compost-20261001_053009.md
+41d8346d286201484481a466adc1f7d23eecb688293d484280d13a7bc700aa28  context_bridge/court-v6-report-20261001_040010.md
+42823faf1f0af45c3377e01627e54712f8189e33306f73416b4f7554acde3d76  context_bridge/mistake_solutions/b1a37e490c1a49af.md
+a519193d7b3ba9af355fe07666436c831e5e4bb0770f4d5f1643198c838f192f  context_bridge/refinement_loop_v1.sh.bak.20260928T150420Z
+639fcc57ef5761c81287ecade2c2a75e5ee06f5e1d86505ec1520ed13aceeaa9  context_bridge/superloop_DASHBOARD.md
+d182e67d8a45de94633eb0794fb610aac6278fc4eed1eb04545cf9cbecebb577  data/bridge_state.json
+4636c776825f1042ff0a054b0c570a576508d37982a656b542a261f64576d471  data/doc_gaps.json
+92476dc0c485b1e0a29585fb636a9459d428bc1105b3d2867a366902ee7e30d0  data/model_registry.json
+696365b69cc81b28987e1e8ff219bc6e5871439f0775b3c7ccf970d8c3e496d4  data/router_keywords.json
+92476dc0c485b1e0a29585fb636a9459d428bc1105b3d2867a366902ee7e30d0  data/superloop_chains.json
+3ebb275db13d63870e441709dd1eb4a8191d2083b96d3b6d7f4f8e3f11e0729a  data_bot_state.json
+8f8a0bbec7448100c028ba6094073c7b6432ad042cd29cecddebfc51cb434d8b  docs/newton_chain/ELEMENTS.md
+ba9f86971c458d8ba21f05d40bbd387a8f234349e564525c581b3fb8abc6dcb4  docs/newton_chain/README.md
+3db36d93c4c0af67a98f259cd834bbf31db3ab4642ab77394878dd83cf1e5d57  ledger/experiments/linux_command_persistence.jsonl
+d651faa9aa3005ad7f290247495ccb5aa09e37f1ef8e9314da96e0c80038218b  model_registry/roster-20260928_221311.json
+d651faa9aa3005ad7f290247495ccb5aa09e37f1ef8e9314da96e0c80038218b  model_registry/roster-current.json
