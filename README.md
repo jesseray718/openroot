@@ -195,3 +195,6 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the graded pathway and credit covenan
 (KAI9000 ROUTING STACK block)
 (CORRECTED Executor block above — bot runner, not aider)
 (RUNNER + LUMO INBOX + API TIER remainder: escalation rule, key doctrine, feedback loop)
+(KAI9000 ROUTING STACK block)
+(CORRECTED Executor block above — bot runner, not aider)
+(RUNNER + LUMO INBOX + API TIER remainder: escalation rule, key doctrine, feedback loop)
