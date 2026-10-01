@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OpenRoot Routing Decision",
+  "type": "object",
+  "required": [
+    "decision_id",
+    "input_id",
+    "pathway",
+    "constraints",
+    "validation_command",
+    "status"
+  ],
+  "properties": {
+    "decision_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "input_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pathway": {
+      "type": "string",
+      "minLength": 1
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "validation_command": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "candidate",
+        "validated",
+        "rejected",
+        "promoted"
+      ]
+    },
+    "receipt_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "additionalProperties": false
+}
