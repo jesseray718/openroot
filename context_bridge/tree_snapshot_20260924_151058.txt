@@ -1,0 +1,4156 @@
+.
+├──  \){MESH}
+│   └── dump
+├── .env
+├── .github
+│   ├── pages
+│   │   └── index.html
+│   └── workflows
+│       ├── main.yml
+│       └── test.yml
+├── .gitignore
+├── 0,
+├── 1,
+├── ARCHITECTURE.md
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── DOCS.md
+├── GOALS.md
+├── GOOD_FIRST_ISSUES.md
+├── LICENSE
+├── MASTER_TODO.md
+├── README.md
+├── SCOPE.md
+├── SECURITY.md
+├── SUPERLINEAR.md
+├── TASK.md
+├── \( {MESH}
+│   └── outbox
+├── __pycache__
+│   ├── bot_loop_v1.cpython-314.pyc
+│   ├── thermal_balance_v63.cpython-314.pyc
+│   ├── thermal_frontier_v1.cpython-314.pyc
+│   └── thermal_frontier_v2_water.cpython-314.pyc
+├── agape_kb
+│   ├── love_language
+│   │   └── KERNEL_SEED
+│   └── universal_axioms
+│       ├── KERNEL_SEED
+│       ├── definitions.json
+│       ├── theorems.json
+│       └── universal_axioms.json
+├── analysis
+│   ├── frp10_20260920_005640
+│   │   ├── default_map.txt
+│   │   └── pr_checks.txt
+│   ├── frp10_20260920_005834
+│   │   ├── default_map.txt
+│   │   └── pr_checks.txt
+│   ├── frp10_20260920_005946
+│   │   ├── default_map.txt
+│   │   └── pr_checks.txt
+│   ├── frp11_20260920_011448
+│   │   ├── mystery_push.json
+│   │   ├── runs.json
+│   │   └── workflow_fingerprint.txt
+│   ├── frp12_20260920_011836
+│   │   ├── prune_targets.json
+│   │   ├── quality_failure.log
+│   │   └── quality_runs.json
+│   ├── frp12_20260920_012032
+│   │   ├── prune_targets.json
+│   │   ├── quality_failure.log
+│   │   └── quality_runs.json
+│   ├── frp12_20260920_012638
+│   │   ├── prune_targets.json
+│   │   ├── quality_failure.log
+│   │   └── quality_runs.json
+│   ├── frp12_20260920_012726
+│   │   ├── prune_targets.json
+│   │   ├── quality_failure.log
+│   │   └── quality_runs.json
+│   ├── frp5_20260919_233659
+│   │   ├── fetch.log
+│   │   ├── github
+│   │   │   ├── all_repos.json
+│   │   │   ├── auth.txt
+│   │   │   ├── open_prs.json
+│   │   │   ├── openroot.json
+│   │   │   ├── pr53.json
+│   │   │   └── remote_branches.txt
+│   │   ├── local_state.txt
+│   │   ├── remotes.txt
+│   │   └── stack_gate.log
+│   ├── frp5_20260919_234220
+│   │   ├── digest.json
+│   │   ├── fetch.log
+│   │   ├── github
+│   │   │   ├── all_repos.json
+│   │   │   ├── auth.txt
+│   │   │   ├── open_prs.json
+│   │   │   ├── openroot.json
+│   │   │   ├── pr53.json
+│   │   │   └── remote_branches.txt
+│   │   ├── local_state.txt
+│   │   ├── remotes.txt
+│   │   └── stack_gate.log
+│   ├── frp5_latest_digest.json
+│   ├── frp6_20260919_235335
+│   │   ├── inventory.json
+│   │   ├── plan.json
+│   │   └── tool_inventory.txt
+│   ├── frp6_latest_plan.json
+│   ├── frp7_20260920_002113
+│   │   ├── bin_manifest.txt
+│   │   └── triage.json
+│   ├── frp8_20260920_003326
+│   │   └── prune_plan.json
+│   ├── frp9_20260920_011327
+│   │   └── dedupe_plan.json
+│   ├── knowledge_probe_report_2026-09-18.md
+│   └── uplift_ledger.log
+├── archive
+│   ├── cleanup-20260921_160638
+│   │   ├── GOALS.md.bak
+│   │   ├── reports
+│   │   │   ├── router_r001
+│   │   │   ├── router_r002
+│   │   │   ├── router_r003
+│   │   │   ├── router_r004
+│   │   │   └── router_r005
+│   │   └── scripts
+│   │       ├── ci_heal_v1.sh
+│   │       └── or_install_v1.sh
+│   ├── cleanup-20260921_161947
+│   │   ├── backups
+│   │   │   └── readme_backup_20260921_154022
+│   │   ├── human_gate
+│   │   │   └── human_gate_bundle
+│   │   ├── router_memory
+│   │   │   └── router_memory
+│   │   ├── scripts
+│   │   │   ├── or_fullrepo_seal_v1.sh
+│   │   │   └── or_optclean_v1.sh
+│   │   └── strays
+│   │       └── strays
+│   ├── cleanup-20260921_162046
+│   │   ├── backups
+│   │   │   └── readme_backup_20260921_154022
+│   │   ├── human_gate
+│   │   │   └── human_gate_bundle
+│   │   ├── router_memory
+│   │   │   └── router_memory
+│   │   └── strays
+│   │       └── strays
+│   └── window-20260921_004746
+│       ├── bot_loop_v1.py
+│       ├── bot_stop.sh
+│       ├── unify_v2.py
+│       └── window-20260921_004746.md
+├── attic
+│   └── rescue_staging_vendor
+│       ├── 0000_agape_one.py
+│       ├── 0001_bridge.py
+│       ├── 0002_groq_max_cycles.py
+│       ├── 0003_agape_clean.py
+│       ├── 0004_une_client.py
+│       ├── 0005_test_une_full.py
+│       ├── 0006_agape_slim.py
+│       ├── 0007_faiss_search.py
+│       ├── 0008_raise_to_6n6.py
+│       ├── 0009_batch_nomic_embed.py
+│       ├── 0010_groq_fallback.py
+│       ├── 0011_one_principle_n_power_n.py
+│       ├── 0012_newton_chain.py
+│       ├── 0013_local_rag_search.py
+│       ├── 0014_agape_hierarchical_raising.py
+│       ├── 0015_lattice_cli.py
+│       ├── 0016_openroot.py
+│       ├── 0017_mdpipe.py
+│       ├── 0018_test_phone_tasks.py
+│       ├── 0019_enhance_tasks_with_efficiency.py
+│       ├── 0020_apply_fs_hook.py
+│       ├── 0021_fs_hook_patch.py
+│       ├── 0022_agape_init.py
+│       ├── 0023_constitutive_voice_engine.py
+│       ├── 0024_constitutive_compiler.py
+│       ├── 0025_fix_chain_verify.py
+│       ├── 0026_openroot_hub.py
+│       ├── 0027_agape_frequency.py
+│       ├── 0028_agape_neurogenic_kernel.py
+│       ├── 0029_agape_evolution_v2.py
+│       ├── 0030_openroot_archiver.py
+│       ├── 0031_unified_agape_engine.py
+│       ├── 0032_permaculture_lattice_engine.py
+│       ├── 0033_repair_une_syntax.py
+│       ├── 0034_repair_all_une_and_commit.py
+│       ├── 0035_compressor_node.py
+│       ├── 0036_core_engine.py
+│       ├── 0037_fix_last_une_error.py
+│       ├── 0038_hive_swarm.py
+│       ├── 0039_apape_net_setup.py
+│       ├── 0040_map_files.py
+│       ├── 0041_inspect_map.py
+│       ├── 0042_build_coder_environment.py
+│       ├── 0043_master_codebase_orchestrator.py
+│       ├── 0044_v7.py
+│       ├── 0045_swarm_bench.py
+│       ├── 0046_smoke_fix.py
+│       ├── 0047_joule_leverage_analyzer.py
+│       ├── 0048_snapshot_bootstrap.py
+│       ├── 0049_patch_voice.py
+│       ├── 0050_agape_farm_os.py
+│       ├── 0051_une_max_efficiency_lang.py
+│       ├── 0052_une_atomic_library.py
+│       ├── 0053_agape_kernel_v2.py
+│       ├── 0054_agape_ledger_chain.py
+│       ├── 0055_und_protocol.py
+│       ├── 0056_agape_node_bootstrap.py
+│       ├── 0057_agape_primitive_forge.py
+│       ├── 0058_run_7b_coder.py
+│       ├── 0059_final_une_syntax_pass.py
+│       ├── 0060_emergency_syntax_fix.py
+│       ├── 0061_diagnose_and_fix.py
+│       ├── 0062_diag_fix.py
+│       ├── 0063_surgical_fix.py
+│       ├── 0064_fix_final.py
+│       ├── 0065_agapenet_unified_setup.py
+│       ├── 0066_storage_daemon.py
+│       ├── 0067_fast_backup_daemon.py
+│       ├── 0068_agape_net_setup.py
+│       ├── 0069_agape_net_full_integration.py
+│       ├── 0070_index_content_blobs.py
+│       ├── 0071_une_fix.py
+│       ├── 0072_deepdive.py
+│       ├── 0073_audit_repo.py
+│       ├── 0074_hive_entry.py
+│       ├── 0075_structure_enforcer.py
+│       ├── 0076_immortal_context.py
+│       ├── 0077_aggressive_dedup.py
+│       ├── 0078_openroot-inventory.py
+│       ├── 0079_bridge.py
+│       ├── 0080_une_master.py
+│       ├── 0081_governor.py
+│       ├── 0082_autoupdate_loop.py
+│       ├── 0083_cb_user_hunter.py
+│       ├── 0084_dorks-eye.py
+│       ├── 0085_rmh.py
+│       ├── 0086_groq_max_cycles.py
+│       ├── 0087_agape_synergetic_calculus.py
+│       ├── 0088_CREWAI_EXAMPLE.py
+│       ├── 0089_agapenet_cosmos_engine.py
+│       ├── 0090_une_atomic_library.py
+│       ├── 0091_justice_module.py
+│       ├── 0092_laser_sim.py
+│       ├── 0093_deploy_openroot_kernel.py
+│       ├── 0094_deploy_v101.py
+│       ├── 0095_deploy_thermal_loop.py
+│       ├── 0096_deploy_v103_evap.py
+│       ├── 0097_search.py
+│       ├── 0098_local_scan.py
+│       ├── 0099_scan_all.py
+│       ├── 0100_find_dupes.py
+│       ├── 0101_setup.py
+│       ├── 0102_esp32_btbufs.py
+│       ├── 0103_release_hashes.py
+│       ├── 0104_organize_docs_a15.py
+│       ├── 0105_organize_docs_a15_v2.py
+│       ├── 0106_init.py
+│       ├── 0107_agape_mesh_oracle.py
+│       ├── 0108_sync_bridge.py
+│       ├── 0109_coordination.py
+│       ├── 0110_eta.py
+│       ├── 0111_next_joule.py
+│       ├── 0112_postulates.py
+│       ├── 0113_selftest.py
+│       ├── 0114_synergy.py
+│       ├── 0115_thermal_loop.py
+│       ├── 0116_git_rev_macro.py
+│       ├── 0117_build_as_lib.py
+│       ├── 0118_create-uf2.py
+│       ├── 0119_merge-bin.py
+│       ├── 0120_test_thermo_optimizer.py
+│       ├── 0121_uf2conv.py
+│       ├── 0122_build_hex.py
+│       ├── 0123__rewrite_proto_namespace.py
+│       ├── 0124_analyze_map.py
+│       ├── 0125_base64_to_hex.py
+│       ├── 0126_build-userprefs-json.py
+│       ├── 0127_buildinfo.py
+│       ├── 0128_bump_version.py
+│       ├── 0129_collect_sizes.py
+│       ├── 0130_eth-ota-upload.py
+│       ├── 0131_exception_decoder.py
+│       ├── 0132_gen-fake-nodedb-seed.py
+│       ├── 0133_generate_ci_matrix.py
+│       ├── 0134_generate_release_notes.py
+│       ├── 0135_genpartitions.py
+│       ├── 0136_platformio-custom.py
+│       ├── 0137_platformio-pre.py
+│       ├── 0138_readprops.py
+│       ├── 0139_seed-json-to-proto.py
+│       ├── 0140_size_report.py
+│       ├── 0141_test_size_scripts.py
+│       ├── 0142_uf2conv.py
+│       ├── 0143_filter_c3_exception_decoder.py
+│       ├── 0144_add_mbedtls_sources.py
+│       ├── 0145_lockdown_provision.py
+│       ├── 0146___init__.py
+│       ├── 0147_core.py
+│       ├── 0148___init__.py
+│       ├── 0149_core.py
+│       ├── 0150___init__.py
+│       ├── 0151_core.py
+│       ├── 0152___init__.py
+│       ├── 0153___main__.py
+│       ├── 0154___pip-runner__.py
+│       ├── 0155___init__.py
+│       ├── 0156_build_env.py
+│       ├── 0157_cache.py
+│       ├── 0158_configuration.py
+│       ├── 0159_exceptions.py
+│       ├── 0160_main.py
+│       ├── 0161_pyproject.py
+│       ├── 0162_self_outdated_check.py
+│       ├── 0163_wheel_builder.py
+│       ├── 0164___init__.py
+│       ├── 0165___init__.py
+│       ├── 0166__cmd.py
+│       ├── 0167_adapter.py
+│       ├── 0168_cache.py
+│       ├── 0169_controller.py
+│       ├── 0170_filewrapper.py
+│       ├── 0171_heuristics.py
+│       ├── 0172_serialize.py
+│       ├── 0173_wrapper.py
+│       ├── 0174___init__.py
+│       ├── 0175___main__.py
+│       ├── 0176_core.py
+│       ├── 0177___init__.py
+│       ├── 0178_compat.py
+│       ├── 0179_resources.py
+│       ├── 0180_scripts.py
+│       ├── 0181_util.py
+│       ├── 0182___init__.py
+│       ├── 0183_codec.py
+│       ├── 0184_compat.py
+│       ├── 0185_core.py
+│       ├── 0186_idnadata.py
+│       ├── 0187_intranges.py
+│       ├── 0188_package_data.py
+│       ├── 0189_uts46data.py
+│       ├── 0190___init__.py
+│       ├── 0191_exceptions.py
+│       ├── 0192_ext.py
+│       ├── 0193_fallback.py
+│       ├── 0194___init__.py
+│       ├── 0195__elffile.py
+│       ├── 0196__manylinux.py
+│       ├── 0197__musllinux.py
+│       ├── 0198__parser.py
+│       ├── 0199__structures.py
+│       ├── 0200__tokenizer.py
+│       ├── 0201_dependency_groups.py
+│       ├── 0202_direct_url.py
+│       ├── 0203_errors.py
+│       ├── 0204_markers.py
+│       ├── 0205_metadata.py
+│       ├── 0206_pylock.py
+│       ├── 0207_requirements.py
+│       ├── 0208_specifiers.py
+│       ├── 0209_tags.py
+│       ├── 0210_utils.py
+│       ├── 0211_version.py
+│       ├── 0212___init__.py
+│       ├── 0213___init__.py
+│       ├── 0214___main__.py
+│       ├── 0215_android.py
+│       ├── 0216_api.py
+│       ├── 0217_macos.py
+│       ├── 0218_unix.py
+│       ├── 0219_version.py
+│       ├── 0220_windows.py
+│       ├── 0221___init__.py
+│       ├── 0222___main__.py
+│       ├── 0223_console.py
+│       ├── 0224_filter.py
+│       ├── 0225_formatter.py
+│       ├── 0226_lexer.py
+│       ├── 0227_modeline.py
+│       ├── 0228_plugin.py
+│       ├── 0229_regexopt.py
+│       ├── 0230_scanner.py
+│       ├── 0231_sphinxext.py
+│       ├── 0232_style.py
+│       ├── 0233_token.py
+│       ├── 0234_unistring.py
+│       ├── 0235_util.py
+│       ├── 0236___init__.py
+│       ├── 0237__impl.py
+│       ├── 0238___init__.py
+│       ├── 0239___version__.py
+│       ├── 0240__internal_utils.py
+│       ├── 0241_adapters.py
+│       ├── 0242_api.py
+│       ├── 0243_auth.py
+│       ├── 0244_certs.py
+│       ├── 0245_compat.py
+│       ├── 0246_cookies.py
+│       ├── 0247_exceptions.py
+│       ├── 0248_help.py
+│       ├── 0249_hooks.py
+│       ├── 0250_models.py
+│       ├── 0251_packages.py
+│       ├── 0252_sessions.py
+│       ├── 0253_status_codes.py
+│       ├── 0254_structures.py
+│       ├── 0255_utils.py
+│       ├── 0256___init__.py
+│       ├── 0257_providers.py
+│       ├── 0258_reporters.py
+│       ├── 0259_structs.py
+│       ├── 0260___init__.py
+│       ├── 0261___main__.py
+│       ├── 0262__cell_widths.py
+│       ├── 0263__emoji_codes.py
+│       ├── 0264__emoji_replace.py
+│       ├── 0265__export_format.py
+│       ├── 0266__extension.py
+│       ├── 0267__fileno.py
+│       ├── 0268__inspect.py
+│       ├── 0269__log_render.py
+│       ├── 0270__loop.py
+│       ├── 0271__null_file.py
+│       ├── 0272__palettes.py
+│       ├── 0273__pick.py
+│       ├── 0274__ratio.py
+│       ├── 0275__spinners.py
+│       ├── 0276__stack.py
+│       ├── 0277__timer.py
+│       ├── 0278__win32_console.py
+│       ├── 0279__windows.py
+│       ├── 0280__windows_renderer.py
+│       ├── 0281__wrap.py
+│       ├── 0282_abc.py
+│       ├── 0283_align.py
+│       ├── 0284_ansi.py
+│       ├── 0285_bar.py
+│       ├── 0286_box.py
+│       ├── 0287_cells.py
+│       ├── 0288_color.py
+│       ├── 0289_color_triplet.py
+│       ├── 0290_columns.py
+│       ├── 0291_console.py
+│       ├── 0292_constrain.py
+│       ├── 0293_containers.py
+│       ├── 0294_control.py
+│       ├── 0295_default_styles.py
+│       ├── 0296_diagnose.py
+│       ├── 0297_emoji.py
+│       ├── 0298_errors.py
+│       ├── 0299_file_proxy.py
+│       ├── 0300_filesize.py
+│       ├── 0301_highlighter.py
+│       ├── 0302_json.py
+│       ├── 0303_jupyter.py
+│       ├── 0304_layout.py
+│       ├── 0305_live.py
+│       ├── 0306_live_render.py
+│       ├── 0307_logging.py
+│       ├── 0308_markup.py
+│       ├── 0309_measure.py
+│       ├── 0310_padding.py
+│       ├── 0311_pager.py
+│       ├── 0312_palette.py
+│       ├── 0313_panel.py
+│       ├── 0314_pretty.py
+│       ├── 0315_progress.py
+│       ├── 0316_progress_bar.py
+│       ├── 0317_prompt.py
+│       ├── 0318_protocol.py
+│       ├── 0319_region.py
+│       ├── 0320_repr.py
+│       ├── 0321_rule.py
+│       ├── 0322_scope.py
+│       ├── 0323_screen.py
+│       ├── 0324_segment.py
+│       ├── 0325_spinner.py
+│       ├── 0326_status.py
+│       ├── 0327_style.py
+│       ├── 0328_styled.py
+│       ├── 0329_syntax.py
+│       ├── 0330_table.py
+│       ├── 0331_terminal_theme.py
+│       ├── 0332_text.py
+│       ├── 0333_theme.py
+│       ├── 0334_themes.py
+│       ├── 0335_traceback.py
+│       ├── 0336_tree.py
+│       ├── 0337___init__.py
+│       ├── 0338__parser.py
+│       ├── 0339__re.py
+│       ├── 0340__types.py
+│       ├── 0341___init__.py
+│       ├── 0342__writer.py
+│       ├── 0343___init__.py
+│       ├── 0344__api.py
+│       ├── 0345__macos.py
+│       ├── 0346__openssl.py
+│       ├── 0347__ssl_constants.py
+│       ├── 0348__windows.py
+│       ├── 0349___init__.py
+│       ├── 0350__base_connection.py
+│       ├── 0351__collections.py
+│       ├── 0352__request_methods.py
+│       ├── 0353__version.py
+│       ├── 0354_connection.py
+│       ├── 0355_connectionpool.py
+│       ├── 0356_exceptions.py
+│       ├── 0357_fields.py
+│       ├── 0358_filepost.py
+│       ├── 0359_poolmanager.py
+│       ├── 0360_response.py
+│       ├── 0361_pyopenssl.py
+│       ├── 0362_socks.py
+│       ├── 0363___init__.py
+│       ├── 0364_connection.py
+│       ├── 0365_probe.py
+│       ├── 0366___init__.py
+│       ├── 0367_connection.py
+│       ├── 0368_proxy.py
+│       ├── 0369_request.py
+│       ├── 0370_response.py
+│       ├── 0371_retry.py
+│       ├── 0372_ssl_.py
+│       ├── 0373_ssl_match_hostname.py
+│       ├── 0374_ssltransport.py
+│       ├── 0375_timeout.py
+│       ├── 0376_url.py
+│       ├── 0377_util.py
+│       ├── 0378_wait.py
+│       ├── 0379___init__.py
+│       ├── 0380_connection.py
+│       ├── 0381_fetch.py
+│       ├── 0382_request.py
+│       ├── 0383_response.py
+│       ├── 0384___init__.py
+│       ├── 0385_abstract.py
+│       ├── 0386_criterion.py
+│       ├── 0387_exceptions.py
+│       ├── 0388_resolution.py
+│       ├── 0389___init__.py
+│       ├── 0390__in_process.py
+│       ├── 0391___init__.py
+│       ├── 0392___init__.py
+│       ├── 0393__mapping.py
+│       ├── 0394___init__.py
+│       ├── 0395__mapping.py
+│       ├── 0396_python.py
+│       ├── 0397___init__.py
+│       ├── 0398__mapping.py
+│       ├── 0399___init__.py
+│       ├── 0400__spdx.py
+│       ├── 0401___init__.py
+│       ├── 0402_file_cache.py
+│       ├── 0403_redis_cache.py
+│       ├── 0404___init__.py
+│       ├── 0405_autocompletion.py
+│       ├── 0406_base_command.py
+│       ├── 0407_cmdoptions.py
+│       ├── 0408_command_context.py
+│       ├── 0409_index_command.py
+│       ├── 0410_main.py
+│       ├── 0411_main_parser.py
+│       ├── 0412_parser.py
+│       ├── 0413_progress_bars.py
+│       ├── 0414_req_command.py
+│       ├── 0415_spinners.py
+│       ├── 0416_status_codes.py
+│       ├── 0417___init__.py
+│       ├── 0418_cache.py
+│       ├── 0419_check.py
+│       ├── 0420_completion.py
+│       ├── 0421_configuration.py
+│       ├── 0422_debug.py
+│       ├── 0423_download.py
+│       ├── 0424_freeze.py
+│       ├── 0425_hash.py
+│       ├── 0426_help.py
+│       ├── 0427_index.py
+│       ├── 0428_inspect.py
+│       ├── 0429_install.py
+│       ├── 0430_list.py
+│       ├── 0431_lock.py
+│       ├── 0432_search.py
+│       ├── 0433_show.py
+│       ├── 0434_uninstall.py
+│       ├── 0435_wheel.py
+│       ├── 0436___init__.py
+│       ├── 0437_base.py
+│       ├── 0438_installed.py
+│       ├── 0439_sdist.py
+│       ├── 0440_wheel.py
+│       ├── 0441___init__.py
+│       ├── 0442_collector.py
+│       ├── 0443_package_finder.py
+│       ├── 0444_sources.py
+│       ├── 0445___init__.py
+│       ├── 0446__distutils.py
+│       ├── 0447__sysconfig.py
+│       ├── 0448_base.py
+│       ├── 0449___init__.py
+│       ├── 0450__json.py
+│       ├── 0451_base.py
+│       ├── 0452_pkg_resources.py
+│       ├── 0453___init__.py
+│       ├── 0454_candidate.py
+│       ├── 0455_direct_url.py
+│       ├── 0456_format_control.py
+│       ├── 0457_index.py
+│       ├── 0458_installation_report.py
+│       ├── 0459_link.py
+│       ├── 0460_release_control.py
+│       ├── 0461_scheme.py
+│       ├── 0462_search_scope.py
+│       ├── 0463_selection_prefs.py
+│       ├── 0464_target_python.py
+│       ├── 0465_wheel.py
+│       ├── 0466___init__.py
+│       ├── 0467_auth.py
+│       ├── 0468_cache.py
+│       ├── 0469_download.py
+│       ├── 0470_lazy_wheel.py
+│       ├── 0471_session.py
+│       ├── 0472_utils.py
+│       ├── 0473_xmlrpc.py
+│       ├── 0474_check.py
+│       ├── 0475_freeze.py
+│       ├── 0476_prepare.py
+│       ├── 0477___init__.py
+│       ├── 0478_constructors.py
+│       ├── 0479_pep723.py
+│       ├── 0480_req_dependency_group.py
+│       ├── 0481_req_file.py
+│       ├── 0482_req_install.py
+│       ├── 0483_req_set.py
+│       ├── 0484_req_uninstall.py
+│       ├── 0485_base.py
+│       ├── 0486__jaraco_text.py
+│       ├── 0487__log.py
+│       ├── 0488_appdirs.py
+│       ├── 0489_compat.py
+│       ├── 0490_compatibility_tags.py
+│       ├── 0491_datetime.py
+│       ├── 0492_deprecation.py
+│       ├── 0493_direct_url_helpers.py
+│       ├── 0494_egg_link.py
+│       ├── 0495_entrypoints.py
+│       ├── 0496_filesystem.py
+│       ├── 0497_filetypes.py
+│       ├── 0498_glibc.py
+│       ├── 0499_hashes.py
+│       ├── 0500_logging.py
+│       ├── 0501_misc.py
+│       ├── 0502_packaging.py
+│       ├── 0503_pylock.py
+│       ├── 0504_retry.py
+│       ├── 0505_subprocess.py
+│       ├── 0506_temp_dir.py
+│       ├── 0507_unpacking.py
+│       ├── 0508_urls.py
+│       ├── 0509_virtualenv.py
+│       ├── 0510_wheel.py
+│       ├── 0511___init__.py
+│       ├── 0512_bazaar.py
+│       ├── 0513_git.py
+│       ├── 0514_mercurial.py
+│       ├── 0515_subversion.py
+│       ├── 0516_versioncontrol.py
+│       ├── 0517_resolver.py
+│       ├── 0518_base.py
+│       ├── 0519_candidates.py
+│       ├── 0520_factory.py
+│       ├── 0521_found_candidates.py
+│       ├── 0522_provider.py
+│       ├── 0523_reporter.py
+│       ├── 0524_requirements.py
+│       ├── 0525_resolver.py
+│       ├── 0526___init__.py
+│       ├── 0527_wheel.py
+│       ├── 0528___init__.py
+│       ├── 0529__compat.py
+│       ├── 0530__dists.py
+│       ├── 0531__envs.py
+│       ├── 0532_joule_probe.py
+│       ├── 0533_chunk_and_seed.py
+│       ├── 0534_feed_oracle.py
+│       ├── 0535_generate_system_map.py
+│       ├── 0536_bench.py
+│       ├── 0537_faiss_kmeans.py
+│       ├── 0538_ground_truth.py
+│       ├── 0539_profile.py
+│       ├── 0540_amalgamate.py
+│       ├── 0541_conftest.py
+│       ├── 0542_fuzz.py
+│       ├── 0543_generate_legacy_db.py
+│       ├── 0544_helpers.py
+│       ├── 0545_skip.test-correctness.py
+│       ├── 0546_test-auxiliary.py
+│       ├── 0547_test-cache-finalize.py
+│       ├── 0548_test-diskann.py
+│       ├── 0549_test-general.py
+│       ├── 0550_test-insert-delete.py
+│       ├── 0551_test-ivf-mutations.py
+│       ├── 0552_test-ivf-quantization.py
+│       ├── 0553_test-ivf-rename.py
+│       ├── 0554_test-ivf.py
+│       ├── 0555_test-knn-distance-constraints.py
+│       ├── 0556_test-legacy-compat.py
+│       ├── 0557_test-loadable.py
+│       ├── 0558_test-metadata.py
+│       ├── 0559_test-partition-keys.py
+│       ├── 0560_test-rename.py
+│       ├── 0561_test-rescore-mutations.py
+│       ├── 0562_test-rescore.py
+│       ├── 0563_utils.py
+│       ├── 0564_test-afbd.py
+│       ├── 0565_build.py
+│       ├── 0566_test-correctness.py
+│       ├── 0567_openai-sample.py
+│       ├── 0568_demo.py
+│       ├── 0569_extra_init.py
+│       ├── 0570_bench.py
+│       ├── 0571_build.py
+│       ├── 0572_knn.py
+│       ├── 0573_test.py
+│       ├── 0574_bench_delete.py
+│       ├── 0575_test_smoke.py
+│       ├── 0576_build_base_db.py
+│       ├── 0577_build_base_db.py
+│       ├── 0578_build-base.py
+│       ├── 0579_build-contents.py
+│       ├── 0580_distill-model.py
+│       ├── 0581_build-base.py
+│       ├── 0582_build-contents.py
+│       ├── 0583_fit_plot.py
+│       ├── 0584_chord_lengths.py
+│       ├── 0585_pr-preflight.py
+│       ├── 0586_axiom_cli.py
+│       ├── 0587_merge_kb.py
+│       ├── 0588_canon.py
+│       ├── 0589_test_rmh_labyrinth_model.py
+│       ├── 0590_test_psychrometric_model.py
+│       ├── 0591_rmh_labyrinth_model.py
+│       ├── 0592_psychrometric_model.py
+│       ├── 0593_generate_rmh_report.py
+│       ├── 0594_nomen.py
+│       ├── 0595_nomen_core.py
+│       ├── 0596_thermo_ledger.py
+│       ├── 0597_canon.py
+│       ├── 0598_generate_rmh_report.py
+│       ├── 0599_gh_termux_python_primer.py
+│       ├── 0600_justice_module.py
+│       ├── 0601_laser_sim.py
+│       ├── 0602_fusion_sensor_wrapper.py
+│       ├── 0603_extract_seed.py
+│       ├── 0604_fusion_core.py
+│       ├── 0605_synergetics_engine.py
+│       ├── 0606_build.py
+│       ├── 0607_Example.py
+│       ├── 0608_RNode.py
+│       ├── 0609_esptool.py
+│       ├── 0610_gen_esp32part.py
+│       ├── 0611_spiffsgen.py
+│       ├── 0612_Handlers.py
+│       ├── 0613_LXMF.py
+│       ├── 0614_LXMPeer.py
+│       ├── 0615_LXMRouter.py
+│       ├── 0616_LXMessage.py
+│       ├── 0617_LXStamper.py
+│       ├── 0618___init__.py
+│       ├── 0619__version.py
+│       ├── 0620_example_receiver.py
+│       ├── 0621_example_sender.py
+│       ├── 0622_lxmd.py
+│       ├── 0623_openroot-classifier.py
+│       ├── 0624_openroot_classifier_loader.py
+│       ├── 0625_test_classifier.py
+│       ├── 0626_kernel_translator.py
+│       ├── 0627_fusion_core.py
+│       ├── 0628_fractak_swarm_engine.py
+│       ├── 0629_embed_kai.py
+│       ├── 0630_kai_query.py
+│       ├── 0631_setup.py
+│       ├── 0632_conf.py
+│       ├── 0633_fix_bsec_lib.py
+│       ├── 0634_platformio-clusterfuzzlite-post.py
+│       ├── 0635_platformio-clusterfuzzlite-pre.py
+│       ├── 0636_router_fuzzer_seed_corpus.py
+│       ├── 0637_disable_adafruit_usb.py
+│       ├── 0638_esp32_extra.py
+│       ├── 0639_esp32_pre.py
+│       ├── 0640_ld_response_file.py
+│       ├── 0641_nrf52_extra.py
+│       ├── 0642_nrf52_warm_region.py
+│       ├── 0643_nrf54l15_linker.py
+│       ├── 0644_wasm_link_flags.py
+│       ├── 0645_windows_link_flags.py
+│       ├── 0646_testsuite.py
+│       ├── 0647__pssunos.py
+│       ├── 0648_test_connections.py
+│       ├── 0649_test_linux.py
+│       ├── 0650_test_memleaks.py
+│       ├── 0651_test_posix.py
+│       ├── 0652_test_windows.py
+│       ├── 0653_bench_oneshot.py
+│       ├── 0654_generate_manifest.py
+│       ├── 0655_git_pre_commit.py
+│       ├── 0656_print_access_denied.py
+│       ├── 0657_print_api_speed.py
+│       ├── 0658_iotop.py
+│       ├── 0659_netstat.py
+│       ├── 0660_pidof.py
+│       ├── 0661_pmap.py
+│       ├── 0662_procinfo.py
+│       ├── 0663_ps.py
+│       ├── 0664_winservices.py
+│       ├── 0665_chunk_sender.py
+│       ├── 0666_thesis_hash.py
+│       ├── 0667_collector.py
+│       ├── 0668_generate_grant_doc.py
+│       ├── 0669_make_final_grant.py
+│       ├── 0670_aerocement_triad_v1.py
+│       ├── 0671_build_spec_v1.py
+│       ├── 0672_desiccant_module_v1.py
+│       ├── 0673_gen_whitepaper.py
+│       ├── 0674_generate_thesis.py
+│       ├── 0675_makefile_gen.py
+│       ├── 0676_phi_spiral_v9.py
+│       ├── 0677_physics_ledger_v1.py
+│       ├── 0678_physics_ledger_v2.py
+│       ├── 0679_thermal_battery_check.py
+│       ├── 0680_mqtt_basic.py
+│       ├── 0681_test_full_integration.py
+│       ├── 0682__compat.py
+│       ├── 0683__psbsd.py
+│       ├── 0684__pslinux.py
+│       ├── 0685__psosx.py
+│       ├── 0686__psposix.py
+│       ├── 0687___main__.py
+│       ├── 0688_test_osx.py
+│       ├── 0689_test_process.py
+│       ├── 0690_test_system.py
+│       ├── 0691_test_testutils.py
+│       ├── 0692_test_unicode.py
+│       ├── 0693_disk_usage.py
+│       ├── 0694_free.py
+│       ├── 0695_ifconfig.py
+│       ├── 0696_print_dist.py
+│       ├── 0697_print_downloads.py
+│       ├── 0698_print_hashes.py
+│       ├── 0699_winmake.py
+│       ├── 0700_pstree.py
+│       ├── 0701_temperatures.py
+│       ├── 0702_who.py
+│       ├── 0703_LearnFromMistakes.py
+│       ├── 0704_breath_loop_v6_radiative.py
+│       ├── 0705_earth_loop_v8.py
+│       ├── 0706_organize.py
+│       ├── 0707_recruitment_portal.py
+│       ├── 0708_thermal_battery_system.py
+│       ├── 0709_data_logger_example.py
+│       ├── 0710_settings.py
+│       ├── 0711_test_acre_workflow.py
+│       ├── 0712_test_une_fixed.py
+│       ├── 0713__pswindows.py
+│       ├── 0714_test_contracts.py
+│       ├── 0715_test_misc.py
+│       ├── 0716_battery.py
+│       ├── 0717_cpu_distribution.py
+│       ├── 0718_fans.py
+│       ├── 0719_bench_oneshot_2.py
+│       ├── 0720_check_broken_links.py
+│       ├── 0721_clinter.py
+│       ├── 0722_convert_readme.py
+│       ├── 0723_download_wheels_appveyor.py
+│       ├── 0724_download_wheels_github.py
+│       ├── 0725_print_announce.py
+│       ├── 0726_purge_installation.py
+│       ├── 0727_meminfo.py
+│       ├── 0728_nettop.py
+│       ├── 0729_procsmem.py
+│       ├── 0730_sensors.py
+│       ├── 0731_create_session_anchor.py
+│       ├── 0732_generate_grant_summary.py
+│       ├── 0733_unified_breath_loop_v3.py
+│       ├── 0734_bump_metainfo.py
+│       ├── 0735_nrf52_lto.py
+│       ├── 0736_stm32_extra.py
+│       ├── 0737_custom_build_tasks.py
+│       ├── 0738_mqtt_publish_in_callback.py
+│       ├── 0739_quick_test.py
+│       ├── 0740_test_comprehensive.py
+│       ├── 0741_test_interactive.py
+│       ├── 0742_test_une_now.py
+│       ├── 0743_test_with_server.py
+│       ├── 0744_verify_system.py
+│       ├── 0745__common.py
+│       ├── 0746__psaix.py
+│       ├── 0747_runner.py
+│       ├── 0748_test_aix.py
+│       ├── 0749_test_bsd.py
+│       ├── 0750_test_process_all.py
+│       ├── 0751_test_sunos.py
+│       ├── 0752_print_timeline.py
+│       ├── 0753_killall.py
+│       ├── 0754_top.py
+│       ├── 0755_emergency_rescue.py
+│       ├── 0756_thesis_chunker.py
+│       ├── 0757_diagnostic.py
+│       ├── 0758_fix_errors.py
+│       ├── 0759_server.py
+│       ├── 0760_ai_bridge.py
+│       ├── 0761_deploy_v101.py
+│       ├── 0762_generate_rmh_report.py
+│       ├── 0763_logger.py
+│       ├── 0764_psychrometric_model.py
+│       ├── 0765_rmh_labyrinth_model.py
+│       ├── 0766_axiom_mesh_sync_optiplex.py
+│       ├── 0767_test_thermo.py
+│       ├── 0768_agape_cooperation_theorem.py
+│       ├── 0769_derive_constants.py
+│       ├── 0770_energy_theorems.py
+│       ├── 0771_import_euclid.py
+│       ├── 0772_import_unified.py
+│       ├── 0773_proof_builder.py
+│       ├── 0774_reorganize_postulates.py
+│       ├── 0775_sacred_language_theorem.py
+│       ├── 0776_sacred_merkle_system.py
+│       ├── 0777_seven_symbols_recovery.py
+│       ├── 0778_theorem_generator.py
+│       ├── 0779_theorem_generator_batch2.py
+│       ├── 0780_theorem_generator_batch3.py
+│       ├── 0781_theorem_generator_batch4.py
+│       ├── 0782_theorem_generator_batch5.py
+│       ├── 0783_theorems_extend.py
+│       ├── 0784_or_coder.py
+│       ├── 0785_or_coder_node.py
+│       ├── 0786_test_tidbit_library.py
+│       ├── 0787_generate_rmh_report.py
+│       ├── 0788___init__.py
+│       ├── 0789_selftest.py
+│       ├── 0790___init__.py
+│       ├── 0791_solar.py
+│       ├── 0792_rmh_lab.py
+│       ├── 0793_setup.py
+│       ├── 0794_ecosystem_dashboard.py
+│       ├── 0795_openroot_workflow_manager.py
+│       ├── 0796_agape_board_advisor.py
+│       ├── 0797_agape_engine.py
+│       ├── 0798_agape_oracle.py
+│       ├── 0799___init__.py
+│       ├── 0800_Announce.py
+│       ├── 0801_Broadcast.py
+│       ├── 0802_Buffer.py
+│       ├── 0803_Channel.py
+│       ├── 0804_Echo.py
+│       ├── 0805_ExampleInterface.py
+│       ├── 0806_Filetransfer.py
+│       ├── 0807_Identify.py
+│       ├── 0808_Link.py
+│       ├── 0809_Minimal.py
+│       ├── 0810_Ratchets.py
+│       ├── 0811_Request.py
+│       ├── 0812_Resource.py
+│       ├── 0813_Speedtest.py
+│       ├── 0814_Buffer.py
+│       ├── 0815_Channel.py
+│       ├── 0816_Discovery.py
+│       ├── 0817_Packet.py
+│       ├── 0818_Resolver.py
+│       ├── 0819_Resource.py
+│       ├── 0820_Reticulum.py
+│       ├── 0821_Transport.py
+│       ├── 0822___init__.py
+│       ├── 0823__version.py
+│       ├── 0824_clean_md.py
+│       ├── 0825_all.py
+│       ├── 0826_channel.py
+│       ├── 0827_hashes.py
+│       ├── 0828_identity.py
+│       ├── 0829_link.py
+│       ├── 0830_conf.py
+│       ├── 0831_AES.py
+│       ├── 0832_Ed25519.py
+│       ├── 0833_HKDF.py
+│       ├── 0834_HMAC.py
+│       ├── 0835_Hashes.py
+│       ├── 0836_PKCS7.py
+│       ├── 0837_Provider.py
+│       ├── 0838_Proxies.py
+│       ├── 0839_SHA256.py
+│       ├── 0840_SHA512.py
+│       ├── 0841_Token.py
+│       ├── 0842_X25519.py
+│       ├── 0843___init__.py
+│       ├── 0844_AX25KISSInterface.py
+│       ├── 0845_AutoInterface.py
+│       ├── 0846_BackboneInterface.py
+│       ├── 0847_I2PInterface.py
+│       ├── 0848_Interface.py
+│       ├── 0849_KISSInterface.py
+│       ├── 0850_LocalInterface.py
+│       ├── 0851_PipeInterface.py
+│       ├── 0852_RNodeInterface.py
+│       ├── 0853_RNodeMultiInterface.py
+│       ├── 0854_SerialInterface.py
+│       ├── 0855_TCPInterface.py
+│       ├── 0856_UDPInterface.py
+│       ├── 0857_WeaveInterface.py
+│       ├── 0858___init__.py
+│       ├── 0859___init__.py
+│       ├── 0860_rncp.py
+│       ├── 0861_rnid.py
+│       ├── 0862_rnir.py
+│       ├── 0863_rnodeconf.py
+│       ├── 0864_rnpath.py
+│       ├── 0865_rnpkg.py
+│       ├── 0866_rnprobe.py
+│       ├── 0867_rnsd.py
+│       ├── 0868_rnstatus.py
+│       ├── 0869_rnx.py
+│       ├── 0870___init__.py
+│       ├── 0871_configobj.py
+│       ├── 0872_platformutils.py
+│       ├── 0873_umsgpack.py
+│       ├── 0874_validate.py
+│       ├── 0875___init__.py
+│       ├── 0876___version__.py
+│       ├── 0877_aiosam.py
+│       ├── 0878_exceptions.py
+│       ├── 0879_log.py
+│       ├── 0880_sam.py
+│       ├── 0881_tunnel.py
+│       ├── 0882_utils.py
+│       ├── 0883___init__.py
+│       ├── 0884_client.py
+│       ├── 0885_commitsigs.py
+│       ├── 0886_highlight.py
+│       ├── 0887_main.py
+│       ├── 0888_pages.py
+│       ├── 0889_server.py
+│       ├── 0890_util.py
+│       ├── 0891___init__.py
+│       ├── 0892__version.py
+│       ├── 0893_args.py
+│       ├── 0894_exception.py
+│       ├── 0895_helpers.py
+│       ├── 0896_initiator.py
+│       ├── 0897_listener.py
+│       ├── 0898_loop.py
+│       ├── 0899_process.py
+│       ├── 0900_protocol.py
+│       ├── 0901_retry.py
+│       ├── 0902_rnsh.py
+│       ├── 0903_session.py
+│       ├── 0904_KISSInterface.py
+│       ├── 0905_RNodeInterface.py
+│       ├── 0906_SerialInterface.py
+│       ├── 0907___init__.py
+│       ├── 0908_netinfo.py
+│       ├── 0909___init__.py
+│       ├── 0910_aes128.py
+│       ├── 0911_aes256.py
+│       ├── 0912__ed25519.py
+│       ├── 0913_basic.py
+│       ├── 0914_ed25519_oop.py
+│       ├── 0915_eddsa.py
+│       ├── 0916_emergency_rescue.py
+│       ├── 0917_emergency_rescue.py
+│       ├── 0918_compost.py
+│       ├── 0919_bridge.py
+│       ├── 0920_generate-encoding-data.py
+│       ├── 0921_script.py
+│       ├── 0922_glossary_linker.py
+│       ├── 0923_pyo3_version.py
+│       ├── 0924_runner.py
+│       ├── 0925___init__.py
+│       ├── 0926_unicode.py
+│       ├── 0927_dict_conv.py
+│       ├── 0928_gperf_fold_key_conv.py
+│       ├── 0929_gperf_unfold_key_conv.py
+│       ├── 0930_make_unicode_egcb_data.py
+│       ├── 0931_make_unicode_fold_data.py
+│       ├── 0932_make_unicode_property_data.py
+│       ├── 0933_make_unicode_wb_data.py
+│       ├── 0934_unicode.py
+│       ├── 0935_libc-util.py
+│       ├── 0936_unicode.py
+│       ├── 0937_sample.py
+│       ├── 0938_walk.py
+│       ├── 0939_create_text_files.py
+│       ├── 0940_server.py
+│       ├── 0941_convert-h5-to-coreml.py
+│       ├── 0942_convert-h5-to-ggml.py
+│       ├── 0943_convert-parakeet-to-ggml.py
+│       ├── 0944_convert-pt-to-ggml.py
+│       ├── 0945_convert-silero-vad-to-ggml.py
+│       ├── 0946_convert-whisper-to-coreml.py
+│       ├── 0947_convert-whisper-to-openvino.py
+│       ├── 0948_generate-parakeet-test-model.py
+│       ├── 0949_ggml_to_pt.py
+│       ├── 0950_bench.py
+│       ├── 0951_upload-parakeet.py
+│       ├── 0952_eval.py
+│       ├── 0953_eval.py
+│       ├── 0954___init__.py
+│       ├── 0955_basic.py
+│       ├── 0956_english.py
+│       ├── 0957_generate_cu_files.py
+│       ├── 0958_test_whisper_processor.py
+│       ├── 0959_whisper_processor.py
+│       ├── 0960_eleven-labs.py
+│       ├── 0961___init__.py
+│       ├── 0962___init__.py
+│       ├── 0963_typing_extensions.py
+│       ├── 0964___init__.py
+│       ├── 0965__impl.py
+│       ├── 0966__version.py
+│       ├── 0967___init__.py
+│       ├── 0968__abnf.py
+│       ├── 0969__connection.py
+│       ├── 0970__events.py
+│       ├── 0971__headers.py
+│       ├── 0972__readers.py
+│       ├── 0973__receivebuffer.py
+│       ├── 0974__state.py
+│       ├── 0975__util.py
+│       ├── 0976__version.py
+│       ├── 0977__writers.py
+│       ├── 0978___init__.py
+│       ├── 0979___main__.py
+│       ├── 0980_distro.py
+│       ├── 0981___init__.py
+│       ├── 0982_from_thread.py
+│       ├── 0983_functools.py
+│       ├── 0984_itertools.py
+│       ├── 0985_lowlevel.py
+│       ├── 0986_pytest_plugin.py
+│       ├── 0987_to_interpreter.py
+│       ├── 0988_to_process.py
+│       ├── 0989_to_thread.py
+│       ├── 0990___init__.py
+│       ├── 0991_test_cases.py
+│       ├── 0992_introspection.py
+│       ├── 0993_typing_objects.py
+│       ├── 0994___init__.py
+│       ├── 0995_core_schema.py
+│       ├── 0996___init__.py
+│       ├── 0997__api.py
+│       ├── 0998__exceptions.py
+│       ├── 0999__models.py
+│       ├── 1000__ssl.py
+│       ├── 1001__synchronization.py
+│       ├── 1002__trace.py
+│       ├── 1003__utils.py
+│       ├── 1004___init__.py
+│       ├── 1005__migration.py
+│       ├── 1006_alias_generators.py
+│       ├── 1007_aliases.py
+│       ├── 1008_annotated_handlers.py
+│       ├── 1009_class_validators.py
+│       ├── 1010_color.py
+│       ├── 1011_config.py
+│       ├── 1012_dataclasses.py
+│       ├── 1013_datetime_parse.py
+│       ├── 1014_decorator.py
+│       ├── 1015_env_settings.py
+│       ├── 1016_error_wrappers.py
+│       ├── 1017_errors.py
+│       ├── 1018_fields.py
+│       ├── 1019_functional_serializers.py
+│       ├── 1020_functional_validators.py
+│       ├── 1021_generics.py
+│       ├── 1022_json.py
+│       ├── 1023_json_schema.py
+│       ├── 1024_main.py
+│       ├── 1025_mypy.py
+│       ├── 1026_networks.py
+│       ├── 1027_parse.py
+│       ├── 1028_root_model.py
+│       ├── 1029_schema.py
+│       ├── 1030_tools.py
+│       ├── 1031_type_adapter.py
+│       ├── 1032_types.py
+│       ├── 1033_typing.py
+│       ├── 1034_utils.py
+│       ├── 1035_validate_call_decorator.py
+│       ├── 1036_validators.py
+│       ├── 1037_version.py
+│       ├── 1038_warnings.py
+│       ├── 1039___init__.py
+│       ├── 1040___version__.py
+│       ├── 1041__api.py
+│       ├── 1042__auth.py
+│       ├── 1043__client.py
+│       ├── 1044__config.py
+│       ├── 1045__content.py
+│       ├── 1046__decoders.py
+│       ├── 1047__exceptions.py
+│       ├── 1048__main.py
+│       ├── 1049__models.py
+│       ├── 1050__multipart.py
+│       ├── 1051__status_codes.py
+│       ├── 1052__types.py
+│       ├── 1053__urlparse.py
+│       ├── 1054__urls.py
+│       ├── 1055__utils.py
+│       ├── 1056___init__.py
+│       ├── 1057__base_client.py
+│       ├── 1058__client.py
+│       ├── 1059__compat.py
+│       ├── 1060__constants.py
+│       ├── 1061__exceptions.py
+│       ├── 1062__files.py
+│       ├── 1063__models.py
+│       ├── 1064__qs.py
+│       ├── 1065__resource.py
+│       ├── 1066__response.py
+│       ├── 1067__streaming.py
+│       ├── 1068__types.py
+│       ├── 1069__version.py
+│       ├── 1070___init__.py
+│       ├── 1071__compat.py
+│       ├── 1072__datetime_parse.py
+│       ├── 1073__json.py
+│       ├── 1074__logs.py
+│       ├── 1075__path.py
+│       ├── 1076__proxy.py
+│       ├── 1077__reflection.py
+│       ├── 1078__resources_proxy.py
+│       ├── 1079__streams.py
+│       ├── 1080__sync.py
+│       ├── 1081__transform.py
+│       ├── 1082__typing.py
+│       ├── 1083__utils.py
+│       ├── 1084___init__.py
+│       ├── 1085_batches.py
+│       ├── 1086_embeddings.py
+│       ├── 1087_files.py
+│       ├── 1088_models.py
+│       ├── 1089___init__.py
+│       ├── 1090_batch_cancel_response.py
+│       ├── 1091_batch_create_params.py
+│       ├── 1092_batch_create_response.py
+│       ├── 1093_batch_list_response.py
+│       ├── 1094_batch_retrieve_response.py
+│       ├── 1095_completion_usage.py
+│       ├── 1096_create_embedding_response.py
+│       ├── 1097_embedding.py
+│       ├── 1098_embedding_create_params.py
+│       ├── 1099_file_create_params.py
+│       ├── 1100_file_create_response.py
+│       ├── 1101_file_delete_response.py
+│       ├── 1102_file_info_response.py
+│       ├── 1103_file_list_response.py
+│       ├── 1104_model.py
+│       ├── 1105_model_deleted.py
+│       ├── 1106_model_list_response.py
+│       ├── 1107___init__.py
+│       ├── 1108_speech_create_params.py
+│       ├── 1109_transcription.py
+│       ├── 1110_transcription_create_params.py
+│       ├── 1111_translation.py
+│       ├── 1112_translation_create_params.py
+│       ├── 1113___init__.py
+│       ├── 1114_chat_completion.py
+│       ├── 1115_chat_completion_assistant_message_param.py
+│       ├── 1116_chat_completion_chunk.py
+│       ├── 1117_chat_completion_content_part_image_param.py
+│       ├── 1118_chat_completion_content_part_param.py
+│       ├── 1119_chat_completion_content_part_text_param.py
+│       ├── 1120_chat_completion_function_call_option_param.py
+│       ├── 1121_chat_completion_function_message_param.py
+│       ├── 1122_chat_completion_message.py
+│       ├── 1123_chat_completion_message_param.py
+│       ├── 1124_chat_completion_message_tool_call.py
+│       ├── 1125_chat_completion_message_tool_call_param.py
+│       ├── 1126_chat_completion_named_tool_choice_param.py
+│       ├── 1127_chat_completion_role.py
+│       ├── 1128_chat_completion_system_message_param.py
+│       ├── 1129_chat_completion_token_logprob.py
+│       ├── 1130_chat_completion_tool_choice_option_param.py
+│       ├── 1131_chat_completion_tool_message_param.py
+│       ├── 1132_chat_completion_tool_param.py
+│       ├── 1133_chat_completion_user_message_param.py
+│       ├── 1134_completion_create_params.py
+│       ├── 1135___init__.py
+│       ├── 1136_error_object.py
+│       ├── 1137_function_definition.py
+│       ├── 1138_function_parameters.py
+│       ├── 1139___init__.py
+│       ├── 1140_function_definition.py
+│       ├── 1141_function_parameters.py
+│       ├── 1142___init__.py
+│       ├── 1143_audio.py
+│       ├── 1144_speech.py
+│       ├── 1145_transcriptions.py
+│       ├── 1146_translations.py
+│       ├── 1147___init__.py
+│       ├── 1148_chat.py
+│       ├── 1149_completions.py
+│       ├── 1150___init__.py
+│       ├── 1151_asgi.py
+│       ├── 1152_base.py
+│       ├── 1153_default.py
+│       ├── 1154_mock.py
+│       ├── 1155_wsgi.py
+│       ├── 1156__config.py
+│       ├── 1157__core_metadata.py
+│       ├── 1158__core_utils.py
+│       ├── 1159__dataclasses.py
+│       ├── 1160__decorators.py
+│       ├── 1161__decorators_v1.py
+│       ├── 1162__discriminated_union.py
+│       ├── 1163__docs_extraction.py
+│       ├── 1164__fields.py
+│       ├── 1165__forward_ref.py
+│       ├── 1166__generate_schema.py
+│       ├── 1167__generics.py
+│       ├── 1168__git.py
+│       ├── 1169__import_utils.py
+│       ├── 1170__internal_dataclass.py
+│       ├── 1171__known_annotated_metadata.py
+│       ├── 1172__mock_val_ser.py
+│       ├── 1173__model_construction.py
+│       ├── 1174__namespace_utils.py
+│       ├── 1175__repr.py
+│       ├── 1176__schema_gather.py
+│       ├── 1177__schema_generation_shared.py
+│       ├── 1178__serializers.py
+│       ├── 1179__signature.py
+│       ├── 1180__typing_extra.py
+│       ├── 1181__utils.py
+│       ├── 1182__validate_call.py
+│       ├── 1183__validators.py
+│       ├── 1184_class_validators.py
+│       ├── 1185_config.py
+│       ├── 1186_copy_internals.py
+│       ├── 1187_decorator.py
+│       ├── 1188_json.py
+│       ├── 1189_parse.py
+│       ├── 1190_tools.py
+│       ├── 1191___init__.py
+│       ├── 1192_arguments_schema.py
+│       ├── 1193_missing_sentinel.py
+│       ├── 1194_pipeline.py
+│       ├── 1195___init__.py
+│       ├── 1196__loader.py
+│       ├── 1197__schema_validator.py
+│       ├── 1198___init__.py
+│       ├── 1199__hypothesis_plugin.py
+│       ├── 1200_annotated_types.py
+│       ├── 1201_class_validators.py
+│       ├── 1202_color.py
+│       ├── 1203_config.py
+│       ├── 1204_dataclasses.py
+│       ├── 1205_datetime_parse.py
+│       ├── 1206_decorator.py
+│       ├── 1207_env_settings.py
+│       ├── 1208_error_wrappers.py
+│       ├── 1209_errors.py
+│       ├── 1210_fields.py
+│       ├── 1211_generics.py
+│       ├── 1212_json.py
+│       ├── 1213_main.py
+│       ├── 1214_mypy.py
+│       ├── 1215_networks.py
+│       ├── 1216_parse.py
+│       ├── 1217_schema.py
+│       ├── 1218_tools.py
+│       ├── 1219_types.py
+│       ├── 1220_typing.py
+│       ├── 1221_utils.py
+│       ├── 1222_validators.py
+│       ├── 1223_version.py
+│       ├── 1224___init__.py
+│       ├── 1225_connection.py
+│       ├── 1226_connection_pool.py
+│       ├── 1227_http11.py
+│       ├── 1228_http2.py
+│       ├── 1229_http_proxy.py
+│       ├── 1230_interfaces.py
+│       ├── 1231_socks_proxy.py
+│       ├── 1232_anyio.py
+│       ├── 1233_auto.py
+│       ├── 1234_base.py
+│       ├── 1235_mock.py
+│       ├── 1236_sync.py
+│       ├── 1237_trio.py
+│       ├── 1238___init__.py
+│       ├── 1239_connection.py
+│       ├── 1240_connection_pool.py
+│       ├── 1241_http11.py
+│       ├── 1242_http2.py
+│       ├── 1243_http_proxy.py
+│       ├── 1244_interfaces.py
+│       ├── 1245_socks_proxy.py
+│       ├── 1246__asyncio.py
+│       ├── 1247__trio.py
+│       ├── 1248__asyncio_selector_thread.py
+│       ├── 1249__contextmanagers.py
+│       ├── 1250__eventloop.py
+│       ├── 1251__exceptions.py
+│       ├── 1252__fileio.py
+│       ├── 1253__resources.py
+│       ├── 1254__signals.py
+│       ├── 1255__sockets.py
+│       ├── 1256__streams.py
+│       ├── 1257__subprocesses.py
+│       ├── 1258__synchronization.py
+│       ├── 1259__tasks.py
+│       ├── 1260__tempfile.py
+│       ├── 1261__testing.py
+│       ├── 1262__typedattr.py
+│       ├── 1263___init__.py
+│       ├── 1264__eventloop.py
+│       ├── 1265__resources.py
+│       ├── 1266__sockets.py
+│       ├── 1267__streams.py
+│       ├── 1268__subprocesses.py
+│       ├── 1269__tasks.py
+│       ├── 1270__testing.py
+│       ├── 1271_buffered.py
+│       ├── 1272_file.py
+│       ├── 1273_memory.py
+│       ├── 1274_stapled.py
+│       ├── 1275_text.py
+│       ├── 1276_tls.py
+│       ├── 1277_test_sniffio.py
+│       ├── 1278_sitecustomize.py
+│       ├── 1279_setup.py
+│       ├── 1280_conf.py
+│       ├── 1281___init__.py
+│       ├── 1282__common.py
+│       ├── 1283__compat.py
+│       ├── 1284__psaix.py
+│       ├── 1285__psbsd.py
+│       ├── 1286__pslinux.py
+│       ├── 1287__psosx.py
+│       ├── 1288__psposix.py
+│       ├── 1289__pssunos.py
+│       ├── 1290__pswindows.py
+│       ├── 1291_battery.py
+│       ├── 1292_cpu_distribution.py
+│       ├── 1293_disk_usage.py
+│       ├── 1294_fans.py
+│       ├── 1295_free.py
+│       ├── 1296_ifconfig.py
+│       ├── 1297_iotop.py
+│       ├── 1298_killall.py
+│       ├── 1299_meminfo.py
+│       ├── 1300_netstat.py
+│       ├── 1301_nettop.py
+│       ├── 1302_pidof.py
+│       ├── 1303_pmap.py
+│       ├── 1304_procinfo.py
+│       ├── 1305_procsmem.py
+│       ├── 1306_ps.py
+│       ├── 1307_pstree.py
+│       ├── 1308_sensors.py
+│       ├── 1309_temperatures.py
+│       ├── 1310_top.py
+│       ├── 1311_who.py
+│       ├── 1312_winservices.py
+│       ├── 1313_bench_oneshot.py
+│       ├── 1314_bench_oneshot_2.py
+│       ├── 1315_check_broken_links.py
+│       ├── 1316_clinter.py
+│       ├── 1317_convert_readme.py
+│       ├── 1318_download_wheels_appveyor.py
+│       ├── 1319_download_wheels_github.py
+│       ├── 1320_generate_manifest.py
+│       ├── 1321_git_pre_commit.py
+│       ├── 1322_print_access_denied.py
+│       ├── 1323_print_announce.py
+│       ├── 1324_print_api_speed.py
+│       ├── 1325_print_dist.py
+│       ├── 1326_print_downloads.py
+│       ├── 1327_print_hashes.py
+│       ├── 1328_print_timeline.py
+│       ├── 1329_purge_installation.py
+│       ├── 1330_winmake.py
+│       ├── 1331___init__.py
+│       ├── 1332___main__.py
+│       ├── 1333_runner.py
+│       ├── 1334_test_aix.py
+│       ├── 1335_test_bsd.py
+│       ├── 1336_test_connections.py
+│       ├── 1337_test_contracts.py
+│       ├── 1338_test_linux.py
+│       ├── 1339_test_memleaks.py
+│       ├── 1340_test_misc.py
+│       ├── 1341_test_osx.py
+│       ├── 1342_test_posix.py
+│       ├── 1343_test_process.py
+│       ├── 1344_test_sunos.py
+│       ├── 1345_test_system.py
+│       ├── 1346_test_testutils.py
+│       ├── 1347_test_unicode.py
+│       ├── 1348_test_windows.py
+│       ├── 1349_bottom_tier.py
+│       ├── 1350_dag_orchestrator.py
+│       ├── 1351_meta_upgrade_20260805_000212.py
+│       └── MANIFEST.json
+├── autoupdate.log
+├── autoupdate_loop.py
+├── bin
+│   ├── 0000_agape_one.py
+│   ├── 0001_bridge.py
+│   ├── 0002_groq_max_cycles.py
+│   ├── 0003_agape_clean.py
+│   ├── 0004_une_client.py
+│   ├── 0005_test_une_full.py
+│   ├── 0006_agape_slim.py
+│   ├── 0007_faiss_search.py
+│   ├── 0008_raise_to_6n6.py
+│   ├── 0009_batch_nomic_embed.py
+│   ├── 0010_groq_fallback.py
+│   ├── 0011_one_principle_n_power_n.py
+│   ├── 0012_newton_chain.py
+│   ├── 0013_local_rag_search.py
+│   ├── 0014_agape_hierarchical_raising.py
+│   ├── 0015_lattice_cli.py
+│   ├── 0016_openroot.py
+│   ├── 0017_mdpipe.py
+│   ├── 0018_test_phone_tasks.py
+│   ├── 0019_enhance_tasks_with_efficiency.py
+│   ├── 0020_apply_fs_hook.py
+│   ├── 0021_fs_hook_patch.py
+│   ├── 0022_agape_init.py
+│   ├── 0023_constitutive_voice_engine.py
+│   ├── 0024_constitutive_compiler.py
+│   ├── 0025_fix_chain_verify.py
+│   ├── 0026_openroot_hub.py
+│   ├── 0027_agape_frequency.py
+│   ├── 0028_agape_neurogenic_kernel.py
+│   ├── 0029_agape_evolution_v2.py
+│   ├── 0030_openroot_archiver.py
+│   ├── 0031_unified_agape_engine.py
+│   ├── 0032_permaculture_lattice_engine.py
+│   ├── 0033_repair_une_syntax.py
+│   ├── 0034_repair_all_une_and_commit.py
+│   ├── 0035_compressor_node.py
+│   ├── 0036_core_engine.py
+│   ├── 0037_fix_last_une_error.py
+│   ├── 0038_hive_swarm.py
+│   ├── 0039_apape_net_setup.py
+│   ├── 0040_map_files.py
+│   ├── 0041_inspect_map.py
+│   ├── 0042_build_coder_environment.py
+│   ├── 0043_master_codebase_orchestrator.py
+│   ├── 0044_v7.py
+│   ├── 0045_swarm_bench.py
+│   ├── 0046_smoke_fix.py
+│   ├── 0047_joule_leverage_analyzer.py
+│   ├── 0048_snapshot_bootstrap.py
+│   ├── 0049_patch_voice.py
+│   ├── 0050_agape_farm_os.py
+│   ├── 0051_une_max_efficiency_lang.py
+│   ├── 0052_une_atomic_library.py
+│   ├── 0053_agape_kernel_v2.py
+│   ├── 0054_agape_ledger_chain.py
+│   ├── 0055_und_protocol.py
+│   ├── 0056_agape_node_bootstrap.py
+│   ├── 0057_agape_primitive_forge.py
+│   ├── 0058_run_7b_coder.py
+│   ├── 0059_final_une_syntax_pass.py
+│   ├── 0060_emergency_syntax_fix.py
+│   ├── 0061_diagnose_and_fix.py
+│   ├── 0062_diag_fix.py
+│   ├── 0063_surgical_fix.py
+│   ├── 0064_fix_final.py
+│   ├── 0065_agapenet_unified_setup.py
+│   ├── 0066_storage_daemon.py
+│   ├── 0067_fast_backup_daemon.py
+│   ├── 0068_agape_net_setup.py
+│   ├── 0069_agape_net_full_integration.py
+│   ├── 0070_index_content_blobs.py
+│   ├── 0071_une_fix.py
+│   ├── 0072_deepdive.py
+│   ├── 0073_audit_repo.py
+│   ├── 0074_hive_entry.py
+│   ├── 0075_structure_enforcer.py
+│   ├── 0076_immortal_context.py
+│   ├── 0077_aggressive_dedup.py
+│   ├── 0078_openroot-inventory.py
+│   ├── 0079_bridge.py
+│   ├── 0080_une_master.py
+│   ├── 0081_governor.py
+│   ├── 0082_autoupdate_loop.py
+│   ├── 0083_cb_user_hunter.py
+│   ├── 0084_dorks-eye.py
+│   ├── 0085_rmh.py
+│   ├── 0086_groq_max_cycles.py
+│   ├── 0087_agape_synergetic_calculus.py
+│   ├── 0088_CREWAI_EXAMPLE.py
+│   ├── 0089_agapenet_cosmos_engine.py
+│   ├── 0090_une_atomic_library.py
+│   ├── 0091_justice_module.py
+│   ├── 0092_laser_sim.py
+│   ├── 0093_deploy_openroot_kernel.py
+│   ├── 0094_deploy_v101.py
+│   ├── 0095_deploy_thermal_loop.py
+│   ├── 0096_deploy_v103_evap.py
+│   ├── 0097_search.py
+│   ├── 0098_local_scan.py
+│   ├── 0099_scan_all.py
+│   ├── 0100_find_dupes.py
+│   ├── 0101_setup.py
+│   ├── 0102_esp32_btbufs.py
+│   ├── 0103_release_hashes.py
+│   ├── 0104_organize_docs_a15.py
+│   ├── 0105_organize_docs_a15_v2.py
+│   ├── 0106_init.py
+│   ├── 0107_agape_mesh_oracle.py
+│   ├── 0108_sync_bridge.py
+│   ├── 0109_coordination.py
+│   ├── 0110_eta.py
+│   ├── 0111_next_joule.py
+│   ├── 0112_postulates.py
+│   ├── 0113_selftest.py
+│   ├── 0114_synergy.py
+│   ├── 0115_thermal_loop.py
+│   ├── 0116_git_rev_macro.py
+│   ├── 0117_build_as_lib.py
+│   ├── 0118_create-uf2.py
+│   ├── 0119_merge-bin.py
+│   ├── 0120_test_thermo_optimizer.py
+│   ├── 0121_uf2conv.py
+│   ├── 0122_build_hex.py
+│   ├── 0123__rewrite_proto_namespace.py
+│   ├── 0124_analyze_map.py
+│   ├── 0125_base64_to_hex.py
+│   ├── 0126_build-userprefs-json.py
+│   ├── 0127_buildinfo.py
+│   ├── 0128_bump_version.py
+│   ├── 0129_collect_sizes.py
+│   ├── 0130_eth-ota-upload.py
+│   ├── 0131_exception_decoder.py
+│   ├── 0132_gen-fake-nodedb-seed.py
+│   ├── 0133_generate_ci_matrix.py
+│   ├── 0134_generate_release_notes.py
+│   ├── 0135_genpartitions.py
+│   ├── 0136_platformio-custom.py
+│   ├── 0137_platformio-pre.py
+│   ├── 0138_readprops.py
+│   ├── 0139_seed-json-to-proto.py
+│   ├── 0140_size_report.py
+│   ├── 0141_test_size_scripts.py
+│   ├── 0142_uf2conv.py
+│   ├── 0143_filter_c3_exception_decoder.py
+│   ├── 0144_add_mbedtls_sources.py
+│   ├── 0145_lockdown_provision.py
+│   ├── 0146___init__.py
+│   ├── 0147_core.py
+│   ├── 0148___init__.py
+│   ├── 0149_core.py
+│   ├── 0150___init__.py
+│   ├── 0151_core.py
+│   ├── 0152___init__.py
+│   ├── 0153___main__.py
+│   ├── 0154___pip-runner__.py
+│   ├── 0155___init__.py
+│   ├── 0156_build_env.py
+│   ├── 0157_cache.py
+│   ├── 0158_configuration.py
+│   ├── 0159_exceptions.py
+│   ├── 0160_main.py
+│   ├── 0161_pyproject.py
+│   ├── 0162_self_outdated_check.py
+│   ├── 0163_wheel_builder.py
+│   ├── 0164___init__.py
+│   ├── 0165___init__.py
+│   ├── 0166__cmd.py
+│   ├── 0167_adapter.py
+│   ├── 0168_cache.py
+│   ├── 0169_controller.py
+│   ├── 0170_filewrapper.py
+│   ├── 0171_heuristics.py
+│   ├── 0172_serialize.py
+│   ├── 0173_wrapper.py
+│   ├── 0174___init__.py
+│   ├── 0175___main__.py
+│   ├── 0176_core.py
+│   ├── 0177___init__.py
+│   ├── 0178_compat.py
+│   ├── 0179_resources.py
+│   ├── 0180_scripts.py
+│   ├── 0181_util.py
+│   ├── 0182___init__.py
+│   ├── 0183_codec.py
+│   ├── 0184_compat.py
+│   ├── 0185_core.py
+│   ├── 0186_idnadata.py
+│   ├── 0187_intranges.py
+│   ├── 0188_package_data.py
+│   ├── 0189_uts46data.py
+│   ├── 0190___init__.py
+│   ├── 0191_exceptions.py
+│   ├── 0192_ext.py
+│   ├── 0193_fallback.py
+│   ├── 0194___init__.py
+│   ├── 0195__elffile.py
+│   ├── 0196__manylinux.py
+│   ├── 0197__musllinux.py
+│   ├── 0198__parser.py
+│   ├── 0199__structures.py
+│   ├── 0200__tokenizer.py
+│   ├── 0201_dependency_groups.py
+│   ├── 0202_direct_url.py
+│   ├── 0203_errors.py
+│   ├── 0204_markers.py
+│   ├── 0205_metadata.py
+│   ├── 0206_pylock.py
+│   ├── 0207_requirements.py
+│   ├── 0208_specifiers.py
+│   ├── 0209_tags.py
+│   ├── 0210_utils.py
+│   ├── 0211_version.py
+│   ├── 0212___init__.py
+│   ├── 0213___init__.py
+│   ├── 0214___main__.py
+│   ├── 0215_android.py
+│   ├── 0216_api.py
+│   ├── 0217_macos.py
+│   ├── 0218_unix.py
+│   ├── 0219_version.py
+│   ├── 0220_windows.py
+│   ├── 0221___init__.py
+│   ├── 0222___main__.py
+│   ├── 0223_console.py
+│   ├── 0224_filter.py
+│   ├── 0225_formatter.py
+│   ├── 0226_lexer.py
+│   ├── 0227_modeline.py
+│   ├── 0228_plugin.py
+│   ├── 0229_regexopt.py
+│   ├── 0230_scanner.py
+│   ├── 0231_sphinxext.py
+│   ├── 0232_style.py
+│   ├── 0233_token.py
+│   ├── 0234_unistring.py
+│   ├── 0235_util.py
+│   ├── 0236___init__.py
+│   ├── 0237__impl.py
+│   ├── 0238___init__.py
+│   ├── 0239___version__.py
+│   ├── 0240__internal_utils.py
+│   ├── 0241_adapters.py
+│   ├── 0242_api.py
+│   ├── 0243_auth.py
+│   ├── 0244_certs.py
+│   ├── 0245_compat.py
+│   ├── 0246_cookies.py
+│   ├── 0247_exceptions.py
+│   ├── 0248_help.py
+│   ├── 0249_hooks.py
+│   ├── 0250_models.py
+│   ├── 0251_packages.py
+│   ├── 0252_sessions.py
+│   ├── 0253_status_codes.py
+│   ├── 0254_structures.py
+│   ├── 0255_utils.py
+│   ├── 0256___init__.py
+│   ├── 0257_providers.py
+│   ├── 0258_reporters.py
+│   ├── 0259_structs.py
+│   ├── 0260___init__.py
+│   ├── 0261___main__.py
+│   ├── 0262__cell_widths.py
+│   ├── 0263__emoji_codes.py
+│   ├── 0264__emoji_replace.py
+│   ├── 0265__export_format.py
+│   ├── 0266__extension.py
+│   ├── 0267__fileno.py
+│   ├── 0268__inspect.py
+│   ├── 0269__log_render.py
+│   ├── 0270__loop.py
+│   ├── 0271__null_file.py
+│   ├── 0272__palettes.py
+│   ├── 0273__pick.py
+│   ├── 0274__ratio.py
+│   ├── 0275__spinners.py
+│   ├── 0276__stack.py
+│   ├── 0277__timer.py
+│   ├── 0278__win32_console.py
+│   ├── 0279__windows.py
+│   ├── 0280__windows_renderer.py
+│   ├── 0281__wrap.py
+│   ├── 0282_abc.py
+│   ├── 0283_align.py
+│   ├── 0284_ansi.py
+│   ├── 0285_bar.py
+│   ├── 0286_box.py
+│   ├── 0287_cells.py
+│   ├── 0288_color.py
+│   ├── 0289_color_triplet.py
+│   ├── 0290_columns.py
+│   ├── 0291_console.py
+│   ├── 0292_constrain.py
+│   ├── 0293_containers.py
+│   ├── 0294_control.py
+│   ├── 0295_default_styles.py
+│   ├── 0296_diagnose.py
+│   ├── 0297_emoji.py
+│   ├── 0298_errors.py
+│   ├── 0299_file_proxy.py
+│   ├── 0300_filesize.py
+│   ├── 0301_highlighter.py
+│   ├── 0302_json.py
+│   ├── 0303_jupyter.py
+│   ├── 0304_layout.py
+│   ├── 0305_live.py
+│   ├── 0306_live_render.py
+│   ├── 0307_logging.py
+│   ├── 0308_markup.py
+│   ├── 0309_measure.py
+│   ├── 0310_padding.py
+│   ├── 0311_pager.py
+│   ├── 0312_palette.py
+│   ├── 0313_panel.py
+│   ├── 0314_pretty.py
+│   ├── 0315_progress.py
+│   ├── 0316_progress_bar.py
+│   ├── 0317_prompt.py
+│   ├── 0318_protocol.py
+│   ├── 0319_region.py
+│   ├── 0320_repr.py
+│   ├── 0321_rule.py
+│   ├── 0322_scope.py
+│   ├── 0323_screen.py
+│   ├── 0324_segment.py
+│   ├── 0325_spinner.py
+│   ├── 0326_status.py
+│   ├── 0327_style.py
+│   ├── 0328_styled.py
+│   ├── 0329_syntax.py
+│   ├── 0330_table.py
+│   ├── 0331_terminal_theme.py
+│   ├── 0332_text.py
+│   ├── 0333_theme.py
+│   ├── 0334_themes.py
+│   ├── 0335_traceback.py
+│   ├── 0336_tree.py
+│   ├── 0337___init__.py
+│   ├── 0338__parser.py
+│   ├── 0339__re.py
+│   ├── 0340__types.py
+│   ├── 0341___init__.py
+│   ├── 0342__writer.py
+│   ├── 0343___init__.py
+│   ├── 0344__api.py
+│   ├── 0345__macos.py
+│   ├── 0346__openssl.py
+│   ├── 0347__ssl_constants.py
+│   ├── 0348__windows.py
+│   ├── 0349___init__.py
+│   ├── 0350__base_connection.py
+│   ├── 0351__collections.py
+│   ├── 0352__request_methods.py
+│   ├── 0353__version.py
+│   ├── 0354_connection.py
+│   ├── 0355_connectionpool.py
+│   ├── 0356_exceptions.py
+│   ├── 0357_fields.py
+│   ├── 0358_filepost.py
+│   ├── 0359_poolmanager.py
+│   ├── 0360_response.py
+│   ├── 0361_pyopenssl.py
+│   ├── 0362_socks.py
+│   ├── 0363___init__.py
+│   ├── 0364_connection.py
+│   ├── 0365_probe.py
+│   ├── 0366___init__.py
+│   ├── 0367_connection.py
+│   ├── 0368_proxy.py
+│   ├── 0369_request.py
+│   ├── 0370_response.py
+│   ├── 0371_retry.py
+│   ├── 0372_ssl_.py
+│   ├── 0373_ssl_match_hostname.py
+│   ├── 0374_ssltransport.py
+│   ├── 0375_timeout.py
+│   ├── 0376_url.py
+│   ├── 0377_util.py
+│   ├── 0378_wait.py
+│   ├── 0379___init__.py
+│   ├── 0380_connection.py
+│   ├── 0381_fetch.py
+│   ├── 0382_request.py
+│   ├── 0383_response.py
+│   ├── 0384___init__.py
+│   ├── 0385_abstract.py
+│   ├── 0386_criterion.py
+│   ├── 0387_exceptions.py
+│   ├── 0388_resolution.py
+│   ├── 0389___init__.py
+│   ├── 0390__in_process.py
+│   ├── 0391___init__.py
+│   ├── 0392___init__.py
+│   ├── 0393__mapping.py
+│   ├── 0394___init__.py
+│   ├── 0395__mapping.py
+│   ├── 0396_python.py
+│   ├── 0397___init__.py
+│   ├── 0398__mapping.py
+│   ├── 0399___init__.py
+│   ├── 0400__spdx.py
+│   ├── 0401___init__.py
+│   ├── 0402_file_cache.py
+│   ├── 0403_redis_cache.py
+│   ├── 0404___init__.py
+│   ├── 0405_autocompletion.py
+│   ├── 0406_base_command.py
+│   ├── 0407_cmdoptions.py
+│   ├── 0408_command_context.py
+│   ├── 0409_index_command.py
+│   ├── 0410_main.py
+│   ├── 0411_main_parser.py
+│   ├── 0412_parser.py
+│   ├── 0413_progress_bars.py
+│   ├── 0414_req_command.py
+│   ├── 0415_spinners.py
+│   ├── 0416_status_codes.py
+│   ├── 0417___init__.py
+│   ├── 0418_cache.py
+│   ├── 0419_check.py
+│   ├── 0420_completion.py
+│   ├── 0421_configuration.py
+│   ├── 0422_debug.py
+│   ├── 0423_download.py
+│   ├── 0424_freeze.py
+│   ├── 0425_hash.py
+│   ├── 0426_help.py
+│   ├── 0427_index.py
+│   ├── 0428_inspect.py
+│   ├── 0429_install.py
+│   ├── 0430_list.py
+│   ├── 0431_lock.py
+│   ├── 0432_search.py
+│   ├── 0433_show.py
+│   ├── 0434_uninstall.py
+│   ├── 0435_wheel.py
+│   ├── 0436___init__.py
+│   ├── 0437_base.py
+│   ├── 0438_installed.py
+│   ├── 0439_sdist.py
+│   ├── 0440_wheel.py
+│   ├── 0441___init__.py
+│   ├── 0442_collector.py
+│   ├── 0443_package_finder.py
+│   ├── 0444_sources.py
+│   ├── 0445___init__.py
+│   ├── 0446__distutils.py
+│   ├── 0447__sysconfig.py
+│   ├── 0448_base.py
+│   ├── 0449___init__.py
+│   ├── 0450__json.py
+│   ├── 0451_base.py
+│   ├── 0452_pkg_resources.py
+│   ├── 0453___init__.py
+│   ├── 0454_candidate.py
+│   ├── 0455_direct_url.py
+│   ├── 0456_format_control.py
+│   ├── 0457_index.py
+│   ├── 0458_installation_report.py
+│   ├── 0459_link.py
+│   ├── 0460_release_control.py
+│   ├── 0461_scheme.py
+│   ├── 0462_search_scope.py
+│   ├── 0463_selection_prefs.py
+│   ├── 0464_target_python.py
+│   ├── 0465_wheel.py
+│   ├── 0466___init__.py
+│   ├── 0467_auth.py
+│   ├── 0468_cache.py
+│   ├── 0469_download.py
+│   ├── 0470_lazy_wheel.py
+│   ├── 0471_session.py
+│   ├── 0472_utils.py
+│   ├── 0473_xmlrpc.py
+│   ├── 0474_check.py
+│   ├── 0475_freeze.py
+│   ├── 0476_prepare.py
+│   ├── 0477___init__.py
+│   ├── 0478_constructors.py
+│   ├── 0479_pep723.py
+│   ├── 0480_req_dependency_group.py
+│   ├── 0481_req_file.py
+│   ├── 0482_req_install.py
+│   ├── 0483_req_set.py
+│   ├── 0484_req_uninstall.py
+│   ├── 0485_base.py
+│   ├── 0486__jaraco_text.py
+│   ├── 0487__log.py
+│   ├── 0488_appdirs.py
+│   ├── 0489_compat.py
+│   ├── 0490_compatibility_tags.py
+│   ├── 0491_datetime.py
+│   ├── 0492_deprecation.py
+│   ├── 0493_direct_url_helpers.py
+│   ├── 0494_egg_link.py
+│   ├── 0495_entrypoints.py
+│   ├── 0496_filesystem.py
+│   ├── 0497_filetypes.py
+│   ├── 0498_glibc.py
+│   ├── 0499_hashes.py
+│   ├── 0500_logging.py
+│   ├── 0501_misc.py
+│   ├── 0502_packaging.py
+│   ├── 0503_pylock.py
+│   ├── 0504_retry.py
+│   ├── 0505_subprocess.py
+│   ├── 0506_temp_dir.py
+│   ├── 0507_unpacking.py
+│   ├── 0508_urls.py
+│   ├── 0509_virtualenv.py
+│   ├── 0510_wheel.py
+│   ├── 0511___init__.py
+│   ├── 0512_bazaar.py
+│   ├── 0513_git.py
+│   ├── 0514_mercurial.py
+│   ├── 0515_subversion.py
+│   ├── 0516_versioncontrol.py
+│   ├── 0517_resolver.py
+│   ├── 0518_base.py
+│   ├── 0519_candidates.py
+│   ├── 0520_factory.py
+│   ├── 0521_found_candidates.py
+│   ├── 0522_provider.py
+│   ├── 0523_reporter.py
+│   ├── 0524_requirements.py
+│   ├── 0525_resolver.py
+│   ├── 0526___init__.py
+│   ├── 0527_wheel.py
+│   ├── 0528___init__.py
+│   ├── 0529__compat.py
+│   ├── 0530__dists.py
+│   ├── 0531__envs.py
+│   ├── 0532_joule_probe.py
+│   ├── 0533_chunk_and_seed.py
+│   ├── 0534_feed_oracle.py
+│   ├── 0535_generate_system_map.py
+│   ├── 0536_bench.py
+│   ├── 0537_faiss_kmeans.py
+│   ├── 0538_ground_truth.py
+│   ├── 0539_profile.py
+│   ├── 0540_amalgamate.py
+│   ├── 0541_conftest.py
+│   ├── 0542_fuzz.py
+│   ├── 0543_generate_legacy_db.py
+│   ├── 0544_helpers.py
+│   ├── 0545_skip.test-correctness.py
+│   ├── 0546_test-auxiliary.py
+│   ├── 0547_test-cache-finalize.py
+│   ├── 0548_test-diskann.py
+│   ├── 0549_test-general.py
+│   ├── 0550_test-insert-delete.py
+│   ├── 0551_test-ivf-mutations.py
+│   ├── 0552_test-ivf-quantization.py
+│   ├── 0553_test-ivf-rename.py
+│   ├── 0554_test-ivf.py
+│   ├── 0555_test-knn-distance-constraints.py
+│   ├── 0556_test-legacy-compat.py
+│   ├── 0557_test-loadable.py
+│   ├── 0558_test-metadata.py
+│   ├── 0559_test-partition-keys.py
+│   ├── 0560_test-rename.py
+│   ├── 0561_test-rescore-mutations.py
+│   ├── 0562_test-rescore.py
+│   ├── 0563_utils.py
+│   ├── 0564_test-afbd.py
+│   ├── 0565_build.py
+│   ├── 0566_test-correctness.py
+│   ├── 0567_openai-sample.py
+│   ├── 0568_demo.py
+│   ├── 0569_extra_init.py
+│   ├── 0570_bench.py
+│   ├── 0571_build.py
+│   ├── 0572_knn.py
+│   ├── 0573_test.py
+│   ├── 0574_bench_delete.py
+│   ├── 0575_test_smoke.py
+│   ├── 0576_build_base_db.py
+│   ├── 0577_build_base_db.py
+│   ├── 0578_build-base.py
+│   ├── 0579_build-contents.py
+│   ├── 0580_distill-model.py
+│   ├── 0581_build-base.py
+│   ├── 0582_build-contents.py
+│   ├── 0583_fit_plot.py
+│   ├── 0584_chord_lengths.py
+│   ├── 0585_pr-preflight.py
+│   ├── 0586_axiom_cli.py
+│   ├── 0587_merge_kb.py
+│   ├── 0588_canon.py
+│   ├── 0589_test_rmh_labyrinth_model.py
+│   ├── 0590_test_psychrometric_model.py
+│   ├── 0591_rmh_labyrinth_model.py
+│   ├── 0592_psychrometric_model.py
+│   ├── 0593_generate_rmh_report.py
+│   ├── 0594_nomen.py
+│   ├── 0595_nomen_core.py
+│   ├── 0596_thermo_ledger.py
+│   ├── 0597_canon.py
+│   ├── 0598_generate_rmh_report.py
+│   ├── 0599_gh_termux_python_primer.py
+│   ├── 0600_justice_module.py
+│   ├── 0601_laser_sim.py
+│   ├── 0602_fusion_sensor_wrapper.py
+│   ├── 0603_extract_seed.py
+│   ├── 0604_fusion_core.py
+│   ├── 0605_synergetics_engine.py
+│   ├── 0606_build.py
+│   ├── 0607_Example.py
+│   ├── 0608_RNode.py
+│   ├── 0609_esptool.py
+│   ├── 0610_gen_esp32part.py
+│   ├── 0611_spiffsgen.py
+│   ├── 0612_Handlers.py
+│   ├── 0613_LXMF.py
+│   ├── 0614_LXMPeer.py
+│   ├── 0615_LXMRouter.py
+│   ├── 0616_LXMessage.py
+│   ├── 0617_LXStamper.py
+│   ├── 0618___init__.py
+│   ├── 0619__version.py
+│   ├── 0620_example_receiver.py
+│   ├── 0621_example_sender.py
+│   ├── 0622_lxmd.py
+│   ├── 0623_openroot-classifier.py
+│   ├── 0624_openroot_classifier_loader.py
+│   ├── 0625_test_classifier.py
+│   ├── 0626_kernel_translator.py
+│   ├── 0627_fusion_core.py
+│   ├── 0628_fractak_swarm_engine.py
+│   ├── 0629_embed_kai.py
+│   ├── 0630_kai_query.py
+│   ├── 0631_setup.py
+│   ├── 0632_conf.py
+│   ├── 0633_fix_bsec_lib.py
+│   ├── 0634_platformio-clusterfuzzlite-post.py
+│   ├── 0635_platformio-clusterfuzzlite-pre.py
+│   ├── 0636_router_fuzzer_seed_corpus.py
+│   ├── 0637_disable_adafruit_usb.py
+│   ├── 0638_esp32_extra.py
+│   ├── 0639_esp32_pre.py
+│   ├── 0640_ld_response_file.py
+│   ├── 0641_nrf52_extra.py
+│   ├── 0642_nrf52_warm_region.py
+│   ├── 0643_nrf54l15_linker.py
+│   ├── 0644_wasm_link_flags.py
+│   ├── 0645_windows_link_flags.py
+│   ├── 0646_testsuite.py
+│   ├── 0647__pssunos.py
+│   ├── 0648_test_connections.py
+│   ├── 0649_test_linux.py
+│   ├── 0650_test_memleaks.py
+│   ├── 0651_test_posix.py
+│   ├── 0652_test_windows.py
+│   ├── 0653_bench_oneshot.py
+│   ├── 0654_generate_manifest.py
+│   ├── 0655_git_pre_commit.py
+│   ├── 0656_print_access_denied.py
+│   ├── 0657_print_api_speed.py
+│   ├── 0658_iotop.py
+│   ├── 0659_netstat.py
+│   ├── 0660_pidof.py
+│   ├── 0661_pmap.py
+│   ├── 0662_procinfo.py
+│   ├── 0663_ps.py
+│   ├── 0664_winservices.py
+│   ├── 0665_chunk_sender.py
+│   ├── 0666_thesis_hash.py
+│   ├── 0667_collector.py
+│   ├── 0668_generate_grant_doc.py
+│   ├── 0669_make_final_grant.py
+│   ├── 0670_aerocement_triad_v1.py
+│   ├── 0671_build_spec_v1.py
+│   ├── 0672_desiccant_module_v1.py
+│   ├── 0673_gen_whitepaper.py
+│   ├── 0674_generate_thesis.py
+│   ├── 0675_makefile_gen.py
+│   ├── 0676_phi_spiral_v9.py
+│   ├── 0677_physics_ledger_v1.py
+│   ├── 0678_physics_ledger_v2.py
+│   ├── 0679_thermal_battery_check.py
+│   ├── 0680_mqtt_basic.py
+│   ├── 0681_test_full_integration.py
+│   ├── 0682__compat.py
+│   ├── 0683__psbsd.py
+│   ├── 0684__pslinux.py
+│   ├── 0685__psosx.py
+│   ├── 0686__psposix.py
+│   ├── 0687___main__.py
+│   ├── 0688_test_osx.py
+│   ├── 0689_test_process.py
+│   ├── 0690_test_system.py
+│   ├── 0691_test_testutils.py
+│   ├── 0692_test_unicode.py
+│   ├── 0693_disk_usage.py
+│   ├── 0694_free.py
+│   ├── 0695_ifconfig.py
+│   ├── 0696_print_dist.py
+│   ├── 0697_print_downloads.py
+│   ├── 0698_print_hashes.py
+│   ├── 0699_winmake.py
+│   ├── 0700_pstree.py
+│   ├── 0701_temperatures.py
+│   ├── 0702_who.py
+│   ├── 0703_LearnFromMistakes.py
+│   ├── 0704_breath_loop_v6_radiative.py
+│   ├── 0705_earth_loop_v8.py
+│   ├── 0706_organize.py
+│   ├── 0707_recruitment_portal.py
+│   ├── 0708_thermal_battery_system.py
+│   ├── 0709_data_logger_example.py
+│   ├── 0710_settings.py
+│   ├── 0711_test_acre_workflow.py
+│   ├── 0712_test_une_fixed.py
+│   ├── 0713__pswindows.py
+│   ├── 0714_test_contracts.py
+│   ├── 0715_test_misc.py
+│   ├── 0716_battery.py
+│   ├── 0717_cpu_distribution.py
+│   ├── 0718_fans.py
+│   ├── 0719_bench_oneshot_2.py
+│   ├── 0720_check_broken_links.py
+│   ├── 0721_clinter.py
+│   ├── 0722_convert_readme.py
+│   ├── 0723_download_wheels_appveyor.py
+│   ├── 0724_download_wheels_github.py
+│   ├── 0725_print_announce.py
+│   ├── 0726_purge_installation.py
+│   ├── 0727_meminfo.py
+│   ├── 0728_nettop.py
+│   ├── 0729_procsmem.py
+│   ├── 0730_sensors.py
+│   ├── 0731_create_session_anchor.py
+│   ├── 0732_generate_grant_summary.py
+│   ├── 0733_unified_breath_loop_v3.py
+│   ├── 0734_bump_metainfo.py
+│   ├── 0735_nrf52_lto.py
+│   ├── 0736_stm32_extra.py
+│   ├── 0737_custom_build_tasks.py
+│   ├── 0738_mqtt_publish_in_callback.py
+│   ├── 0739_quick_test.py
+│   ├── 0740_test_comprehensive.py
+│   ├── 0741_test_interactive.py
+│   ├── 0742_test_une_now.py
+│   ├── 0743_test_with_server.py
+│   ├── 0744_verify_system.py
+│   ├── 0745__common.py
+│   ├── 0746__psaix.py
+│   ├── 0747_runner.py
+│   ├── 0748_test_aix.py
+│   ├── 0749_test_bsd.py
+│   ├── 0750_test_process_all.py
+│   ├── 0751_test_sunos.py
+│   ├── 0752_print_timeline.py
+│   ├── 0753_killall.py
+│   ├── 0754_top.py
+│   ├── 0755_emergency_rescue.py
+│   ├── 0756_thesis_chunker.py
+│   ├── 0757_diagnostic.py
+│   ├── 0758_fix_errors.py
+│   ├── 0759_server.py
+│   ├── 0760_ai_bridge.py
+│   ├── 0761_deploy_v101.py
+│   ├── 0762_generate_rmh_report.py
+│   ├── 0763_logger.py
+│   ├── 0764_psychrometric_model.py
+│   ├── 0765_rmh_labyrinth_model.py
+│   ├── 0766_axiom_mesh_sync_optiplex.py
+│   ├── 0767_test_thermo.py
+│   ├── 0768_agape_cooperation_theorem.py
+│   ├── 0769_derive_constants.py
+│   ├── 0770_energy_theorems.py
+│   ├── 0771_import_euclid.py
+│   ├── 0772_import_unified.py
+│   ├── 0773_proof_builder.py
+│   ├── 0774_reorganize_postulates.py
+│   ├── 0775_sacred_language_theorem.py
+│   ├── 0776_sacred_merkle_system.py
+│   ├── 0777_seven_symbols_recovery.py
+│   ├── 0778_theorem_generator.py
+│   ├── 0779_theorem_generator_batch2.py
+│   ├── 0780_theorem_generator_batch3.py
+│   ├── 0781_theorem_generator_batch4.py
+│   ├── 0782_theorem_generator_batch5.py
+│   ├── 0783_theorems_extend.py
+│   ├── 0784_or_coder.py
+│   ├── 0785_or_coder_node.py
+│   ├── 0786_test_tidbit_library.py
+│   ├── 0787_generate_rmh_report.py
+│   ├── 0788___init__.py
+│   ├── 0789_selftest.py
+│   ├── 0790___init__.py
+│   ├── 0791_solar.py
+│   ├── 0792_rmh_lab.py
+│   ├── 0793_setup.py
+│   ├── 0794_ecosystem_dashboard.py
+│   ├── 0795_openroot_workflow_manager.py
+│   ├── 0796_agape_board_advisor.py
+│   ├── 0797_agape_engine.py
+│   ├── 0798_agape_oracle.py
+│   ├── 0799___init__.py
+│   ├── 0800_Announce.py
+│   ├── 0801_Broadcast.py
+│   ├── 0802_Buffer.py
+│   ├── 0803_Channel.py
+│   ├── 0804_Echo.py
+│   ├── 0805_ExampleInterface.py
+│   ├── 0806_Filetransfer.py
+│   ├── 0807_Identify.py
+│   ├── 0808_Link.py
+│   ├── 0809_Minimal.py
+│   ├── 0810_Ratchets.py
+│   ├── 0811_Request.py
+│   ├── 0812_Resource.py
+│   ├── 0813_Speedtest.py
+│   ├── 0814_Buffer.py
+│   ├── 0815_Channel.py
+│   ├── 0816_Discovery.py
+│   ├── 0817_Packet.py
+│   ├── 0818_Resolver.py
+│   ├── 0819_Resource.py
+│   ├── 0820_Reticulum.py
+│   ├── 0821_Transport.py
+│   ├── 0822___init__.py
+│   ├── 0823__version.py
+│   ├── 0824_clean_md.py
+│   ├── 0825_all.py
+│   ├── 0826_channel.py
+│   ├── 0827_hashes.py
+│   ├── 0828_identity.py
+│   ├── 0829_link.py
+│   ├── 0830_conf.py
+│   ├── 0831_AES.py
+│   ├── 0832_Ed25519.py
+│   ├── 0833_HKDF.py
+│   ├── 0834_HMAC.py
+│   ├── 0835_Hashes.py
+│   ├── 0836_PKCS7.py
+│   ├── 0837_Provider.py
+│   ├── 0838_Proxies.py
+│   ├── 0839_SHA256.py
+│   ├── 0840_SHA512.py
+│   ├── 0841_Token.py
+│   ├── 0842_X25519.py
+│   ├── 0843___init__.py
+│   ├── 0844_AX25KISSInterface.py
+│   ├── 0845_AutoInterface.py
+│   ├── 0846_BackboneInterface.py
+│   ├── 0847_I2PInterface.py
+│   ├── 0848_Interface.py
+│   ├── 0849_KISSInterface.py
+│   ├── 0850_LocalInterface.py
+│   ├── 0851_PipeInterface.py
+│   ├── 0852_RNodeInterface.py
+│   ├── 0853_RNodeMultiInterface.py
+│   ├── 0854_SerialInterface.py
+│   ├── 0855_TCPInterface.py
+│   ├── 0856_UDPInterface.py
+│   ├── 0857_WeaveInterface.py
+│   ├── 0858___init__.py
+│   ├── 0859___init__.py
+│   ├── 0860_rncp.py
+│   ├── 0861_rnid.py
+│   ├── 0862_rnir.py
+│   ├── 0863_rnodeconf.py
+│   ├── 0864_rnpath.py
+│   ├── 0865_rnpkg.py
+│   ├── 0866_rnprobe.py
+│   ├── 0867_rnsd.py
+│   ├── 0868_rnstatus.py
+│   ├── 0869_rnx.py
+│   ├── 0870___init__.py
+│   ├── 0871_configobj.py
+│   ├── 0872_platformutils.py
+│   ├── 0873_umsgpack.py
+│   ├── 0874_validate.py
+│   ├── 0875___init__.py
+│   ├── 0876___version__.py
+│   ├── 0877_aiosam.py
+│   ├── 0878_exceptions.py
+│   ├── 0879_log.py
+│   ├── 0880_sam.py
+│   ├── 0881_tunnel.py
+│   ├── 0882_utils.py
+│   ├── 0883___init__.py
+│   ├── 0884_client.py
+│   ├── 0885_commitsigs.py
+│   ├── 0886_highlight.py
+│   ├── 0887_main.py
+│   ├── 0888_pages.py
+│   ├── 0889_server.py
+│   ├── 0890_util.py
+│   ├── 0891___init__.py
+│   ├── 0892__version.py
+│   ├── 0893_args.py
+│   ├── 0894_exception.py
+│   ├── 0895_helpers.py
+│   ├── 0896_initiator.py
+│   ├── 0897_listener.py
+│   ├── 0898_loop.py
+│   ├── 0899_process.py
+│   ├── 0900_protocol.py
+│   ├── 0901_retry.py
+│   ├── 0902_rnsh.py
+│   ├── 0903_session.py
+│   ├── 0904_KISSInterface.py
+│   ├── 0905_RNodeInterface.py
+│   ├── 0906_SerialInterface.py
+│   ├── 0907___init__.py
+│   ├── 0908_netinfo.py
+│   ├── 0909___init__.py
+│   ├── 0910_aes128.py
+│   ├── 0911_aes256.py
+│   ├── 0912__ed25519.py
+│   ├── 0913_basic.py
+│   ├── 0914_ed25519_oop.py
+│   ├── 0915_eddsa.py
+│   ├── 0916_emergency_rescue.py
+│   ├── 0917_emergency_rescue.py
+│   ├── 0918_compost.py
+│   ├── 0919_bridge.py
+│   ├── 0920_generate-encoding-data.py
+│   ├── 0921_script.py
+│   ├── 0922_glossary_linker.py
+│   ├── 0923_pyo3_version.py
+│   ├── 0924_runner.py
+│   ├── 0925___init__.py
+│   ├── 0926_unicode.py
+│   ├── 0927_dict_conv.py
+│   ├── 0928_gperf_fold_key_conv.py
+│   ├── 0929_gperf_unfold_key_conv.py
+│   ├── 0930_make_unicode_egcb_data.py
+│   ├── 0931_make_unicode_fold_data.py
+│   ├── 0932_make_unicode_property_data.py
+│   ├── 0933_make_unicode_wb_data.py
+│   ├── 0934_unicode.py
+│   ├── 0935_libc-util.py
+│   ├── 0936_unicode.py
+│   ├── 0937_sample.py
+│   ├── 0938_walk.py
+│   ├── 0939_create_text_files.py
+│   ├── 0940_server.py
+│   ├── 0941_convert-h5-to-coreml.py
+│   ├── 0942_convert-h5-to-ggml.py
+│   ├── 0943_convert-parakeet-to-ggml.py
+│   ├── 0944_convert-pt-to-ggml.py
+│   ├── 0945_convert-silero-vad-to-ggml.py
+│   ├── 0946_convert-whisper-to-coreml.py
+│   ├── 0947_convert-whisper-to-openvino.py
+│   ├── 0948_generate-parakeet-test-model.py
+│   ├── 0949_ggml_to_pt.py
+│   ├── 0950_bench.py
+│   ├── 0951_upload-parakeet.py
+│   ├── 0952_eval.py
+│   ├── 0953_eval.py
+│   ├── 0954___init__.py
+│   ├── 0955_basic.py
+│   ├── 0956_english.py
+│   ├── 0957_generate_cu_files.py
+│   ├── 0958_test_whisper_processor.py
+│   ├── 0959_whisper_processor.py
+│   ├── 0960_eleven-labs.py
+│   ├── 0961___init__.py
+│   ├── 0962___init__.py
+│   ├── 0963_typing_extensions.py
+│   ├── 0964___init__.py
+│   ├── 0965__impl.py
+│   ├── 0966__version.py
+│   ├── 0967___init__.py
+│   ├── 0968__abnf.py
+│   ├── 0969__connection.py
+│   ├── 0970__events.py
+│   ├── 0971__headers.py
+│   ├── 0972__readers.py
+│   ├── 0973__receivebuffer.py
+│   ├── 0974__state.py
+│   ├── 0975__util.py
+│   ├── 0976__version.py
+│   ├── 0977__writers.py
+│   ├── 0978___init__.py
+│   ├── 0979___main__.py
+│   ├── 0980_distro.py
+│   ├── 0981___init__.py
+│   ├── 0982_from_thread.py
+│   ├── 0983_functools.py
+│   ├── 0984_itertools.py
+│   ├── 0985_lowlevel.py
+│   ├── 0986_pytest_plugin.py
+│   ├── 0987_to_interpreter.py
+│   ├── 0988_to_process.py
+│   ├── 0989_to_thread.py
+│   ├── 0990___init__.py
+│   ├── 0991_test_cases.py
+│   ├── 0992_introspection.py
+│   ├── 0993_typing_objects.py
+│   ├── 0994___init__.py
+│   ├── 0995_core_schema.py
+│   ├── 0996___init__.py
+│   ├── 0997__api.py
+│   ├── 0998__exceptions.py
+│   ├── 0999__models.py
+│   ├── 1000__ssl.py
+│   ├── 1001__synchronization.py
+│   ├── 1002__trace.py
+│   ├── 1003__utils.py
+│   ├── 1004___init__.py
+│   ├── 1005__migration.py
+│   ├── 1006_alias_generators.py
+│   ├── 1007_aliases.py
+│   ├── 1008_annotated_handlers.py
+│   ├── 1009_class_validators.py
+│   ├── 1010_color.py
+│   ├── 1011_config.py
+│   ├── 1012_dataclasses.py
+│   ├── 1013_datetime_parse.py
+│   ├── 1014_decorator.py
+│   ├── 1015_env_settings.py
+│   ├── 1016_error_wrappers.py
+│   ├── 1017_errors.py
+│   ├── 1018_fields.py
+│   ├── 1019_functional_serializers.py
+│   ├── 1020_functional_validators.py
+│   ├── 1021_generics.py
+│   ├── 1022_json.py
+│   ├── 1023_json_schema.py
+│   ├── 1024_main.py
+│   ├── 1025_mypy.py
+│   ├── 1026_networks.py
+│   ├── 1027_parse.py
+│   ├── 1028_root_model.py
+│   ├── 1029_schema.py
+│   ├── 1030_tools.py
+│   ├── 1031_type_adapter.py
+│   ├── 1032_types.py
+│   ├── 1033_typing.py
+│   ├── 1034_utils.py
+│   ├── 1035_validate_call_decorator.py
+│   ├── 1036_validators.py
+│   ├── 1037_version.py
+│   ├── 1038_warnings.py
+│   ├── 1039___init__.py
+│   ├── 1040___version__.py
+│   ├── 1041__api.py
+│   ├── 1042__auth.py
+│   ├── 1043__client.py
+│   ├── 1044__config.py
+│   ├── 1045__content.py
+│   ├── 1046__decoders.py
+│   ├── 1047__exceptions.py
+│   ├── 1048__main.py
+│   ├── 1049__models.py
+│   ├── 1050__multipart.py
+│   ├── 1051__status_codes.py
+│   ├── 1052__types.py
+│   ├── 1053__urlparse.py
+│   ├── 1054__urls.py
+│   ├── 1055__utils.py
+│   ├── 1056___init__.py
+│   ├── 1057__base_client.py
+│   ├── 1058__client.py
+│   ├── 1059__compat.py
+│   ├── 1060__constants.py
+│   ├── 1061__exceptions.py
+│   ├── 1062__files.py
+│   ├── 1063__models.py
+│   ├── 1064__qs.py
+│   ├── 1065__resource.py
+│   ├── 1066__response.py
+│   ├── 1067__streaming.py
+│   ├── 1068__types.py
+│   ├── 1069__version.py
+│   ├── 1070___init__.py
+│   ├── 1071__compat.py
+│   ├── 1072__datetime_parse.py
+│   ├── 1073__json.py
+│   ├── 1074__logs.py
+│   ├── 1075__path.py
+│   ├── 1076__proxy.py
+│   ├── 1077__reflection.py
+│   ├── 1078__resources_proxy.py
+│   ├── 1079__streams.py
+│   ├── 1080__sync.py
+│   ├── 1081__transform.py
+│   ├── 1082__typing.py
+│   ├── 1083__utils.py
+│   ├── 1084___init__.py
+│   ├── 1085_batches.py
+│   ├── 1086_embeddings.py
+│   ├── 1087_files.py
+│   ├── 1088_models.py
+│   ├── 1089___init__.py
+│   ├── 1090_batch_cancel_response.py
+│   ├── 1091_batch_create_params.py
+│   ├── 1092_batch_create_response.py
+│   ├── 1093_batch_list_response.py
+│   ├── 1094_batch_retrieve_response.py
+│   ├── 1095_completion_usage.py
+│   ├── 1096_create_embedding_response.py
+│   ├── 1097_embedding.py
+│   ├── 1098_embedding_create_params.py
+│   ├── 1099_file_create_params.py
+│   ├── 1100_file_create_response.py
+│   ├── 1101_file_delete_response.py
+│   ├── 1102_file_info_response.py
+│   ├── 1103_file_list_response.py
+│   ├── 1104_model.py
+│   ├── 1105_model_deleted.py
+│   ├── 1106_model_list_response.py
+│   ├── 1107___init__.py
+│   ├── 1108_speech_create_params.py
+│   ├── 1109_transcription.py
+│   ├── 1110_transcription_create_params.py
+│   ├── 1111_translation.py
+│   ├── 1112_translation_create_params.py
+│   ├── 1113___init__.py
+│   ├── 1114_chat_completion.py
+│   ├── 1115_chat_completion_assistant_message_param.py
+│   ├── 1116_chat_completion_chunk.py
+│   ├── 1117_chat_completion_content_part_image_param.py
+│   ├── 1118_chat_completion_content_part_param.py
+│   ├── 1119_chat_completion_content_part_text_param.py
+│   ├── 1120_chat_completion_function_call_option_param.py
+│   ├── 1121_chat_completion_function_message_param.py
+│   ├── 1122_chat_completion_message.py
+│   ├── 1123_chat_completion_message_param.py
+│   ├── 1124_chat_completion_message_tool_call.py
+│   ├── 1125_chat_completion_message_tool_call_param.py
+│   ├── 1126_chat_completion_named_tool_choice_param.py
+│   ├── 1127_chat_completion_role.py
+│   ├── 1128_chat_completion_system_message_param.py
+│   ├── 1129_chat_completion_token_logprob.py
+│   ├── 1130_chat_completion_tool_choice_option_param.py
+│   ├── 1131_chat_completion_tool_message_param.py
+│   ├── 1132_chat_completion_tool_param.py
+│   ├── 1133_chat_completion_user_message_param.py
+│   ├── 1134_completion_create_params.py
+│   ├── 1135___init__.py
+│   ├── 1136_error_object.py
+│   ├── 1137_function_definition.py
+│   ├── 1138_function_parameters.py
+│   ├── 1139___init__.py
+│   ├── 1140_function_definition.py
+│   ├── 1141_function_parameters.py
+│   ├── 1142___init__.py
+│   ├── 1143_audio.py
+│   ├── 1144_speech.py
+│   ├── 1145_transcriptions.py
+│   ├── 1146_translations.py
+│   ├── 1147___init__.py
+│   ├── 1148_chat.py
+│   ├── 1149_completions.py
+│   ├── 1150___init__.py
+│   ├── 1151_asgi.py
+│   ├── 1152_base.py
+│   ├── 1153_default.py
+│   ├── 1154_mock.py
+│   ├── 1155_wsgi.py
+│   ├── 1156__config.py
+│   ├── 1157__core_metadata.py
+│   ├── 1158__core_utils.py
+│   ├── 1159__dataclasses.py
+│   ├── 1160__decorators.py
+│   ├── 1161__decorators_v1.py
+│   ├── 1162__discriminated_union.py
+│   ├── 1163__docs_extraction.py
+│   ├── 1164__fields.py
+│   ├── 1165__forward_ref.py
+│   ├── 1166__generate_schema.py
+│   ├── 1167__generics.py
+│   ├── 1168__git.py
+│   ├── 1169__import_utils.py
+│   ├── 1170__internal_dataclass.py
+│   ├── 1171__known_annotated_metadata.py
+│   ├── 1172__mock_val_ser.py
+│   ├── 1173__model_construction.py
+│   ├── 1174__namespace_utils.py
+│   ├── 1175__repr.py
+│   ├── 1176__schema_gather.py
+│   ├── 1177__schema_generation_shared.py
+│   ├── 1178__serializers.py
+│   ├── 1179__signature.py
+│   ├── 1180__typing_extra.py
+│   ├── 1181__utils.py
+│   ├── 1182__validate_call.py
+│   ├── 1183__validators.py
+│   ├── 1184_class_validators.py
+│   ├── 1185_config.py
+│   ├── 1186_copy_internals.py
+│   ├── 1187_decorator.py
+│   ├── 1188_json.py
+│   ├── 1189_parse.py
+│   ├── 1190_tools.py
+│   ├── 1191___init__.py
+│   ├── 1192_arguments_schema.py
+│   ├── 1193_missing_sentinel.py
+│   ├── 1194_pipeline.py
+│   ├── 1195___init__.py
+│   ├── 1196__loader.py
+│   ├── 1197__schema_validator.py
+│   ├── 1198___init__.py
+│   ├── 1199__hypothesis_plugin.py
+│   ├── 1200_annotated_types.py
+│   ├── 1201_class_validators.py
+│   ├── 1202_color.py
+│   ├── 1203_config.py
+│   ├── 1204_dataclasses.py
+│   ├── 1205_datetime_parse.py
+│   ├── 1206_decorator.py
+│   ├── 1207_env_settings.py
+│   ├── 1208_error_wrappers.py
+│   ├── 1209_errors.py
+│   ├── 1210_fields.py
+│   ├── 1211_generics.py
+│   ├── 1212_json.py
+│   ├── 1213_main.py
+│   ├── 1214_mypy.py
+│   ├── 1215_networks.py
+│   ├── 1216_parse.py
+│   ├── 1217_schema.py
+│   ├── 1218_tools.py
+│   ├── 1219_types.py
+│   ├── 1220_typing.py
+│   ├── 1221_utils.py
+│   ├── 1222_validators.py
+│   ├── 1223_version.py
+│   ├── 1224___init__.py
+│   ├── 1225_connection.py
+│   ├── 1226_connection_pool.py
+│   ├── 1227_http11.py
+│   ├── 1228_http2.py
+│   ├── 1229_http_proxy.py
+│   ├── 1230_interfaces.py
+│   ├── 1231_socks_proxy.py
+│   ├── 1232_anyio.py
+│   ├── 1233_auto.py
+│   ├── 1234_base.py
+│   ├── 1235_mock.py
+│   ├── 1236_sync.py
+│   ├── 1237_trio.py
+│   ├── 1238___init__.py
+│   ├── 1239_connection.py
+│   ├── 1240_connection_pool.py
+│   ├── 1241_http11.py
+│   ├── 1242_http2.py
+│   ├── 1243_http_proxy.py
+│   ├── 1244_interfaces.py
+│   ├── 1245_socks_proxy.py
+│   ├── 1246__asyncio.py
+│   ├── 1247__trio.py
+│   ├── 1248__asyncio_selector_thread.py
+│   ├── 1249__contextmanagers.py
+│   ├── 1250__eventloop.py
+│   ├── 1251__exceptions.py
+│   ├── 1252__fileio.py
+│   ├── 1253__resources.py
+│   ├── 1254__signals.py
+│   ├── 1255__sockets.py
+│   ├── 1256__streams.py
+│   ├── 1257__subprocesses.py
+│   ├── 1258__synchronization.py
+│   ├── 1259__tasks.py
+│   ├── 1260__tempfile.py
+│   ├── 1261__testing.py
+│   ├── 1262__typedattr.py
+│   ├── 1263___init__.py
+│   ├── 1264__eventloop.py
+│   ├── 1265__resources.py
+│   ├── 1266__sockets.py
+│   ├── 1267__streams.py
+│   ├── 1268__subprocesses.py
+│   ├── 1269__tasks.py
+│   ├── 1270__testing.py
+│   ├── 1271_buffered.py
+│   ├── 1272_file.py
+│   ├── 1273_memory.py
+│   ├── 1274_stapled.py
+│   ├── 1275_text.py
+│   ├── 1276_tls.py
+│   ├── 1277_test_sniffio.py
+│   ├── 1278_sitecustomize.py
+│   ├── 1279_setup.py
+│   ├── 1280_conf.py
+│   ├── 1281___init__.py
+│   ├── 1282__common.py
+│   ├── 1283__compat.py
+│   ├── 1284__psaix.py
+│   ├── 1285__psbsd.py
+│   ├── 1286__pslinux.py
+│   ├── 1287__psosx.py
+│   ├── 1288__psposix.py
+│   ├── 1289__pssunos.py
+│   ├── 1290__pswindows.py
+│   ├── 1291_battery.py
+│   ├── 1292_cpu_distribution.py
+│   ├── 1293_disk_usage.py
+│   ├── 1294_fans.py
+│   ├── 1295_free.py
+│   ├── 1296_ifconfig.py
+│   ├── 1297_iotop.py
+│   ├── 1298_killall.py
+│   ├── 1299_meminfo.py
+│   ├── 1300_netstat.py
+│   ├── 1301_nettop.py
+│   ├── 1302_pidof.py
+│   ├── 1303_pmap.py
+│   ├── 1304_procinfo.py
+│   ├── 1305_procsmem.py
+│   ├── 1306_ps.py
+│   ├── 1307_pstree.py
+│   ├── 1308_sensors.py
+│   ├── 1309_temperatures.py
+│   ├── 1310_top.py
+│   ├── 1311_who.py
+│   ├── 1312_winservices.py
+│   ├── 1313_bench_oneshot.py
+│   ├── 1314_bench_oneshot_2.py
+│   ├── 1315_check_broken_links.py
+│   ├── 1316_clinter.py
+│   ├── 1317_convert_readme.py
+│   ├── 1318_download_wheels_appveyor.py
+│   ├── 1319_download_wheels_github.py
+│   ├── 1320_generate_manifest.py
+│   ├── 1321_git_pre_commit.py
+│   ├── 1322_print_access_denied.py
+│   ├── 1323_print_announce.py
+│   ├── 1324_print_api_speed.py
+│   ├── 1325_print_dist.py
+│   ├── 1326_print_downloads.py
+│   ├── 1327_print_hashes.py
+│   ├── 1328_print_timeline.py
+│   ├── 1329_purge_installation.py
+│   ├── 1330_winmake.py
+│   ├── 1331___init__.py
+│   ├── 1332___main__.py
+│   ├── 1333_runner.py
+│   ├── 1334_test_aix.py
+│   ├── 1335_test_bsd.py
+│   ├── 1336_test_connections.py
+│   ├── 1337_test_contracts.py
+│   ├── 1338_test_linux.py
+│   ├── 1339_test_memleaks.py
+│   ├── 1340_test_misc.py
+│   ├── 1341_test_osx.py
+│   ├── 1342_test_posix.py
+│   ├── 1343_test_process.py
+│   ├── 1344_test_sunos.py
+│   ├── 1345_test_system.py
+│   ├── 1346_test_testutils.py
+│   ├── 1347_test_unicode.py
+│   ├── 1348_test_windows.py
+│   ├── 1349_bottom_tier.py
+│   ├── 1350_dag_orchestrator.py
+│   ├── 1351_meta_upgrade_20260805_000212.py
+│   ├── __pycache__
+│   │   ├── agape_cascade_v28.cpython-314.pyc
+│   │   ├── agape_qa_engine.cpython-314.pyc
+│   │   ├── aider_task_runner.cpython-314.pyc
+│   │   ├── asset_assign_pipeline.cpython-314.pyc
+│   │   ├── asset_preclassify.cpython-314.pyc
+│   │   ├── asset_preclassify_v2.cpython-314.pyc
+│   │   ├── boardroom_router.cpython-314.pyc
+│   │   ├── bot_loop_v1.cpython-314.pyc
+│   │   ├── build_core_view.cpython-314.pyc
+│   │   ├── config_tiers.cpython-314.pyc
+│   │   ├── contribution_tier_v1.cpython-314.pyc
+│   │   ├── contribution_tier_v2.cpython-314.pyc
+│   │   ├── cosmo_rack.cpython-314.pyc
+│   │   ├── db_recon.cpython-314.pyc
+│   │   ├── doc_compile.cpython-314.pyc
+│   │   ├── embed_index_v1.cpython-314.pyc
+│   │   ├── env_map.cpython-314.pyc
+│   │   ├── fix_planetary_math_commit_v2.cpython-314.pyc
+│   │   ├── fix_planetary_math_v1.cpython-314.pyc
+│   │   ├── fleet_closeout_v6_20260920.cpython-314.pyc
+│   │   ├── force_merge_push_v1.cpython-314.pyc
+│   │   ├── gh_hygiene_apply_v1.cpython-314.pyc
+│   │   ├── git_push_delete_v9_20260920.cpython-314.pyc
+│   │   ├── goals_rebuild_v1_20260920.cpython-314.pyc
+│   │   ├── goals_rebuild_v2_20260920.cpython-314.pyc
+│   │   ├── goals_rebuild_v3_20260920.cpython-314.pyc
+│   │   ├── h003_log.cpython-314.pyc
+│   │   ├── hive_nursery.cpython-314.pyc
+│   │   ├── init_knowledge_db.cpython-314.pyc
+│   │   ├── knowledge_probe_v1.cpython-314.pyc
+│   │   ├── large_file_cleanup.cpython-314.pyc
+│   │   ├── lb_loop_v2.cpython-314.pyc
+│   │   ├── license_fleet_continue_v1.cpython-314.pyc
+│   │   ├── light_cone_router.cpython-314.pyc
+│   │   ├── llm_rag_integration.cpython-314.pyc
+│   │   ├── lumo_lib.cpython-314.pyc
+│   │   ├── markor_compiler.cpython-314.pyc
+│   │   ├── master_harvest_v3_20260920.cpython-314.pyc
+│   │   ├── master_purge_v7_20260920.cpython-314.pyc
+│   │   ├── master_truth_v10_20260920.cpython-314.pyc
+│   │   ├── model_symposium.cpython-314.pyc
+│   │   ├── multi_router.cpython-314.pyc
+│   │   ├── need_gate.cpython-314.pyc
+│   │   ├── next_actions_v2_20260920.cpython-314.pyc
+│   │   ├── openroot_master_deploy.cpython-314.pyc
+│   │   ├── openroot_mcp_v1.cpython-314.pyc
+│   │   ├── openrouter_client_v1.cpython-314.pyc
+│   │   ├── popw_hang.cpython-314.pyc
+│   │   ├── pr59_reopen_squash_v2.cpython-314.pyc
+│   │   ├── push_guard.cpython-314.pyc
+│   │   ├── queue_advance_v1.cpython-314.pyc
+│   │   ├── queue_directive.cpython-314.pyc
+│   │   ├── relay_v1.cpython-314.pyc
+│   │   ├── rescue_a15_unique.cpython-314.pyc
+│   │   ├── resolve_pr58_final.cpython-314.pyc
+│   │   ├── restore_readme_profile_landing_v1.cpython-314.pyc
+│   │   ├── run_triage.cpython-314.pyc
+│   │   ├── secure_and_commit_v5_20260920.cpython-314.pyc
+│   │   ├── session_seal_v2.cpython-314.pyc
+│   │   ├── sqlite_params.cpython-314.pyc
+│   │   ├── terminal_log_rag.cpython-314.pyc
+│   │   ├── tier_dispatch_v1.cpython-314.pyc
+│   │   ├── todo_processor.cpython-314.pyc
+│   │   ├── triage100.cpython-314.pyc
+│   │   ├── unified_workflow_v1.cpython-314.pyc
+│   │   ├── universal_index_pipeline.cpython-314.pyc
+│   │   ├── universal_unpack.cpython-314.pyc
+│   │   ├── window_extract_v1.cpython-314.pyc
+│   │   ├── zd_census.cpython-314.pyc
+│   │   └── zombie_ref_kill_v8_20260920.cpython-314.pyc
+│   ├── abstract_grade.sh
+│   ├── agape_cascade_v2.py
+│   ├── agape_cascade_v21.py
+│   ├── agape_cascade_v22.py
+│   ├── agape_cascade_v23.py
+│   ├── agape_cascade_v24.py
+│   ├── agape_cascade_v25.py
+│   ├── agape_cascade_v26.py
+│   ├── agape_cascade_v27.py
+│   ├── agape_cascade_v28.py
+│   ├── agape_ledger_chain.py
+│   ├── agape_node_bridge.sh
+│   ├── agape_qa_engine.py
+│   ├── agent.sh
+│   ├── aider_task_runner.py
+│   ├── asset_assign_pipeline.py
+│   ├── asset_preclassify.py
+│   ├── asset_preclassify_v2.py
+│   ├── autoupdate_loop.py
+│   ├── batch_nomic_embed.py
+│   ├── boardroom_router.py
+│   ├── bot_loop_v1.py
+│   ├── bot_stop.sh
+│   ├── build_core_view.py
+│   ├── cascade_release_v2.sh
+│   ├── compound_orchestrate.sh
+│   ├── compound_v1.sh
+│   ├── config_tiers.py
+│   ├── contribution_tier_v1.py
+│   ├── contribution_tier_v2.py
+│   ├── core_view_server.sh
+│   ├── cosmo_rack.py
+│   ├── cycle_manager.py
+│   ├── cycle_recovery_v1.py
+│   ├── daily_loop_v1.sh
+│   ├── db_recon.py
+│   ├── db_tune.sh
+│   ├── doc_compile.py
+│   ├── embed_index_v1.py
+│   ├── enable_vector_embeddings.py
+│   ├── env_map.py
+│   ├── faiss_search.py
+│   ├── final_cleanup.sh
+│   ├── finalize_workflow.sh
+│   ├── find_green777.py
+│   ├── fix_planetary_math_commit_v2.py
+│   ├── fix_planetary_math_v1.py
+│   ├── fleet_check_v1.sh
+│   ├── fleet_closeout_v6_20260920.py
+│   ├── fleet_snapshot_symposium.sh
+│   ├── force_merge_push_v1.py
+│   ├── frp10_probe.sh
+│   ├── frp11_forensics.sh
+│   ├── frp12_execute.sh
+│   ├── frp5_deep_audit.sh
+│   ├── frp6_fleet_squash.sh
+│   ├── frp7_triage.sh
+│   ├── frp8_prune_classify.sh
+│   ├── frp9_tree_dedupe.sh
+│   ├── fuse_router_lb_seal_v1.sh
+│   ├── gh_audit_v2.sh
+│   ├── gh_audit_v3.sh
+│   ├── gh_audit_v3_patched.sh
+│   ├── gh_hygiene_apply_v1.py
+│   ├── git_push_delete_v9_20260920.py
+│   ├── goals_rebuild_v1.sh
+│   ├── goals_rebuild_v1_20260920.py
+│   ├── goals_rebuild_v2_20260920.py
+│   ├── goals_rebuild_v3_20260920.py
+│   ├── goals_rebuild_v4.sh
+│   ├── h003_log.py
+│   ├── hive.sh
+│   ├── hive_nursery.py
+│   ├── hygiene_fix_driver_v1.sh
+│   ├── hygiene_fix_driver_v3.sh
+│   ├── hygiene_fixes_v1.sh
+│   ├── hype_gate.sh
+│   ├── init_knowledge_db.py
+│   ├── key_setup_fuse_v2.sh
+│   ├── keyword_router_v1.py
+│   ├── knowledge_probe_v1.py
+│   ├── knowledge_weave.sh
+│   ├── large_file_cleanup.py
+│   ├── lb.sh
+│   ├── lb_commit_seal_v2.sh
+│   ├── lb_loop_v2.py
+│   ├── lb_stack_gate_all.sh
+│   ├── lb_stack_sweep.sh
+│   ├── lb_team_gate_call.sh
+│   ├── lesson_ingest.py
+│   ├── lesson_stage_v1.py
+│   ├── lessons_v1.sh
+│   ├── license_fleet_continue_v1.py
+│   ├── light_cone_router.py
+│   ├── llm_rag_integration.py
+│   ├── local_rag_search.py
+│   ├── lumo_bridge_bot_v1.py
+│   ├── lumo_bridge_run.sh
+│   ├── lumo_lib.py
+│   ├── markor_compiler.py
+│   ├── master_finalize_v1.sh
+│   ├── master_finalize_v2.sh
+│   ├── master_finalize_v3.sh
+│   ├── master_harvest_v3_20260920.py
+│   ├── master_purge_v7_20260920.py
+│   ├── master_salvage_v1.sh
+│   ├── master_truth_v10_20260920.py
+│   ├── merge_pr59_v1.sh
+│   ├── merge_pr59_v2.sh
+│   ├── merge_pr59_v3.sh
+│   ├── mesh_fix_v3.sh
+│   ├── mesh_publish_v2.sh
+│   ├── mesh_recruit_v1.sh
+│   ├── mesh_refine_v1.sh
+│   ├── mesh_retry_v1.sh
+│   ├── mesh_ship_v2.sh
+│   ├── mobile_audit_trigger.sh
+│   ├── model_prune.sh
+│   ├── model_symposium.py
+│   ├── multi_router.py
+│   ├── need_gate.py
+│   ├── next_actions_20260920_v1.sh
+│   ├── next_actions_v2_20260920.py
+│   ├── ollama_diagnose.sh
+│   ├── onepass_v3.sh
+│   ├── openroot_master_deploy.py
+│   ├── openroot_mcp_v1.py
+│   ├── openroot_public_readiness.py
+│   ├── openroot_unified_launch_v1.sh
+│   ├── openrouter_client_v1.py
+│   ├── pathway_chain_test.sh
+│   ├── popw_hang.py
+│   ├── popw_ledger.py
+│   ├── pr59_reopen_squash_v2.py
+│   ├── pr_intake.sh
+│   ├── profile_update_v1.sh
+│   ├── push_guard.py
+│   ├── qa_fts5.py
+│   ├── queue_advance_v1.py
+│   ├── queue_directive.py
+│   ├── readme_contributors.sh
+│   ├── readme_draft_loop.sh
+│   ├── rebuild_core_workflow.sh
+│   ├── recall
+│   ├── recover_v1.sh
+│   ├── recovery_final_status.sh
+│   ├── refine_next.sh
+│   ├── refinement_loop_v2.sh
+│   ├── refinement_loop_v3.sh
+│   ├── register_pathway.sh
+│   ├── relay_v1.py
+│   ├── relay_v1.py.bak
+│   ├── repo_clean_v1.sh
+│   ├── rescue_a15_unique.py
+│   ├── research_ready_v1.sh
+│   ├── resolve_pathway.sh
+│   ├── resolve_pr58_final.py
+│   ├── resolve_pr58_v1.sh
+│   ├── restore_readme_profile_landing_v1.py
+│   ├── rollout_openroot.sh
+│   ├── run_handoff_v1.sh
+│   ├── run_triage.py
+│   ├── seal_session_v1.sh
+│   ├── secure_and_commit_v4_20260920.py
+│   ├── secure_and_commit_v5_20260920.py
+│   ├── session_seal_v2.py
+│   ├── sqlite_params.py
+│   ├── stack_gate.sh
+│   ├── superlinear.sh
+│   ├── sync_to_optiplex.sh
+│   ├── task_recall.sh
+│   ├── team_gate_v2.sh
+│   ├── terminal_log_rag.py
+│   ├── tier_dispatch_v1.py
+│   ├── todo_processor.py
+│   ├── triage100.py
+│   ├── unified_workflow_v1.py
+│   ├── unify_v2.py
+│   ├── universal_index_pipeline.py
+│   ├── universal_unpack.py
+│   ├── weekly_audit_v1.sh
+│   ├── window_cadence_v1.sh
+│   ├── window_extract_v1.py
+│   ├── window_fuse_v1.py
+│   ├── write_context_bridge.sh
+│   ├── zd_census.py
+│   └── zombie_ref_kill_v8_20260920.py
+├── bot_loop_v1.py
+├── bot_stop.sh
+├── canon
+│   └── src
+│       └── canon.py
+├── cicd_quarantine_seal_v1.sh
+├── consolidation-backups
+│   ├── AeroCement_Ecosystem
+│   │   ├── HEAD
+│   │   ├── config
+│   │   ├── description
+│   │   ├── hooks
+│   │   │   ├── applypatch-msg.sample
+│   │   │   ├── commit-msg.sample
+│   │   │   ├── fsmonitor-watchman.sample
+│   │   │   ├── post-update.sample
+│   │   │   ├── pre-applypatch.sample
+│   │   │   ├── pre-commit.sample
+│   │   │   ├── pre-merge-commit.sample
+│   │   │   ├── pre-push.sample
+│   │   │   ├── pre-rebase.sample
+│   │   │   ├── pre-receive.sample
+│   │   │   ├── prepare-commit-msg.sample
+│   │   │   ├── push-to-checkout.sample
+│   │   │   ├── sendemail-validate.sample
+│   │   │   └── update.sample
+│   │   ├── info
+│   │   │   └── exclude
+│   │   ├── objects
+│   │   │   └── pack
+│   │   └── packed-refs
+│   ├── AeroCement_Ecosystem.tgz
+│   ├── OpenCell-Thermal-System
+│   │   ├── HEAD
+│   │   ├── config
+│   │   ├── description
+│   │   ├── hooks
+│   │   │   ├── applypatch-msg.sample
+│   │   │   ├── commit-msg.sample
+│   │   │   ├── fsmonitor-watchman.sample
+│   │   │   ├── post-update.sample
+│   │   │   ├── pre-applypatch.sample
+│   │   │   ├── pre-commit.sample
+│   │   │   ├── pre-merge-commit.sample
+│   │   │   ├── pre-push.sample
+│   │   │   ├── pre-rebase.sample
+│   │   │   ├── pre-receive.sample
+│   │   │   ├── prepare-commit-msg.sample
+│   │   │   ├── push-to-checkout.sample
+│   │   │   ├── sendemail-validate.sample
+│   │   │   └── update.sample
+│   │   ├── info
+│   │   │   └── exclude
+│   │   ├── objects
+│   │   │   └── pack
+│   │   └── packed-refs
+│   ├── OpenCell-Thermal-System.tgz
+│   ├── aerocement
+│   │   ├── HEAD
+│   │   ├── config
+│   │   ├── description
+│   │   ├── hooks
+│   │   │   ├── applypatch-msg.sample
+│   │   │   ├── commit-msg.sample
+│   │   │   ├── fsmonitor-watchman.sample
+│   │   │   ├── post-update.sample
+│   │   │   ├── pre-applypatch.sample
+│   │   │   ├── pre-commit.sample
+│   │   │   ├── pre-merge-commit.sample
+│   │   │   ├── pre-push.sample
+│   │   │   ├── pre-rebase.sample
+│   │   │   ├── pre-receive.sample
+│   │   │   ├── prepare-commit-msg.sample
+│   │   │   ├── push-to-checkout.sample
+│   │   │   ├── sendemail-validate.sample
+│   │   │   └── update.sample
+│   │   ├── info
+│   │   │   └── exclude
+│   │   ├── objects
+│   │   │   └── pack
+│   │   └── packed-refs
+│   ├── aerocement-calc
+│   │   ├── HEAD
+│   │   ├── config
+│   │   ├── description
+│   │   ├── hooks
+│   │   │   ├── applypatch-msg.sample
+│   │   │   ├── commit-msg.sample
+│   │   │   ├── fsmonitor-watchman.sample
+│   │   │   ├── post-update.sample
+│   │   │   ├── pre-applypatch.sample
+│   │   │   ├── pre-commit.sample
+│   │   │   ├── pre-merge-commit.sample
+│   │   │   ├── pre-push.sample
+│   │   │   ├── pre-rebase.sample
+│   │   │   ├── pre-receive.sample
+│   │   │   ├── prepare-commit-msg.sample
+│   │   │   ├── push-to-checkout.sample
+│   │   │   ├── sendemail-validate.sample
+│   │   │   └── update.sample
+│   │   ├── info
+│   │   │   └── exclude
+│   │   ├── objects
+│   │   │   └── pack
+│   │   └── packed-refs
+│   ├── aerocement-calc.tgz
+│   ├── aerocement.tgz
+│   ├── agape-coordination
+│   │   ├── HEAD
+│   │   ├── config
+│   │   ├── description
+│   │   ├── hooks
+│   │   │   ├── applypatch-msg.sample
+│   │   │   ├── commit-msg.sample
+│   │   │   ├── fsmonitor-watchman.sample
+│   │   │   ├── post-update.sample
+│   │   │   ├── pre-applypatch.sample
+│   │   │   ├── pre-commit.sample
+│   │   │   ├── pre-merge-commit.sample
+│   │   │   ├── pre-push.sample
+│   │   │   ├── pre-rebase.sample
+│   │   │   ├── pre-receive.sample
+│   │   │   ├── prepare-commit-msg.sample
+│   │   │   ├── push-to-checkout.sample
+│   │   │   ├── sendemail-validate.sample
+│   │   │   └── update.sample
+│   │   ├── info
+│   │   │   └── exclude
+│   │   ├── objects
+│   │   │   └── pack
+│   │   └── packed-refs
+│   ├── agape-coordination.tgz
+│   ├── agape-crossover-key
+│   │   ├── HEAD
+│   │   ├── config
+│   │   ├── description
+│   │   ├── hooks
+│   │   │   ├── applypatch-msg.sample
+│   │   │   ├── commit-msg.sample
+│   │   │   ├── fsmonitor-watchman.sample
+│   │   │   ├── post-update.sample
+│   │   │   ├── pre-applypatch.sample
+│   │   │   ├── pre-commit.sample
+│   │   │   ├── pre-merge-commit.sample
+│   │   │   ├── pre-push.sample
+│   │   │   ├── pre-rebase.sample
+│   │   │   ├── pre-receive.sample
+│   │   │   ├── prepare-commit-msg.sample
+│   │   │   ├── push-to-checkout.sample
+│   │   │   ├── sendemail-validate.sample
+│   │   │   └── update.sample
+│   │   ├── info
+│   │   │   └── exclude
+│   │   ├── objects
+│   │   │   └── pack
+│   │   └── packed-refs
+│   ├── agape-crossover-key.tgz
+│   ├── agape-ipfs
+│   │   ├── HEAD
+│   │   ├── config
+│   │   ├── description
+│   │   ├── hooks
+│   │   │   ├── applypatch-msg.sample
+│   │   │   ├── commit-msg.sample
+│   │   │   ├── fsmonitor-watchman.sample
+│   │   │   ├── post-update.sample
+│   │   │   ├── pre-applypatch.sample
+│   │   │   ├── pre-commit.sample
+│   │   │   ├── pre-merge-commit.sample
+│   │   │   ├── pre-push.sample
+│   │   │   ├── pre-rebase.sample
+│   │   │   ├── pre-receive.sample
+│   │   │   ├── prepare-commit-msg.sample
+│   │   │   ├── push-to-checkout.sample
+│   │   │   ├── sendemail-validate.sample
+│   │   │   └── update.sample
+│   │   ├── info
+│   │   │   └── exclude
+│   │   ├── objects
+│   │   │   └── pack
+│   │   └── packed-refs
+│   ├── agape-ipfs.tgz
+│   ├── agape-primitives
+│   │   ├── HEAD
+│   │   ├── config
+│   │   ├── description
+│   │   ├── hooks
+│   │   │   ├── applypatch-msg.sample
+│   │   │   ├── commit-msg.sample
+│   │   │   ├── fsmonitor-watchman.sample
+│   │   │   ├── post-update.sample
+│   │   │   ├── pre-applypatch.sample
+│   │   │   ├── pre-commit.sample
+│   │   │   ├── pre-merge-commit.sample
+│   │   │   ├── pre-push.sample
+│   │   │   ├── pre-rebase.sample
+│   │   │   ├── pre-receive.sample
+│   │   │   ├── prepare-commit-msg.sample
+│   │   │   ├── push-to-checkout.sample
+│   │   │   ├── sendemail-validate.sample
+│   │   │   └── update.sample
+│   │   ├── info
+│   │   │   └── exclude
+│   │   ├── objects
+│   │   │   └── pack
+│   │   └── packed-refs
+│   ├── agape-primitives.tgz
+│   ├── agape-une
+│   │   ├── HEAD
+│   │   ├── config
+│   │   ├── description
+│   │   ├── hooks
+│   │   │   ├── applypatch-msg.sample
+│   │   │   ├── commit-msg.sample
+│   │   │   ├── fsmonitor-watchman.sample
+│   │   │   ├── post-update.sample
+│   │   │   ├── pre-applypatch.sample
+│   │   │   ├── pre-commit.sample
+│   │   │   ├── pre-merge-commit.sample
+│   │   │   ├── pre-push.sample
+│   │   │   ├── pre-rebase.sample
+│   │   │   ├── pre-receive.sample
+│   │   │   ├── prepare-commit-msg.sample
+│   │   │   ├── push-to-checkout.sample
+│   │   │   ├── sendemail-validate.sample
+│   │   │   └── update.sample
+│   │   ├── info
+│   │   │   └── exclude
+│   │   ├── objects
+│   │   │   └── pack
+│   │   └── packed-refs
+│   ├── agape-une.tgz
+│   ├── agapenet
+│   │   ├── HEAD
+│   │   ├── config
+│   │   ├── description
+│   │   ├── hooks
+│   │   │   ├── applypatch-msg.sample
+│   │   │   ├── commit-msg.sample
+│   │   │   ├── fsmonitor-watchman.sample
+│   │   │   ├── post-update.sample
+│   │   │   ├── pre-applypatch.sample
+│   │   │   ├── pre-commit.sample
+│   │   │   ├── pre-merge-commit.sample
+│   │   │   ├── pre-push.sample
+│   │   │   ├── pre-rebase.sample
+│   │   │   ├── pre-receive.sample
+│   │   │   ├── prepare-commit-msg.sample
+│   │   │   ├── push-to-checkout.sample
+│   │   │   ├── sendemail-validate.sample
+│   │   │   └── update.sample
+│   │   ├── info
+│   │   │   └── exclude
+│   │   ├── objects
+│   │   │   └── pack
+│   │   └── packed-refs
+│   ├── agapenet.tgz
+│   ├── agaperesonance
+│   │   ├── HEAD
+│   │   ├── config
+│   │   ├── description
+│   │   ├── hooks
+│   │   │   ├── applypatch-msg.sample
+│   │   │   ├── commit-msg.sample
+│   │   │   ├── fsmonitor-watchman.sample
+│   │   │   ├── post-update.sample
+│   │   │   ├── pre-applypatch.sample
+│   │   │   ├── pre-commit.sample
+│   │   │   ├── pre-merge-commit.sample
+│   │   │   ├── pre-push.sample
+│   │   │   ├── pre-rebase.sample
+│   │   │   ├── pre-receive.sample
+│   │   │   ├── prepare-commit-msg.sample
+│   │   │   ├── push-to-checkout.sample
+│   │   │   ├── sendemail-validate.sample
+│   │   │   └── update.sample
+│   │   ├── info
+│   │   │   └── exclude
+│   │   ├── objects
+│   │   │   └── pack
+│   │   └── packed-refs
+│   ├── agaperesonance.tgz
+│   ├── axiom-library
+│   │   ├── HEAD
+│   │   ├── config
+│   │   ├── description
+│   │   ├── hooks
+│   │   │   ├── applypatch-msg.sample
+│   │   │   ├── commit-msg.sample
+│   │   │   ├── fsmonitor-watchman.sample
+│   │   │   ├── post-update.sample
+│   │   │   ├── pre-applypatch.sample
+│   │   │   ├── pre-commit.sample
+│   │   │   ├── pre-merge-commit.sample
+│   │   │   ├── pre-push.sample
+│   │   │   ├── pre-rebase.sample
+│   │   │   ├── pre-receive.sample
+│   │   │   ├── prepare-commit-msg.sample
+│   │   │   ├── push-to-checkout.sample
+│   │   │   ├── sendemail-validate.sample
+│   │   │   └── update.sample
+│   │   ├── info
+│   │   │   └── exclude
+│   │   ├── objects
+│   │   │   └── pack
+│   │   └── packed-refs
+│   ├── axiom-library.tgz
+│   ├── canonical
+│   │   ├── HEAD
+│   │   ├── config
+│   │   ├── description
+│   │   ├── hooks
+│   │   │   ├── applypatch-msg.sample
+│   │   │   ├── commit-msg.sample
+│   │   │   ├── fsmonitor-watchman.sample
+│   │   │   ├── post-update.sample
+│   │   │   ├── pre-applypatch.sample
+│   │   │   ├── pre-commit.sample
+│   │   │   ├── pre-merge-commit.sample
+│   │   │   ├── pre-push.sample
+│   │   │   ├── pre-rebase.sample
+│   │   │   ├── pre-receive.sample
+│   │   │   ├── prepare-commit-msg.sample
+│   │   │   ├── push-to-checkout.sample
+│   │   │   ├── sendemail-validate.sample
+│   │   │   └── update.sample
+│   │   ├── info
+│   │   │   └── exclude
+│   │   ├── objects
+│   │   │   └── pack
+│   │   └── packed-refs
+│   ├── canonical.tgz
+│   ├── etaledger
+│   │   ├── HEAD
+│   │   ├── config
+│   │   ├── description
+│   │   ├── hooks
+│   │   │   ├── applypatch-msg.sample
+│   │   │   ├── commit-msg.sample
+│   │   │   ├── fsmonitor-watchman.sample
+│   │   │   ├── post-update.sample
+│   │   │   ├── pre-applypatch.sample
+│   │   │   ├── pre-commit.sample
+│   │   │   ├── pre-merge-commit.sample
+│   │   │   ├── pre-push.sample
+│   │   │   ├── pre-rebase.sample
+│   │   │   ├── pre-receive.sample
+│   │   │   ├── prepare-commit-msg.sample
+│   │   │   ├── push-to-checkout.sample
+│   │   │   ├── sendemail-validate.sample
+│   │   │   └── update.sample
+│   │   ├── info
+│   │   │   └── exclude
+│   │   ├── objects
+│   │   │   └── pack
+│   │   └── packed-refs
+│   ├── etaledger.tgz
+│   ├── firmware
+│   │   ├── FETCH_HEAD
+│   │   ├── HEAD
+│   │   ├── config
+│   │   ├── description
+│   │   ├── hooks
+│   │   │   ├── applypatch-msg.sample
+│   │   │   ├── commit-msg.sample
+│   │   │   ├── fsmonitor-watchman.sample
+│   │   │   ├── post-update.sample
+│   │   │   ├── pre-applypatch.sample
+│   │   │   ├── pre-commit.sample
+│   │   │   ├── pre-merge-commit.sample
+│   │   │   ├── pre-push.sample
+│   │   │   ├── pre-rebase.sample
+│   │   │   ├── pre-receive.sample
+│   │   │   ├── prepare-commit-msg.sample
+│   │   │   ├── push-to-checkout.sample
+│   │   │   ├── sendemail-validate.sample
+│   │   │   └── update.sample
+│   │   ├── info
+│   │   │   └── exclude
+│   │   ├── objects
+│   │   │   └── pack
+│   │   ├── packed-refs
+│   │   └── refs
+│   │       ├── remotes
+│   │       └── tags
+│   ├── fractallattice
+│   │   ├── HEAD
+│   │   ├── config
+│   │   ├── description
+│   │   ├── hooks
+│   │   │   ├── applypatch-msg.sample
+│   │   │   ├── commit-msg.sample
+│   │   │   ├── fsmonitor-watchman.sample
+│   │   │   ├── post-update.sample
+│   │   │   ├── pre-applypatch.sample
+│   │   │   ├── pre-commit.sample
+│   │   │   ├── pre-merge-commit.sample
+│   │   │   ├── pre-push.sample
+│   │   │   ├── pre-rebase.sample
+│   │   │   ├── pre-receive.sample
+│   │   │   ├── prepare-commit-msg.sample
+│   │   │   ├── push-to-checkout.sample
+│   │   │   ├── sendemail-validate.sample
+│   │   │   └── update.sample
+│   │   ├── info
+│   │   │   └── exclude
+│   │   ├── objects
+│   │   │   └── pack
+│   │   └── packed-refs
+│   ├── fractallattice.tgz
+│   ├── markor
+│   │   ├── FETCH_HEAD
+│   │   ├── HEAD
+│   │   ├── config
+│   │   ├── description
+│   │   ├── hooks
+│   │   │   ├── applypatch-msg.sample
+│   │   │   ├── commit-msg.sample
+│   │   │   ├── fsmonitor-watchman.sample
+│   │   │   ├── post-update.sample
+│   │   │   ├── pre-applypatch.sample
+│   │   │   ├── pre-commit.sample
+│   │   │   ├── pre-merge-commit.sample
+│   │   │   ├── pre-push.sample
+│   │   │   ├── pre-rebase.sample
+│   │   │   ├── pre-receive.sample
+│   │   │   ├── prepare-commit-msg.sample
+│   │   │   ├── push-to-checkout.sample
+│   │   │   ├── sendemail-validate.sample
+│   │   │   └── update.sample
+│   │   ├── info
+│   │   │   └── exclude
+│   │   ├── objects
+│   │   │   └── pack
+│   │   ├── packed-refs
+│   │   └── refs
+│   │       ├── remotes
+│   │       └── tags
+│   ├── markor.tgz
+│   ├── openroot-canon
+│   │   ├── HEAD
+│   │   ├── config
+│   │   ├── description
+│   │   ├── hooks
+│   │   │   ├── applypatch-msg.sample
+│   │   │   ├── commit-msg.sample
+│   │   │   ├── fsmonitor-watchman.sample
+│   │   │   ├── post-update.sample
+│   │   │   ├── pre-applypatch.sample
+│   │   │   ├── pre-commit.sample
+│   │   │   ├── pre-merge-commit.sample
+│   │   │   ├── pre-push.sample
+│   │   │   ├── pre-rebase.sample
+│   │   │   ├── pre-receive.sample
+│   │   │   ├── prepare-commit-msg.sample
+│   │   │   ├── push-to-checkout.sample
+│   │   │   ├── sendemail-validate.sample
+│   │   │   └── update.sample
+│   │   ├── info
+│   │   │   └── exclude
+│   │   ├── objects
+│   │   │   └── pack
+│   │   └── packed-refs
+│   ├── openroot-canon.tgz
+│   ├── openroot-ecosystem
+│   │   ├── HEAD
+│   │   ├── config
+│   │   ├── description
+│   │   ├── hooks
+│   │   │   ├── applypatch-msg.sample
+│   │   │   ├── commit-msg.sample
+│   │   │   ├── fsmonitor-watchman.sample
+│   │   │   ├── post-update.sample
+│   │   │   ├── pre-applypatch.sample
+│   │   │   ├── pre-commit.sample
+│   │   │   ├── pre-merge-commit.sample
+│   │   │   ├── pre-push.sample
+│   │   │   ├── pre-rebase.sample
+│   │   │   ├── pre-receive.sample
+│   │   │   ├── prepare-commit-msg.sample
+│   │   │   ├── push-to-checkout.sample
+│   │   │   ├── sendemail-validate.sample
+│   │   │   └── update.sample
+│   │   ├── info
+│   │   │   └── exclude
+│   │   ├── objects
+│   │   │   └── pack
+│   │   └── packed-refs
+│   ├── openroot-ecosystem.tgz
+│   ├── openroot-foundation
+│   │   ├── HEAD
+│   │   ├── config
+│   │   ├── description
+│   │   ├── hooks
+│   │   │   ├── applypatch-msg.sample
+│   │   │   ├── commit-msg.sample
+│   │   │   ├── fsmonitor-watchman.sample
+│   │   │   ├── post-update.sample
+│   │   │   ├── pre-applypatch.sample
+│   │   │   ├── pre-commit.sample
+│   │   │   ├── pre-merge-commit.sample
+│   │   │   ├── pre-push.sample
+│   │   │   ├── pre-rebase.sample
+│   │   │   ├── pre-receive.sample
+│   │   │   ├── prepare-commit-msg.sample
+│   │   │   ├── push-to-checkout.sample
+│   │   │   ├── sendemail-validate.sample
+│   │   │   └── update.sample
+│   │   ├── info
+│   │   │   └── exclude
+│   │   ├── objects
+│   │   │   └── pack
+│   │   └── packed-refs
+│   ├── openroot-foundation.tgz
+│   ├── openroot-spoke-template
+│   │   ├── HEAD
+│   │   ├── config
+│   │   ├── description
+│   │   ├── hooks
+│   │   │   ├── applypatch-msg.sample
+│   │   │   ├── commit-msg.sample
+│   │   │   ├── fsmonitor-watchman.sample
+│   │   │   ├── post-update.sample
+│   │   │   ├── pre-applypatch.sample
+│   │   │   ├── pre-commit.sample
+│   │   │   ├── pre-merge-commit.sample
+│   │   │   ├── pre-push.sample
+│   │   │   ├── pre-rebase.sample
+│   │   │   ├── pre-receive.sample
+│   │   │   ├── prepare-commit-msg.sample
+│   │   │   ├── push-to-checkout.sample
+│   │   │   ├── sendemail-validate.sample
+│   │   │   └── update.sample
+│   │   ├── info
+│   │   │   └── exclude
+│   │   ├── objects
+│   │   │   └── pack
+│   │   └── packed-refs
+│   ├── openroot-spoke-template.tgz
+│   ├── oscillation-mesh
+│   │   ├── HEAD
+│   │   ├── config
+│   │   ├── description
+│   │   ├── hooks
+│   │   │   ├── applypatch-msg.sample
+│   │   │   ├── commit-msg.sample
+│   │   │   ├── fsmonitor-watchman.sample
+│   │   │   ├── post-update.sample
+│   │   │   ├── pre-applypatch.sample
+│   │   │   ├── pre-commit.sample
+│   │   │   ├── pre-merge-commit.sample
+│   │   │   ├── pre-push.sample
+│   │   │   ├── pre-rebase.sample
+│   │   │   ├── pre-receive.sample
+│   │   │   ├── prepare-commit-msg.sample
+│   │   │   ├── push-to-checkout.sample
+│   │   │   ├── sendemail-validate.sample
+│   │   │   └── update.sample
+│   │   ├── info
+│   │   │   └── exclude
+│   │   ├── objects
+│   │   │   └── pack
+│   │   └── packed-refs
+│   ├── oscillation-mesh.tgz
+│   ├── renaissance-protocol
+│   │   ├── HEAD
+│   │   ├── config
+│   │   ├── description
+│   │   ├── hooks
+│   │   │   ├── applypatch-msg.sample
+│   │   │   ├── commit-msg.sample
+│   │   │   ├── fsmonitor-watchman.sample
+│   │   │   ├── post-update.sample
+│   │   │   ├── pre-applypatch.sample
+│   │   │   ├── pre-commit.sample
+│   │   │   ├── pre-merge-commit.sample
+│   │   │   ├── pre-push.sample
+│   │   │   ├── pre-rebase.sample
+│   │   │   ├── pre-receive.sample
+│   │   │   ├── prepare-commit-msg.sample
+│   │   │   ├── push-to-checkout.sample
+│   │   │   ├── sendemail-validate.sample
+│   │   │   └── update.sample
+│   │   ├── info
+│   │   │   └── exclude
+│   │   ├── objects
+│   │   │   └── pack
+│   │   └── packed-refs
+│   ├── renaissance-protocol.tgz
+│   ├── skills-introduction-to-github
+│   │   ├── HEAD
+│   │   ├── config
+│   │   ├── description
+│   │   ├── hooks
+│   │   │   ├── applypatch-msg.sample
+│   │   │   ├── commit-msg.sample
+│   │   │   ├── fsmonitor-watchman.sample
+│   │   │   ├── post-update.sample
+│   │   │   ├── pre-applypatch.sample
+│   │   │   ├── pre-commit.sample
+│   │   │   ├── pre-merge-commit.sample
+│   │   │   ├── pre-push.sample
+│   │   │   ├── pre-rebase.sample
+│   │   │   ├── pre-receive.sample
+│   │   │   ├── prepare-commit-msg.sample
+│   │   │   ├── push-to-checkout.sample
+│   │   │   ├── sendemail-validate.sample
+│   │   │   └── update.sample
+│   │   ├── info
+│   │   │   └── exclude
+│   │   ├── objects
+│   │   │   └── pack
+│   │   └── packed-refs
+│   ├── skills-introduction-to-github.tgz
+│   ├── und-protocol
+│   │   ├── HEAD
+│   │   ├── config
+│   │   ├── description
+│   │   ├── hooks
+│   │   │   ├── applypatch-msg.sample
+│   │   │   ├── commit-msg.sample
+│   │   │   ├── fsmonitor-watchman.sample
+│   │   │   ├── post-update.sample
+│   │   │   ├── pre-applypatch.sample
+│   │   │   ├── pre-commit.sample
+│   │   │   ├── pre-merge-commit.sample
+│   │   │   ├── pre-push.sample
+│   │   │   ├── pre-rebase.sample
+│   │   │   ├── pre-receive.sample
+│   │   │   ├── prepare-commit-msg.sample
+│   │   │   ├── push-to-checkout.sample
+│   │   │   ├── sendemail-validate.sample
+│   │   │   └── update.sample
+│   │   ├── info
+│   │   │   └── exclude
+│   │   ├── objects
+│   │   │   └── pack
+│   │   └── packed-refs
+│   ├── und-protocol.tgz
+│   └── une
+│       ├── HEAD
+│       ├── config
+│       ├── description
+│       ├── hooks
+│       │   ├── applypatch-msg.sample
+│       │   ├── commit-msg.sample
+│       │   ├── fsmonitor-watchman.sample
+│       │   ├── post-update.sample
+│       │   ├── pre-applypatch.sample
+│       │   ├── pre-commit.sample
+│       │   ├── pre-merge-commit.sample
+│       │   ├── pre-push.sample
+│       │   ├── pre-rebase.sample
+│       │   ├── pre-receive.sample
+│       │   ├── prepare-commit-msg.sample
+│       │   ├── push-to-checkout.sample
+│       │   ├── sendemail-validate.sample
+│       │   └── update.sample
+│       ├── info
+│       │   └── exclude
+│       ├── objects
+│       │   └── pack
+│       └── packed-refs
+├── context_bridge
+│   ├── .gate_exclude
+│   ├── INBOX.md
+│   ├── POPW.report
+│   ├── archive-20260920
+│   │   ├── MASTER_TODO.meshdraft.20260920_052939.md
+│   │   ├── MASTER_TODO.meshdraft.retry1.20260920_053533.md
+│   │   ├── MASTER_TODO.meshdraft.retry2.20260920_053533.md
+│   │   ├── salvaged_tasks_20260920_014329.txt
+│   │   ├── salvaged_tasks_v2_20260920_015234.txt
+│   │   └── salvaged_tasks_v2_20260920_015411.txt
+│   ├── bot_loop_20260920_144050.log
+│   ├── cycle-test1.md
+│   ├── cycle_recovery_20260921_222830.md
+│   ├── cycle_recovery_20260921_223141.md
+│   ├── dirt-preserve-20260921_063313.patch
+│   ├── doc_compile_termux_20260920_222842.md
+│   ├── drift_report_20260921.txt
+│   ├── final_recovery_20260921_223334.md
+│   ├── final_recovery_20260921_223505.md
+│   ├── fragments
+│   │   └── README.md
+│   ├── gitignore.local-20260920_174704.patch
+│   ├── handoff_window-close-20260921-am.md
+│   ├── handoff_window-close-20260921.md
+│   ├── held-refinement_loop_v1.sh-20260920_200006.bak
+│   ├── held-workflow_recover.sh-20260920_200006.bak
+│   ├── hive-live-convergence-20260920_230844.md
+│   ├── hive_runs
+│   │   ├── hive_20260924_075226.txt
+│   │   └── hive_20260924_080117.txt
+│   ├── lb-loop-milestone-final.md
+│   ├── lessons_draft_20260920.md
+│   ├── lumo-handoff-2026-09-13-evening.md
+│   ├── lumo-handoff-2026-09-14-night.md
+│   ├── popw.tail
+│   ├── pre-pull-diff-20260921_061158.patch
+│   ├── pub_ready_issues_PUB_READY_V2_20260921_201300.json
+│   ├── quarantine
+│   │   ├── instruments-20260921_154022
+│   │   │   ├── MANIFEST.md
+│   │   │   ├── hive_live_convergence_v1.sh
+│   │   │   ├── refinement_loop_v1.sh
+│   │   │   ├── secure_and_commit_v4_20260920.py
+│   │   │   └── workflow_recover.sh
+│   │   └── instruments-20260921_154522
+│   │       └── MANIFEST.md
+│   ├── quarantine-docs-20260920_204735
+│   │   ├── .fix_lb_loop.sh
+│   │   ├── .fix_lb_loop_v2.sh
+│   │   ├── .lb_resume.sh
+│   │   ├── .optiplex_lb_sync.sh
+│   │   ├── doc_compile_optiplex_20260920_193059.md
+│   │   ├── doc_compile_optiplex_20260920_193111.md
+│   │   ├── doc_compile_optiplex_20260920_193123.md
+│   │   ├── doc_compile_optiplex_20260920_193135.md
+│   │   ├── doc_compile_optiplex_20260920_193146.md
+│   │   ├── doc_compile_optiplex_20260920_193157.md
+│   │   ├── doc_compile_optiplex_20260920_193209.md
+│   │   ├── doc_compile_optiplex_20260920_193220.md
+│   │   ├── doc_compile_optiplex_20260920_193243.md
+│   │   ├── doc_compile_optiplex_20260920_193254.md
+│   │   ├── doc_compile_optiplex_20260920_193305.md
+│   │   ├── doc_compile_optiplex_20260920_193316.md
+│   │   ├── doc_compile_optiplex_20260920_193328.md
+│   │   ├── doc_compile_optiplex_20260920_193339.md
+│   │   ├── doc_compile_optiplex_20260920_193350.md
+│   │   ├── doc_compile_optiplex_20260920_193401.md
+│   │   ├── doc_compile_optiplex_20260920_200044.md
+│   │   └── doc_compile_optiplex_20260920_200743.md
+│   ├── readme-loop-20260920_204318.log
+│   ├── readme-loop-20260920_205456-popw.log
+│   ├── readme_backup_20260921_154022
+│   │   └── README.md
+│   ├── readme_backup_20260921_154522
+│   │   └── README.md
+│   ├── recovery_report_20260923_194243.md
+│   ├── refinement_loop_v1.sh
+│   ├── release-notes-v2026.09.21-agape-cascade-ledger-discipline-20260921_061920.md
+│   ├── release-notes-v2026.09.21-agape-cascade-ledger-discipline-20260921_062311.md
+│   ├── release-notes-v2026.09.21-agape-cascade-ledger-discipline-20260921_062339.md
+│   ├── release-notes-v2026.09.21-agape-cascade-ledger-discipline-20260921_062731.md
+│   ├── report-fleet-closeout-20260920_021445.md
+│   ├── report-fleet-closeout-20260920_021529.md
+│   ├── report-git-push-delete-20260920_023056.md
+│   ├── report-goals-rebuild-20260920_032224.md
+│   ├── report-master-harvest-20260920_020335.md
+│   ├── report-master-purge-20260920_022117.md
+│   ├── report-master-purge-20260920_022242.md
+│   ├── report-master-truth-20260920_024434.md
+│   ├── report-master-truth-20260920_024653.md
+│   ├── report-master-truth-20260920_024736.md
+│   ├── report-next-actions-20260920_014329.md
+│   ├── report-next-actions-v2-20260920_015234.md
+│   ├── report-next-actions-v2-20260920_015411.md
+│   ├── report-secure-commit-20260920_021102.md
+│   ├── report-zombie-ref-kill-20260920_022749.md
+│   ├── report-zombie-ref-kill-20260920_023720.md
+│   ├── router-detached-20260920_234544.log
+│   ├── runtime_backups
+│   │   └── team_gate.pre-rebase-20260920_222737.db
+│   ├── seed_master-20260920_052939.log
+│   ├── seed_master-20260920_053533.log
+│   ├── seed_master-20260920_054032.log
+│   ├── seed_next-compound-v1.1-20260920_074315.md
+│   ├── seed_next-compound-v1.1-20260920_074847.md
+│   ├── seed_refinery_20260920_143226.md
+│   ├── session-2026-09-18_pr58-resolve.md
+│   ├── session-2026-09-19-gh-audit-triage.md
+│   ├── session-2026-09-19-pr63-seal.md
+│   ├── session-2026-09-20-floorlift-seal.md
+│   ├── session-2026-09-20-floorlift.md
+│   ├── session-2026-09-21-lbloop-fix3.md
+│   ├── session-2026-09-21-lbloop-fix4.md
+│   ├── session-2026-09-21-lbloop-seal-v2.md
+│   ├── session-2026-09-21-pub-arc-complete.md
+│   ├── session-2026-09-21-pubready-seal.md
+│   ├── session-2026-09-21-router-results.md
+│   ├── session-20260918_122826-mesh-recruit.md
+│   ├── session-20260918_123446-mesh-publish.md
+│   ├── session-20260918_123633-fix.md
+│   ├── session-20260918_123904-goals.md
+│   ├── session-20260918_124552-audit.md
+│   ├── session-20260918_125934-research.md
+│   ├── session-20260918_close-sealed.md
+│   ├── session-20260918_late-sealed.md
+│   ├── session-20260919-0750-merge-sealed.md
+│   ├── session-20260919-1349-issue53-goals-sealed.md
+│   ├── session-20260921-weekly.md
+│   ├── session-cicd-closeout-20260921_160334.md
+│   ├── session-close-20260921-am.md
+│   ├── session-docrefresh-20260921_154522.md
+│   ├── session-v1.0.0-launch-20260921_161947.md
+│   ├── session-v1.0.0-launch-20260921_162046.md
+│   ├── strays
+│   │   └── tname.preserved-20260921_142322
+│   ├── terminal-history-window-20260921_035509.md
+│   ├── tree_snapshot_20260924_151058.txt
+│   └── workflow_recover.sh
+├── cosmos_engine
+│   └── KERNEL_SEED
+├── data
+│   ├── a15_only_canonical.tar.gz
+│   ├── agape_cascade_test_v2.py
+│   ├── canonical_index.db
+│   ├── contributions.db
+│   ├── env_map.json
+│   ├── fts_index.db
+│   ├── lb_loop.db
+│   ├── lessons.db
+│   ├── lessons.db.live-20260921_061555
+│   ├── logs
+│   │   └── boardroom_ledger.jsonl
+│   ├── manifest.txt
+│   ├── master_heads_ledger_20260920_020335.json
+│   ├── master_index.txt
+│   ├── master_truth_20260920_024434.json
+│   ├── master_truth_20260920_024653.json
+│   ├── master_truth_20260920_024736.json
+│   ├── md_fts_v1.db
+│   ├── mesh.db
+│   ├── mesh_index.db
+│   ├── oracle_etha_ledger.jsonl
+│   ├── orchestrate_metrics.json
+│   ├── pathways.json
+│   ├── proof_cache.db
+│   ├── recent_runs_20260920_014329.json
+│   ├── refinement.db
+│   ├── refinery.db
+│   ├── relay.db
+│   ├── relay_smoke_20260918-211656.log
+│   ├── repo_drift.db
+│   ├── rescue_staging
+│   │   └── MANIFEST.json
+│   ├── router_ledger.db
+│   ├── router_memory
+│   │   ├── r001.md
+│   │   ├── r002.md
+│   │   ├── r003.md
+│   │   ├── r004.md
+│   │   └── r005.md
+│   ├── species.db
+│   ├── team_gate.db
+│   ├── team_gate.db.live-20260921_061555
+│   ├── terminal_log.db
+│   ├── theorem_forge
+│   │   ├── in
+│   │   │   └── kernel.jsonl
+│   │   ├── out
+│   │   ├── src
+│   │   │   └── theorem_forge.py
+│   │   └── theorem_forge.db
+│   ├── thermal_frontier_v1.json
+│   ├── thermal_frontier_v2_water.json
+│   ├── tier_dispatch.db
+│   └── unstable_prs_20260920_014329.json
+├── data_bot_state.json
+├── docs
+│   ├── BLOCKCHAIN-OF-CONTRIBUTIONS.md
+│   ├── CONSTITUTION.md
+│   ├── CONTRIBUTING.md
+│   ├── GOALS.md
+│   ├── MASTER_TODO.md
+│   ├── README.draft.md
+│   ├── README.md
+│   ├── SCOPE.md
+│   ├── SUPERLINEAR.md
+│   ├── SYSTEM_ACTION_PLAN.md
+│   ├── UNIFIED_ARCHITECTURE.md
+│   ├── markdown
+│   │   ├── JSON_DATA.md
+│   │   ├── MARKDOWN_DOCS.md
+│   │   ├── MASTER_INDEX.md
+│   │   ├── PYTHON_FILES.md
+│   │   └── SHELL_SCRIPTS.md
+│   └── research
+│       ├── argf-durability.md
+│       ├── cardboard-membrane.md
+│       ├── cascade-heatbalance.md
+│       ├── cloud9-relay.md
+│       ├── dish-mesh-reflector.md
+│       ├── double-skin-catenary.md
+│       ├── labyrinth-cooling.md
+│       ├── opencell-absorber.md
+│       └── thixo-foam.md
+├── enable_vector_embeddings.py
+├── gh_audit_20260919_101948
+│   ├── repos.json
+│   └── unmerged_branches.tsv
+├── harvest
+│   ├── seed_oracle.lock
+│   └── seed_oracle_boot.log
+├── human_gate_bundle
+│   └── bundle-20260921_040203
+│       ├── catalog.tsv
+│       └── dossier.md
+├── index.html
+├── kernel
+│   └── KERNEL_SEED
+├── lessons
+│   └── window-20260921_004746.md
+├── logs_unify_20260920_142739.txt
+├── lumo_lane
+│   ├── inbox
+│   │   ├── round001_t3_20260921_034235.md
+│   │   └── round001_t3_20260921_034529.md
+│   └── outbox
+├── markor_compiler.py
+├── outbox
+│   ├── GREEN777_SSH.txt
+│   ├── GREEN777_SSH_find.txt
+│   ├── aerodisc_casing.gcode
+│   └── agape_master_manifest.json
+├── reports
+│   ├── autopsy_gh_audit_detached_20260919_120307_123905.txt
+│   ├── gh_audit_20260919_104033
+│   │   ├── hygiene_flags.tsv
+│   │   ├── identical_branches.tsv
+│   │   ├── repo_inventory.tsv
+│   │   ├── stale_branches.tsv
+│   │   └── unmerged_ahead.tsv
+│   ├── gh_audit_20260919_105823
+│   │   ├── hygiene_flags.tsv
+│   │   ├── identical_branches.tsv
+│   │   ├── repo_inventory.tsv
+│   │   ├── stale_branches.tsv
+│   │   └── unmerged_ahead.tsv
+│   ├── gh_audit_20260919_111659
+│   │   ├── hygiene_flags.tsv
+│   │   ├── identical_branches.tsv
+│   │   ├── repo_inventory.tsv
+│   │   ├── stale_branches.tsv
+│   │   └── unmerged_ahead.tsv
+│   ├── gh_audit_20260919_111830
+│   │   ├── hygiene_flags.tsv
+│   │   ├── identical_branches.tsv
+│   │   ├── lumo_digest_112409.txt
+│   │   ├── lumo_digest_113152.txt
+│   │   ├── lumo_digest_113415.txt
+│   │   ├── repo_inventory.tsv
+│   │   ├── stale_branches.tsv
+│   │   └── unmerged_ahead.tsv
+│   ├── gh_audit_20260919_114045
+│   │   ├── hygiene_flags.tsv
+│   │   ├── identical_branches.tsv
+│   │   ├── lumo_digest_114212.txt
+│   │   ├── lumo_digest_114241.txt
+│   │   ├── repo_inventory.tsv
+│   │   ├── stale_branches.tsv
+│   │   └── unmerged_ahead.tsv
+│   ├── gh_audit_20260919_120307
+│   │   ├── hygiene_flags.tsv
+│   │   ├── identical_branches.tsv
+│   │   ├── repo_inventory.tsv
+│   │   ├── stale_branches.tsv
+│   │   └── unmerged_ahead.tsv
+│   ├── gh_audit_20260919_123906
+│   │   ├── closed_unmerged_prs.tsv
+│   │   ├── hygiene_flags.tsv
+│   │   ├── identical_branches.tsv
+│   │   ├── repo_inventory.tsv
+│   │   ├── stale_branches.tsv
+│   │   └── unmerged_ahead.tsv
+│   ├── gh_audit_20260919_124217
+│   │   ├── closed_unmerged_prs.tsv
+│   │   ├── hygiene_flags.tsv
+│   │   ├── identical_branches.tsv
+│   │   ├── repo_inventory.tsv
+│   │   ├── stale_branches.tsv
+│   │   └── unmerged_ahead.tsv
+│   ├── gh_audit_detached_20260919_120307.log
+│   ├── gh_audit_detached_20260919_123906.log
+│   ├── gh_audit_detached_20260919_124217.log
+│   ├── gh_hygiene_apply_20260919_181917
+│   │   ├── applied.tsv
+│   │   └── held.tsv
+│   ├── goals_draft
+│   │   ├── GOALS.draft.md
+│   │   ├── MASTER_TODO.draft.md
+│   │   ├── issue53_comment_draft.md
+│   │   ├── pr53_comment_draft.md
+│   │   ├── task_freq.tsv
+│   │   └── task_rank.tsv
+│   ├── lesson_audit-20260918.md
+│   ├── license_fleet_20260919_200632
+│   │   ├── applied.tsv
+│   │   └── held.tsv
+│   ├── license_fleet_20260919_202238
+│   │   ├── applied.tsv
+│   │   └── held.tsv
+│   └── router_r001
+│       ├── t1_draft.md
+│       ├── t2_classify.md
+│       ├── t3_plan.md
+│       └── t4_outline.md
+├── research
+│   └── species
+│       └── robinia_pseudoacacia.md
+├── router_relaunch_proof_v1.sh
+├── router_relaunch_proof_v2.sh
+├── run-remote.sh
+├── seed_master.log
+├── setup-optiplex.sh
+├── site
+│   └── index.html
+├── tests
+│   ├── test_embed_index.py
+│   ├── test_knowledge_probe.py
+│   ├── test_llm_rag_integration.py
+│   ├── test_lumo_lib.py
+│   ├── test_shell_workflows.py
+│   ├── test_sqlite_params.py
+│   └── test_unified_workflow.py
+├── thermal_balance_v63.py
+├── thermal_frontier_v1.py
+├── thermal_frontier_v2_water.py
+├── tmp
+│   └── queue_batch_v1.sh
+├── tools
+│   ├── context_injector.py
+│   ├── run-task-optiplex.sh
+│   ├── run-task-ssh.sh
+│   ├── run-task.sh
+│   └── task-loop.py
+├── unify_v2.py
+├── wiki
+│   ├── Aero-Disc-Exchanger.md
+│   ├── Agape-Taxonomy-36.md
+│   ├── Home.md
+│   └── Permaculture-Integration.md
+└── workareas
+    └── cascade-v28-20260921_060818
+        ├── cascade_report.md
+        └── results.json
+
+258 directories, 3896 files
