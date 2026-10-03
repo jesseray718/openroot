@@ -1,0 +1,58 @@
+name: Publish public documentation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "README.md"
+      - "docs/**"
+      - "evidence/**"
+      - ".github/workflows/publish-public-docs.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  attestations: write
+  id-token: write
+
+concurrency:
+  group: public-docs-production
+  cancel-in-progress: false
+
+jobs:
+  build-release-evidence:
+    name: build-release-evidence
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build immutable public documentation bundle
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          rm -rf public-dist
+          mkdir -p public-dist/provenance
+          cp README.md public-dist/index.md
+          cp -a docs public-dist/docs
+          git rev-parse HEAD > public-dist/provenance/source-commit.txt
+          git show -s --format=%cI HEAD > public-dist/provenance/source-commit-time.txt
+          git show -s --format=%s HEAD > public-dist/provenance/source-commit-subject.txt
+          find public-dist -type f -print0 | sort -z | xargs -0 sha256sum \
+            > public-dist/provenance/SHA256SUMS.txt
+
+      - name: Upload release evidence artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-docs-release-${{ github.sha }}
+          path: public-dist/
+          if-no-files-found: error
+
+      - name: Publication status
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          printf '%s\n' "Public documentation bundle built for commit: $GITHUB_SHA"
+          printf '%s\n' "GitHub Pages deployment is intentionally not enabled by this initial installer."
+          printf '%s\n' "Enable it only after repository Settings → Pages is configured for GitHub Actions."

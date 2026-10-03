@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Openroot public documentation promotion manifest",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "promotion_id",
+    "promotion_type",
+    "base_branch",
+    "head_branch",
+    "expected_paths",
+    "risk_class_requested",
+    "merge_method",
+    "retain_source_branch",
+    "publication_target"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "promotion_id": {
+      "type": "string",
+      "minLength": 8
+    },
+    "promotion_type": {
+      "type": "string",
+      "const": "public_docs"
+    },
+    "base_branch": {
+      "type": "string",
+      "const": "main"
+    },
+    "head_branch": {
+      "type": "string",
+      "pattern": "^integrate/"
+    },
+    "head_sha": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{7,64}$"
+    },
+    "expected_paths": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "risk_class_requested": {
+      "type": "string",
+      "enum": [
+        "low_risk_docs",
+        "technical_docs",
+        "safety_sensitive"
+      ]
+    },
+    "merge_method": {
+      "type": "string",
+      "const": "squash"
+    },
+    "retain_source_branch": {
+      "type": "boolean",
+      "const": true
+    },
+    "publication_target": {
+      "type": "string",
+      "const": "public-docs"
+    },
+    "evidence_level": {
+      "type": "string"
+    },
+    "human_approval_required": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}

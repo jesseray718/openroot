@@ -1,0 +1,32 @@
+name: Field observation
+description: Submit an observation relevant to an Openroot public claim, design, or procedure.
+title: "[field-observation]: "
+labels: ["field-observation", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This form records an observation, not an automatically verified fact.
+        Do not include credentials, private addresses, personal health information, or restricted data.
+  - type: input
+    id: related_claim
+    attributes:
+      label: Related documentation, claim ID, or commit
+      placeholder: docs/newton_chain/... or commit SHA
+  - type: textarea
+    id: observation
+    attributes:
+      label: Observation
+      description: State what happened, under what conditions, and what was directly observed.
+    validations:
+      required: true
+  - type: textarea
+    id: conditions
+    attributes:
+      label: Conditions and assumptions
+      description: Include setup, environment, measurements, uncertainties, and relevant constraints.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting evidence
+      description: Public-safe links, logs, images, measurements, or reproducible steps.

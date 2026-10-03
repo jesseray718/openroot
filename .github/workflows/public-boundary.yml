@@ -1,0 +1,122 @@
+name: Public boundary
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  public-boundary:
+    name: public-boundary
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout pull request head
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install policy parser
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          python3 -m pip install --disable-pip-version-check --no-cache-dir pyyaml
+
+      - name: Resolve comparison refs and promotion class
+        id: refs
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            base="${{ github.event.pull_request.base.sha }}"
+            head="${{ github.event.pull_request.head.sha }}"
+          else
+            base="$(git rev-parse HEAD^)"
+            head="$(git rev-parse HEAD)"
+          fi
+
+          changed="$(git diff --name-only --diff-filter=ACMR "$base" "$head")"
+
+          if [ -z "$changed" ]; then
+            printf '%s\n' "No relevant changed paths were found." >&2
+            exit 1
+          fi
+
+          has_automation=0
+          has_docs=0
+          has_other=0
+          has_technical_docs=0
+
+          while IFS= read -r path; do
+            case "$path" in
+              .github/*|automation/*)
+                has_automation=1
+                ;;
+              README.md|docs/*|docs-promotion-manifest.json)
+                has_docs=1
+                ;;
+              *)
+                has_other=1
+                printf '%s\n' "Unclassified path: $path" >&2
+                ;;
+            esac
+
+            case "$path" in
+              docs/newton_chain/*|docs/newton-chain/*|docs/NEWTON_CHAIN.md|*SCHEMA.yaml|*SCHEMA.yml|*INFERENCE_RULES.md)
+                has_technical_docs=1
+                ;;
+            esac
+          done <<< "$changed"
+
+          if [ "$has_other" -ne 0 ]; then
+            printf '%s\n' "Boundary failure: one or more paths are not eligible for a promotion class." >&2
+            exit 1
+          fi
+
+          if [ "$has_automation" -ne 0 ] && [ "$has_docs" -ne 0 ]; then
+            printf '%s\n' "Boundary failure: automation and public-documentation changes must use separate PRs." >&2
+            printf '%s\n' "Create one automation_bootstrap PR and one documentation promotion PR." >&2
+            exit 1
+          fi
+
+          if [ "$has_automation" -ne 0 ]; then
+            promotion_class="automation_bootstrap"
+          elif [ "$has_technical_docs" -ne 0 ]; then
+            promotion_class="technical_docs"
+          elif [ "$has_docs" -ne 0 ]; then
+            promotion_class="public_docs"
+          else
+            printf '%s\n' "Boundary failure: no promotion class could be selected." >&2
+            exit 1
+          fi
+
+          printf 'base=%s\n' "$base" >> "$GITHUB_OUTPUT"
+          printf 'head=%s\n' "$head" >> "$GITHUB_OUTPUT"
+          printf 'promotion_class=%s\n' "$promotion_class" >> "$GITHUB_OUTPUT"
+
+          printf '%s\n' "Selected promotion class: $promotion_class"
+          printf '%s\n' "Changed paths:"
+          printf '%s\n' "$changed"
+
+      - name: Validate public boundary
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          python3 automation/checks/public_boundary.py \
+            --base "${{ steps.refs.outputs.base }}" \
+            --head "${{ steps.refs.outputs.head }}" \
+            --promotion-class "${{ steps.refs.outputs.promotion_class }}"
+
+      - name: Check diff whitespace
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          git diff --check \
+            "${{ steps.refs.outputs.base }}" \
+            "${{ steps.refs.outputs.head }}"
