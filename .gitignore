@@ -205,3 +205,36 @@ state/
 /context_bridge/grep_sweep_*/
 /data/kai_import_*.tar.gz
 *.tar.zst
+
+# OpenRoot public-boundary local state
+# Local corpora, retrieval indexes, and generated databases
+data/*.db
+data/*.sqlite
+data/*.sqlite-*
+data/*.db-*
+data/*.db-wal
+data/*.db-shm
+data/fts_index.db
+data/mesh_index.db
+data/canonical_index.db
+
+# Runtime and operational output
+logs/
+outbox/
+inbox/
+reports/
+tmp/
+
+# Private/recovery/archive material
+archive/
+attic/
+consolidation-backups/
+quarantine*/
+context_bridge/
+
+# Local secrets and machine-specific settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key

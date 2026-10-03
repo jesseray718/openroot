@@ -1,5 +1,22 @@
 # OpenRoot
 
+
+## Public Project Map
+
+OpenRoot is a curated public systems-design and open-hardware repository.
+It publishes reviewed documentation, evidence standards, schemas, design
+packets, examples, and selected reusable tools.
+
+- Start with the [public documentation map](docs/PUBLIC_MAP.md).
+- Read the [public boundary](docs/PUBLIC_BOUNDARY.md) before using or
+  contributing material.
+- Physical work is released as a documented design packet, beginning with
+  the [Thermal Cascade packet](designs/thermal-cascade/README.md).
+- Review the [claim-status standard](docs/CLAIM_STATUS.md) before treating
+  a project statement as established.
+- Use the [hardware release standard](docs/HARDWARE_RELEASE_STANDARD.md)
+  for physical designs and experimental prototypes.
+
 **OpenRoot is an open-source technology commons for designing, testing,
 documenting, and improving practical systems that strengthen local capability.**
 
