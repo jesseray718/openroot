@@ -1,0 +1,46 @@
+name: Claim boundary
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "README.md"
+      - "docs/**"
+      - "automation/checks/claim_boundary.py"
+      - ".github/workflows/claim-boundary.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  claim-boundary:
+    name: claim-boundary
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Resolve comparison refs
+        id: refs
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            printf 'base=%s\n' "${{ github.event.pull_request.base.sha }}" >> "$GITHUB_OUTPUT"
+            printf 'head=%s\n' "${{ github.event.pull_request.head.sha }}" >> "$GITHUB_OUTPUT"
+          else
+            printf 'base=%s\n' "$(git rev-parse HEAD^)" >> "$GITHUB_OUTPUT"
+            printf 'head=%s\n' "$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Check public claim boundaries
+        run: |
+          set -Eeuo pipefail
+          python3 automation/checks/claim_boundary.py \
+            "${{ steps.refs.outputs.base }}" \
+            "${{ steps.refs.outputs.head }}"

@@ -1,0 +1,98 @@
+policy_version: 1
+policy_name: openroot-promotion-policy
+
+forbidden_path_patterns:
+  - '(^|/)\.env($|\.)'
+  - '(^|/)(secrets?|private|logs|runtime|workareas?)(/|$)'
+  - '(^|/).*\.(db|sqlite|sqlite3|wal|shm)$'
+  - '(^|/)(id_rsa|id_ed25519|known_hosts)$'
+  - '(^|/).*\.pem$'
+  - '(^|/).*\.key$'
+  - '(^|/).*\.p12$'
+  - '(^|/).*\.pfx$'
+
+promotion_classes:
+  automation_bootstrap:
+    description: Repository automation, policy, CI, issue forms, and validation tooling.
+    allowed_path_patterns:
+      - '^\.github/'
+      - '^automation/'
+    required_checks:
+      - public-boundary
+      - provenance
+    approval_count: 1
+    merge_method: squash
+    auto_merge_eligible: false
+    retain_source_branch: true
+
+  public_docs:
+    description: Public-facing documentation with no automation, runtime, database, or operational changes.
+    allowed_path_patterns:
+      - '^README\.md$'
+      - '^docs/'
+      - '^docs-promotion-manifest\.json$'
+    required_checks:
+      - public-boundary
+      - docs-build
+      - markdown-links
+      - claim-boundary
+    approval_count: 0
+    merge_method: squash
+    auto_merge_eligible: true
+    retain_source_branch: true
+
+  technical_docs:
+    description: Public documentation containing schemas, equations, inference rules, structured examples, or technical claims.
+    allowed_path_patterns:
+      - '^README\.md$'
+      - '^docs/'
+      - '^docs-promotion-manifest\.json$'
+    required_checks:
+      - public-boundary
+      - docs-build
+      - markdown-links
+      - newton-chain-validate
+      - claim-boundary
+      - provenance
+    approval_count: 1
+    merge_method: squash
+    auto_merge_eligible: false
+    retain_source_branch: true
+
+  safety_sensitive:
+    description: Public documentation with safety, operating-limit, compliance, readiness, or performance implications.
+    allowed_path_patterns:
+      - '^README\.md$'
+      - '^docs/'
+      - '^docs-promotion-manifest\.json$'
+    required_checks:
+      - public-boundary
+      - docs-build
+      - markdown-links
+      - newton-chain-validate
+      - claim-boundary
+      - provenance
+    approval_count: 2
+    merge_method: squash
+    auto_merge_eligible: false
+    retain_source_branch: true
+
+technical_path_patterns:
+  - '^docs/newton_chain/'
+  - '^docs/NEWTON_CHAIN\.md$'
+  - '^docs/newton-chain/'
+  - '^.*SCHEMA\.ya?ml$'
+  - '^.*INFERENCE_RULES\.md$'
+
+sensitive_claim_patterns:
+  - '\bsafe\b'
+  - '\bsafety\b'
+  - '\bcertified\b'
+  - '\bcompliant\b'
+  - '\bapproval\b'
+  - '\bfield[- ]ready\b'
+  - '\bproduction[- ]ready\b'
+  - '\bguarantee(d)?\b'
+  - '\bproven\b'
+  - '\bvalidated\b'
+  - '\bzero[- ]risk\b'

@@ -1,0 +1,50 @@
+name: Provenance
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  provenance:
+    name: provenance
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Resolve comparison refs
+        id: refs
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            printf 'base=%s\n' "${{ github.event.pull_request.base.sha }}" >> "$GITHUB_OUTPUT"
+            printf 'head=%s\n' "${{ github.event.pull_request.head.sha }}" >> "$GITHUB_OUTPUT"
+          else
+            printf 'base=%s\n' "$(git rev-parse HEAD^)" >> "$GITHUB_OUTPUT"
+            printf 'head=%s\n' "$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Generate provenance report
+        run: |
+          set -Eeuo pipefail
+          mkdir -p evidence/policy
+          python3 automation/checks/provenance.py \
+            "${{ steps.refs.outputs.base }}" \
+            "${{ steps.refs.outputs.head }}" \
+            | tee evidence/policy/provenance-report.json
+
+      - name: Upload provenance artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: provenance-${{ github.sha }}
+          path: evidence/policy/provenance-report.json
+          if-no-files-found: error
