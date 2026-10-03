@@ -1,0 +1,137 @@
+id: "NC-THERMAL-EXAMPLE-0001"
+title: "Bounded stored thermal-energy calculation"
+kind: "proposition"
+status: "draft"
+statement: >
+  Under the declared mass, specific-heat, temperature-change, boundary, and
+  uncertainty assumptions, stored thermal energy is bounded by a calculable
+  interval using Q = m * c_p * ΔT.
+
+definitions:
+  - id: "DEF-THERMAL-ENERGY-0001"
+    statement: "Thermal energy change is represented as Q = m * c_p * ΔT."
+  - id: "DEF-SYSTEM-BOUNDARY-0001"
+    statement: "The measured material and time interval define the calculation boundary."
+
+common_notions:
+  - id: "CN-ARITHMETIC-0001"
+    statement: "Equal quantities may be substituted within compatible units and domains."
+  - id: "CN-DIMENSION-0001"
+    statement: "A derived quantity is valid only when its units reconcile."
+
+assumptions:
+  - id: "ASM-MASS-0001"
+    statement: "Material mass m is measured or bounded in kilograms."
+  - id: "ASM-SPECIFIC-HEAT-0001"
+    statement: "Specific heat c_p is sourced or measured as a bounded interval in J/(kg*K)."
+  - id: "ASM-TEMPERATURE-0001"
+    statement: "Temperature change ΔT is measured with a stated calibration and uncertainty."
+  - id: "ASM-BOUNDARY-0001"
+    statement: "Unmeasured heat loss and gain are not included unless separately modeled."
+
+postulates: []
+
+evidence_inputs:
+  - id: "EVD-PLACEHOLDER-0001"
+    status: "required before formal verification"
+    statement: "Mass measurement record."
+  - id: "EVD-PLACEHOLDER-0002"
+    status: "required before formal verification"
+    statement: "Temperature measurement and calibration record."
+  - id: "EVD-PLACEHOLDER-0003"
+    status: "required before formal verification"
+    statement: "Specific-heat source or material test record."
+
+inference_rules:
+  - "RULE-UNIT-001"
+  - "RULE-INTERVAL-001"
+  - "RULE-ENERGY-001"
+  - "RULE-SCOPE-001"
+  - "RULE-DEPENDENCY-001"
+
+proof_steps:
+  - step_id: "STEP-001"
+    premises:
+      - "ASM-MASS-0001"
+      - "EVD-PLACEHOLDER-0001"
+    rule: "RULE-UNIT-001"
+    conclusion: "Mass input is expressed in kilograms."
+  - step_id: "STEP-002"
+    premises:
+      - "ASM-SPECIFIC-HEAT-0001"
+      - "EVD-PLACEHOLDER-0003"
+    rule: "RULE-UNIT-001"
+    conclusion: "Specific-heat input is expressed in J/(kg*K)."
+  - step_id: "STEP-003"
+    premises:
+      - "ASM-TEMPERATURE-0001"
+      - "EVD-PLACEHOLDER-0002"
+    rule: "RULE-UNIT-001"
+    conclusion: "Temperature-change input is expressed in K or degrees C difference."
+  - step_id: "STEP-004"
+    premises:
+      - "STEP-001"
+      - "STEP-002"
+      - "STEP-003"
+    rule: "RULE-ENERGY-001"
+    conclusion: "Nominal stored-energy quantity Q is calculated."
+  - step_id: "STEP-005"
+    premises:
+      - "STEP-004"
+      - "ASM-MASS-0001"
+      - "ASM-SPECIFIC-HEAT-0001"
+      - "ASM-TEMPERATURE-0001"
+    rule: "RULE-INTERVAL-001"
+    conclusion: "A lower and upper bound [Q_min, Q_max] is calculated."
+
+scope:
+  applies_when:
+    - "Declared material, boundary, units, and time interval are unchanged."
+    - "Measurement and calibration records are available."
+  does_not_establish:
+    - "Thermal collection efficiency."
+    - "Net system efficiency."
+    - "Safety or code compliance."
+    - "Durability or field readiness."
+    - "Electricity generation or mechanical power."
+    - "Cost savings or economic viability."
+  uncertainty: >
+    The interval must include stated uncertainty in mass, specific heat,
+    temperature measurement, and any modeled terms.
+
+dependencies:
+  DEF-THERMAL-ENERGY-0001: "pending content hash"
+  DEF-SYSTEM-BOUNDARY-0001: "pending content hash"
+  CN-ARITHMETIC-0001: "pending content hash"
+  CN-DIMENSION-0001: "pending content hash"
+  ASM-MASS-0001: "pending content hash"
+  ASM-SPECIFIC-HEAT-0001: "pending content hash"
+  ASM-TEMPERATURE-0001: "pending content hash"
+  ASM-BOUNDARY-0001: "pending content hash"
+  EVD-PLACEHOLDER-0001: "pending evidence hash"
+  EVD-PLACEHOLDER-0002: "pending evidence hash"
+  EVD-PLACEHOLDER-0003: "pending evidence hash"
+
+cache:
+  result_hash: "pending evidence and formal verification"
+  rule_set_version: "0.1-draft"
+  environment_version: "pending implementation definition"
+  reuse_condition: "All definition, assumption, evidence, and rule hashes match."
+  invalidation_conditions:
+    - "A definition, common notion, assumption, or postulate changes."
+    - "A measurement record, calibration, or material-property source changes."
+    - "The boundary, rule set, or execution environment changes."
+
+provenance:
+  created_by: "OpenRoot joint human-AI design draft"
+  source_locations:
+    - "Local Newton-chain design package"
+  revision_history: []
+
+review:
+  supporting_arguments: []
+  counterarguments: []
+  unresolved_questions:
+    - "Choose canonical serialization before computing production hashes."
+    - "Define a machine-verifiable proof-checking boundary."
+  reviewer_notes: []
