@@ -9,5 +9,5 @@ OpenRoot is open to builders. Contributions are graded, not judged.
 4. **Non-recompute**: verified solutions are SHA-256 paired with their mistakes — your win compounds for everyone after you.
 
 ## Start here
-See GOOD_FIRST_ISSUES.md and CONTRIBUTING.md. Build something. Report what happened.
+See [CONTRIBUTING.md](../CONTRIBUTING.md) and the repository current GitHub issues. Build something. Report what happened.
 The goal of the ladder: ideas become things strangers can pick up and build.
