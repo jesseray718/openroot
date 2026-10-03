@@ -1,0 +1,30 @@
+name: Counterexample or correction
+description: Report evidence that challenges a public claim, derivation, example, or documented bound.
+title: "[counterexample]: "
+labels: ["counterexample", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A counterexample is valuable evidence. It does not need to prove a replacement theory,
+        but it should identify the specific claim, condition, or inference it challenges.
+  - type: input
+    id: claim
+    attributes:
+      label: Claim, document, example, or commit challenged
+    validations:
+      required: true
+  - type: textarea
+    id: contradiction
+    attributes:
+      label: Contradictory observation or reasoning
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps or derivation
+  - type: textarea
+    id: limits
+    attributes:
+      label: Limits and uncertainty

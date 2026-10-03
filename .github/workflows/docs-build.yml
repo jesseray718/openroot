@@ -1,0 +1,129 @@
+name: Documentation build
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "README.md"
+      - "docs/**"
+      - ".github/workflows/docs-build.yml"
+  push:
+    branches: [main]
+    paths:
+      - "README.md"
+      - "docs/**"
+      - ".github/workflows/docs-build.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: docs-build-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  markdown-links:
+    name: markdown-links
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verify local links in changed Markdown files
+        shell: bash
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          set -Eeuo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import os
+          import re
+          import subprocess
+          import sys
+
+          base = os.environ.get("BASE_SHA")
+          head = os.environ.get("HEAD_SHA")
+
+          if not base:
+              base = subprocess.check_output(
+                  ["git", "rev-parse", "HEAD^"],
+                  text=True,
+              ).strip()
+
+          if not head:
+              head = subprocess.check_output(
+                  ["git", "rev-parse", "HEAD"],
+                  text=True,
+              ).strip()
+
+          changed = subprocess.check_output(
+              ["git", "diff", "--name-only", "--diff-filter=ACMR", base, head],
+              text=True,
+          ).splitlines()
+
+          markdown_paths = [
+              Path(item)
+              for item in changed
+              if item == "README.md" or item.startswith("docs/")
+              if item.endswith(".md")
+          ]
+
+          failures = []
+
+          for path in markdown_paths:
+              if not path.exists():
+                  failures.append(f"{path}: changed Markdown path is absent from checkout")
+                  continue
+
+              text = path.read_text(encoding="utf-8")
+
+              for target in re.findall(r"\]\(([^)]+)\)", text):
+                  if target.startswith(("http://", "https://", "#", "mailto:", "/")):
+                      continue
+
+                  relative = target.split("#", 1)[0]
+                  if not relative:
+                      continue
+
+                  candidate = (path.parent / relative).resolve()
+
+                  if not candidate.exists():
+                      failures.append(f"{path}: broken local link: {target}")
+
+          if failures:
+              print("\n".join(failures))
+              sys.exit(1)
+
+          print(f"Local Markdown links passed for {len(markdown_paths)} changed Markdown files.")
+          PY
+
+  docs-build:
+    name: docs-build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create minimal documentation artifact
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          rm -rf dist
+          mkdir -p dist
+          cp README.md dist/index.md
+          cp -a docs dist/docs
+          find dist -type f -print0 | sort -z | xargs -0 sha256sum > dist/SHA256SUMS.txt
+
+      - name: Upload documentation artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: docs-build-${{ github.sha }}
+          path: dist/
+          if-no-files-found: error

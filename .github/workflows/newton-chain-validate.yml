@@ -1,0 +1,34 @@
+name: Newton Chain validation
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "docs/NEWTON_CHAIN.md"
+      - "docs/newton_chain/**"
+      - "docs/newton-chain/**"
+      - "automation/checks/newton_chain_validate.py"
+      - ".github/workflows/newton-chain-validate.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  newton-chain-validate:
+    name: newton-chain-validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install YAML parser
+        run: |
+          set -Eeuo pipefail
+          python3 -m pip install --disable-pip-version-check --no-cache-dir pyyaml
+
+      - name: Validate Newton Chain documentation
+        run: |
+          set -Eeuo pipefail
+          python3 automation/checks/newton_chain_validate.py
