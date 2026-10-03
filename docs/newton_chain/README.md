@@ -37,3 +37,17 @@ physical identity.
 - No automatic embeddings
 - No Git commit, push, or remote write
 - No deletion operations
+
+
+## Cached derivation pathways
+
+A verified derivation may be reused when the subject content hash, dependency
+fingerprint, inference-rule version, and declared execution environment match
+the recorded receipt.
+
+When a definition, assumption, evidence record, rule, or environment changes,
+dependent results become stale pending targeted reevaluation. Historical receipts
+remain available with their original dependency state.
+
+This allows OpenRoot to reuse verified reasoning pathways rather than repeat
+equivalent computation.
