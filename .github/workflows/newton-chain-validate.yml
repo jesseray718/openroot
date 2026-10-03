@@ -1,0 +1,32 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+name: Newton Chain validation
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "docs/NEWTON_CHAIN.md"
+      - "docs/newton_chain/**"
+      - "docs/newton-chain/**"
+      - "schemas/**"
+      - "scripts/validate_newton_chain.py"
+      - ".github/workflows/newton-chain-validate.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  newton-chain-validate:
+    name: newton-chain-validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install YAML parser
+        run: python3 -m pip install --disable-pip-version-check --no-cache-dir pyyaml
+
+      - name: Validate Newton Chain documentation
+        run: python3 scripts/validate_newton_chain.py

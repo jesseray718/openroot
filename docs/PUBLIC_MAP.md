@@ -25,7 +25,7 @@
 ## Technical Interfaces
 
 - [Public schemas](../schemas/)
-- [Examples](../examples/)
+- [Router examples](../data/router_examples/)
 - [Tests](../tests/)
 - [Reviewed tools](../tools/)
 
