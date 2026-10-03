@@ -149,6 +149,6 @@ deliberate human review promotes a narrowly selected artifact:
 ```text
 data/model_registry.json
 data/superloop_chains.json
-context_bridge/superloop_DASHBOARD.md
-bin/quarantine_pyfails_final_v2/
+private operational dashboard
+private runtime quarantine
 ```

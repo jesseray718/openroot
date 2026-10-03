@@ -1,0 +1,35 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+name: Public validation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: public-validation-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile public Python
+        run: python3 -m compileall -q scripts tests tools
+      - name: Run public tests
+        run: python3 -m unittest discover -s tests -p "test_*.py" -v
+      - name: Validate design packets
+        run: python3 scripts/validate_design_packets.py
+      - name: Validate permaculture contexts
+        run: python3 scripts/validate_permaculture_context.py data/router_examples designs
+      - name: Check whitespace
+        run: git diff --check HEAD^ HEAD
