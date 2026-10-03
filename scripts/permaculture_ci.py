@@ -35,8 +35,8 @@ ROOT = Path(__file__).resolve().parents[1]
 PROTECTED_LOCAL_PATHS = (
     "data/model_registry.json",
     "data/superloop_chains.json",
-    "context_bridge/superloop_DASHBOARD.md",
-    "bin/quarantine_pyfails_final_v2/",
+    "private operational dashboard",
+    "private runtime quarantine",
 )
 
 CHECKS: list[tuple[str, list[str]]] = [

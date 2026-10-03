@@ -49,17 +49,13 @@ The release candidate must also be reviewed for:
 
 ## Protected local state
 
-The following operational paths remain local unless a deliberate review promotes
-a narrowly selected, redacted, reproducible artifact:
+Private operational systems, raw corpora, local databases, embeddings, logs,
+receipts, recovery material, and machine-specific configuration are not part
+of a public release. Do not add them to a release candidate merely because
+they were used during development.
 
-```text
-context_bridge/superloop_DASHBOARD.md
-data/model_registry.json
-data/superloop_chains.json
-bin/quarantine_pyfails_final_v2/
-.ci/
-reports/open_hardware_preview/
-```
+See [Public Boundary](PUBLIC_BOUNDARY.md) for the current inclusion and
+exclusion policy.
 
 ## Evidence-release boundary
 

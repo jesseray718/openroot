@@ -38,7 +38,7 @@ Every node serves the lowest node first. R=1.0 is the only coordination state th
 - /sdcard/openroot/ledger
 - /sdcard/openroot/session_seeds
 - /sdcard/openroot/agape_kb
-- $HOME/bin/or-*
+- local private command wrappers
 
 ## Daily η loop
 

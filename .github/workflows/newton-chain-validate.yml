@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
 name: Newton Chain validation
 
 on:
@@ -7,7 +8,8 @@ on:
       - "docs/NEWTON_CHAIN.md"
       - "docs/newton_chain/**"
       - "docs/newton-chain/**"
-      - "automation/checks/newton_chain_validate.py"
+      - "schemas/**"
+      - "scripts/validate_newton_chain.py"
       - ".github/workflows/newton-chain-validate.yml"
   workflow_dispatch:
 
@@ -24,11 +26,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install YAML parser
-        run: |
-          set -Eeuo pipefail
-          python3 -m pip install --disable-pip-version-check --no-cache-dir pyyaml
+        run: python3 -m pip install --disable-pip-version-check --no-cache-dir pyyaml
 
       - name: Validate Newton Chain documentation
-        run: |
-          set -Eeuo pipefail
-          python3 automation/checks/newton_chain_validate.py
+        run: python3 scripts/validate_newton_chain.py
