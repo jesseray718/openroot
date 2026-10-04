@@ -14,7 +14,7 @@ Safety model:
 
 Usage:
   python3 scripts/permaculture_router.py data/router_examples/thermal-cascade-l0.json
-  python3 scripts/permaculture_router.py designs/thermal-cascade/router_context.json --output reports/thermal-cascade-router.json
+  python3 scripts/permaculture_router.py designs/thermal-cascade/router_context.json --output /tmp/openroot-thermal-cascade-router.json
 """
 
 from __future__ import annotations
