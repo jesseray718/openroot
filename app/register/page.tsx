@@ -5,20 +5,32 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import AuthCard from '@/app/components/AuthCard';
 
-export default function LoginPage() {
+export default function RegisterPage() {
   const router = useRouter();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
+
+    if (password !== confirmPassword) {
+      setError('Passwords do not match');
+      return;
+    }
+
+    if (password.length < 8) {
+      setError('Password must be at least 8 characters');
+      return;
+    }
+
     setLoading(true);
 
     try {
-      const res = await fetch('/api/auth/login', {
+      const res = await fetch('/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
@@ -27,7 +39,7 @@ export default function LoginPage() {
       const data = await res.json();
 
       if (!res.ok) {
-        throw new Error(data.error || 'Login failed');
+        throw new Error(data.error || 'Registration failed');
       }
 
       router.push('/dashboard');
@@ -44,7 +56,7 @@ export default function LoginPage() {
   };
 
   return (
-    <AuthCard title="Sign in to openroot" subtitle="Welcome back! Please enter your credentials.">
+    <AuthCard title="Create an account" subtitle="Enter your details to get started with openroot">
       {error && (
         <div style={{
           padding: '0.75rem',
@@ -97,6 +109,25 @@ export default function LoginPage() {
           />
         </div>
 
+        <div>
+          <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.875rem' }}>Confirm Password</label>
+          <input
+            type="password"
+            required
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            style={{
+              width: '100%',
+              padding: '0.5rem 0.75rem',
+              borderRadius: '4px',
+              border: '1px solid #334155',
+              backgroundColor: '#0f172a',
+              color: '#fff',
+              boxSizing: 'border-box'
+            }}
+          />
+        </div>
+
         <button
           type="submit"
           disabled={loading}
@@ -111,14 +142,14 @@ export default function LoginPage() {
             cursor: loading ? 'not-allowed' : 'pointer'
           }}
         >
-          {loading ? 'Authenticating...' : 'Sign In'}
+          {loading ? 'Creating account...' : 'Sign Up'}
         </button>
       </form>
 
       <p style={{ marginTop: '1.5rem', textAlign: 'center', fontSize: '0.875rem', color: '#94a3b8' }}>
-        Don't have an account?{' '}
-        <Link href="/register" style={{ color: '#60a5fa', textDecoration: 'none' }}>
-          Create one
+        Already have an account?{' '}
+        <Link href="/login" style={{ color: '#60a5fa', textDecoration: 'none' }}>
+          Sign in
         </Link>
       </p>
     </AuthCard>
