@@ -238,3 +238,5 @@ context_bridge/
 !.env.example
 *.pem
 *.key
+*.bak*
+*.bak.*
