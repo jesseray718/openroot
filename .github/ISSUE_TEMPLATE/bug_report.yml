@@ -1,0 +1,38 @@
+name: Bug report
+description: Report a reproducible defect in code, docs tooling, or automation
+title: "bug: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please do not include credentials, private local paths, personal records, device exports, or other restricted material.
+  - type: input
+    id: component
+    attributes:
+      label: Component
+      placeholder: "scripts/openroot_audit.py"
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+      placeholder: "Expected: ...\nActual: ..."
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: "OS, Python version, GitHub CLI version, and relevant non-sensitive details"
