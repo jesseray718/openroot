@@ -1,0 +1,13 @@
+{
+  "run_id": "RUN-001",
+  "timestamp": "2026-10-05T10:32:04.732546+00:00",
+  "device": "Aero-Disc Volumetric Heat Exchanger",
+  "metrics": {
+    "inlet_temp_c": 22.5,
+    "outlet_temp_c": 48.0,
+    "delta_t_c": 25.5,
+    "flow_rate_lpm": 3.5,
+    "estimated_power_kw": 6.224
+  },
+  "notes": "Aero-Disc volumetric heat exchanger baseline solar thermal absorption test"
+}

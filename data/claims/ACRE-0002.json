@@ -1,0 +1,8 @@
+{
+  "claim_id": "ACRE-0002",
+  "timestamp": "2026-10-05T10:27:27.847470+00:00",
+  "metric_type": "thermal_energy",
+  "value": "1250.5",
+  "unit": "joules",
+  "notes": "Aero-Disc volumetric heat exchanger baseline verification test"
+}
