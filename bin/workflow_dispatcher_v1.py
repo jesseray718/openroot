@@ -19,7 +19,7 @@ def now_iso(): return datetime.datetime.now(datetime.timezone.utc).isoformat() +
 
 
 SINGLE_SHOT = {  # envelope-level tools (no steps wrapper) -> executor, read-only
-  "read_wiki_contents": "gh api repos/jesseray718/jesseray718/pages --jq '.[].page_name] // empty'",
+  "read_wiki_contents": "rm -rf /tmp/wiki_ro; git clone --depth 1 https://github.com/jesseray718/jesseray718.wiki.git /tmp/wiki_ro 2>&1 | tail -2; ls /tmp/wiki_ro/*.md 2>/dev/null | head -10",
   "search_github": "gh search prs --author jesseray718 --limit 10 && gh search issues --author jesseray718 --limit 10",
 }
 def dispatch_single(envelope, dry):
