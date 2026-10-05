@@ -1,0 +1,15 @@
+{
+  "batch_id": "BATCH-001",
+  "timestamp": "2026-10-05T10:30:56.404080+00:00",
+  "material": "Aerocement 2.0",
+  "components": {
+    "portland_cement_kg": 50.0,
+    "xanthan_alcohol_slurry_liters": 12.5,
+    "surfactant_dawn_ml": 15.0,
+    "fiber_reinforcement": {
+      "type": "hemp",
+      "amount_grams": 250.0
+    }
+  },
+  "notes": "Stator motor mixed baseline trial with xanthan gum slurry and Dawn Ultra"
+}
