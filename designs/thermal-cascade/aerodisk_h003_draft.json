@@ -1,0 +1,35 @@
+{
+  "issue_99_stack_model": {
+    "formula_draft": "Delta_P = (rho_ambient - rho_stack) * g * H",
+    "chimney_height_m": [
+      6,
+      8,
+      12
+    ],
+    "chimney_diameter_cm": [
+      5,
+      25,
+      30
+    ],
+    "target_mass_flow_kgs": 0.636,
+    "region_basis": "SE Missouri ~4.5-5 equiv sun-hours"
+  },
+  "issue_100_h003_instrument_plan": {
+    "sampling_interval_s": 1.0,
+    "required_sensors": [
+      "thermocouple_k_type",
+      "differential_pressure_transducer",
+      "vane_anemometer"
+    ],
+    "uncertainty_budget_temp_C": 0.5,
+    "uncertainty_budget_flow_pct": 2.5,
+    "raw_data_schema": [
+      "timestamp",
+      "temp_in",
+      "temp_out",
+      "dp_pa",
+      "flow_m3s",
+      "solar_irradiance_wm2"
+    ]
+  }
+}
