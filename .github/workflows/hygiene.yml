@@ -1,0 +1,55 @@
+name: Repository hygiene
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  python-syntax:
+    name: Python syntax
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Compile tracked Python files
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t files < <(git ls-files '*.py')
+          if [ "${#files[@]}" -eq 0 ]; then
+            echo "No tracked Python files."
+            exit 0
+          fi
+          python -m py_compile "${files[@]}"
+
+  secret-pattern-scan:
+    name: Basic secret-pattern scan
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Scan tracked text for obvious credential assignments
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git grep -nEi \
+            '(ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|AKIA[0-9A-Z]{16}|BEGIN (RSA |OPENSSH )?PRIVATE KEY)' \
+            -- ':!docs/fixtures/**' ':!tests/fixtures/**'; then
+            echo "Possible secret material found. Remove it before merging."
+            exit 1
+          fi
+          echo "No obvious credential patterns found."

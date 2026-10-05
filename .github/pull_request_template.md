@@ -1,28 +1,25 @@
-## Public documentation promotion
+## Purpose
 
-### Intent
+Describe the one bounded result this pull request delivers.
 
-- Promotion type:
-- Requested risk class:
-- Public audience/use:
-- Source branch:
-- Base branch: `main`
+## Changes
 
-### Boundary
+- 
 
-- [ ] I reviewed the changed-file list.
-- [ ] No private notes, logs, databases, credentials, raw operational data, or runtime artifacts are included.
-- [ ] A `docs-promotion-manifest.json` is present for substantive promotions.
+## Verification
 
-### Technical claims
+- [ ] I ran relevant tests, scripts, or validation commands.
+- [ ] I checked links, filenames, paths, units, and references.
+- [ ] I included source data or evidence references for measurement claims.
+- [ ] I documented assumptions and uncertainty where relevant.
 
-- [ ] Claims are evidence-bounded.
-- [ ] Assumptions and applicability limits are stated.
-- [ ] Safety, readiness, compliance, and performance language is not stronger than the available evidence.
-- [ ] Newton-chain examples include an evidence level and explicit non-claims where applicable.
+## Safety and evidence boundary
 
-### Merge and publication
+- [ ] This PR does not present an unverified idea as certified, code-compliant, safe, or field-ready.
+- [ ] Hazards, limits, failure modes, and stop conditions are documented where applicable.
+- [ ] This PR contains no credentials, personal records, local device exports, embeddings, private logs, or restricted material.
 
-- Requested merge method: squash
-- Retain source branch: yes
-- Publication target: public documentation
+## Merge request
+
+- [ ] This PR is suitable for squash merge.
+- [ ] The head branch may be deleted after merge.
