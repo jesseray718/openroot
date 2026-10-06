@@ -1,30 +1,69 @@
 # Contributing to OpenRoot
 
-OpenRoot is an open-source hardware and documentation pipeline that grades its own
-work before asking you to trust it. Contributions are welcome at every level.
+OpenRoot is open-source appropriate technology: passive solar thermal systems,
+opencell concrete, permaculture computation, and PoPW-verified ledgers. This
+guide references only files that exist in this repository right now.
 
-## How the pipeline treats you
+## Getting started
 
-- **Your credit is architectural, not courteous.** The release ladder's
-  contributor_seal stage does not pass until a contributor's merged work is
-  visibly credited in the README and changelog. Our first external contributor,
-  Rehan Tariq (@Reh1t), proved this path (PR #63).
-- **Every error is composted.** Mistakes are hashed and keyed to their solutions
-  in a mistake ledger, so the same failure never costs the project twice —
-  including yours. Failing here is information, not shame.
-- **Claims are bounded.** Documentation releases state exactly what they do and
-  do not claim (see docs/EVIDENCE_LEVELS.md). We never publish measured
-  performance language without configuration-specific raw data.
+Clone, then run the test suite:
 
-## Graded pathway
+    git clone https://github.com/jesseray718/openroot.git
+    cd openroot
+    python3 -m unittest discover -s tests
 
-1. Open or claim an issue under a milestone (hardware prototypes live in
-   milestone #14).
-2. Submit a PR. Automated gates check compile, license headers (GPL-3.0 /
-   CC-BY-SA), and manifest discipline. Human review is the merge gate.
-3. Merged contributions are credited by the contributor_seal rung — the system
-   cannot consider the release healthy while your name is missing.
+No requirements.txt is needed for the core suite — it runs on the standard
+library. If a script needs more, its docstring says so.
 
-Hardware interests: aerocement/OpenCell panels, thermal labyrinths, Stirling
-cycles, geodesic ferrocement, RMH cascades. Software interests: local LLM
-orchestration, FTS5/RAG tooling, evidence-gated release automation.
+## Project map (verified)
+- [docs/PUBLIC_MAP.md](docs/PUBLIC_MAP.md)
+- [templates/design-packet/README.md](templates/design-packet/README.md)
+- [SECURITY.md](SECURITY.md)
+- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+- [docs/CLAIM_STATUS.md](docs/CLAIM_STATUS.md)
+- [docs/PUBLIC_BOUNDARY.md](docs/PUBLIC_BOUNDARY.md)
+- [docs/HARDWARE_RELEASE_STANDARD.md](docs/HARDWARE_RELEASE_STANDARD.md)
+- [docs/REPOSITORIES.md](docs/REPOSITORIES.md)
+- [designs/thermal-cascade/README.md](designs/thermal-cascade/README.md)
+
+## Contribution workflow
+
+    Submit Issue → Contribute Code or Docs → Create Pull Request
+    → Fill PR Template Honestly → Checks: boundary + validation + provenance
+    → Squash Merge → Delete Head Branch
+
+Rules the CI actually enforces:
+
+- Automation changes (.github/workflows, scripts) and public-documentation
+  changes go in separate PRs — public-boundary rejects mixed ones.
+- Every claim statement needs nearby evidence, assumptions, or an explicit
+  non-claim marker — claim-boundary scans for naked public claim language.
+- No trailing whitespace — git diff --check runs on every push.
+- Squash merge is the default; the head branch is deleted after merge.
+
+## Design packets
+
+New hardware/experiment work starts from
+templates/design-packet/README.md. Packets carry an evidence level and
+explicit non-claims; do not present an unverified idea as certified,
+compliant, or field-ready.
+
+## Local automation tools (bin/)
+
+Tracked helper scripts — all runnable locally: workflow dispatcher
+(ALIGN/ASSESS/ACT/VERIFY/DOCUMENT/AMPLIFY envelopes), Ollama relay on :9999,
+batch nomic embeddings, and the bottom-tier nanobot. See each file header
+for usage.
+
+## Verification checklist before opening a PR
+
+- [ ] python3 -m unittest discover -s tests passes
+- [ ] git diff --check is clean (no trailing whitespace)
+- [ ] Changed-path list reviewed against the PR template boundary section
+- [ ] Measurement claims carry source data or evidence references
+
+## Newton Chain documents
+
+Formal derivation documents (definitions, axioms, propositions, proofs) are
+validated by automation/checks/newton_chain_validate.py, which also runs in
+CI on docs/newton_chain/*.
