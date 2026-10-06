@@ -1,30 +1,31 @@
-# Local OpenRoot audit artifacts
-.openroot-audit/
-
-# Python
-__pycache__/
-*.py[cod]
-.venv/
-venv/
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-coverage.xml
-htmlcov/
-
-# Environment and secrets
-.env
-.env.*
-!.env.example
-*.pem
-*.key
-*.p12
-*.pfx
-secrets/
-credentials/
-
-# OS/editor
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
+# runtime state / ledgers — never commit
+data/
+*.db
+*.db-shm
+*.db-wal
+*.jsonl.bak
+*.pid
+logs/
+run/
+reports/
+candidates/
+archive/
+workareas/
+.local*/
+# node / next scaffolding unless intended public
+node_modules/
+.next/
+# backup litter
+*.bak
+*.backup_*
+*.pre_*
+*/*.bak
+bin/*.bak
+# session/cross-device traffic
+context_bridge/permaculture-*.md
+context_bridge/lumo_inbox/
+context_bridge/outbox/
+context_bridge/staging/
+context_bridge/quarantine*/
+.aider.tags.cache.v4/
+.tinycrew/
