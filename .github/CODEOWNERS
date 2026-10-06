@@ -1,0 +1,8 @@
+# Default ownership for review routing.
+# This file does not bypass GitHub branch-protection rules.
+
+* @jesseray718
+/docs/ @jesseray718
+/designs/ @jesseray718
+/scripts/ @jesseray718
+/.github/ @jesseray718

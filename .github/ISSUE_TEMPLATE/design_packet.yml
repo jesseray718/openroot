@@ -1,0 +1,56 @@
+name: Design or experiment packet
+description: Propose a bounded, evidence-tracked appropriate-technology design or test
+title: "design: "
+labels: ["design", "evidence", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        OpenRoot treats unverified concepts as hypotheses. Do not present a proposed system as certified, code-compliant, safe, or field-ready without evidence.
+  - type: input
+    id: identifier
+    attributes:
+      label: Proposed design or experiment ID
+      placeholder: "TC-001"
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Testable question or need
+    validations:
+      required: true
+  - type: dropdown
+    id: evidence_level
+    attributes:
+      label: Current evidence level
+      options:
+        - "L0 — concept, intake, literature, or hypothesis"
+        - "L1 — documented bench concept or procedure"
+        - "L2 — preliminary measured bench prototype"
+        - "L3 — repeated prototype with failures and costs"
+        - "L4 — independently reproduced result"
+        - "L5 — field-ready reference design with reproducible evidence"
+    validations:
+      required: true
+  - type: textarea
+    id: claims
+    attributes:
+      label: Claims and boundaries
+      placeholder: "What is claimed, what is not claimed, and what conditions apply?"
+    validations:
+      required: true
+  - type: textarea
+    id: measurement
+    attributes:
+      label: Measurement plan
+      placeholder: "Inputs, sensors, calibration, uncertainty, data format, and repetition count"
+    validations:
+      required: true
+  - type: textarea
+    id: hazards
+    attributes:
+      label: Hazard and stop-condition plan
+      placeholder: "Thermal, combustion, electrical, structural, chemical, legal, and operational hazards"
+    validations:
+      required: true
