@@ -68,7 +68,10 @@ jobs:
             esac
 
             case "$path" in
-              docs/newton_chain/*|docs/newton-chain/*|docs/NEWTON_CHAIN.md|*SCHEMA.yaml|*SCHEMA.yml|*INFERENCE_RULES.md)
+              package.json|package-lock.json|tsconfig.json|next-env.d.ts|biome.json|app/*|app/**)
+      has_automation=1
+      ;;
+    docs/newton_chain/*|docs/newton-chain/*|docs/NEWTON_CHAIN.md|*SCHEMA.yaml|*SCHEMA.yml|*INFERENCE_RULES.md)
                 has_technical_docs=1
                 ;;
             esac
