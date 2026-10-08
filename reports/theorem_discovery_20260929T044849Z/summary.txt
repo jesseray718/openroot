@@ -1,0 +1,437 @@
+=== REPOSITORY SCOPE ===
+/home/jesse/openroot
+main
+HEAD=2e9c68398fb4d2be67c08bde2441bf8826925788
+DATE=2026-09-27T23:58:33-05:00
+SUBJECT=[FIX] handoff: fill PR #9 URL placeholder (AI-assisted, human-gated)
+
+=== TEXT FILE CANDIDATES ===
+candidate_text_files=116924
+
+=== KEYWORD HITS ===
+keyword_hits=14848
+
+=== HIGH-VALUE FILES BY HIT COUNT ===
+  1121 ./context_bridge/grep_sweep_20260927_205916/philosophy_in_code.txt
+   455 ./context_bridge/grep_sweep_20260927_205916/model_config_refs.txt
+   332 ./context_bridge/concept_sweeps/20260928_010158-corrected/cooperation.txt
+   316 ./context_bridge/concept_sweeps/20260928_004258/synergy.txt
+   287 ./context_bridge/concept_sweeps/20260928_010158-corrected/agapekb.txt
+   273 ./context_bridge/grep_sweep_20260927_205916/ledger_state.txt
+   247 ./context_bridge/concept_sweeps/20260928_004258/46656.txt
+   207 ./context_bridge/concept_sweeps/20260928_004258/resonance.txt
+   169 ./ctx_backup_20260923_194243/doc_compile_termux_20260920_222842.md
+   169 ./context_bridge/doc_compile_termux_20260920_222842.md
+   121 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_200743.md
+   121 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_200743.md
+   120 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_200044.md
+   120 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193401.md
+   120 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193350.md
+   120 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193339.md
+   120 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193328.md
+   120 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193316.md
+   120 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193305.md
+   120 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193254.md
+   120 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193243.md
+   120 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193220.md
+   120 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193209.md
+   120 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193157.md
+   120 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193146.md
+   120 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193135.md
+   120 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193123.md
+   120 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_200044.md
+   120 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193401.md
+   120 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193350.md
+   120 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193339.md
+   120 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193328.md
+   120 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193316.md
+   120 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193305.md
+   120 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193254.md
+   120 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193243.md
+   120 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193220.md
+   120 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193209.md
+   120 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193157.md
+   120 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193146.md
+   120 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193135.md
+   120 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193123.md
+   119 ./context_bridge/concept_sweeps/20260928_004258/synergetic.txt
+   103 ./consolidation-backups/untracked_collision_20260919-072429/venv/api/lib/python3.12/site-packages/pydantic_core-2.46.5.dist-info/sboms/pydantic-core.cyclonedx.json
+    82 ./context_bridge/concept_mining/distill_20260928_012029/CONCEPT_SOURCES.clean.md
+    81 ./context_bridge/grep_sweep_20260927_205916/digest_files.txt
+    72 ./context_bridge/concept_sweeps/20260928_004258/synergetics.txt
+    69 ./context_bridge/grep_sweep_20260927_205916/energy_research.txt
+    63 ./context_bridge/concept_sweeps/20260928_004258/tidbit.txt
+    62 ./context_bridge/concept_sweeps/20260928_010158-corrected/philos.txt
+    61 ./context_bridge/concept_sweeps/20260928_004258/swarm.txt
+    60 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193111.md
+    60 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193111.md
+    60 ./analysis/frp12_20260920_012726/prune_targets.json
+    60 ./analysis/frp12_20260920_012638/prune_targets.json
+    60 ./analysis/frp12_20260920_012032/prune_targets.json
+    56 ./context_bridge/grep_sweep_20260927_205916/device_sync.txt
+    46 ./context_bridge/concept_mining/distill_20260928_012029/read_20260928_012238/DIGEST_TOP5_20260928_012423.md
+    44 ./context_bridge/kai_deep_harvest_20260928_024955/text/kai-settings.json
+    43 ./context_bridge/grep_sweep_20260927_205916/handoff_artifacts.txt
+    42 ./context_bridge/concept_sweeps/20260928_004258/agape.txt
+    42 ./bin/0012_newton_chain.py
+    42 ./attic/rescue_staging_vendor/0012_newton_chain.py
+    39 ./context_bridge/gov_promote_proofs_20260928_041935/parent_hash.txt
+    39 ./context_bridge/gov_promote_proofs_20260928_041935/nest_hash.txt
+    38 ./context_bridge/grep_sweep_20260927_205916/gates_canaries.txt
+    37 ./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/huggingface_hub/inference/_client.py
+    37 ./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/cryptography-50.0.1.dist-info/sboms/cryptography-rust.cyclonedx.json
+    36 ./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/litellm/llms/huggingface/huggingface_llms_metadata/hf_text_generation_models.txt
+    35 ./context_bridge/concept_mining/20260928_011449/CONCEPT_DIGEST.clean.md
+    34 ./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/huggingface_hub/inference/_generated/_async_client.py
+    34 ./bin/quarantine_pyfails_final_v2/placeholder/0770_energy_theorems.py
+    34 ./attic/rescue_staging_vendor/0770_energy_theorems.py
+    33 ./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/litellm/model_prices_and_context_window_backup.json
+    32 ./context_bridge/concept_sweeps/20260928_010158-corrected/0cost.txt
+    31 ./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/huggingface_hub/hf_api.py
+    30 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193059.md
+    30 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193059.md
+    30 ./bin/0817_Packet.py
+    30 ./attic/rescue_staging_vendor/0817_Packet.py
+    28 ./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/spatial/distance.py
+    27 ./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/cryptography/x509/base.py
+    26 ./analysis/knowledge_probe_report_2026-09-18.md
+    25 ./bin/knowledge_probe_v1.py
+    24 ./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test_optimize.py
+    24 ./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/fastmcp/server/auth/auth.py
+    22 ./context_bridge/grep_sweep_20260927_205737/router_orchestrator.txt
+    22 ./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/networkx/generators/geometric.py
+    22 ./bin/0775_sacred_language_theorem.py
+    22 ./attic/rescue_staging_vendor/0775_sacred_language_theorem.py
+    20 ./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_minimize.py
+    20 ./bin/0821_Transport.py
+    20 ./attic/rescue_staging_vendor/0821_Transport.py
+    19 ./bin/quarantine_pyfails_final_v2/realbug/0044_v7.py
+    19 ./attic/rescue_staging_vendor/0044_v7.py
+    18 ./tests/test_lumo_lib.py
+    18 ./context_bridge/concept_mining/distill_20260928_012029/read_20260928_012238/06_auto_20260830_162350_log.md
+    18 ./bin/0015_lattice_cli.py
+    18 ./attic/rescue_staging_vendor/0015_lattice_cli.py
+    17 ./tests/test_knowledge_probe.py
+
+=== DIRECT NEWTON / ORACLE / AXIOM / THEOREM HITS ===
+40:./consolidation-backups/untracked_collision_20260919-072429/consolidation-backups/bin_collision_20260919-071427/bin/openroot_mcp_v1.py:12:    """Full-text search across local theorem/ledgere FTS5 indexes."""
+41:./consolidation-backups/untracked_collision_20260919-072429/consolidation-backups/bin_collision_20260919-071427/bin/openroot_mcp_v1.py:26:    """Run one compounding pass of the 7B-author/3B-grade theorem loop."""
+49:./consolidation-backups/untracked_collision_20260919-072429/graded_loop/INTEGRATION.md:2:- sisters: une-joule-native, openroot-two-pane, openroot-canon, openroot-fts5-hybrid, openroot-integration, openroot-seed-oracle, agape-engine, openroot-stack
+52:./consolidation-backups/untracked_collision_20260919-072429/graded_loop/CLAIMS.md:5:| C02 | Models have zero write access to kernel/ axioms, postulates, definitions. | DEMO | /home/workdir/artifacts/openroot-graded-loop/bin/gates.py kernel_immutable | N11 |
+53:./consolidation-backups/untracked_collision_20260919-072429/graded_loop/CLAIMS.md:10:| C07 | 7B authored a banked theorem this week via local graded loop. | OPEN | operator assertion 2026-09 week; not re-executed in this sandbox | N14 |
+54:./consolidation-backups/untracked_collision_20260919-072429/graded_loop/CLAIMS.md:12:| C09 | Coordination cost C=0 at R=1.0 is the Agape theorem identity, not a measured joule on OptiPlex. | MODEL | agape-engine theorem | N03 |
+59:./consolidation-backups/untracked_collision_20260919-072429/graded_loop/MANIFEST.md:19:  - openroot-seed-oracle
+60:./consolidation-backups/untracked_collision_20260919-072429/graded_loop/MANIFEST.md:24:  - theorem forge
+66:./consolidation-backups/untracked_collision_20260919-072429/graded_loop/bin/gates.py:104:    axiom_ids = {a["id"] for a in kernel["axioms"]}
+67:./consolidation-backups/untracked_collision_20260919-072429/graded_loop/bin/gates.py:105:    post_ids = {p["id"] for p in posts["postulates"]}
+71:./consolidation-backups/untracked_collision_20260919-072429/graded_loop/kernel/AXIOMS.json:5:  "axioms": [
+72:./consolidation-backups/untracked_collision_20260919-072429/graded_loop/kernel/POSTULATES.json:4:  "note": "Matching a postulate skips generation. Add only via human kernel-amend.",
+73:./consolidation-backups/untracked_collision_20260919-072429/graded_loop/kernel/POSTULATES.json:5:  "postulates": [
+74:./consolidation-backups/untracked_collision_20260919-072429/graded_loop/kernel/POSTULATES.json:7:    {"id": "P02", "text": "One act per session, one artifact, one provenance-marked commit.", "n": "N11"},
+75:./consolidation-backups/untracked_collision_20260919-072429/graded_loop/kernel/DEFINITIONS.json:5:    "kernel": "Axioms, postulates, definitions. Human write only.",
+226:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/haskell.py:197:                'postulate', 'parameters', 'record', 'dsl', 'impossible', 'implicit',
+228:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/haskell.py:305:        'no-eta-equality', 'opaque', 'open', 'overlap', 'pattern', 'postulate', 'primitive',
+229:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/sophia.py:44:                       'hash', 'signature', 'oracle', 'oracle_query')
+230:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/algebra.py:215:                axiom|end_axiom|category|end_category|domain|end_domain|inherits|
+233:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/elpi.py:17:from pygments.lexers.theorem import CoqLexer
+236:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/theorem.py:2:    pygments.lexers.theorem
+237:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/theorem.py:5:    Lexers for theorem-proving languages.
+238:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/theorem.py:24:    For the Coq theorem prover.
+239:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/theorem.py:27:    name = 'Coq'
+240:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/theorem.py:197:    For the Isabelle proof assistant.
+241:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/theorem.py:264:        'inductive', 'inductive_set', 'instantiation', 'judgment', 'lemmas',
+242:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/theorem.py:268:        'nominal_datatype', 'nonterminal', 'notation', 'notepad', 'oracle',
+243:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/theorem.py:277:        'text_raw', 'theorems', 'translations', 'type_notation',
+244:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/theorem.py:291:        'ax_specification', 'bnf', 'code_pred', 'corollary', 'cpodef',
+245:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/theorem.py:293:        'enriched_type', 'function', 'instance', 'interpretation', 'lemma',
+246:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/theorem.py:299:        'theorem', 'typedef', 'wrap_free_constructors',
+247:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/theorem.py:307:    keyword_proof_block = ('next', 'proof')
+249:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/lean.py:5:    Lexers for the Lean theorem prover.
+250:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/lean.py:21:    For the Lean 3 theorem prover.
+252:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/lean.py:74:                'lemma', 'theorem', 'def', 'definition', 'example',
+253:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/lean.py:75:                'axiom', 'axioms', 'constant', 'constants',
+254:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/lean.py:137:    For the Lean 4 theorem prover.
+255:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/lean.py:155:        'renaming', 'inline', 'hiding', 'lemma', 'variable',
+256:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/lean.py:156:        'theorem', 'axiom', 'inductive', 'structure', 'universe', 'alias',
+263:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/verification.py:39:                'axiom', 'break', 'call', 'ensures', 'else', 'exists', 'function',
+265:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/verification.py:87:                'predicate', 'program', 'domain', 'axiom', 'var', 'returns',
+269:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/jvm.py:32:    url = 'https://www.oracle.com/technetwork/java/'
+281:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/_mapping.py:104:    'CoqLexer': ('pygments.lexers.theorem', 'Coq', ('coq',), ('*.v',), ('text/x-coq',)),
+282:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/_mapping.py:237:    'IsabelleLexer': ('pygments.lexers.theorem', 'Isabelle', ('isabelle',), ('*.thy',), ('text/x-isabelle',)),
+286:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/dsls.py:456:                'all', 'always', 'any', 'as', 'axiom', 'card', 'case', 'channel',
+287:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/felix.py:102:            (words(('axiom', 'ctor', 'fun', 'gen', 'proc', 'reduce',
+291:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/functional.py:16:from pygments.lexers.theorem import CoqLexer
+295:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/tnt.py:50:        | axiom\\ ([1-5]) | premise | push | pop
+296:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/pygments/lexers/tnt.py:244:                # rule proving this formula a theorem
+852:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/linalg/_sketches.py:93:    proof of Theorem 14 of [2]_ via Markov's Inequality. If we have
+855:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/special/_add_newdocs.py:1744:    The code implements Carlson's algorithm based on the duplication theorems
+856:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/special/_add_newdocs.py:1860:    The code implements Carlson's algorithm based on the duplication theorems
+857:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/special/_add_newdocs.py:1950:    The code implements Carlson's algorithm based on the duplication theorems
+858:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/special/_add_newdocs.py:2163:    The code implements Carlson's algorithm based on the duplication theorems
+860:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/special/_orthogonal.py:181:    # improve roots by one application of Newton's method
+861:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/special/_orthogonal.py:850:    problem and improved by one step of a Newton iteration.
+862:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/special/_orthogonal.py:900:    For details, see formula 3.1 in lemma 3.1 in the
+863:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/special/_orthogonal.py:910:        Number of Newton maxit performed, the default
+864:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/special/_orthogonal.py:940:    of order :math:`n`. The formula is the one from lemma 3.1 in the
+865:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/special/_orthogonal.py:975:    of order :math:`n`. The formula is the one from lemma 3.2 in the
+866:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/special/_orthogonal.py:1171:    """Newton iteration for polishing the asymptotic approximation
+867:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/special/_orthogonal.py:1181:        Maximal number of Newton iterations.
+868:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/special/_orthogonal.py:1200:    # Newton iteration
+869:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/special/_orthogonal.py:1380:    problem and improved by one step of a Newton iteration.
+870:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/special/tests/test_digamma.py:23:    # Test special values from Gauss's digamma theorem. See
+872:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/special/_basic.py:3318:    being logarithmically convex, c.f. Bohr-Mollerup theorem) -- in fact, the
+875:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/integrate/_quadrature.py:910:# Coefficients for Newton-Cotes quadrature
+876:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/integrate/_quadrature.py:914:#  a are the weights for Newton-Cotes integration
+877:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/integrate/_quadrature.py:974:    Return weights and error coefficient for Newton-Cotes integration.
+878:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/integrate/_quadrature.py:977:    x_0, x_1, ..., x_N. Then an N-point Newton-Cotes formula for the
+879:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/integrate/_quadrature.py:994:        the length of `rn`. N is the order of the Newton-Cotes integration.
+880:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/integrate/_quadrature.py:1008:    Normally, the Newton-Cotes rules are used on smaller integration
+881:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/integrate/_bvp.py:348:    """Solve the nonlinear collocation system by a Newton method.
+882:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/integrate/_bvp.py:350:    This is a simple Newton method with a backtracking line search. As
+884:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/integrate/_bvp.py:355:    The method alters between full Newton iterations and the fixed-Jacobian
+885:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/integrate/_bvp.py:410:    # tolerance, it seems reasonable to terminated Newton iterations by
+886:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/integrate/_bvp.py:418:    # other words, the maximum number of full Newton iterations. A small value
+888:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/integrate/_bvp.py:860:    by a damped Newton method with an affine-invariant criterion function as
+889:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/integrate/__init__.py:22:   newton_cotes  -- Weights and error coefficient for Newton-Cotes integration
+891:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/integrate/_ivp/radau.py:43:NEWTON_MAXITER = 6  # Maximum number of Newton iterations.
+894:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/stats/_levy_stable/__init__.py:743:    in the Newton-Cotes formula when approximating the characteristic function
+895:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/stats/_levy_stable/__init__.py:1169:    Uses fast Fourier transform with Newton-Cotes integration following [WZ].
+896:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/stats/_levy_stable/__init__.py:1170:    Defaults to using Simpson's method (3-point Newton-Cotes integration).
+897:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/stats/_levy_stable/__init__.py:1178:        Step size for Newton-Cotes integration. Default: 0.01
+898:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/stats/_levy_stable/__init__.py:1180:        Use 2**q steps when performing Newton-Cotes integration.
+899:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/stats/_levy_stable/__init__.py:1187:        Calculate integral using n-point Newton-Cotes integration for
+900:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/stats/_levy_stable/__init__.py:1188:        n = level. The 3-point Newton-Cotes formula corresponds to Simpson's
+910:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/stats/_continuous_distns.py:2711:    (Fisher-Gnedenko theorem), is also often simply called the Weibull
+911:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/stats/_continuous_distns.py:2986:    (Fisher-Gnedenko theorem), is the limiting distribution of rescaled
+917:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/stats/qmc.py:108:special cases there is a central limit theorem [13]_. For smooth enough
+921:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/stats/_stats_py.py:9529:    using the Euclidean norm is:
+923:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/stats/_stats_py.py:9825:    definition above satisfies the axioms of a distance function (metric).
+927:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/stats/_resampling.py:505:    Due to central limit theorem, this normal approximation is accurate for a
+930:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/stats/_qmc.py:1359:    theorem for LHS on the mean and variance of the integral [4]_, but not
+941:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_trustregion_ncg.py:1:"""Newton-CG trust-region optimization."""
+942:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_trustregion_ncg.py:15:    the Newton conjugate gradient trust-region algorithm.
+943:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_trustregion_ncg.py:32:        raise ValueError('Jacobian is required for Newton-CG trust-region '
+944:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_trustregion_ncg.py:36:                         'is required for Newton-CG trust-region minimization')
+945:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_shgo.py:162:            Newton-CG, L-BFGS-B, TNC, SLSQP, dogleg, trust-ncg. If ``jac`` is a
+946:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_shgo.py:173:            Only for Newton-CG, dogleg, trust-ncg. Only one of ``hessp`` or
+949:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_shgo.py:1217:            # Find local minimum at the miniser with the greatest Euclidean
+951:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_minimize.py:88:        - 'Newton-CG'   :ref:`(see here) <optimize.minimize-newtoncg>`
+952:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_minimize.py:105:        Newton-CG, L-BFGS-B, TNC, SLSQP, dogleg, trust-ncg, trust-krylov,
+953:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_minimize.py:116:        Methods 'Newton-CG', 'trust-ncg', 'dogleg', 'trust-exact', and
+954:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_minimize.py:126:        Method for computing the Hessian matrix. Only for Newton-CG, dogleg,
+955:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_minimize.py:138:        quasi-Newton methods implementing this interface are:
+956:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_minimize.py:147:        Newton-CG, trust-ncg, trust-krylov, trust-constr.
+957:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_minimize.py:261:    Method :ref:`BFGS <optimize.minimize-bfgs>` uses the quasi-Newton
+959:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_minimize.py:268:    Method :ref:`Newton-CG <optimize.minimize-newtoncg>` uses a
+960:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_minimize.py:269:    Newton-CG algorithm [5]_ pp. 168 (also known as the truncated
+961:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_minimize.py:270:    Newton method). It uses a CG method to the compute the search
+962:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_minimize.py:281:    Newton conjugate gradient trust-region algorithm [5]_ for
+963:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_minimize.py:287:    the Newton GLTR trust-region algorithm [14]_, [15]_ for unconstrained
+964:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_minimize.py:299:    situations, the Newton method to converge in fewer iterations
+965:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_minimize.py:332:    Method :ref:`TNC <optimize.minimize-tnc>` uses a truncated Newton
+966:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_minimize.py:335:    called Newton Conjugate-Gradient. It differs from the *Newton-CG*
+967:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_minimize.py:390:    estimated using one of the quasi-Newton strategies.
+968:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_minimize.py:397:    | Newton-CG    | x    | (n, n)   | x                       | x   |
+969:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_minimize.py:459:    .. [8] Nash, S G. Newton-Type Minimization Via the Lanczos Method.
+971:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_linprog.py:540:           Programming based on Newton's Method." Unpublished Course Notes,
+972:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/__init__.py:93:Quasi-Newton strategies implementing `HessianUpdateStrategy`
+973:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/__init__.py:96:quasi-Newton methods implementing this interface are:
+974:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/__init__.py:162:   newton - Newton's method (also Secant and Halley's methods).
+975:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/__init__.py:356:   fmin_bfgs - Quasi-Newton method (Broydon-Fletcher-Goldfarb-Shanno).
+976:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/__init__.py:357:   fmin_ncg - Line-search Newton Conjugate Gradient.
+977:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/__init__.py:365:   fmin_tnc - Truncated Newton code.
+978:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_lbfgsb_py.py:506:    .. [1] Nocedal, Jorge. "Updating quasi-Newton matrices with limited
+979:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_hessian_update_strategy.py:1:"""Hessian update strategies for quasi-Newton optimization methods."""
+980:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_hessian_update_strategy.py:15:    approximations, such as the quasi-Newton methods BFGS, SR1, L-BFGS.
+981:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_hessian_update_strategy.py:20:    quasi-Newton update strategies, giving freedom of implementation
+982:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_hessian_update_strategy.py:23:    in different quasi-Newton strategies.
+983:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_hessian_update_strategy.py:189:                 'Hessian as zero instead of using quasi-Newton '
+984:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_linprog_doc.py:981:    8.31 and 8.32, derived from the Newton equations [4]_ Section 5 Equations
+985:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_linprog_doc.py:1078:           Programming based on Newton's Method." Unpublished Course Notes,
+986:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_trustregion_exact.py:326:                # Compute Newton step accordingly to
+987:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_trustregion_dogleg.py:53:        The Newton point is a global minimum of the approximate function.
+988:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_trustregion_dogleg.py:93:        # Compute the Newton point.
+989:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_trustregion_dogleg.py:114:        # and the line segment connecting the Cauchy and Newton points.
+990:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_constraints.py:91:    using one of the quasi-Newton strategies.
+991:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_nonlin.py:153:    This algorithm implements the inexact Newton method, with
+992:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_nonlin.py:155:    approximations are available, including Krylov and Quasi-Newton
+993:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_nonlin.py:218:        # Line search, or Newton step
+994:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_nonlin.py:303:        # XXX: No suitable step length found. Take the full Newton step,
+995:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_nonlin.py:861:    This algorithm implements the inverse Jacobian Quasi-Newton update
+996:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_nonlin.py:973:    This algorithm implements the inverse Jacobian Quasi-Newton update
+997:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_nonlin.py:1406:    This function implements a Newton-Krylov solver. The basic idea is
+998:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_nonlin.py:1419:    information obtained in the previous Newton steps to invert
+999:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_nonlin.py:1422:    For a review on Newton-Krylov methods, see for example [1]_,
+1000:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_nonlin.py:1427:    .. [1] C. T. Kelley, Solving Nonlinear Equations with Newton's Method,
+1001:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_nonlin.py:1471:            # Replace GMRES's outer iteration with Newton steps
+1002:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_nonlin.py:1481:            # Replace LGMRES's outer iteration with Newton steps
+1003:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_nonlin.py:1491:            #      since it's not an inexact Newton method.
+1004:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_zeros_py.py:113:    Find a root of a real or complex function using the Newton-Raphson
+1005:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_zeros_py.py:118:    The Newton-Raphson method is used if the derivative `fprime` of `func`
+1006:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_zeros_py.py:157:        convenient. If it is None (default), then the normal Newton-Raphson
+1007:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_zeros_py.py:202:    The convergence rate of the Newton-Raphson method is quadratic,
+1008:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_zeros_py.py:244:    Only ``fprime`` is provided, use the Newton-Raphson method:
+1009:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_zeros_py.py:304:        # Newton-Raphson method
+1010:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_zeros_py.py:335:                # opposite direction to Newton. Doesn't happen if x is close
+1011:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_zeros_py.py:398:    A vectorized version of Newton, Halley, and secant methods for arrays.
+1012:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_zeros_py.py:410:        # Newton-Raphson method
+1013:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_zeros_py.py:423:            # Newton step
+1014:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_zeros_py.py:476:        # Newton or Halley warnings
+1015:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_zeros_py.py:1023:    """Apply Newton-Raphson like steps, using divided differences to approximate f'
+1016:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_zeros_py.py:1044:        # Apply k Newton-Raphson steps to _P(x), starting from x=r
+1017:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_zeros_py.py:1165:            # an approximate Newton-Raphson step.
+1018:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_zeros_py.py:1275:    "Newton-quadratic" steps. [APS1995].
+1019:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_zeros_py.py:1291:        The number of Newton quadratic steps to perform each
+1020:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_lsq/trf.py:24:differentiable and the Newton step for it satisfies
+1021:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_lsq/trf.py:32:we have a Newton step satisfying
+1022:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_lsq/trf.py:39:trust-region problem based on the Newton step in the new variables:
+1023:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_lsq/trf.py:80:in a subspace spanned by the gradient and the approximate Gauss-Newton step
+1025:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_lsq/common.py:98:        that Gauss-Newton step was selected as the solution.
+1026:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_lsq/common.py:120:    # Check if J has full rank and try Gauss-Newton step.
+1027:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_lsq/common.py:191:        Whether the returned solution is the Newton step which lies within
+1028:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_lsq/dogbox.py:24:Gauss-Newton step can be computed exactly by `numpy.linalg.lstsq` (for dense
+1029:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_lsq/dogbox.py:219:        # Compute (Gauss-)Newton and build quadratic model for Cauchy step.
+1030:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_lsq/least_squares.py:461:            is a Gauss-Newton approximation of the Hessian of the cost function.
+1031:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_lsq/least_squares.py:536:    Gauss-Newton solution delivered by `scipy.sparse.linalg.lsmr`. When no
+1032:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_lsq/least_squares.py:546:    [NumOpt]_. The required Gauss-Newton step can be computed exactly for
+1033:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_lsq/least_squares.py:555:    such that computed gradient and Gauss-Newton Hessian approximation match
+1034:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_linprog_ip.py:693:           Programming based on Newton's Method." Unpublished Course Notes,
+1035:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_linprog_ip.py:970:    8.31 and 8.32, derived from the Newton equations [4]_ Section 5 Equations
+1036:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_linprog_ip.py:1070:           Programming based on Newton's Method." Unpublished Course Notes,
+1037:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_tstutils.py:413:# in [1] for each test case. Newton and Halley methods need a single
+1038:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_tstutils.py:774:# in [1] for each test case. Newton and Halley need a single starting point
+1039:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_tstutils.py:917:# secant/Newton/Halley is provided.
+1040:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test_least_squares.py:649:        # Test that res.jac.T.dot(res.jac) gives Gauss-Newton approximation
+1042:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test__shgo.py:659:        for solver in ['Nelder-Mead', 'Powell', 'CG', 'BFGS', 'Newton-CG',
+1043:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test__shgo.py:897:        minimizer_kwargs = {'method': 'Newton-CG'}
+1044:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test__shgo.py:900:        ref = minimize(rosen, np.zeros(5), method='Newton-CG',
+1045:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test__basinhopping.py:204:        methods = ['CG', 'BFGS', 'Newton-CG', 'L-BFGS-B', 'TNC', 'SLSQP']
+1046:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test__basinhopping.py:215:        # Test 2-D minimizations without gradient. Newton-CG requires jac=True,
+1047:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test_optimize.py:544:                                   method='Newton-CG', jac=self.grad,
+1048:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test_optimize.py:567:        # line-search Newton conjugate gradient optimization routine
+1049:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test_optimize.py:572:                                       method='Newton-CG', jac=self.grad,
+1050:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test_optimize.py:600:        # Newton conjugate gradient with Hessian
+1051:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test_optimize.py:605:                                       method='Newton-CG', jac=self.grad,
+1052:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test_optimize.py:634:        # Newton conjugate gradient with Hessian times a vector p.
+1053:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test_optimize.py:639:                                       method='Newton-CG', jac=self.grad,
+1054:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test_optimize.py:1008:        # For Newton-CG, trust-ncg, trust-krylov the FD estimated hessian is
+1055:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test_optimize.py:1012:        methods = ['trust-constr', 'Newton-CG', 'trust-ncg', 'trust-krylov']
+1056:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test_optimize.py:1023:        # Newton-CG creates its own hessp, and trust-constr doesn't need a hess
+1057:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test_optimize.py:1393:                                        'Newton-CG', 'L-BFGS-B', 'SLSQP',
+1058:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test_optimize.py:1410:        if method in ('Newton-CG',):
+1059:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test_optimize.py:1508:        methods = ['CG', 'BFGS', 'L-BFGS-B', 'Newton-CG']
+1060:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test_optimize.py:1526:            if scale < 1e-10 and method in ('L-BFGS-B', 'Newton-CG'):
+1061:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test_optimize.py:1545:                    # Newton-CG and L-BFGS-B use different logic for the first
+1063:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test_optimize.py:2165:                                method='Newton-CG')
+1064:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test_optimize.py:2175:                                method='Newton-CG',
+1065:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test_optimize.py:2187:                                method='Newton-CG')
+1066:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test_optimize.py:2197:                                method='Newton-CG')
+1067:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test_optimize.py:2794:               'trust-krylov', 'Newton-CG']
+1070:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test_optimize.py:3234:@pytest.mark.parametrize('method', ['Newton-CG', 'trust-constr'])
+1072:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test_zeros.py:676:    """Test that Newton or Halley don't warn if zero derivative at root"""
+1073:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test_zeros.py:740:    # Newton succeeds in 8 iterations
+1074:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test_differentiable_functions.py:663:            # a quasi-Newton approximation is used for the Hessian.
+1076:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_differentiable_functions.py:137:        to be estimated using one of the quasi-Newton strategies.
+1078:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_differentiable_functions.py:184:                             "quasi-Newton strategies.")
+1080:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_differentiable_functions.py:380:                             "be estimated using one of the quasi-Newton "
+1081:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_differentiable_functions.py:419:                             "be estimated using one of the quasi-Newton "
+1082:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_trustregion_constr/tests/test_qp_subproblem.py:354:        # Newton point inside boundaries
+1083:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_tnc.py:96:    gradient information in a truncated Newton algorithm. This
+1084:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_tnc.py:204:    The underlying algorithm is truncated Newton, also called
+1085:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_tnc.py:205:    Newton Conjugate-Gradient. This method differs from
+1086:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_tnc.py:212:    the descent direction as in an unconstrained truncated Newton,
+1087:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_tnc.py:243:    Nash S.G. (1984), "Newton-Type Minimization Via the Lanczos Method",
+1088:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_tnc.py:293:    Newton (TNC) algorithm.
+1090:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_root.py:104:    *diagbroyden*, *excitingmixing*, *krylov* are inexact Newton methods,
+1093:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_optimize.py:257:        to be estimated using one of the quasi-Newton strategies.
+1094:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_optimize.py:1257:    using the quasi-Newton method of Broyden, Fletcher, Goldfarb,
+1095:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_optimize.py:1853:    Unconstrained minimization of a function using the Newton-CG method.
+1096:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_optimize.py:1917:        functions. See the 'Newton-CG' `method` in particular.
+1097:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_optimize.py:1929:    Newton-CG methods are also called truncated Newton methods. This
+1098:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_optimize.py:1975:    Newton-CG algorithm.
+1099:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_optimize.py:2004:        raise ValueError('Jacobian is required for Newton-CG method')
+1100:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_optimize.py:3945:    - :ref:`Newton-CG   <optimize.minimize-newtoncg>`
+1103:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/spatial/_spherical_voronoi.py:147:    >>> # indicate Voronoi regions (as Euclidean polygons)
+1104:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/spatial/_kdtree.py:381:            2 is the usual Euclidean distance.
+1105:./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/spatial/distance.py:46:   euclidean        -- the Euclidean distance.
+
+=== FORMAL TOOLCHAIN CANDIDATES ===
+
+=== EXISTING ROUTE / TIDBIT / CACHE FILES ===
+.tinycrew/runs/tinycrew-20260928_221311/route-cache-fts-decision-20260928_231848.md
+.tinycrew/runs/tinycrew-20260928_221311/route-cache-writer-discovery-20260928_231628.md
+.tinycrew/runs/tinycrew-20260928_221311/route-promotion-candidate-20260928_225504.json
+.tinycrew/runs/tinycrew-20260928_221311/smart-router-interface-20260928_232007.md
+.tinycrew/runs/tinycrew-20260928_221311/tidbit-cli-contract-20260928_223551.md
+bin/0012_newton_chain.py
+bin/0054_agape_ledger_chain.py
+bin/0103_release_hashes.py
+bin/0107_agape_mesh_oracle.py
+bin/0157_cache.py
+bin/0168_cache.py
+bin/0402_file_cache.py
+bin/0403_redis_cache.py
+bin/0418_cache.py
+bin/0425_hash.py
+bin/0468_cache.py
+bin/0499_hashes.py
+bin/0534_feed_oracle.py
+bin/0547_test-cache-finalize.py
+bin/0596_thermo_ledger.py
+bin/0615_LXMRouter.py
+bin/0636_router_fuzzer_seed_corpus.py
+bin/0666_thesis_hash.py
+bin/0677_physics_ledger_v1.py
+bin/0678_physics_ledger_v2.py
+bin/0698_print_hashes.py
+bin/0768_agape_cooperation_theorem.py
+bin/0773_proof_builder.py
+bin/0775_sacred_language_theorem.py
+bin/0776_sacred_merkle_system.py
+bin/0778_theorem_generator.py
+bin/0779_theorem_generator_batch2.py
+bin/0780_theorem_generator_batch3.py
+bin/0781_theorem_generator_batch4.py
+bin/0782_theorem_generator_batch5.py
+bin/0783_theorems_extend.py
+bin/0786_test_tidbit_library.py
+bin/0798_agape_oracle.py
+bin/0827_hashes.py
+bin/0835_Hashes.py
+bin/1327_print_hashes.py
+bin/agape_ledger_chain.py
+bin/boardroom_router.py
+bin/build_turing_tidbits_kernel_v1.sh
+bin/cache_pathway_orchestrator_v1.py
+bin/embed_cache.py
+bin/fuse_router_lb_seal_v1.sh
+bin/keyword_router_v1.py
+bin/light_cone_router.py
+bin/multi_router.py
+bin/offline_route_cache_v1.sh
+bin/openrouter_client_v1.py
+bin/popw_ledger.py
+bin/quarantine_pyfails_final_v2/placeholder/0770_energy_theorems.py
+bin/route_promotion_plan_v1.py
+bin/router_cache_probe_v1.py
+bin/router_cache_probe_v2.py
+bin/smart_router.py
+bin/specialist_router_v1.py
+bin/tidbit_registry_v1.py
+bin/turing_tidbits_v1.py
+context_bridge/concept_mining/distill_20260928_012029/read_20260928_012238/05_ledger_state_txt.md
+context_bridge/concepts/modular_turing_tidbit_v1.md
+context_bridge/handoff-20260928_232839-l0-exact-cache-sealed.md
+context_bridge/hive_canonical_20260928_041449/by_hash/07477cf6f06c_bottom_tier.py
+context_bridge/hive_canonical_20260928_041449/by_hash/32259f16aec3_dag_orchestrator.py
+context_bridge/release-notes-v2026.09.21-agape-cascade-ledger-discipline-20260921_061920.md
+context_bridge/release-notes-v2026.09.21-agape-cascade-ledger-discipline-20260921_062311.md
+context_bridge/release-notes-v2026.09.21-agape-cascade-ledger-discipline-20260921_062339.md
+context_bridge/release-notes-v2026.09.21-agape-cascade-ledger-discipline-20260921_062731.md
+context_bridge/session-2026-09-21-router-results.md
+scripts/install_permaculture_router.sh
+scripts/permaculture_router.py
+
+=== SHA-256 RECEIPTS ===
+=== DISCOVERY COMPLETE ===
+report_dir=/home/jesse/openroot/reports/theorem_discovery_20260929T044849Z

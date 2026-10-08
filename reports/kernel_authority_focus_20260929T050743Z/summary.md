@@ -1,0 +1,17 @@
+# OpenRoot kernel authority focus
+
+Generated: 2026-09-29T00:07:43-05:00
+Repository: /home/jesse/openroot
+Git HEAD: 2e9c68398fb4d2be67c08bde2441bf8826925788
+Branch: main
+
+## Candidate manifest
+agape_kb/universal_axioms/universal_axioms.json  1    3      ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356
+bin/0112_postulates.py                           43   1463   429f70830f80ff1a6ad4d5ff62dd2755e23969f5c90514500c07a27252cef8d2
+bin/0012_newton_chain.py                         389  33076  0cd3a6176896cf7c009240268d71d9256e713141d5e0f5264f29aae5635cfd94
+bin/0773_proof_builder.py                        73   2609   9d048c003806c6529468385fbd67222c66131c816dd73fa5ca1220bb95c90db1
+bin/0798_agape_oracle.py                         139  5775   d7c20749fcdc997da08df47b423cb18023ab742d23152d8b842138436c865f0b
+bin/turing_tidbits_v1.py                         370  11611  c439bb749e16323a314a63da68220a8eac7dd78db8b94814a4973ea3411dcf97
+
+## Missing
+none

@@ -1,0 +1,6 @@
+*** Error compiling 'bin/secure_and_commit_v4_20260920.py'...
+  File "bin/secure_and_commit_v4_20260920.py", line 81
+    proc = subprocess.run(["git","commit","-m",proposed_msg[:300]+"...", cwd=OPENROOT], capture_output=True, text=True)
+                                                                         ^^^^^^^^^^^^
+SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
+

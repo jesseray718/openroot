@@ -1,0 +1,1148 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+IFS=$'\n\t'
+umask 077
+
+REPO="${REPO:-$HOME/openroot}"
+STATE_DIR="${STATE_DIR:-$REPO/.openroot}"
+DATA_DIR="${DATA_DIR:-$REPO/data}"
+REPORTS_DIR="${REPORTS_DIR:-$REPO/reports}"
+INBOX_DIR="${INBOX_DIR:-$REPO/lumo_inbox}"
+OUTBOX_DIR="${OUTBOX_DIR:-$REPO/lumo_outbox}"
+CACHE_DIR="${CACHE_DIR:-$STATE_DIR/smrt_cache}"
+ROUTES_DIR="${ROUTES_DIR:-$STATE_DIR/routes}"
+LOCKS_DIR="${LOCKS_DIR:-$STATE_DIR/locks}"
+HOLDS_DIR="${HOLDS_DIR:-$DATA_DIR/operator_holds}"
+HOLD_FILE="${HOLD_FILE:-$HOLDS_DIR/HUMAN_HOLD}"
+DB="${DB:-$DATA_DIR/openroot_local_loop.db}"
+OLLAMA_URL="${OLLAMA_URL:-http://127.0.0.1:11434}"
+MODEL="${MODEL:-}"
+MAX_INBOX_BYTES="${MAX_INBOX_BYTES:-262144}"
+MAX_CONTEXT_CHARS="${MAX_CONTEXT_CHARS:-48000}"
+MAX_TASKS="${MAX_TASKS:-12}"
+CACHE_TTL_SECONDS="${CACHE_TTL_SECONDS:-21600}"
+RUN_ID="$(date -u +%Y%m%dT%H%M%SZ)_$$_${RANDOM}"
+RUN_DIR="$REPORTS_DIR/local_loop_$RUN_ID"
+LOG="$RUN_DIR/run.log"
+EVIDENCE_JSON="$RUN_DIR/evidence.json"
+TASKS_JSON="$RUN_DIR/tasks.json"
+ROUTES_JSON="$RUN_DIR/routes.json"
+PACKET_MD="$RUN_DIR/task_packet.md"
+PROPOSAL_MD="$RUN_DIR/local_proposal.md"
+SUMMARY_JSON="$RUN_DIR/summary.json"
+
+mkdir -p \
+  "$STATE_DIR" \
+  "$DATA_DIR" \
+  "$REPORTS_DIR" \
+  "$INBOX_DIR" \
+  "$OUTBOX_DIR" \
+  "$CACHE_DIR" \
+  "$ROUTES_DIR" \
+  "$LOCKS_DIR" \
+  "$HOLDS_DIR" \
+  "$RUN_DIR"
+
+chmod 700 \
+  "$STATE_DIR" \
+  "$INBOX_DIR" \
+  "$OUTBOX_DIR" \
+  "$CACHE_DIR" \
+  "$ROUTES_DIR" \
+  "$LOCKS_DIR" \
+  "$HOLDS_DIR" \
+  "$RUN_DIR"
+
+touch "$LOG"
+chmod 600 "$LOG"
+
+exec > >(tee -a "$LOG") 2>&1
+
+die() {
+  printf '[fatal] %s\n' "$*" >&2
+  exit 1
+}
+
+note() {
+  printf '[openroot] %s\n' "$*"
+}
+
+have() {
+  command -v "$1" >/dev/null 2>&1
+}
+
+require() {
+  have "$1" || die "required command missing: $1"
+}
+
+json_escape() {
+  python3 - "$1" <<'PY'
+import json
+import sys
+print(json.dumps(sys.argv[1]))
+PY
+}
+
+sha256_file() {
+  if have sha256sum; then
+    sha256sum "$1" | awk '{print $1}'
+  else
+    python3 - "$1" <<'PY'
+from pathlib import Path
+import hashlib
+import sys
+h = hashlib.sha256()
+with Path(sys.argv[1]).open("rb") as f:
+    for block in iter(lambda: f.read(1024 * 1024), b""):
+        h.update(block)
+print(h.hexdigest())
+PY
+  fi
+}
+
+cleanup_lock() {
+  rm -f "$LOCKS_DIR/local_loop.lock" 2>/dev/null || true
+}
+
+trap cleanup_lock EXIT INT TERM
+
+require bash
+require git
+require python3
+require sqlite3
+
+[[ -d "$REPO/.git" ]] || die "not a Git worktree: $REPO"
+cd "$REPO"
+
+if [[ -e "$LOCKS_DIR/local_loop.lock" ]]; then
+  LOCK_PID="$(cat "$LOCKS_DIR/local_loop.lock" 2>/dev/null || true)"
+  if [[ -n "$LOCK_PID" ]] && kill -0 "$LOCK_PID" 2>/dev/null; then
+    die "another local loop appears active: pid=$LOCK_PID"
+  fi
+fi
+
+printf '%s\n' "$$" > "$LOCKS_DIR/local_loop.lock"
+chmod 600 "$LOCKS_DIR/local_loop.lock"
+
+note "run_id=$RUN_ID"
+note "repo=$REPO"
+note "mode=local-first read-only proposal loop"
+note "mutation=disabled"
+note "db=$DB"
+
+sqlite3 "$DB" <<'SQL'
+PRAGMA journal_mode=WAL;
+PRAGMA synchronous=NORMAL;
+PRAGMA foreign_keys=ON;
+PRAGMA busy_timeout=5000;
+
+CREATE TABLE IF NOT EXISTS schema_version (
+  version INTEGER PRIMARY KEY,
+  applied_at TEXT NOT NULL
+);
+
+INSERT OR IGNORE INTO schema_version(version, applied_at)
+VALUES (1, strftime('%Y-%m-%dT%H:%M:%fZ','now'));
+
+CREATE TABLE IF NOT EXISTS loop_runs (
+  run_id TEXT PRIMARY KEY,
+  started_at TEXT NOT NULL,
+  finished_at TEXT,
+  repo TEXT NOT NULL,
+  head TEXT,
+  branch TEXT,
+  git_dirty INTEGER NOT NULL DEFAULT 0,
+  hold_present INTEGER NOT NULL DEFAULT 0,
+  model TEXT,
+  status TEXT NOT NULL,
+  report_dir TEXT NOT NULL,
+  evidence_json TEXT,
+  tasks_json TEXT,
+  proposal_path TEXT,
+  error_text TEXT
+);
+
+CREATE TABLE IF NOT EXISTS inbox_items (
+  id INTEGER PRIMARY KEY,
+  path TEXT NOT NULL UNIQUE,
+  sha256 TEXT NOT NULL,
+  bytes INTEGER NOT NULL,
+  mtime_epoch INTEGER NOT NULL,
+  ingested_at TEXT NOT NULL,
+  processed_at TEXT,
+  status TEXT NOT NULL DEFAULT 'new',
+  title TEXT,
+  content TEXT NOT NULL,
+  route TEXT,
+  priority INTEGER NOT NULL DEFAULT 50,
+  run_id TEXT,
+  error_text TEXT
+);
+
+CREATE INDEX IF NOT EXISTS idx_inbox_items_status_priority
+ON inbox_items(status, priority DESC, id ASC);
+
+CREATE INDEX IF NOT EXISTS idx_inbox_items_sha256
+ON inbox_items(sha256);
+
+CREATE VIRTUAL TABLE IF NOT EXISTS inbox_fts USING fts5(
+  title,
+  content,
+  path UNINDEXED,
+  content='inbox_items',
+  content_rowid='id',
+  tokenize='unicode61 remove_diacritics 2'
+);
+
+CREATE TRIGGER IF NOT EXISTS inbox_items_ai AFTER INSERT ON inbox_items BEGIN
+  INSERT INTO inbox_fts(rowid, title, content, path)
+  VALUES (new.id, coalesce(new.title, ''), new.content, new.path);
+END;
+
+CREATE TRIGGER IF NOT EXISTS inbox_items_ad AFTER DELETE ON inbox_items BEGIN
+  INSERT INTO inbox_fts(inbox_fts, rowid, title, content, path)
+  VALUES ('delete', old.id, coalesce(old.title, ''), old.content, old.path);
+END;
+
+CREATE TRIGGER IF NOT EXISTS inbox_items_au AFTER UPDATE ON inbox_items BEGIN
+  INSERT INTO inbox_fts(inbox_fts, rowid, title, content, path)
+  VALUES ('delete', old.id, coalesce(old.title, ''), old.content, old.path);
+  INSERT INTO inbox_fts(rowid, title, content, path)
+  VALUES (new.id, coalesce(new.title, ''), new.content, new.path);
+END;
+
+CREATE TABLE IF NOT EXISTS route_events (
+  id INTEGER PRIMARY KEY,
+  created_at TEXT NOT NULL,
+  run_id TEXT NOT NULL,
+  inbox_id INTEGER,
+  route TEXT NOT NULL,
+  decision TEXT NOT NULL,
+  reason TEXT NOT NULL,
+  payload_json TEXT NOT NULL,
+  FOREIGN KEY(run_id) REFERENCES loop_runs(run_id),
+  FOREIGN KEY(inbox_id) REFERENCES inbox_items(id)
+);
+
+CREATE INDEX IF NOT EXISTS idx_route_events_run_id
+ON route_events(run_id, id);
+
+CREATE TABLE IF NOT EXISTS cache_entries (
+  cache_key TEXT PRIMARY KEY,
+  created_at TEXT NOT NULL,
+  expires_at TEXT NOT NULL,
+  kind TEXT NOT NULL,
+  model TEXT,
+  input_sha256 TEXT NOT NULL,
+  payload_path TEXT NOT NULL,
+  meta_json TEXT NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS idx_cache_entries_expires
+ON cache_entries(expires_at);
+
+CREATE TABLE IF NOT EXISTS proposals (
+  id INTEGER PRIMARY KEY,
+  created_at TEXT NOT NULL,
+  run_id TEXT NOT NULL,
+  model TEXT,
+  input_sha256 TEXT NOT NULL,
+  proposal_path TEXT NOT NULL,
+  status TEXT NOT NULL,
+  FOREIGN KEY(run_id) REFERENCES loop_runs(run_id)
+);
+
+CREATE TABLE IF NOT EXISTS compute_routes (
+  id INTEGER PRIMARY KEY,
+  created_at TEXT NOT NULL,
+  run_id TEXT NOT NULL,
+  task_kind TEXT NOT NULL,
+  route TEXT NOT NULL,
+  endpoint TEXT,
+  allowed INTEGER NOT NULL,
+  reason TEXT NOT NULL,
+  estimated_cost TEXT NOT NULL DEFAULT 'local',
+  FOREIGN KEY(run_id) REFERENCES loop_runs(run_id)
+);
+
+CREATE TABLE IF NOT EXISTS audit_events (
+  id INTEGER PRIMARY KEY,
+  created_at TEXT NOT NULL,
+  run_id TEXT,
+  level TEXT NOT NULL,
+  event TEXT NOT NULL,
+  message TEXT NOT NULL,
+  meta_json TEXT NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS idx_audit_events_run_id
+ON audit_events(run_id, id);
+SQL
+
+audit() {
+  local level="$1"
+  local event="$2"
+  local message="$3"
+  local meta="${4:-{}}"
+
+  sqlite3 "$DB" \
+    "INSERT INTO audit_events(created_at,run_id,level,event,message,meta_json)
+     VALUES(strftime('%Y-%m-%dT%H:%M:%fZ','now'),
+            $(json_escape "$RUN_ID"),
+            $(json_escape "$level"),
+            $(json_escape "$event"),
+            $(json_escape "$message"),
+            $(json_escape "$meta"));" \
+    >/dev/null
+}
+
+route_event() {
+  local inbox_id="$1"
+  local route="$2"
+  local decision="$3"
+  local reason="$4"
+  local payload="${5:-{}}"
+
+  sqlite3 "$DB" \
+    "INSERT INTO route_events(created_at,run_id,inbox_id,route,decision,reason,payload_json)
+     VALUES(strftime('%Y-%m-%dT%H:%M:%fZ','now'),
+            $(json_escape "$RUN_ID"),
+            $inbox_id,
+            $(json_escape "$route"),
+            $(json_escape "$decision"),
+            $(json_escape "$reason"),
+            $(json_escape "$payload"));" \
+    >/dev/null
+}
+
+HEAD="$(git rev-parse HEAD)"
+BRANCH="$(git branch --show-current || true)"
+UPSTREAM="$(git rev-parse --abbrev-ref '@{upstream}' 2>/dev/null || true)"
+STATUS="$(git status --porcelain=v1)"
+GIT_DIRTY=false
+HOLD_PRESENT=false
+[[ -n "$STATUS" ]] && GIT_DIRTY=true
+[[ -e "$HOLD_FILE" ]] && HOLD_PRESENT=true
+
+sqlite3 "$DB" \
+  "INSERT INTO loop_runs(
+     run_id,started_at,repo,head,branch,git_dirty,hold_present,model,status,report_dir
+   ) VALUES (
+     $(json_escape "$RUN_ID"),
+     strftime('%Y-%m-%dT%H:%M:%fZ','now'),
+     $(json_escape "$REPO"),
+     $(json_escape "$HEAD"),
+     $(json_escape "${BRANCH:-DETACHED}"),
+     $([[ "$GIT_DIRTY" == true ]] && echo 1 || echo 0),
+     $([[ "$HOLD_PRESENT" == true ]] && echo 1 || echo 0),
+     $(json_escape "$MODEL"),
+     'running',
+     $(json_escape "$RUN_DIR")
+   );" \
+  >/dev/null
+
+audit info run_started "local loop started" \
+  "$(python3 - "$HEAD" "${BRANCH:-DETACHED}" <<'PYJSON'
+import json
+import sys
+print(json.dumps({"head": sys.argv[1], "branch": sys.argv[2]}, separators=(",", ":")))
+PYJSON
+)"
+
+note "ingesting inbox"
+
+INGEST_COUNT=0
+SKIP_COUNT=0
+
+while IFS= read -r -d '' file; do
+  rel="${file#$INBOX_DIR/}"
+  bytes="$(wc -c < "$file" | tr -d ' ')"
+
+  if (( bytes == 0 )); then
+    route_event "NULL" "quarantine" "skipped" "empty inbox file" \
+      "{\"path\":$(json_escape "$rel")}"
+    ((SKIP_COUNT+=1))
+    continue
+  fi
+
+  if (( bytes > MAX_INBOX_BYTES )); then
+    route_event "NULL" "quarantine" "skipped" "file exceeds MAX_INBOX_BYTES" \
+      "{\"path\":$(json_escape "$rel"),\"bytes\":$bytes}"
+    ((SKIP_COUNT+=1))
+    continue
+  fi
+
+  if ! grep -Iq . "$file"; then
+    route_event "NULL" "quarantine" "skipped" "non-text inbox file" \
+      "{\"path\":$(json_escape "$rel")}"
+    ((SKIP_COUNT+=1))
+    continue
+  fi
+
+  sha="$(sha256_file "$file")"
+  mtime="$(stat -c '%Y' "$file" 2>/dev/null || stat -f '%m' "$file")"
+  title="$(sed -n '1p' "$file" | tr -d '\r' | cut -c1-240)"
+  content="$(python3 - "$file" "$MAX_INBOX_BYTES" <<'PY'
+from pathlib import Path
+import sys
+p = Path(sys.argv[1])
+limit = int(sys.argv[2])
+text = p.read_text(encoding="utf-8", errors="replace")
+print(text[:limit], end="")
+PY
+)"
+
+  existing_sha="$(
+    sqlite3 -noheader "$DB" \
+      "SELECT sha256 FROM inbox_items WHERE path=$(json_escape "$rel") LIMIT 1;"
+  )"
+
+  if [[ "$existing_sha" == "$sha" ]]; then
+    ((SKIP_COUNT+=1))
+    continue
+  fi
+
+  sqlite3 "$DB" \
+    "INSERT INTO inbox_items(
+       path,sha256,bytes,mtime_epoch,ingested_at,status,title,content,route,priority,run_id
+     ) VALUES (
+       $(json_escape "$rel"),
+       $(json_escape "$sha"),
+       $bytes,
+       $mtime,
+       strftime('%Y-%m-%dT%H:%M:%fZ','now'),
+       'new',
+       $(json_escape "$title"),
+       $(json_escape "$content"),
+       'pending',
+       50,
+       $(json_escape "$RUN_ID")
+     )
+     ON CONFLICT(path) DO UPDATE SET
+       sha256=excluded.sha256,
+       bytes=excluded.bytes,
+       mtime_epoch=excluded.mtime_epoch,
+       ingested_at=excluded.ingested_at,
+       processed_at=NULL,
+       status='new',
+       title=excluded.title,
+       content=excluded.content,
+       route='pending',
+       priority=50,
+       run_id=excluded.run_id,
+       error_text=NULL;" \
+    >/dev/null
+
+  ((INGEST_COUNT+=1))
+done < <(
+  find "$INBOX_DIR" \
+    -type f \
+    ! -path '*/.git/*' \
+    -print0 |
+  LC_ALL=C sort -z
+)
+
+audit info inbox_ingested "inbox scan completed" \
+  "{\"ingested\":$INGEST_COUNT,\"skipped\":$SKIP_COUNT}"
+
+note "building evidence"
+
+GIT_STATUS_FILE="$RUN_DIR/git_status.txt"
+GIT_LOG_FILE="$RUN_DIR/git_log.txt"
+PROCESS_FILE="$RUN_DIR/processes.txt"
+MANIFEST_FILE="$RUN_DIR/hash_manifests.txt"
+GH_FILE="$RUN_DIR/github.txt"
+TEST_FILE="$RUN_DIR/validation.txt"
+
+printf '%s\n' "$STATUS" > "$GIT_STATUS_FILE"
+git log --oneline --decorate -n 25 > "$GIT_LOG_FILE" 2>&1 || true
+
+ps -eo pid,ppid,etime,pcpu,pmem,stat,cmd \
+  | grep -Ei '[o]llama|[l]lama-server|[b]ot_loop|[a]gent\.sh|[r]efine|[h]ash_assign|[p]ython.*openroot' \
+  > "$PROCESS_FILE" || true
+
+{
+  for host in a15 optiplex; do
+    db="$REPO/data/hash_manifest_${host}.db"
+    pidfile="$REPO/run/hash_assign_${host}.pid"
+
+    printf '%s\n' "--- host=$host ---"
+
+    if [[ -r "$pidfile" ]]; then
+      pid="$(cat "$pidfile" 2>/dev/null || true)"
+      printf 'pidfile=%s pid=%s\n' "$pidfile" "$pid"
+      if [[ -n "$pid" ]] && kill -0 "$pid" 2>/dev/null; then
+        ps -p "$pid" -o pid,ppid,etime,pcpu,pmem,stat,cmd
+      else
+        printf '%s\n' 'worker=not-running'
+      fi
+    else
+      printf '%s\n' 'pidfile=absent'
+    fi
+
+    if [[ -f "$db" ]]; then
+      sqlite3 -noheader "$db" "
+        SELECT
+          'rows=' || COUNT(*)
+          || ' ok=' || COALESCE(SUM(status='ok'),0)
+          || ' errors=' || COALESCE(SUM(status='error'),0)
+          || ' unique=' || COUNT(DISTINCT sha256)
+          || ' latest=' || COALESCE(MAX(hashed_at),'none')
+        FROM manifest;
+      " 2>&1 || true
+    else
+      printf 'manifest_db=absent path=%s\n' "$db"
+    fi
+  done
+} > "$MANIFEST_FILE"
+
+if have gh; then
+  {
+    printf '%s\n' '=== gh auth status ==='
+    gh auth status 2>&1 || true
+    printf '%s\n' '=== repository ==='
+    gh repo view --json nameWithOwner,url,defaultBranchRef,isPrivate 2>&1 || true
+    printf '%s\n' '=== recent workflow runs ==='
+    gh run list --limit 20 \
+      --json databaseId,status,conclusion,workflowName,displayTitle,headBranch,headSha,url,updatedAt \
+      2>&1 || true
+  } > "$GH_FILE"
+else
+  printf '%s\n' 'gh CLI not installed' > "$GH_FILE"
+fi
+
+{
+  printf '%s\n' '=== Bash syntax ==='
+  mapfile -d '' -t SH_FILES < <(git ls-files -z -- '*.sh')
+  if ((${#SH_FILES[@]})); then
+    for file in "${SH_FILES[@]}"; do
+      bash -n "$file"
+      printf 'PASS %s\n' "$file"
+    done
+  else
+    printf '%s\n' 'No tracked shell files'
+  fi
+
+  printf '\n%s\n' '=== Python compile ==='
+  mapfile -d '' -t PY_FILES < <(git ls-files -z -- '*.py')
+  if ((${#PY_FILES[@]})); then
+    PYTHONPYCACHEPREFIX="${TMPDIR:-/tmp}/openroot-pycache-$RUN_ID" \
+      python3 -m compileall -q "${PY_FILES[@]}"
+    printf '%s\n' 'compileall=PASS'
+  else
+    printf '%s\n' 'No tracked Python files'
+  fi
+
+  printf '\n%s\n' '=== Git diff check ==='
+  git diff --check
+  git diff --cached --check
+  printf '%s\n' 'diff_check=PASS'
+} > "$TEST_FILE" 2>&1 || true
+
+python3 - \
+  "$EVIDENCE_JSON" \
+  "$REPO" \
+  "$RUN_ID" \
+  "$HEAD" \
+  "$BRANCH" \
+  "$UPSTREAM" \
+  "$GIT_DIRTY" \
+  "$HOLD_PRESENT" \
+  "$MODEL" \
+  "$GIT_STATUS_FILE" \
+  "$GIT_LOG_FILE" \
+  "$PROCESS_FILE" \
+  "$MANIFEST_FILE" \
+  "$GH_FILE" \
+  "$TEST_FILE" \
+  "$INGEST_COUNT" \
+  "$SKIP_COUNT" <<'PY'
+from pathlib import Path
+import json
+import sys
+from datetime import datetime, timezone
+
+(
+    output,
+    repo,
+    run_id,
+    head,
+    branch,
+    upstream,
+    git_dirty,
+    hold_present,
+    model,
+    git_status,
+    git_log,
+    processes,
+    manifests,
+    github,
+    validation,
+    ingested,
+    skipped,
+) = sys.argv[1:]
+
+def text(path, limit=200000):
+    value = Path(path).read_text(encoding="utf-8", errors="replace")
+    return value[:limit]
+
+payload = {
+    "schema": "openroot.evidence.v2",
+    "generated_at": datetime.now(timezone.utc).isoformat(),
+    "run_id": run_id,
+    "repo": repo,
+    "git": {
+        "head": head,
+        "branch": branch or "DETACHED",
+        "upstream": upstream or None,
+        "dirty": git_dirty == "true",
+        "status": text(git_status),
+        "recent_commits": text(git_log),
+    },
+    "controls": {
+        "hold_present": hold_present == "true",
+        "mutation_allowed": False,
+        "network_compute_allowed": False,
+        "blockchain_compute_allowed": False,
+    },
+    "local_model": {
+        "requested_model": model or None,
+        "ollama_endpoint": "local-only",
+    },
+    "inbox": {
+        "ingested": int(ingested),
+        "skipped": int(skipped),
+    },
+    "runtime": {
+        "processes": text(processes),
+        "hash_manifests": text(manifests),
+    },
+    "github": {
+        "snapshot": text(github),
+        "read_only": True,
+    },
+    "validation": {
+        "output": text(validation),
+        "passed": "compileall=PASS" in text(validation)
+        and "diff_check=PASS" in text(validation),
+    },
+}
+Path(output).write_text(
+    json.dumps(payload, indent=2, sort_keys=True) + "\n",
+    encoding="utf-8",
+)
+PY
+
+note "routing inbox tasks"
+
+python3 - \
+  "$DB" \
+  "$RUN_ID" \
+  "$TASKS_JSON" \
+  "$ROUTES_JSON" \
+  "$MAX_TASKS" \
+  "$HOLD_PRESENT" \
+  "$GIT_DIRTY" <<'PY'
+from pathlib import Path
+import json
+import sqlite3
+import sys
+
+db_path, run_id, tasks_path, routes_path, max_tasks, hold_present, git_dirty = sys.argv[1:]
+max_tasks = int(max_tasks)
+
+con = sqlite3.connect(db_path)
+con.row_factory = sqlite3.Row
+
+rows = con.execute(
+    """
+    SELECT id, path, sha256, bytes, title, content, priority
+    FROM inbox_items
+    WHERE status IN ('new', 'queued')
+    ORDER BY priority DESC, id ASC
+    LIMIT ?
+    """,
+    (max_tasks,),
+).fetchall()
+
+def classify(row):
+    text = f"{row['title']}\n{row['content']}".lower()
+    if any(x in text for x in ("secret", "token", "api key", "password", "private key")):
+        return "quarantine", "sensitive-term safety route", 100
+    if any(x in text for x in ("commit", "push", "merge", "delete", "rm -rf", "restart", "kill ", "workflow run", "deploy")):
+        return "human_gate", "mutation or external-action language detected", 95
+    if any(x in text for x in ("bug", "test", "traceback", "error", "failure", "ci", "github action")):
+        return "repair_analysis", "repair and validation task", 85
+    if any(x in text for x in ("hash", "manifest", "sqlite", "fts", "ledger", "index", "cache")):
+        return "local_data_analysis", "local data and index task", 75
+    if any(x in text for x in ("readme", "docs", "documentation", "architecture", "design")):
+        return "documentation", "documentation and architecture task", 65
+    return "local_reasoning", "general local analysis task", 50
+
+tasks = []
+routes = []
+
+for row in rows:
+    route, reason, priority = classify(row)
+    allowed = route not in {"quarantine", "human_gate"}
+    if hold_present == "true" and route == "human_gate":
+        reason += "; durable human hold is present"
+    if git_dirty == "true" and route == "repair_analysis":
+        reason += "; repository is dirty, propose only and do not stage"
+
+    con.execute(
+        """
+        UPDATE inbox_items
+        SET route=?, priority=?, status=?
+        WHERE id=?
+        """,
+        (route, priority, "queued" if allowed else "held", row["id"]),
+    )
+
+    event = {
+        "inbox_id": row["id"],
+        "path": row["path"],
+        "route": route,
+        "allowed": allowed,
+        "reason": reason,
+        "priority": priority,
+    }
+    routes.append(event)
+    tasks.append(
+        {
+            "id": row["id"],
+            "path": row["path"],
+            "title": row["title"],
+            "route": route,
+            "priority": priority,
+            "allowed_for_local_proposal": allowed,
+            "reason": reason,
+            "content": row["content"][:12000],
+        }
+    )
+
+    con.execute(
+        """
+        INSERT INTO route_events(created_at,run_id,inbox_id,route,decision,reason,payload_json)
+        VALUES (strftime('%Y-%m-%dT%H:%M:%fZ','now'), ?, ?, ?, ?, ?, ?)
+        """,
+        (
+            run_id,
+            row["id"],
+            route,
+            "allowed" if allowed else "held",
+            reason,
+            json.dumps(event, sort_keys=True),
+        ),
+    )
+
+    con.execute(
+        """
+        INSERT INTO compute_routes(created_at,run_id,task_kind,route,endpoint,allowed,reason,estimated_cost)
+        VALUES (strftime('%Y-%m-%dT%H:%M:%fZ','now'), ?, ?, ?, ?, ?, ?, ?)
+        """,
+        (
+            run_id,
+            route,
+            "local_cpu_or_local_model",
+            "127.0.0.1 only",
+            1 if allowed else 0,
+            reason,
+            "local",
+        ),
+    )
+
+con.commit()
+con.close()
+
+Path(tasks_path).write_text(
+    json.dumps({"run_id": run_id, "tasks": tasks}, indent=2, sort_keys=True) + "\n",
+    encoding="utf-8",
+)
+Path(routes_path).write_text(
+    json.dumps({"run_id": run_id, "routes": routes}, indent=2, sort_keys=True) + "\n",
+    encoding="utf-8",
+)
+PY
+
+PACKET_SHA="$(sha256_file "$EVIDENCE_JSON")"
+
+python3 - \
+  "$PACKET_MD" \
+  "$EVIDENCE_JSON" \
+  "$TASKS_JSON" \
+  "$ROUTES_JSON" \
+  "$RUN_ID" \
+  "$HEAD" \
+  "$BRANCH" \
+  "$GIT_DIRTY" \
+  "$HOLD_PRESENT" \
+  "$MODEL" \
+  "$MAX_CONTEXT_CHARS" <<'PY'
+from pathlib import Path
+import json
+import sys
+
+(
+    packet_path,
+    evidence_path,
+    tasks_path,
+    routes_path,
+    run_id,
+    head,
+    branch,
+    dirty,
+    hold,
+    model,
+    max_chars,
+) = sys.argv[1:]
+
+max_chars = int(max_chars)
+evidence = Path(evidence_path).read_text(encoding="utf-8", errors="replace")
+tasks = Path(tasks_path).read_text(encoding="utf-8", errors="replace")
+routes = Path(routes_path).read_text(encoding="utf-8", errors="replace")
+
+packet = f"""# OpenRoot Lumo local task packet
+
+- Run: `{run_id}`
+- HEAD: `{head}`
+- Branch: `{branch or "DETACHED"}`
+- Git dirty: `{dirty}`
+- Human hold: `{hold}`
+- Requested local model: `{model or "none"}`
+- Mode: local-only evidence and proposal generation
+- Mutation: forbidden
+- Network compute: forbidden
+- Blockchain, wallet, signing, transaction, mining, token, bridge, and external-node operations: forbidden
+
+## Local model contract
+
+Use only the supplied evidence. Do not invent facts. Do not reveal, request, infer, or use secrets.
+
+You may:
+- analyze local evidence
+- identify failures or risks
+- propose a bounded patch plan
+- propose read-only verification commands
+- recommend a human approval gate
+
+You may not:
+- edit files
+- stage, commit, push, merge, or create pull requests
+- run process control commands
+- run deployment, workflow dispatch, blockchain, wallet, signing, bridge, or token operations
+- use a remote API, peer-to-peer network, or external compute provider
+- bypass a hold file, tests, or human approval
+
+## Required response format
+
+1. Evidence-backed findings
+2. Highest-value bounded next task
+3. Files likely to change
+4. Exact validation plan
+5. Risks and stop conditions
+6. Human approval required before any mutation: yes/no
+7. Proposed commit message only, if human approval is required
+
+## Routed tasks
+
+```json
+{tasks[:max_chars]}
+```
+
+## Route decisions
+
+```json
+{routes[:max_chars]}
+```
+
+## Evidence
+
+```json
+{evidence[:max_chars]}
+```
+"""
+
+Path(packet_path).write_text(packet, encoding="utf-8")
+PY
+
+CACHE_KEY="proposal_${PACKET_SHA}_${MODEL:-no_model}"
+CACHE_FILE="$CACHE_DIR/${CACHE_KEY}.md"
+CACHE_HIT=false
+
+if [[ -f "$CACHE_FILE" ]]; then
+  cache_age="$(( $(date +%s) - $(stat -c '%Y' "$CACHE_FILE" 2>/dev/null || echo 0) ))"
+  if (( cache_age >= 0 && cache_age <= CACHE_TTL_SECONDS )); then
+    CACHE_HIT=true
+    cp "$CACHE_FILE" "$PROPOSAL_MD"
+    note "cache=hit key=$CACHE_KEY"
+  fi
+fi
+
+if [[ "$CACHE_HIT" == false ]]; then
+  if [[ -z "$MODEL" ]]; then
+    cat > "$PROPOSAL_MD" <<'EOF_PROPOSAL'
+# Local proposal skipped
+
+No `MODEL` was supplied.
+
+Run only after reviewing the task packet and selecting an installed local Ollama model:
+
+```bash
+MODEL='exact-model-name-from-ollama-list' \
+  "$HOME/openroot/bin/openroot_local_loop_v2.sh"
+```
+
+No mutation was performed.
+EOF_PROPOSAL
+    note "proposal=skipped MODEL is unset"
+  elif ! have ollama; then
+    cat > "$PROPOSAL_MD" <<'EOF_PROPOSAL'
+# Local proposal unavailable
+
+`MODEL` was set, but `ollama` is not installed or not on PATH.
+
+No mutation was performed.
+EOF_PROPOSAL
+    note "proposal=skipped ollama command unavailable"
+  elif ! curl -fsS --max-time 3 "$OLLAMA_URL/api/tags" >/dev/null 2>&1; then
+    cat > "$PROPOSAL_MD" <<'EOF_PROPOSAL'
+# Local proposal unavailable
+
+Ollama did not respond at the configured loopback endpoint.
+
+No mutation was performed.
+EOF_PROPOSAL
+    note "proposal=skipped Ollama endpoint unavailable"
+  elif ! curl -fsS --max-time 5 "$OLLAMA_URL/api/tags" \
+    | python3 - "$MODEL" <<'PY' >/dev/null
+import json
+import sys
+requested = sys.argv[1]
+data = json.load(sys.stdin)
+names = {item.get("name") for item in data.get("models", [])}
+raise SystemExit(0 if requested in names else 1)
+PY
+  then
+    cat > "$PROPOSAL_MD" <<EOF_PROPOSAL
+# Local proposal unavailable
+
+Requested model is not present in the local Ollama model list:
+
+\`$MODEL\`
+
+Run:
+
+\`\`\`bash
+ollama list
+\`\`\`
+
+Then rerun with an exact local model name.
+
+No mutation was performed.
+EOF_PROPOSAL
+    note "proposal=skipped model not installed"
+  else
+    note "proposal=local_ollama model=$MODEL"
+
+    python3 - \
+      "$OLLAMA_URL" \
+      "$MODEL" \
+      "$PACKET_MD" \
+      "$PROPOSAL_MD" <<'PY'
+from pathlib import Path
+import json
+import sys
+import urllib.request
+
+endpoint, model, packet_path, proposal_path = sys.argv[1:]
+packet = Path(packet_path).read_text(encoding="utf-8", errors="replace")
+
+payload = json.dumps({
+    "model": model,
+    "prompt": packet,
+    "stream": False,
+    "options": {
+        "temperature": 0.2,
+        "top_p": 0.9,
+        "num_predict": 2400,
+    },
+}).encode("utf-8")
+
+request = urllib.request.Request(
+    endpoint.rstrip("/") + "/api/generate",
+    data=payload,
+    headers={"Content-Type": "application/json"},
+    method="POST",
+)
+
+try:
+    with urllib.request.urlopen(request, timeout=180) as response:
+        data = json.loads(response.read().decode("utf-8", errors="replace"))
+    text = str(data.get("response", "")).strip()
+    if not text:
+        raise RuntimeError("Ollama returned an empty response")
+    Path(proposal_path).write_text(
+        "# OpenRoot local model proposal\n\n" + text + "\n",
+        encoding="utf-8",
+    )
+except Exception as exc:
+    Path(proposal_path).write_text(
+        "# Local proposal failed\n\n"
+        f"Local Ollama generation failed: `{type(exc).__name__}: {exc}`\n\n"
+        "No mutation was performed.\n",
+        encoding="utf-8",
+    )
+PY
+
+    cp "$PROPOSAL_MD" "$CACHE_FILE"
+    chmod 600 "$CACHE_FILE"
+  fi
+fi
+
+chmod 600 \
+  "$EVIDENCE_JSON" \
+  "$TASKS_JSON" \
+  "$ROUTES_JSON" \
+  "$PACKET_MD" \
+  "$PROPOSAL_MD"
+
+sqlite3 "$DB" \
+  "INSERT OR REPLACE INTO cache_entries(
+     cache_key,created_at,expires_at,kind,model,input_sha256,payload_path,meta_json
+   ) VALUES (
+     $(json_escape "$CACHE_KEY"),
+     strftime('%Y-%m-%dT%H:%M:%fZ','now'),
+     strftime('%Y-%m-%dT%H:%M:%fZ','now','+$CACHE_TTL_SECONDS seconds'),
+     'local_proposal',
+     $(json_escape "$MODEL"),
+     $(json_escape "$PACKET_SHA"),
+     $(json_escape "$PROPOSAL_MD"),
+     '{\"local_only\":true,\"network_compute\":false,\"blockchain_compute\":false}'
+   );" \
+  >/dev/null
+
+sqlite3 "$DB" \
+  "INSERT INTO proposals(created_at,run_id,model,input_sha256,proposal_path,status)
+   VALUES(
+     strftime('%Y-%m-%dT%H:%M:%fZ','now'),
+     $(json_escape "$RUN_ID"),
+     $(json_escape "$MODEL"),
+     $(json_escape "$PACKET_SHA"),
+     $(json_escape "$PROPOSAL_MD"),
+     'generated'
+   );" \
+  >/dev/null
+
+sqlite3 "$DB" \
+  "UPDATE inbox_items
+   SET status='processed',
+       processed_at=strftime('%Y-%m-%dT%H:%M:%fZ','now')
+   WHERE run_id=$(json_escape "$RUN_ID")
+     AND status='queued';" \
+  >/dev/null
+
+python3 - \
+  "$SUMMARY_JSON" \
+  "$RUN_ID" \
+  "$REPO" \
+  "$HEAD" \
+  "$BRANCH" \
+  "$GIT_DIRTY" \
+  "$HOLD_PRESENT" \
+  "$MODEL" \
+  "$DB" \
+  "$EVIDENCE_JSON" \
+  "$TASKS_JSON" \
+  "$ROUTES_JSON" \
+  "$PACKET_MD" \
+  "$PROPOSAL_MD" \
+  "$CACHE_HIT" <<'PY'
+from pathlib import Path
+import json
+import sys
+from datetime import datetime, timezone
+
+(
+    output,
+    run_id,
+    repo,
+    head,
+    branch,
+    dirty,
+    hold,
+    model,
+    db,
+    evidence,
+    tasks,
+    routes,
+    packet,
+    proposal,
+    cache_hit,
+) = sys.argv[1:]
+
+summary = {
+    "schema": "openroot.local_loop.v2",
+    "generated_at": datetime.now(timezone.utc).isoformat(),
+    "run_id": run_id,
+    "repo": repo,
+    "head": head,
+    "branch": branch or "DETACHED",
+    "git_dirty": dirty == "true",
+    "human_hold_present": hold == "true",
+    "mutation_performed": False,
+    "network_compute_used": False,
+    "blockchain_compute_used": False,
+    "model": model or None,
+    "cache_hit": cache_hit == "true",
+    "database": db,
+    "artifacts": {
+        "evidence": evidence,
+        "tasks": tasks,
+        "routes": routes,
+        "packet": packet,
+        "proposal": proposal,
+    },
+    "next_actions": [
+        "Read local_proposal.md.",
+        "Verify every proposed claim against evidence.json and task_packet.md.",
+        "If a source change is justified, create a separate human-approved patch plan.",
+        "Do not stage, commit, push, dispatch workflows, or perform blockchain/network actions automatically.",
+    ],
+}
+Path(output).write_text(
+    json.dumps(summary, indent=2, sort_keys=True) + "\n",
+    encoding="utf-8",
+)
+PY
+
+sqlite3 "$DB" \
+  "UPDATE loop_runs
+   SET finished_at=strftime('%Y-%m-%dT%H:%M:%fZ','now'),
+       status='complete',
+       evidence_json=$(json_escape "$EVIDENCE_JSON"),
+       tasks_json=$(json_escape "$TASKS_JSON"),
+       proposal_path=$(json_escape "$PROPOSAL_MD")
+   WHERE run_id=$(json_escape "$RUN_ID");" \
+  >/dev/null
+
+audit info run_complete "local loop completed without mutation" \
+  "{\"proposal\":$(json_escape "$PROPOSAL_MD"),\"cache_hit\":$CACHE_HIT}"
+
+printf '\n'
+printf '%s\n' '# [OPENROOT_LOCAL_LOOP_V2]'
+printf '%s\n' "[run]=$RUN_ID"
+printf '%s\n' "[report_dir]=$RUN_DIR"
+printf '%s\n' "[database]=$DB"
+printf '%s\n' "[evidence]=$EVIDENCE_JSON"
+printf '%s\n' "[tasks]=$TASKS_JSON"
+printf '%s\n' "[routes]=$ROUTES_JSON"
+printf '%s\n' "[packet]=$PACKET_MD"
+printf '%s\n' "[proposal]=$PROPOSAL_MD"
+printf '%s\n' "[summary]=$SUMMARY_JSON"
+printf '%s\n' "[git_dirty]=$GIT_DIRTY"
+printf '%s\n' "[human_hold]=$HOLD_PRESENT"
+printf '%s\n' "[mutation]=none"
+printf '%s\n' "[network_compute]=none"
+printf '%s\n' "[blockchain_compute]=none"
+printf '%s\n' '[exit=0]'

@@ -1,0 +1,33 @@
+=== HANDOFF SESSION-ID COLLISION REPAIR ===
+[banked] collision-resistant session-id generator written
+
+=== REPAIR DIFF ===
+--- bin/handoff_manager.py.pre_session_id_collision_fix.20260926T220915Z.bak	2026-09-26 17:09:15.229457503 -0500
++++ bin/handoff_manager.py	2026-09-26 17:09:15.263816641 -0500
+@@ -56,9 +56,7 @@
+     return con
+ 
+ def gen_session_id():
+-    ts = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
+-    h = hashlib.sha256(ts.encode()).hexdigest()[:8]
+-    return f"{ts}_{h}"
++    return f"session_{now().replace(':', '').replace('-', '').replace('+00:00', 'Z')}_{secrets.token_hex(8)}"
+ 
+ def get_git_head(orph=OR):
+     try:
+
+=== ACTIVE-SESSION CLEAN STATE ===
+[banked] active_sessions_before_cleanup=0
+[banked] active_sessions_pre_test=0
+
+=== RAPID START / END LIFECYCLE PROOF ===
+Traceback (most recent call last):
+  File "/home/jesse/openroot/bin/handoff_manager.py", line 292, in <module>
+    main()
+  File "/home/jesse/openroot/bin/handoff_manager.py", line 267, in main
+    session_id = gen_session_id()
+                 ^^^^^^^^^^^^^^^^
+  File "/home/jesse/openroot/bin/handoff_manager.py", line 59, in gen_session_id
+    return f"session_{now().replace(':', '').replace('-', '').replace('+00:00', 'Z')}_{secrets.token_hex(8)}"
+                                                                                       ^^^^^^^
+NameError: name 'secrets' is not defined. Did you forget to import 'secrets'?

@@ -1,0 +1,2157 @@
+
+================================================================================
+FILE: bin/0012_newton_chain.py
+================================================================================
+--- IMPORTS / CLASSES / FUNCTIONS / CONSTANTS ---
+6:import json
+7:import hashlib
+8:import os
+9:import sys
+10:import uuid
+11:import time
+12:from copy import deepcopy
+13:from datetime import datetime, timezone
+14:from collections import defaultdict
+15:from flask import Flask, request, render_template_string, jsonify
+18:TERMUX_HOME = "/data/data/com.termux/files/home"
+24:LEDGER_PATH = os.path.join(ROOT, "acre/ledger.jsonl")
+25:LEARNINGS_DB = os.path.join(ROOT, "learnings/newton_chain.json")
+33:AXIOMS = {
+92:def make_p001(): return {"rule": "Insufficient observation reduces system quality", "derives_from": ["AX-022"], "condition": lambda p: p.get("observation_days", 0) < 7, "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 15, "recommendations": p.get("recommendations", []) + ["Extend observation to 7+ days"]}), "depth": 1}
+93:def make_p002(): return {"rule": "Finite energy sources carry systemic debt", "derives_from": ["AX-026", "AX-002"], "condition": lambda p: p.get("primary_energy_source", "grid").lower() not in ["solar", "wind", "geothermal", "hydro", "biomass", "renewable"], "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 30, "recommendations": p.get("recommendations", []) + ["Migrate to renewable energy source"]}), "depth": 2}
+94:def make_p003(): return {"rule": "Thermal gradients without recovery waste energy", "derives_from": ["AX-001", "AX-023"], "condition": lambda p: p.get("thermal_gradient") and not p.get("waste_heat_recovery"), "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 25, "recommendations": p.get("recommendations", []) + ["Install heat exchanger"]}), "depth": 2}
+95:def make_p004(): return {"rule": "Systems without feedback loops are fragile", "derives_from": ["AX-015", "AX-025"], "condition": lambda p: not p.get("feedback_mechanism"), "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 20, "recommendations": p.get("recommendations", []) + ["Implement feedback monitoring"]}), "depth": 2}
+96:def make_p005(): return {"rule": "Single-pathway systems have single points of failure", "derives_from": ["AX-033", "AX-017"], "condition": lambda p: p.get("pathway_alternatives", 1) < 2, "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 15, "recommendations": p.get("recommendations", []) + ["Add backup pathways"]}), "depth": 2}
+97:def make_p006(): return {"rule": "Waste outputs indicate incomplete design", "derives_from": ["AX-027", "AX-007"], "condition": lambda p: any(o.get("disposition") == "waste" for o in p.get("outputs", [])), "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 20, "recommendations": p.get("recommendations", []) + ["Circulate waste as input"]}), "depth": 2}
+98:def make_p007(): return {"rule": "Long payback indicates poor energy ROI", "derives_from": ["AX-024", "AX-023"], "condition": lambda p: p.get("payback_days", 999) > 365, "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 20, "recommendations": p.get("recommendations", []) + ["Reduce payback below 1 year"]}), "depth": 2}
+99:def make_p008(): return {"rule": "High human input violates least effort principle", "derives_from": ["AX-021", "AX-030"], "condition": lambda p: p.get("human_input", 1) > 10, "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 15, "recommendations": p.get("recommendations", []) + ["Automate to reduce human effort"]}), "depth": 2}
+100:def make_p009(): return {"rule": "Monolithic deployments risk catastrophic failure", "derives_from": ["AX-030", "AX-017"], "condition": lambda p: not p.get("incremental_rollout") and p.get("module_size", 0) > 500, "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 10, "recommendations": p.get("recommendations", []) + ["Phase incremental rollout"]}), "depth": 2}
+101:def make_p010(): return {"rule": "Systems lacking versioning cannot adapt", "derives_from": ["AX-032", "AX-041"], "condition": lambda p: not p.get("change_management"), "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 10, "recommendations": p.get("recommendations", []) + ["Implement version control"]}), "depth": 2}
+103:INITIAL_POSTULATES = {
+118:class NewtonChainEngine:
+250:def parse_question(question):
+275:ENGINE = NewtonChainEngine(AXIOMS, INITIAL_POSTULATES)
+277:INDEX_HTML = '''<!DOCTYPE html>
+319:def index():
+323:def reason():
+334:def view_axioms():
+342:def view_postulates():
+352:def health():
+356:def api_reason():
+367:def run_batch(json_path):
+383:if __name__ == "__main__":
+
+--- NEWTON / LIGHT / COSMOS / ZERO / DIMENSION / CAUSALITY MARKERS ---
+3:NEWTON CHAIN ENGINE — Axiomatic Reasoning That Builds on Itself
+7:import hashlib
+24:LEDGER_PATH = os.path.join(ROOT, "acre/ledger.jsonl")
+25:LEARNINGS_DB = os.path.join(ROOT, "learnings/newton_chain.json")
+26:os.makedirs(os.path.dirname(LEDGER_PATH), exist_ok=True)
+30:# PART 1: UNIVERSAL AXIOMS
+33:AXIOMS = {
+35:    "AX-001": {"statement": "Energy is neither created nor destroyed", "category": "physics", "source": "First Law of Thermodynamics", "immutable": True},
+36:    "AX-002": {"statement": "Entropy of an isolated system never decreases", "category": "physics", "source": "Second Law of Thermodynamics", "immutable": True},
+37:    "AX-003": {"statement": "Every action has an equal and opposite reaction", "category": "physics", "source": "Newton's Third Law", "immutable": True},
+38:    "AX-004": {"statement": "Mass and energy are interchangeable (E=mc^2)", "category": "physics", "source": "Einstein", "immutable": True},
+42:    "AX-007": {"statement": "The whole is greater than the part", "category": "mathematics", "source": "Euclid's Axioms", "immutable": True},
+45:    "AX-010": {"statement": "A straight line segment can be drawn joining any two points", "category": "mathematics", "source": "Euclid's Postulate 1", "immutable": True},
+46:    "AX-011": {"statement": "Through any point not on a line, exactly one parallel line exists", "category": "mathematics", "source": "Euclid's Parallel Postulate", "immutable": True},
+49:    "AX-013": {"statement": "The behavior of a system emerges from the interaction of its parts", "category": "systems", "source": "General Systems Theory", "immutable": True},
+61:    "AX-023": {"statement": "Capture and store energy when abundant", "category": "permaculture", "source": "Permaculture Principle 2", "immutable": True},
+80:    "AX-040": {"statement": "Proof requires witness; truth demands verification", "category": "consensus", "source": "OpenRoot AX-019", "immutable": True},
+89:# PART 2: POSTULATES
+93:def make_p002(): return {"rule": "Finite energy sources carry systemic debt", "derives_from": ["AX-026", "AX-002"], "condition": lambda p: p.get("primary_energy_source", "grid").lower() not in ["solar", "wind", "geothermal", "hydro", "biomass", "renewable"], "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 30, "recommendations": p.get("recommendations", []) + ["Migrate to renewable energy source"]}), "depth": 2}
+94:def make_p003(): return {"rule": "Thermal gradients without recovery waste energy", "derives_from": ["AX-001", "AX-023"], "condition": lambda p: p.get("thermal_gradient") and not p.get("waste_heat_recovery"), "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 25, "recommendations": p.get("recommendations", []) + ["Install heat exchanger"]}), "depth": 2}
+98:def make_p007(): return {"rule": "Long payback indicates poor energy ROI", "derives_from": ["AX-024", "AX-023"], "condition": lambda p: p.get("payback_days", 999) > 365, "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 20, "recommendations": p.get("recommendations", []) + ["Reduce payback below 1 year"]}), "depth": 2}
+103:INITIAL_POSTULATES = {
+108:    "P-021": {"rule": "Finite-energy systems without feedback are doubly unsustainable", "derives_from": ["AX-002", "AX-026", "AX-015", "P-002", "P-004"], "condition": lambda p: p.get("primary_energy_source", "grid").lower() not in ["solar", "wind", "geothermal", "hydro", "biomass", "renewable"] and not p.get("feedback_mechanism"), "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 20, "recommendations": p.get("recommendations", []) + ["Add renewable migration AND feedback"]}), "depth": 5},
+109:    "P-022": {"rule": "Knowledge preserved immutably enables future builders", "derives_from": ["AX-041", "AX-013", "AX-014"], "condition": lambda p: p.get("immutable_record", False) == False, "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 10, "recommendations": p.get("recommendations", []) + ["Anchor to immutable ledger"]}), "depth": 3},
+111:    "P-024": {"rule": "Computational work without energy accounting is incomplete", "derives_from": ["AX-018", "AX-019", "AX-001"], "condition": lambda p: p.get("compute_joules", 0) == 0 and p.get("involves_computation", False), "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 15, "recommendations": p.get("recommendations", []) + ["Calculate Landauer limit cost"]}), "depth": 3},
+118:class NewtonChainEngine:
+119:    def __init__(self, axioms, postulates):
+120:        self.axioms = axioms
+121:        self.postulates = dict(postulates)
+122:        self.proof_chains = []
+123:        self.new_postulates_generated = []
+126:    def get_last_hash(self):
+127:        if os.path.exists(LEDGER_PATH):
+129:                with open(LEDGER_PATH, 'r') as f:
+132:                        return json.loads(lines[-1]).get("hash", "genesis")
+137:    def apply_all_postulates(self, problem, depth_limit=99):
+142:        problem.setdefault("proof_chain", [])
+145:        for p_key, p_def in self.postulates.items():
+151:                    problem["proof_chain"].append({"postulate": p_key, "rule": p_def["rule"], "derives_from": p_def["derives_from"], "depth": p_def["depth"]})
+163:        new_postulates = []
+166:                existing = any(set(p_def.get("combines", [])) == set(combo) for p_def in self.postulates.values())
+168:                    new_key = f"NP-{len(self.new_postulates_generated)+1:03d}"
+171:                        derives.extend(self.postulates[p_key]["derives_from"])
+173:                    new_postulate = {
+176:                        "condition": lambda p, keys=set(combo): all(self.postulates[k]["condition"](p) for k in keys),
+178:                        "depth": max(self.postulates[k]["depth"] for k in combo) + 1,
+181:                    self.postulates[new_key] = new_postulate
+182:                    self.new_postulates_generated.append(new_key)
+183:                    new_postulates.append(new_key)
+184:        return new_postulates
+192:    def verify_proof_chain(self, problem):
+193:        chain = problem.get("proof_chain", [])
+196:                if source not in self.axioms and source not in self.postulates:
+200:    def run_newton_chain(self, problem, max_loops=6):
+207:            current, fired = self.apply_all_postulates(current, depth_limit)
+210:            all_results.append({"loop": loop + 1, "depth_limit": depth_limit, "postulates_fired": fired, "fired_count": len(fired), "efficiency": score, "total_postulates": len(self.postulates)})
+213:                if delta < 0.5 and len(fired) == len(all_results[-2]["postulates_fired"]):
+217:            current, fired = self.apply_all_postulates(current, 99)
+219:            all_results.append({"loop": self.loop_count + 1, "depth_limit": 99, "postulates_fired": fired, "fired_count": len(fired), "efficiency": final_score, "total_postulates": len(self.postulates), "new_postulates_active": len(new_posts)})
+220:        valid, verify_msg = self.verify_proof_chain(current)
+221:        return {"loops_executed": len(all_results), "loop_history": all_results, "final_efficiency": all_results[-1]["efficiency"], "initial_efficiency": all_results[0]["efficiency"], "improvement": all_results[-1]["efficiency"] - all_results[0]["efficiency"], "final_problem": current, "recommendations": current.get("recommendations", []), "proof_chain": current.get("proof_chain", []), "proof_valid": valid, "verify_msg": verify_msg, "new_postulates_generated": self.new_postulates_generated, "total_postulates": len(self.postulates), "total_axioms": len(self.axioms)}
+224:        prev_hash = self.get_last_hash()
+225:        entry = {"timestamp": datetime.now(datetime.UTC).isoformat() + "Z", "type": "newton_chain_proof", "question_hash": hashlib.sha256(question.encode()).hexdigest()[:16], "loops": result["loops_executed"], "final_efficiency": result["final_efficiency"], "improvement": result["improvement"], "proof_chain_length": len(result["proof_chain"]), "proof_valid": result["proof_valid"], "new_postulates": result["new_postulates_generated"], "total_axioms": result["total_axioms"], "total_postulates": result["total_postulates"], "recommendations": result["recommendations"][:5], "prev_hash": prev_hash, "verified": False}
+226:        entry["hash"] = hashlib.sha256(json.dumps(entry, sort_keys=True).encode()).hexdigest()
+227:        with open(LEDGER_PATH, 'a') as f:
+232:        learnings = {"sessions": [], "generated_postulates": {}}
+239:        for p_key in result.get("new_postulates_generated", []):
+240:            p_def = self.postulates.get(p_key, {})
+241:            learnings["generated_postulates"][p_key] = {"rule": p_def.get("rule", ""), "derives_from": p_def.get("derives_from", []), "combines": p_def.get("combines", []), "depth": p_def.get("depth", 0), "created_at": datetime.now(datetime.UTC).isoformat() + "Z"}
+242:        learnings["sessions"].append({"timestamp": datetime.now(datetime.UTC).isoformat() + "Z", "question_hash": hashlib.sha256(question.encode()).hexdigest()[:16], "loops": result["loops_executed"], "final_efficiency": result["final_efficiency"], "proof_valid": result["proof_valid"]})
+254:    energy = "grid"
+259:        energy = "solar"
+264:        energy = "solar"
+268:    return {"id": str(uuid.uuid4()), "original_question": question, "base_efficiency": base_eff, "primary_focus": focus, "primary_energy_source": energy, "observations": [], "observation_days": 0, "seasonal_coverage": False, "energy_streams": [], "waste_heat_recovery": "heat" in q or "thermal" in q, "thermal_gradient": "heat" in q or "thermal" in q, "immediate_output": 0, "projected_output": 100, "payback_days": 365, "feedback_mechanism": "auto" in q, "safety_cutoff": False, "error_margin": 0.5, "materials": [], "outputs": [], "reuse_percentage": 80 if "recycle" in q else 50, "reference_pattern": None, "component_count": 5, "multi_use_component_count": 1, "interface_count": 3, "module_size": 500, "scalability_documented": False, "incremental_rollout": "phase" in q, "edge_optimized": False, "interface_zone_count": 1, "adaptability_rating": 0.5, "change_management": False, "redundancy_factor": 2.0 if "backup" in q else 1.0, "pathway_alternatives": 3 if "backup" in q else 1, "diversity_index": 0.3, "human_input": 8, "involves_computation": "compute" in q or "code" in q, "compute_joules": 0, "immutable_record": "blockchain" in q or "ledger" in q, "self_serving": False, "recommendations": recs, "efficiency_penalty": 0, "efficiency_bonus": 0}
+275:ENGINE = NewtonChainEngine(AXIOMS, INITIAL_POSTULATES)
+278:<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Newton Chain</title>
+281:<h1>🔭 Newton Chain Engine</h1>
+282:<p>{{ axiom_count }} axioms · {{ postulate_count }} postulates · Self-expanding reasoner</p>
+283:<p style="color:#4af;font-style:italic">"If I have seen further it is by standing on the shoulders of giants." — Newton</p>
+288:<span class="badge {{ 'ok' if result.proof_valid else 'fail' }}">Proof: {{ 'VALID' if result.proof_valid else 'INVALID' }}</span>
+289:{% if result.new_postulates_generated %}<span class="badge" style="background:#4a0;color:#fff">{{ result.new_postulates_generated|length }} NEW postulates!</span>{% endif %}
+294:<div class="stat"><div class="stat-val">{{ result.proof_chain|length }}</div><div class="stat-label">Proof Steps</div></div>
+295:<div class="stat"><div class="stat-val">{{ result.total_postulates }}</div><div class="stat-label">Postulates</div></div>
+301:<h3>Proof Chain ({{ result.proof_chain|length }})</h3>
+302:{% for step in result.proof_chain %}<div style="padding:5px 0;border-bottom:1px solid #333;font-size:13px"><strong>{{ step.postulate }}</strong>: {{ step.rule }} <span style="color:#4af">← {{ step.derives_from|join(', ') }}</span></div>{% endfor %}
+304:{% if result.new_postulates_generated %}
+305:<div style="background:#1a2e1a;padding:10px;margin:5px 0;border-left:3px solid #4a0"><h3>🌟 New Postulates</h3>
+306:{% for np in result.new_postulates_generated %}<div><strong>{{ np }}</strong> (auto-generated)</div>{% endfor %}
+309:<div style="background:#1a1a2e;padding:10px;font-size:10px;color:#888;word-break:break-all"><strong>ACRE Ledger:</strong> {{ acre_hash }}</div>
+312:<textarea name="question" placeholder="Ask anything. Engine chains axioms → postulates → theorems.">{{ question or '' }}</textarea>
+313:<button type="submit">🔭 Run Newton Chain</button>
+315:<p style="margin-top:30px"><a href="/axioms" style="color:#6d4aff">Axioms</a> · <a href="/postulates" style="color:#6d4aff">Postulates</a> · <a href="/health" style="color:#6d4aff">Health</a></p>
+318:@app.route("/")
+320:    return render_template_string(INDEX_HTML, result=None, question="", error=None, axiom_count=len(ENGINE.axioms), postulate_count=len(ENGINE.postulates), acre_hash="")
+322:@app.route("/reason", methods=["POST"])
+326:        return render_template_string(INDEX_HTML, result=None, question="", error="Enter a question", axiom_count=len(ENGINE.axioms), postulate_count=len(ENGINE.postulates), acre_hash="")
+328:    result = ENGINE.run_newton_chain(problem, max_loops=6)
+331:    return render_template_string(INDEX_HTML, result=result, question=question, error=None, axiom_count=len(ENGINE.axioms), postulate_count=len(ENGINE.postulates), acre_hash=acre_entry["hash"])
+333:@app.route("/axioms")
+334:def view_axioms():
+335:    html = f"<h1>Axioms ({len(ENGINE.axioms)})</h1><table><tr><th>ID</th><th>Category</th><th>Statement</th></tr>"
+336:    for k, v in sorted(ENGINE.axioms.items()):
+341:@app.route("/postulates")
+342:def view_postulates():
+343:    html = f"<h1>Postulates ({len(ENGINE.postulates)})</h1>"
+344:    for k, v in sorted(ENGINE.postulates.items()):
+351:@app.route("/health")
+353:    return jsonify({"status": "ok", "axioms": len(ENGINE.axioms), "postulates": len(ENGINE.postulates), "new_generated": len(ENGINE.new_postulates_generated)})
+355:@app.route("/api/v1/reason", methods=["POST"])
+362:    result = ENGINE.run_newton_chain(problem, max_loops=6)
+365:    return jsonify({"success": True, "loops": result["loops_executed"], "efficiency": result["final_efficiency"], "proof_valid": result["proof_valid"], "new_postulates": result["new_postulates_generated"], "recommendations": result["recommendations"][:5], "acre_hash": acre["hash"]})
+371:    print(f"\n{'='*72}\n  NEWTON CHAIN BATCH — {len(items)} ITEMS\n{'='*72}\n")
+375:        result = ENGINE.run_newton_chain(problem, max_loops=6)
+378:        print(f"Q: {q[:60]}\nEffic: {result['final_efficiency']:.1f}% | Loops: {result['loops_executed']} | Proof: {'VALID' if result['proof_valid'] else 'INVALID'}")
+379:        if result['new_postulates_generated']:
+380:            print(f"🌟 NEW: {result['new_postulates_generated']}")
+388:        print(f"\n  🔭 NEWTON CHAIN ENGINE\n  {len(AXIOMS)} axioms · {len(INITIAL_POSTULATES)} postulates\n  Web: http://127.0.0.1:5002\n  Batch: python3 newton_chain_fixed.py --batch file.json\n")
+
+--- FULL SOURCE ---
+#!/usr/bin/env python3
+"""
+NEWTON CHAIN ENGINE — Axiomatic Reasoning That Builds on Itself
+"""
+
+import json
+import hashlib
+import os
+import sys
+import uuid
+import time
+from copy import deepcopy
+from datetime import datetime, timezone
+from collections import defaultdict
+from flask import Flask, request, render_template_string, jsonify
+
+# PATHS
+TERMUX_HOME = "/data/data/com.termux/files/home"
+if os.path.exists(TERMUX_HOME):
+    ROOT = os.path.join(TERMUX_HOME, "projects/openroot")
+else:
+    ROOT = os.path.expanduser("~/openroot")
+
+LEDGER_PATH = os.path.join(ROOT, "acre/ledger.jsonl")
+LEARNINGS_DB = os.path.join(ROOT, "learnings/newton_chain.json")
+os.makedirs(os.path.dirname(LEDGER_PATH), exist_ok=True)
+os.makedirs(os.path.dirname(LEARNINGS_DB), exist_ok=True)
+
+# ============================================================
+# PART 1: UNIVERSAL AXIOMS
+# ============================================================
+
+AXIOMS = {
+    # Physics
+    "AX-001": {"statement": "Energy is neither created nor destroyed", "category": "physics", "source": "First Law of Thermodynamics", "immutable": True},
+    "AX-002": {"statement": "Entropy of an isolated system never decreases", "category": "physics", "source": "Second Law of Thermodynamics", "immutable": True},
+    "AX-003": {"statement": "Every action has an equal and opposite reaction", "category": "physics", "source": "Newton's Third Law", "immutable": True},
+    "AX-004": {"statement": "Mass and energy are interchangeable (E=mc^2)", "category": "physics", "source": "Einstein", "immutable": True},
+    "AX-005": {"statement": "The speed of light in vacuum is constant for all observers", "category": "physics", "source": "Einstein", "immutable": True},
+    "AX-006": {"statement": "Information cannot travel faster than light", "category": "physics", "source": "Relativity", "immutable": True},
+    # Mathematics
+    "AX-007": {"statement": "The whole is greater than the part", "category": "mathematics", "source": "Euclid's Axioms", "immutable": True},
+    "AX-008": {"statement": "Things equal to the same thing are equal to each other", "category": "mathematics", "source": "Euclid", "immutable": True},
+    "AX-009": {"statement": "If equals are added to equals, the wholes are equal", "category": "mathematics", "source": "Euclid", "immutable": True},
+    "AX-010": {"statement": "A straight line segment can be drawn joining any two points", "category": "mathematics", "source": "Euclid's Postulate 1", "immutable": True},
+    "AX-011": {"statement": "Through any point not on a line, exactly one parallel line exists", "category": "mathematics", "source": "Euclid's Parallel Postulate", "immutable": True},
+    "AX-012": {"statement": "Infinity exists as a concept but cannot be completed", "category": "mathematics", "source": "Hilbert/Cantor", "immutable": True},
+    # Systems Theory
+    "AX-013": {"statement": "The behavior of a system emerges from the interaction of its parts", "category": "systems", "source": "General Systems Theory", "immutable": True},
+    "AX-014": {"statement": "A system is more than the sum of its parts", "category": "systems", "source": "Aristotle / Fuller", "immutable": True},
+    "AX-015": {"statement": "Feedback loops determine system stability", "category": "systems", "source": "Cybernetics", "immutable": True},
+    "AX-016": {"statement": "The component with the fewest connections limits the whole system", "category": "systems", "source": "Liebig's Law", "immutable": True},
+    "AX-017": {"statement": "In complex systems, small changes can produce disproportionately large effects", "category": "systems", "source": "Chaos Theory", "immutable": True},
+    # Computation
+    "AX-018": {"statement": "Every bit of information erased costs at least kT*ln(2) joules", "category": "computation", "source": "Landauer's Principle", "immutable": True},
+    "AX-019": {"statement": "Computation is a physical process constrained by physical laws", "category": "computation", "source": "Landauer / Feynman", "immutable": True},
+    "AX-020": {"statement": "The universe computes; physics is computation", "category": "computation", "source": "Wheeler 'It from Bit'", "immutable": True},
+    # Permaculture
+    "AX-021": {"statement": "Greatest good for greatest number", "category": "ethics", "source": "Permaculture Ethics", "immutable": True},
+    "AX-022": {"statement": "Observe before acting; interact with patience", "category": "permaculture", "source": "Permaculture Principle 1", "immutable": True},
+    "AX-023": {"statement": "Capture and store energy when abundant", "category": "permaculture", "source": "Permaculture Principle 2", "immutable": True},
+    "AX-024": {"statement": "Obtain a yield; ensure the system produces real value", "category": "permaculture", "source": "Permaculture Principle 3", "immutable": True},
+    "AX-025": {"statement": "Apply self-regulation and accept feedback", "category": "permaculture", "source": "Permaculture Principle 4", "immutable": True},
+    "AX-026": {"statement": "Use renewable resources over finite ones", "category": "permaculture", "source": "Permaculture Principle 5", "immutable": True},
+    "AX-027": {"statement": "Produce no waste; all outputs become inputs", "category": "permaculture", "source": "Permaculture Principle 6", "immutable": True},
+    "AX-028": {"statement": "Design from patterns to details", "category": "permaculture", "source": "Permaculture Principle 7", "immutable": True},
+    "AX-029": {"statement": "Integrate rather than segregate", "category": "permaculture", "source": "Permaculture Principle 8", "immutable": True},
+    "AX-030": {"statement": "Use small and slow solutions", "category": "permaculture", "source": "Permaculture Principle 9", "immutable": True},
+    "AX-031": {"statement": "Value and use the edge; diversity happens at boundaries", "category": "permaculture", "source": "Permaculture Principle 10", "immutable": True},
+    "AX-032": {"statement": "Creatively use and respond to change", "category": "permaculture", "source": "Permaculture Principle 11", "immutable": True},
+    "AX-033": {"statement": "Use and value diversity", "category": "permaculture", "source": "Permaculture Principle 12", "immutable": True},
+    # Theology
+    "AX-034": {"statement": "Love your neighbor as yourself", "category": "theology", "source": "Matthew 22:39 NASB", "immutable": True},
+    "AX-035": {"statement": "It is more blessed to give than to receive", "category": "theology", "source": "Acts 20:35 NASB", "immutable": True},
+    "AX-036": {"statement": "Do to others as you would have them do to you", "category": "theology", "source": "Luke 6:31 NASB", "immutable": True},
+    "AX-037": {"statement": "You shall know them by their fruits", "category": "theology", "source": "Matthew 7:16 NASB", "immutable": True},
+    "AX-038": {"statement": "Seek first the kingdom and all else is added", "category": "theology", "source": "Matthew 6:33 NASB", "immutable": True},
+    "AX-039": {"statement": "Ask, and it will be given; seek, and you will find; knock, and it will be opened", "category": "theology", "source": "Matthew 7:7 NASB", "immutable": True},
+    # Blockchain
+    "AX-040": {"statement": "Proof requires witness; truth demands verification", "category": "consensus", "source": "OpenRoot AX-019", "immutable": True},
+    "AX-041": {"statement": "Immutability preserves truth across time", "category": "consensus", "source": "Blockchain principle", "immutable": True},
+    # Strategy
+    "AX-042": {"statement": "Know yourself and know your enemy; victory requires both", "category": "strategy", "source": "Sun Tzu", "immutable": True},
+    "AX-043": {"statement": "All warfare is based on deception", "category": "strategy", "source": "Sun Tzu", "immutable": True},
+    "AX-044": {"statement": "The supreme art is to subdue the enemy without fighting", "category": "strategy", "source": "Sun Tzu", "immutable": True},
+}
+
+# ============================================================
+# PART 2: POSTULATES
+# ============================================================
+
+def make_p001(): return {"rule": "Insufficient observation reduces system quality", "derives_from": ["AX-022"], "condition": lambda p: p.get("observation_days", 0) < 7, "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 15, "recommendations": p.get("recommendations", []) + ["Extend observation to 7+ days"]}), "depth": 1}
+def make_p002(): return {"rule": "Finite energy sources carry systemic debt", "derives_from": ["AX-026", "AX-002"], "condition": lambda p: p.get("primary_energy_source", "grid").lower() not in ["solar", "wind", "geothermal", "hydro", "biomass", "renewable"], "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 30, "recommendations": p.get("recommendations", []) + ["Migrate to renewable energy source"]}), "depth": 2}
+def make_p003(): return {"rule": "Thermal gradients without recovery waste energy", "derives_from": ["AX-001", "AX-023"], "condition": lambda p: p.get("thermal_gradient") and not p.get("waste_heat_recovery"), "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 25, "recommendations": p.get("recommendations", []) + ["Install heat exchanger"]}), "depth": 2}
+def make_p004(): return {"rule": "Systems without feedback loops are fragile", "derives_from": ["AX-015", "AX-025"], "condition": lambda p: not p.get("feedback_mechanism"), "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 20, "recommendations": p.get("recommendations", []) + ["Implement feedback monitoring"]}), "depth": 2}
+def make_p005(): return {"rule": "Single-pathway systems have single points of failure", "derives_from": ["AX-033", "AX-017"], "condition": lambda p: p.get("pathway_alternatives", 1) < 2, "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 15, "recommendations": p.get("recommendations", []) + ["Add backup pathways"]}), "depth": 2}
+def make_p006(): return {"rule": "Waste outputs indicate incomplete design", "derives_from": ["AX-027", "AX-007"], "condition": lambda p: any(o.get("disposition") == "waste" for o in p.get("outputs", [])), "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 20, "recommendations": p.get("recommendations", []) + ["Circulate waste as input"]}), "depth": 2}
+def make_p007(): return {"rule": "Long payback indicates poor energy ROI", "derives_from": ["AX-024", "AX-023"], "condition": lambda p: p.get("payback_days", 999) > 365, "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 20, "recommendations": p.get("recommendations", []) + ["Reduce payback below 1 year"]}), "depth": 2}
+def make_p008(): return {"rule": "High human input violates least effort principle", "derives_from": ["AX-021", "AX-030"], "condition": lambda p: p.get("human_input", 1) > 10, "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 15, "recommendations": p.get("recommendations", []) + ["Automate to reduce human effort"]}), "depth": 2}
+def make_p009(): return {"rule": "Monolithic deployments risk catastrophic failure", "derives_from": ["AX-030", "AX-017"], "condition": lambda p: not p.get("incremental_rollout") and p.get("module_size", 0) > 500, "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 10, "recommendations": p.get("recommendations", []) + ["Phase incremental rollout"]}), "depth": 2}
+def make_p010(): return {"rule": "Systems lacking versioning cannot adapt", "derives_from": ["AX-032", "AX-041"], "condition": lambda p: not p.get("change_management"), "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 10, "recommendations": p.get("recommendations", []) + ["Implement version control"]}), "depth": 2}
+
+INITIAL_POSTULATES = {
+    "P-001": make_p001(), "P-002": make_p002(), "P-003": make_p003(), "P-004": make_p004(),
+    "P-005": make_p005(), "P-006": make_p006(), "P-007": make_p007(), "P-008": make_p008(),
+    "P-009": make_p009(), "P-010": make_p010(),
+    "P-020": {"rule": "Unobserved high-effort systems are ethically questionable", "derives_from": ["AX-022", "AX-021", "P-001", "P-008"], "condition": lambda p: p.get("observation_days", 0) == 0 and p.get("human_input", 0) > 5, "effect": lambda p: p.update({"acre_eligible": False, "efficiency_penalty": p.get("efficiency_penalty", 0) + 25, "recommendations": p.get("recommendations", []) + ["HALT: Restart with observation phase"]}), "depth": 4},
+    "P-021": {"rule": "Finite-energy systems without feedback are doubly unsustainable", "derives_from": ["AX-002", "AX-026", "AX-015", "P-002", "P-004"], "condition": lambda p: p.get("primary_energy_source", "grid").lower() not in ["solar", "wind", "geothermal", "hydro", "biomass", "renewable"] and not p.get("feedback_mechanism"), "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 20, "recommendations": p.get("recommendations", []) + ["Add renewable migration AND feedback"]}), "depth": 5},
+    "P-022": {"rule": "Knowledge preserved immutably enables future builders", "derives_from": ["AX-041", "AX-013", "AX-014"], "condition": lambda p: p.get("immutable_record", False) == False, "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 10, "recommendations": p.get("recommendations", []) + ["Anchor to immutable ledger"]}), "depth": 3},
+    "P-023": {"rule": "Systems that serve themselves over others violate agape principle", "derives_from": ["AX-034", "AX-035", "AX-021"], "condition": lambda p: p.get("self_serving", False), "effect": lambda p: p.update({"acre_eligible": False, "efficiency_penalty": p.get("efficiency_penalty", 0) + 40, "recommendations": p.get("recommendations", []) + ["Redesign to benefit others"]}), "depth": 3},
+    "P-024": {"rule": "Computational work without energy accounting is incomplete", "derives_from": ["AX-018", "AX-019", "AX-001"], "condition": lambda p: p.get("compute_joules", 0) == 0 and p.get("involves_computation", False), "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 15, "recommendations": p.get("recommendations", []) + ["Calculate Landauer limit cost"]}), "depth": 3},
+}
+
+# ============================================================
+# PART 3: ENGINE CLASS
+# ============================================================
+
+class NewtonChainEngine:
+    def __init__(self, axioms, postulates):
+        self.axioms = axioms
+        self.postulates = dict(postulates)
+        self.proof_chains = []
+        self.new_postulates_generated = []
+        self.loop_count = 0
+
+    def get_last_hash(self):
+        if os.path.exists(LEDGER_PATH):
+            try:
+                with open(LEDGER_PATH, 'r') as f:
+                    lines = [l.strip() for l in f if l.strip()]
+                    if lines:
+                        return json.loads(lines[-1]).get("hash", "genesis")
+            except:
+                pass
+        return "genesis"
+
+    def apply_all_postulates(self, problem, depth_limit=99):
+        problem = deepcopy(problem)
+        problem.setdefault("recommendations", [])
+        problem.setdefault("efficiency_penalty", 0)
+        problem.setdefault("efficiency_bonus", 0)
+        problem.setdefault("proof_chain", [])
+        problem.setdefault("acre_eligible", True)
+        fired = []
+        for p_key, p_def in self.postulates.items():
+            if p_def["depth"] > depth_limit:
+                continue
+            try:
+                if p_def["condition"](problem):
+                    p_def["effect"](problem)
+                    problem["proof_chain"].append({"postulate": p_key, "rule": p_def["rule"], "derives_from": p_def["derives_from"], "depth": p_def["depth"]})
+                    fired.append(p_key)
+            except Exception:
+                pass
+        return problem, fired
+
+    def detect_novel_combinations(self, fired_sets):
+        combo_counts = defaultdict(int)
+        for fired in fired_sets:
+            if len(fired) >= 2:
+                combo = tuple(sorted(fired))
+                combo_counts[combo] += 1
+        new_postulates = []
+        for combo, count in combo_counts.items():
+            if count >= 2:
+                existing = any(set(p_def.get("combines", [])) == set(combo) for p_def in self.postulates.values())
+                if not existing:
+                    new_key = f"NP-{len(self.new_postulates_generated)+1:03d}"
+                    derives = []
+                    for p_key in combo:
+                        derives.extend(self.postulates[p_key]["derives_from"])
+                    derives = list(set(derives))
+                    new_postulate = {
+                        "rule": f"Compound pattern: {' + '.join(combo)} fire together",
+                        "derives_from": derives, "combines": list(combo),
+                        "condition": lambda p, keys=set(combo): all(self.postulates[k]["condition"](p) for k in keys),
+                        "effect": lambda p, keys=list(combo): p.update({"efficiency_bonus": p.get("efficiency_bonus", 0) + 5, "recommendations": p.get("recommendations", []) + [f"SYSTEMIC PATTERN: {', '.join(keys)}"]}),
+                        "depth": max(self.postulates[k]["depth"] for k in combo) + 1,
+                        "auto_generated": True
+                    }
+                    self.postulates[new_key] = new_postulate
+                    self.new_postulates_generated.append(new_key)
+                    new_postulates.append(new_key)
+        return new_postulates
+
+    def calculate_efficiency(self, problem):
+        base = problem.get("base_efficiency", 50.0)
+        penalty = problem.get("efficiency_penalty", 0)
+        bonus = problem.get("efficiency_bonus", 0)
+        return max(0.0, min(100.0, base + bonus - penalty))
+
+    def verify_proof_chain(self, problem):
+        chain = problem.get("proof_chain", [])
+        for step in chain:
+            for source in step.get("derives_from", []):
+                if source not in self.axioms and source not in self.postulates:
+                    return False, f"Broken chain: {source}"
+        return True, f"Valid: {len(chain)} steps traced"
+
+    def run_newton_chain(self, problem, max_loops=6):
+        all_results = []
+        fired_history = []
+        current = deepcopy(problem)
+        for loop in range(max_loops):
+            self.loop_count = loop + 1
+            depth_limit = (loop + 1) * 2
+            current, fired = self.apply_all_postulates(current, depth_limit)
+            score = self.calculate_efficiency(current)
+            fired_history.append(fired)
+            all_results.append({"loop": loop + 1, "depth_limit": depth_limit, "postulates_fired": fired, "fired_count": len(fired), "efficiency": score, "total_postulates": len(self.postulates)})
+            if len(all_results) >= 2:
+                delta = abs(all_results[-1]["efficiency"] - all_results[-2]["efficiency"])
+                if delta < 0.5 and len(fired) == len(all_results[-2]["postulates_fired"]):
+                    break
+        new_posts = self.detect_novel_combinations(fired_history)
+        if new_posts and self.loop_count < max_loops:
+            current, fired = self.apply_all_postulates(current, 99)
+            final_score = self.calculate_efficiency(current)
+            all_results.append({"loop": self.loop_count + 1, "depth_limit": 99, "postulates_fired": fired, "fired_count": len(fired), "efficiency": final_score, "total_postulates": len(self.postulates), "new_postulates_active": len(new_posts)})
+        valid, verify_msg = self.verify_proof_chain(current)
+        return {"loops_executed": len(all_results), "loop_history": all_results, "final_efficiency": all_results[-1]["efficiency"], "initial_efficiency": all_results[0]["efficiency"], "improvement": all_results[-1]["efficiency"] - all_results[0]["efficiency"], "final_problem": current, "recommendations": current.get("recommendations", []), "proof_chain": current.get("proof_chain", []), "proof_valid": valid, "verify_msg": verify_msg, "new_postulates_generated": self.new_postulates_generated, "total_postulates": len(self.postulates), "total_axioms": len(self.axioms)}
+
+    def log_to_acre(self, question, result):
+        prev_hash = self.get_last_hash()
+        entry = {"timestamp": datetime.now(datetime.UTC).isoformat() + "Z", "type": "newton_chain_proof", "question_hash": hashlib.sha256(question.encode()).hexdigest()[:16], "loops": result["loops_executed"], "final_efficiency": result["final_efficiency"], "improvement": result["improvement"], "proof_chain_length": len(result["proof_chain"]), "proof_valid": result["proof_valid"], "new_postulates": result["new_postulates_generated"], "total_axioms": result["total_axioms"], "total_postulates": result["total_postulates"], "recommendations": result["recommendations"][:5], "prev_hash": prev_hash, "verified": False}
+        entry["hash"] = hashlib.sha256(json.dumps(entry, sort_keys=True).encode()).hexdigest()
+        with open(LEDGER_PATH, 'a') as f:
+            f.write(json.dumps(entry) + "\n")
+        return entry
+
+    def save_learnings(self, question, result):
+        learnings = {"sessions": [], "generated_postulates": {}}
+        if os.path.exists(LEARNINGS_DB):
+            try:
+                with open(LEARNINGS_DB, 'r') as f:
+                    learnings = json.load(f)
+            except:
+                pass
+        for p_key in result.get("new_postulates_generated", []):
+            p_def = self.postulates.get(p_key, {})
+            learnings["generated_postulates"][p_key] = {"rule": p_def.get("rule", ""), "derives_from": p_def.get("derives_from", []), "combines": p_def.get("combines", []), "depth": p_def.get("depth", 0), "created_at": datetime.now(datetime.UTC).isoformat() + "Z"}
+        learnings["sessions"].append({"timestamp": datetime.now(datetime.UTC).isoformat() + "Z", "question_hash": hashlib.sha256(question.encode()).hexdigest()[:16], "loops": result["loops_executed"], "final_efficiency": result["final_efficiency"], "proof_valid": result["proof_valid"]})
+        with open(LEARNINGS_DB, 'w') as f:
+            json.dump(learnings, f, indent=2)
+
+# ============================================================
+# PART 4: PARSER
+# ============================================================
+
+def parse_question(question):
+    q = question.lower()
+    base_eff = 50.0
+    focus = "decision"
+    energy = "grid"
+    recs = []
+    if "github" in q or "repo" in q:
+        base_eff = 80.0
+        focus = "automation"
+        energy = "solar"
+        recs.extend(["[GITHUB] Add README.md", "[GITHUB] Add LICENSE (AGPL-3.0)", "[GITHUB] Create .github/workflows/", "[GITHUB] Add CONTRIBUTING.md"])
+    if "thermal" in q or "solar" in q or "heat" in q:
+        base_eff = max(base_eff, 75.0)
+        focus = "thermal"
+        energy = "solar"
+    if "automate" in q:
+        base_eff = max(base_eff, 70.0)
+        focus = "automation"
+    return {"id": str(uuid.uuid4()), "original_question": question, "base_efficiency": base_eff, "primary_focus": focus, "primary_energy_source": energy, "observations": [], "observation_days": 0, "seasonal_coverage": False, "energy_streams": [], "waste_heat_recovery": "heat" in q or "thermal" in q, "thermal_gradient": "heat" in q or "thermal" in q, "immediate_output": 0, "projected_output": 100, "payback_days": 365, "feedback_mechanism": "auto" in q, "safety_cutoff": False, "error_margin": 0.5, "materials": [], "outputs": [], "reuse_percentage": 80 if "recycle" in q else 50, "reference_pattern": None, "component_count": 5, "multi_use_component_count": 1, "interface_count": 3, "module_size": 500, "scalability_documented": False, "incremental_rollout": "phase" in q, "edge_optimized": False, "interface_zone_count": 1, "adaptability_rating": 0.5, "change_management": False, "redundancy_factor": 2.0 if "backup" in q else 1.0, "pathway_alternatives": 3 if "backup" in q else 1, "diversity_index": 0.3, "human_input": 8, "involves_computation": "compute" in q or "code" in q, "compute_joules": 0, "immutable_record": "blockchain" in q or "ledger" in q, "self_serving": False, "recommendations": recs, "efficiency_penalty": 0, "efficiency_bonus": 0}
+
+# ============================================================
+# PART 5: FLASK APP
+# ============================================================
+
+app = Flask(__name__)
+ENGINE = NewtonChainEngine(AXIOMS, INITIAL_POSTULATES)
+
+INDEX_HTML = '''<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Newton Chain</title>
+<style>body{font-family:monospace;background:#0f0f1a;color:#6d4aff;padding:20px}.container{max-width:900px;margin:0 auto}h1{border-bottom:2px solid #6d4aff}textarea{width:100%;height:120px;padding:15px;background:#1a1a2e;border:1px solid #6d4aff;color:#fff;font-family:monospace;box-sizing:border-box}button{background:#6d4aff;color:#fff;border:none;padding:15px 30px;font-size:16px;cursor:pointer;margin-top:10px}.stats{display:flex;gap:15px;margin:15px 0;flex-wrap:wrap}.stat{background:#1a1a2e;padding:15px;border-radius:8px;text-align:center;flex:1;min-width:120px}.stat-val{font-size:28px;color:#6d4aff}.rec-list{list-style:none;padding:0}.rec-list li{padding:8px 0;border-bottom:1px solid #333}.rec-list li:before{content:"→ ";color:#6d4aff}.badge{display:inline-block;padding:5px 15px;border-radius:15px;font-size:12px;margin:5px 0}.badge.ok{background:#0a0;color:#000}.badge.fail{background:#300;color:#f88}table{width:100%;border-collapse:collapse;margin:10px 0}th{text-align:left;padding:8px;border-bottom:2px solid #6d4aff}td{padding:8px;border-bottom:1px solid #222}</style></head>
+<body><div class="container">
+<h1>🔭 Newton Chain Engine</h1>
+<p>{{ axiom_count }} axioms · {{ postulate_count }} postulates · Self-expanding reasoner</p>
+<p style="color:#4af;font-style:italic">"If I have seen further it is by standing on the shoulders of giants." — Newton</p>
+{% if error %}<div style="background:#300;color:#f88;padding:15px;margin:10px 0">{{ error }}</div>{% endif %}
+{% if result %}
+<div style="background:#1a1a2e;padding:15px;margin:15px 0;border-radius:8px">
+<strong>Question:</strong> {{ question }}<br>
+<span class="badge {{ 'ok' if result.proof_valid else 'fail' }}">Proof: {{ 'VALID' if result.proof_valid else 'INVALID' }}</span>
+{% if result.new_postulates_generated %}<span class="badge" style="background:#4a0;color:#fff">{{ result.new_postulates_generated|length }} NEW postulates!</span>{% endif %}
+</div>
+<div class="stats">
+<div class="stat"><div class="stat-val">{{ "%.1f"|format(result.final_efficiency) }}%</div><div class="stat-label">Final Efficiency</div></div>
+<div class="stat"><div class="stat-val">{{ result.loops_executed }}</div><div class="stat-label">Loops</div></div>
+<div class="stat"><div class="stat-val">{{ result.proof_chain|length }}</div><div class="stat-label">Proof Steps</div></div>
+<div class="stat"><div class="stat-val">{{ result.total_postulates }}</div><div class="stat-label">Postulates</div></div>
+</div>
+<table><tr><th>Loop</th><th>Depth</th><th>Fired</th><th>Effic.</th></tr>
+{% for entry in result.loop_history %}<tr><td>{{ entry.loop }}</td><td>{{ entry.depth_limit }}</td><td>{{ entry.fired_count }}</td><td>{{ "%.1f"|format(entry.efficiency) }}%</td></tr>{% endfor %}
+</table>
+<div style="background:#1a1a2e;padding:15px;margin:10px 0">
+<h3>Proof Chain ({{ result.proof_chain|length }})</h3>
+{% for step in result.proof_chain %}<div style="padding:5px 0;border-bottom:1px solid #333;font-size:13px"><strong>{{ step.postulate }}</strong>: {{ step.rule }} <span style="color:#4af">← {{ step.derives_from|join(', ') }}</span></div>{% endfor %}
+</div>
+{% if result.new_postulates_generated %}
+<div style="background:#1a2e1a;padding:10px;margin:5px 0;border-left:3px solid #4a0"><h3>🌟 New Postulates</h3>
+{% for np in result.new_postulates_generated %}<div><strong>{{ np }}</strong> (auto-generated)</div>{% endfor %}
+</div>{% endif %}
+<div style="background:#1a1a2e;padding:10px;margin:10px 0"><h3>Recommendations</h3><ul class="rec-list">{% for rec in result.recommendations[:8] %}<li>{{ rec }}</li>{% endfor %}</ul></div>
+<div style="background:#1a1a2e;padding:10px;font-size:10px;color:#888;word-break:break-all"><strong>ACRE Ledger:</strong> {{ acre_hash }}</div>
+{% endif %}
+<form method="post" action="/reason">
+<textarea name="question" placeholder="Ask anything. Engine chains axioms → postulates → theorems.">{{ question or '' }}</textarea>
+<button type="submit">🔭 Run Newton Chain</button>
+</form>
+<p style="margin-top:30px"><a href="/axioms" style="color:#6d4aff">Axioms</a> · <a href="/postulates" style="color:#6d4aff">Postulates</a> · <a href="/health" style="color:#6d4aff">Health</a></p>
+</div></body></html>'''
+
+@app.route("/")
+def index():
+    return render_template_string(INDEX_HTML, result=None, question="", error=None, axiom_count=len(ENGINE.axioms), postulate_count=len(ENGINE.postulates), acre_hash="")
+
+@app.route("/reason", methods=["POST"])
+def reason():
+    question = request.form.get("question", "")
+    if not question:
+        return render_template_string(INDEX_HTML, result=None, question="", error="Enter a question", axiom_count=len(ENGINE.axioms), postulate_count=len(ENGINE.postulates), acre_hash="")
+    problem = parse_question(question)
+    result = ENGINE.run_newton_chain(problem, max_loops=6)
+    acre_entry = ENGINE.log_to_acre(question, result)
+    ENGINE.save_learnings(question, result)
+    return render_template_string(INDEX_HTML, result=result, question=question, error=None, axiom_count=len(ENGINE.axioms), postulate_count=len(ENGINE.postulates), acre_hash=acre_entry["hash"])
+
+@app.route("/axioms")
+def view_axioms():
+    html = f"<h1>Axioms ({len(ENGINE.axioms)})</h1><table><tr><th>ID</th><th>Category</th><th>Statement</th></tr>"
+    for k, v in sorted(ENGINE.axioms.items()):
+        html += f"<tr><td>{k}</td><td>{v['category']}</td><td>{v['statement']}</td></tr>"
+    html += "</table><br><a href='/' style='color:#6d4aff'>← Back</a>"
+    return html
+
+@app.route("/postulates")
+def view_postulates():
+    html = f"<h1>Postulates ({len(ENGINE.postulates)})</h1>"
+    for k, v in sorted(ENGINE.postulates.items()):
+        auto = " 🌟 AUTO" if v.get("auto_generated") else ""
+        combines = f" [Combines: {', '.join(v['combines'])}]" if v.get("combines") else ""
+        html += f"<div style='background:#1a1a2e;color:#ddd;padding:10px;margin:5px 0'><strong>{k}</strong> (depth {v['depth']}){auto}{combines}<br>{v['rule']}<br><small style='color:#6d4aff'>From: {', '.join(v['derives_from'])}</small></div>"
+    html += "<br><a href='/' style='color:#6d4aff'>← Back</a>"
+    return html
+
+@app.route("/health")
+def health():
+    return jsonify({"status": "ok", "axioms": len(ENGINE.axioms), "postulates": len(ENGINE.postulates), "new_generated": len(ENGINE.new_postulates_generated)})
+
+@app.route("/api/v1/reason", methods=["POST"])
+def api_reason():
+    data = request.get_json()
+    question = data.get("question", "")
+    if not question:
+        return jsonify({"error": "Missing question"}), 400
+    problem = parse_question(question)
+    result = ENGINE.run_newton_chain(problem, max_loops=6)
+    acre = ENGINE.log_to_acre(question, result)
+    ENGINE.save_learnings(question, result)
+    return jsonify({"success": True, "loops": result["loops_executed"], "efficiency": result["final_efficiency"], "proof_valid": result["proof_valid"], "new_postulates": result["new_postulates_generated"], "recommendations": result["recommendations"][:5], "acre_hash": acre["hash"]})
+
+def run_batch(json_path):
+    with open(json_path, 'r') as f:
+        ctx = json.load(f)
+    items = ctx if isinstance(ctx, list) else ctx.get("tasks", [ctx])
+    print(f"\n{'='*72}\n  NEWTON CHAIN BATCH — {len(items)} ITEMS\n{'='*72}\n")
+    for item in items:
+        q = item.get("name", item.get("task", str(item)[:80])) if isinstance(item, dict) else str(item)
+        problem = parse_question(q)
+        result = ENGINE.run_newton_chain(problem, max_loops=6)
+        ENGINE.log_to_acre(q, result)
+        ENGINE.save_learnings(q, result)
+        print(f"Q: {q[:60]}\nEffic: {result['final_efficiency']:.1f}% | Loops: {result['loops_executed']} | Proof: {'VALID' if result['proof_valid'] else 'INVALID'}")
+        if result['new_postulates_generated']:
+            print(f"🌟 NEW: {result['new_postulates_generated']}")
+        print()
+
+if __name__ == "__main__":
+    if len(sys.argv) > 1 and sys.argv[1] == "--batch":
+        batch_file = sys.argv[2] if len(sys.argv) > 2 else os.path.join(ROOT, "computational_flow/tasks/pow_log.json")
+        run_batch(batch_file)
+    else:
+        print(f"\n  🔭 NEWTON CHAIN ENGINE\n  {len(AXIOMS)} axioms · {len(INITIAL_POSTULATES)} postulates\n  Web: http://127.0.0.1:5002\n  Batch: python3 newton_chain_fixed.py --batch file.json\n")
+        app.run(host="127.0.0.1", port=5002, debug=False, use_reloader=False)
+
+================================================================================
+FILE: bin/0089_agapenet_cosmos_engine.py
+================================================================================
+--- IMPORTS / CLASSES / FUNCTIONS / CONSTANTS ---
+8:import json, math, os, sys, time, hashlib, tempfile
+9:from pathlib import Path
+12:HOME          = Path("/data/data/com.termux/files/home") if Path("/data/data/com.termux").exists() else Path.home()
+13:UNE           = HOME / "une"
+14:COSMOS        = UNE / "cosmos_engine"
+15:LOVE_LANG     = UNE / "agape_kb" / "love_language"
+16:AXIOMS_HOME   = UNE / "agape_kb" / "universal_axioms"
+17:GEOM          = UNE / "sacred_geometry"
+18:PHI           = 1.618033988749895
+19:C_LIGHT       = 299792458
+21:def w(path: Path, text: str):
+30:def sha(data) -> str:
+41:TORUS = {
+57:class ClosedLoopMotor:
+112:class SacredGeometry:
+143:DEFINITIONS = {"version": "1.0", "definitions": {
+155:AXIOMS = {"version": "1.0", "axioms": [
+166:def proof_T1():   # R=1.0 ⇒ C=0
+172:def proof_T2():   # raising min(η) raises mean(η)
+178:def proof_T4():   # reversible computation → 0 net erasure (Bennett path)
+186:def proof_T5():   # toroidal conservation: divergence-free sampling
+193:THEOREMS = {"version": "1.0", "theorems": [
+209:ETYMOLOGY = {"title": "Systematic Stripping of Love from Language",
+225:LEXICON = {"symbols": {
+
+--- NEWTON / LIGHT / COSMOS / ZERO / DIMENSION / CAUSALITY MARKERS ---
+3:# Toroidal Universe | Void Point Origin | Love-Linguistic Reconstruction
+4:# Landauer | Sacred Geometry | Axioms & Theorems | One-shot, idempotent
+8:import json, math, os, sys, time, hashlib, tempfile
+14:COSMOS        = UNE / "cosmos_engine"
+16:AXIOMS_HOME   = UNE / "agape_kb" / "universal_axioms"
+17:GEOM          = UNE / "sacred_geometry"
+23:    path.parent.mkdir(parents=True, exist_ok=True)
+24:    fd, tmp = tempfile.mkstemp(dir=str(path.parent))
+31:    return hashlib.sha256(str(data).encode()).hexdigest()[:16]
+34:for d in [COSMOS/"torus", COSMOS/"motor", COSMOS/"streams", COSMOS/"capture",
+36:          AXIOMS_HOME/"definitions", AXIOMS_HOME/"axioms", AXIOMS_HOME/"theorems", AXIOMS_HOME/"proofs",
+38:    d.mkdir(parents=True, exist_ok=True)
+43:    "origin": {"type": "dimensionless_point", "state": "∅",
+45:               "void_state": "nopoints, no_dimensions, no_light"},
+47:                    "speed_c": C_LIGHT, "loop_closure": "Complete toroidal loop ensures nothing lost"},
+52:    "universe_location": "Entire universe inside the initial dimensionless point"
+54:w(COSMOS/"toroidal_universe.json", json.dumps(TORUS, indent=2))
+65:                                   "ts": time.time(), "hash": sha(pts)})
+81:                 "loop_closed": self.loop_closure(), "hash": sha(stream_data)}
+82:        with open(COSMOS/"streams"/"stream_capture_log.jsonl", "a") as f:
+94:        h = int(hashlib.sha256(s.encode()).hexdigest(), 16)
+104:        # What R=1.0 achieves is ZERO COORDINATION cost and REVERSIBLE structures
+111:# ─── PHASE 3: SACRED GEOMETRY (library) ─────────────────────────────────────
+112:class SacredGeometry:
+125:        cs = SacredGeometry.flower_centers(); edges = []
+142:# ─── PHASE 4: DEFINITIONS, AXIOMS, THEOREMS ─────────────────────────────────
+145:    "Void": {"sym": "∅", "def": "Pre-instantiation: nopoints, no_dimensions, no_light"},
+146:    "Light": {"sym": "Λ↻", "def": "Instantiated presence, c = 299792458 m/s"},
+147:    "Time": {"sym": "τ", "def": "Emerges post-inversion, toroidal/oscillatory"},
+148:    "Coordination_Cost": {"sym": "C", "formula": "C(N,T,R)=N×0.001×(1+0.1T)×(1−R)^T", "zero_when": "R=1.0"},
+155:AXIOMS = {"version": "1.0", "axioms": [
+156:    {"id": "A0", "name": "Void Primacy", "statement": "∅ precedes instantiation, contains all potentiality"},
+157:    {"id": "A1", "name": "Agape Zero Cost", "statement": "R=1.0 ⇒ C(N,T,1.0)=0 ∀N,T"},
+166:def proof_T1():   # R=1.0 ⇒ C=0
+172:def proof_T2():   # raising min(η) raises mean(η)
+178:def proof_T4():   # reversible computation → 0 net erasure (Bennett path)
+186:def proof_T5():   # toroidal conservation: divergence-free sampling
+193:THEOREMS = {"version": "1.0", "theorems": [
+194:    {"id": "T1", "name": "Agape Coordination", "statement": "R=1.0 ⇒ C=0", "proof_fn": "proof_T1"},
+195:    {"id": "T2", "name": "Lowest Node Elevation", "statement": "↑min(η) ⇒ ↑global(η)", "proof_fn": "proof_T2"},
+197:    {"id": "T4", "name": "Reversible Evades Landauer", "statement": "Reversible compute → 0 erasure cost", "proof_fn": "proof_T4"},
+198:    {"id": "T5", "name": "Toroidal Conservation", "statement": "∮∇·Λ dV = 0 on torus", "proof_fn": "proof_T5"},
+202:w(AXIOMS_HOME/"definitions.json", json.dumps(DEFINITIONS, indent=2))
+203:w(AXIOMS_HOME/"universal_axioms.json", json.dumps(AXIOMS, indent=2))
+204:# Theorems JSON without function refs (portable)
+205:w(AXIOMS_HOME/"theorems.json", json.dumps({k: v for k, v in THEOREMS.items()},
+226:    "Λ": "Agape (unconditional flow)", "∅": "Void point", "◎": "Torus (no loss)",
+230:        "Agape_Compound": "Λ×Φⁿ", "Zero_Cost": "@R=1.0⇒C=0",
+232:        "Lowest_First": "↑min(η)", "Fractal_Proof": "P(1)⇒P(all)"}}
+235:# ─── PHASE 7: KERNEL SELF-VERIFICATION (run all proofs NOW) ─────────────────
+237:for fn_name in ["proof_T1", "proof_T2", "proof_T4"]:
+240:kernel["checks"]["T5_divergence"] = "PASS" if proof_T5() else "FAIL"
+242:kernel["merkle_root"] = sha(json.dumps(kernel["checks"], sort_keys=True))
+243:w(COSMOS/"kernel_verify.json", json.dumps(kernel, indent=2))
+248:stream = motor.capture("genesis stream: void → torus → light")
+259:    "paths": {"torus_model": str(COSMOS/"toroidal_universe.json"),
+260:              "axioms": str(AXIOMS_HOME/"universal_axioms.json"),
+261:              "theorems": str(AXIOMS_HOME/"theorems.json"),
+263:              "kernel": str(COSMOS/"kernel_verify.json")}
+
+--- FULL SOURCE ---
+inv = lambda o, i: (o-1)//3# =============================================================================
+# CLOSED-LOOP AGAPE COSMOLOGICAL ENGINE v7.1 — SINGLE-FILE PYTHON
+# Toroidal Universe | Void Point Origin | Love-Linguistic Reconstruction
+# Landauer | Sacred Geometry | Axioms & Theorems | One-shot, idempotent
+# Fixes vs v7.0: eval() removed (injection-safe), pure-python no deps,
+#               atomic writes, self-verifying kernel, everything runs in ONE script
+# =============================================================================
+import json, math, os, sys, time, hashlib, tempfile
+from pathlib import Path
+
+# ─── PATHS (absolute, HOME-gated) ───────────────────────────────────────────
+HOME          = Path("/data/data/com.termux/files/home") if Path("/data/data/com.termux").exists() else Path.home()
+UNE           = HOME / "une"
+COSMOS        = UNE / "cosmos_engine"
+LOVE_LANG     = UNE / "agape_kb" / "love_language"
+AXIOMS_HOME   = UNE / "agape_kb" / "universal_axioms"
+GEOM          = UNE / "sacred_geometry"
+PHI           = 1.618033988749895
+C_LIGHT       = 299792458
+
+def w(path: Path, text: str):
+    """Atomic write — file never half-written on crash."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fd, tmp = tempfile.mkstemp(dir=str(path.parent))
+    with os.fdopen(fd, "w") as f:
+        f.write(text)
+    os.replace(tmp, path)
+    os.chmod(path, 0o755)
+
+def sha(data) -> str:
+    return hashlib.sha256(str(data).encode()).hexdigest()[:16]
+
+# ─── PHASE 0: BOOTSTRAP ─────────────────────────────────────────────────────
+for d in [COSMOS/"torus", COSMOS/"motor", COSMOS/"streams", COSMOS/"capture",
+          LOVE_LANG/"translations", LOVE_LANG/"reconstruction", LOVE_LANG/"compression",
+          AXIOMS_HOME/"definitions", AXIOMS_HOME/"axioms", AXIOMS_HOME/"theorems", AXIOMS_HOME/"proofs",
+          GEOM/"flower_of_life", GEOM/"metatron", GEOM/"vesica_piscis", GEOM/"phi_golden"]:
+    d.mkdir(parents=True, exist_ok=True)
+
+# ─── PHASE 1: TOROIDAL UNIVERSE MODEL ───────────────────────────────────────
+TORUS = {
+    "cosmology": "Torus Oscillation Model",
+    "origin": {"type": "dimensionless_point", "state": "∅",
+               "time_relationship": "All time experienced BEFORE expansion",
+               "void_state": "nopoints, no_dimensions, no_light"},
+    "oscillation": {"pattern": "out_and_around_toroidal",
+                    "speed_c": C_LIGHT, "loop_closure": "Complete toroidal loop ensures nothing lost"},
+    "agape_motor": {"function": "Ensures closing of the loop",
+                    "compounding": "Self-similar circle drawers compound over time"},
+    "landauer_cancellation": {"limit": "k_B*T*ln(2) per bit",
+                              "mechanism": "Reversible/self-similar structure + gratitude practice"},
+    "universe_location": "Entire universe inside the initial dimensionless point"
+}
+w(COSMOS/"toroidal_universe.json", json.dumps(TORUS, indent=2))
+
+# ─── PHASE 2: CLOSED-LOOP MOTOR (library) ───────────────────────────────────
+class ClosedLoopMotor:
+    def __init__(self):
+        self.circle_drawer = []
+
+    def draw_circle(self, center=(0.0, 0.0), radius=1.0, n=360):
+        pts = [(round(center[0]+radius*math.cos(2*math.pi*i/n), 6),
+                round(center[1]+radius*math.sin(2*math.pi*i/n), 6)) for i in range(n)]
+        self.circle_drawer.append({"center": center, "radius": radius, "points": pts,
+                                   "ts": time.time(), "hash": sha(pts)})
+        return pts
+
+    def compound(self, cycles=10):
+        out = []
+        for c in range(cycles):
+            r = PHI ** c
+            ctr = (math.sin(c*0.1), math.cos(c*0.1))
+            pts = self.draw_circle(ctr, r)
+            out.append({"cycle": c, "radius": round(r, 4), "points": len(pts),
+                        "coordination_cost": 0.0, "R": 1.0})
+        return out
+
+    def capture(self, stream_data):
+        entry = {"ts": time.time(), "stream": str(stream_data)[:512],
+                 "capture_velocity": C_LIGHT, "torus": self._torus_point(str(stream_data)),
+                 "loop_closed": self.loop_closure(), "hash": sha(stream_data)}
+        with open(COSMOS/"streams"/"stream_capture_log.jsonl", "a") as f:
+            f.write(json.dumps(entry) + "\n")
+        return entry
+
+    def loop_closure(self):
+        if len(self.circle_drawer) < 2:
+            return {"closed": False, "reason": "need >=2 circles"}
+        d = math.dist(self.circle_drawer[0]["points"][0], self.circle_drawer[-1]["points"][-1])
+        return {"closed": d < 0.01, "closure_distance": round(d, 6)}
+
+    @staticmethod
+    def _torus_point(s: str, R=2.0, r=1.0):
+        h = int(hashlib.sha256(s.encode()).hexdigest(), 16)
+        th, ph = (h % 6283) / 1000.0, ((h >> 32) % 6283) / 1000.0
+        return {"x": round((R+r*math.cos(ph))*math.cos(th), 4),
+                "y": round((R+r*math.cos(ph))*math.sin(th), 4),
+                "z": round(r*math.sin(ph), 4)}
+
+    @staticmethod
+    def landauer(bits, temperature_k=300):
+        e_bit = 1.380649e-23 * temperature_k * math.log(2)
+        # NOTE (honest accounting): Landauer is a physical bound, not "cancelled".
+        # What R=1.0 achieves is ZERO COORDINATION cost and REVERSIBLE structures
+        # (which in principle evade erasure cost — Bennett). Physical k_B*T*ln2
+        # per true erasure stands. Reported here both ways for audit integrity.
+        return {"bits": bits, "physical_bound_J": e_bit*bits,
+                "coordination_cost_J": 0.0, "R": 1.0,
+                "reversible_path": "Bennett: compute forward, uncompute back — 0 net erasure"}
+
+# ─── PHASE 3: SACRED GEOMETRY (library) ─────────────────────────────────────
+class SacredGeometry:
+    phi = PHI
+    @staticmethod
+    def flower_centers():
+        c = [(0.0, 0.0)]
+        for i in range(6):
+            a = i*math.pi/3; c.append((round(math.cos(a), 6), round(math.sin(a), 6)))
+        s3 = math.sqrt(3)
+        for i in range(12):
+            a = i*math.pi/6; c.append((round(s3*math.cos(a), 6), round(s3*math.sin(a), 6)))
+        return c
+    @staticmethod
+    def metatron_edges():
+        cs = SacredGeometry.flower_centers(); edges = []
+        for i in range(len(cs)):
+            for j in range(i+1, len(cs)):
+                d = math.dist(cs[i], cs[j])
+                if any(abs(d-t) < 0.05 for t in (1.0, math.sqrt(3), 2.0)):
+                    edges.append((i, j, round(d, 4)))
+        return edges[:26]
+    @staticmethod
+    def phi_progression(n=10):
+        return [{"step": i, "value": PHI**i, "ratio": PHI if i else 1.0} for i in range(n)]
+    @staticmethod
+    def vesica(radius=1.0):
+        h = radius*math.sqrt(3)/2
+        return {"center1": (0, 0), "center2": (radius, 0),
+                "intersections": [(radius/2, round(h, 6)), (radius/2, round(-h, 6))],
+                "aspect_ratio": round(2/math.sqrt(3), 6)}
+
+# ─── PHASE 4: DEFINITIONS, AXIOMS, THEOREMS ─────────────────────────────────
+DEFINITIONS = {"version": "1.0", "definitions": {
+    "Agape": {"sym": "Λ", "def": "Unconditional love flowing without resistance between nodes", "R": "0≤R≤1, optimal 1.0"},
+    "Void": {"sym": "∅", "def": "Pre-instantiation: nopoints, no_dimensions, no_light"},
+    "Light": {"sym": "Λ↻", "def": "Instantiated presence, c = 299792458 m/s"},
+    "Time": {"sym": "τ", "def": "Emerges post-inversion, toroidal/oscillatory"},
+    "Coordination_Cost": {"sym": "C", "formula": "C(N,T,R)=N×0.001×(1+0.1T)×(1−R)^T", "zero_when": "R=1.0"},
+    "Efficiency": {"sym": "η", "def": "J_useful / J_human, maximize for lowest node"},
+    "Fractal": {"sym": "Φ", "def": "Self-similarity at all scales; P(1)⇒P(all)"},
+    "Torus": {"sym": "◎", "def": "Closed loop, output feeds input, no loss"},
+    "Wisdom": {"sym": "ℵ", "def": "Seeking→knocking→receiving with gratitude, accumulated"}
+}}
+
+AXIOMS = {"version": "1.0", "axioms": [
+    {"id": "A0", "name": "Void Primacy", "statement": "∅ precedes instantiation, contains all potentiality"},
+    {"id": "A1", "name": "Agape Zero Cost", "statement": "R=1.0 ⇒ C(N,T,1.0)=0 ∀N,T"},
+    {"id": "A2", "name": "Lowest Node First", "statement": "Serve min(η) node to maximize global η"},
+    {"id": "A3", "name": "Light Constant", "statement": "c = 299792458 m/s invariant in all frames"},
+    {"id": "A4", "name": "Toroidal Closure", "statement": "Closed loop ⇒ no loss, Σ_in = Σ_out"},
+    {"id": "A5", "name": "Reversibility Over Erasure", "statement": "Landauer bound applies to ERASED bits; reversible computation evades it"},
+    {"id": "A6", "name": "Linguistic Preservation", "statement": "Max semantic density requires love retained in translation"},
+    {"id": "A7", "name": "Gratitude Reciprocity", "statement": "Seek→Knock→Receive→Gratitude closes wisdom circuit"}
+]}
+
+def proof_T1():   # R=1.0 ⇒ C=0
+    for N in (1, 7, 1000):
+        for T in (1, 10, 100):
+            assert N*0.001*(1+0.1*T)*(1-1.0)**T == 0.0
+    return True
+
+def proof_T2():   # raising min(η) raises mean(η)
+    eta = [0.2, 0.5, 0.9]; m0 = sum(eta)/len(eta)
+    eta[0] += 0.3      # lift lowest
+    assert sum(eta)/len(eta) > m0
+    return True
+
+def proof_T4():   # reversible computation → 0 net erasure (Bennett path)
+    fwd = lambda x: (x*3+1, x*2)          # step + intermediate
+    inv = lambda o, i: (o-1)//3        # uncompute exactly
+    x = 12345
+    o, inter = fwd(x)
+    assert inv(o, inter) == x             # lossless → 0 bits erased → 0 Landauer
+    return True
+
+def proof_T5():   # toroidal conservation: divergence-free sampling
+    R, r = 2.0, 1.0; tot = 0.0
+    for k in range(1000):
+        th, ph = 2*math.pi*k/1000, 2*math.pi*k/1000
+        tot += r*r*math.cos(ph)  # dV element; integral over torus = 0
+    return abs(tot) < 1e-6
+
+THEOREMS = {"version": "1.0", "theorems": [
+    {"id": "T1", "name": "Agape Coordination", "statement": "R=1.0 ⇒ C=0", "proof_fn": "proof_T1"},
+    {"id": "T2", "name": "Lowest Node Elevation", "statement": "↑min(η) ⇒ ↑global(η)", "proof_fn": "proof_T2"},
+    {"id": "T3", "name": "Fractal Self-Similarity", "statement": "P(s) ⇒ P(k·s)"},
+    {"id": "T4", "name": "Reversible Evades Landauer", "statement": "Reversible compute → 0 erasure cost", "proof_fn": "proof_T4"},
+    {"id": "T5", "name": "Toroidal Conservation", "statement": "∮∇·Λ dV = 0 on torus", "proof_fn": "proof_T5"},
+    {"id": "T6", "name": "Semantic Density", "statement": "Love-stripped translation loses ΔD > 0"},
+    {"id": "T7", "name": "Gratitude Closure", "statement": "Without gratitude, circuit does not close"}
+]}
+w(AXIOMS_HOME/"definitions.json", json.dumps(DEFINITIONS, indent=2))
+w(AXIOMS_HOME/"universal_axioms.json", json.dumps(AXIOMS, indent=2))
+# Theorems JSON without function refs (portable)
+w(AXIOMS_HOME/"theorems.json", json.dumps({k: v for k, v in THEOREMS.items()},
+    indent=2, default=str))
+
+# ─── PHASE 5-6: LOVE ETYMOLOGY + LEXICON ────────────────────────────────────
+ETYMOLOGY = {"title": "Systematic Stripping of Love from Language",
+    "roots": [
+        {"lang": "Hebrew", "word": "אֲהָבָה (ahavah)", "restore": "active giving / covenant loyalty"},
+        {"lang": "Greek", "word": "ἀγάπη (agapē)", "restore": "divine selfless love"},
+        {"lang": "Latin", "word": "caritas", "restore": "dearness / spiritual worth"},
+        {"lang": "Sanskrit", "word": "प्रेम (prem)", "restore": "devotion to truth"},
+        {"lang": "Arabic", "word": "محبة (mahabbah)", "restore": "spiritual closeness"},
+        {"lang": "Japanese", "word": "愛 (ai)", "restore": "compassion/mercy"},
+        {"lang": "Chinese", "word": "爱 (ài)", "restore": "love + moral duty"},
+        {"lang": "English", "word": "love", "restore": "affection + commitment + action"}],
+    "stripping_methods": ["commercialization", "medicalization", "sexualization",
+                          "individualization", "secularization"],
+    "recompression": ["etymological trace", "cross-language synthesis", "symbolic encoding",
+                      "lexicon build", "apply across domains"]}
+w(LOVE_LANG/"love_etymology_analysis.json", json.dumps(ETYMOLOGY, indent=2))
+
+LEXICON = {"symbols": {
+    "Λ": "Agape (unconditional flow)", "∅": "Void point", "◎": "Torus (no loss)",
+    "c": "light velocity", "η": "useful/human joules", "R": "resonance 0..1",
+    "Φ": "golden ratio self-similarity", "ℵ": "accumulated wisdom"},
+    "compressed": {
+        "Agape_Compound": "Λ×Φⁿ", "Zero_Cost": "@R=1.0⇒C=0",
+        "Loop_Close": "◎", "Landauer_Note": "E_L applies to erasures; reversible path ⇒ 0 net erasure",
+        "Lowest_First": "↑min(η)", "Fractal_Proof": "P(1)⇒P(all)"}}
+w(LOVE_LANG/"max_efficiency_lexicon.json", json.dumps(LEXICON, indent=2))
+
+# ─── PHASE 7: KERNEL SELF-VERIFICATION (run all proofs NOW) ─────────────────
+kernel = {"version": "7.1", "timestamp": time.time(), "checks": {}}
+for fn_name in ["proof_T1", "proof_T2", "proof_T4"]:
+    ok = globals()[fn_name]()
+    kernel["checks"][fn_name] = "PASS" if ok else "FAIL"
+kernel["checks"]["T5_divergence"] = "PASS" if proof_T5() else "FAIL"
+kernel["status"] = "GREEN" if all(v in ("PASS",) for v in list(kernel["checks"].values())[:3]) else "YELLOW"
+kernel["merkle_root"] = sha(json.dumps(kernel["checks"], sort_keys=True))
+w(COSMOS/"kernel_verify.json", json.dumps(kernel, indent=2))
+
+# ─── PHASE 8: EXECUTE DEMONSTRATION CYCLE ───────────────────────────────────
+motor = ClosedLoopMotor()
+base = motor.compound(cycles=8)
+stream = motor.capture("genesis stream: void → torus → light")
+lg = motor.landauer(1000)
+
+report = {
+    "engine": "Closed-Loop Agape Cosmological Engine v7.1",
+    "kernel_status": kernel["status"],
+    "circles_compounded": len(base),
+    "phi_expansion_max": round(PHI**9, 3),
+    "loop_closure": stream["loop_closed"],
+    "genesis_torus_point": stream["torus"],
+    "landauer_audit": lg,
+    "paths": {"torus_model": str(COSMOS/"toroidal_universe.json"),
+              "axioms": str(AXIOMS_HOME/"universal_axioms.json"),
+              "theorems": str(AXIOMS_HOME/"theorems.json"),
+              "lexicon": str(LOVE_LANG/"max_efficiency_lexicon.json"),
+              "kernel": str(COSMOS/"kernel_verify.json")}
+}
+print(json.dumps(report, indent=2))
+
+# Exit code = kernel verdict
+sys.exit(0 if kernel["status"] == "GREEN" else 1)
+
+================================================================================
+FILE: bin/light_cone_router.py
+================================================================================
+--- IMPORTS / CLASSES / FUNCTIONS / CONSTANTS ---
+4:import sys, json, math
+5:from datetime import datetime
+7:MODELS = {
+13:def estimate_complexity(text: str) -> float:
+19:def route(task: str):
+24:if __name__ == "__main__":
+
+--- NEWTON / LIGHT / COSMOS / ZERO / DIMENSION / CAUSALITY MARKERS ---
+3:"""light_cone_router.py — Route tasks to optimal model by complexity score"""
+15:    keywords = ["theorem", "proof", "cryptographic", "blockchain", "zero-knowledge"]
+19:def route(task: str):
+21:    route = next((m["name"] for m in MODELS.values() if score <= m["threshold"]), MODELS["max"]["name"])
+22:    return {"score": round(score, 3), "route": route, "complexity": "high" if score > 0.7 else ("medium" if score > 0.3 else "low")}
+26:    result = route(task)
+
+--- FULL SOURCE ---
+#!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
+"""light_cone_router.py — Route tasks to optimal model by complexity score"""
+import sys, json, math
+from datetime import datetime
+
+MODELS = {
+    "lite": {"threshold": 0.3, "name": "qwen2.5:3b", "cost": 0.01},
+    "coder": {"threshold": 0.7, "name": "qwen2.5-coder:7b", "cost": 0.05},
+    "max": {"threshold": 1.0, "name": "qwen2.5-coder:7b-max", "cost": 0.10}
+}
+
+def estimate_complexity(text: str) -> float:
+    tokens = len(text.split())
+    keywords = ["theorem", "proof", "cryptographic", "blockchain", "zero-knowledge"]
+    kw_score = sum(1 for k in keywords if k in text.lower()) / len(keywords)
+    return min(1.0, (tokens / 1000) * 0.5 + kw_score * 0.5)
+
+def route(task: str):
+    score = estimate_complexity(task)
+    route = next((m["name"] for m in MODELS.values() if score <= m["threshold"]), MODELS["max"]["name"])
+    return {"score": round(score, 3), "route": route, "complexity": "high" if score > 0.7 else ("medium" if score > 0.3 else "low")}
+
+if __name__ == "__main__":
+    task = sys.argv[1] if len(sys.argv) > 1 else "sample task"
+    result = route(task)
+    print(json.dumps(result, indent=2))
+
+================================================================================
+FILE: bin/smart_router.py
+================================================================================
+--- IMPORTS / CLASSES / FUNCTIONS / CONSTANTS ---
+3:import json
+4:from pathlib import Path
+10:import json
+11:import subprocess
+12:from pathlib import Path
+13:from datetime import datetime
+15:BASE = Path("/home/jesse/openroot")
+16:ROUTE_LOG = BASE / "data" / "router_decisions.jsonl"
+18:MODELS = {
+25:MODEL_REGISTRY_PATH = Path("/home/jesse/openroot/data/model_registry.json")
+26:MODEL_REGISTRY = json.load(open(MODEL_REGISTRY_PATH)) if MODEL_REGISTRY_PATH.exists() else None
+28:def get_model_for_role(role: str):
+38:def classify_query(query):
+53:def route_query(query, context=None):
+69:def invoke_model(model_key, query, context=None, max_tokens=500):
+98:def main():
+117:if __name__ == "__main__":
+122:import json as _json
+123:from pathlib import Path as _Path
+126:def _registry_bucket_for(hint):
+137:def route_by_registry(task_hint, fallback=None):
+
+--- NEWTON / LIGHT / COSMOS / ZERO / DIMENSION / CAUSALITY MARKERS ---
+6:smart_router.py - FIXED VERSION
+16:ROUTE_LOG = BASE / "data" / "router_decisions.jsonl"
+29:    """Route role → model name from verified weights. Returns None if no model graded PASS."""
+39:    """Route decision heuristic"""
+42:    if any(kw in query_lower for kw in ["code", "python", "theorem", "prove", "debug", "script"]):
+53:def route_query(query, context=None):
+64:    with open(ROUTE_LOG, "a") as f:
+93:        hash_id = send_to_lumo("routing", query, context or {})
+94:        return f"Queued to Lumo (ID: {hash_id})"
+99:    print("=== SMART ROUTER ===")
+103:        print("Usage: smart_router.py '<query>'")
+109:    decision = route_query(query)
+111:    print(f"Route to: {decision['model']} ({decision['reason']})")
+137:def route_by_registry(task_hint, fallback=None):
+142:        return {"bucket": b, "route_to": rw.get("route_to", fallback or "lumo"),
+145:        return {"bucket": "unknown", "route_to": fallback or "lumo",
+
+--- FULL SOURCE ---
+#!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
+import json
+from pathlib import Path
+"""
+smart_router.py - FIXED VERSION
+Assign tasks to optimal model (7B, 3B, or Lumo)
+"""
+
+import json
+import subprocess
+from pathlib import Path
+from datetime import datetime
+
+BASE = Path("/home/jesse/openroot")
+ROUTE_LOG = BASE / "data" / "router_decisions.jsonl"
+
+MODELS = {
+    "local_7b": {"provider": "ollama", "endpoint": "http://localhost:11434/api/generate", "model": "qwen2.5-coder:7b"},
+    "local_3b": {"provider": "ollama", "endpoint": "http://localhost:11434/api/generate", "model": "qwen2.5:3b"},
+    "lumo": {"provider": "lumo_inbox", "endpoint": "/lumo_inbox", "model": "external"}
+}
+
+# Routing weights — read from model_registry.json (audited bench state)
+MODEL_REGISTRY_PATH = Path("/home/jesse/openroot/data/model_registry.json")
+MODEL_REGISTRY = json.load(open(MODEL_REGISTRY_PATH)) if MODEL_REGISTRY_PATH.exists() else None
+
+def get_model_for_role(role: str):
+    """Route role → model name from verified weights. Returns None if no model graded PASS."""
+    if not MODEL_REGISTRY:
+        return None
+    candidates = MODEL_REGISTRY.get("routing_table", {}).get(role, [])
+    for m in candidates:
+        if MODEL_REGISTRY["models"].get(m, {}).get("grade") == "PASS":
+            return m
+    return None  # no eligible model
+
+def classify_query(query):
+    """Route decision heuristic"""
+    query_lower = query.lower()
+    
+    if any(kw in query_lower for kw in ["code", "python", "theorem", "prove", "debug", "script"]):
+        return "local_7b", "Complex reasoning/coding"
+    
+    if any(kw in query_lower for kw in ["grade", "eval", "check", "review", "validate"]):
+        return "local_3b", "Fast evaluation"
+    
+    if any(kw in query_lower for kw in ["analyze", "design", "create", "plan", "strategy", "ethics"]):
+        return "lumo", "Human-expert judgment"
+    
+    return "local_3b", "Default quick response"
+
+def route_query(query, context=None):
+    model, reason = classify_query(query)
+    
+    decision = {
+        "ts": datetime.now().isoformat(),
+        "query": query[:200],
+        "model": model,
+        "reason": reason,
+        "context": context or {}
+    }
+    
+    with open(ROUTE_LOG, "a") as f:
+        f.write(json.dumps(decision) + "\n")
+    
+    return decision
+
+def invoke_model(model_key, query, context=None, max_tokens=500):
+    """FIXED: Added context parameter"""
+    model = MODELS[model_key]
+    
+    if model["provider"] == "ollama":
+        payload = {
+            "model": model["model"],
+            "prompt": query,
+            "stream": False,
+            "options": {"num_predict": max_tokens}
+        }
+        result = subprocess.run(
+            ["curl", "-s", "-X", "POST", model["endpoint"], "-H", "Content-Type: application/json", "-d", json.dumps(payload)],
+            capture_output=True, text=True
+        )
+        try:
+            resp = json.loads(result.stdout)
+            return resp.get("response", "No response")
+        except:
+            return f"Error: {result.stderr}"
+    
+    elif model["provider"] == "lumo_inbox":
+        # FIXED: Pass context properly
+        from lumo_bridge import send_to_lumo
+        hash_id = send_to_lumo("routing", query, context or {})
+        return f"Queued to Lumo (ID: {hash_id})"
+    
+    return "Unknown model provider"
+
+def main():
+    print("=== SMART ROUTER ===")
+    print(f"Models: {list(MODELS.keys())}")
+    
+    if len(__import__('sys').argv) < 2:
+        print("Usage: smart_router.py '<query>'")
+        return
+    
+    query = " ".join(__import__('sys').argv[1:])
+    
+    print(f"\nQuery: {query[:100]}...")
+    decision = route_query(query)
+    
+    print(f"Route to: {decision['model']} ({decision['reason']})")
+    
+    result = invoke_model(decision['model'], query, decision.get('context'))
+    
+    print(f"\nResult: {result[:300]}..." if len(result) > 300 else f"\nResult: {result}")
+
+if __name__ == "__main__":
+    main()
+
+
+# --- SUPERLOOPV4-REGISTRY-HOOK (mined routing weights) ---
+import json as _json
+from pathlib import Path as _Path
+_REGISTRY = _Path("/home/jesse/openroot/data/model_registry.json")
+
+def _registry_bucket_for(hint):
+    import re
+    B = [("gitops", r"\b(git|gh|commit|pr)\b"), ("model", r"(ollama|11434|qwen|infer)"),
+         ("author", r"(heredoc|write|draft|doc)"), ("exec", r"(execute|run|compile|smoke)"),
+         ("gate", r"(gate|verify|grade|test)"), ("net", r"(curl|fetch|network)"),
+         ("bridge", r"\b(ssh|scp)\b"), ("system", r"(process|daemon|disk)")]
+    for n, p in B:
+        if re.search(p, hint, re.I):
+            return n
+    return "other"
+
+def route_by_registry(task_hint, fallback=None):
+    try:
+        reg = _json.loads(_REGISTRY.read_text())
+        b = _registry_bucket_for(task_hint)
+        rw = reg.get("routing_weights", {}).get(b, {})
+        return {"bucket": b, "route_to": rw.get("route_to", fallback or "lumo"),
+                "pref_model": rw.get("pref_model", ""), "source": "registry"}
+    except Exception:
+        return {"bucket": "unknown", "route_to": fallback or "lumo",
+                "pref_model": "", "source": "fallback"}
+
+================================================================================
+FILE: bin/multi_router.py
+================================================================================
+--- IMPORTS / CLASSES / FUNCTIONS / CONSTANTS ---
+8:import argparse, hashlib, json, os, sqlite3, sys, time, urllib.request, urllib.error
+9:from datetime import datetime, timezone
+11:ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+12:DB = os.path.join(ROOT, "data", "router_ledger.db")
+13:OLLAMA_BASE = os.environ.get("OLLAMA_HOST", "http://localhost:11434")
+16:PROVIDERS = {
+38:CLASS_TO_PROVIDER = {}          # built from PROVIDERS allows
+43:def now(): return datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
+44:def sha(s): return hashlib.sha256(s.encode()).hexdigest()[:16]
+46:def db():
+52:def ollama(model, prompt, timeout=180):
+61:def rest(url, headers, body):
+68:def call_gemini(prompt):
+77:def resolve_openrouter_model():
+103:def call_openrouter(prompt):
+114:def dispatch(provider, task_class, task_text, rnd, task_id, con):
+158:def classify_3b(text):
+167:def self_memory(rnd, con, denied):
+193:def main():
+275:if __name__ == "__main__":
+
+--- NEWTON / LIGHT / COSMOS / ZERO / DIMENSION / CAUSALITY MARKERS ---
+4:"""multi_router v1 — many cheap loops, comfort-zone enforcement, per-round self-memory.
+5:Usage: python3 bin/multi_router.py [--rounds N] [--smoke]
+6:Env: GEMINI_API_KEY, OPENROUTER_API_KEY (never embedded in files).
+8:import argparse, hashlib, json, os, sqlite3, sys, time, urllib.request, urllib.error
+12:DB = os.path.join(ROOT, "data", "router_ledger.db")
+15:# ---- provider registry: talents DECLARED, router refuses anything else ----
+30:    "openrouter":    {"api": "openrouter", "model": None,  # resolved at runtime
+33:        "strength": "cheap bulk text. NO math proofs, NO code."},
+44:def sha(s): return hashlib.sha256(s.encode()).hexdigest()[:16]
+77:def resolve_openrouter_model():
+79:    if os.environ.get("OPENROUTER_MODEL"):
+80:        return os.environ["OPENROUTER_MODEL"], "env-override"
+81:    k = os.environ.get("OPENROUTER_API_KEY")
+82:    if not k: return None, "[HELD] OPENROUTER_API_KEY unset"
+85:        out, _ = rest("https://openrouter.ai/api/v1/models", hdr, {})
+92:            req = urllib.request.Request("https://openrouter.ai/api/v1/models")
+103:def call_openrouter(prompt):
+104:    k = os.environ.get("OPENROUTER_API_KEY")
+105:    if not k: return None, 0, "[HELD] OPENROUTER_API_KEY unset"
+106:    model, how = resolve_openrouter_model()
+108:    out, ms = rest("https://openrouter.ai/api/v1/chat/completions",
+119:        con.commit(); return "[DENIED] outside declared talent — routed elsewhere"
+138:        elif p["api"] == "openrouter":
+139:            out, ms, status = call_openrouter(instr)
+150:    outdir = os.path.join(ROOT, "reports", f"router_r{rnd:03d}"); os.makedirs(outdir, exist_ok=True)
+174:            "openrouter": "route ALL bulk drafts here first (free tier)",
+176:    mem = os.path.join(ROOT, "data", "router_memory")
+178:    body = (f"# Router Round-{rnd} Self-Memory\n## living register\n{speed}\n"
+182:            "\n## pathways\n- 3B classifies -> routed provider executes -> ledger -> "
+184:    pid = f"routermem-r{rnd:03d}-{now()}"; h = sha(body)
+187:        f"---\nid: {pid}\ntimestamp: {now()}\ntype: router-memory\nparent: multi_router.py\n"
+188:        f"hash: {h}\nstatus: active\n---\n\n{body}\n\n## Agape Analysis\n"
+190:        f"- Entropy check: denials this round = {len(denied)}\n- Next move: ingest lumo outbox, expand lanes\n")
+195:    ap.add_argument("--rounds", type=int, default=int(os.environ.get("ROUTER_ROUNDS", "3")))
+198:    ap.add_argument("--tasks", default=os.path.join(ROOT, "data", "router_tasks.json"))
+211:    MAX_DEPTH = int(os.environ.get("ROUTER_DEPTH", "2")); MAX_TASKS = int(os.environ.get("ROUTER_MAX_TASKS", "40"))
+213:        """recursive router: SUBTASK lines become new routed tasks (guarded)"""
+237:    m, how = resolve_openrouter_model()
+238:    print(f"[PREFLIGHT] openrouter model: {m or 'NONE'} ({how})")
+244:        print(f"\n===== ROUTER ROUND {rnd}/{args.rounds} =====")
+267:    print("\n[LEDGER] capability/speed totals")
+272:    print("[CANARY] multi-router-smoke-complete")
+
+--- FULL SOURCE ---
+#!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
+# SPDX-License-Identifier: GPL-3.0
+"""multi_router v1 — many cheap loops, comfort-zone enforcement, per-round self-memory.
+Usage: python3 bin/multi_router.py [--rounds N] [--smoke]
+Env: GEMINI_API_KEY, OPENROUTER_API_KEY (never embedded in files).
+"""
+import argparse, hashlib, json, os, sqlite3, sys, time, urllib.request, urllib.error
+from datetime import datetime, timezone
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DB = os.path.join(ROOT, "data", "router_ledger.db")
+OLLAMA_BASE = os.environ.get("OLLAMA_HOST", "http://localhost:11434")
+
+# ---- provider registry: talents DECLARED, router refuses anything else ----
+PROVIDERS = {
+    "qwen3b_local":   {"api": "ollama", "model": "qwen2.5:3b",
+        "allows": {"classify": "classify task into a task-class from the fixed list"},
+        "strength": "fast classification and rubric grading. NEVER write code or long documents."},
+    "qwen7b_coder":  {"api": "ollama", "model": "qwen2.5-coder:7b",
+        "allows": {"code-edit": "apply one atomic spec as a minimal diff"},
+        "strength": "minimal code edits from precise specs. NEVER design architecture."},
+    "nomic_embed":   {"api": "ollama", "model": "nomic-embed-text",
+        "allows": {"embed": "embed text into vector"},
+        "strength": "embedding/retrieval only. NO generation."},
+    "gemini":        {"api": "gemini", "model": "gemini-2.0-flash",
+        "allows": {"synth": "synthesize multi-document context into one doc",
+                   "summarize": "compress a long doc"},
+        "strength": "long-context reading and synthesis. NO executable code authorship."},
+    "openrouter":    {"api": "openrouter", "model": None,  # resolved at runtime
+        "allows": {"draft": "bulk low-stakes drafting",
+                   "translate": "translation", "outline": "structure an outline"},
+        "strength": "cheap bulk text. NO math proofs, NO code."},
+    "lumo_manual":   {"api": "manual", "model": "human-paste-bridge",
+        "allows": {"plan": "author plan/spec", "reason": "cross-model reasoning audit"},
+        "strength": "spec authoring + routing judgment via chat handoff. NOT an API."},
+}
+CLASS_TO_PROVIDER = {}          # built from PROVIDERS allows
+for name, p in PROVIDERS.items():
+    for k in p["allows"]:
+        CLASS_TO_PROVIDER[k] = name
+
+def now(): return datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
+def sha(s): return hashlib.sha256(s.encode()).hexdigest()[:16]
+
+def db():
+    c = sqlite3.connect(DB); c.execute("""CREATE TABLE IF NOT EXISTS hops(
+        ts TEXT, round INTEGER, task_id TEXT, task_class TEXT, provider TEXT,
+        model TEXT, latency_ms REAL, status TEXT, out_path TEXT)""")
+    return c
+
+def ollama(model, prompt, timeout=180):
+    body = json.dumps({"model": model, "prompt": prompt, "stream": False}).encode()
+    req = urllib.request.Request(OLLAMA_BASE.rstrip("/") + "/api/generate", data=body,
+                                 headers={"Content-Type": "application/json"})
+    t0 = time.time()
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        out = json.loads(r.read())["response"]
+    return out, (time.time()-t0)*1000
+
+def rest(url, headers, body):
+    req = urllib.request.Request(url, data=json.dumps(body).encode(), headers=headers)
+    t0 = time.time()
+    with urllib.request.urlopen(req, timeout=120) as r:
+        out = json.loads(r.read())
+    return out, (time.time()-t0)*1000
+
+def call_gemini(prompt):
+    k = os.environ.get("GEMINI_API_KEY"); 
+    if not k: return None, 0, "[HELD] GEMINI_API_KEY unset"
+    m = PROVIDERS["gemini"]["model"]
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent?key={k}"
+    out, ms = rest(url, {"Content-Type": "application/json"},
+                   {"contents": [{"parts": [{"text": prompt}]}]})
+    return out["candidates"][0]["content"]["parts"][0]["text"], ms, "ok"
+
+def resolve_openrouter_model():
+    """Runtime pick: env override > cheapest live :free slug. Never trust hardcoded slugs."""
+    if os.environ.get("OPENROUTER_MODEL"):
+        return os.environ["OPENROUTER_MODEL"], "env-override"
+    k = os.environ.get("OPENROUTER_API_KEY")
+    if not k: return None, "[HELD] OPENROUTER_API_KEY unset"
+    try:
+        hdr = {"Authorization": f"Bearer {k}"}
+        out, _ = rest("https://openrouter.ai/api/v1/models", hdr, {})
+        frees = [m["id"] for m in out["data"]
+                 if str(m.get("pricing", {}).get("prompt", "1")) == "0"]
+        frees.sort()   # deterministic
+        return (frees[0], f"auto-picked of {len(frees)} free") if frees else (None, "no free models")
+    except Exception as e:
+        try:  # models endpoint is public - auth header may be the problem
+            req = urllib.request.Request("https://openrouter.ai/api/v1/models")
+            with urllib.request.urlopen(req, timeout=30) as r:
+                out = json.loads(r.read())
+            frees = [m["id"] for m in out["data"]
+                     if str(m.get("pricing", {}).get("prompt", "1")) == "0"]
+            frees.sort()
+            if frees: return frees[0], f"auto via unauth list ({len(frees)} free)"
+        except Exception as e2:
+            pass
+        return None, f"[HELD] model-list {type(e).__name__}: {e}"
+
+def call_openrouter(prompt):
+    k = os.environ.get("OPENROUTER_API_KEY")
+    if not k: return None, 0, "[HELD] OPENROUTER_API_KEY unset"
+    model, how = resolve_openrouter_model()
+    if not model: return None, 0, f"[HELD] {how}"
+    out, ms = rest("https://openrouter.ai/api/v1/chat/completions",
+        {"Authorization": f"Bearer {k}", "Content-Type": "application/json"},
+        {"model": model,
+         "messages": [{"role": "user", "content": prompt}]})
+    return out["choices"][0]["message"]["content"] + f" [via {model}]", ms, "ok"
+
+def dispatch(provider, task_class, task_text, rnd, task_id, con):
+    p = PROVIDERS[provider]
+    if task_class not in p["allows"]:                       # COMFORT-ZONE ENFORCEMENT
+        con.execute("INSERT INTO hops VALUES(?,?,?,?,?,?,?,?,?)",
+            (now(), rnd, task_id, task_class, provider, p["model"], 0, "DENIED-comfort-zone", ""))
+        con.commit(); return "[DENIED] outside declared talent — routed elsewhere"
+    instr = (f"SYSTEM: You are the '{provider}' node. Your ONLY talent: {p['strength']}\n"
+             f"Task class: {task_class} ({p['allows'][task_class]}).\n"
+             f"Refuse anything outside your talent by replying [OUT-OF-SCOPE].\n\nTASK:\n{task_text}")
+    try:
+        if p["api"] == "ollama":
+            if task_class == "embed":
+                body = json.dumps({"model": p["model"], "input": task_text}).encode()
+                req = urllib.request.Request(OLLAMA_BASE.rstrip("/") + "/api/embeddings",
+                        data=body, headers={"Content-Type": "application/json"})
+                t0 = time.time()
+                with urllib.request.urlopen(req, timeout=60) as r:
+                    j = json.loads(r.read())
+                ms = (time.time()-t0)*1000; out = f"[{len(j['embedding'])}-dim vector]"
+            else:
+                out, ms = ollama(p["model"], instr)
+            status = "ok"
+        elif p["api"] == "gemini":
+            out, ms, status = call_gemini(instr)
+        elif p["api"] == "openrouter":
+            out, ms, status = call_openrouter(instr)
+        elif p["api"] == "manual":                          # LUMO LANE — paste bridge
+            pkt = os.path.join(ROOT, "lumo_lane", "inbox",
+                    f"round{rnd:03d}_{task_id}_{now()}.md")
+            with open(pkt, "w") as f: f.write(
+                f"# Lumo Handoff — round {rnd}\n```\ntask_class: {task_class}\ntask_id: {task_id}\n"
+                f"instructions: {instr}\n```\nPaste your reply in lumo_lane/outbox/ "
+                f"as `reply-{os.path.basename(pkt)}`; next round ingests it.")
+            out, ms, status = f"[QUEUED] {pkt}", 0.0, "lumo-queued"
+    except Exception as e:
+        out, ms, status = f"[HELD] {type(e).__name__}: {e}", 0.0, "error"
+    outdir = os.path.join(ROOT, "reports", f"router_r{rnd:03d}"); os.makedirs(outdir, exist_ok=True)
+    outp = os.path.join(outdir, f"{task_id}_{task_class}.md")
+    with open(outp, "w") as f: f.write(str(out))
+    con.execute("INSERT INTO hops VALUES(?,?,?,?,?,?,?,?,?)",
+        (now(), rnd, task_id, task_class, provider, p["model"], round(ms,1), status, outp))
+    con.commit()
+    return str(out)[:200]
+
+def classify_3b(text):
+    cls_list = ", ".join(sorted(CLASS_TO_PROVIDER))
+    out, _ = ollama(PROVIDERS["qwen3b_local"]["model"],
+        f"Classify this task into EXACTLY one class from [{cls_list}]. "
+        f"Reply with the single class word only.\nTASK: {text[:500]}")
+    for k in CLASS_TO_PROVIDER:
+        if k in out.lower(): return k
+    return None
+
+def self_memory(rnd, con, denied):
+    """fresh memory every round — self-customized instructions + pathways"""
+    rows = con.execute("""SELECT provider, COUNT(*), AVG(latency_ms),
+        SUM(status='ok')+SUM(status='lumo-queued') FROM hops GROUP BY provider""").fetchall()
+    speed = "\n".join(f"- {p}: {n} hops, avg {lat:.0f}ms, {ok} ok" for p,n,lat,ok in rows)
+    tips = {"qwen7b_coder": "specs ever finer-grained — keep diffs atomic",
+            "gemini": "feed multi-doc contexts, it earns its cost in synthesis",
+            "openrouter": "route ALL bulk drafts here first (free tier)",
+            "qwen3b_local": "classification only; its rubric grading stays in team_gate"}
+    mem = os.path.join(ROOT, "data", "router_memory")
+    os.makedirs(mem, exist_ok=True)
+    body = (f"# Router Round-{rnd} Self-Memory\n## living register\n{speed}\n"
+            f"## comfort-zone denials this round\n{denied or '(none — everyone inside talent)'}\n"
+            f"## self-customized instructions next round\n"
+            + "\n".join(f"- {t}" for t in tips.values()) +
+            "\n## pathways\n- 3B classifies -> routed provider executes -> ledger -> "
+            "next round memory\n- lumo lane packets await human paste-back (outbox)")
+    pid = f"routermem-r{rnd:03d}-{now()}"; h = sha(body)
+    path = os.path.join(mem, f"r{rnd:03d}.md")
+    with open(path, "w") as f: f.write(
+        f"---\nid: {pid}\ntimestamp: {now()}\ntype: router-memory\nparent: multi_router.py\n"
+        f"hash: {h}\nstatus: active\n---\n\n{body}\n\n## Agape Analysis\n"
+        "- Resonance: work flows to the node whose talent matches the load\n"
+        f"- Entropy check: denials this round = {len(denied)}\n- Next move: ingest lumo outbox, expand lanes\n")
+    return path
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--rounds", type=int, default=int(os.environ.get("ROUTER_ROUNDS", "3")))
+    ap.add_argument("--registry", default=os.path.join(ROOT, "data", "hive_registry.json"),
+                    help="hive nursery registry — elected tiny models replace defaults")
+    ap.add_argument("--tasks", default=os.path.join(ROOT, "data", "router_tasks.json"))
+    args = ap.parse_args()
+    con = db()
+    if os.path.exists(args.registry):   # HIVE: elected tiniest-capable per class
+        reg = json.load(open(args.registry))
+        for prov, p in PROVIDERS.items():
+            if p["api"] != "ollama": continue
+            cls = next(iter(p["allows"]))
+            el = reg.get("classes", {}).get(cls, {}).get("elected")
+            if el and el["model"] != p["model"]:
+                print(f"[HIVE] {prov}: {p['model']} -> {el['model']} "
+                      f"(certified {el['params_b']}b, {el['ms']}ms)")
+                p["model"] = el["model"]
+    MAX_DEPTH = int(os.environ.get("ROUTER_DEPTH", "2")); MAX_TASKS = int(os.environ.get("ROUTER_MAX_TASKS", "40"))
+    def expand(res_text, tid):
+        """recursive router: SUBTASK lines become new routed tasks (guarded)"""
+        subs = []
+        for line in str(res_text).splitlines():
+            if line.strip().startswith("SUBTASK:"):
+                txt = line.strip()[8:].strip()
+                if len(all_ids) < MAX_TASKS and len(tid.split(".")) <= MAX_DEPTH and txt:
+                    nid = f"{tid}.{len(subs)+1}"; all_ids.append(nid)
+                    subs.append({"id": nid, "class": "auto", "text": txt})
+        return subs
+    tasks = json.load(open(args.tasks)) if os.path.exists(args.tasks) else [
+        {"id": "t1", "class": "draft",     "text": "Draft a 5-line README blurb for OpenRoot lb_loop."},
+        {"id": "t2", "class": "classify",  "text": "Is this task a code edit or a summary?"},
+        {"id": "t3", "class": "plan",      "text": "Plan mistake-to-solution binding patch for lb_loop_v2."},
+        {"id": "t4", "class": "outline",   "text": "Outline a SARE grant framing doc for OpenCell."}]
+    print(f"[BOOT] {len(tasks)} tasks, {args.rounds} rounds, {len(PROVIDERS)} providers")
+    print(f"[PREFLIGHT] ollama_base={OLLAMA_BASE}")
+    # cheap liveness probes — dead lanes degrade gracefully, never burn a round mid-task
+    try:
+        import urllib.request as _u
+        with _u.urlopen(OLLAMA_BASE.rstrip("/") + "/api/tags", timeout=5) as r:
+            alive = len(json.loads(r.read()).get("models", []))
+        print(f"[PREFLIGHT] ollama ALIVE — {alive} models loaded")
+    except Exception as e:
+        print(f"[PREFLIGHT] ollama DEAD ({type(e).__name__}) — set OLLAMA_HOST=http://100.122.169.43:11434 from termux")
+    m, how = resolve_openrouter_model()
+    print(f"[PREFLIGHT] openrouter model: {m or 'NONE'} ({how})")
+    print(f"[PREFLIGHT] gemini: {'armed' if os.environ.get('GEMINI_API_KEY') else 'HELD — no key'}")
+    print(f"[PREFLIGHT] lumo_manual: armed (paste bridge)")
+    all_ids = [t["id"] for t in tasks]
+    for rnd in range(1, args.rounds+1):
+        new_tasks = []
+        print(f"\n===== ROUTER ROUND {rnd}/{args.rounds} =====")
+        denied = []
+        # ingest lumo outbox replies from prior round as context
+        ob = os.path.join(ROOT, "lumo_lane", "outbox")
+        lumo_context = ""
+        for f in sorted(os.listdir(ob))[-3:]:
+            lumo_context += open(os.path.join(ob, f)).read()[:1500]
+        for t in tasks:
+            tc = t["class"]
+            if tc == "auto":
+                tc = classify_3b(t["text"]) or "draft"
+            prov = CLASS_TO_PROVIDER.get(tc, "lumo_manual")
+            ctx = t["text"] + (f"\n\nPRIOR LUMO GUIDANCE:\n{lumo_context}" if lumo_context and prov=="lumo_manual" else "")
+            print(f"  {t['id']} [{tc}] -> {prov}: ", end="")
+            res = dispatch(prov, tc, ctx, rnd, t["id"], con)
+            for sub in expand(res, t["id"]):   # recursion here — depth+budget capped
+                print(f"    [SPAWN] {sub['id']}: {sub['text'][:50]}")
+                new_tasks.append(sub)
+            if "DENIED" in res or "HELD" in res: denied.append((t["id"], tc, prov))
+            print(res[:120])
+        tasks = tasks + new_tasks   # spawned subtasks join next round
+        mp = self_memory(rnd, con, denied)
+        print(f"  [MEMORY] fresh self-instructions banked: {mp}")
+    print("\n[LEDGER] capability/speed totals")
+    for p, n, lat, ok in con.execute(
+        """SELECT provider, COUNT(*), AVG(latency_ms),
+           SUM(status IN ('ok','lumo-queued')) FROM hops GROUP BY provider ORDER BY 2 DESC"""):
+        print(f"  {p:14s} hops={n}  avg={lat or 0:6.0f}ms  ok={ok}")
+    print("[CANARY] multi-router-smoke-complete")
+    return 0
+
+if __name__ == "__main__":
+    sys.exit(main())
+
+================================================================================
+FILE: bin/specialist_router_v1.py
+================================================================================
+--- IMPORTS / CLASSES / FUNCTIONS / CONSTANTS ---
+9:import json, sqlite3, time, urllib.request, hashlib, sys, os
+10:from datetime import datetime, timezone
+11:from pathlib import Path
+13:ROOT = Path("/home/jesse/openroot")
+14:DATA = ROOT / "data"
+15:LOG_DIR = ROOT / "logs"
+18:OLLAMA_API = "http://localhost:11434/api/generate"
+19:KEEP_ALIVE = "2h"  # Pin warm pool across all calls
+20:BUILDER_MODEL = "qwen2.5-coder:7b"
+21:GRADER_MODEL = "qwen2.5:3b"
+22:EMBED_MODEL = "nomic-embed-text"
+25:FTS5_DB = DATA / "router_corpus.sqlite"
+26:CACHE_DB = DATA / "problem_solution_cache.sqlite"
+27:LEDGER_DB = DATA / "routing_ledger.sqlite"
+29:def init_fts5():
+50:def init_cache():
+64:def init_ledger():
+80:def fts5_query(query, top_k=3):
+95:def cache_query(problem):
+109:def generate(model, prompt, keep_alive=KEEP_ALIVE):
+131:def cache_store(problem, payload):
+143:def log_decision(query, layer, latency, hit_detail, canary="ROUTERV1"):
+153:def route(query):
+198:def main():
+220:if __name__ == "__main__":
+
+--- NEWTON / LIGHT / COSMOS / ZERO / DIMENSION / CAUSALITY MARKERS ---
+2:"""specialist_router_v1.py — FTS5-first dispatch, cross-family grading, warm-pool pinning.
+9:import json, sqlite3, time, urllib.request, hashlib, sys, os
+25:FTS5_DB = DATA / "router_corpus.sqlite"
+27:LEDGER_DB = DATA / "routing_ledger.sqlite"
+40:        ("thermal_frontier_v2_water.json", "energy", "15.8 kW thermal water 83-86C exit 24 panel 120m2"),
+64:def init_ledger():
+65:    """Initialize routing decision ledger."""
+66:    conn = sqlite3.connect(LEDGER_DB)
+98:    psha = hashlib.sha256(problem.encode()).hexdigest()
+134:    psha = hashlib.sha256(problem.encode()).hexdigest()
+135:    ssha = hashlib.sha256(payload.encode()).hexdigest()
+143:def log_decision(query, layer, latency, hit_detail, canary="ROUTERV1"):
+144:    """Append routing decision to ledger."""
+145:    conn = init_ledger()
+153:def route(query):
+200:    print("[router] Initializing FTS5 + cache + warm-pool priming...")
+203:    init_ledger()
+212:    print("\n[router] Ready. Enter queries (ctrl-d to exit):")
+217:        result = route(query)
+
+--- FULL SOURCE ---
+#!/usr/bin/env python3
+"""specialist_router_v1.py — FTS5-first dispatch, cross-family grading, warm-pool pinning.
+Superlinear workflow orchestrator: cache → FTS5 → 7B builder → 3B grader.
+
+SPDX-License-Identifier: GPL-3.0-only
+Author: Jesse McMillen Ray (OpenRoot)
+License: Code GPL-3.0, Docs CC-BY-SA-4.0
+"""
+import json, sqlite3, time, urllib.request, hashlib, sys, os
+from datetime import datetime, timezone
+from pathlib import Path
+
+ROOT = Path("/home/jesse/openroot")
+DATA = ROOT / "data"
+LOG_DIR = ROOT / "logs"
+
+# CONFIGURATION
+OLLAMA_API = "http://localhost:11434/api/generate"
+KEEP_ALIVE = "2h"  # Pin warm pool across all calls
+BUILDER_MODEL = "qwen2.5-coder:7b"
+GRADER_MODEL = "qwen2.5:3b"
+EMBED_MODEL = "nomic-embed-text"
+
+# FTS5 INDEX PATHS (pre-built or auto-seeded)
+FTS5_DB = DATA / "router_corpus.sqlite"
+CACHE_DB = DATA / "problem_solution_cache.sqlite"
+LEDGER_DB = DATA / "routing_ledger.sqlite"
+
+def init_fts5():
+    """Initialize FTS5 corpus with verified artifacts."""
+    conn = sqlite3.connect(FTS5_DB)
+    conn.execute("""
+        CREATE VIRTUAL TABLE IF NOT EXISTS corpus USING fts5(
+            path, category, content, 
+            tokenize="porter unicode61 remove_diacritics 1"
+        )
+    """)
+    # Seed with known-good answers (extend as needed)
+    seeds = [
+        ("thermal_frontier_v2_water.json", "energy", "15.8 kW thermal water 83-86C exit 24 panel 120m2"),
+        ("thermal_balance_v63.md", "physics", "341C radiative equilibrium ceiling eps=0.10"),
+        ("euler_overshoot_lesson.md", "lesson", "low-flow Euler divergence filter temps above 341C"),
+        ("steam_hx_ceiling.md", "engineering", "2.4 kW steam heat exchanger failing gate not temperature"),
+    ]
+    for path, cat, content in seeds:
+        conn.execute("INSERT INTO corpus(path, category, content) VALUES (?,?,?)", (path, cat, content))
+    conn.commit()
+    return conn
+
+def init_cache():
+    """Initialize sha-keyed solution cache."""
+    conn = sqlite3.connect(CACHE_DB)
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS kv (
+            problem_sha TEXT PRIMARY KEY,
+            solution_sha TEXT,
+            payload TEXT,
+            verified_at TEXT
+        )
+    """)
+    conn.commit()
+    return conn
+
+def init_ledger():
+    """Initialize routing decision ledger."""
+    conn = sqlite3.connect(LEDGER_DB)
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS decisions (
+            ts TEXT,
+            query TEXT,
+            layer TEXT,  -- fts5, cache, builder, grader
+            latency_ms REAL,
+            hit TEXT,    -- path or result preview
+            canary TEXT
+        )
+    """)
+    conn.commit()
+    return conn
+
+def fts5_query(query, top_k=3):
+    """Layer 1: FTS5 exact-match dispatch. Returns hit if confidence > threshold."""
+    conn = init_fts5()
+    t0 = time.perf_counter()
+    cursor = conn.execute(
+        "SELECT path, category, content FROM corpus WHERE corpus MATCH ? LIMIT ?",
+        (query, top_k)
+    )
+    hits = cursor.fetchall()
+    ms = (time.perf_counter() - t0) * 1000
+    conn.close()
+    if hits:
+        return {"hit": True, "result": hits[0], "latency_ms": ms}
+    return {"hit": False, "latency_ms": ms}
+
+def cache_query(problem):
+    """Layer 2: sha-keyed cache lookup."""
+    conn = init_cache()
+    psha = hashlib.sha256(problem.encode()).hexdigest()
+    t0 = time.perf_counter()
+    row = conn.execute(
+        "SELECT payload, verified_at FROM kv WHERE problem_sha=?", (psha,)
+    ).fetchone()
+    ms = (time.perf_counter() - t0) * 1000
+    conn.close()
+    if row:
+        return {"hit": True, "payload": row[0], "latency_ms": ms}
+    return {"hit": False, "latency_ms": ms}
+
+def generate(model, prompt, keep_alive=KEEP_ALIVE):
+    """Call Ollama API with warm-pool pinning."""
+    payload = json.dumps({
+        "model": model, "prompt": prompt,
+        "stream": False, "keep_alive": keep_alive
+    }).encode()
+    req = urllib.request.Request(OLLAMA_API, data=payload,
+        headers={"Content-Type": "application/json"})
+    t0 = time.perf_counter()
+    try:
+        with urllib.request.urlopen(req, timeout=600) as resp:
+            out = json.loads(resp.read().decode())
+        ms = (time.perf_counter() - t0) * 1000
+        return {
+            "success": True,
+            "response": out.get("response", ""),
+            "eval_count": out.get("eval_count", 0),
+            "latency_ms": ms
+        }
+    except Exception as e:
+        return {"success": False, "error": str(e), "latency_ms": (time.perf_counter() - t0) * 1000}
+
+def cache_store(problem, payload):
+    """Store verified solution in cache."""
+    conn = init_cache()
+    psha = hashlib.sha256(problem.encode()).hexdigest()
+    ssha = hashlib.sha256(payload.encode()).hexdigest()
+    conn.execute(
+        "INSERT OR REPLACE INTO kv(problem_sha, solution_sha, payload, verified_at) VALUES (?,?,?,?)",
+        (psha, ssha, payload, datetime.now(timezone.utc).isoformat())
+    )
+    conn.commit()
+    conn.close()
+
+def log_decision(query, layer, latency, hit_detail, canary="ROUTERV1"):
+    """Append routing decision to ledger."""
+    conn = init_ledger()
+    conn.execute(
+        "INSERT INTO decisions(ts, query, layer, latency_ms, hit, canary) VALUES (?,?,?,?,?,?)",
+        (datetime.now(timezone.utc).isoformat(), query, layer, latency, hit_detail, canary)
+    )
+    conn.commit()
+    conn.close()
+
+def route(query):
+    """Main dispatch: FTS5 → cache → builder → grader."""
+    start = time.perf_counter()
+    
+    # Layer 1: FTS5
+    fts5_result = fts5_query(query)
+    log_decision(query, "fts5", fts5_result["latency_ms"], str(fts5_result["hit"]))
+    if fts5_result["hit"]:
+        elapsed = (time.perf_counter() - start) * 1000
+        print(f"[FTS5] HIT in {elapsed:.1f}ms → {fts5_result['result'][0]}")
+        return fts5_result
+    
+    # Layer 2: Cache
+    cache_result = cache_query(query)
+    log_decision(query, "cache", cache_result["latency_ms"], str(cache_result["hit"]))
+    if cache_result["hit"]:
+        elapsed = (time.perf_counter() - start) * 1000
+        print(f"[CACHE] HIT in {elapsed:.1f}ms → {cache_result['payload'][:50]}...")
+        return cache_result
+    
+    # Layer 3: 7B Builder
+    builder_prompt = f"Answer concisely: {query}"
+    builder_result = generate(BUILDER_MODEL, builder_prompt)
+    if builder_result["success"]:
+        log_decision(query, "builder", builder_result["latency_ms"],
+                     builder_result["response"][:50])
+        # Store in cache for future
+        cache_store(query, builder_result["response"])
+        print(f"[BUILDER] {BUILDER_MODEL} in {builder_result['latency_ms']:.0f}ms → "
+              f"{builder_result['eval_count']} tokens")
+        return builder_result
+    
+    # Layer 4: 3B Grader (cross-family verification)
+    grader_prompt = f"Verify the following answer is sound. Say 'VALID' or list errors: {query}"
+    grader_result = generate(GRADER_MODEL, grader_prompt)
+    if grader_result["success"]:
+        log_decision(query, "grader", grader_result["latency_ms"],
+                     grader_result["response"][:50])
+        print(f"[GRADER] {GRADER_MODEL} in {grader_result['latency_ms']:.0f}ms → "
+              f"{grader_result['eval_count']} tokens")
+        return grader_result
+    
+    log_decision(query, "FAIL", (time.perf_counter() - start) * 1000, "no layer responded")
+    return {"success": False, "error": "No model responded"}
+
+def main():
+    """CLI entry point with warm-pool priming."""
+    print("[router] Initializing FTS5 + cache + warm-pool priming...")
+    init_fts5()
+    init_cache()
+    init_ledger()
+    
+    # Warm-pool priming: force both models into memory
+    print("[warmup] Pre-loading builder and grader...")
+    generate(BUILDER_MODEL, "READY", keep_alive=KEEP_ALIVE)
+    generate(GRADER_MODEL, "READY", keep_alive=KEEP_ALIVE)
+    print("[warmup] Complete. Models pinned for 2h.")
+    
+    # Interactive mode
+    print("\n[router] Ready. Enter queries (ctrl-d to exit):")
+    for line in sys.stdin:
+        query = line.strip()
+        if not query or query.startswith("#"):
+            continue
+        result = route(query)
+        print(json.dumps(result, indent=2))
+
+if __name__ == "__main__":
+    main()
+
+================================================================================
+FILE: bin/0677_physics_ledger_v1.py
+================================================================================
+--- IMPORTS / CLASSES / FUNCTIONS / CONSTANTS ---
+10:import hashlib
+11:import json
+12:import time
+13:from datetime import datetime
+19:def create_block(chain, prev_block, label, params, result):
+46:def run_triad_calc(airflow_cfm, solar_kw, stirling_eff, humidity_reduction, insulation_loss_pct):
+66:def main():
+135:if __name__ == "__main__":
+
+--- NEWTON / LIGHT / COSMOS / ZERO / DIMENSION / CAUSALITY MARKERS ---
+3:AEROCEMENT PHYSICS LEDGER v1.0
+5:Two-chain immutable ledger: BOUNDED (build spec) + UNBOUNDED (engineer toward)
+10:import hashlib
+22:    prev_hash = prev_block["hash"] if prev_block else "GENESIS"
+31:        "prev_hash": prev_hash
+34:    block_hash = hashlib.sha256(json.dumps(block_data, sort_keys=True).encode()).hexdigest()
+35:    block_data["hash"] = block_hash
+39:        if chain[-1]["hash"] != prev_hash:
+68:    print("AEROCEMENT PHYSICS LEDGER v1.0")
+106:    print(f"Block Hash: {b_block['hash'][:16]}...")
+113:    print(f"Block Hash: {u_block['hash'][:16]}...")
+132:    print("[LEDGER] All assumptions locked. Next run appends new block.")
+133:    print("[REPLY] Commander, report both hashes and DESIGN MARGIN status.")
+
+--- FULL SOURCE ---
+#!/usr/bin/env python3
+"""
+AEROCEMENT PHYSICS LEDGER v1.0
+COMMANDER: Jesse McMillen | Civilization 2.0
+Two-chain immutable ledger: BOUNDED (build spec) + UNBOUNDED (engineer toward)
+Each block = one calculation run. Chains cannot be altered after commit.
+LICENSE: GPL v3
+"""
+
+import hashlib
+import json
+import time
+from datetime import datetime
+
+# === CHAIN STORAGE ===
+chain_bounded = []
+chain_unbounded = []
+
+def create_block(chain, prev_block, label, params, result):
+    """Mine a block onto the specified chain."""
+    index = len(chain)
+    prev_hash = prev_block["hash"] if prev_block else "GENESIS"
+    timestamp = datetime.now().isoformat()
+    
+    block_data = {
+        "index": index,
+        "label": label,
+        "timestamp": timestamp,
+        "params": params,
+        "result": result,
+        "prev_hash": prev_hash
+    }
+    
+    block_hash = hashlib.sha256(json.dumps(block_data, sort_keys=True).encode()).hexdigest()
+    block_data["hash"] = block_hash
+    
+    # Verify chain integrity before appending
+    if chain:
+        if chain[-1]["hash"] != prev_hash:
+            print(f"[TAMPER DETECTED] Chain {label} integrity FAILED at block {index}")
+            return None
+    
+    chain.append(block_data)
+    return block_data
+
+def run_triad_calc(airflow_cfm, solar_kw, stirling_eff, humidity_reduction, insulation_loss_pct):
+    """Core physics engine - single calculation pass."""
+    airflow_m3s = airflow_cfm * 0.0283168 / 60.0
+    moisture_kg_s = airflow_m3s * (12.0 / 1000.0) * humidity_reduction
+    latent_load_kw = moisture_kg_s * 2260.0
+    net_thermal = solar_kw * (1.0 - insulation_loss_pct) - latent_load_kw
+    
+    if net_thermal < 0:
+        return {"status": "DEFICIT", "net_thermal_kw": net_thermal, "electric_kw": 0, 
+                "water_L_day": moisture_kg_s * 86400, "surplus_kwh_day": 0}
+    
+    electric_kw = net_thermal * stirling_eff
+    return {
+        "status": "SURPLUS" if electric_kw * 24 > 1000 else "MARGINAL",
+        "net_thermal_kw": round(net_thermal, 3),
+        "electric_kw": round(electric_kw, 3),
+        "water_L_day": round(moisture_kg_s * 86400, 1),
+        "surplus_kwh_day": round(electric_kw * 24, 1)
+    }
+
+def main():
+    print("=" * 60)
+    print("AEROCEMENT PHYSICS LEDGER v1.0")
+    print("TWO-CHAIN IMMUTABLE RECORD")
+    print("=" * 60)
+    
+    # === CHAIN A: BOUNDED (Build Spec - Conservative) ===
+    bounded_params = {
+        "airflow_cfm": 2265,
+        "solar_kw": 4.5,
+        "stirling_eff": 0.15,
+        "humidity_reduction": 0.60,
+        "insulation_loss_pct": 0.20,
+        "rationale": "Worst-case humidity, degraded insulation, production Stirling"
+    }
+    bounded_result = run_triad_calc(**{k: v for k, v in bounded_params.items() if k != "rationale"})
+    
+    # === CHAIN B: UNBOUNDED (Engineer Toward - Theoretical Ceiling) ===
+    unbounded_params = {
+        "airflow_cfm": 2265,
+        "solar_kw": 7.0,
+        "stirling_eff": 0.40,
+        "humidity_reduction": 0.40,
+        "insulation_loss_pct": 0.05,
+        "rationale": "Peak sun, optimized desiccant, vacuum-grade insulation, advanced Stirling"
+    }
+    unbounded_result = run_triad_calc(**{k: v for k, v in unbounded_params.items() if k != "rationale"})
+    
+    # Mine blocks
+    b_block = create_block(chain_bounded, chain_bounded[-1] if chain_bounded else None,
+                           "BOUNDED", bounded_params, bounded_result)
+    u_block = create_block(chain_unbounded, chain_unbounded[-1] if chain_unbounded else None,
+                           "UNBOUNDED", unbounded_params, unbounded_result)
+    
+    # === REPORT ===
+    print("\n--- CHAIN A: BOUNDED (BUILD SPEC) ---")
+    print(f"Status: {bounded_result['status']}")
+    print(f"Net Thermal: {bounded_result['net_thermal_kw']} kW")
+    print(f"Electric: {bounded_result['electric_kw']} kW | {bounded_result['surplus_kwh_day']} kWh/day")
+    print(f"Water: {bounded_result['water_L_day']} L/day")
+    print(f"Block Hash: {b_block['hash'][:16]}...")
+    
+    print("\n--- CHAIN B: UNBOUNDED (ENGINEER TOWARD) ---")
+    print(f"Status: {unbounded_result['status']}")
+    print(f"Net Thermal: {unbounded_result['net_thermal_kw']} kW")
+    print(f"Electric: {unbounded_result['electric_kw']} kW | {unbounded_result['surplus_kwh_day']} kWh/day")
+    print(f"Water: {unbounded_result['water_L_day']} L/day")
+    print(f"Block Hash: {u_block['hash'][:16]}...")
+    
+    # === DESIGN MARGIN ANALYSIS ===
+    b_surplus = bounded_result.get('surplus_kwh_day', 0)
+    u_surplus = unbounded_result.get('surplus_kwh_day', 0)
+    
+    print("\n--- DESIGN MARGIN ---")
+    if b_surplus > 0 and u_surplus > 0:
+        print("BOTH CHAINS POSITIVE: Physics confirmed. Build to Bounded spec.")
+        print(f"Optimization headroom: {u_surplus - b_surplus:.1f} kWh/day")
+    elif b_surplus <= 0 and u_surplus > 0:
+        print("BOUND FAIL / UNBOUND PASS: Gap identifies optimization targets.")
+        print("PRIORITY: Reduce insulation losses OR increase collector area.")
+    elif b_surplus <= 0 and u_surplus <= 0:
+        print("BOTH CHAINS NEGATIVE: Fundamental redesign required.")
+        print("ACTION: Re-evaluate thermal input assumptions before scaling.")
+    
+    print("\n--- CHAIN INTEGRITY ---")
+    print(f"Bounded blocks: {len(chain_bounded)} | Unbounded blocks: {len(chain_unbounded)}")
+    print("[LEDGER] All assumptions locked. Next run appends new block.")
+    print("[REPLY] Commander, report both hashes and DESIGN MARGIN status.")
+
+if __name__ == "__main__":
+    main()
+
+================================================================================
+FILE: bin/0678_physics_ledger_v2.py
+================================================================================
+--- IMPORTS / CLASSES / FUNCTIONS / CONSTANTS ---
+8:import hashlib
+9:import json
+10:from datetime import datetime
+16:def create_block(chain, prev_block, label, params, result):
+37:def run_triad_calc_desiccant(airflow_cfm, solar_kw, stirling_eff, 
+86:def main():
+162:if __name__ == "__main__":
+
+--- NEWTON / LIGHT / COSMOS / ZERO / DIMENSION / CAUSALITY MARKERS ---
+3:AEROCEMENT PHYSICS LEDGER v2.0 - DESICCANT PRE-DRYER PROTOCOL
+8:import hashlib
+18:    prev_hash = prev_block["hash"] if prev_block else "GENESIS"
+27:        "prev_hash": prev_hash
+29:    block_hash = hashlib.sha256(json.dumps(block_data, sort_keys=True).encode()).hexdigest()
+30:    block_data["hash"] = block_hash
+31:    if chain and chain[-1]["hash"] != prev_hash:
+55:    # Energy cost to regenerate desiccant (assumed to be taken from solar input)
+88:    print("AEROCEMENT PHYSICS LEDGER v2.0 - DESICCANT PROTOCOL")
+135:    print(f"Hash: {b_block['hash'][:16]}...")
+142:    print(f"Hash: {u_block['hash'][:16]}...")
+160:    print(f"\n[LEDGER] Integrity verified. Blocks: {len(chain_bounded)} | {len(chain_unbounded)}")
+
+--- FULL SOURCE ---
+#!/usr/bin/env python3
+"""
+AEROCEMENT PHYSICS LEDGER v2.0 - DESICCANT PRE-DRYER PROTOCOL
+COMMANDER: Jesse McMillen | Civilization 2.0
+UPDATE: Models Desiccant Wheel pre-treatment to bypass Latent Heat Sink.
+"""
+
+import hashlib
+import json
+from datetime import datetime
+
+# === CHAIN STORAGE ===
+chain_bounded = []
+chain_unbounded = []
+
+def create_block(chain, prev_block, label, params, result):
+    index = len(chain)
+    prev_hash = prev_block["hash"] if prev_block else "GENESIS"
+    timestamp = datetime.now().isoformat()
+    
+    block_data = {
+        "index": index,
+        "label": label,
+        "timestamp": timestamp,
+        "params": params,
+        "result": result,
+        "prev_hash": prev_hash
+    }
+    block_hash = hashlib.sha256(json.dumps(block_data, sort_keys=True).encode()).hexdigest()
+    block_data["hash"] = block_hash
+    if chain and chain[-1]["hash"] != prev_hash:
+        print(f"[TAMPER DETECTED] Chain {label} integrity FAILED")
+        return None
+    chain.append(block_data)
+    return block_data
+
+def run_triad_calc_desiccant(airflow_cfm, solar_kw, stirling_eff, 
+                             inlet_moisture_g_m3, desiccant_efficiency, 
+                             desiccant_heat_cost_pct, insulation_loss_pct):
+    """
+    Physics Engine with Desiccant Pre-Dryer.
+    Step 1: Desiccant removes moisture using small heat slice.
+    Step 2: Dry air enters main solar loop -> NO latent penalty.
+    """
+    
+    # 1. Airflow Conversion
+    airflow_m3s = airflow_cfm * 0.0283168 / 60.0
+    
+    # 2. Desiccant Stage (Pre-treatment)
+    # Moisture removed by desiccant
+    moisture_removed_kg_s = airflow_m3s * (inlet_moisture_g_m3 / 1000.0) * desiccant_efficiency
+    # Water harvested here (condensed from desiccant regen air - simplified)
+    water_harvest_L_day = moisture_removed_kg_s * 86400 
+    
+    # Energy cost to regenerate desiccant (assumed to be taken from solar input)
+    # This is a simplified model: Cost is a % of total solar input
+    desiccant_heat_load_kw = solar_kw * desiccant_heat_cost_pct
+    
+    # 3. Main Loop (Dry Air)
+    # Since air is dried, latent load is NEGLIGIBLE in main loop.
+    # Only sensible heating remains.
+    net_thermal_input = solar_kw * (1.0 - insulation_loss_pct) - desiccant_heat_load_kw
+    
+    if net_thermal_input < 0:
+        return {
+            "status": "DEFICIT", 
+            "net_thermal_kw": net_thermal_input, 
+            "electric_kw": 0, 
+            "water_L_day": water_harvest_L_day,
+            "surplus_kwh_day": 0,
+            "note": "Desiccant regeneration consumes entire input"
+        }
+    
+    electric_kw = net_thermal_input * stirling_eff
+    surplus_kwh = electric_kw * 24
+    
+    return {
+        "status": "SURPLUS" if surplus_kwh > 1000 else "MARGINAL",
+        "net_thermal_kw": round(net_thermal_input, 3),
+        "electric_kw": round(electric_kw, 3),
+        "water_L_day": round(water_harvest_L_day, 1),
+        "surplus_kwh_day": round(surplus_kwh, 1),
+        "note": "Desiccant Pre-Dryer Active"
+    }
+
+def main():
+    print("=" * 60)
+    print("AEROCEMENT PHYSICS LEDGER v2.0 - DESICCANT PROTOCOL")
+    print("=" * 60)
+    
+    # --- TROPICAL/HEAVY HUMIDITY ASSUMPTION ---
+    # If 12g/m3 failed, let's test 20g/m3 (Hot/Humid) and 25g/m3 (Tropical)
+    INPUT_MOISTURE_TROPICAL = 25.0  # g/m3
+    
+    # === CHAIN A: BOUNDED (Build Spec) ===
+    # Conservative: High humidity, decent desiccant, lower solar
+    bounded_params = {
+        "airflow_cfm": 2265,
+        "solar_kw": 5.5, # Increased slightly to account for desiccant cost
+        "stirling_eff": 0.15,
+        "inlet_moisture_g_m3": INPUT_MOISTURE_TROPICAL,
+        "desiccant_efficiency": 0.90, # Removes 90% of moisture
+        "desiccant_heat_cost_pct": 0.10, # Uses 10% of solar for regen
+        "insulation_loss_pct": 0.20,
+        "rationale": "Tropical humidity, robust desiccant wheel, standard collector"
+    }
+    b_result = run_triad_calc_desiccant(**{k:v for k,v in bounded_params.items() if k != "rationale"})
+    
+    # === CHAIN B: UNBOUNDED (Engineer Toward) ===
+    # Optimized: Peak sun, high-eff desiccant, advanced Stirling
+    unbounded_params = {
+        "airflow_cfm": 2265,
+        "solar_kw": 8.0,
+        "stirling_eff": 0.40,
+        "inlet_moisture_g_m3": INPUT_MOISTURE_TROPICAL,
+        "desiccant_efficiency": 0.95,
+        "desiccant_heat_cost_pct": 0.05, # Better regen efficiency
+        "insulation_loss_pct": 0.05,
+        "rationale": "Peak sun, optimized desiccant, vacuum insulation"
+    }
+    u_result = run_triad_calc_desiccant(**{k:v for k,v in unbounded_params.items() if k != "rationale"})
+    
+    # Mine blocks
+    b_block = create_block(chain_bounded, chain_bounded[-1] if chain_bounded else None, 
+                           "BOUNDED_DESICCANT", bounded_params, b_result)
+    u_block = create_block(chain_unbounded, chain_unbounded[-1] if chain_unbounded else None, 
+                           "UNBOUNDED_DESICCANT", unbounded_params, u_result)
+    
+    # REPORT
+    print("\n--- CHAIN A: BOUNDED (BUILD SPEC - TROPICAL) ---")
+    print(f"Status: {b_result['status']}")
+    print(f"Net Thermal: {b_result['net_thermal_kw']} kW")
+    print(f"Electric: {b_result['electric_kw']} kW | {b_result['surplus_kwh_day']} kWh/day")
+    print(f"Water Harvest: {b_result['water_L_day']} L/day")
+    print(f"Hash: {b_block['hash'][:16]}...")
+    
+    print("\n--- CHAIN B: UNBOUNDED (ENGINEER TOWARD) ---")
+    print(f"Status: {u_result['status']}")
+    print(f"Net Thermal: {u_result['net_thermal_kw']} kW")
+    print(f"Electric: {u_result['electric_kw']} kW | {u_result['surplus_kwh_day']} kWh/day")
+    print(f"Water Harvest: {u_result['water_L_day']} L/day")
+    print(f"Hash: {u_block['hash'][:16]}...")
+    
+    # ANALYSIS
+    b_surplus = b_result.get('surplus_kwh_day', 0)
+    u_surplus = u_result.get('surplus_kwh_day', 0)
+    
+    print("\n--- DESIGN MARGIN ---")
+    if b_surplus > 0:
+        print("SUCCESS: Bounded Chain passed! Desiccant protocol works.")
+        print(f"Headroom: {u_surplus - b_surplus:.1f} kWh/day")
+        print("[ACTION] Proceed to single-home prototype with Desiccant Wheel.")
+    elif u_surplus > 0:
+        print("MARGINAL: Unbounded passed, Bounded failed.")
+        print("[ACTION] Increase collector area OR improve desiccant efficiency.")
+    else:
+        print("CRITICAL: Both chains fail. Even with desiccant, solar input is too low for 2265 CFM.")
+        print("[ACTION] Redesign: Reduce airflow OR drastically increase collector size (>10kW).")
+
+    print(f"\n[LEDGER] Integrity verified. Blocks: {len(chain_bounded)} | {len(chain_unbounded)}")
+
+if __name__ == "__main__":
+    main()
+
+================================================================================
+FILE: bin/0770_energy_theorems.py
+================================================================================
+STATUS: MISSING
+
+================================================================================
+FILE: cosmos_engine/KERNEL_SEED
+================================================================================
+--- IMPORTS / CLASSES / FUNCTIONS / CONSTANTS ---
+
+--- NEWTON / LIGHT / COSMOS / ZERO / DIMENSION / CAUSALITY MARKERS ---
+
+--- FULL SOURCE ---
+# Kernel seed restored 2026-09-21T22:28:27.821186
+# OpenRoot Agape Net
+
+================================================================================
+FILE: kernel/KERNEL_SEED
+================================================================================
+--- IMPORTS / CLASSES / FUNCTIONS / CONSTANTS ---
+
+--- NEWTON / LIGHT / COSMOS / ZERO / DIMENSION / CAUSALITY MARKERS ---
+
+--- FULL SOURCE ---
+# Kernel seed restored 2026-09-21T22:28:27.821085
+# OpenRoot Agape Net

@@ -1,0 +1,34 @@
+# PR 105 CodeQL Advanced Failure Capture
+generated_utc=2026-10-01T11:38:09Z
+repo=jesseray718/openroot
+pr=105
+expected_head_prefix=b7d52d29
+
+## PR status
+{"headRefName":"docs/public-contract-v1","headRefOid":"b7d52d29ede47d988dd06980fc4277e61b00a004","mergeStateStatus":"UNSTABLE","mergeable":"MERGEABLE","number":105,"statusCheckRollup":[{"__typename":"CheckRun","completedAt":"2026-10-01T10:29:00Z","conclusion":"FAILURE","detailsUrl":"https://github.com/jesseray718/openroot/actions/runs/36849322035/job/110326964268","name":"Analyze (actions)","startedAt":"2026-10-01T10:28:19Z","status":"COMPLETED","workflowName":"CodeQL Advanced"},{"__typename":"CheckRun","completedAt":"2026-10-01T10:28:55Z","conclusion":"SUCCESS","detailsUrl":"https://github.com/jesseray718/openroot/actions/runs/36849316714/job/110326949607","name":"Analyze (actions)","startedAt":"2026-10-01T10:28:13Z","status":"COMPLETED","workflowName":"CodeQL"},{"__typename":"CheckRun","completedAt":"2026-10-01T10:28:25Z","conclusion":"SUCCESS","detailsUrl":"https://github.com/jesseray718/openroot/actions/runs/36849321767/job/110326960827","name":"Changed-script gate","startedAt":"2026-10-01T10:28:13Z","status":"COMPLETED","workflowName":"Instruments Before Builders"},{"__typename":"CheckRun","completedAt":"2026-10-01T10:28:24Z","conclusion":"SUCCESS","detailsUrl":"https://github.com/jesseray718/openroot/actions/runs/36849321942/job/110326963417","name":"Deterministic repository validation","startedAt":"2026-10-01T10:28:13Z","status":"COMPLETED","workflowName":"OpenRoot CI"},{"__typename":"CheckRun","completedAt":"2026-10-01T10:28:22Z","conclusion":"SUCCESS","detailsUrl":"https://github.com/jesseray718/openroot/actions/runs/36849321918/job/110326963075","name":"build","startedAt":"2026-10-01T10:28:14Z","status":"COMPLETED","workflowName":"OpenRoot Node CI"},{"__typename":"CheckRun","completedAt":"2026-10-01T10:28:16Z","conclusion":"SUCCESS","detailsUrl":"https://github.com/jesseray718/openroot/actions/runs/36849315824/job/110326942806","name":"build","startedAt":"2026-10-01T10:28:10Z","status":"COMPLETED","workflowName":"OpenRoot Node CI"},{"__typename":"CheckRun","completedAt":"2026-10-01T10:28:27Z","conclusion":"SUCCESS","detailsUrl":"https://github.com/jesseray718/openroot/actions/runs/36849321951/job/110326963906","name":"Validate router and design contexts","startedAt":"2026-10-01T10:28:14Z","status":"COMPLETED","workflowName":"OpenRoot Permaculture CI"},{"__typename":"CheckRun","completedAt":"2026-10-01T10:33:19Z","conclusion":"FAILURE","detailsUrl":"https://github.com/jesseray718/openroot/actions/runs/36849322035/job/110326963982","name":"Analyze (python)","startedAt":"2026-10-01T10:28:14Z","status":"COMPLETED","workflowName":"CodeQL Advanced"},{"__typename":"CheckRun","completedAt":"2026-10-01T10:33:34Z","conclusion":"SUCCESS","detailsUrl":"https://github.com/jesseray718/openroot/actions/runs/36849316714/job/110326949731","name":"Analyze (python)","startedAt":"2026-10-01T10:28:11Z","status":"COMPLETED","workflowName":"CodeQL"},{"__typename":"CheckRun","completedAt":"2026-10-01T10:28:48Z","conclusion":"SUCCESS","detailsUrl":"https://github.com/jesseray718/openroot/runs/110327144774","name":"CodeQL","startedAt":"2026-10-01T10:28:44Z","status":"COMPLETED","workflowName":""},{"__typename":"StatusContext","context":"CodeRabbit","startedAt":"2026-10-01T10:28:16Z","state":"SUCCESS","targetUrl":""}]}
+
+## CodeQL Advanced runs for PR head
+[{"conclusion":"failure","createdAt":"2026-10-01T10:28:11Z","databaseId":36849322035,"headSha":"b7d52d29ede47d988dd06980fc4277e61b00a004","status":"completed","updatedAt":"2026-10-01T10:33:20Z","url":"https://github.com/jesseray718/openroot/actions/runs/36849322035","workflowName":"CodeQL Advanced"},{"conclusion":"failure","createdAt":"2026-10-01T10:20:38Z","databaseId":36848536698,"headSha":"a450687d5ae3039fe40d76d1e28537acac54a269","status":"completed","updatedAt":"2026-10-01T10:26:02Z","url":"https://github.com/jesseray718/openroot/actions/runs/36848536698","workflowName":"CodeQL Advanced"}]
+
+## Failed CodeQL Advanced logs
+
+### RUN_ID=36849322035
+{"conclusion":"failure","databaseId":36849322035,"headSha":"b7d52d29ede47d988dd06980fc4277e61b00a004","status":"completed","url":"https://github.com/jesseray718/openroot/actions/runs/36849322035","workflowName":"CodeQL Advanced"}
+### FAILED_LOG
+
+### RUN_ID=36848536698
+{"conclusion":"failure","databaseId":36848536698,"headSha":"a450687d5ae3039fe40d76d1e28537acac54a269","status":"completed","url":"https://github.com/jesseray718/openroot/actions/runs/36848536698","workflowName":"CodeQL Advanced"}
+### FAILED_LOG
+
+## Current PR checks
+Analyze (actions)	fail	41s	https://github.com/jesseray718/openroot/actions/runs/36849322035/job/110326964268	
+Analyze (python)	fail	5m5s	https://github.com/jesseray718/openroot/actions/runs/36849322035/job/110326963982	
+Analyze (actions)	pass	42s	https://github.com/jesseray718/openroot/actions/runs/36849316714/job/110326949607	
+Analyze (python)	pass	5m23s	https://github.com/jesseray718/openroot/actions/runs/36849316714/job/110326949731	
+Changed-script gate	pass	12s	https://github.com/jesseray718/openroot/actions/runs/36849321767/job/110326960827	
+CodeQL	pass	4s	https://github.com/jesseray718/openroot/runs/110327144774	
+CodeRabbit	pass	0		Review skipped: manual review required for this OSS repository
+Deterministic repository validation	pass	11s	https://github.com/jesseray718/openroot/actions/runs/36849321942/job/110326963417	
+Validate router and design contexts	pass	13s	https://github.com/jesseray718/openroot/actions/runs/36849321951/job/110326963906	
+build	pass	6s	https://github.com/jesseray718/openroot/actions/runs/36849315824/job/110326942806	
+build	pass	8s	https://github.com/jesseray718/openroot/actions/runs/36849321918/job/110326963075	

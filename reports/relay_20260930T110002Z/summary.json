@@ -1,0 +1,9 @@
+{
+  "run": "relay_20260930T110002Z",
+  "stack": "coding_authors",
+  "task": "Verify/commit bin/ directory (check `git ls-files bin/ | wc -l`)",
+  "models_used": [
+    "qwen2.5-coder:7b",
+    "qwen2.5:3b"
+  ]
+}

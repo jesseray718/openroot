@@ -1,0 +1,6 @@
+ARTIFACT_R1:
+```
+10
+```
+CRITIQUE_R1:
+[PASS_OFF: TimeoutError]

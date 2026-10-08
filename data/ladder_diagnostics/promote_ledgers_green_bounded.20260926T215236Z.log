@@ -1,0 +1,11 @@
+=== LEDGERS BOUNDED PROMOTION ===
+[banked] py_compile PASS: a1, compost, ladder
+[banked] bounded scan calibration begins
+[banked] scan optiplex: roots 3 | seen 100 | hashed 1 | cache-hit 99 | new-unique 1 | skipped-unreadable 0 | skipped-nonregular 0 | limit-reached yes
+[banked] bounded_scan_exit_code=0 elapsed_ms=302
+[banked] ledger_rows=101 forbidden_backup_or_legacy_rows=0
+[banked] direct compost ranking proof begins
+usage: compost_v1.py [-h] {register,list,search} ...
+compost_v1.py: error: argument command: invalid choice: 'rank' (choose from 'register', 'list', 'search')
+[banked] compost_rank_exit_code=2
+[held] compost ranking failed

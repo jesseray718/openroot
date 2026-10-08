@@ -1,0 +1,168 @@
+{
+ "headroom": 73.5,
+ "runs": [
+  {
+   "policy": "bottom-first",
+   "kappa": 0.0,
+   "final_min_floor": 0.3244,
+   "final_gini": 0.1145,
+   "saturated_nodes": 0,
+   "total_supply": 37.5,
+   "cumulative_welfare": 178.88
+  },
+  {
+   "policy": "equal",
+   "kappa": 0.0,
+   "final_min_floor": 0.145,
+   "final_gini": 0.3154,
+   "saturated_nodes": 0,
+   "total_supply": 37.5,
+   "cumulative_welfare": 204.78
+  },
+  {
+   "policy": "merit-top",
+   "kappa": 0.0,
+   "final_min_floor": 0.01,
+   "final_gini": 0.5616,
+   "saturated_nodes": 0,
+   "total_supply": 37.5,
+   "cumulative_welfare": 232.76
+  },
+  {
+   "policy": "bottom-first",
+   "kappa": 0.05,
+   "final_min_floor": 0.5085,
+   "final_gini": 0.0613,
+   "saturated_nodes": 0,
+   "total_supply": 54.3,
+   "cumulative_welfare": 204.09
+  },
+  {
+   "policy": "equal",
+   "kappa": 0.05,
+   "final_min_floor": 0.2773,
+   "final_gini": 0.2352,
+   "saturated_nodes": 0,
+   "total_supply": 50.7,
+   "cumulative_welfare": 223.21
+  },
+  {
+   "policy": "merit-top",
+   "kappa": 0.05,
+   "final_min_floor": 0.01,
+   "final_gini": 0.5531,
+   "saturated_nodes": 0,
+   "total_supply": 40.0,
+   "cumulative_welfare": 250.37
+  },
+  {
+   "policy": "bottom-first",
+   "kappa": 0.1,
+   "final_min_floor": 0.85,
+   "final_gini": 0.0249,
+   "saturated_nodes": 0,
+   "total_supply": 86.8,
+   "cumulative_welfare": 239.37
+  },
+  {
+   "policy": "equal",
+   "kappa": 0.1,
+   "final_min_floor": 0.5339,
+   "final_gini": 0.1309,
+   "saturated_nodes": 0,
+   "total_supply": 76.4,
+   "cumulative_welfare": 252.49
+  },
+  {
+   "policy": "merit-top",
+   "kappa": 0.1,
+   "final_min_floor": 0.01,
+   "final_gini": 0.5421,
+   "saturated_nodes": 0,
+   "total_supply": 43.4,
+   "cumulative_welfare": 274.2
+  },
+  {
+   "policy": "bottom-first",
+   "kappa": 0.15,
+   "final_min_floor": 0.99,
+   "final_gini": 0.0,
+   "saturated_nodes": 0,
+   "total_supply": 136.7,
+   "cumulative_welfare": 280.34
+  },
+  {
+   "policy": "equal",
+   "kappa": 0.15,
+   "final_min_floor": 0.9479,
+   "final_gini": 0.0057,
+   "saturated_nodes": 0,
+   "total_supply": 117.8,
+   "cumulative_welfare": 287.68
+  },
+  {
+   "policy": "merit-top",
+   "kappa": 0.15,
+   "final_min_floor": 0.01,
+   "final_gini": 0.5273,
+   "saturated_nodes": 0,
+   "total_supply": 48.0,
+   "cumulative_welfare": 302.93
+  },
+  {
+   "policy": "bottom-first",
+   "kappa": 0.2,
+   "final_min_floor": 0.99,
+   "final_gini": 0.0,
+   "saturated_nodes": 0,
+   "total_supply": 190.6,
+   "cumulative_welfare": 325.88
+  },
+  {
+   "policy": "equal",
+   "kappa": 0.2,
+   "final_min_floor": 0.99,
+   "final_gini": 0.0,
+   "saturated_nodes": 0,
+   "total_supply": 168.4,
+   "cumulative_welfare": 327.41
+  },
+  {
+   "policy": "merit-top",
+   "kappa": 0.2,
+   "final_min_floor": 0.01,
+   "final_gini": 0.5085,
+   "saturated_nodes": 0,
+   "total_supply": 54.1,
+   "cumulative_welfare": 339.39
+  },
+  {
+   "policy": "bottom-first",
+   "kappa": 0.3,
+   "final_min_floor": 0.99,
+   "final_gini": 0.0,
+   "saturated_nodes": 0,
+   "total_supply": 302.6,
+   "cumulative_welfare": 421.57
+  },
+  {
+   "policy": "equal",
+   "kappa": 0.3,
+   "final_min_floor": 0.99,
+   "final_gini": 0.0,
+   "saturated_nodes": 0,
+   "total_supply": 275.3,
+   "cumulative_welfare": 415.01
+  },
+  {
+   "policy": "merit-top",
+   "kappa": 0.3,
+   "final_min_floor": 0.0186,
+   "final_gini": 0.4532,
+   "saturated_nodes": 0,
+   "total_supply": 72.1,
+   "cumulative_welfare": 426.25
+  }
+ ],
+ "flip_kappa": null
+}

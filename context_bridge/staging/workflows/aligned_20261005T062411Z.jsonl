@@ -1,0 +1,17 @@
+search_web:406d13242ac7 {
+  "arguments": {
+    "num": 3,
+    "query": "github.com/jesseray718 commits PRs issues"
+  },
+  "name": "search_web"
+}
+search_github:ac113feb9293 {
+  "arguments": {
+    "query": "commits, PRs, issues",
+    "repos": [
+      "jesseray718/jesseray718",
+      "jesseray718/openroot"
+    ]
+  },
+  "name": "search_github"
+}

@@ -1,0 +1,380 @@
+=== HANDOFF END FORENSICS ===
+[banked] py_compile PASS: handoff manager and ladder
+
+=== HANDOFF COMMAND IMPLEMENTATION ===
+40:def connect_db():
+58:def gen_session_id():
+90:def active_sessions(con):
+130:def end_session(con, session_id):
+146:def generate_handoff(con, session_id, phase="start"):
+246:def show_last_handoff():
+258:def register_goal(con, goal_text, session_start=None):
+264:def main():
+266:    ap.add_argument("cmd", nargs="?", default="show",
+268:    ap.add_argument("--goal", default=None, help="goal text to register")
+269:    ap.add_argument("--script", default=None, help="script name for change log")
+270:    ap.add_argument("--version", default=None, help="version string for change log")
+271:    ap.add_argument("--action", default="added", help="change action: added/updated/deleted")
+
+=== HANDOFF END / MAIN CONTEXT ===
+   100	        return []
+   101	    tidbits_created = []
+   102	    for log_file in log_dir.glob("*.log"):
+   103	        try:
+   104	            size_kb = log_file.stat().st_size // 1024
+   105	            if size_kb > max_size_kb:
+   106	                content = log_file.read_bytes()
+   107	                chunk_count = (size_kb // max_size_kb) + 1
+   108	                for i in range(chunk_count):
+   109	                    start = i * max_size_kb * 1024
+   110	                    end = start + max_size_kb * 1024
+   111	                    chunk_data = content[start:end]
+   112	                    if not chunk_data:
+   113	                        continue
+   114	                    digest = hashlib.sha256(chunk_data).hexdigest()
+   115	                    tidbit_path = TIDBIT_DIR / f"{log_file.stem}_{i:03d}_{digest[:12]}.chunk"
+   116	                    tidbit_path.write_bytes(chunk_data)
+   117	                    summary = f"{log_file.name}[chunk{i}] size={len(chunk_data)//1024}KB"
+   118	                    tidbits_created.append({"path": str(tidbit_path), "sha256": digest,
+   119	                                            "summary": summary})
+   120	                log_file.unlink()
+   121	            else:
+   122	                tidbits_created.append({"path": str(log_file), "sha256": hashlib.sha256(
+   123	                                        log_file.read_bytes()).hexdigest(),
+   124	                                        "summary": log_file.name})
+   125	        except Exception as e:
+   126	            pass
+   127	    return tidbits_created
+   128	
+   129	
+   130	def end_session(con, session_id):
+   131	    row = con.execute(
+   132	        "SELECT session_id FROM sessions WHERE session_id=? AND status='active'",
+   133	        (session_id,),
+   134	    ).fetchone()
+   135	    if row is None:
+   136	        raise RuntimeError(f"active session not found: {session_id}")
+   137	
+   138	    con.execute(
+   139	        "UPDATE sessions SET ended=?, status=? WHERE session_id=?",
+   140	        (now(), "ended", session_id),
+   141	    )
+   142	    con.commit()
+   143	    print(f"[banked] session_closed={session_id}")
+   144	
+   145	
+   146	def generate_handoff(con, session_id, phase="start"):
+   147	    head = get_git_head()
+   148	    recent_scripts = count_recent_scripts(3)
+   149	    active_sess = active_sessions(con)
+   150	    incomplete_goals = scan_goals(con)
+   151	
+   152	    if phase == "start":
+   153	        active_str = f"{len(active_sess)} sessions already open" if active_sess else "No active sessions"
+   154	    else:
+   155	        active_str = "Session ending, closing prior sessions"
+   156	        for sid, _ in active_sess:
+   157	            con.execute("UPDATE sessions SET ended=? WHERE session_id=?", (now(), sid))
+   158	        con.commit()
+   159	
+   160	    tidbits = chunk_logs_to_tidbits(CB / "logs" if (CB / "logs").exists() else OR / "logs")
+   161	
+   162	    md = [f"# SESSION HANDOFF — {session_id}",
+   163	          f"_Generated {now()} | Phase: {phase.upper()} | HEAD: {head[:12]}_",
+   164	          "",
+   165	          "## Session Status",
+   166	          f"- Active prior sessions: {active_str}",
+   167	          f"- Recent scripts (last 3 days): {len(recent_scripts)}",
+   168	          "",
+   169	          "## Running Tasks Queue (priority order)",
+   170	          "```",
+   171	          "1. Verify bin/ tracking status (git ls-files bin/)",
+   172	          "2. Review RELEASE_PLAN.md top candidate and execute with human gate",
+   173	          "3. Run compost_v1.py all to register waste streams and distill keypoints",
+   174	          "4. Update GOALS.md with completed/ongoing items",
+   175	          "5. Log kinetics: record joules human / joules useful / k_delta / shared",
+   176	          "```\n"]
+   177	
+   178	    md.extend(["## Goals Implemented (Current Session)",
+   179	               "- [ ] bin/ tracking verification",
+   180	               "- [ ] A1 hub mirroring complete",
+   181	               "- [ ] Compost loop closed",
+   182	               "- [ ] Release ranked and staged\n"])
+   183	
+   184	    md.extend(["## Ideas Started, Not Finished",
+   185	               "- [ ] Outcomes ledger recalibration (weights → actual release results)",
+   186	               "- [ ] Turing tidbit chunking integration with terminal log bridge",
+   187	               "- [ ] A15 ↔ OptiPlex bidirectional sync via Syncthing + merge",
+   188	               "- [ ] Permaculture weight calibration against GRLE metrics\n"])
+   189	
+   190	    if incomplete_goals:
+   191	        md.append("## Carried-Over Goals")
+   192	        for i, g in enumerate(incomplete_goals[:5], 1):
+   193	            md.append(f"- {i}. {g[:80]}...")
+   194	        if len(incomplete_goals) > 5:
+   195	            md.append(f"...and {len(incomplete_goals)-5} more goals in goals_history")
+   196	        md.append("")
+   197	
+   198	    md.extend(["## New Work Added (This Session)",
+   199	               "- Scripts created: a1_core_v1.py, compost_v1.py, handoff_manager.py",
+   200	               "- Handoff system initialized with versioning",
+   201	               "- Turing tidbit chunking enabled (200KB threshold)",
+   202	               "- Compost pipeline registered waste streams for non-deletion retention"])
+   203	
+   204	    if tidbits:
+   205	        md.extend(["", "## Turing Tidbits Generated", f"- Total tidbits: {len(tidbits)}"])
+   206	        for tb in tidbits[:5]:
+   207	            md.append(f"  - {tb['summary'][:80]}... (sha256: {tb['sha256'][:12]})")
+   208	        if len(tidbits) > 5:
+   209	            md.append(f"...plus {len(tidbits)-5} more tidbits in {TIDBIT_DIR}/")
+   210	
+   211	    md.extend(["", "## Uncorruptable Core (Previous State Preserved)",
+   212	               f"- Universal doc ledger: {OR / 'data' / 'universal_doc_ledger.db'}",
+   213	               f"- Compost ledger: {OR / 'data' / 'compost.db'}",
+   214	               f"- Session ledger: {SESSION_DB}",
+   215	               "- All sha256 hashes immutable once recorded",
+   216	               "- Human gate prevents automatic deletion"])
+   217	
+   218	    md.extend(["", "## Superlinear Compounding Metrics (Real-Time)",
+   219	               "- Knowledge non-rival: shared does not subtract from giver",
+   220	               "- Joules conserved: separate ledger, no >100% claims",
+   221	               "- Permaculture decision layer active (12 principles)",
+   222	               "- Agape bottom-first routing weights enabled",
+   223	               "- Closed loops: compost → FTS5 → spec/routing stages"])
+   224	
+   225	    md.extend(["", "## Next Session Start Commands",
+   226	               "```bash",
+   227	               "# OptiPlex:",
+   228	               "cd /home/jesse/openroot && python3 bin/handoff_manager.py start",
+   229	               "",
+   230	               "# A15 (Termux) — sync first via Syncthing or scp:",
+   231	               "cd /sdcard/openroot && A1_HOST=a15 python3 bin/handoff_manager.py start",
+   232	               "```"])
+   233	
+   234	    session_file = HANDOFF_DIR / f"session_{session_id}.md"
+   235	    session_file.write_text("\n".join(md) + "\n")
+   236	
+   237	    con.execute("INSERT OR REPLACE INTO sessions(session_id,started,status,head) VALUES(?,?,?,?)",
+   238	                (session_id, now(), "active", head))
+   239	    con.commit()
+   240	
+   241	    print(f"[banked] handoff created: {session_file}")
+   242	    print(f"[banked] session_id: {session_id}")
+   243	    print(f"[gate] Review handoff, then proceed with tasks queue above. Human gate remains.")
+   244	    return session_file
+   245	
+   246	def show_last_handoff():
+   247	    files = sorted(HANDOFF_DIR.glob("session_*.md"), reverse=True)
+   248	    if not files:
+   249	        print("[held] No prior handoffs found. Run 'init' or 'start' first.")
+   250	        return
+   251	    print(f"Last {len(files)} handoff(s):")
+   252	    for f in files[:3]:
+   253	        content = f.read_text().split("\n")[:20]
+   254	        print(f"\n--- {f.name} ---")
+   255	        for line in content:
+   256	            print(line[:100])
+   257	
+   258	def register_goal(con, goal_text, session_start=None):
+   259	    con.execute("INSERT INTO goals_history(goal_text,status,created,session_start)"
+   260	                " VALUES(?,?,?,?)", (goal_text, "active", now(), session_start or now()))
+   261	    con.commit()
+   262	    print(f"[banked] goal registered: {goal_text[:80]}...")
+   263	
+   264	def main():
+   265	    ap = argparse.ArgumentParser(description=CANARY + " session handoff manager")
+   266	    ap.add_argument("cmd", nargs="?", default="show",
+   267	                    choices=["init", "start", "end", "show", "register-goal"])
+   268	    ap.add_argument("--goal", default=None, help="goal text to register")
+   269	    ap.add_argument("--script", default=None, help="script name for change log")
+   270	    ap.add_argument("--version", default=None, help="version string for change log")
+   271	    ap.add_argument("--action", default="added", help="change action: added/updated/deleted")
+   272	    a = ap.parse_args()
+   273	    ensure()
+   274	    con = connect_db()
+   275	
+   276	    if a.cmd == "init":
+   277	        print(f"[banked] handoff system initialized")
+   278	        print(f"  - session ledger: {SESSION_DB}")
+   279	        print(f"  - handoff dir: {HANDOFF_DIR}")
+   280	        print(f"  - tidbit dir: {TIDBIT_DIR}")
+   281	        print(f"[gate] Run 'start' to begin first session")
+   282	    elif a.cmd == "start":
+   283	        session_id = gen_session_id()
+   284	        generate_handoff(con, session_id, "start")
+   285	    elif a.cmd == "end":
+   286	        active = active_sessions(con)
+   287	        if len(active) != 1:
+   288	            print(f"[held] end requires exactly one active session; found={len(active)}")
+   289	            sys.exit(1)
+   290	        session_id = active[0][1]
+   291	        end_session(con, session_id)
+   292	        generate_handoff(con, session_id, "end")
+   293	        print("[banked] bounded handoff end PASS")
+   294	    elif a.cmd == "show":
+   295	        show_last_handoff()
+   296	    elif a.cmd == "register-goal" and a.goal:
+   297	        register_goal(con, a.goal)
+   298	    else:
+   299	        print(f"[held] unknown cmd: {a.cmd}; use init/start/end/show/register-goal")
+   300	        sys.exit(1)
+   301	
+   302	if __name__ == "__main__":
+   303	    main()
+   234	    session_file = HANDOFF_DIR / f"session_{session_id}.md"
+   235	    session_file.write_text("\n".join(md) + "\n")
+   236	
+   237	    con.execute("INSERT OR REPLACE INTO sessions(session_id,started,status,head) VALUES(?,?,?,?)",
+   238	                (session_id, now(), "active", head))
+   239	    con.commit()
+   240	
+   241	    print(f"[banked] handoff created: {session_file}")
+   242	    print(f"[banked] session_id: {session_id}")
+   243	    print(f"[gate] Review handoff, then proceed with tasks queue above. Human gate remains.")
+   244	    return session_file
+   245	
+   246	def show_last_handoff():
+   247	    files = sorted(HANDOFF_DIR.glob("session_*.md"), reverse=True)
+   248	    if not files:
+   249	        print("[held] No prior handoffs found. Run 'init' or 'start' first.")
+   250	        return
+   251	    print(f"Last {len(files)} handoff(s):")
+   252	    for f in files[:3]:
+   253	        content = f.read_text().split("\n")[:20]
+   254	        print(f"\n--- {f.name} ---")
+   255	        for line in content:
+   256	            print(line[:100])
+   257	
+   258	def register_goal(con, goal_text, session_start=None):
+   259	    con.execute("INSERT INTO goals_history(goal_text,status,created,session_start)"
+   260	                " VALUES(?,?,?,?)", (goal_text, "active", now(), session_start or now()))
+   261	    con.commit()
+   262	    print(f"[banked] goal registered: {goal_text[:80]}...")
+   263	
+   264	def main():
+   265	    ap = argparse.ArgumentParser(description=CANARY + " session handoff manager")
+   266	    ap.add_argument("cmd", nargs="?", default="show",
+   267	                    choices=["init", "start", "end", "show", "register-goal"])
+   268	    ap.add_argument("--goal", default=None, help="goal text to register")
+   269	    ap.add_argument("--script", default=None, help="script name for change log")
+   270	    ap.add_argument("--version", default=None, help="version string for change log")
+   271	    ap.add_argument("--action", default="added", help="change action: added/updated/deleted")
+   272	    a = ap.parse_args()
+   273	    ensure()
+   274	    con = connect_db()
+   275	
+   276	    if a.cmd == "init":
+   277	        print(f"[banked] handoff system initialized")
+   278	        print(f"  - session ledger: {SESSION_DB}")
+   279	        print(f"  - handoff dir: {HANDOFF_DIR}")
+   280	        print(f"  - tidbit dir: {TIDBIT_DIR}")
+   281	        print(f"[gate] Run 'start' to begin first session")
+   282	    elif a.cmd == "start":
+   283	        session_id = gen_session_id()
+   284	        generate_handoff(con, session_id, "start")
+   285	    elif a.cmd == "end":
+   286	        active = active_sessions(con)
+   287	        if len(active) != 1:
+   288	            print(f"[held] end requires exactly one active session; found={len(active)}")
+   289	            sys.exit(1)
+   290	        session_id = active[0][1]
+   291	        end_session(con, session_id)
+   292	        generate_handoff(con, session_id, "end")
+   293	        print("[banked] bounded handoff end PASS")
+   294	    elif a.cmd == "show":
+   295	        show_last_handoff()
+   296	    elif a.cmd == "register-goal" and a.goal:
+   297	        register_goal(con, a.goal)
+   298	    else:
+   299	        print(f"[held] unknown cmd: {a.cmd}; use init/start/end/show/register-goal")
+   300	        sys.exit(1)
+   301	
+   302	if __name__ == "__main__":
+   303	    main()
+
+=== LADDER HANDOFF STAGE EXACT SOURCE ===
+88-            "cmd": "timeout 30s python3 bin/a1_core_v1.py scan --max-files 500 && python3 bin/compost_v1.py list",
+89-            "timeout": 45,
+90-        },
+91-    },
+92-    {
+93:        "name": "handoff_operational",
+94-        "desc": "bounded single-session close plus durable handoff record",
+95-        "maturity": "auto",
+96-        "checks": [
+97-            "python3 bin/handoff_manager.py show",
+98-            "test -s context_bridge/session_ledger.db",
+99-        ],
+100-        "calib": {
+101-            "cmd": "python3 bin/handoff_manager.py start",
+102-            "timeout": 30,
+103-        },
+104-        "runner": {
+105-            "cmd": "timeout 30s python3 bin/handoff_manager.py end",
+106-            "timeout": 45,
+107-        },
+108-    },
+109-    {
+110-        "name": "contributor_seal",
+111-        "desc": "Reh1t PR #53 resolved with credit — goodwill is scarcest asset",
+112-        "maturity": "human",  # TRUE human-only: judgment cannot be automated
+113-        "checks": ['gh pr view 53 --repo jesseray718/openroot --json state -q .state | grep -qi merged'],
+114-        "calib": {"cmd": "gh pr view 53 --repo jesseray718/openroot --json state,author,title", "timeout": 60},
+115-        "runner": {"cmd": "echo '[gate] PR 53 merge is HUMAN-ADJUDICATED'", "timeout": 60, "human_only": True},
+116-    },
+117-    {
+
+=== SESSION LEDGER SCHEMA ===
+goals_history   sessions        system_changes  tidbits       
+name            sql                                                                                   
+--------------  --------------------------------------------------------------------------------------
+goals_history   CREATE TABLE goals_history(                                                           
+                      id INTEGER PRIMARY KEY, goal_text TEXT, status TEXT, created TEXT, updated TEXT,
+                      session_start TEXT)                                                             
+
+sessions        CREATE TABLE sessions(                                                                
+                      id INTEGER PRIMARY KEY, session_id TEXT UNIQUE, started TEXT, ended TEXT,       
+                      head TEXT, status TEXT, notes TEXT)                                             
+
+system_changes  CREATE TABLE system_changes(                                                          
+                      id INTEGER PRIMARY KEY, script_name TEXT, version TEXT, action TEXT,            
+                      verified INTEGER DEFAULT 0, timestamp TEXT)                                     
+
+tidbits         CREATE TABLE tidbits(                                                                 
+                      id INTEGER PRIMARY KEY, sha256 TEXT UNIQUE, size_kb INTEGER, kind TEXT,         
+                      content_summary TEXT, created TEXT, composted INTEGER DEFAULT 0)                
+
+=== SESSION LEDGER BEFORE END ===
+--- table=goals_history ---
+--- table=sessions ---
+id  session_id                started                    ended  head                                      status  notes
+--  ------------------------  -------------------------  -----  ----------------------------------------  ------  -----
+2   20260926_215639_69ae6e70  2026-09-26T21:56:39+00:00         331060e9c184ca04681c0cfcbe9c8fed925e1d53  active       
+1   20260926_215535_55b7ba7c  2026-09-26T21:55:36+00:00         331060e9c184ca04681c0cfcbe9c8fed925e1d53  active       
+--- table=system_changes ---
+--- table=tidbits ---
+
+=== HANDOFF FILES BEFORE END ===
+2026-09-26T16:56:39.0942306010Z 2639 context_bridge/handoffs/session_20260926_215639_69ae6e70.md
+2026-09-26T16:55:36.1516568530Z 2634 context_bridge/handoffs/session_20260926_215535_55b7ba7c.md
+
+=== STATIC SIDE-EFFECT INDICATORS ===
+18:import argparse, hashlib, json, os, sqlite3, subprocess, sys, glob
+50:      id INTEGER PRIMARY KEY, goal_text TEXT, status TEXT, created TEXT, updated TEXT,
+65:        r = subprocess.run(["git", "-C", str(orph), "rev-parse", "HEAD"],
+94:    con.execute("INSERT INTO system_changes(script_name,version,action,timestamp)"
+116:                    tidbit_path.write_bytes(chunk_data)
+120:                log_file.unlink()
+139:        "UPDATE sessions SET ended=?, status=? WHERE session_id=?",
+157:            con.execute("UPDATE sessions SET ended=? WHERE session_id=?", (now(), sid))
+171:          "1. Verify bin/ tracking status (git ls-files bin/)",
+174:          "4. Update GOALS.md with completed/ongoing items",
+235:    session_file.write_text("\n".join(md) + "\n")
+237:    con.execute("INSERT OR REPLACE INTO sessions(session_id,started,status,head) VALUES(?,?,?,?)",
+259:    con.execute("INSERT INTO goals_history(goal_text,status,created,session_start)"
+271:    ap.add_argument("--action", default="added", help="change action: added/updated/deleted")
+
+=== GIT BOUNDARY ===
+?? bin/handoff_manager.py
+?? bin/launch_ladder_v1.py
+?? context_bridge/handoffs/

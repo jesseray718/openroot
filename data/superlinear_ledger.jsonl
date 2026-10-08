@@ -1,0 +1,20 @@
+{"ts": "20260924_161659", "stage": "A", "status": "held", "msg": "README photo slot inserted (backup README.md.bak.20260924_161659) \u2014 review, then commit"}
+{"ts": "20260924_161659", "stage": "B", "status": "banked", "msg": "LICENSE copied from openroot"}
+{"ts": "20260924_161659", "stage": "B", "status": "banked", "msg": "wrote /home/jesse/aerocement-panel-v0/MANIFEST.md"}
+{"ts": "20260924_161659", "stage": "B", "status": "banked", "msg": "wrote /home/jesse/aerocement-panel-v0/CLAIMS.md"}
+{"ts": "20260924_161659", "stage": "B", "status": "banked", "msg": "wrote /home/jesse/aerocement-panel-v0/INTEGRATION.md"}
+{"ts": "20260924_161659", "stage": "B", "status": "banked", "msg": "wrote /home/jesse/aerocement-panel-v0/INTEGRATION_CHECKLIST.md"}
+{"ts": "20260924_161659", "stage": "B", "status": "banked", "msg": "wrote /home/jesse/aerocement-panel-v0/README.md"}
+{"ts": "20260924_161659", "stage": "B", "status": "banked", "msg": "wrote /home/jesse/aerocement-panel-v0/docs/build-log.md"}
+{"ts": "20260924_161659", "stage": "B", "status": "banked", "msg": "wrote /home/jesse/aerocement-panel-v0/docs/h003_pad_spec.md"}
+{"ts": "20260924_161659", "stage": "B", "status": "banked", "msg": "wrote /home/jesse/aerocement-panel-v0/src/panel_calc.py"}
+{"ts": "20260924_161659", "stage": "B", "status": "banked", "msg": "N11 need-gate: PASS"}
+{"ts": "20260924_161659", "stage": "B", "status": "banked", "msg": "py_compile panel_calc: PASS"}
+{"ts": "20260924_161659", "stage": "B", "status": "banked", "msg": "smoke panel_calc: REJECT: eta_solar > 1.0 violates N14 \u2014 check reservoir accounting"}
+{"ts": "20260924_161659", "stage": "B", "status": "banked", "msg": "git init main"}
+{"ts": "20260924_161659", "stage": "B", "status": "held", "msg": "aerocement-panel-v0 local commit done \u2014 publish needs CONFIRM=1"}
+{"ts": "20260924_161659", "stage": "B", "status": "held", "msg": "CONFIRM=1 to: gh repo create + push"}
+{"ts": "20260924_161659", "stage": "C", "status": "status", "msg": "no floor-cap lines found in workareas/*cascade* \u2014 check repo layout manually"}
+{"ts": "20260924_161659", "stage": "C", "status": "held", "msg": "cascade v2.0 spec written: /home/jesse/openroot/workareas/cascade-v2-spec-20260924_161659.md (7B-authored, 3B-graded: SCORE: 6/10) \u2014 apply is human-gated"}
+{"ts": "20260924_161659", "stage": "C", "status": "banked", "msg": "spec N14 check: PASS"}
+{"ts": "20260924_161659", "stage": "D", "status": "held", "msg": "SARE draft written: /home/jesse/aerocement-panel-v0/docs/sare_grant_framing.md (N14 PASS) \u2014 human gate before any submission"}

@@ -1,0 +1,58 @@
+=== VECTOR PRE-PROMOTION ===
+[banked] py_compile PASS: ladder and vector engine
+[banked] embeddings_db_present=137601024_bytes
+[banked] local_embedding_model_present=nomic-embed-text
+[banked] direct calibration proof begins
+[banked] Vector database initialized: /home/jesse/openroot/data/embeddings.db
+[banked] model=nomic-embed-text:latest
+[banked] dimensions=768
+[banked] calibration_document_id=1
+[banked] calibration_embedding_id=1
+[banked] calibration_source=internal://vector-index-calibration
+[banked] self_retrieval_similarity=1.000000000
+[banked] vector calibration PASS
+[banked] direct query proof begins
+{
+  "model": "nomic-embed-text:latest",
+  "query": "OpenRoot local evidence retrieval calibration",
+  "results": [
+    {
+      "content_sha256": "f46fd5460fd1024fe79092c49fd9e6a96e256a769233db534a1c5900adefdec8",
+      "created_at": "2026-09-26T21:27:08Z",
+      "dimensions": 768,
+      "document_id": 1,
+      "embedding_id": 1,
+      "excerpt": "OpenRoot local evidence retrieval calibration.",
+      "model": "nomic-embed-text:latest",
+      "similarity": 0.992085892498521,
+      "source_uri": "internal://vector-index-calibration"
+    }
+  ]
+}
+[banked] direct_retrieval_source=internal://vector-index-calibration
+[banked] direct_retrieval_dimensions=768
+[banked] direct_retrieval_similarity=0.992085892
+[banked] direct retrieval proof PASS
+[banked] pre_calibration_status=failed
+name                     status  maturity  checks_ok  attempts  last_action  last_ts                    evidence     
+-----------------------  ------  --------  ---------  --------  -----------  -------------------------  -------------
+vector_index_calibrated  failed  hybrid    0          0                      2026-09-26T21:08:50+00:00  calibration: 
+[gate] bounded real calibration begins: vector_index_calibrated
+[banked] calibration PASSED → vector_index_calibrated promoted to CALIBRATED
+[exit=0]
+[banked] calibrate_exit_code=0
+[banked] post_calibration_status=calibrated
+name                     status      maturity  checks_ok  attempts  last_action                         last_ts                    evidence
+-----------------------  ----------  --------  ---------  --------  ----------------------------------  -------------------------  --------
+vector_index_calibrated  calibrated  auto      0          0         calibration PASSED (real, bounded)  2026-09-26T21:27:09+00:00          
+[gate] full real run plus exit verification begins: vector_index_calibrated
+[banked] vector_index_calibrated VERIFIED GREEN — success endured
+[auto-trigger] → calibrating next stage: ledgers_green
+[banked] calibration PASSED → ledgers_green promoted to CALIBRATED
+[exit=0]
+[banked] ladder_run_exit_code=0
+[banked] final_status=verified
+name                     status    maturity  checks_ok  attempts  last_action       last_ts                    evidence        
+-----------------------  --------  --------  ---------  --------  ----------------  -------------------------  ----------------
+vector_index_calibrated  verified  auto      1          0         run+verify GREEN  2026-09-26T21:27:09+00:00  all checks green
+[banked] vector_index_calibrated VERIFIED

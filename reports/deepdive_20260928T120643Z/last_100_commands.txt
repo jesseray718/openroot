@@ -1,0 +1,100 @@
+bash -n "$HOME/openroot/hash_assign_v1.sh"
+set -e
+TEST_ROOT="$HOME/openroot/hash_assign_smoke"
+TEST_DB="$HOME/openroot/data/hash_manifest_optiplex_smoke.db"
+TEST_LOG="$HOME/openroot/logs/hash_assign_optiplex_smoke.log"
+TEST_RUN="$HOME/openroot/run/hash_assign_optiplex_smoke"
+echo "=== CLEAN TEST STATE ==="
+rm -rf "$TEST_ROOT" "$TEST_RUN"
+rm -f "$TEST_DB" "$TEST_DB-wal" "$TEST_DB-shm" "$TEST_LOG"
+mkdir -p "$TEST_ROOT/subdir" "$TEST_RUN"
+printf 'optiplex alpha\n' > "$TEST_ROOT/alpha.txt"
+printf 'optiplex beta\n' > "$TEST_ROOT/subdir/beta.txt"
+printf 'optiplex gamma\n' > "$TEST_ROOT/subdir/gamma.txt"
+echo "=== FIRST PASS ==="
+SOURCE_ROOT="$TEST_ROOT" DB="$TEST_DB" HOST_TAG="optiplex_smoke" LOG_DIR="$HOME/openroot/logs" RUN_DIR="$TEST_RUN" BATCH_SIZE=1 bash "$HOME/openroot/hash_assign_v1.sh"   > "$TEST_LOG" 2>&1
+echo "=== SECOND PASS ==="
+SOURCE_ROOT="$TEST_ROOT" DB="$TEST_DB" HOST_TAG="optiplex_smoke" LOG_DIR="$HOME/openroot/logs" RUN_DIR="$TEST_RUN" BATCH_SIZE=1 bash "$HOME/openroot/hash_assign_v1.sh"   >> "$TEST_LOG" 2>&1
+echo "=== DATABASE ASSERTIONS ==="
+sqlite3 -header -column "$TEST_DB" '
+SELECT
+  COUNT(*) AS total_rows,
+  SUM(status = '\''ok'\'') AS ok_rows,
+  SUM(status = '\''error'\'') AS error_rows,
+  COUNT(DISTINCT sha256) AS unique_hashes
+FROM manifest;
+'
+OK_ROWS="$(sqlite3 -noheader "$TEST_DB" "SELECT COUNT(*) FROM manifest WHERE status='ok';")"
+ERR_ROWS="$(sqlite3 -noheader "$TEST_DB" "SELECT COUNT(*) FROM manifest WHERE status='error';")"
+TOTAL_ROWS="$(sqlite3 -noheader "$TEST_DB" "SELECT COUNT(*) FROM manifest;")"
+echo
+echo "=== SECOND PASS EVENTS ==="
+grep -E 'event=(start|checkpoint|complete|exit|fatal|write_failed)'   "$TEST_LOG" | tail -n 20
+echo
+echo "=== ASSERTIONS ==="
+echo "ok_rows=$OK_ROWS"
+echo "error_rows=$ERR_ROWS"
+echo "total_rows=$TOTAL_ROWS"
+test "$OK_ROWS" = "3"
+test "$ERR_ROWS" = "0"
+test "$TOTAL_ROWS" = "3"
+grep -q 'seen=3 hashed=0 skipped=3 errors=0' "$TEST_LOG"
+echo "OPTIPLEX SMOKE TEST PASS"
+clear
+set -e
+REAL_DB="$HOME/openroot/data/hash_manifest_optiplex.db"
+REAL_LOG="$HOME/openroot/logs/hash_assign_optiplex.log"
+REAL_NOHUP_LOG="$HOME/openroot/logs/hash_assign_optiplex.nohup.log"
+REAL_RUN="$HOME/openroot/run"
+echo "=== OPTIPLEX PRE-LAUNCH ==="
+echo "--- Existing hash/sqlite processes ---"
+ps -ef | grep -E '[h]ash_assign|[s]qlite3' || true
+echo "--- Clear stale OptiPlex run markers only ---"
+rm -f "$REAL_RUN/hash_assign_optiplex.pid"
+rm -rf "$REAL_RUN/hash_assign_optiplex.lock"
+echo "--- Clear operational logs for this fresh v1 run ---"
+: > "$REAL_LOG"
+: > "$REAL_NOHUP_LOG"
+echo "--- Existing real DB tables, if any ---"
+sqlite3 "$REAL_DB" '.tables' 2>/dev/null || true
+echo "=== START OPTIPLEX HASHER ==="
+nohup bash "$HOME/openroot/hash_assign_v1.sh"   > "$REAL_NOHUP_LOG" 2>&1   < /dev/null &
+LAUNCHER_PID=$!
+echo "$LAUNCHER_PID" > "$REAL_RUN/hash_assign_optiplex.launcher.pid"
+echo "launcher_pid=$LAUNCHER_PID"
+sleep 5
+echo "=== LIVE PROCESS ==="
+HASH_PID="$(cat "$REAL_RUN/hash_assign_optiplex.pid" 2>/dev/null || true)"
+if [[ -n "$HASH_PID" ]] && kill -0 "$HASH_PID" 2>/dev/null; then   ps -p "$HASH_PID" -o pid,etime,pcpu,pmem,cmd; else   echo "OptiPlex hash job is not running. Logs follow."; fi
+echo "=== V1 EVENT LOG ==="
+tail -n 30 "$REAL_LOG" 2>/dev/null || true
+echo "=== NOHUP OUTPUT ==="
+tail -n 30 "$REAL_NOHUP_LOG" 2>/dev/null || true
+echo "=== DURABLE MANIFEST ROWS ==="
+sqlite3 -header -column "$REAL_DB" '
+SELECT
+  COUNT(*) AS total_rows,
+  SUM(status = '\''ok'\'') AS successful_rows,
+  SUM(status = '\''error'\'') AS error_rows,
+  COUNT(DISTINCT sha256) AS unique_contents,
+  MAX(hashed_at) AS newest_durable_hash
+FROM manifest;
+' 2>/dev/null || true
+DB="$HOME/openroot/data/hash_manifest_optiplex.db"
+PID="$(cat "$HOME/openroot/run/hash_assign_optiplex.pid" 2>/dev/null || true)"
+echo "=== PROCESS ==="
+if [[ -n "$PID" ]] && kill -0 "$PID" 2>/dev/null; then   ps -p "$PID" -o pid,etime,pcpu,pmem,cmd; else   echo "OptiPlex hasher: stopped"; fi
+echo
+echo "=== DURABLE PROGRESS ==="
+sqlite3 -noheader "$DB" "
+SELECT
+  'rows=' || COUNT(*)
+  || ' ok=' || SUM(status='ok')
+  || ' errors=' || SUM(status='error')
+  || ' unique=' || COUNT(DISTINCT sha256)
+  || ' latest=' || COALESCE(MAX(hashed_at), 'none')
+FROM manifest;
+"
+echo
+echo "=== LAST EVENTS ==="
+grep -E 'event=(checkpoint|complete|exit|fatal|write_failed)'   "$HOME/openroot/logs/hash_assign_optiplex.log"   | tail -n 10

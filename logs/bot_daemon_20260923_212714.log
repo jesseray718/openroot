@@ -1,0 +1,27 @@
+nohup: ignoring input
+=== BOT DAEMON ===
+Starting at: 2026-09-23T21:27:14.461711
+Logging to: /home/jesse/openroot/logs/bot_daemon_20260923_212714.log
+
+--- Cycle 1 ---
+⚠️ Cycle 1 timed out (1h limit)
+
+--- Cycle 2 ---
+⚠️ Cycle 2 timed out (1h limit)
+
+--- Cycle 3 ---
+⚠️ Cycle 3 timed out (1h limit)
+
+--- Cycle 4 ---
+⚠️ Cycle 4 timed out (1h limit)
+
+--- Cycle 5 ---
+⚠️ Cycle 5 timed out (1h limit)
+
+--- Cycle 6 ---
+
+Shutdown requested...
+Cycle 6 completed in 16.2s (exit code -15)
+⚠️ Non-zero exit code -15, waiting 5 seconds...
+
+Daemon stopped after 6 cycles

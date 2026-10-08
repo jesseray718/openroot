@@ -1,0 +1,22 @@
+{
+  "artifacts": {
+    "evidence": "/home/jesse/openroot/reports/local_loop_20260928T125901Z_678132_24052/evidence.json",
+    "packet": "/home/jesse/openroot/reports/local_loop_20260928T125901Z_678132_24052/task_packet.md",
+    "proposal": "/home/jesse/openroot/reports/local_loop_20260928T125901Z_678132_24052/local_proposal.md",
+    "routes": "/home/jesse/openroot/reports/local_loop_20260928T125901Z_678132_24052/routes.json",
+    "tasks": "/home/jesse/openroot/reports/local_loop_20260928T125901Z_678132_24052/tasks.json"
+  },
+  "blockchain_compute_used": false,
+  "branch": "main",
+  "database": "/home/jesse/openroot/data/openroot_local_loop.db",
+  "generated_at": "2026-09-28T13:00:03.809658+00:00",
+  "git_dirty": true,
+  "head": "2e9c68398fb4d2be67c08bde2441bf8826925788",
+  "human_hold_present": false,
+  "model": null,
+  "mutation_performed": false,
+  "network_compute_used": false,
+  "repo": "/home/jesse/openroot",
+  "run_id": "20260928T125901Z_678132_24052",
+  "schema": "openroot.local_loop.v2"
+}

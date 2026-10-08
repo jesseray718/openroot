@@ -1,0 +1,12 @@
+{
+  "completed_at": "2026-10-03T04:06:57Z",
+  "duplicates": 339,
+  "errors": [],
+  "mode": "copy",
+  "network_used": false,
+  "scanned": 5030,
+  "skipped": 0,
+  "source": "/home/jesse/archives/openroot (1)/sync-from-kai",
+  "status": "organize_complete",
+  "unique_staged": 4691
+}

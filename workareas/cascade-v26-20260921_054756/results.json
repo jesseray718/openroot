@@ -1,0 +1,141 @@
+{
+ "regime": {
+  "kappa": 0.15,
+  "seed_tax": 0.3,
+  "seed_target": 0.5,
+  "shock_gen": 12,
+  "shock_loss": 0.6,
+  "seed_loss": 0.4,
+  "deploy_gens": 5,
+  "deploy_frac": 0.5,
+  "gens": 60
+ },
+ "runs": [
+  {
+   "policy": "bottom-first",
+   "shocked": false,
+   "final_min_floor": 1.0,
+   "final_median_floor": 1.0,
+   "final_gini": 0.0,
+   "mean_seed_stock": 0.3193,
+   "idle_gens_at_cap": 23,
+   "recovery_gens": "never",
+   "cumulative_welfare": 255.03,
+   "path_log": 182.48,
+   "final_gain": 182.48,
+   "ledger_leak": 0.0,
+   "flow": {
+    "parked": 31.93,
+    "drawn": 0.0,
+    "granted": 0.0,
+    "overflow_cap": 264.59,
+    "grant_clipped": 0.0
+   }
+  },
+  {
+   "policy": "bottom-first",
+   "shocked": true,
+   "final_min_floor": 1.0,
+   "final_median_floor": 1.0,
+   "final_gini": 0.0,
+   "mean_seed_stock": 0.3447,
+   "idle_gens_at_cap": 0,
+   "recovery_gens": 19,
+   "cumulative_welfare": 255.54,
+   "path_log": 274.1,
+   "final_gain": 182.47,
+   "ledger_leak": 91.629073,
+   "flow": {
+    "parked": 39.55,
+    "drawn": 0.02,
+    "granted": 4.12,
+    "overflow_cap": 53.58,
+    "grant_clipped": 0.0
+   }
+  },
+  {
+   "policy": "equal",
+   "shocked": false,
+   "final_min_floor": 1.0,
+   "final_median_floor": 1.0,
+   "final_gini": 0.0,
+   "mean_seed_stock": 0.3152,
+   "idle_gens_at_cap": 16,
+   "recovery_gens": "never",
+   "cumulative_welfare": 256.67,
+   "path_log": 182.48,
+   "final_gain": 182.48,
+   "ledger_leak": -0.0,
+   "flow": {
+    "parked": 31.52,
+    "drawn": 0.0,
+    "granted": 0.0,
+    "overflow_cap": 240.58,
+    "grant_clipped": 0.0
+   }
+  },
+  {
+   "policy": "equal",
+   "shocked": true,
+   "final_min_floor": 0.8601,
+   "final_median_floor": 0.9331,
+   "final_gini": 0.0323,
+   "mean_seed_stock": 0.3239,
+   "idle_gens_at_cap": 0,
+   "recovery_gens": 26,
+   "cumulative_welfare": 247.49,
+   "path_log": 267.06,
+   "final_gain": 175.43,
+   "ledger_leak": 91.629073,
+   "flow": {
+    "parked": 36.17,
+    "drawn": 0.0,
+    "granted": 3.1,
+    "overflow_cap": 3.5,
+    "grant_clipped": 0.0
+   }
+  },
+  {
+   "policy": "merit-top",
+   "shocked": false,
+   "final_min_floor": 0.01,
+   "final_median_floor": 0.3486,
+   "final_gini": 0.4908,
+   "mean_seed_stock": 0.109,
+   "idle_gens_at_cap": 0,
+   "recovery_gens": "never",
+   "cumulative_welfare": -4.81,
+   "path_log": -23.12,
+   "final_gain": -23.12,
+   "ledger_leak": 0.0,
+   "flow": {
+    "parked": 10.9,
+    "drawn": 0.0,
+    "granted": 0.0,
+    "overflow_cap": 48.31,
+    "grant_clipped": 0.0
+   }
+  },
+  {
+   "policy": "merit-top",
+   "shocked": true,
+   "final_min_floor": 0.01,
+   "final_median_floor": 0.01,
+   "final_gini": 0.6212,
+   "mean_seed_stock": 0.0846,
+   "idle_gens_at_cap": 0,
+   "recovery_gens": "never",
+   "cumulative_welfare": -111.15,
+   "path_log": -21.5,
+   "final_gain": -86.26,
+   "ledger_leak": 64.753116,
+   "flow": {
+    "parked": 11.83,
+    "drawn": 0.05,
+    "granted": 2.8,
+    "overflow_cap": 13.55,
+    "grant_clipped": 0.0
+   }
+  }
+ ]
+}

@@ -1,0 +1,1003 @@
+
+===== bin/0012_newton_chain.py =====
+7:import hashlib
+92:def make_p001(): return {"rule": "Insufficient observation reduces system quality", "derives_from": ["AX-022"], "condition": lambda p: p.get("observation_days", 0) < 7, "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 15, "recommendations": p.get("recommendations", []) + ["Extend observation to 7+ days"]}), "depth": 1}
+93:def make_p002(): return {"rule": "Finite energy sources carry systemic debt", "derives_from": ["AX-026", "AX-002"], "condition": lambda p: p.get("primary_energy_source", "grid").lower() not in ["solar", "wind", "geothermal", "hydro", "biomass", "renewable"], "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 30, "recommendations": p.get("recommendations", []) + ["Migrate to renewable energy source"]}), "depth": 2}
+94:def make_p003(): return {"rule": "Thermal gradients without recovery waste energy", "derives_from": ["AX-001", "AX-023"], "condition": lambda p: p.get("thermal_gradient") and not p.get("waste_heat_recovery"), "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 25, "recommendations": p.get("recommendations", []) + ["Install heat exchanger"]}), "depth": 2}
+95:def make_p004(): return {"rule": "Systems without feedback loops are fragile", "derives_from": ["AX-015", "AX-025"], "condition": lambda p: not p.get("feedback_mechanism"), "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 20, "recommendations": p.get("recommendations", []) + ["Implement feedback monitoring"]}), "depth": 2}
+96:def make_p005(): return {"rule": "Single-pathway systems have single points of failure", "derives_from": ["AX-033", "AX-017"], "condition": lambda p: p.get("pathway_alternatives", 1) < 2, "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 15, "recommendations": p.get("recommendations", []) + ["Add backup pathways"]}), "depth": 2}
+97:def make_p006(): return {"rule": "Waste outputs indicate incomplete design", "derives_from": ["AX-027", "AX-007"], "condition": lambda p: any(o.get("disposition") == "waste" for o in p.get("outputs", [])), "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 20, "recommendations": p.get("recommendations", []) + ["Circulate waste as input"]}), "depth": 2}
+98:def make_p007(): return {"rule": "Long payback indicates poor energy ROI", "derives_from": ["AX-024", "AX-023"], "condition": lambda p: p.get("payback_days", 999) > 365, "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 20, "recommendations": p.get("recommendations", []) + ["Reduce payback below 1 year"]}), "depth": 2}
+99:def make_p008(): return {"rule": "High human input violates least effort principle", "derives_from": ["AX-021", "AX-030"], "condition": lambda p: p.get("human_input", 1) > 10, "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 15, "recommendations": p.get("recommendations", []) + ["Automate to reduce human effort"]}), "depth": 2}
+100:def make_p009(): return {"rule": "Monolithic deployments risk catastrophic failure", "derives_from": ["AX-030", "AX-017"], "condition": lambda p: not p.get("incremental_rollout") and p.get("module_size", 0) > 500, "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 10, "recommendations": p.get("recommendations", []) + ["Phase incremental rollout"]}), "depth": 2}
+101:def make_p010(): return {"rule": "Systems lacking versioning cannot adapt", "derives_from": ["AX-032", "AX-041"], "condition": lambda p: not p.get("change_management"), "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 10, "recommendations": p.get("recommendations", []) + ["Implement version control"]}), "depth": 2}
+118:class NewtonChainEngine:
+119:    def __init__(self, axioms, postulates):
+120:        self.axioms = axioms
+121:        self.postulates = dict(postulates)
+122:        self.proof_chains = []
+123:        self.new_postulates_generated = []
+137:    def apply_all_postulates(self, problem, depth_limit=99):
+142:        problem.setdefault("proof_chain", [])
+145:        for p_key, p_def in self.postulates.items():
+151:                    problem["proof_chain"].append({"postulate": p_key, "rule": p_def["rule"], "derives_from": p_def["derives_from"], "depth": p_def["depth"]})
+163:        new_postulates = []
+166:                existing = any(set(p_def.get("combines", [])) == set(combo) for p_def in self.postulates.values())
+168:                    new_key = f"NP-{len(self.new_postulates_generated)+1:03d}"
+171:                        derives.extend(self.postulates[p_key]["derives_from"])
+173:                    new_postulate = {
+176:                        "condition": lambda p, keys=set(combo): all(self.postulates[k]["condition"](p) for k in keys),
+178:                        "depth": max(self.postulates[k]["depth"] for k in combo) + 1,
+181:                    self.postulates[new_key] = new_postulate
+182:                    self.new_postulates_generated.append(new_key)
+183:                    new_postulates.append(new_key)
+184:        return new_postulates
+192:    def verify_proof_chain(self, problem):
+193:        chain = problem.get("proof_chain", [])
+196:                if source not in self.axioms and source not in self.postulates:
+207:            current, fired = self.apply_all_postulates(current, depth_limit)
+210:            all_results.append({"loop": loop + 1, "depth_limit": depth_limit, "postulates_fired": fired, "fired_count": len(fired), "efficiency": score, "total_postulates": len(self.postulates)})
+213:                if delta < 0.5 and len(fired) == len(all_results[-2]["postulates_fired"]):
+217:            current, fired = self.apply_all_postulates(current, 99)
+219:            all_results.append({"loop": self.loop_count + 1, "depth_limit": 99, "postulates_fired": fired, "fired_count": len(fired), "efficiency": final_score, "total_postulates": len(self.postulates), "new_postulates_active": len(new_posts)})
+220:        valid, verify_msg = self.verify_proof_chain(current)
+221:        return {"loops_executed": len(all_results), "loop_history": all_results, "final_efficiency": all_results[-1]["efficiency"], "initial_efficiency": all_results[0]["efficiency"], "improvement": all_results[-1]["efficiency"] - all_results[0]["efficiency"], "final_problem": current, "recommendations": current.get("recommendations", []), "proof_chain": current.get("proof_chain", []), "proof_valid": valid, "verify_msg": verify_msg, "new_postulates_generated": self.new_postulates_generated, "total_postulates": len(self.postulates), "total_axioms": len(self.axioms)}
+225:        entry = {"timestamp": datetime.now(datetime.UTC).isoformat() + "Z", "type": "newton_chain_proof", "question_hash": hashlib.sha256(question.encode()).hexdigest()[:16], "loops": result["loops_executed"], "final_efficiency": result["final_efficiency"], "improvement": result["improvement"], "proof_chain_length": len(result["proof_chain"]), "proof_valid": result["proof_valid"], "new_postulates": result["new_postulates_generated"], "total_axioms": result["total_axioms"], "total_postulates": result["total_postulates"], "recommendations": result["recommendations"][:5], "prev_hash": prev_hash, "verified": False}
+226:        entry["hash"] = hashlib.sha256(json.dumps(entry, sort_keys=True).encode()).hexdigest()
+232:        learnings = {"sessions": [], "generated_postulates": {}}
+239:        for p_key in result.get("new_postulates_generated", []):
+240:            p_def = self.postulates.get(p_key, {})
+241:            learnings["generated_postulates"][p_key] = {"rule": p_def.get("rule", ""), "derives_from": p_def.get("derives_from", []), "combines": p_def.get("combines", []), "depth": p_def.get("depth", 0), "created_at": datetime.now(datetime.UTC).isoformat() + "Z"}
+242:        learnings["sessions"].append({"timestamp": datetime.now(datetime.UTC).isoformat() + "Z", "question_hash": hashlib.sha256(question.encode()).hexdigest()[:16], "loops": result["loops_executed"], "final_efficiency": result["final_efficiency"], "proof_valid": result["proof_valid"]})
+250:def parse_question(question):
+282:<p>{{ axiom_count }} axioms · {{ postulate_count }} postulates · Self-expanding reasoner</p>
+288:<span class="badge {{ 'ok' if result.proof_valid else 'fail' }}">Proof: {{ 'VALID' if result.proof_valid else 'INVALID' }}</span>
+289:{% if result.new_postulates_generated %}<span class="badge" style="background:#4a0;color:#fff">{{ result.new_postulates_generated|length }} NEW postulates!</span>{% endif %}
+294:<div class="stat"><div class="stat-val">{{ result.proof_chain|length }}</div><div class="stat-label">Proof Steps</div></div>
+295:<div class="stat"><div class="stat-val">{{ result.total_postulates }}</div><div class="stat-label">Postulates</div></div>
+301:<h3>Proof Chain ({{ result.proof_chain|length }})</h3>
+302:{% for step in result.proof_chain %}<div style="padding:5px 0;border-bottom:1px solid #333;font-size:13px"><strong>{{ step.postulate }}</strong>: {{ step.rule }} <span style="color:#4af">← {{ step.derives_from|join(', ') }}</span></div>{% endfor %}
+304:{% if result.new_postulates_generated %}
+306:{% for np in result.new_postulates_generated %}<div><strong>{{ np }}</strong> (auto-generated)</div>{% endfor %}
+312:<textarea name="question" placeholder="Ask anything. Engine chains axioms → postulates → theorems.">{{ question or '' }}</textarea>
+315:<p style="margin-top:30px"><a href="/axioms" style="color:#6d4aff">Axioms</a> · <a href="/postulates" style="color:#6d4aff">Postulates</a> · <a href="/health" style="color:#6d4aff">Health</a></p>
+318:@app.route("/")
+319:def index():
+320:    return render_template_string(INDEX_HTML, result=None, question="", error=None, axiom_count=len(ENGINE.axioms), postulate_count=len(ENGINE.postulates), acre_hash="")
+322:@app.route("/reason", methods=["POST"])
+323:def reason():
+326:        return render_template_string(INDEX_HTML, result=None, question="", error="Enter a question", axiom_count=len(ENGINE.axioms), postulate_count=len(ENGINE.postulates), acre_hash="")
+331:    return render_template_string(INDEX_HTML, result=result, question=question, error=None, axiom_count=len(ENGINE.axioms), postulate_count=len(ENGINE.postulates), acre_hash=acre_entry["hash"])
+333:@app.route("/axioms")
+334:def view_axioms():
+335:    html = f"<h1>Axioms ({len(ENGINE.axioms)})</h1><table><tr><th>ID</th><th>Category</th><th>Statement</th></tr>"
+336:    for k, v in sorted(ENGINE.axioms.items()):
+341:@app.route("/postulates")
+342:def view_postulates():
+343:    html = f"<h1>Postulates ({len(ENGINE.postulates)})</h1>"
+344:    for k, v in sorted(ENGINE.postulates.items()):
+351:@app.route("/health")
+352:def health():
+353:    return jsonify({"status": "ok", "axioms": len(ENGINE.axioms), "postulates": len(ENGINE.postulates), "new_generated": len(ENGINE.new_postulates_generated)})
+355:@app.route("/api/v1/reason", methods=["POST"])
+356:def api_reason():
+365:    return jsonify({"success": True, "loops": result["loops_executed"], "efficiency": result["final_efficiency"], "proof_valid": result["proof_valid"], "new_postulates": result["new_postulates_generated"], "recommendations": result["recommendations"][:5], "acre_hash": acre["hash"]})
+367:def run_batch(json_path):
+378:        print(f"Q: {q[:60]}\nEffic: {result['final_efficiency']:.1f}% | Loops: {result['loops_executed']} | Proof: {'VALID' if result['proof_valid'] else 'INVALID'}")
+379:        if result['new_postulates_generated']:
+380:            print(f"🌟 NEW: {result['new_postulates_generated']}")
+383:if __name__ == "__main__":
+384:    if len(sys.argv) > 1 and sys.argv[1] == "--batch":
+385:        batch_file = sys.argv[2] if len(sys.argv) > 2 else os.path.join(ROOT, "computational_flow/tasks/pow_log.json")
+388:        print(f"\n  🔭 NEWTON CHAIN ENGINE\n  {len(AXIOMS)} axioms · {len(INITIAL_POSTULATES)} postulates\n  Web: http://127.0.0.1:5002\n  Batch: python3 newton_chain_fixed.py --batch file.json\n")
+
+===== bin/0054_agape_ledger_chain.py =====
+8:import os, json, hashlib, time, shutil
+27:def encode_agape(text):
+35:def get_last_block():
+44:def create_genesis():
+54:parent_hash: null
+101:        "parent_hash": None,
+102:        "document_hash": hashlib.sha256(genesis_const.encode()).hexdigest(),
+113:    genesis_block["hash"] = hashlib.sha256(
+125:def append_amendment(amendment_text, operator="jesse_mcmillen"):
+177:        "parent_hash": last_block["hash"],
+178:        "document_hash": hashlib.sha256(new_const.encode()).hexdigest(),
+190:    new_block["hash"] = hashlib.sha256(
+204:        "parent_hash": new_block["parent_hash"][:32] if new_block["parent_hash"] else None,
+214:def fork_from(version_number, new_operator):
+238:        "parent_hash": fork_point["hash"],
+242:    fork_block["hash"] = hashlib.sha256(
+251:def merge_timelines(chain_a, chain_b, operator="merge_node"):
+273:        "parent_hash_a": blocks_a[-1]["hash"],
+274:        "parent_hash_b": blocks_b[-1]["hash"],
+279:    merge_block["hash"] = hashlib.sha256(
+289:def verify_chain():
+302:        recomputed = hashlib.sha256(
+308:            recomputed2 = hashlib.sha256(
+316:            if block.get("parent_hash") != prev_hash:
+321:def print_chain():
+338:        print(f"  Parent: {b.get('parent_hash','genesis')[:24]}..." if b.get('parent_hash') else "  Parent: genesis")
+348:if __name__ == "__main__":
+353:    print("Append-only | Forkable | Mergeable | Tamper-proof")
+387:    print(f"  Parent hash: {new_block['parent_hash'][:24]}...")
+394:    valid, msg = verify_chain()
+
+===== bin/0107_agape_mesh_oracle.py =====
+9:import os, sys, json, hashlib, time, re
+13:import argparse
+17:MERKLE_LOG = BASE_DIR / "merkle_orbit_log.json"
+37:    "ledger", "axiom", "constitution", "entropy", "joule", "η"
+54:def ensure_structure():
+64:def extract_words():
+79:def score(word, counts, fmap):
+89:def quantum(top, counts, fmap):
+99:def merkle(data):
+101:    return hashlib.sha256(payload.encode()).hexdigest()
+103:def log_orbit(num, results, mhash):
+109:        "merkle": mhash,
+126:def generate_todo(results):
+141:def write_sync_bridge():
+144:import json, hashlib, sys
+148:def merge(dirs):
+161:                h = hashlib.sha256(str(k).encode()).hexdigest()[:12]
+171:if __name__ == "__main__":
+172:    dirs = sys.argv[1:] or [str(Path.home() / "agapemesh-ledger")]
+178:def run_orbit(n, delay=0):
+187:    mhash = merkle(results)
+190:    print(f"Orbit {n} | collapsed {collapsed}/{len(results)} ({eff}%) | merkle {mhash[:16]}...")
+194:def main():
+195:    ap = argparse.ArgumentParser()
+205:if __name__ == "__main__":
+
+===== bin/0534_feed_oracle.py =====
+9:LOG = OPENROOT / "context_bridge" / "seed_oracle.log"
+11:def log(msg):
+15:def feed_one(seed_path):
+17:    if meta.get("oracle_ingest_status") == "fed": return True
+32:        meta["oracle_ingest_status"] = "fed"
+37:def main(limit=30):
+44:            if json.loads(p.read_text()).get("oracle_ingest_status") == "pending":
+48:if __name__ == "__main__":
+49:    main(int(sys.argv[1]) if len(sys.argv)>1 else 30)
+
+===== bin/0677_physics_ledger_v1.py =====
+10:import hashlib
+19:def create_block(chain, prev_block, label, params, result):
+34:    block_hash = hashlib.sha256(json.dumps(block_data, sort_keys=True).encode()).hexdigest()
+46:def run_triad_calc(airflow_cfm, solar_kw, stirling_eff, humidity_reduction, insulation_loss_pct):
+66:def main():
+135:if __name__ == "__main__":
+
+===== bin/0678_physics_ledger_v2.py =====
+8:import hashlib
+16:def create_block(chain, prev_block, label, params, result):
+29:    block_hash = hashlib.sha256(json.dumps(block_data, sort_keys=True).encode()).hexdigest()
+37:def run_triad_calc_desiccant(airflow_cfm, solar_kw, stirling_eff, 
+86:def main():
+162:if __name__ == "__main__":
+
+===== bin/0768_agape_cooperation_theorem.py =====
+2:"""agape_cooperation_theorem.py - Formalize: Agape-treated nodes have zero cooperation friction."""
+4:sys.path.insert(0, '/home/jesse/openroot/axiom_engine')
+5:from theorems_extend import load_all, load_cache, content_hash, flag_of, dumps, save_cache
+8:STORE = Path("/home/jesse/openroot/axiom_engine/store")
+11:# First, add the axiom if it doesn't exist
+12:def ensure_agape_axiom():
+13:    """Ensure AX-AGAPE-COOPERATION exists in axioms.jsonl."""
+14:    axioms_file = STORE / "axioms.jsonl"
+15:    axioms = [json.loads(l) for l in axioms_file.read_text().splitlines() if l.strip()]
+18:    existing = any(a.get("id") == target_id for a in axioms)
+23:    new_axiom = {
+24:        "kind": "axiom",
+30:        "proof": []
+33:    with axioms_file.open("a", encoding="utf-8") as f:
+34:        f.write(json.dumps(new_axiom, sort_keys=True, separators=(",", ":")) + "\n")
+38:def prove_agape_cooperation():
+39:    """Hang the theorem: Agape-treatment → zero friction → maximal η."""
+41:    cache = load_cache()
+46:    proof_steps = [
+53:    body = {"kind": "theorem", "id": goal_id,
+56:            "proof": proof_steps}
+61:    rec = {"kind": "theorem", "id": goal_id, "flag": flag, "hash": digest,
+62:           "statement": body["statement"], "premises": premises, "proof": proof_steps,
+65:    with (STORE / "theorems.jsonl").open("a", encoding="utf-8") as f:
+68:        f.write(dumps({"flag": flag, "hash": digest, "id": goal_id, "kind": "theorem", "ts": rec["ts"]}) + "\n")
+70:    cache["memo"][goal_id] = {"flag": flag, "hash": digest}
+71:    save_cache(cache)
+73:    return {"status": "HUNG", "flag": flag, "hash": digest, "steps": len(proof_steps)}
+75:if __name__ == "__main__":
+77:    axiom_result = ensure_agape_axiom()
+78:    print(json.dumps(axiom_result, indent=2))
+81:    theorem_result = prove_agape_cooperation()
+82:    print(json.dumps(theorem_result, indent=2))
+84:    print("\nRun audit to confirm: python3 theorems_extend.py audit")
+
+===== bin/0773_proof_builder.py =====
+2:"""proof_builder.py - manual proof construction with kernel validation."""
+4:sys.path.insert(0, '/home/jesse/openroot/axiom_engine')
+5:from theorems_extend import load_all, load_cache, content_hash, flag_of, dumps, save_cache
+8:STORE = Path("/home/jesse/openroot/axiom_engine/store")
+11:def build_theorem(goal_id, goal_statement, premises_list, proof_steps):
+12:    """Build theorem record and attempt to prove via kernel."""
+14:    cache = load_cache()
+26:    # Build proof body
+28:        "kind": "theorem",
+32:        "proof": proof_steps,
+38:        "kind": "theorem",
+44:        "proof": proof_steps,
+48:    # Write to theorems.jsonl and chain.jsonl
+49:    with (STORE / "theorems.jsonl").open("a", encoding="utf-8") as f:
+52:        f.write(dumps({"flag": flag, "hash": digest, "id": goal_id, "kind": "theorem", "ts": rec["ts"]}) + "\n")
+55:    cache["memo"][goal_id] = {"flag": flag, "hash": digest}
+56:    save_cache(cache)
+58:    return {"status": "HUNG", "flag": flag, "hash": digest, "steps": len(proof_steps)}
+60:if __name__ == "__main__":
+61:    print("Usage: Import this module, call build_theorem()")
+64:    >>> from proof_builder import build_theorem
+65:    >>> build_theorem(
+
+===== bin/0775_sacred_language_theorem.py =====
+2:"""sacred_language_theorem.py - A=Agape language system formalization."""
+4:sys.path.insert(0, '/home/jesse/openroot/axiom_engine')
+5:from theorems_extend import load_all, load_cache, content_hash, flag_of, dumps, save_cache
+8:STORE = Path("/home/jesse/openroot/axiom_engine/store")
+10:def ensure_theological_axioms():
+11:    """Add foundational theological axioms if missing."""
+12:    axioms_file = STORE / "axioms.jsonl"
+13:    new_axioms = [
+15:            "kind": "axiom",
+21:            "proof": []
+24:            "kind": "axiom", 
+30:            "proof": []
+33:            "kind": "axiom",
+39:            "proof": []
+44:    if axioms_file.exists():
+45:        existing_ids = set(json.loads(l).get("id") for l in axioms_file.read_text().splitlines() if l.strip())
+48:    for axiom in new_axioms:
+49:        if axiom["id"] not in existing_ids:
+50:            with axioms_file.open("a", encoding="utf-8") as f:
+51:                f.write(json.dumps(axiom, sort_keys=True, separators=(",", ":")) + "\n")
+52:            added.append(axiom["id"])
+53:            print(f"Added: {axiom['id']}")
+57:def prove_sacred_language_theorem():
+58:    """Hang theorem: Sacred language encodes theological truth in symbol space."""
+60:    cache = load_cache()
+65:    proof_steps = [
+72:    body = {"kind": "theorem", "id": goal_id,
+75:            "proof": proof_steps}
+80:    rec = {"kind": "theorem", "id": goal_id, "flag": flag, "hash": digest,
+81:           "statement": body["statement"], "premises": premises, "proof": proof_steps,
+84:    with (STORE / "theorems.jsonl").open("a", encoding="utf-8") as f:
+89:        f.write(dumps({"flag": flag, "hash": digest, "id": goal_id, "kind": "theorem", "ts": rec["ts"]}) + "\n")
+91:    cache["memo"][goal_id] = {"flag": flag, "hash": digest}
+92:    save_cache(cache)
+94:    return {"status": "HUNG", "flag": flag, "hash": digest, "steps": len(proof_steps)}
+96:if __name__ == "__main__":
+97:    print("Adding theological axioms...")
+98:    axiom_result = ensure_theological_axioms()
+99:    print(json.dumps(axiom_result, indent=2))
+101:    print("\nProving sacred language theorem...")
+102:    theorem_result = prove_sacred_language_theorem()
+103:    print(json.dumps(theorem_result, indent=2))
+105:    print("\nRun audit to verify counts increased.")
+
+===== bin/0776_sacred_merkle_system.py =====
+2:"""sacred_merkle_system.py - Merkle tree + sacred language + comparative theology."""
+3:import sys, json, hashlib, time
+4:sys.path.insert(0, '/home/jesse/openroot/axiom_engine')
+5:from theorems_extend import load_all, load_cache, content_hash, flag_of, dumps, save_cache
+8:STORE = Path("/home/jesse/openroot/axiom_engine/store")
+9:MERKLE_FILE = STORE / "merkle_definitions.json"
+11:def merkle_root(items):
+14:        return hashlib.sha256(b"GENESIS_BLOCK_0A").hexdigest()  # 0A = void
+17:    hashes = [hashlib.sha256(item.encode()).hexdigest() for item in items]
+26:            next_level.append(hashlib.sha256(combined.encode()).hexdigest())
+31:def compare_agape_etymology():
+69:def build_merkle_tree():
+70:    """Build Merkle tree from all axioms and definitions."""
+75:    for layer in ["axioms", "definitions", "theorems"]:
+80:    root = merkle_root(items)
+81:    return {"merkle_root": root, "item_count": len(items), "timestamp": time.time()}
+83:def formalize_genesis_block():
+86:    cache = load_cache()
+91:    proof_steps = [
+98:    body = {"kind": "theorem", "id": goal_id,
+101:            "proof": proof_steps}
+106:    rec = {"kind": "theorem", "id": goal_id, "flag": flag, "hash": digest,
+107:           "statement": body["statement"], "premises": premises, "proof": proof_steps,
+110:    with (STORE / "theorems.jsonl").open("a", encoding="utf-8") as f:
+115:        f.write(dumps({"flag": flag, "hash": digest, "id": goal_id, "kind": "theorem", "ts": rec["ts"]}) + "\n")
+117:    cache["memo"][goal_id] = {"flag": flag, "hash": digest}
+118:    save_cache(cache)
+122:def analyze_patterns():
+133:    for layer in ["axioms", "definitions"]:
+144:if __name__ == "__main__":
+157:    merkle_data = build_merkle_tree()
+158:    print(f"  Root: {merkle_data['merkle_root'][:32]}...")
+159:    print(f"  Items: {merkle_data['item_count']}")
+161:    # Save merkle root
+163:        json.dump(merkle_data, f, indent=2)
+171:    # Step 4: Genesis Block theorem
+177:    print("Run audit: python3 theorems_extend.py audit")
+178:    print("Check Merkle file: cat /home/jesse/openroot/axiom_engine/store/merkle_definitions.json")
+
+===== bin/0778_theorem_generator.py =====
+2:"""theorem_generator.py - batch theorem production."""
+4:sys.path.insert(0, '/home/jesse/openroot/axiom_engine')
+5:from theorems_extend import load_all, load_cache, content_hash, flag_of, dumps, save_cache
+8:STORE = Path("/home/jesse/openroot/axiom_engine/store")
+11:def gen_theorem(goal_id, statement, premises, proof_steps):
+12:    """Generate and hang a single theorem."""
+13:    body = {"kind": "theorem", "id": goal_id, "statement": statement,
+14:            "premises": premises, "proof": proof_steps}
+18:    rec = {"kind": "theorem", "id": goal_id, "flag": flag, "hash": digest,
+19:           "statement": statement, "premises": premises, "proof": proof_steps,
+22:    with (STORE / "theorems.jsonl").open("a", encoding="utf-8") as f:
+25:        f.write(dumps({"flag": flag, "hash": digest, "id": goal_id, "kind": "theorem", "ts": rec["ts"]}) + "\n")
+27:    cache = load_cache()
+28:    cache["memo"][goal_id] = {"flag": flag, "hash": digest}
+29:    save_cache(cache)
+33:def euclid_batch():
+64:        r = gen_theorem(gid, stmt, pres, steps)
+69:if __name__ == "__main__":
+
+===== bin/0779_theorem_generator_batch2.py =====
+2:"""theorem_generator_batch2.py - Euclid Props I.7 through I.12."""
+4:sys.path.insert(0, '/home/jesse/openroot/axiom_engine')
+5:from theorems_extend import load_all, load_cache, content_hash, flag_of, dumps, save_cache
+8:STORE = Path("/home/jesse/openroot/axiom_engine/store")
+11:def gen_theorem(goal_id, statement, premises, proof_steps):
+12:    body = {"kind": "theorem", "id": goal_id, "statement": statement,
+13:            "premises": premises, "proof": proof_steps}
+17:    rec = {"kind": "theorem", "id": goal_id, "flag": flag, "hash": digest,
+18:           "statement": statement, "premises": premises, "proof": proof_steps,
+21:    with (STORE / "theorems.jsonl").open("a", encoding="utf-8") as f:
+24:        f.write(dumps({"flag": flag, "hash": digest, "id": goal_id, "kind": "theorem", "ts": rec["ts"]}) + "\n")
+26:    cache = load_cache()
+27:    cache["memo"][goal_id] = {"flag": flag, "hash": digest}
+28:    save_cache(cache)
+32:def euclid_batch_2():
+68:        r = gen_theorem(gid, stmt, pres, steps)
+73:if __name__ == "__main__":
+
+===== bin/0780_theorem_generator_batch3.py =====
+2:"""theorem_generator_batch3.py - Euclid Props I.13 through I.20."""
+4:sys.path.insert(0, '/home/jesse/openroot/axiom_engine')
+5:from theorems_extend import load_all, load_cache, content_hash, flag_of, dumps, save_cache
+8:STORE = Path("/home/jesse/openroot/axiom_engine/store")
+11:def gen_theorem(goal_id, statement, premises, proof_steps):
+12:    body = {"kind": "theorem", "id": goal_id, "statement": statement,
+13:            "premises": premises, "proof": proof_steps}
+17:    rec = {"kind": "theorem", "id": goal_id, "flag": flag, "hash": digest,
+18:           "statement": statement, "premises": premises, "proof": proof_steps,
+21:    with (STORE / "theorems.jsonl").open("a", encoding="utf-8") as f:
+24:        f.write(dumps({"flag": flag, "hash": digest, "id": goal_id, "kind": "theorem", "ts": rec["ts"]}) + "\n")
+26:    cache = load_cache()
+27:    cache["memo"][goal_id] = {"flag": flag, "hash": digest}
+28:    save_cache(cache)
+32:def euclid_batch_3():
+78:        r = gen_theorem(gid, stmt, pres, steps)
+83:if __name__ == "__main__":
+
+===== bin/0781_theorem_generator_batch4.py =====
+2:"""theorem_generator_batch4.py - Euclid Props I.21 through I.32."""
+4:sys.path.insert(0, '/home/jesse/openroot/axiom_engine')
+5:from theorems_extend import load_all, load_cache, content_hash, flag_of, dumps, save_cache
+8:STORE = Path("/home/jesse/openroot/axiom_engine/store")
+11:def gen_theorem(goal_id, statement, premises, proof_steps):
+12:    body = {"kind": "theorem", "id": goal_id, "statement": statement,
+13:            "premises": premises, "proof": proof_steps}
+17:    rec = {"kind": "theorem", "id": goal_id, "flag": flag, "hash": digest,
+18:           "statement": statement, "premises": premises, "proof": proof_steps,
+21:    with (STORE / "theorems.jsonl").open("a", encoding="utf-8") as f:
+24:        f.write(dumps({"flag": flag, "hash": digest, "id": goal_id, "kind": "theorem", "ts": rec["ts"]}) + "\n")
+26:    cache = load_cache()
+27:    cache["memo"][goal_id] = {"flag": flag, "hash": digest}
+28:    save_cache(cache)
+32:def euclid_batch_4():
+98:        r = gen_theorem(gid, stmt, pres, steps)
+103:if __name__ == "__main__":
+
+===== bin/0782_theorem_generator_batch5.py =====
+2:"""theorem_generator_batch5.py - Euclid Props I.33 through I.48 (Book 1 finale)."""
+4:sys.path.insert(0, '/home/jesse/openroot/axiom_engine')
+5:from theorems_extend import load_all, load_cache, content_hash, flag_of, dumps, save_cache
+8:STORE = Path("/home/jesse/openroot/axiom_engine/store")
+11:def gen_theorem(goal_id, statement, premises, proof_steps):
+12:    body = {"kind": "theorem", "id": goal_id, "statement": statement,
+13:            "premises": premises, "proof": proof_steps}
+16:    rec = {"kind": "theorem", "id": goal_id, "flag": flag, "hash": digest,
+17:           "statement": statement, "premises": premises, "proof": proof_steps,
+19:    with (STORE / "theorems.jsonl").open("a", encoding="utf-8") as f:
+22:        f.write(dumps({"flag": flag, "hash": digest, "id": goal_id, "kind": "theorem", "ts": rec["ts"]}) + "\n")
+23:    cache = load_cache()
+24:    cache["memo"][goal_id] = {"flag": flag, "hash": digest}
+25:    save_cache(cache)
+28:def euclid_batch_5():
+97:        r = gen_theorem(gid, stmt, pres, steps)
+101:if __name__ == "__main__":
+
+===== bin/0783_theorems_extend.py =====
+2:"""theorems_extend.py - theorem kernel with flag-memoized proofs. Part 1/3 appended via sh."""
+4:import hashlib, json, sys, time
+7:STORE = Path("/home/jesse/openroot/axiom_engine/store")
+9:CACHE = STORE / "proof_cache.json"
+11:def dumps(o): return json.dumps(o, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
+12:def content_hash(o): return hashlib.sha256(dumps(o).encode("utf-8")).hexdigest()
+13:def flag_of(tag, digest): return f"FLAG-{tag}-{digest[:16]}"
+15:def load_kind(kind):
+25:def load_all():
+27:    for k in ("axioms", "definitions", "postulates", "theorems"):
+31:def load_cache():
+36:def save_cache(c):
+43:def resolve(fid, idx, seen=None, trace=None):
+44:    """Trace a premise id to axiom ground. Returns proof suffix or None."""
+50:    for layer, tag in (("axioms", "AX"), ("definitions", "DF"), ("theorems", "TH"), ("postulates", "PO")):
+60:            rule = "assume" if layer == "axioms" else ("unfold_def" if layer == "definitions" else "modus_ponens")
+65:def prove(goal_id, idx, cache):
+67:    memo = cache["memo"].get(goal_id)
+72:        return {"status": "REJECTED", "reason": "premise chain does not terminate at axioms/known theorems"}
+73:    digest = content_hash({"kind": "theorem", "id": goal_id, "statement": idx.get("_goal_statement", ""), "premises": [goal_id], "proof": chain})
+74:    rec = {"kind": "theorem", "id": goal_id, "flag": flag_of("TH", digest), "hash": digest,
+75:           "statement": idx.get("_goal_statement", ""), "premises": [goal_id], "proof": chain, "ts": time.time()}
+76:    with (STORE / "theorems.jsonl").open("a", encoding="utf-8") as f:
+79:        f.write(dumps({"flag": rec["flag"], "hash": digest, "id": rec["id"], "kind": "theorem", "ts": rec["ts"]}) + "\n")
+80:    cache["memo"][goal_id] = {"flag": rec["flag"], "hash": digest}
+81:    save_cache(cache)
+82:    return {"status": "PROVED", "flag": rec["flag"], "steps": len(chain), "proof": chain}
+84:def checkflag(token, idx):
+91:if __name__ == "__main__":
+92:    cmd, arg = (sys.argv[1], sys.argv[2]) if len(sys.argv) > 2 else (sys.argv[1] if sys.argv else "", None)
+96:        print(json.dumps(prove(arg, idx, load_cache()), indent=2))
+101:        print(f"axioms={len(idx['axioms'])} definitions={len(idx['definitions'])} postulates={len(idx['postulates'])} theorems={len(idx['theorems'])}")
+103:        print("usage: theorems_extend.py prove|checkflag <arg> | prove <GOAL-ID>")
+105:def export_for_sync():
+107:    return {"cache": load_cache(), "chain_tail": None}
+
+===== bin/0798_agape_oracle.py =====
+15:ORACLE = ROOT / "oracle"
+29:def full_definition():
+42:def translate_to_agape(text: str) -> str:
+58:        "  Coordination cost C = 0 (theorem forces it)",
+69:class AgapeLanguageOS:
+71:        self.state = {"R": R, "history": [], "postulates": []}
+72:        self.load_postulates()
+73:    def load_postulates(self):
+74:        p = KB / "postulates.json"
+78:                self.state["postulates"] = [x for x in raw if isinstance(x, dict)]
+86:        for post in self.state["postulates"]:
+91:        return {"executions": len(self.state["history"]), "R": self.state["R"], "postulates": len(self.state["postulates"]), "coordination_cost": 0.0}
+93:def oracle(query: str) -> str:
+102:        p = KB / "postulates.json"
+127:def main():
+128:    if len(sys.argv) < 2:
+131:        print("  python3 $HOME/une/computational_flow/agape_oracle.py \"any text\"")
+132:        print("  python3 $HOME/une/computational_flow/agape_oracle.py define")
+133:        print("  python3 $HOME/une/computational_flow/agape_oracle.py learn <postulate>")
+134:        print("  python3 $HOME/une/computational_flow/agape_oracle.py stats")
+136:    print(oracle(" ".join(sys.argv[1:])))
+138:if __name__ == "__main__":
+
+===== bin/turing_tidbits_v1.py =====
+6:The tidbit format is intentionally local-first and transport-neutral:
+10:- any node can rebuild its index from tidbit metadata and object files.
+16:import argparse
+17:import hashlib
+28:ROOT = REPO / "data" / "turing_tidbits"
+34:SCHEMA = "openroot.turing_tidbit/v1"
+38:def utc_now() -> str:
+42:def canonical_json(value: Any) -> bytes:
+49:def sha256_bytes(data: bytes) -> str:
+50:    return hashlib.sha256(data).hexdigest()
+53:def sha256_file(path: Path) -> str:
+54:    digest = hashlib.sha256()
+61:def safe_mkdirs() -> None:
+66:def read_json(path: Path) -> dict[str, Any]:
+70:def metadata_path(content_sha256: str) -> Path:
+71:    return METADATA / f"{content_sha256}.json"
+74:def object_path(content_sha256: str) -> Path:
+75:    return OBJECTS / content_sha256[:2] / content_sha256[2:4] / content_sha256
+78:def append_event(event: dict[str, Any]) -> str:
+84:    event_sha256 = sha256_bytes(encoded)
+86:        "event_sha256": event_sha256,
+91:    return event_sha256
+94:def source_descriptor(path: Path | None, source_uri: str | None) -> dict[str, Any]:
+113:def store_bytes(
+117:    tidbit_type: str,
+126:    content_sha256 = sha256_bytes(payload)
+127:    target = object_path(content_sha256)
+131:        if sha256_file(target) != content_sha256:
+139:        "content_sha256": content_sha256,
+143:        "tidbit_type": tidbit_type,
+151:                item.get("target_sha256", ""),
+161:    metadata["metadata_sha256"] = sha256_bytes(canonical_json(stable))
+162:    mpath = metadata_path(content_sha256)
+165:        if existing.get("content_sha256") != content_sha256:
+172:    event_sha256 = append_event(
+175:            "content_sha256": content_sha256,
+176:            "metadata_sha256": metadata["metadata_sha256"],
+179:            "tidbit_type": metadata["tidbit_type"],
+182:    print(f"[banked] content_sha256={content_sha256}")
+183:    print(f"[banked] metadata_sha256={metadata['metadata_sha256']}")
+184:    print(f"[banked] event_sha256={event_sha256}")
+186:    return content_sha256, existed
+189:def parse_relation(value: str) -> dict[str, str]:
+195:        "target_sha256": parts[1],
+200:def ingest_file(args: argparse.Namespace) -> int:
+210:        tidbit_type=args.type,
+221:def ingest_json(args: argparse.Namespace) -> int:
+231:        tidbit_type=args.type,
+242:def verify_one(content_sha256: str) -> bool:
+243:    mpath = metadata_path(content_sha256)
+244:    opath = object_path(content_sha256)
+246:        print(f"[held] missing metadata or object for {content_sha256}")
+249:    content_ok = sha256_file(opath) == content_sha256
+251:    stored_metadata_hash = stable.pop("metadata_sha256", "")
+253:    metadata_ok = sha256_bytes(canonical_json(stable)) == stored_metadata_hash
+256:        print(f"[banked] verified={content_sha256}")
+259:        f"[held] verification failed={content_sha256} "
+265:def verify(args: argparse.Namespace) -> int:
+267:    if args.sha256:
+268:        verify_one(args.sha256)
+271:    good = sum(1 for item in ids if verify_one(item))
+272:    print(f"[banked] verify_total={len(ids)}")
+273:    print(f"[banked] verify_good={good}")
+275:        print("[held] one or more tidbits failed verification")
+279:def show(args: argparse.Namespace) -> int:
+280:    path = metadata_path(args.sha256)
+282:        print(f"[held] tidbit metadata missing: {args.sha256}")
+288:def listing(_: argparse.Namespace) -> int:
+295:                "sha256": metadata["content_sha256"],
+296:                "type": metadata["tidbit_type"],
+305:    print(f"[banked] tidbits={len(rows)}")
+309:def export_manifest(_: argparse.Namespace) -> int:
+318:        "tidbits": rows,
+320:    out = EXPORTS / "tidbits_manifest.json"
+323:    print(f"[banked] manifest_sha256={sha256_file(out)}")
+327:def main() -> int:
+328:    parser = argparse.ArgumentParser(prog="turing_tidbits_v1.py")
+331:    def common(command: argparse.ArgumentParser) -> None:
+351:    verify_parser = sub.add_parser("verify")
+352:    verify_parser.add_argument("sha256", nargs="?")
+353:    verify_parser.set_defaults(func=verify)
+356:    show_parser.add_argument("sha256")
+369:if __name__ == "__main__":
+
+===== bin/tidbit_registry_v1.py =====
+3:"""tidbit_registry_v1 - sha256-registered, license-gated tidbit intake.
+5:A tidbit = one extracted functional unit from an upstream clone (file,
+7:(drawing tidbits together into something stronger than its parts) consults
+22:import argparse
+23:import hashlib
+25:import sqlite3
+28:DB = "/home/jesse/openroot/data/tidbit_registry.db"
+33:def sha256_file(path):
+34:    h = hashlib.sha256()
+40:def connect():
+41:    c = sqlite3.connect(DB)
+43:        "CREATE TABLE IF NOT EXISTS tidbits("
+44:        "sha256 TEXT PRIMARY KEY, "
+56:def cmd_register(a):
+65:                          "hint": "verify the SPDX ID at the source repo; whitelist only if GPL-3.0-compatible"}))
+67:    s = sha256_file(a.path)
+70:    existing = c.execute("SELECT origin_repo, path FROM tidbits WHERE sha256 = ?", (s,)).fetchone()
+72:        c.execute("UPDATE tidbits SET reuses = reuses + 1 WHERE sha256 = ?", (s,))
+75:        print(json.dumps({"status": "[banked]", "sha256": s,
+80:        "INSERT INTO tidbits(sha256, origin_repo, origin_commit, license, "
+87:    print(json.dumps({"status": "[banked]", "sha256": s,
+90:def cmd_list(a):
+94:            "SELECT sha256, origin_repo, origin_commit, license, function_desc, path, reuses "
+95:            "FROM tidbits WHERE origin_repo LIKE ?", (f"%{a.repo}%",)).fetchall()
+98:            "SELECT sha256, origin_repo, origin_commit, license, function_desc, path, reuses "
+99:            "FROM tidbits").fetchall()
+102:        [{"sha256": r[0][:12] + "…", "origin": r[1], "commit": r[2],
+106:def cmd_stats(_):
+108:    n = c.execute("SELECT COUNT(*) FROM tidbits").fetchone()[0]
+109:    reuse_total = c.execute("SELECT COALESCE(SUM(reuses), 0) FROM tidbits").fetchone()[0]
+111:        "SELECT origin_repo, COUNT(*) FROM tidbits GROUP BY origin_repo ORDER BY COUNT(*) DESC"
+117:def main():
+118:    p = argparse.ArgumentParser(prog="tidbit_registry_v1")
+121:    r = sp.add_parser("register", help="register a tidbit (license-gated)")
+122:    r.add_argument("--path", required=True, help="local path of the tidbit file")
+126:    r.add_argument("--function", default="", help="what this tidbit does")
+129:    l = sp.add_parser("list", help="list registered tidbits")
+141:if __name__ == "__main__":
+
+===== bin/popw_ledger.py =====
+10:import glob, json, os, sqlite3, sys, time, urllib.request
+17:def rapl_read():
+25:def delta_joules(b, a):
+33:def call(stage, model, prompt):
+43:    db = sqlite3.connect(DB)
+44:    db.execute("""CREATE TABLE IF NOT EXISTS events(id INTEGER PRIMARY KEY, ts TEXT, stage TEXT,
+46:    db.execute("INSERT INTO events(ts,stage,model,prompt_tokens,eval_tokens,joules,wall_s,source) VALUES(?,?,?,?,?,?,?,?)",
+52:def main():
+53:    a = sys.argv[1:]
+55:        db = sqlite3.connect(DB)
+57:            rows = db.execute("SELECT stage,COUNT(*),SUM(prompt_tokens),SUM(eval_tokens),SUM(joules) FROM events GROUP BY stage").fetchall()
+58:        except sqlite3.OperationalError:
+79:if __name__ == "__main__": main()
+
+===== bin/cache_pathway_orchestrator_v1.py =====
+4:SLWF-CACHE-V1 :: cache_pathway_orchestrator_v1.py
+6:Route: SHA256(task) -> pathway cache (SQLite FTS5) -> HIT = zero compute
+7:       MISS -> warm-pool router (7B author / 3B grade) -> bank pathway
+9:  cache_pathway_orchestrator_v1.py run "task text"
+10:  cache_pathway_orchestrator_v1.py battery
+11:  cache_pathway_orchestrator_v1.py stats
+13:import hashlib, json, os, sqlite3, subprocess, sys, time
+16:DB_PATH = os.path.join(REPO, "data", "pathway_cache.db")
+34:def norm(task: str) -> str:
+37:def task_hash(task: str) -> str:
+38:    return hashlib.sha256(norm(task).encode()).hexdigest()
+40:def db():
+41:    conn = sqlite3.connect(DB_PATH)
+42:    conn.execute("""CREATE TABLE IF NOT EXISTS pathways (
+45:        route TEXT NOT NULL,
+55:        INSERT INTO pathways_fts(rowid, task_text, solution)
+61:def warm_pool() -> dict:
+70:def ollama(model: str, prompt: str, timeout: int = 240) -> tuple[str, dict]:
+84:def decide_route(task: str) -> str:
+86:    q = (f"Classify this task into exactly one route word: AUTHOR (needs new code "
+102:def author_solution(task: str, route: str) -> str:
+103:    if route == "AUTHOR":
+113:def grade_solution(solution: str) -> str:
+122:def log_decision(rec: dict):
+127:def run_task(task: str) -> dict:
+130:    row = conn.execute("SELECT route, solution, verdict FROM pathways WHERE task_hash=?",
+135:               "route": row[0], "solution_chars": len(row[1]),
+138:        print(f"[cache][HIT] zero-compute replay | route={row[0]} | {rec['elapsed_ms']}ms | {task[:60]}")
+141:    route = decide_route(task)
+145:                 (th, norm(task), route, solution, verdict,
+148:    rec = {"event": "CACHE_MISS", "task": task, "task_hash": th, "route": route,
+152:    print(f"[cache][MISS->banked] route={route} verdict={verdict} | {task[:60]}")
+155:def main():
+156:    if len(sys.argv) < 2:
+158:    mode = sys.argv[1]
+160:        task = " ".join(sys.argv[2:]) or sys.exit("no task given")
+171:        n = conn.execute("SELECT COUNT(*), SUM(compute_j) FROM (SELECT 1 AS compute_j, verdict FROM pathways WHERE verdict='GREEN')").fetchone()
+172:        print(f"[stats] green_pathways={n[0]} total_rows={conn.execute('SELECT COUNT(*) FROM pathways').fetchone()[0]}")
+175:if __name__ == "__main__":
+
+===== bin/route_promotion_plan_v1.py =====
+4:OpenRoot route-promotion planner.
+7:- reads the existing route_cache.db schema in read-only mode;
+8:- validates a candidate reusable route;
+9:- emits a canonical JSON payload suitable for existing turing_tidbits_v1.py ingest-json;
+10:- never calls the tidbit kernel;
+12:- never increments cache hits;
+19:import argparse
+22:import sqlite3
+30:DEFAULT_DB = DEFAULT_ROOT / "data" / "route_cache.db"
+34:    "route",
+43:def utc_now() -> str:
+47:def emit(record: dict) -> None:
+51:def hold(code: str, detail: str, exit_code: int = 1) -> int:
+64:def normalize(value: str) -> str:
+68:def validate_text(label: str, value: str, maximum: int) -> str:
+80:def open_readonly(db_path: Path) -> sqlite3.Connection:
+85:    return sqlite3.connect(uri, uri=True)
+88:def inspect_schema(conn: sqlite3.Connection) -> set[str]:
+89:    rows = conn.execute("PRAGMA table_info(route_cache)").fetchall()
+93:def exact_exists(conn: sqlite3.Connection, query: str) -> bool:
+95:        "SELECT 1 FROM route_cache WHERE query = ? LIMIT 1",
+101:def parse_args() -> argparse.Namespace:
+102:    parser = argparse.ArgumentParser(
+103:        description="Prepare a no-write OpenRoot route-promotion candidate."
+106:    parser.add_argument("--route", required=True)
+111:    parser.add_argument("--prior-content-sha256", default="")
+116:        help="Existing route_cache.db; read-only inspection only.",
+127:def ensure_run_local(path: Path) -> Path:
+145:def main() -> int:
+149:        query = validate_text("query", args.query, 4000)
+150:        route = validate_text("route", args.route, 200)
+184:                    "promotion refused; existing route_cache query is already present",
+189:        prior = args.prior_content_sha256.strip()
+203:                    "target_sha256": prior.lower(),
+204:                    "note": f"same-channel predecessor for route={route}",
+209:            "schema": "openroot.route_promotion_candidate/v1",
+212:                "cache_write_requires_confirm_promote": True,
+213:                "tidbit_ingest_requires_confirm_promote": True,
+221:                "route": route,
+227:            "tidbit": {
+228:                "label": f"route-promotion:{route}",
+229:                "type": "openroot.route_promotion_candidate/v1",
+233:                "tags": sorted(set(["route-cache", "promotion-candidate", *args.tag])),
+248:                "cache_disposition": "PROMOTION_CANDIDATE",
+252:                "route": route,
+261:    except (OSError, ValueError, sqlite3.Error) as exc:
+265:if __name__ == "__main__":
+
+===== bin/router_cache_probe_v1.py =====
+4:Read-only OpenRoot route-cache probe.
+6:Uses only the discovered existing route_cache.db:
+7:  route_cache(key, query, route, model, response, hits, provenance, ts)
+8:  route_cache_fts(query, response)
+12:No cache-hit counter update.
+20:import argparse
+23:import sqlite3
+31:DEFAULT_DB = DEFAULT_ROOT / "data" / "route_cache.db"
+34:def utc_now() -> str:
+38:def emit(event: dict) -> None:
+42:def fail(reason: str, *, query: str = "") -> int:
+55:def open_readonly(db_path: Path) -> sqlite3.Connection:
+60:    return sqlite3.connect(uri, uri=True)
+63:def normalize_query(value: str) -> str:
+67:def fts_terms(query: str) -> str:
+76:def exact_lookup(conn: sqlite3.Connection, query: str) -> dict | None:
+79:        SELECT key, query, route, model, response, hits, provenance, ts
+80:        FROM route_cache
+94:        "route",
+104:def fts_lookup(conn: sqlite3.Connection, query: str, limit: int) -> list[dict]:
+115:            rc.route,
+121:            bm25(route_cache_fts) AS rank
+122:        FROM route_cache_fts
+123:        JOIN route_cache AS rc ON rc.rowid = route_cache_fts.rowid
+124:        WHERE route_cache_fts MATCH ?
+134:        "route",
+145:def parse_args() -> argparse.Namespace:
+146:    parser = argparse.ArgumentParser(
+147:        description="Read-only exact and FTS5 lookup against existing OpenRoot route_cache.db."
+157:        help="Discovered existing route_cache.db path; must already exist.",
+168:def main() -> int:
+184:    except sqlite3.Error as exc:
+191:                "SELECT name FROM sqlite_master WHERE type IN ('table', 'view')"
+195:        required = {"route_cache", "route_cache_fts"}
+204:                    "cache_disposition": "EXACT_REUSE",
+220:                    "cache_disposition": "FTS_EVIDENCE",
+234:                "cache_disposition": "CACHE_MISS",
+238:                "reason": "route_cache and route_cache_fts contain no usable match; dispatch is intentionally disabled",
+245:    except sqlite3.Error as exc:
+251:if __name__ == "__main__":
+
+===== bin/router_cache_probe_v2.py =====
+4:OpenRoot route-cache probe v2.
+7:- exact lookup through route_cache.query;
+8:- checks whether existing route_cache_fts is actually searchable;
+16:import argparse
+19:import sqlite3
+27:DEFAULT_DB = DEFAULT_ROOT / "data" / "route_cache.db"
+32:    "route",
+41:def now() -> str:
+45:def emit(payload: dict) -> None:
+49:def end(code: int) -> int:
+54:def held(status: str, detail: str, query: str = "") -> int:
+67:def normalize(value: str) -> str:
+71:def readonly_connection(db_path: Path) -> sqlite3.Connection:
+76:    return sqlite3.connect(uri, uri=True)
+79:def route_columns(conn: sqlite3.Connection) -> set[str]:
+82:        for row in conn.execute("PRAGMA table_info(route_cache)").fetchall()
+86:def exact_lookup(conn: sqlite3.Connection, query: str) -> dict | None:
+89:        SELECT key, query, route, model, response, hits, provenance, ts
+90:        FROM route_cache
+104:        "route",
+115:def token_literals(query: str) -> list[str]:
+132:def fts_is_searchable(
+133:    conn: sqlite3.Connection,
+140:            "SELECT name FROM sqlite_master WHERE type IN ('table', 'view')"
+144:    if "route_cache_fts" not in tables:
+152:            SELECT rc.key
+153:            FROM route_cache_fts
+154:            JOIN route_cache AS rc
+155:              ON rc.rowid = route_cache_fts.rowid
+156:            WHERE route_cache_fts MATCH ?
+157:            ORDER BY bm25(route_cache_fts)
+169:def parse_args() -> argparse.Namespace:
+170:    parser = argparse.ArgumentParser(
+171:        description="Read-only OpenRoot exact-cache probe with FTS health reporting."
+178:        help="Existing route_cache.db; opened read-only only.",
+183:def main() -> int:
+193:    except (OSError, sqlite3.Error) as exc:
+200:                "SELECT name FROM sqlite_master WHERE type IN ('table', 'view')"
+204:        if "route_cache" not in tables:
+207:                "route_cache table absent",
+211:        columns = route_columns(conn)
+217:                "route_cache missing columns: " + ",".join(missing),
+229:                    "cache_disposition": "EXACT_REUSE",
+249:                "cache_disposition": "CACHE_MISS",
+253:                "reason": "exact cache miss; dispatch remains intentionally disabled",
+261:    except sqlite3.Error as exc:
+271:if __name__ == "__main__":
+
+===== bin/smart_router.py =====
+6:smart_router.py - FIXED VERSION
+16:ROUTE_LOG = BASE / "data" / "router_decisions.jsonl"
+28:def get_model_for_role(role: str):
+38:def classify_query(query):
+42:    if any(kw in query_lower for kw in ["code", "python", "theorem", "prove", "debug", "script"]):
+45:    if any(kw in query_lower for kw in ["grade", "eval", "check", "review", "validate"]):
+53:def route_query(query, context=None):
+69:def invoke_model(model_key, query, context=None, max_tokens=500):
+98:def main():
+103:        print("Usage: smart_router.py '<query>'")
+109:    decision = route_query(query)
+117:if __name__ == "__main__":
+126:def _registry_bucket_for(hint):
+130:         ("gate", r"(gate|verify|grade|test)"), ("net", r"(curl|fetch|network)"),
+137:def route_by_registry(task_hint, fallback=None):
+142:        return {"bucket": b, "route_to": rw.get("route_to", fallback or "lumo"),
+145:        return {"bucket": "unknown", "route_to": fallback or "lumo",
+
+===== bin/offline_route_cache_v1.sh =====
+3:# [ORCACHEV1] offline pathway-route cache: sha256(query+route) -> response
+8:DB="data/route_cache.db"
+15:key_for() { printf '%s::%s' "$(norm_query "$1")" "$2" | sha256sum | awk '{print $1}'; }
+19:  sqlite3 "$DB" "
+20:    CREATE TABLE IF NOT EXISTS route_cache (
+23:      route TEXT NOT NULL,
+30:    CREATE INDEX IF NOT EXISTS idx_route ON route_cache(route);
+32:  sqlite3 "$DB" "CREATE VIRTUAL TABLE IF NOT EXISTS route_cache_fts USING fts5(query, response, content='route_cache', content_rowid=rowid);" 2>/dev/null || true
+33:  echo "[ORCACHEV1][banked] db init ok: $DB ($(sqlite3 "$DB" 'SELECT COUNT(*) FROM route_cache;') entries)"
+40:    ROW="$(sqlite3 -separator '|' "$DB" "SELECT response,hits FROM route_cache WHERE key='$KEY';" || true)"
+43:      sqlite3 "$DB" "UPDATE route_cache SET hits=hits+1 WHERE key='$KEY';"
+44:      echo "[ORCACHEV1][HIT] route=$ROUTE hits=$((HITS+1))"
+47:      echo "[ORCACHEV1][MISS] route=$ROUTE — dispatch to network, then 'store'"
+51:    # usage: store <query> <route> <response-file-or--stdin>
+52:    [ "$#" -ge 3 ] || { echo "usage: $0 store <query> <route> <respfile|->" >&2; exit 1; }
+56:    sqlite3 "$DB" "INSERT INTO route_cache(key,query,route,response,provenance)
+58:      ON CONFLICT(key) DO UPDATE SET response=excluded.response, ts=datetime('now');"
+59:    echo "[ORCACHEV1][banked] stored key=${KEY:0:16} route=$ROUTE (${#RESP} bytes)"
+62:    sqlite3 -separator ' | ' "$DB" "SELECT substr(key,1,12), route, hits, substr(query,1,60) FROM route_cache WHERE query LIKE '%${QUERY}%';"
+65:    sqlite3 -separator ' | ' "$DB" "SELECT route, COUNT(*), SUM(hits), MAX(ts) FROM route_cache GROUP BY route;"
+71:        echo "[ORCACHEV1] ONLINE via $host — network routes available"
+75:    echo "[ORCACHEV1] OFFLINE — router must serve from cache/local only"
+77:  *) echo "usage: $0 {init|lookup <q> <route>|store <q> <route> <file|->|search <term>|stats|offline-check}" >&2; exit 1 ;;
+
+===== bin/build_turing_tidbits_kernel_v1.sh =====
+7:PY="/home/jesse/openroot/bin/turing_tidbits_v1.py"
+8:ROOT="/home/jesse/openroot/data/turing_tidbits"
+15:    BACKUP="/home/jesse/openroot/bin/turing_tidbits_v1.py.pre_build.${STAMP}.bak"
+27:The tidbit format is intentionally local-first and transport-neutral:
+31:- any node can rebuild its index from tidbit metadata and object files.
+37:import argparse
+38:import hashlib
+49:ROOT = REPO / "data" / "turing_tidbits"
+55:SCHEMA = "openroot.turing_tidbit/v1"
+59:def utc_now() -> str:
+63:def canonical_json(value: Any) -> bytes:
+70:def sha256_bytes(data: bytes) -> str:
+71:    return hashlib.sha256(data).hexdigest()
+74:def sha256_file(path: Path) -> str:
+75:    digest = hashlib.sha256()
+82:def safe_mkdirs() -> None:
+87:def read_json(path: Path) -> dict[str, Any]:
+91:def metadata_path(content_sha256: str) -> Path:
+92:    return METADATA / f"{content_sha256}.json"
+95:def object_path(content_sha256: str) -> Path:
+96:    return OBJECTS / content_sha256[:2] / content_sha256[2:4] / content_sha256
+99:def append_event(event: dict[str, Any]) -> str:
+105:    event_sha256 = sha256_bytes(encoded)
+107:        "event_sha256": event_sha256,
+112:    return event_sha256
+115:def source_descriptor(path: Path | None, source_uri: str | None) -> dict[str, Any]:
+134:def store_bytes(
+138:    tidbit_type: str,
+147:    content_sha256 = sha256_bytes(payload)
+148:    target = object_path(content_sha256)
+152:        if sha256_file(target) != content_sha256:
+160:        "content_sha256": content_sha256,
+164:        "tidbit_type": tidbit_type,
+172:                item.get("target_sha256", ""),
+182:    metadata["metadata_sha256"] = sha256_bytes(canonical_json(stable))
+183:    mpath = metadata_path(content_sha256)
+186:        if existing.get("content_sha256") != content_sha256:
+193:    event_sha256 = append_event(
+196:            "content_sha256": content_sha256,
+197:            "metadata_sha256": metadata["metadata_sha256"],
+200:            "tidbit_type": metadata["tidbit_type"],
+203:    print(f"[banked] content_sha256={content_sha256}")
+204:    print(f"[banked] metadata_sha256={metadata['metadata_sha256']}")
+205:    print(f"[banked] event_sha256={event_sha256}")
+207:    return content_sha256, existed
+210:def parse_relation(value: str) -> dict[str, str]:
+216:        "target_sha256": parts[1],
+221:def ingest_file(args: argparse.Namespace) -> int:
+231:        tidbit_type=args.type,
+242:def ingest_json(args: argparse.Namespace) -> int:
+252:        tidbit_type=args.type,
+263:def verify_one(content_sha256: str) -> bool:
+264:    mpath = metadata_path(content_sha256)
+265:    opath = object_path(content_sha256)
+267:        print(f"[held] missing metadata or object for {content_sha256}")
+270:    content_ok = sha256_file(opath) == content_sha256
+272:    stored_metadata_hash = stable.pop("metadata_sha256", "")
+274:    metadata_ok = sha256_bytes(canonical_json(stable)) == stored_metadata_hash
+277:        print(f"[banked] verified={content_sha256}")
+280:        f"[held] verification failed={content_sha256} "
+286:def verify(args: argparse.Namespace) -> int:
+288:    if args.sha256:
+289:        verify_one(args.sha256)
+292:    good = sum(1 for item in ids if verify_one(item))
+293:    print(f"[banked] verify_total={len(ids)}")
+294:    print(f"[banked] verify_good={good}")
+296:        print("[held] one or more tidbits failed verification")
+300:def show(args: argparse.Namespace) -> int:
+301:    path = metadata_path(args.sha256)
+303:        print(f"[held] tidbit metadata missing: {args.sha256}")
+309:def listing(_: argparse.Namespace) -> int:
+316:                "sha256": metadata["content_sha256"],
+317:                "type": metadata["tidbit_type"],
+326:    print(f"[banked] tidbits={len(rows)}")
+330:def export_manifest(_: argparse.Namespace) -> int:
+339:        "tidbits": rows,
+341:    out = EXPORTS / "tidbits_manifest.json"
+344:    print(f"[banked] manifest_sha256={sha256_file(out)}")
+348:def main() -> int:
+349:    parser = argparse.ArgumentParser(prog="turing_tidbits_v1.py")
+352:    def common(command: argparse.ArgumentParser) -> None:
+372:    verify_parser = sub.add_parser("verify")
+373:    verify_parser.add_argument("sha256", nargs="?")
+374:    verify_parser.set_defaults(func=verify)
+377:    show_parser.add_argument("sha256")
+390:if __name__ == "__main__":
+422:    '{"kind":"sensor_or_sync_contract","rule":"same content SHA-256 yields same tidbit identifier on every node","transport":"filesystem|git|rsync|syncthing|mesh|removable_media","human_gate":"required for destructive or public actions"}' \
+432:python3 "$PY" verify
+436:test -s "$ROOT/exports/tidbits_manifest.json"
+437:grep -Fq "openroot.turing_tidbit/v1" "$ROOT/exports/tidbits_manifest.json"
+438:grep -Fq "Portable node contract" "$ROOT/exports/tidbits_manifest.json"
+440:echo "[banked] portable Turing tidbit kernel verified"
+
+===== context_bridge/handoff-20260928_232839-l0-exact-cache-sealed.md =====
+9:- route_cache.db discovered and audited.
+11:- First verified tidbit promoted to route_cache.
+13:- Exact cache reuse verified through router_cache_probe_v2.py.
+19:content_sha256=ce678d1529540ee80d86348a813fcb331177e3a9b953752684e5a79eefc45ef9
+20:event_sha256=87ecfb449c544d6a54785d39733a18af9f05c71951e515b39f940b18c6401181
+22:## Verified route
+24:query=read-only OpenRoot route cache probe
+25:route=local_verification
+26:cache_state=EXACT_REUSE
+27:route_cache_rows=1
+32:L0 exact cache=ACTIVE
+46:1. Inspect bin/smart_router.py and locate a minimal L0 exact-cache preflight insertion point.
+47:2. Build route_cache_promotion_executor_v1.py with two distinct confirmation stages.
+49:4. Do not create new SQLite schema, a parallel cache, new hash identity system, automatic model dispatch, or Git mutations.
+
+===== context_bridge/concepts/modular_turing_tidbit_v1.md =====
+---
+id: concept-modular-turing-tidbit-v1
+timestamp: 20260928_010158
+type: concept
+parent: 00_MASTER_CONSTITUTION
+status: BANKED
+agape_score: pending
+---
+
+# Modular Turing Tidbit: Fractal Recursive 6^6 Core Atomic Functions
+
+## Core Thesis
+Computation (and civilization) can be decomposed into **6 core atomic functions**
+where each group of 6 can itself take the role of the 1 — one higher-order
+function at the next fractal level. Recursion proceeds upward:
+
+    level 0:  6 atomic functions          (core)
+    level 1:  6 of those acting as one    -> a tidbit
+    level n:  6 tidbits acting as one     -> a module
+    ...
+    level ∞:  meta mesh web
+
+Sample space: 6^6 = 46,656 possible compositions per level (senary addressing).
+216^2 = 46,656; 36^3 = 46,656 — the same ceiling expresses as square, cube,
+or 3-symbol registry cell. No gaps, full tiling (IVM-consistent).
+
+## Zero Cost of Cooperation (the load-bearing claim)
+Cooperation between nodes carries nonzero overhead in fear-based architectures
+(contracts, policing, fraud-prevention, principal-agent costs). When nodes are
+programmed with Agape toward all other nodes — each node's objective function
+includes the other nodes' flourishing — coordination overhead approaches ZERO
+because trust verification, enforcement, and hedging are not performed.
+Synergy ceiling rises as cooperation cost falls; agape-programming is the
+mechanism that buys the whole margin. Falsifiable form: measure coordination
+overhead (bytes, joules, human-hours) per cooperation event under different
+node incentive programs.
+
+## Relevance to Existing Instruments
+- tidbit_registry_v1: each registered tidbit = a candidate atomic function
+- 3-symbol cells (36^3): see sibling doc a_language_agape_v1.md
+- Reassembly = search over 6^6 compositions, ranked by Matthew verdicts
+
+## Agape Analysis
+- Resonance: aligned — floor-lifting via zero-marginal-cost cooperation
+- Entropy check: claim must stay measurable (joules/bytes), not mystical
+- Next Move: enumerate the 6 core atomic functions, draft schema

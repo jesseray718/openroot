@@ -1,0 +1,5 @@
+   1166       1    17:25:24  0.0  3.5 Ssl  /usr/local/bin/llama-server -m /opt/models/qwen2.5-coder-7b-instruct-q4_k_m.gguf -c 8192 -ngl 0 -t 4 --host 0.0.0.0 --port 8080 --parallel 1 --alias qwen2.5-coder-7b
+   1967       1    17:20:58  0.0  0.0 Ss   python3 /home/jesse/openroot/bin/bot_loop_v1.py
+  18546       1    09:38:03  0.0  0.0 Ss   /usr/bin/python3 /home/jesse/openroot/bin/openroot_rapl_sampler_v1.py --interval 5
+  29873       1    06:06:05  0.0  0.1 Ssl  /usr/local/bin/ollama serve
+ 371069       1    01:50:47  2.1  0.0 S    bash /home/jesse/openroot/hash_assign_v1.sh

@@ -1,0 +1,11 @@
+[DISPATCHV1] run=20260929T110001Z
+--- thermal digest ---
+source      rows  joules
+TOTAL                        0
+[banked] gate=/home/jesse/openroot/data/acre_gate.json state=BLOCKED-0J
+--- dispatching: Verify/commit bin/ directory (check `git ls-files bin/ | wc -l`) ---
+$ detected_stack=coding_authors
+$ primary=qwen2.5-coder:7b verifier=qwen2.5:3b
+[round 1] qwen2.5-coder:7b ok 9569ms
+[round 1] qwen2.5:3b ok 3665ms
+[banked] stack=coding_authors outbox=/home/jesse/openroot/perplexity_outbox/

@@ -1,0 +1,19 @@
+{
+  "allowed_next_actions": [
+    "Compare any historical or backup copy against the current placeholder.",
+    "Choose one restoration source.",
+    "Create a line-specific patch plan.",
+    "Obtain human approval before modifying the tracked target."
+  ],
+  "backup_candidate_mentions": 5,
+  "generated_at": "2026-09-28T18:56:52.078282+00:00",
+  "history_mentions": 2,
+  "human_review_required": true,
+  "mode": "read_only",
+  "mutation_performed": false,
+  "placeholder_detected": true,
+  "schema": "openroot.workflow_recover_provenance.v1",
+  "syntax_error_detected": true,
+  "target": "context_bridge/workflow_recover.sh",
+  "target_exists": true
+}

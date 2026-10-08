@@ -1,0 +1,125 @@
+# OpenRoot Branch + Kai9000 Integration Plan
+
+generated_utc=2026-10-01T10:10:09Z
+repo=jesseray718/openroot
+main_tip=d353440b3e007b0ecfb8fee3e8d2f4695158df6e
+
+## All remote branches
+origin/main	d353440b	2026-09-30 19:15:12 -0500	[ADD][DOC] bank delayed files from dead gate-1 commit: mistake solutions 6daeb91f/d4313a95 + reconcile_main_v1 + github_hygiene_v1 (restored pre_reconstruct, syntax-gated) — AI-assisted, human-gated
+origin/jesseray718-patch-1	816639b0	2026-09-30 02:28:12 -0500	Create codeql.yml
+origin/chore/superloop-ci-cd-foundation	ae07f1a5	2026-09-25 20:34:35 -0500	Merge remote-tracking branch 'origin/main' into chore/superloop-ci-cd-foundation
+origin/gh-pages	48fdf3ad	2026-09-25 06:34:48 +0000	deploy: da07af46018dbcaa5a76f4772d3acfef041efa79
+origin/coderabbit/changes/eb9e4190	18a7984f	2026-09-18 22:12:35 +0000	docs(bin): add and clarify docstrings for indexing, probing, shared helpers, and workflow functions
+
+## Branch classification versus origin/main
+branch=chore/superloop-ci-cd-foundation	tip=ae07f1a5	class=RELATED	ahead=4	behind=39	merge_base=16b9ea1576c7086dad6ece3b20c12731e20d6e96
+unique_commits:
+  ae07f1a5 Merge remote-tracking branch 'origin/main' into chore/superloop-ci-cd-foundation
+  7eb64e0d fix(ci): scope validation and normalize dashboard EOF
+  d28d5fce fix(ci): scope validation to changed files
+  c3d60d28 chore: add superloop CI governance foundation
+unique_changed_paths:
+
+branch=coderabbit/changes/eb9e4190	tip=18a7984f	class=RELATED	ahead=9	behind=214	merge_base=d8ac6d060b5fbd0cf8eeb4774c85b4ec4856c3df
+unique_commits:
+  18a7984f docs(bin): add and clarify docstrings for indexing, probing, shared helpers, and workflow functions
+  37a56916 docs(bridge): session close - lib+index banked, cache verified, gitignore closed
+  cbc83d13 chore(ignore): bank sdcard-sync (mobile sync artifact)
+  92e363ba feat(lib+index): lumo_lib shared primitives (prove/embed/ollama) + semantic nomic index, batch-commit v1.1, incremental never-recompute
+  e1c4d6ee feat(probe): knowledge probe + proof cache - 7B draft/3B grade, cache-hit verified twice, self-scan patched (flat 3568 across runs)
+  61bf4552 docs(bridge): session close - 3 commits sealed, loop v3 verified, next: GOALS rebuild
+  4e295a57 feat(loop): refinement loop v2+v3 - 7B draft, 3B grade, FIX feeds forward
+  2ee2e690 feat(workflow): unified python controller v1 (missed in 66fd941a)
+  66fd941a feat(workflow): unified python controller v1 + visibility fixes
+unique_changed_paths:
+  .gitignore
+  analysis/knowledge_probe_report_2026-09-18.md
+  bin/abstract_grade.sh
+  bin/daily_loop_v1.sh
+  bin/embed_index_v1.py
+  bin/fleet_check_v1.sh
+  bin/hype_gate.sh
+  bin/knowledge_probe_v1.py
+  bin/lumo_lib.py
+  bin/refinement_loop_v2.sh
+  bin/refinement_loop_v3.sh
+  bin/research_ready_v1.sh
+  bin/unified_workflow_v1.py
+  bin/weekly_audit_v1.sh
+  context_bridge/session-20260918_124552-audit.md
+  context_bridge/session-20260918_125934-research.md
+  context_bridge/session-20260918_close-sealed.md
+  context_bridge/session-20260918_late-sealed.md
+  data/lessons.db
+  data/proof_cache.db
+  data/refinement.db
+  data/research.db
+  docs/research/argf-durability.md
+  docs/research/cardboard-membrane.md
+  docs/research/cascade-heatbalance.md
+  docs/research/cloud9-relay.md
+  docs/research/dish-mesh-reflector.md
+  docs/research/double-skin-catenary.md
+  docs/research/labyrinth-cooling.md
+  docs/research/opencell-absorber.md
+  docs/research/thixo-foam.md
+  reports/lesson_audit-20260918.md
+
+branch=gh-pages	tip=48fdf3ad	class=NO_COMMON_ANCESTOR	integration=CHERRY_PICK_OR_EXTRACT_ONLY
+recent_commits:
+  48fdf3ad deploy: da07af46018dbcaa5a76f4772d3acfef041efa79
+  79682218 deploy: 58febdf6b61d2c6ac55a206341b564eaa3330665
+tree_top_level:
+  .nojekyll
+  index.html
+candidate_kai_files:
+
+branch=jesseray718-patch-1	tip=816639b0	class=RELATED	ahead=0	behind=16	merge_base=816639b021e2ca2d31e5f6bc889fde84f75ef1e2
+
+## Open pull requests
+104	head=chore/superloop-ci-cd-foundation	base=main	merge=UNSTABLE	[HYGIENE] merge chore/superloop-ci-cd-foundation	https://github.com/jesseray718/openroot/pull/104
+
+## Existing Kai9000 files already on main
+bin/kai_ingest_bridge_v1.py
+bin/kai_queue_bridge_v1.py
+bin/kai_retrieve_local_v1.py
+bin/kai_retrieve_v1.py
+bin/kai_search_v1.py
+context_bridge/lumo_inbox/kai_corpus_manifest_20260930_070204.json
+data/kai_corpus_index.txt
+
+## Kai9000 mentions in current main history
+94c9e8f1 [DOC] README: kai9000 routing stack (fp5s/FTS5/Nomic) + bot-runner executor + API-tier escalation — full architecture docs, not placeholders
+749986d9 [ADD] kai9000 retrieval+ingest+FTS pipeline tools — restored from pre_reconstruct, py_compile-gated
+70116652 [DOC] context_bridge records: kai manifest+session seeds, mistake solutions (self-ssh, gh-pr-heads, paste-glue)
+f5991bdd preserve: full salvage snapshot under salvage/20260905 including sync-from-kai, zero top-level deletes
+ea33db43 preserve: full salvage snapshot under salvage/20260905 including sync-from-kai, zero top-level deletes
+f66a8761 Agape/add coordination theorem (#33)
+ad98dec8 Merge remote-tracking branch 'origin/docs/contribution-hub-20260825' into agape/add-coordination-theorem
+b73e0352 Add CodeRabbit configuration for synchronized kai9000 files and OpenRoot codebase
+637f2190 LOWEST_NODE_v1 · R=1.0 authority locked · Kai9000 standing wave
+179f0bba recover: kai-sandbox aerocement backup READMEs + related recovered paths
+f7527b11 compute/n0: raise context to 8192, parallel=1 for usable Kai sessions
+d8774d4c compute/n0: raise context to 8192, parallel=1 for usable Kai sessions
+0558fa77 library/kai-sandbox: full import of Kai9000 sandbox-home content (excluding large model)
+a444d50f library/kai-sandbox: full import of Kai9000 sandbox-home content (excluding large model)
+7499e5ac library/kai-sandbox: import full Kai9000 sandbox-home content
+89d4191f library/kai-sandbox: import full Kai9000 sandbox-home content
+23a9d2e6 Add nanobot swarm toolkit doc + 8 nanobot scripts, add global fractal mesh framework doc
+4b30f47e merge: sync remote changes + kai-settings snapshot
+d47ad42a merge: sync remote changes + kai-settings snapshot
+a860a8e6 merge: sync remote changes + kai-settings snapshot
+37625078 feat: kai-settings snapshot (2026-07-19) — IPFS pending
+b54d8afe feat: kai-settings snapshot (2026-07-19) — IPFS pending
+d0eb40a3 feat: kai-settings snapshot (2026-07-19) — IPFS pending
+25d8b2ad consolidate kai artifacts 2026-07-14_02:15
+2141fd23 consolidate kai artifacts 2026-07-14_02:15
+3fcde1ab consolidate kai artifacts 2026-07-14_02:15
+01eeff26 housekeeping: moved Kai 9000 guides + scripts into canonical tree; cleaned home dir duplicates
+ba3544ce housekeeping: moved Kai 9000 guides + scripts into canonical tree; cleaned home dir duplicates
+31845d43 Add Kai 9000 workflow guide for Galaxy A15 + OpenRoot
+838f8f08 Add Kai 9000 workflow guide for Galaxy A15 + OpenRoot
+419fbbae OpenRoot: complete repo with bounties, projects, Kai 9000, donations
+
+## Safety marker
+BRANCH_AND_KAI_PLAN_READ_ONLY_COMPLETE

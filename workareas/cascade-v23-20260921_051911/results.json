@@ -1,0 +1,41 @@
+{
+ "regime": {
+  "kappa": 0.15,
+  "seed_target": 0.5,
+  "shock_gen": 12,
+  "shock_loss": 0.6,
+  "seed_loss": 0.4
+ },
+ "runs": [
+  {
+   "policy": "bottom-first",
+   "pre_shock_min": 0.0236,
+   "post_shock_min": 0.01,
+   "recover_gens": "never",
+   "final_min_floor": 0.0188,
+   "final_gini": 0.2642,
+   "mean_seed_stock": 0.1421,
+   "cumulative_welfare": 743.46
+  },
+  {
+   "policy": "equal",
+   "pre_shock_min": 0.02,
+   "post_shock_min": 0.01,
+   "recover_gens": "never",
+   "final_min_floor": 0.01,
+   "final_gini": 0.4629,
+   "mean_seed_stock": 0.103,
+   "cumulative_welfare": 591.69
+  },
+  {
+   "policy": "merit-top",
+   "pre_shock_min": 0.01,
+   "post_shock_min": 0.01,
+   "recover_gens": 1,
+   "final_min_floor": 0.01,
+   "final_gini": 0.5697,
+   "mean_seed_stock": 0.1577,
+   "cumulative_welfare": 271.36
+  }
+ ]
+}

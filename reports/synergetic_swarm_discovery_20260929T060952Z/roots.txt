@@ -1,0 +1,8 @@
+context_bridge/concept_sweeps
+context_bridge/concept_mining
+context_bridge/kai_deep_harvest_20260928_024955
+context_bridge/hive_canonical_20260928_041449
+context_bridge
+agape_kb
+cosmos_engine
+bin

@@ -1,0 +1,518 @@
+{
+  "candidates": [
+    {
+      "freshness": 0.947,
+      "keyword_signal": 21,
+      "relpath": "markdown/KAI_SYSTEM_PROMPT.md",
+      "score": 40.7597,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/KAI_SYSTEM_PROMPT.md",
+      "structure": 2.05,
+      "top_keywords": [
+        "solar",
+        "aerocement",
+        "thermal",
+        "stirling",
+        "passive"
+      ],
+      "words": 292
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 22,
+      "relpath": "markdown/mission-command.md",
+      "score": 39.5762,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/mission-command.md",
+      "structure": 1.9,
+      "top_keywords": [
+        "node",
+        "aerocement",
+        "mesh",
+        "thermal",
+        "stirling"
+      ],
+      "words": 234
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 8,
+      "relpath": "markdown/docs/backend/zDNN.md",
+      "score": 20.4509,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/docs/backend/zDNN.md",
+      "structure": 2.7,
+      "top_keywords": [
+        "hardware"
+      ],
+      "words": 294
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 10,
+      "relpath": "text/examples/gguf-hash/CMakeLists.txt",
+      "score": 10.8882,
+      "staging_path": "/home/jesse/openroot/candidates/staged/text/examples/gguf-hash/CMakeLists.txt",
+      "structure": 1.15,
+      "top_keywords": [
+        "sha256"
+      ],
+      "words": 108
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 7,
+      "relpath": "markdown/docs/backend/VirtGPU.md",
+      "score": 10.0381,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/docs/backend/VirtGPU.md",
+      "structure": 4.3,
+      "top_keywords": [
+        "hardware",
+        "node"
+      ],
+      "words": 802
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 10,
+      "relpath": "json/examples/gguf-hash/deps/sha256/package.json",
+      "score": 9.468,
+      "staging_path": "/home/jesse/openroot/candidates/staged/json/examples/gguf-hash/deps/sha256/package.json",
+      "structure": 1.0,
+      "top_keywords": [
+        "sha256"
+      ],
+      "words": 34
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 9,
+      "relpath": "markdown/docs/backend/ZenDNN.md",
+      "score": 7.0966,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/docs/backend/ZenDNN.md",
+      "structure": 5.5,
+      "top_keywords": [
+        "hardware",
+        "node"
+      ],
+      "words": 1408
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 7,
+      "relpath": "markdown/docs/backend/snapdragon/windows.md",
+      "score": 6.656,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/docs/backend/snapdragon/windows.md",
+      "structure": 3.35,
+      "top_keywords": [
+        "hardware",
+        "sha256",
+        "task"
+      ],
+      "words": 893
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 9,
+      "relpath": "markdown/docs/backend/CANN.md",
+      "score": 6.1739,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/docs/backend/CANN.md",
+      "structure": 5.5,
+      "top_keywords": [
+        "hardware",
+        "queue"
+      ],
+      "words": 1545
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 3,
+      "relpath": "markdown/examples/retrieval/README.md",
+      "score": 6.1069,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/examples/retrieval/README.md",
+      "structure": 2.15,
+      "top_keywords": [
+        "grant"
+      ],
+      "words": 313
+    },
+    {
+      "freshness": 0.957,
+      "keyword_signal": 6,
+      "relpath": "text/build/examples/gguf-hash/CMakeFiles/llama-gguf-hash.dir/link.txt",
+      "score": 5.7413,
+      "staging_path": "/home/jesse/openroot/candidates/staged/text/build/examples/gguf-hash/CMakeFiles/llama-gguf-hash.dir/link.txt",
+      "structure": 1.0,
+      "top_keywords": [
+        "sha256"
+      ],
+      "words": 92
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 4,
+      "relpath": "text/tools/server/CMakeLists.txt",
+      "score": 5.4914,
+      "staging_path": "/home/jesse/openroot/candidates/staged/text/tools/server/CMakeLists.txt",
+      "structure": 1.45,
+      "top_keywords": [
+        "task",
+        "queue"
+      ],
+      "words": 233
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 10,
+      "relpath": "markdown/examples/gguf-hash/README.md",
+      "score": 5.2243,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/examples/gguf-hash/README.md",
+      "structure": 2.95,
+      "top_keywords": [
+        "sha256"
+      ],
+      "words": 1223
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 2,
+      "relpath": "markdown/examples/simple-cmake-pkg/README.md",
+      "score": 5.018,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/examples/simple-cmake-pkg/README.md",
+      "structure": 2.65,
+      "top_keywords": [
+        "hardware"
+      ],
+      "words": 196
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 6,
+      "relpath": "markdown/AGENTS.md",
+      "score": 4.6707,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/AGENTS.md",
+      "structure": 4.15,
+      "top_keywords": [
+        "task",
+        "queue"
+      ],
+      "words": 1177
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 6,
+      "relpath": "markdown/docs/backend/OPENCL.md",
+      "score": 4.5552,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/docs/backend/OPENCL.md",
+      "structure": 5.5,
+      "top_keywords": [
+        "hardware"
+      ],
+      "words": 1444
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 6,
+      "relpath": "markdown/docs/build-s390x.md",
+      "score": 4.4868,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/docs/build-s390x.md",
+      "structure": 5.35,
+      "top_keywords": [
+        "hardware"
+      ],
+      "words": 1432
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 2,
+      "relpath": "markdown/ci/README.md",
+      "score": 4.45,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/ci/README.md",
+      "structure": 2.35,
+      "top_keywords": [
+        "hardware"
+      ],
+      "words": 221
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 4,
+      "relpath": "text/examples/eval-callback/CMakeLists.txt",
+      "score": 3.7872,
+      "staging_path": "/home/jesse/openroot/candidates/staged/text/examples/eval-callback/CMakeLists.txt",
+      "structure": 1.0,
+      "top_keywords": [
+        "sha256"
+      ],
+      "words": 161
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 2,
+      "relpath": "markdown/tools/export-lora/README.md",
+      "score": 3.3138,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/tools/export-lora/README.md",
+      "structure": 1.75,
+      "top_keywords": [
+        "task"
+      ],
+      "words": 151
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 5,
+      "relpath": "markdown/docs/development/parsing.md",
+      "score": 3.2959,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/docs/development/parsing.md",
+      "structure": 4.95,
+      "top_keywords": [
+        "node"
+      ],
+      "words": 1479
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 4,
+      "relpath": "markdown/docs/android.md",
+      "score": 3.1873,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/docs/android.md",
+      "structure": 2.95,
+      "top_keywords": [
+        "hardware"
+      ],
+      "words": 923
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 4,
+      "relpath": "markdown/SECURITY.md",
+      "score": 2.8829,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/SECURITY.md",
+      "structure": 3.0,
+      "top_keywords": [
+        "hardware"
+      ],
+      "words": 998
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 5,
+      "relpath": "markdown/tools/ui/docs/flows/database-flow.md",
+      "score": 2.7048,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/tools/ui/docs/flows/database-flow.md",
+      "structure": 1.2,
+      "top_keywords": [
+        "node"
+      ],
+      "words": 656
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 11,
+      "relpath": "markdown/tools/server/README-dev.md",
+      "score": 2.6165,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/tools/server/README-dev.md",
+      "structure": 5.3,
+      "top_keywords": [
+        "task",
+        "queue",
+        "node"
+      ],
+      "words": 3054
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 2,
+      "relpath": "markdown/examples/training/README.md",
+      "score": 2.5564,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/examples/training/README.md",
+      "structure": 1.35,
+      "top_keywords": [
+        "hardware"
+      ],
+      "words": 152
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 5,
+      "relpath": "markdown/tools/ui/docs/flows/conversations-flow.md",
+      "score": 2.5184,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/tools/ui/docs/flows/conversations-flow.md",
+      "structure": 1.2,
+      "top_keywords": [
+        "node"
+      ],
+      "words": 688
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 8,
+      "relpath": "markdown/docs/backend/snapdragon/README.md",
+      "score": 2.3666,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/docs/backend/snapdragon/README.md",
+      "structure": 4.0,
+      "top_keywords": [
+        "hardware",
+        "node",
+        "queue"
+      ],
+      "words": 2189
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 16,
+      "relpath": "markdown/README.md",
+      "score": 2.2477,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/README.md",
+      "structure": 5.5,
+      "top_keywords": [
+        "ollama",
+        "node",
+        "hardware",
+        "task"
+      ],
+      "words": 4447
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 4,
+      "relpath": "json/tools/ui/package.json",
+      "score": 2.1141,
+      "staging_path": "/home/jesse/openroot/candidates/staged/json/tools/ui/package.json",
+      "structure": 1.0,
+      "top_keywords": [
+        "node"
+      ],
+      "words": 590
+    },
+    {
+      "freshness": 0.957,
+      "keyword_signal": 2,
+      "relpath": "text/build/tools/server/CMakeFiles/server-context.dir/link.txt",
+      "score": 1.9138,
+      "staging_path": "/home/jesse/openroot/candidates/staged/text/build/tools/server/CMakeFiles/server-context.dir/link.txt",
+      "structure": 1.0,
+      "top_keywords": [
+        "task",
+        "queue"
+      ],
+      "words": 89
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 14,
+      "relpath": "markdown/docs/backend/SYCL.md",
+      "score": 1.4397,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/docs/backend/SYCL.md",
+      "structure": 6.0,
+      "top_keywords": [
+        "hardware",
+        "ollama"
+      ],
+      "words": 5802
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 1,
+      "relpath": "markdown/examples/passkey/README.md",
+      "score": 1.4202,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/examples/passkey/README.md",
+      "structure": 1.5,
+      "top_keywords": [
+        "task"
+      ],
+      "words": 65
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 2,
+      "relpath": "markdown/docs/backend/CUDA-FEDORA.md",
+      "score": 1.4129,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/docs/backend/CUDA-FEDORA.md",
+      "structure": 5.5,
+      "top_keywords": [
+        "hardware"
+      ],
+      "words": 1515
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 1,
+      "relpath": "markdown/examples/eval-callback/README.md",
+      "score": 1.3306,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/examples/eval-callback/README.md",
+      "structure": 1.55,
+      "top_keywords": [
+        "node"
+      ],
+      "words": 427
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 5,
+      "relpath": "text/tests/CMakeLists.txt",
+      "score": 1.2932,
+      "staging_path": "/home/jesse/openroot/candidates/staged/text/tests/CMakeLists.txt",
+      "structure": 3.1,
+      "top_keywords": [
+        "sha256",
+        "node"
+      ],
+      "words": 2020
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 13,
+      "relpath": "markdown/docs/build.md",
+      "score": 1.2899,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/docs/build.md",
+      "structure": 5.5,
+      "top_keywords": [
+        "queue",
+        "hardware"
+      ],
+      "words": 5607
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 3,
+      "relpath": "markdown/tools/ui/README.md",
+      "score": 1.2338,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/tools/ui/README.md",
+      "structure": 5.5,
+      "top_keywords": [
+        "node"
+      ],
+      "words": 2173
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 12,
+      "relpath": "markdown/docs/backend/OPENVINO.md",
+      "score": 1.2006,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/docs/backend/OPENVINO.md",
+      "structure": 5.5,
+      "top_keywords": [
+        "hardware",
+        "passive"
+      ],
+      "words": 5576
+    },
+    {
+      "freshness": 0.947,
+      "keyword_signal": 1,
+      "relpath": "markdown/common/jinja/README.md",
+      "score": 1.1934,
+      "staging_path": "/home/jesse/openroot/candidates/staged/markdown/common/jinja/README.md",
+      "structure": 2.45,
+      "top_keywords": [
+        "node"
+      ],
+      "words": 623
+    }
+  ],
+  "candidates_found": 60,
+  "formula": "(KeywordSignal x Structure x Freshness) / Effort^1.5",
+  "generated_at": "2026-10-03T04:06:57Z",
+  "network_used": false,
+  "returned": 40,
+  "staging": "/home/jesse/openroot/candidates/staged",
+  "status": "candidate_mining_complete"
+}

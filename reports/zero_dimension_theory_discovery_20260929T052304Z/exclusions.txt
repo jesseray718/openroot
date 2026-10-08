@@ -1,0 +1,12 @@
+.git
+data
+logs
+reports
+consolidation-backups
+ctx_backup
+attic
+venv
+site-packages
+node_modules
+__pycache__
+quarantine

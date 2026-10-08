@@ -1,0 +1,4 @@
+{"ts": "2026-10-05T01:37:54.796861+00:00", "model": "qwen2.5:3b", "parallel": 1, "wall_s": 3.56, "worst_latency_s": 3.56, "sum_tps": 14.6, "saturated": false, "ram_free_gb_after": "11"}
+{"ts": "2026-10-05T01:38:00.945087+00:00", "model": "qwen2.5:3b", "parallel": 2, "wall_s": 6.15, "worst_latency_s": 6.14, "sum_tps": 23.6, "saturated": false, "ram_free_gb_after": "11"}
+{"ts": "2026-10-05T01:38:08.207089+00:00", "model": "qwen2.5:3b", "parallel": 4, "wall_s": 7.26, "worst_latency_s": 7.26, "sum_tps": 37.3, "saturated": false, "ram_free_gb_after": "11"}
+{"ts": "2026-10-05T01:38:17.286799+00:00", "model": "qwen2.5:3b", "parallel": 8, "wall_s": 9.08, "worst_latency_s": 9.06, "sum_tps": 66.1, "saturated": false, "ram_free_gb_after": "11"}

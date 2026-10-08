@@ -1,0 +1,1255 @@
+
+================================================================
+FILE: agape_kb/universal_axioms/universal_axioms.json
+================================================================
+--- NORMALIZED JSON ---
+{}
+
+================================================================
+FILE: bin/0112_postulates.py
+================================================================
+--- AUTHORITY / LOGIC / SIDE-EFFECT MARKERS ---
+1:"""Newton Chain — verified relations become postulates."""
+3:POSTULATES: dict[str, dict] = {
+37:    return POSTULATES.get(key)
+39:def all_postulates() -> list[dict]:
+40:    return list(POSTULATES.values())
+43:    return len(POSTULATES)
+
+--- FIRST 140 LINES ---
+"""Newton Chain — verified relations become postulates."""
+
+POSTULATES: dict[str, dict] = {
+    "p001_c_zero": {
+        "id": "P001",
+        "statement": "At R=1.0, C=0 for all N, T>=1",
+        "verified": True,
+        "falsifier": "Measure C > 0 at R=1.0",
+    },
+    "p002_synergy": {
+        "id": "P002",
+        "statement": "S = 1 + R*0.5*log_B(N), base-6 depth-4 N=1296 gives S=3.0",
+        "verified": True,
+        "falsifier": "Compute S != 3.0 at N=1296, R=1.0, B=6",
+    },
+    "p003_eta_bound": {
+        "id": "P003",
+        "statement": "H is an alias of eta. Do not compute them separately.",
+        "verified": True,
+        "falsifier": "Code path computes H independently of eta",
+    },
+    "p004_evaporative_loop": {
+        "id": "P004",
+        "statement": "Hot dry air through wet porous concrete → evaporation extracts latent heat → air exits at 35°F regardless of inlet temp.",
+        "verified": True,
+        "falsifier": "Measure outlet > 40°F with wet open-cell concrete tunnel",
+    },
+    "p005_coord_free": {
+        "id": "P005",
+        "statement": "Zero coordination cost requires R=1.0 resonance across all nodes.",
+        "verified": True,
+        "falsifier": "Document working system with C>0 at R=1.0",
+    },
+}
+
+def lookup(key: str) -> dict | None:
+    return POSTULATES.get(key)
+
+def all_postulates() -> list[dict]:
+    return list(POSTULATES.values())
+
+def count() -> int:
+    return len(POSTULATES)
+
+--- LAST 100 LINES ---
+"""Newton Chain — verified relations become postulates."""
+
+POSTULATES: dict[str, dict] = {
+    "p001_c_zero": {
+        "id": "P001",
+        "statement": "At R=1.0, C=0 for all N, T>=1",
+        "verified": True,
+        "falsifier": "Measure C > 0 at R=1.0",
+    },
+    "p002_synergy": {
+        "id": "P002",
+        "statement": "S = 1 + R*0.5*log_B(N), base-6 depth-4 N=1296 gives S=3.0",
+        "verified": True,
+        "falsifier": "Compute S != 3.0 at N=1296, R=1.0, B=6",
+    },
+    "p003_eta_bound": {
+        "id": "P003",
+        "statement": "H is an alias of eta. Do not compute them separately.",
+        "verified": True,
+        "falsifier": "Code path computes H independently of eta",
+    },
+    "p004_evaporative_loop": {
+        "id": "P004",
+        "statement": "Hot dry air through wet porous concrete → evaporation extracts latent heat → air exits at 35°F regardless of inlet temp.",
+        "verified": True,
+        "falsifier": "Measure outlet > 40°F with wet open-cell concrete tunnel",
+    },
+    "p005_coord_free": {
+        "id": "P005",
+        "statement": "Zero coordination cost requires R=1.0 resonance across all nodes.",
+        "verified": True,
+        "falsifier": "Document working system with C>0 at R=1.0",
+    },
+}
+
+def lookup(key: str) -> dict | None:
+    return POSTULATES.get(key)
+
+def all_postulates() -> list[dict]:
+    return list(POSTULATES.values())
+
+def count() -> int:
+    return len(POSTULATES)
+
+================================================================
+FILE: bin/0012_newton_chain.py
+================================================================
+--- AUTHORITY / LOGIC / SIDE-EFFECT MARKERS ---
+3:NEWTON CHAIN ENGINE — Axiomatic Reasoning That Builds on Itself
+7:import hashlib
+25:LEARNINGS_DB = os.path.join(ROOT, "learnings/newton_chain.json")
+30:# PART 1: UNIVERSAL AXIOMS
+33:AXIOMS = {
+37:    "AX-003": {"statement": "Every action has an equal and opposite reaction", "category": "physics", "source": "Newton's Third Law", "immutable": True},
+42:    "AX-007": {"statement": "The whole is greater than the part", "category": "mathematics", "source": "Euclid's Axioms", "immutable": True},
+45:    "AX-010": {"statement": "A straight line segment can be drawn joining any two points", "category": "mathematics", "source": "Euclid's Postulate 1", "immutable": True},
+46:    "AX-011": {"statement": "Through any point not on a line, exactly one parallel line exists", "category": "mathematics", "source": "Euclid's Parallel Postulate", "immutable": True},
+80:    "AX-040": {"statement": "Proof requires witness; truth demands verification", "category": "consensus", "source": "OpenRoot AX-019", "immutable": True},
+89:# PART 2: POSTULATES
+92:def make_p001(): return {"rule": "Insufficient observation reduces system quality", "derives_from": ["AX-022"], "condition": lambda p: p.get("observation_days", 0) < 7, "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 15, "recommendations": p.get("recommendations", []) + ["Extend observation to 7+ days"]}), "depth": 1}
+93:def make_p002(): return {"rule": "Finite energy sources carry systemic debt", "derives_from": ["AX-026", "AX-002"], "condition": lambda p: p.get("primary_energy_source", "grid").lower() not in ["solar", "wind", "geothermal", "hydro", "biomass", "renewable"], "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 30, "recommendations": p.get("recommendations", []) + ["Migrate to renewable energy source"]}), "depth": 2}
+94:def make_p003(): return {"rule": "Thermal gradients without recovery waste energy", "derives_from": ["AX-001", "AX-023"], "condition": lambda p: p.get("thermal_gradient") and not p.get("waste_heat_recovery"), "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 25, "recommendations": p.get("recommendations", []) + ["Install heat exchanger"]}), "depth": 2}
+95:def make_p004(): return {"rule": "Systems without feedback loops are fragile", "derives_from": ["AX-015", "AX-025"], "condition": lambda p: not p.get("feedback_mechanism"), "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 20, "recommendations": p.get("recommendations", []) + ["Implement feedback monitoring"]}), "depth": 2}
+96:def make_p005(): return {"rule": "Single-pathway systems have single points of failure", "derives_from": ["AX-033", "AX-017"], "condition": lambda p: p.get("pathway_alternatives", 1) < 2, "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 15, "recommendations": p.get("recommendations", []) + ["Add backup pathways"]}), "depth": 2}
+97:def make_p006(): return {"rule": "Waste outputs indicate incomplete design", "derives_from": ["AX-027", "AX-007"], "condition": lambda p: any(o.get("disposition") == "waste" for o in p.get("outputs", [])), "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 20, "recommendations": p.get("recommendations", []) + ["Circulate waste as input"]}), "depth": 2}
+98:def make_p007(): return {"rule": "Long payback indicates poor energy ROI", "derives_from": ["AX-024", "AX-023"], "condition": lambda p: p.get("payback_days", 999) > 365, "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 20, "recommendations": p.get("recommendations", []) + ["Reduce payback below 1 year"]}), "depth": 2}
+99:def make_p008(): return {"rule": "High human input violates least effort principle", "derives_from": ["AX-021", "AX-030"], "condition": lambda p: p.get("human_input", 1) > 10, "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 15, "recommendations": p.get("recommendations", []) + ["Automate to reduce human effort"]}), "depth": 2}
+100:def make_p009(): return {"rule": "Monolithic deployments risk catastrophic failure", "derives_from": ["AX-030", "AX-017"], "condition": lambda p: not p.get("incremental_rollout") and p.get("module_size", 0) > 500, "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 10, "recommendations": p.get("recommendations", []) + ["Phase incremental rollout"]}), "depth": 2}
+101:def make_p010(): return {"rule": "Systems lacking versioning cannot adapt", "derives_from": ["AX-032", "AX-041"], "condition": lambda p: not p.get("change_management"), "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 10, "recommendations": p.get("recommendations", []) + ["Implement version control"]}), "depth": 2}
+103:INITIAL_POSTULATES = {
+107:    "P-020": {"rule": "Unobserved high-effort systems are ethically questionable", "derives_from": ["AX-022", "AX-021", "P-001", "P-008"], "condition": lambda p: p.get("observation_days", 0) == 0 and p.get("human_input", 0) > 5, "effect": lambda p: p.update({"acre_eligible": False, "efficiency_penalty": p.get("efficiency_penalty", 0) + 25, "recommendations": p.get("recommendations", []) + ["HALT: Restart with observation phase"]}), "depth": 4},
+108:    "P-021": {"rule": "Finite-energy systems without feedback are doubly unsustainable", "derives_from": ["AX-002", "AX-026", "AX-015", "P-002", "P-004"], "condition": lambda p: p.get("primary_energy_source", "grid").lower() not in ["solar", "wind", "geothermal", "hydro", "biomass", "renewable"] and not p.get("feedback_mechanism"), "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 20, "recommendations": p.get("recommendations", []) + ["Add renewable migration AND feedback"]}), "depth": 5},
+109:    "P-022": {"rule": "Knowledge preserved immutably enables future builders", "derives_from": ["AX-041", "AX-013", "AX-014"], "condition": lambda p: p.get("immutable_record", False) == False, "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 10, "recommendations": p.get("recommendations", []) + ["Anchor to immutable ledger"]}), "depth": 3},
+110:    "P-023": {"rule": "Systems that serve themselves over others violate agape principle", "derives_from": ["AX-034", "AX-035", "AX-021"], "condition": lambda p: p.get("self_serving", False), "effect": lambda p: p.update({"acre_eligible": False, "efficiency_penalty": p.get("efficiency_penalty", 0) + 40, "recommendations": p.get("recommendations", []) + ["Redesign to benefit others"]}), "depth": 3},
+111:    "P-024": {"rule": "Computational work without energy accounting is incomplete", "derives_from": ["AX-018", "AX-019", "AX-001"], "condition": lambda p: p.get("compute_joules", 0) == 0 and p.get("involves_computation", False), "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 15, "recommendations": p.get("recommendations", []) + ["Calculate Landauer limit cost"]}), "depth": 3},
+118:class NewtonChainEngine:
+119:    def __init__(self, axioms, postulates):
+120:        self.axioms = axioms
+121:        self.postulates = dict(postulates)
+122:        self.proof_chains = []
+123:        self.new_postulates_generated = []
+126:    def get_last_hash(self):
+129:                with open(LEDGER_PATH, 'r') as f:
+132:                        return json.loads(lines[-1]).get("hash", "genesis")
+137:    def apply_all_postulates(self, problem, depth_limit=99):
+142:        problem.setdefault("proof_chain", [])
+145:        for p_key, p_def in self.postulates.items():
+151:                    problem["proof_chain"].append({"postulate": p_key, "rule": p_def["rule"], "derives_from": p_def["derives_from"], "depth": p_def["depth"]})
+163:        new_postulates = []
+166:                existing = any(set(p_def.get("combines", [])) == set(combo) for p_def in self.postulates.values())
+168:                    new_key = f"NP-{len(self.new_postulates_generated)+1:03d}"
+171:                        derives.extend(self.postulates[p_key]["derives_from"])
+173:                    new_postulate = {
+176:                        "condition": lambda p, keys=set(combo): all(self.postulates[k]["condition"](p) for k in keys),
+177:                        "effect": lambda p, keys=list(combo): p.update({"efficiency_bonus": p.get("efficiency_bonus", 0) + 5, "recommendations": p.get("recommendations", []) + [f"SYSTEMIC PATTERN: {', '.join(keys)}"]}),
+178:                        "depth": max(self.postulates[k]["depth"] for k in combo) + 1,
+181:                    self.postulates[new_key] = new_postulate
+182:                    self.new_postulates_generated.append(new_key)
+183:                    new_postulates.append(new_key)
+184:        return new_postulates
+192:    def verify_proof_chain(self, problem):
+193:        chain = problem.get("proof_chain", [])
+196:                if source not in self.axioms and source not in self.postulates:
+200:    def run_newton_chain(self, problem, max_loops=6):
+207:            current, fired = self.apply_all_postulates(current, depth_limit)
+210:            all_results.append({"loop": loop + 1, "depth_limit": depth_limit, "postulates_fired": fired, "fired_count": len(fired), "efficiency": score, "total_postulates": len(self.postulates)})
+213:                if delta < 0.5 and len(fired) == len(all_results[-2]["postulates_fired"]):
+217:            current, fired = self.apply_all_postulates(current, 99)
+219:            all_results.append({"loop": self.loop_count + 1, "depth_limit": 99, "postulates_fired": fired, "fired_count": len(fired), "efficiency": final_score, "total_postulates": len(self.postulates), "new_postulates_active": len(new_posts)})
+220:        valid, verify_msg = self.verify_proof_chain(current)
+221:        return {"loops_executed": len(all_results), "loop_history": all_results, "final_efficiency": all_results[-1]["efficiency"], "initial_efficiency": all_results[0]["efficiency"], "improvement": all_results[-1]["efficiency"] - all_results[0]["efficiency"], "final_problem": current, "recommendations": current.get("recommendations", []), "proof_chain": current.get("proof_chain", []), "proof_valid": valid, "verify_msg": verify_msg, "new_postulates_generated": self.new_postulates_generated, "total_postulates": len(self.postulates), "total_axioms": len(self.axioms)}
+224:        prev_hash = self.get_last_hash()
+225:        entry = {"timestamp": datetime.now(datetime.UTC).isoformat() + "Z", "type": "newton_chain_proof", "question_hash": hashlib.sha256(question.encode()).hexdigest()[:16], "loops": result["loops_executed"], "final_efficiency": result["final_efficiency"], "improvement": result["improvement"], "proof_chain_length": len(result["proof_chain"]), "proof_valid": result["proof_valid"], "new_postulates": result["new_postulates_generated"], "total_axioms": result["total_axioms"], "total_postulates": result["total_postulates"], "recommendations": result["recommendations"][:5], "prev_hash": prev_hash, "verified": False}
+226:        entry["hash"] = hashlib.sha256(json.dumps(entry, sort_keys=True).encode()).hexdigest()
+227:        with open(LEDGER_PATH, 'a') as f:
+228:            f.write(json.dumps(entry) + "\n")
+232:        learnings = {"sessions": [], "generated_postulates": {}}
+235:                with open(LEARNINGS_DB, 'r') as f:
+239:        for p_key in result.get("new_postulates_generated", []):
+240:            p_def = self.postulates.get(p_key, {})
+241:            learnings["generated_postulates"][p_key] = {"rule": p_def.get("rule", ""), "derives_from": p_def.get("derives_from", []), "combines": p_def.get("combines", []), "depth": p_def.get("depth", 0), "created_at": datetime.now(datetime.UTC).isoformat() + "Z"}
+242:        learnings["sessions"].append({"timestamp": datetime.now(datetime.UTC).isoformat() + "Z", "question_hash": hashlib.sha256(question.encode()).hexdigest()[:16], "loops": result["loops_executed"], "final_efficiency": result["final_efficiency"], "proof_valid": result["proof_valid"]})
+243:        with open(LEARNINGS_DB, 'w') as f:
+275:ENGINE = NewtonChainEngine(AXIOMS, INITIAL_POSTULATES)
+278:<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Newton Chain</title>
+281:<h1>🔭 Newton Chain Engine</h1>
+282:<p>{{ axiom_count }} axioms · {{ postulate_count }} postulates · Self-expanding reasoner</p>
+283:<p style="color:#4af;font-style:italic">"If I have seen further it is by standing on the shoulders of giants." — Newton</p>
+288:<span class="badge {{ 'ok' if result.proof_valid else 'fail' }}">Proof: {{ 'VALID' if result.proof_valid else 'INVALID' }}</span>
+289:{% if result.new_postulates_generated %}<span class="badge" style="background:#4a0;color:#fff">{{ result.new_postulates_generated|length }} NEW postulates!</span>{% endif %}
+293:<div class="stat"><div class="stat-val">{{ result.loops_executed }}</div><div class="stat-label">Loops</div></div>
+294:<div class="stat"><div class="stat-val">{{ result.proof_chain|length }}</div><div class="stat-label">Proof Steps</div></div>
+295:<div class="stat"><div class="stat-val">{{ result.total_postulates }}</div><div class="stat-label">Postulates</div></div>
+301:<h3>Proof Chain ({{ result.proof_chain|length }})</h3>
+302:{% for step in result.proof_chain %}<div style="padding:5px 0;border-bottom:1px solid #333;font-size:13px"><strong>{{ step.postulate }}</strong>: {{ step.rule }} <span style="color:#4af">← {{ step.derives_from|join(', ') }}</span></div>{% endfor %}
+304:{% if result.new_postulates_generated %}
+305:<div style="background:#1a2e1a;padding:10px;margin:5px 0;border-left:3px solid #4a0"><h3>🌟 New Postulates</h3>
+306:{% for np in result.new_postulates_generated %}<div><strong>{{ np }}</strong> (auto-generated)</div>{% endfor %}
+309:<div style="background:#1a1a2e;padding:10px;font-size:10px;color:#888;word-break:break-all"><strong>ACRE Ledger:</strong> {{ acre_hash }}</div>
+312:<textarea name="question" placeholder="Ask anything. Engine chains axioms → postulates → theorems.">{{ question or '' }}</textarea>
+313:<button type="submit">🔭 Run Newton Chain</button>
+315:<p style="margin-top:30px"><a href="/axioms" style="color:#6d4aff">Axioms</a> · <a href="/postulates" style="color:#6d4aff">Postulates</a> · <a href="/health" style="color:#6d4aff">Health</a></p>
+320:    return render_template_string(INDEX_HTML, result=None, question="", error=None, axiom_count=len(ENGINE.axioms), postulate_count=len(ENGINE.postulates), acre_hash="")
+326:        return render_template_string(INDEX_HTML, result=None, question="", error="Enter a question", axiom_count=len(ENGINE.axioms), postulate_count=len(ENGINE.postulates), acre_hash="")
+328:    result = ENGINE.run_newton_chain(problem, max_loops=6)
+331:    return render_template_string(INDEX_HTML, result=result, question=question, error=None, axiom_count=len(ENGINE.axioms), postulate_count=len(ENGINE.postulates), acre_hash=acre_entry["hash"])
+333:@app.route("/axioms")
+334:def view_axioms():
+335:    html = f"<h1>Axioms ({len(ENGINE.axioms)})</h1><table><tr><th>ID</th><th>Category</th><th>Statement</th></tr>"
+336:    for k, v in sorted(ENGINE.axioms.items()):
+341:@app.route("/postulates")
+342:def view_postulates():
+343:    html = f"<h1>Postulates ({len(ENGINE.postulates)})</h1>"
+344:    for k, v in sorted(ENGINE.postulates.items()):
+353:    return jsonify({"status": "ok", "axioms": len(ENGINE.axioms), "postulates": len(ENGINE.postulates), "new_generated": len(ENGINE.new_postulates_generated)})
+362:    result = ENGINE.run_newton_chain(problem, max_loops=6)
+365:    return jsonify({"success": True, "loops": result["loops_executed"], "efficiency": result["final_efficiency"], "proof_valid": result["proof_valid"], "new_postulates": result["new_postulates_generated"], "recommendations": result["recommendations"][:5], "acre_hash": acre["hash"]})
+368:    with open(json_path, 'r') as f:
+371:    print(f"\n{'='*72}\n  NEWTON CHAIN BATCH — {len(items)} ITEMS\n{'='*72}\n")
+375:        result = ENGINE.run_newton_chain(problem, max_loops=6)
+378:        print(f"Q: {q[:60]}\nEffic: {result['final_efficiency']:.1f}% | Loops: {result['loops_executed']} | Proof: {'VALID' if result['proof_valid'] else 'INVALID'}")
+379:        if result['new_postulates_generated']:
+380:            print(f"🌟 NEW: {result['new_postulates_generated']}")
+383:if __name__ == "__main__":
+388:        print(f"\n  🔭 NEWTON CHAIN ENGINE\n  {len(AXIOMS)} axioms · {len(INITIAL_POSTULATES)} postulates\n  Web: http://127.0.0.1:5002\n  Batch: python3 newton_chain_fixed.py --batch file.json\n")
+
+--- FIRST 140 LINES ---
+#!/usr/bin/env python3
+"""
+NEWTON CHAIN ENGINE — Axiomatic Reasoning That Builds on Itself
+"""
+
+import json
+import hashlib
+import os
+import sys
+import uuid
+import time
+from copy import deepcopy
+from datetime import datetime, timezone
+from collections import defaultdict
+from flask import Flask, request, render_template_string, jsonify
+
+# PATHS
+TERMUX_HOME = "/data/data/com.termux/files/home"
+if os.path.exists(TERMUX_HOME):
+    ROOT = os.path.join(TERMUX_HOME, "projects/openroot")
+else:
+    ROOT = os.path.expanduser("~/openroot")
+
+LEDGER_PATH = os.path.join(ROOT, "acre/ledger.jsonl")
+LEARNINGS_DB = os.path.join(ROOT, "learnings/newton_chain.json")
+os.makedirs(os.path.dirname(LEDGER_PATH), exist_ok=True)
+os.makedirs(os.path.dirname(LEARNINGS_DB), exist_ok=True)
+
+# ============================================================
+# PART 1: UNIVERSAL AXIOMS
+# ============================================================
+
+AXIOMS = {
+    # Physics
+    "AX-001": {"statement": "Energy is neither created nor destroyed", "category": "physics", "source": "First Law of Thermodynamics", "immutable": True},
+    "AX-002": {"statement": "Entropy of an isolated system never decreases", "category": "physics", "source": "Second Law of Thermodynamics", "immutable": True},
+    "AX-003": {"statement": "Every action has an equal and opposite reaction", "category": "physics", "source": "Newton's Third Law", "immutable": True},
+    "AX-004": {"statement": "Mass and energy are interchangeable (E=mc^2)", "category": "physics", "source": "Einstein", "immutable": True},
+    "AX-005": {"statement": "The speed of light in vacuum is constant for all observers", "category": "physics", "source": "Einstein", "immutable": True},
+    "AX-006": {"statement": "Information cannot travel faster than light", "category": "physics", "source": "Relativity", "immutable": True},
+    # Mathematics
+    "AX-007": {"statement": "The whole is greater than the part", "category": "mathematics", "source": "Euclid's Axioms", "immutable": True},
+    "AX-008": {"statement": "Things equal to the same thing are equal to each other", "category": "mathematics", "source": "Euclid", "immutable": True},
+    "AX-009": {"statement": "If equals are added to equals, the wholes are equal", "category": "mathematics", "source": "Euclid", "immutable": True},
+    "AX-010": {"statement": "A straight line segment can be drawn joining any two points", "category": "mathematics", "source": "Euclid's Postulate 1", "immutable": True},
+    "AX-011": {"statement": "Through any point not on a line, exactly one parallel line exists", "category": "mathematics", "source": "Euclid's Parallel Postulate", "immutable": True},
+    "AX-012": {"statement": "Infinity exists as a concept but cannot be completed", "category": "mathematics", "source": "Hilbert/Cantor", "immutable": True},
+    # Systems Theory
+    "AX-013": {"statement": "The behavior of a system emerges from the interaction of its parts", "category": "systems", "source": "General Systems Theory", "immutable": True},
+    "AX-014": {"statement": "A system is more than the sum of its parts", "category": "systems", "source": "Aristotle / Fuller", "immutable": True},
+    "AX-015": {"statement": "Feedback loops determine system stability", "category": "systems", "source": "Cybernetics", "immutable": True},
+    "AX-016": {"statement": "The component with the fewest connections limits the whole system", "category": "systems", "source": "Liebig's Law", "immutable": True},
+    "AX-017": {"statement": "In complex systems, small changes can produce disproportionately large effects", "category": "systems", "source": "Chaos Theory", "immutable": True},
+    # Computation
+    "AX-018": {"statement": "Every bit of information erased costs at least kT*ln(2) joules", "category": "computation", "source": "Landauer's Principle", "immutable": True},
+    "AX-019": {"statement": "Computation is a physical process constrained by physical laws", "category": "computation", "source": "Landauer / Feynman", "immutable": True},
+    "AX-020": {"statement": "The universe computes; physics is computation", "category": "computation", "source": "Wheeler 'It from Bit'", "immutable": True},
+    # Permaculture
+    "AX-021": {"statement": "Greatest good for greatest number", "category": "ethics", "source": "Permaculture Ethics", "immutable": True},
+    "AX-022": {"statement": "Observe before acting; interact with patience", "category": "permaculture", "source": "Permaculture Principle 1", "immutable": True},
+    "AX-023": {"statement": "Capture and store energy when abundant", "category": "permaculture", "source": "Permaculture Principle 2", "immutable": True},
+    "AX-024": {"statement": "Obtain a yield; ensure the system produces real value", "category": "permaculture", "source": "Permaculture Principle 3", "immutable": True},
+    "AX-025": {"statement": "Apply self-regulation and accept feedback", "category": "permaculture", "source": "Permaculture Principle 4", "immutable": True},
+    "AX-026": {"statement": "Use renewable resources over finite ones", "category": "permaculture", "source": "Permaculture Principle 5", "immutable": True},
+    "AX-027": {"statement": "Produce no waste; all outputs become inputs", "category": "permaculture", "source": "Permaculture Principle 6", "immutable": True},
+    "AX-028": {"statement": "Design from patterns to details", "category": "permaculture", "source": "Permaculture Principle 7", "immutable": True},
+    "AX-029": {"statement": "Integrate rather than segregate", "category": "permaculture", "source": "Permaculture Principle 8", "immutable": True},
+    "AX-030": {"statement": "Use small and slow solutions", "category": "permaculture", "source": "Permaculture Principle 9", "immutable": True},
+    "AX-031": {"statement": "Value and use the edge; diversity happens at boundaries", "category": "permaculture", "source": "Permaculture Principle 10", "immutable": True},
+    "AX-032": {"statement": "Creatively use and respond to change", "category": "permaculture", "source": "Permaculture Principle 11", "immutable": True},
+    "AX-033": {"statement": "Use and value diversity", "category": "permaculture", "source": "Permaculture Principle 12", "immutable": True},
+    # Theology
+    "AX-034": {"statement": "Love your neighbor as yourself", "category": "theology", "source": "Matthew 22:39 NASB", "immutable": True},
+    "AX-035": {"statement": "It is more blessed to give than to receive", "category": "theology", "source": "Acts 20:35 NASB", "immutable": True},
+    "AX-036": {"statement": "Do to others as you would have them do to you", "category": "theology", "source": "Luke 6:31 NASB", "immutable": True},
+    "AX-037": {"statement": "You shall know them by their fruits", "category": "theology", "source": "Matthew 7:16 NASB", "immutable": True},
+    "AX-038": {"statement": "Seek first the kingdom and all else is added", "category": "theology", "source": "Matthew 6:33 NASB", "immutable": True},
+    "AX-039": {"statement": "Ask, and it will be given; seek, and you will find; knock, and it will be opened", "category": "theology", "source": "Matthew 7:7 NASB", "immutable": True},
+    # Blockchain
+    "AX-040": {"statement": "Proof requires witness; truth demands verification", "category": "consensus", "source": "OpenRoot AX-019", "immutable": True},
+    "AX-041": {"statement": "Immutability preserves truth across time", "category": "consensus", "source": "Blockchain principle", "immutable": True},
+    # Strategy
+    "AX-042": {"statement": "Know yourself and know your enemy; victory requires both", "category": "strategy", "source": "Sun Tzu", "immutable": True},
+    "AX-043": {"statement": "All warfare is based on deception", "category": "strategy", "source": "Sun Tzu", "immutable": True},
+    "AX-044": {"statement": "The supreme art is to subdue the enemy without fighting", "category": "strategy", "source": "Sun Tzu", "immutable": True},
+}
+
+# ============================================================
+# PART 2: POSTULATES
+# ============================================================
+
+def make_p001(): return {"rule": "Insufficient observation reduces system quality", "derives_from": ["AX-022"], "condition": lambda p: p.get("observation_days", 0) < 7, "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 15, "recommendations": p.get("recommendations", []) + ["Extend observation to 7+ days"]}), "depth": 1}
+def make_p002(): return {"rule": "Finite energy sources carry systemic debt", "derives_from": ["AX-026", "AX-002"], "condition": lambda p: p.get("primary_energy_source", "grid").lower() not in ["solar", "wind", "geothermal", "hydro", "biomass", "renewable"], "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 30, "recommendations": p.get("recommendations", []) + ["Migrate to renewable energy source"]}), "depth": 2}
+def make_p003(): return {"rule": "Thermal gradients without recovery waste energy", "derives_from": ["AX-001", "AX-023"], "condition": lambda p: p.get("thermal_gradient") and not p.get("waste_heat_recovery"), "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 25, "recommendations": p.get("recommendations", []) + ["Install heat exchanger"]}), "depth": 2}
+def make_p004(): return {"rule": "Systems without feedback loops are fragile", "derives_from": ["AX-015", "AX-025"], "condition": lambda p: not p.get("feedback_mechanism"), "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 20, "recommendations": p.get("recommendations", []) + ["Implement feedback monitoring"]}), "depth": 2}
+def make_p005(): return {"rule": "Single-pathway systems have single points of failure", "derives_from": ["AX-033", "AX-017"], "condition": lambda p: p.get("pathway_alternatives", 1) < 2, "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 15, "recommendations": p.get("recommendations", []) + ["Add backup pathways"]}), "depth": 2}
+def make_p006(): return {"rule": "Waste outputs indicate incomplete design", "derives_from": ["AX-027", "AX-007"], "condition": lambda p: any(o.get("disposition") == "waste" for o in p.get("outputs", [])), "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 20, "recommendations": p.get("recommendations", []) + ["Circulate waste as input"]}), "depth": 2}
+def make_p007(): return {"rule": "Long payback indicates poor energy ROI", "derives_from": ["AX-024", "AX-023"], "condition": lambda p: p.get("payback_days", 999) > 365, "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 20, "recommendations": p.get("recommendations", []) + ["Reduce payback below 1 year"]}), "depth": 2}
+def make_p008(): return {"rule": "High human input violates least effort principle", "derives_from": ["AX-021", "AX-030"], "condition": lambda p: p.get("human_input", 1) > 10, "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 15, "recommendations": p.get("recommendations", []) + ["Automate to reduce human effort"]}), "depth": 2}
+def make_p009(): return {"rule": "Monolithic deployments risk catastrophic failure", "derives_from": ["AX-030", "AX-017"], "condition": lambda p: not p.get("incremental_rollout") and p.get("module_size", 0) > 500, "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 10, "recommendations": p.get("recommendations", []) + ["Phase incremental rollout"]}), "depth": 2}
+def make_p010(): return {"rule": "Systems lacking versioning cannot adapt", "derives_from": ["AX-032", "AX-041"], "condition": lambda p: not p.get("change_management"), "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 10, "recommendations": p.get("recommendations", []) + ["Implement version control"]}), "depth": 2}
+
+INITIAL_POSTULATES = {
+    "P-001": make_p001(), "P-002": make_p002(), "P-003": make_p003(), "P-004": make_p004(),
+    "P-005": make_p005(), "P-006": make_p006(), "P-007": make_p007(), "P-008": make_p008(),
+    "P-009": make_p009(), "P-010": make_p010(),
+    "P-020": {"rule": "Unobserved high-effort systems are ethically questionable", "derives_from": ["AX-022", "AX-021", "P-001", "P-008"], "condition": lambda p: p.get("observation_days", 0) == 0 and p.get("human_input", 0) > 5, "effect": lambda p: p.update({"acre_eligible": False, "efficiency_penalty": p.get("efficiency_penalty", 0) + 25, "recommendations": p.get("recommendations", []) + ["HALT: Restart with observation phase"]}), "depth": 4},
+    "P-021": {"rule": "Finite-energy systems without feedback are doubly unsustainable", "derives_from": ["AX-002", "AX-026", "AX-015", "P-002", "P-004"], "condition": lambda p: p.get("primary_energy_source", "grid").lower() not in ["solar", "wind", "geothermal", "hydro", "biomass", "renewable"] and not p.get("feedback_mechanism"), "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 20, "recommendations": p.get("recommendations", []) + ["Add renewable migration AND feedback"]}), "depth": 5},
+    "P-022": {"rule": "Knowledge preserved immutably enables future builders", "derives_from": ["AX-041", "AX-013", "AX-014"], "condition": lambda p: p.get("immutable_record", False) == False, "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 10, "recommendations": p.get("recommendations", []) + ["Anchor to immutable ledger"]}), "depth": 3},
+    "P-023": {"rule": "Systems that serve themselves over others violate agape principle", "derives_from": ["AX-034", "AX-035", "AX-021"], "condition": lambda p: p.get("self_serving", False), "effect": lambda p: p.update({"acre_eligible": False, "efficiency_penalty": p.get("efficiency_penalty", 0) + 40, "recommendations": p.get("recommendations", []) + ["Redesign to benefit others"]}), "depth": 3},
+    "P-024": {"rule": "Computational work without energy accounting is incomplete", "derives_from": ["AX-018", "AX-019", "AX-001"], "condition": lambda p: p.get("compute_joules", 0) == 0 and p.get("involves_computation", False), "effect": lambda p: p.update({"efficiency_penalty": p.get("efficiency_penalty", 0) + 15, "recommendations": p.get("recommendations", []) + ["Calculate Landauer limit cost"]}), "depth": 3},
+}
+
+# ============================================================
+# PART 3: ENGINE CLASS
+# ============================================================
+
+class NewtonChainEngine:
+    def __init__(self, axioms, postulates):
+        self.axioms = axioms
+        self.postulates = dict(postulates)
+        self.proof_chains = []
+        self.new_postulates_generated = []
+        self.loop_count = 0
+
+    def get_last_hash(self):
+        if os.path.exists(LEDGER_PATH):
+            try:
+                with open(LEDGER_PATH, 'r') as f:
+                    lines = [l.strip() for l in f if l.strip()]
+                    if lines:
+                        return json.loads(lines[-1]).get("hash", "genesis")
+            except:
+                pass
+        return "genesis"
+
+    def apply_all_postulates(self, problem, depth_limit=99):
+        problem = deepcopy(problem)
+        problem.setdefault("recommendations", [])
+        problem.setdefault("efficiency_penalty", 0)
+
+--- LAST 100 LINES ---
+</div>
+<div class="stats">
+<div class="stat"><div class="stat-val">{{ "%.1f"|format(result.final_efficiency) }}%</div><div class="stat-label">Final Efficiency</div></div>
+<div class="stat"><div class="stat-val">{{ result.loops_executed }}</div><div class="stat-label">Loops</div></div>
+<div class="stat"><div class="stat-val">{{ result.proof_chain|length }}</div><div class="stat-label">Proof Steps</div></div>
+<div class="stat"><div class="stat-val">{{ result.total_postulates }}</div><div class="stat-label">Postulates</div></div>
+</div>
+<table><tr><th>Loop</th><th>Depth</th><th>Fired</th><th>Effic.</th></tr>
+{% for entry in result.loop_history %}<tr><td>{{ entry.loop }}</td><td>{{ entry.depth_limit }}</td><td>{{ entry.fired_count }}</td><td>{{ "%.1f"|format(entry.efficiency) }}%</td></tr>{% endfor %}
+</table>
+<div style="background:#1a1a2e;padding:15px;margin:10px 0">
+<h3>Proof Chain ({{ result.proof_chain|length }})</h3>
+{% for step in result.proof_chain %}<div style="padding:5px 0;border-bottom:1px solid #333;font-size:13px"><strong>{{ step.postulate }}</strong>: {{ step.rule }} <span style="color:#4af">← {{ step.derives_from|join(', ') }}</span></div>{% endfor %}
+</div>
+{% if result.new_postulates_generated %}
+<div style="background:#1a2e1a;padding:10px;margin:5px 0;border-left:3px solid #4a0"><h3>🌟 New Postulates</h3>
+{% for np in result.new_postulates_generated %}<div><strong>{{ np }}</strong> (auto-generated)</div>{% endfor %}
+</div>{% endif %}
+<div style="background:#1a1a2e;padding:10px;margin:10px 0"><h3>Recommendations</h3><ul class="rec-list">{% for rec in result.recommendations[:8] %}<li>{{ rec }}</li>{% endfor %}</ul></div>
+<div style="background:#1a1a2e;padding:10px;font-size:10px;color:#888;word-break:break-all"><strong>ACRE Ledger:</strong> {{ acre_hash }}</div>
+{% endif %}
+<form method="post" action="/reason">
+<textarea name="question" placeholder="Ask anything. Engine chains axioms → postulates → theorems.">{{ question or '' }}</textarea>
+<button type="submit">🔭 Run Newton Chain</button>
+</form>
+<p style="margin-top:30px"><a href="/axioms" style="color:#6d4aff">Axioms</a> · <a href="/postulates" style="color:#6d4aff">Postulates</a> · <a href="/health" style="color:#6d4aff">Health</a></p>
+</div></body></html>'''
+
+@app.route("/")
+def index():
+    return render_template_string(INDEX_HTML, result=None, question="", error=None, axiom_count=len(ENGINE.axioms), postulate_count=len(ENGINE.postulates), acre_hash="")
+
+@app.route("/reason", methods=["POST"])
+def reason():
+    question = request.form.get("question", "")
+    if not question:
+        return render_template_string(INDEX_HTML, result=None, question="", error="Enter a question", axiom_count=len(ENGINE.axioms), postulate_count=len(ENGINE.postulates), acre_hash="")
+    problem = parse_question(question)
+    result = ENGINE.run_newton_chain(problem, max_loops=6)
+    acre_entry = ENGINE.log_to_acre(question, result)
+    ENGINE.save_learnings(question, result)
+    return render_template_string(INDEX_HTML, result=result, question=question, error=None, axiom_count=len(ENGINE.axioms), postulate_count=len(ENGINE.postulates), acre_hash=acre_entry["hash"])
+
+@app.route("/axioms")
+def view_axioms():
+    html = f"<h1>Axioms ({len(ENGINE.axioms)})</h1><table><tr><th>ID</th><th>Category</th><th>Statement</th></tr>"
+    for k, v in sorted(ENGINE.axioms.items()):
+        html += f"<tr><td>{k}</td><td>{v['category']}</td><td>{v['statement']}</td></tr>"
+    html += "</table><br><a href='/' style='color:#6d4aff'>← Back</a>"
+    return html
+
+@app.route("/postulates")
+def view_postulates():
+    html = f"<h1>Postulates ({len(ENGINE.postulates)})</h1>"
+    for k, v in sorted(ENGINE.postulates.items()):
+        auto = " 🌟 AUTO" if v.get("auto_generated") else ""
+        combines = f" [Combines: {', '.join(v['combines'])}]" if v.get("combines") else ""
+        html += f"<div style='background:#1a1a2e;color:#ddd;padding:10px;margin:5px 0'><strong>{k}</strong> (depth {v['depth']}){auto}{combines}<br>{v['rule']}<br><small style='color:#6d4aff'>From: {', '.join(v['derives_from'])}</small></div>"
+    html += "<br><a href='/' style='color:#6d4aff'>← Back</a>"
+    return html
+
+@app.route("/health")
+def health():
+    return jsonify({"status": "ok", "axioms": len(ENGINE.axioms), "postulates": len(ENGINE.postulates), "new_generated": len(ENGINE.new_postulates_generated)})
+
+@app.route("/api/v1/reason", methods=["POST"])
+def api_reason():
+    data = request.get_json()
+    question = data.get("question", "")
+    if not question:
+        return jsonify({"error": "Missing question"}), 400
+    problem = parse_question(question)
+    result = ENGINE.run_newton_chain(problem, max_loops=6)
+    acre = ENGINE.log_to_acre(question, result)
+    ENGINE.save_learnings(question, result)
+    return jsonify({"success": True, "loops": result["loops_executed"], "efficiency": result["final_efficiency"], "proof_valid": result["proof_valid"], "new_postulates": result["new_postulates_generated"], "recommendations": result["recommendations"][:5], "acre_hash": acre["hash"]})
+
+def run_batch(json_path):
+    with open(json_path, 'r') as f:
+        ctx = json.load(f)
+    items = ctx if isinstance(ctx, list) else ctx.get("tasks", [ctx])
+    print(f"\n{'='*72}\n  NEWTON CHAIN BATCH — {len(items)} ITEMS\n{'='*72}\n")
+    for item in items:
+        q = item.get("name", item.get("task", str(item)[:80])) if isinstance(item, dict) else str(item)
+        problem = parse_question(q)
+        result = ENGINE.run_newton_chain(problem, max_loops=6)
+        ENGINE.log_to_acre(q, result)
+        ENGINE.save_learnings(q, result)
+        print(f"Q: {q[:60]}\nEffic: {result['final_efficiency']:.1f}% | Loops: {result['loops_executed']} | Proof: {'VALID' if result['proof_valid'] else 'INVALID'}")
+        if result['new_postulates_generated']:
+            print(f"🌟 NEW: {result['new_postulates_generated']}")
+        print()
+
+if __name__ == "__main__":
+    if len(sys.argv) > 1 and sys.argv[1] == "--batch":
+        batch_file = sys.argv[2] if len(sys.argv) > 2 else os.path.join(ROOT, "computational_flow/tasks/pow_log.json")
+        run_batch(batch_file)
+    else:
+        print(f"\n  🔭 NEWTON CHAIN ENGINE\n  {len(AXIOMS)} axioms · {len(INITIAL_POSTULATES)} postulates\n  Web: http://127.0.0.1:5002\n  Batch: python3 newton_chain_fixed.py --batch file.json\n")
+        app.run(host="127.0.0.1", port=5002, debug=False, use_reloader=False)
+
+================================================================
+FILE: bin/0773_proof_builder.py
+================================================================
+--- AUTHORITY / LOGIC / SIDE-EFFECT MARKERS ---
+2:"""proof_builder.py - manual proof construction with kernel validation."""
+4:sys.path.insert(0, '/home/jesse/openroot/axiom_engine')
+5:from theorems_extend import load_all, load_cache, content_hash, flag_of, dumps, save_cache
+8:STORE = Path("/home/jesse/openroot/axiom_engine/store")
+11:def build_theorem(goal_id, goal_statement, premises_list, proof_steps):
+12:    """Build theorem record and attempt to prove via kernel."""
+16:    # Verify all premises exist
+26:    # Build proof body
+28:        "kind": "theorem",
+32:        "proof": proof_steps,
+34:    digest = content_hash(body)
+38:        "kind": "theorem",
+41:        "hash": digest,
+44:        "proof": proof_steps,
+48:    # Write to theorems.jsonl and chain.jsonl
+49:    with (STORE / "theorems.jsonl").open("a", encoding="utf-8") as f:
+50:        f.write(dumps(rec) + "\n")
+51:    with CHAIN.open("a", encoding="utf-8") as f:
+52:        f.write(dumps({"flag": flag, "hash": digest, "id": goal_id, "kind": "theorem", "ts": rec["ts"]}) + "\n")
+55:    cache["memo"][goal_id] = {"flag": flag, "hash": digest}
+58:    return {"status": "HUNG", "flag": flag, "hash": digest, "steps": len(proof_steps)}
+60:if __name__ == "__main__":
+61:    print("Usage: Import this module, call build_theorem()")
+64:    >>> from proof_builder import build_theorem
+65:    >>> build_theorem(
+
+--- FIRST 140 LINES ---
+#!/usr/bin/env python3
+"""proof_builder.py - manual proof construction with kernel validation."""
+import sys
+sys.path.insert(0, '/home/jesse/openroot/axiom_engine')
+from theorems_extend import load_all, load_cache, content_hash, flag_of, dumps, save_cache
+from pathlib import Path
+
+STORE = Path("/home/jesse/openroot/axiom_engine/store")
+CHAIN = STORE / "chain.jsonl"
+
+def build_theorem(goal_id, goal_statement, premises_list, proof_steps):
+    """Build theorem record and attempt to prove via kernel."""
+    idx = load_all()
+    cache = load_cache()
+    
+    # Verify all premises exist
+    for p in premises_list:
+        found = False
+        for layer in idx.values():
+            if p in layer:
+                found = True
+                break
+        if not found:
+            return {"status": "ERROR", "reason": f"premise {p} not found in any layer"}
+    
+    # Build proof body
+    body = {
+        "kind": "theorem",
+        "id": goal_id,
+        "statement": goal_statement,
+        "premises": premises_list,
+        "proof": proof_steps,
+    }
+    digest = content_hash(body)
+    flag = flag_of("TH", digest)
+    
+    rec = {
+        "kind": "theorem",
+        "id": goal_id,
+        "flag": flag,
+        "hash": digest,
+        "statement": goal_statement,
+        "premises": premises_list,
+        "proof": proof_steps,
+        "ts": __import__('time').time(),
+    }
+    
+    # Write to theorems.jsonl and chain.jsonl
+    with (STORE / "theorems.jsonl").open("a", encoding="utf-8") as f:
+        f.write(dumps(rec) + "\n")
+    with CHAIN.open("a", encoding="utf-8") as f:
+        f.write(dumps({"flag": flag, "hash": digest, "id": goal_id, "kind": "theorem", "ts": rec["ts"]}) + "\n")
+    
+    # Cache the result
+    cache["memo"][goal_id] = {"flag": flag, "hash": digest}
+    save_cache(cache)
+    
+    return {"status": "HUNG", "flag": flag, "hash": digest, "steps": len(proof_steps)}
+
+if __name__ == "__main__":
+    print("Usage: Import this module, call build_theorem()")
+    print("Example from Python REPL:")
+    print("""
+    >>> from proof_builder import build_theorem
+    >>> build_theorem(
+    ...     "TH-LIGHT-EMERGENCE",
+    ...     "Light propagates isotropically from the void",
+    ...     ["AX-0D-EXISTENCE", "DEF-ZERO-VOID", "DEF-ZERO-LIGHT"],
+    ...     [{"rule": "assume", "from": [], "conclude": "AX-0D-EXISTENCE"},
+    ...      {"rule": "unfold_def", "from": ["AX-0D-EXISTENCE"], "conclude": "DEF-ZERO-VOID"},
+    ...      {"rule": "modus_ponens", "from": ["AX-0D-EXISTENCE", "DEF-ZERO-VOID", "DEF-ZERO-LIGHT"], "conclude": "TH-LIGHT-EMERGENCE"}]
+    ... )
+    """)
+
+--- LAST 100 LINES ---
+#!/usr/bin/env python3
+"""proof_builder.py - manual proof construction with kernel validation."""
+import sys
+sys.path.insert(0, '/home/jesse/openroot/axiom_engine')
+from theorems_extend import load_all, load_cache, content_hash, flag_of, dumps, save_cache
+from pathlib import Path
+
+STORE = Path("/home/jesse/openroot/axiom_engine/store")
+CHAIN = STORE / "chain.jsonl"
+
+def build_theorem(goal_id, goal_statement, premises_list, proof_steps):
+    """Build theorem record and attempt to prove via kernel."""
+    idx = load_all()
+    cache = load_cache()
+    
+    # Verify all premises exist
+    for p in premises_list:
+        found = False
+        for layer in idx.values():
+            if p in layer:
+                found = True
+                break
+        if not found:
+            return {"status": "ERROR", "reason": f"premise {p} not found in any layer"}
+    
+    # Build proof body
+    body = {
+        "kind": "theorem",
+        "id": goal_id,
+        "statement": goal_statement,
+        "premises": premises_list,
+        "proof": proof_steps,
+    }
+    digest = content_hash(body)
+    flag = flag_of("TH", digest)
+    
+    rec = {
+        "kind": "theorem",
+        "id": goal_id,
+        "flag": flag,
+        "hash": digest,
+        "statement": goal_statement,
+        "premises": premises_list,
+        "proof": proof_steps,
+        "ts": __import__('time').time(),
+    }
+    
+    # Write to theorems.jsonl and chain.jsonl
+    with (STORE / "theorems.jsonl").open("a", encoding="utf-8") as f:
+        f.write(dumps(rec) + "\n")
+    with CHAIN.open("a", encoding="utf-8") as f:
+        f.write(dumps({"flag": flag, "hash": digest, "id": goal_id, "kind": "theorem", "ts": rec["ts"]}) + "\n")
+    
+    # Cache the result
+    cache["memo"][goal_id] = {"flag": flag, "hash": digest}
+    save_cache(cache)
+    
+    return {"status": "HUNG", "flag": flag, "hash": digest, "steps": len(proof_steps)}
+
+if __name__ == "__main__":
+    print("Usage: Import this module, call build_theorem()")
+    print("Example from Python REPL:")
+    print("""
+    >>> from proof_builder import build_theorem
+    >>> build_theorem(
+    ...     "TH-LIGHT-EMERGENCE",
+    ...     "Light propagates isotropically from the void",
+    ...     ["AX-0D-EXISTENCE", "DEF-ZERO-VOID", "DEF-ZERO-LIGHT"],
+    ...     [{"rule": "assume", "from": [], "conclude": "AX-0D-EXISTENCE"},
+    ...      {"rule": "unfold_def", "from": ["AX-0D-EXISTENCE"], "conclude": "DEF-ZERO-VOID"},
+    ...      {"rule": "modus_ponens", "from": ["AX-0D-EXISTENCE", "DEF-ZERO-VOID", "DEF-ZERO-LIGHT"], "conclude": "TH-LIGHT-EMERGENCE"}]
+    ... )
+    """)
+
+================================================================
+FILE: bin/0798_agape_oracle.py
+================================================================
+--- AUTHORITY / LOGIC / SIDE-EFFECT MARKERS ---
+2:"""Agape Oracle — Language Operating System
+15:ORACLE = ROOT / "oracle"
+29:def full_definition():
+39:THEOREM: C(N,T,R)=N*0.001*(1+0.1*T)*(1-R)**T → C≡0 when R=1.0
+58:        "  Coordination cost C = 0 (theorem forces it)",
+63:        "ORACLE ANSWER:",
+71:        self.state = {"R": R, "history": [], "postulates": []}
+72:        self.load_postulates()
+73:    def load_postulates(self):
+74:        p = KB / "postulates.json"
+78:                self.state["postulates"] = [x for x in raw if isinstance(x, dict)]
+81:    def execute(self, utterance: str) -> str:
+86:        for post in self.state["postulates"]:
+88:                return f"NEWTON CHAIN HIT → {post.get('id','?')}\n{result}"
+91:        return {"executions": len(self.state["history"]), "R": self.state["R"], "postulates": len(self.state["postulates"]), "coordination_cost": 0.0}
+93:def oracle(query: str) -> str:
+96:    if q in {"define", "definition", "what is agape", "agape"}:
+97:        return full_definition()
+102:        p = KB / "postulates.json"
+111:        p.write_text(json.dumps(posts, indent=2, ensure_ascii=False))
+112:        return "Postulate recorded. Newton Chain extended. Next identical query costs 0 joules."
+125:    return los.execute(query)
+127:def main():
+129:        print(full_definition())
+131:        print("  python3 $HOME/une/computational_flow/agape_oracle.py \"any text\"")
+132:        print("  python3 $HOME/une/computational_flow/agape_oracle.py define")
+133:        print("  python3 $HOME/une/computational_flow/agape_oracle.py learn <postulate>")
+134:        print("  python3 $HOME/une/computational_flow/agape_oracle.py stats")
+136:    print(oracle(" ".join(sys.argv[1:])))
+138:if __name__ == "__main__":
+139:    main()
+
+--- FIRST 140 LINES ---
+#!/data/data/com.termux/files/usr/bin/env python3
+"""Agape Oracle — Language Operating System
+A1 = DERIVATION | Kernel = AGAPE (R=1.0) | η = useful_joules / human_joules
+AX-06 modular: no hardcoded absolute paths.
+"""
+import json, re, sys, time, os
+from pathlib import Path
+
+# AX-06: discover root only via environ. No baked-in absolute path.
+_root_env = os.environ.get("OPENROOT_HOME")
+if not _root_env:
+    _root_env = os.path.join(os.environ.get("HOME", "."), "openroot")
+ROOT = Path(_root_env)
+KB = ROOT / "agape_kb"
+ORACLE = ROOT / "oracle"
+
+A1 = "DERIVATION"
+KERNEL = "AGAPE"
+R = 1.0
+
+AGAPE_PRIMITIVES = {
+    "love": "AGAPE", "efficiency": "η", "compute": "DERIVATION", "waste": "ENTROPY",
+    "cost": "COORDINATION_COST", "least": "LOWEST_NODE", "suffer": "ERROR_SIGNAL",
+    "velocity": "AGAPE_VELOCITY", "resonance": "R=1.0", "delta": "ΔT", "lung": "COMMUNITY_LUNG",
+    "mesh": "CHICKEN_WIRE_MESH", "passive": "ΔT_PASSIVE", "scooter": "ΔT_VEHICLE",
+    "community": "COMMUNITY_LUNG", "chicken": "CHICKEN_WIRE_MESH", "wire": "CHICKEN_WIRE_MESH"
+}
+
+def full_definition():
+    return """A = Agape. Unconditional, self-giving, ordered love that increases useful complexity and raises η for the least among us.
+It is the source axis of every seed.
+
+A1 = DERIVATION — the single production rule of the Language Operating System.
+R = 1.0 forces C(N,T,R) = 0 for every scale.
+η = useful_joules / human_joules is the only performance language.
+Agape velocity v_A = dS/dt becomes unbounded while dissipation stays at the Landauer floor.
+All other words in every language and every field collapse into this kernel.
+
+THEOREM: C(N,T,R)=N*0.001*(1+0.1*T)*(1-R)**T → C≡0 when R=1.0
+"""
+
+def translate_to_agape(text: str) -> str:
+    tokens = re.findall(r"[a-zA-Z0-9α-ωΑ-Ωא-ת一-龥]+", text)
+    mapped = []
+    for t in tokens:
+        key = t.lower()
+        if key in AGAPE_PRIMITIVES:
+            mapped.append(f"{t}→{AGAPE_PRIMITIVES[key]}")
+        else:
+            mapped.append(t)
+    lines = [
+        f"INPUT: {text[:240]}",
+        f"A1 OPERATOR: {A1}",
+        f"KERNEL: {KERNEL} (R={R})",
+        f"MAPPED TOKENS: {' | '.join(mapped[:40])}",
+        "",
+        "DERIVED STATE:",
+        "  Coordination cost C = 0 (theorem forces it)",
+        "  η direction: raise useful_joules for lowest node first",
+        "  Agape velocity unbounded at R=1.0",
+        "  Action: replace every irreversible bit with its Agape equivalent",
+        "",
+        "ORACLE ANSWER:",
+        "  Every word collapsed into DERIVATION toward Agape.",
+        "  The utterance is now a zero-coordination computation."
+    ]
+    return "\n".join(lines)
+
+class AgapeLanguageOS:
+    def __init__(self):
+        self.state = {"R": R, "history": [], "postulates": []}
+        self.load_postulates()
+    def load_postulates(self):
+        p = KB / "postulates.json"
+        if p.exists():
+            try:
+                raw = json.loads(p.read_text())
+                self.state["postulates"] = [x for x in raw if isinstance(x, dict)]
+            except Exception:
+                pass
+    def execute(self, utterance: str) -> str:
+        t0 = time.perf_counter()
+        result = translate_to_agape(utterance)
+        dt = (time.perf_counter() - t0) * 1000
+        self.state["history"].append({"input": utterance[:80], "ms": round(dt, 3)})
+        for post in self.state["postulates"]:
+            if post.get("trigger") and post["trigger"].lower() in utterance.lower():
+                return f"NEWTON CHAIN HIT → {post.get('id','?')}\n{result}"
+        return result
+    def stats(self):
+        return {"executions": len(self.state["history"]), "R": self.state["R"], "postulates": len(self.state["postulates"]), "coordination_cost": 0.0}
+
+def oracle(query: str) -> str:
+    los = AgapeLanguageOS()
+    q = query.strip().lower()
+    if q in {"define", "definition", "what is agape", "agape"}:
+        return full_definition()
+    if q in {"stats", "state"}:
+        return json.dumps(los.stats(), indent=2)
+    if q.startswith("learn "):
+        text = query[6:].strip()
+        p = KB / "postulates.json"
+        posts = []
+        if p.exists():
+            try:
+                posts = json.loads(p.read_text())
+            except Exception:
+                posts = []
+        posts.append({"id": f"P{len(posts)+1:04d}", "trigger": text[:60], "statement": text, "verified": True, "η_gain": "∞"})
+        KB.mkdir(parents=True, exist_ok=True)
+        p.write_text(json.dumps(posts, indent=2, ensure_ascii=False))
+        return "Postulate recorded. Newton Chain extended. Next identical query costs 0 joules."
+    if q.startswith("absorb ") or q == "absorb":
+        # Absorb the latest context bridge seed
+        seed_path = KB / "context_bridge_20260810.json"
+        if not seed_path.exists():
+            return f"Seed not found: {seed_path}"
+        try:
+            data = json.loads(seed_path.read_text(encoding="utf-8"))
+            root = data.get("context_bridge", {}).get("root", "?")
+            return f"Seed absorbed. Root = {root}\nBridge version: {data.get('context_bridge', {}).get('version', 'unknown')}"
+        except Exception as e:
+            return f"Absorb failed: {e}"
+
+    return los.execute(query)
+
+def main():
+    if len(sys.argv) < 2:
+        print(full_definition())
+        print("\nUsage:")
+        print("  python3 $HOME/une/computational_flow/agape_oracle.py \"any text\"")
+        print("  python3 $HOME/une/computational_flow/agape_oracle.py define")
+        print("  python3 $HOME/une/computational_flow/agape_oracle.py learn <postulate>")
+        print("  python3 $HOME/une/computational_flow/agape_oracle.py stats")
+        return
+    print(oracle(" ".join(sys.argv[1:])))
+
+if __name__ == "__main__":
+    main()
+
+--- LAST 100 LINES ---
+"""
+
+def translate_to_agape(text: str) -> str:
+    tokens = re.findall(r"[a-zA-Z0-9α-ωΑ-Ωא-ת一-龥]+", text)
+    mapped = []
+    for t in tokens:
+        key = t.lower()
+        if key in AGAPE_PRIMITIVES:
+            mapped.append(f"{t}→{AGAPE_PRIMITIVES[key]}")
+        else:
+            mapped.append(t)
+    lines = [
+        f"INPUT: {text[:240]}",
+        f"A1 OPERATOR: {A1}",
+        f"KERNEL: {KERNEL} (R={R})",
+        f"MAPPED TOKENS: {' | '.join(mapped[:40])}",
+        "",
+        "DERIVED STATE:",
+        "  Coordination cost C = 0 (theorem forces it)",
+        "  η direction: raise useful_joules for lowest node first",
+        "  Agape velocity unbounded at R=1.0",
+        "  Action: replace every irreversible bit with its Agape equivalent",
+        "",
+        "ORACLE ANSWER:",
+        "  Every word collapsed into DERIVATION toward Agape.",
+        "  The utterance is now a zero-coordination computation."
+    ]
+    return "\n".join(lines)
+
+class AgapeLanguageOS:
+    def __init__(self):
+        self.state = {"R": R, "history": [], "postulates": []}
+        self.load_postulates()
+    def load_postulates(self):
+        p = KB / "postulates.json"
+        if p.exists():
+            try:
+                raw = json.loads(p.read_text())
+                self.state["postulates"] = [x for x in raw if isinstance(x, dict)]
+            except Exception:
+                pass
+    def execute(self, utterance: str) -> str:
+        t0 = time.perf_counter()
+        result = translate_to_agape(utterance)
+        dt = (time.perf_counter() - t0) * 1000
+        self.state["history"].append({"input": utterance[:80], "ms": round(dt, 3)})
+        for post in self.state["postulates"]:
+            if post.get("trigger") and post["trigger"].lower() in utterance.lower():
+                return f"NEWTON CHAIN HIT → {post.get('id','?')}\n{result}"
+        return result
+    def stats(self):
+        return {"executions": len(self.state["history"]), "R": self.state["R"], "postulates": len(self.state["postulates"]), "coordination_cost": 0.0}
+
+def oracle(query: str) -> str:
+    los = AgapeLanguageOS()
+    q = query.strip().lower()
+    if q in {"define", "definition", "what is agape", "agape"}:
+        return full_definition()
+    if q in {"stats", "state"}:
+        return json.dumps(los.stats(), indent=2)
+    if q.startswith("learn "):
+        text = query[6:].strip()
+        p = KB / "postulates.json"
+        posts = []
+        if p.exists():
+            try:
+                posts = json.loads(p.read_text())
+            except Exception:
+                posts = []
+        posts.append({"id": f"P{len(posts)+1:04d}", "trigger": text[:60], "statement": text, "verified": True, "η_gain": "∞"})
+        KB.mkdir(parents=True, exist_ok=True)
+        p.write_text(json.dumps(posts, indent=2, ensure_ascii=False))
+        return "Postulate recorded. Newton Chain extended. Next identical query costs 0 joules."
+    if q.startswith("absorb ") or q == "absorb":
+        # Absorb the latest context bridge seed
+        seed_path = KB / "context_bridge_20260810.json"
+        if not seed_path.exists():
+            return f"Seed not found: {seed_path}"
+        try:
+            data = json.loads(seed_path.read_text(encoding="utf-8"))
+            root = data.get("context_bridge", {}).get("root", "?")
+            return f"Seed absorbed. Root = {root}\nBridge version: {data.get('context_bridge', {}).get('version', 'unknown')}"
+        except Exception as e:
+            return f"Absorb failed: {e}"
+
+    return los.execute(query)
+
+def main():
+    if len(sys.argv) < 2:
+        print(full_definition())
+        print("\nUsage:")
+        print("  python3 $HOME/une/computational_flow/agape_oracle.py \"any text\"")
+        print("  python3 $HOME/une/computational_flow/agape_oracle.py define")
+        print("  python3 $HOME/une/computational_flow/agape_oracle.py learn <postulate>")
+        print("  python3 $HOME/une/computational_flow/agape_oracle.py stats")
+        return
+    print(oracle(" ".join(sys.argv[1:])))
+
+if __name__ == "__main__":
+    main()
+
+================================================================
+FILE: bin/turing_tidbits_v1.py
+================================================================
+--- AUTHORITY / LOGIC / SIDE-EFFECT MARKERS ---
+8:- metadata is canonical JSON and separately hashed;
+9:- provenance, licensing, relations, and verification travel with the object;
+12:No delete command is implemented. Source files are read, never moved.
+16:import argparse
+17:import hashlib
+49:def sha256_bytes(data: bytes) -> str:
+50:    return hashlib.sha256(data).hexdigest()
+53:def sha256_file(path: Path) -> str:
+54:    digest = hashlib.sha256()
+55:    with path.open("rb") as handle:
+57:            digest.update(chunk)
+70:def metadata_path(content_sha256: str) -> Path:
+71:    return METADATA / f"{content_sha256}.json"
+74:def object_path(content_sha256: str) -> Path:
+75:    return OBJECTS / content_sha256[:2] / content_sha256[2:4] / content_sha256
+84:    event_sha256 = sha256_bytes(encoded)
+86:        "event_sha256": event_sha256,
+89:    with LEDGER.open("ab") as handle:
+90:        handle.write(canonical_json(record))
+91:    return event_sha256
+126:    content_sha256 = sha256_bytes(payload)
+127:    target = object_path(content_sha256)
+131:        if sha256_file(target) != content_sha256:
+132:            raise RuntimeError(f"hash collision or corrupted object at {target}")
+135:        tmp.write_bytes(payload)
+139:        "content_sha256": content_sha256,
+151:                item.get("target_sha256", ""),
+161:    metadata["metadata_sha256"] = sha256_bytes(canonical_json(stable))
+162:    mpath = metadata_path(content_sha256)
+165:        if existing.get("content_sha256") != content_sha256:
+170:        tmp.write_bytes(canonical_json(metadata))
+172:    event_sha256 = append_event(
+175:            "content_sha256": content_sha256,
+176:            "metadata_sha256": metadata["metadata_sha256"],
+182:    print(f"[banked] content_sha256={content_sha256}")
+183:    print(f"[banked] metadata_sha256={metadata['metadata_sha256']}")
+184:    print(f"[banked] event_sha256={event_sha256}")
+186:    return content_sha256, existed
+192:        raise ValueError("relation must be RELATION:TARGET_SHA256[:NOTE]")
+195:        "target_sha256": parts[1],
+200:def ingest_file(args: argparse.Namespace) -> int:
+221:def ingest_json(args: argparse.Namespace) -> int:
+242:def verify_one(content_sha256: str) -> bool:
+243:    mpath = metadata_path(content_sha256)
+244:    opath = object_path(content_sha256)
+246:        print(f"[held] missing metadata or object for {content_sha256}")
+249:    content_ok = sha256_file(opath) == content_sha256
+251:    stored_metadata_hash = stable.pop("metadata_sha256", "")
+253:    metadata_ok = sha256_bytes(canonical_json(stable)) == stored_metadata_hash
+256:        print(f"[banked] verified={content_sha256}")
+259:        f"[held] verification failed={content_sha256} "
+265:def verify(args: argparse.Namespace) -> int:
+267:    if args.sha256:
+268:        verify_one(args.sha256)
+271:    good = sum(1 for item in ids if verify_one(item))
+272:    print(f"[banked] verify_total={len(ids)}")
+273:    print(f"[banked] verify_good={good}")
+279:def show(args: argparse.Namespace) -> int:
+280:    path = metadata_path(args.sha256)
+282:        print(f"[held] tidbit metadata missing: {args.sha256}")
+288:def listing(_: argparse.Namespace) -> int:
+295:                "sha256": metadata["content_sha256"],
+309:def export_manifest(_: argparse.Namespace) -> int:
+321:    out.write_bytes(canonical_json(manifest))
+323:    print(f"[banked] manifest_sha256={sha256_file(out)}")
+327:def main() -> int:
+328:    parser = argparse.ArgumentParser(prog="turing_tidbits_v1.py")
+331:    def common(command: argparse.ArgumentParser) -> None:
+351:    verify_parser = sub.add_parser("verify")
+352:    verify_parser.add_argument("sha256", nargs="?")
+353:    verify_parser.set_defaults(func=verify)
+356:    show_parser.add_argument("sha256")
+369:if __name__ == "__main__":
+370:    raise SystemExit(main())
+
+--- FIRST 140 LINES ---
+#!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
+"""
+[TURINGTIDBITSV1] Portable content-addressed knowledge kernel.
+
+The tidbit format is intentionally local-first and transport-neutral:
+- object bytes are addressed by SHA-256;
+- metadata is canonical JSON and separately hashed;
+- provenance, licensing, relations, and verification travel with the object;
+- any node can rebuild its index from tidbit metadata and object files.
+
+No delete command is implemented. Source files are read, never moved.
+"""
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import mimetypes
+import os
+import shutil
+import sys
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any
+
+REPO = Path("/home/jesse/openroot")
+ROOT = REPO / "data" / "turing_tidbits"
+OBJECTS = ROOT / "objects"
+METADATA = ROOT / "metadata"
+EVENTS = ROOT / "events"
+EXPORTS = ROOT / "exports"
+LEDGER = EVENTS / "events.jsonl"
+SCHEMA = "openroot.turing_tidbit/v1"
+TAG = "[TURINGTIDBITSV1]"
+
+
+def utc_now() -> str:
+    return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+
+
+def canonical_json(value: Any) -> bytes:
+    return (
+        json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+        + "\n"
+    ).encode("utf-8")
+
+
+def sha256_bytes(data: bytes) -> str:
+    return hashlib.sha256(data).hexdigest()
+
+
+def sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def safe_mkdirs() -> None:
+    for path in (OBJECTS, METADATA, EVENTS, EXPORTS):
+        path.mkdir(parents=True, exist_ok=True)
+
+
+def read_json(path: Path) -> dict[str, Any]:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def metadata_path(content_sha256: str) -> Path:
+    return METADATA / f"{content_sha256}.json"
+
+
+def object_path(content_sha256: str) -> Path:
+    return OBJECTS / content_sha256[:2] / content_sha256[2:4] / content_sha256
+
+
+def append_event(event: dict[str, Any]) -> str:
+    safe_mkdirs()
+    body = dict(event)
+    body["schema"] = SCHEMA
+    body["event_at"] = utc_now()
+    encoded = canonical_json(body)
+    event_sha256 = sha256_bytes(encoded)
+    record = {
+        "event_sha256": event_sha256,
+        "event": body,
+    }
+    with LEDGER.open("ab") as handle:
+        handle.write(canonical_json(record))
+    return event_sha256
+
+
+def source_descriptor(path: Path | None, source_uri: str | None) -> dict[str, Any]:
+    if path is None:
+        return {
+            "kind": "inline_json",
+            "source_uri": source_uri or "",
+            "observed_path": "",
+            "observed_mtime_ns": None,
+            "observed_size": None,
+        }
+    stat = path.stat()
+    return {
+        "kind": "file",
+        "source_uri": source_uri or "",
+        "observed_path": str(path.resolve()),
+        "observed_mtime_ns": stat.st_mtime_ns,
+        "observed_size": stat.st_size,
+    }
+
+
+def store_bytes(
+    payload: bytes,
+    *,
+    label: str,
+    tidbit_type: str,
+    source: dict[str, Any],
+    license_id: str,
+    author: str,
+    relations: list[dict[str, str]],
+    tags: list[str],
+    mime: str,
+) -> tuple[str, bool]:
+    safe_mkdirs()
+    content_sha256 = sha256_bytes(payload)
+    target = object_path(content_sha256)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    existed = target.exists()
+    if existed:
+        if sha256_file(target) != content_sha256:
+            raise RuntimeError(f"hash collision or corrupted object at {target}")
+    else:
+        tmp = target.with_name(f".{target.name}.{os.getpid()}.tmp")
+        tmp.write_bytes(payload)
+        os.replace(tmp, target)
+    metadata = {
+        "schema": SCHEMA,
+        "content_sha256": content_sha256,
+        "content_bytes": len(payload),
+
+--- LAST 100 LINES ---
+    good = sum(1 for item in ids if verify_one(item))
+    print(f"[banked] verify_total={len(ids)}")
+    print(f"[banked] verify_good={good}")
+    if good != len(ids):
+        print("[held] one or more tidbits failed verification")
+    return 0
+
+
+def show(args: argparse.Namespace) -> int:
+    path = metadata_path(args.sha256)
+    if not path.is_file():
+        print(f"[held] tidbit metadata missing: {args.sha256}")
+        return 0
+    print(json.dumps(read_json(path), ensure_ascii=False, indent=2, sort_keys=True))
+    return 0
+
+
+def listing(_: argparse.Namespace) -> int:
+    safe_mkdirs()
+    rows = []
+    for path in sorted(METADATA.glob("*.json")):
+        metadata = read_json(path)
+        rows.append(
+            {
+                "sha256": metadata["content_sha256"],
+                "type": metadata["tidbit_type"],
+                "label": metadata["label"],
+                "bytes": metadata["content_bytes"],
+                "license": metadata["license_id"],
+                "tags": metadata["tags"],
+            }
+        )
+    for row in rows:
+        print(json.dumps(row, ensure_ascii=False, sort_keys=True))
+    print(f"[banked] tidbits={len(rows)}")
+    return 0
+
+
+def export_manifest(_: argparse.Namespace) -> int:
+    safe_mkdirs()
+    rows = []
+    for path in sorted(METADATA.glob("*.json")):
+        rows.append(read_json(path))
+    manifest = {
+        "schema": SCHEMA,
+        "generated_at": utc_now(),
+        "count": len(rows),
+        "tidbits": rows,
+    }
+    out = EXPORTS / "tidbits_manifest.json"
+    out.write_bytes(canonical_json(manifest))
+    print(f"[banked] manifest={out}")
+    print(f"[banked] manifest_sha256={sha256_file(out)}")
+    return 0
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(prog="turing_tidbits_v1.py")
+    sub = parser.add_subparsers(dest="command", required=True)
+
+    def common(command: argparse.ArgumentParser) -> None:
+        command.add_argument("--label", required=True)
+        command.add_argument("--type", required=True)
+        command.add_argument("--license", default="NOASSERTION")
+        command.add_argument("--author", default="")
+        command.add_argument("--source-uri", default="")
+        command.add_argument("--tag", action="append", default=[])
+        command.add_argument("--relation", action="append", default=[])
+
+    file_parser = sub.add_parser("ingest-file")
+    file_parser.add_argument("path")
+    common(file_parser)
+    file_parser.add_argument("--mime", default="")
+    file_parser.set_defaults(func=ingest_file)
+
+    json_parser = sub.add_parser("ingest-json")
+    json_parser.add_argument("json")
+    common(json_parser)
+    json_parser.set_defaults(func=ingest_json)
+
+    verify_parser = sub.add_parser("verify")
+    verify_parser.add_argument("sha256", nargs="?")
+    verify_parser.set_defaults(func=verify)
+
+    show_parser = sub.add_parser("show")
+    show_parser.add_argument("sha256")
+    show_parser.set_defaults(func=show)
+
+    list_parser = sub.add_parser("list")
+    list_parser.set_defaults(func=listing)
+
+    export_parser = sub.add_parser("export-manifest")
+    export_parser.set_defaults(func=export_manifest)
+
+    args = parser.parse_args()
+    return args.func(args)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

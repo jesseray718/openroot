@@ -1,0 +1,10 @@
+[openroot] run_id=20260928T121543Z_555468_17801
+[openroot] repo=/home/jesse/openroot
+[openroot] mode=local-first read-only proposal loop
+[openroot] mutation=disabled
+[openroot] db=/home/jesse/openroot/data/openroot_local_loop.db
+wal
+5000
+Error: in prepare, near "head": syntax error
+              "local loop started",             "{\"head\":\"2e9c68398fb4d2be67c
+                                      error here ---^

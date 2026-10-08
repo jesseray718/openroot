@@ -1,0 +1,7 @@
+# Bridge Cycle - 20260921_040040
+
+[window-cadence] FAILED rc=127
+[keyword-router] OK
+  [KWRTV1] canary intact | api tiers: LOCAL ONLY (add keys to data/.env)
+  [INBOX] /home/jesse/openroot/workareas/kwloop-20260921_040041/lumo_inbox_digest.md
+  [TIP] consume-mark after review:

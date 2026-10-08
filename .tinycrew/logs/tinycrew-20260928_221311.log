@@ -1,0 +1,6 @@
+[2026-09-28 22:13:17] [run] tinycrew-20260928_221311
+[2026-09-28 22:13:17] [root] /home/jesse/openroot
+[2026-09-28 22:13:17] [route_db] /home/jesse/openroot/data/route_cache.db
+[2026-09-28 22:13:17] [harness_db] ABSENT
+[2026-09-28 22:13:17] [compost_db] /home/jesse/openroot/data/compost_v1.db
+[2026-09-28 22:13:17] [knowledge_db] /home/jesse/openroot/knowledge_base.db

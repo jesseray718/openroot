@@ -1,0 +1,48 @@
+# PR 105 Failure Logs
+generated_utc=2026-10-01T10:24:43Z
+repo=jesseray718/openroot
+
+## OpenRoot CI run 36848536768
+{"conclusion":"failure","createdAt":"2026-10-01T10:20:38Z","databaseId":36848536768,"headSha":"a450687d5ae3039fe40d76d1e28537acac54a269","status":"completed","updatedAt":"2026-10-01T10:20:52Z","url":"https://github.com/jesseray718/openroot/actions/runs/36848536768","workflowName":"OpenRoot CI"}
+
+### Failed steps
+Deterministic repository validation	Validate changed source and policy	﻿2026-10-01T10:20:48.7222103Z ##[group]Run set -euo pipefail
+Deterministic repository validation	Validate changed source and policy	2026-10-01T10:20:48.7223189Z [36;1mset -euo pipefail[0m
+Deterministic repository validation	Validate changed source and policy	2026-10-01T10:20:48.7224133Z [36;1m[0m
+Deterministic repository validation	Validate changed source and policy	2026-10-01T10:20:48.7225008Z [36;1mif [ -n "$BASE_REVISION" ]; then[0m
+Deterministic repository validation	Validate changed source and policy	2026-10-01T10:20:48.7226588Z [36;1m  python scripts/superloop_preflight.py "$BASE_REVISION"[0m
+Deterministic repository validation	Validate changed source and policy	2026-10-01T10:20:48.7227966Z [36;1melse[0m
+Deterministic repository validation	Validate changed source and policy	2026-10-01T10:20:48.7228910Z [36;1m  python scripts/superloop_preflight.py[0m
+Deterministic repository validation	Validate changed source and policy	2026-10-01T10:20:48.7230097Z [36;1mfi[0m
+Deterministic repository validation	Validate changed source and policy	2026-10-01T10:20:48.7301225Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Deterministic repository validation	Validate changed source and policy	2026-10-01T10:20:48.7302526Z env:
+Deterministic repository validation	Validate changed source and policy	2026-10-01T10:20:48.7303537Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+Deterministic repository validation	Validate changed source and policy	2026-10-01T10:20:48.7305220Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+Deterministic repository validation	Validate changed source and policy	2026-10-01T10:20:48.7307073Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+Deterministic repository validation	Validate changed source and policy	2026-10-01T10:20:48.7308588Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+Deterministic repository validation	Validate changed source and policy	2026-10-01T10:20:48.7310119Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+Deterministic repository validation	Validate changed source and policy	2026-10-01T10:20:48.7311723Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+Deterministic repository validation	Validate changed source and policy	2026-10-01T10:20:48.7313062Z   BASE_REVISION: origin/main
+Deterministic repository validation	Validate changed source and policy	2026-10-01T10:20:48.7313989Z ##[endgroup]
+Deterministic repository validation	Validate changed source and policy	2026-10-01T10:20:48.8161124Z Missing SPDX marker: tests/test_public_contract.py
+Deterministic repository validation	Validate changed source and policy	2026-10-01T10:20:48.8163082Z Preflight changed-file scan: paths=9, python=1, json=3, shell=0, spdx=1, text=9
+Deterministic repository validation	Validate changed source and policy	2026-10-01T10:20:48.8235151Z ##[error]Process completed with exit code 1.
+
+## CodeQL Advanced run 36848536698
+{"conclusion":"","createdAt":"2026-10-01T10:20:38Z","databaseId":36848536698,"headSha":"a450687d5ae3039fe40d76d1e28537acac54a269","status":"in_progress","updatedAt":"2026-10-01T10:20:49Z","url":"https://github.com/jesseray718/openroot/actions/runs/36848536698","workflowName":"CodeQL Advanced"}
+
+### Failed steps
+run 36848536698 is still in progress; logs will be available when it is complete
+
+## Current PR checks
+Analyze (actions)	fail	45s	https://github.com/jesseray718/openroot/actions/runs/36848536698/job/110324427671	
+Deterministic repository validation	fail	10s	https://github.com/jesseray718/openroot/actions/runs/36848536768/job/110324428478	
+CodeQL	skipping	2s	https://github.com/jesseray718/openroot/runs/110324634015	
+Validate router and design contexts	pass	17s	https://github.com/jesseray718/openroot/actions/runs/36848536726/job/110324427939	
+build	pass	5s	https://github.com/jesseray718/openroot/actions/runs/36848536851/job/110324428655	
+Analyze (python)	pending	0	https://github.com/jesseray718/openroot/actions/runs/36848534737/job/110324425865	
+Analyze (python)	pending	0	https://github.com/jesseray718/openroot/actions/runs/36848536698/job/110324428211	
+Analyze (actions)	pass	50s	https://github.com/jesseray718/openroot/actions/runs/36848534737/job/110324425659	
+Changed-script gate	pass	10s	https://github.com/jesseray718/openroot/actions/runs/36848536688/job/110324427564	
+CodeRabbit	pass	0		Review skipped: manual review required for this OSS repository
+build	pass	6s	https://github.com/jesseray718/openroot/actions/runs/36848529828/job/110324405459	

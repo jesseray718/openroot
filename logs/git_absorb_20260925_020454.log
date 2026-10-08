@@ -1,0 +1,6 @@
+[GITABSORBV1] walked=168 ingested=168 total_rows=168 db=data/log_feed.db
+[GITABSORBV1] biggest commits by insertions:
+  +2497126 (8053 files) salvage: merge full local sync into main
+  +2497126 (8053 files) salvage: merge full local sync into main
+  +745305 (2851 files) Agape/add coordination theorem (#33)
+[GITABSORBV1] [exit=0]

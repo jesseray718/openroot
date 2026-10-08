@@ -1,0 +1,5 @@
+nohup: ignoring input
+  File "/home/jesse/openroot/bin/ecosystem_v2.py", line 146
+    h = hashlib sha = None
+                ^^^
+SyntaxError: invalid syntax

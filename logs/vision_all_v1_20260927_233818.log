@@ -1,0 +1,10 @@
+[VISIONALLV1] start 20260927_233818 mode=EXECUTE
+Cloning into '/home/jesse/workareas/aerocement-overhaul-20260927_233818'...
+Switched to a new branch 'overhaul/oshw-v1'
+[stage1] [banked] /home/jesse/workareas/aerocement-overhaul-20260927_233818 staged on branch overhaul/oshw-v1
+[overhaul/oshw-v1 75ee89c] [ADD] OSHW restructure v0: mix registry + overhaul plan (AI-assisted, human-gated)
+ 2 files changed, 12 insertions(+)
+ create mode 100644 docs/README_OVERHAUL.md
+ create mode 100644 mixes/MIXES.md
+[stage1] [gate] push + PR when ready: cd /home/jesse/workareas/aerocement-overhaul-20260927_233818 && git push -u origin overhaul/oshw-v1 && gh pr create --fill
+/home/jesse/openroot/bin/vision_all_v1.sh: line 13: 23640 Killed                  "$@"

@@ -1,0 +1,9 @@
+{
+  "run": "relay_20260928T201939Z",
+  "stack": "math_reasoning",
+  "task": "Calculate thermal cascade joule efficiency from measurements.md",
+  "models_used": [
+    "qwen2.5-math:7b",
+    "deepseek-r1:1.5b"
+  ]
+}
