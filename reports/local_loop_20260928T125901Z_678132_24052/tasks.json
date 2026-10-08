@@ -1,0 +1,35 @@
+{
+  "run_id": "20260928T125901Z_678132_24052",
+  "tasks": [
+    {
+      "allowed_for_local_proposal": true,
+      "content": "{\n  \"ts\": \"2026-09-23T21:27:44.138628\",\n  \"topic\": \"send\",\n  \"query\": \"analysis What's the highest-eta action in my ideas ledger?\",\n  \"context\": {},\n  \"status\": \"pending\",\n  \"canary\": \"LUMO_BRIDGE_V1\",\n  \"hash\": \"230b3b49f883e44e\"\n}",
+      "id": 1,
+      "path": "inbox_230b3b49f883e44e.json",
+      "priority": 75,
+      "reason": "local data analysis",
+      "route": "local_data_analysis",
+      "title": "{"
+    },
+    {
+      "allowed_for_local_proposal": true,
+      "content": "{\n  \"ts\": \"2026-09-23T21:19:16.949529\",\n  \"topic\": \"send\",\n  \"query\": \"design What's the highest-eta action for my OpenRoot recovery state?\",\n  \"context\": {},\n  \"status\": \"pending\",\n  \"canary\": \"LUMO_BRIDGE_V1\",\n  \"hash\": \"6806616190763f2a\"\n}",
+      "id": 2,
+      "path": "inbox_6806616190763f2a.json",
+      "priority": 75,
+      "reason": "local data analysis",
+      "route": "local_data_analysis",
+      "title": "{"
+    },
+    {
+      "allowed_for_local_proposal": false,
+      "content": "{\n  \"ts\": \"2026-09-23T21:27:12.400732\",\n  \"topic\": \"routing\",\n  \"query\": \"Analyze my merged ledger for patterns\",\n  \"context\": {},\n  \"status\": \"pending\",\n  \"canary\": \"LUMO_BRIDGE_V1\",\n  \"hash\": \"faaa9b8a6bcbf518\"\n}",
+      "id": 3,
+      "path": "inbox_faaa9b8a6bcbf518.json",
+      "priority": 95,
+      "reason": "mutation or external-action route",
+      "route": "human_gate",
+      "title": "{"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+consolidation-backups/
+venv/
+node_modules/
+*.db
+data/operator_holds/
+data/sdcard-sync/
+lumo_inbox/
+quarantine_tooling_repair_backups_*/

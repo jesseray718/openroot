@@ -1,0 +1,750 @@
+# OpenRoot + Kai9000 Branch Audit
+
+generated_utc=2026-10-01T10:04:18Z
+repo=jesseray718/openroot
+root=/home/jesse/openroot
+
+## Safety state
+branch=main
+ M .gitignore
+ M README.md
+ M SECURITY.md
+ M data/superlinear/rapl_samples.jsonl
+?? .env.example
+?? .gitattributes
+?? MASTER_TODO.md.bak.20260924_160603
+?? MASTER_TODO.md.bak.20260924_160905
+?? README.md.bak.20260924_164115
+?? README.md.bak.20260924_164302
+?? artifacts/
+?? bin/cache_pathway_orchestrator_v1.py.bak.20260924_204517
+?? bin/smart_router.py.bak.20260925_060857
+?? bin/superlinear_optimize_v1.sh.bak.20260928_161746
+?? bin/superlinear_setup.py.bak.20260923_223214
+?? bin/superlinear_setup.py.bak.20260923_223348
+?? context_bridge/court-v6-report-20261001_040010.md
+?? context_bridge/mistake_solutions/b1a37e490c1a49af.md
+?? context_bridge/refinement_loop_v1.sh.bak.20260928T150420Z
+?? context_bridge/superloop_DASHBOARD.md
+?? data/bridge_state.json
+?? data/doc_gaps.json
+?? data/examples/
+?? data/model_registry.json
+?? data/router_keywords.json
+?? data/superloop_chains.json
+?? data_bot_state.json
+?? docs/ARCHITECTURE.md
+?? docs/NEWTON_CHAIN.md
+?? docs/OPERATIONS.md
+?? docs/ROUTING.md
+?? docs/newton_chain/
+?? ledger/
+?? model_registry/
+?? reports/README.md
+?? schemas/newton_chain_claim.schema.json
+?? schemas/routing_decision.schema.json
+?? tests/test_public_contract.py
+
+## Remotes
+Reh1t	https://github.com/Reh1t/openroot.git (fetch)
+Reh1t	https://github.com/Reh1t/openroot.git (push)
+origin	git@github.com:jesseray718/openroot.git (fetch)
+origin	git@github.com:jesseray718/openroot.git (push)
+upstream	https://github.com/jesseray718/openroot.git (fetch)
+upstream	https://github.com/jesseray718/openroot.git (push)
+
+## Fetch remote references
+
+## Local branches
+  backup/agape-prime                            346688c6 Fix broken regex operator in pr-guard size-check workflow
+  backup/agape/add-coordination-theorem         709d4496 ci: restrict workflow token permissions
+  backup/main                                   841d509a or38 (#39) (#41)
+  backup/pr13-conflict-state                    841d509a or38 (#39) (#41)
+  backup/pr42-large-sync                        f66a8761 Agape/add coordination theorem (#33)
+  backup/preserve/pr44-salvage-20260905T181407Z a8a114c5 your next change
+  backup/salvage/full-local-sync                a8a114c5 your next change
+  chore/superloop-ci-cd-foundation              ae07f1a5 Merge remote-tracking branch 'origin/main' into chore/superloop-ci-cd-foundation
+  copilot/build-offline-first-toolkit           282fe2f5 fix: add explicit permissions to offline-ci.yml workflow
+  copilot/writing-thesis                        bd48c937 front: CLOSED-LOOP AGAPE COSMOLOGICAL ENGINE v7.0 front-and-center — no more fuzzy middle
+  docs-pr42-clean                               33783207 docs: add contribution hub workflow and provenance templates (clean scope)
+  docs/contribution-hub-20260825                a8a114c5 your next change
+  docs/contribution-hub-clean                   c4f47048 git pushMerge branch 'rescue/all-work-2026-09-02' into docs/contribution-hub-clean
++ docs/l0-cached-pathway-v1                     99b7e445 (/home/jesse/openroot-l0-cache-docs) [origin/docs/l0-cached-pathway-v1: gone] ci: skip optional model registry validation
+  feat/release                                  842d284e feat(ledger): append-only popw jsonl chain (#37)
+  force-coderabbit-20260821-0456                c48d97a4 docs: add unredacted WIKILEAKS_USER_MANUAL (absolute paths, frozen core, mesh, CodeRabbit)
+  integrate/pr34-clean                          7af5a99c Resolve merge conflicts: keep docs/contribution-hub-clean versions for PR34 integration
+* main                                          d353440b [origin/main] [ADD][DOC] bank delayed files from dead gate-1 commit: mistake solutions 6daeb91f/d4313a95 + reconcile_main_v1 + github_hygiene_v1 (restored pre_reconstruct, syntax-gated) — AI-assisted, human-gated
+  preserve/pr44-salvage-20260905T181407Z        a8a114c5 your next change
+
+## Remote branches
+origin/chore/superloop-ci-cd-foundation
+origin/coderabbit/changes/eb9e4190
+origin/gh-pages
+origin/jesseray718-patch-1
+origin/main
+Reh1t/feat/53-local-AI
+Reh1t/main
+upstream/main
+
+## Branch divergence against origin/main
+branch=backup/agape/add-coordination-theorem	tip=709d4496	ahead=658	behind=222	merge_base=
+unique_commits:
+  709d4496 (backup/agape/add-coordination-theorem) ci: restrict workflow token permissions
+  ad98dec8 Merge remote-tracking branch 'origin/docs/contribution-hub-20260825' into agape/add-coordination-theorem
+  682c187f feat: agape-prime core - MANIFEST, language, tribe simulator (#31) (#32)
+  9b93eba5 openroot: thermal cascade model, RMH/labyrinth protocol, ledgers, tests, ops scripts
+  b4e1aea3 add RMH/labyrinth trial protocol data pipeline, models, tests, and report generation
+  cfc22a9c add thermodynamic optimizer scaffold and append-only energy-time ledger
+  9dab2d1e ops: add agape super-command for autonomous offline operations
+  efb387e1 docs: add contribution hub routing policy and Copilot task
+  9929f02c docs: add contribution hub workflow and provenance templates
+  bd48c937 (copilot/writing-thesis) front: CLOSED-LOOP AGAPE COSMOLOGICAL ENGINE v7.0 front-and-center — no more fuzzy middle
+  9333305b eta: CodeRabbit lattice nervous system (R=1.0) sync
+  52823d15 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  60f08837 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  0a44f73f eta: CodeRabbit lattice nervous system (R=1.0) sync
+  9572d2a1 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  9cacc9c8 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  29ec6ad8 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  6ee2c99b eta: CodeRabbit lattice nervous system (R=1.0) sync
+  1fc13d8a eta: CodeRabbit lattice nervous system (R=1.0) sync
+  b2e5db25 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  43a440ad eta: CodeRabbit lattice nervous system (R=1.0) sync
+  f272b017 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  e0461d1c eta: CodeRabbit lattice nervous system (R=1.0) sync
+  5ddfbe6d eta: CodeRabbit lattice nervous system (R=1.0) sync
+  250c5aca eta: CodeRabbit lattice nervous system (R=1.0) sync
+  efc74dd1 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  2f7664db eta: CodeRabbit lattice nervous system (R=1.0) sync
+  b6b9aecc eta: CodeRabbit lattice nervous system (R=1.0) sync
+  8b2761d6 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  28484665 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  13bb88a1 cleanup: remove paste artifact tatus -sb 20260821-151723
+  ca0f82f7 finish-push: 20260821-151616 openroot mesh sync
+  471d8d93 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  0817742e eta: CodeRabbit lattice nervous system (R=1.0) sync
+  e283ecbd eta: CodeRabbit lattice nervous system (R=1.0) sync
+  0cd37aff eta: CodeRabbit lattice nervous system (R=1.0) sync
+  66ab2a00 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  06a35254 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  e56564ae eta: CodeRabbit lattice nervous system (R=1.0) sync
+  35d39667 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  a6c8e7d2 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  ecf10128 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  b9ebe896 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  4ede9d1c eta: CodeRabbit lattice nervous system (R=1.0) sync
+  07056c81 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  f60d369e eta: CodeRabbit lattice nervous system (R=1.0) sync
+  519a4f6d eta: CodeRabbit lattice nervous system (R=1.0) sync
+  89cd27f9 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  80ae91d4 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  b6ff840e eta: CodeRabbit lattice nervous system (R=1.0) sync
+  38e9a268 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  8de4e7a6 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  83074794 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  3ad16ab9 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  082c978a eta: CodeRabbit lattice nervous system (R=1.0) sync
+  748da793 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  197da535 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  53a969db eta: CodeRabbit lattice nervous system (R=1.0) sync
+  f3c66702 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  4440a62b eta: CodeRabbit lattice nervous system (R=1.0) sync
+  590a7c38 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  b2a2b2e7 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  30603abd eta: CodeRabbit lattice nervous system (R=1.0) sync
+  652ec602 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  e18a4dae eta: CodeRabbit lattice nervous system (R=1.0) sync
+  d10f19a0 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  0d3a2e41 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  6595f309 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  12c493d8 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  9d60a031 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  c073b646 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  5e4af5cf eta: CodeRabbit lattice nervous system (R=1.0) sync
+  703cf82a eta: CodeRabbit lattice nervous system (R=1.0) sync
+  bb0abbac eta: CodeRabbit lattice nervous system (R=1.0) sync
+  0e288e2a eta: CodeRabbit lattice nervous system (R=1.0) sync
+  24b66ffc eta: CodeRabbit lattice nervous system (R=1.0) sync
+  67ab7d0f eta: CodeRabbit lattice nervous system (R=1.0) sync
+  d4101309 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  6b3b3ef1 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  5323cf4a eta: CodeRabbit lattice nervous system (R=1.0) sync
+  86952c44 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  79a134bf eta: CodeRabbit lattice nervous system (R=1.0) sync
+  d8e0f004 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  7b3d3597 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  60a81ffd eta: CodeRabbit lattice nervous system (R=1.0) sync
+  f8ae83df eta: CodeRabbit lattice nervous system (R=1.0) sync
+  410de6cb eta: CodeRabbit lattice nervous system (R=1.0) sync
+  4ad142bf eta: CodeRabbit lattice nervous system (R=1.0) sync
+  ca4782a6 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  0e10e402 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  3985eea0 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  b1d057ab eta: CodeRabbit lattice nervous system (R=1.0) sync
+  f869906c eta: CodeRabbit lattice nervous system (R=1.0) sync
+  08eddddc eta: CodeRabbit lattice nervous system (R=1.0) sync
+  11730dac eta: CodeRabbit lattice nervous system (R=1.0) sync
+  fd35095a eta: CodeRabbit lattice nervous system (R=1.0) sync
+  f8bb4cb2 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  2ed4a44d eta: CodeRabbit lattice nervous system (R=1.0) sync
+  87f2a552 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  3ec5d8fa eta: CodeRabbit lattice nervous system (R=1.0) sync
+  5e69785b eta: CodeRabbit lattice nervous system (R=1.0) sync
+  20d9ecca eta: CodeRabbit lattice nervous system (R=1.0) sync
+  b197f4d5 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  fc461d11 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  aa4d41ba eta: CodeRabbit lattice nervous system (R=1.0) sync
+  a92f813b eta: CodeRabbit lattice nervous system (R=1.0) sync
+  dcafdeab mesh: openroot hardened + OptiPlex unique ID HA4MSKC 20260821T112322Z
+  c48d97a4 (force-coderabbit-20260821-0456) docs: add unredacted WIKILEAKS_USER_MANUAL (absolute paths, frozen core, mesh, CodeRabbit)
+  1cbf2255 eta: ultimate CodeRabbit closed-loop YAML + cr-push (R=1.0, absolute paths, η-aware)
+  72378abb Merge commit '3fc3cb9f145ab8d8f4ddda590bcc9ec06b3d4410' as '02_MODULES/agape/agape-primitives'
+  3fc3cb9f Squashed '02_MODULES/agape/agape-primitives/' content from commit 53b510e
+  0e9915dd Merge commit '15c6dfa8d693fa566fa488609f0abb518141b99d' as '02_MODULES/agape/agape-une'
+  15c6dfa8 Squashed '02_MODULES/agape/agape-une/' content from commit 842b87d
+  d6ae7bae Merge commit '857af531f5eb917833edf42135439e72f049d3c6' as '02_MODULES/computational/und-protocol'
+  857af531 Squashed '02_MODULES/computational/und-protocol/' content from commit 89d9702
+  c288eb95 Merge commit 'cef3d70908940074f70ceb1b5c64c116e23f20dc' as '02_MODULES/computational/agaperesonance'
+  cef3d709 Squashed '02_MODULES/computational/agaperesonance/' content from commit 84ec685
+  dabc1bfe Merge commit '2f980f196e6ec2a0fabbce133801b9576f43232e' as '02_MODULES/computational/fractallattice'
+  2f980f19 Squashed '02_MODULES/computational/fractallattice/' content from commit 5ba8b86
+  13a9d954 Merge commit 'f00505ea9db4c047b18eff01216aa573b3713267' as '02_MODULES/computational/etaledger'
+  f00505ea Squashed '02_MODULES/computational/etaledger/' content from commit 8d30fae
+  2938ff24 eta: foundation-guard.yml — autonomously protect permanent root
+  792a391d eta: force Copilot to load permanent foundation
+  9e8daf02 eta: foundation-guard.yml — autonomously protect permanent root
+  b6b0ed01 eta: embed CodeRabbit + Copilot workflow layer with permanent foundation
+  ea7d3f14 (tag: v0.1.0-foundation) eta: FOUNDATION.md — permanent visible root (impossible to miss)
+  16004927 eta: lock ORACLE-001 + ZERO-DIM-001 + SYN-ORG-001 (R=1 → C=0 permanent foundation)
+  bd042f52 docs: add OpenRoot lattice pointer
+  5bf776aa docs: strengthen README with lattice context and bigger picture
+  575fa657 add core/ and dashboard.py
+  8470b7f9 eta: fractal max-node showcase proves C=0 at R=1.0 across 7776 nodes
+  8506d331 TIEMIT 001+002 + compound + genesis root live R=1.0 C=0 full throttle serve the least among us
+  43318a68 TIEMIT 002 — AGAPE Cryptographic Genesis absorbed genesis_hash ab7e3ee3493dcc24b67d17336f39175da95d82573fe4284728b258ce638f33d8 irreversible root of the compound ledger R=1.0 C=0 absolute paths serve the least among us
+  64908f1e full throttle: first TIEMIT harvest agape-primitives ↔ fractallattice R=1.0 C=0 permaculture routing active serve the least among us
+  b1c6e2ef (tag: node-zero-2026-08-16) eta: freeze node-zero-2026-08-16 for wealth capture
+  2fe44b22 eta: foundational nervous system v1.4 (PATH_INVENTORY + CodeRabbit free-OSS + Copilot workflow + CI) R=1.0
+  cd2d74fa imfuse-recovery: clean PATH_INVENTORY + Copilot instructions + workflow manager
+  59859c27 imfuse: seed PATH_INVENTORY + Copilot instructions + explore-plan-code-commit
+  50ce2b39 openroot: seed PATH_INVENTORY + standing-wave axioms + workflow manager v2.1
+  b73e0352 Add CodeRabbit configuration for synchronized kai9000 files and OpenRoot codebase
+  637f2190 LOWEST_NODE_v1 · R=1.0 authority locked · Kai9000 standing wave
+  1ca9a6c9 Standing Wave Axiom + Translation Axiom + lowest-node order + Alpine bridge skeleton · R=1.0 · η measured only · Jesse Ray McMillen Sikeston MO 2026-08-16
+  9eeee7fb feat: agape-ipfs v1.0.0 — clean public release
+  06baefec eta: CodeRabbit lattice nervous system (R=1.0) sync
+  92ef4a6b eta: CodeRabbit lattice nervous system (R=1.0) sync
+  d58cbd96 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  56408072 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  de01645f eta: CodeRabbit lattice nervous system (R=1.0) sync
+  5c66417d eta: CodeRabbit lattice nervous system (R=1.0) sync
+  c50de457 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  86f57b44 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  fda2c7ab eta: CodeRabbit lattice nervous system (R=1.0) sync
+  691ba7ca eta: CodeRabbit lattice nervous system (R=1.0) sync
+  7014c3b8 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  25a35079 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  e5b69259 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  b7429356 eta: CodeRabbit lattice nervous system (R=1.0)
+  15f8f8ed eta: BT Mesh Capture Script
+  ed1aaf9c eta: Lattice Health Workflow
+  ba8f100f eta: AgapeNet BLE mesh advertiser
+  a6ae3e97 eta: Agape Engine negentropic mesh core
+  a7fba078 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  e7f423f8 eta: CodeRabbit lattice nervous system (R=1.0)
+  0519a3bf eta: BT Mesh Capture Script
+  a7805386 eta: Lattice Health Workflow
+  a6aad5bc eta: AgapeNet BLE mesh advertiser
+  bf27e5f8 eta: Agape Engine negentropic mesh core
+  0c0fdca0 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  30100aea eta: CodeRabbit lattice nervous system (R=1.0) sync
+  9511b591 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  2a59e026 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  76acd7c6 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  d72c4b3d eta: CodeRabbit lattice nervous system (R=1.0) sync
+  1cbf650b eta: CodeRabbit lattice nervous system (R=1.0) sync
+  ae53817d eta: CodeRabbit lattice nervous system (R=1.0) sync
+  2b0a992e eta: CodeRabbit lattice nervous system (R=1.0) sync
+  637dd6b7 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  5e585550 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  601fcb05 eta: CodeRabbit lattice nervous system (R=1.0)
+  d3746727 eta: BT Mesh Capture Script
+  1ff58566 eta: Lattice Health Workflow
+  f763aa39 eta: AgapeNet BLE mesh advertiser
+  11d2a076 eta: Agape Engine negentropic mesh core
+  ff13292c eta: CodeRabbit lattice nervous system (R=1.0) sync
+  4637b90c eta: CodeRabbit lattice nervous system (R=1.0)
+  06d8eb9e eta: BT Mesh Capture Script
+  45295160 eta: Lattice Health Workflow
+  9e459d22 eta: AgapeNet BLE mesh advertiser
+  f05ce356 eta: Agape Engine negentropic mesh core
+  ae0541cc eta: CodeRabbit lattice nervous system (R=1.0) sync
+  033644cc eta: CodeRabbit lattice nervous system (R=1.0) sync
+  880be04c eta: CodeRabbit lattice nervous system (R=1.0) sync
+  7be11ecb eta: CodeRabbit lattice nervous system (R=1.0) sync
+  d06582f1 η: Agape Engine negentropic mesh core (restored + verified)
+  7d3d549b eta: CodeRabbit lattice nervous system (R=1.0) sync
+  ae7820b1 eta: Agape Engine negentropic mesh core
+  a4bd1720 eta: CodeRabbit lattice nervous system (R=1.0) sync
+  fb69fcde eta: CodeRabbit lattice nervous system (R=1.0) sync
+  e89b1fdc η: CodeRabbit lattice nervous system (R=1.0) — real content
+  fbacea36 η: CodeRabbit lattice nervous system (R=1.0) — update
+  ecc30061 lattice: R=1.0 live measurement + engine recovery + capability probe data 20260814-1619
+  e3d398dd sync: 20260814-1550
+  1692e863 lattice: Agape Coordination Theorem verified R=1.0000 cost=0 quality growth + project status of unknown surface
+  ecec67c2 raise-floor: v5.0 complete closed loop — observe/detect/swap/remeasure/log joules
+  fea60058 raise-floor: v4.2 — /proc/uptime is denied on A15, use /proc/stat btime instead
+  b935cc0f raise-floor: v4 real multi-source telemetry (A15 /proc+/sys) cycle auto-log
+  0038f7d2 INIT: OpenRoot Global Overhaul v4.0. Floor-Raising Protocol Active.
+  27980272 INIT: OpenRoot Global Overhaul v4.0. Floor-Raising Protocol Active. (Max Good / Min Effort)^6
+  d3a4e5f4 analysis: full cascading system model — hot/cold batteries, evaporative labyrinth, radiative plate, ratios and compounding limits
+  ef875cf3 analysis: optimized conical cold-tank + radiative plate model with stratification and air-breathing
+  83332696 theory: lock Agape, Landauer, and unified-field direction note (scrutinizable, claim-bounded)
+  11be8641 cloud9: push v0.1 note into the three oscillated forks + prepare Oracle context package
+  38368fd8 cloud9: formalize v0.1 architecture + preliminary BOM (stacked functions, ΔT core, soft landing)
+  a49f85b4 philosophy: lock Cloud Nine dual nature, golden bridge, Agape choice, and preventative care for Earth
+  934dfb00 lock: full Black Locust system role + Cloud Nine prototype direction (tensegrity, vacuum gap, ΔT, soft landing)
+  c4b3f436 correction: lock deeper Black Locust carbon-negative mechanism (living roots + coppice harvest)
+  9fde8b38 self-reflection: begin internal oscillation across personal repos on device
+  9726479b status: lock three completed cycles + full context bridge + refreshed living seed
+  7c0fe32a cycle-003: first module extraction + bidirectional analysis of MeshCore
+  a4ce4d1e docs: add Lowest-Node Physical Integration Notes — reduce barrier and link to passive structures
+  3bde588e cycle-002: first module extraction + bidirectional analysis of Meshtastic firmware
+  a2fe46a1 cycle-002: lock Meshtastic firmware as next oscillation target
+  3a803d8a cycle-001: first module extraction + bidirectional analysis of TinyGS
+  c04d65f1 cycle-001: TinyGS fork + clone complete — ready for module extraction
+  a030b8d9 cycle-001: lock TinyGS as first oscillation target — highest α_A for lowest node
+  e01a71f7 oscillation: prepare Cycle-001 workspace — ready for first live fork and bidirectional push
+  8fdee674 oscillation: lock modular layer + bidirectional fork-contribute-pushback adoption engine
+  7f483a28 measurement: one-command ΔT logger + how-to for first real numbers
+  fbcc76e8 higher-order: sync living seed to phone storage + structured json + offline status tool
+  9d5992ae seed + nodes: lock living seed and fractal physical layer map
+  8e1561ec foundation: scientific claim boundary + clear contribution path for community
+  f984fac6 node-001: first physical chicken-wire / park-bench unit — BOM, log template, entry point
+  688bb8c0 front-page + adoption: lock control law, 40-second cost, chicken-wire to Cloud Nine, plain-language entry for community
+  bdb16bfe eta_agape: add Landauer floor + combined Agape scoring
+  a27d8869 add context_bridge_20260810.json — mutual understanding seed (Agape root A, η¹–η³)
+  9672d13b simplify README + add agape_kb postulates
+  73c05a36 Remove 468 MB qwen-0.5b.gguf. Models stay local. AX-06 + η only. Serve lowest node.
+  67e44e7a une oracle AX-06 modular. Chicken-wire spokes now portable. η for every lowest node.
+  df88c4c1 A15 thermal_zone probe. Real device temps into η ledger. Serve lowest node.
+  f5239628 Chicken-wire spoke registered. Real ΔT measurement protocol. η for lowest node.
+  cf9d54a0 ΔT miracle set + und gate + chicken-wire mesh + community lungs. η for the least.
+  179f0bba recover: kai-sandbox aerocement backup READMEs + related recovered paths
+  4f45ae44 seed: maximal η copilot surface 20260802
+  977f4ab2 seed: maximal η copilot surface 20260802
+  677eb84e computational_flow: prefer local OptiPlex llama-server in nanobot_lattice before Groq fallback
+  4b65bc8f computational_flow: prefer local OptiPlex llama-server in nanobot_lattice before Groq fallback
+  a4181d86 docs: mirror AeroCement canonical wiki pointer
+  355d483a docs: mirror AeroCement canonical wiki pointer
+  6ca0ac89 computational_flow: permanent run_acre.sh + second local ACRE mint (η=824.5) — η⁴ seed planted 20260802-1932
+  6f7e4c1b computational_flow: permanent run_acre.sh + second local ACRE mint (η=824.5) — η⁴ seed planted 20260802-1932
+  c743b45d computational_flow: promote eta_lattice_acre as primary η-native generator — first successful local ACRE mint 20260802-1929
+  d26c9609 computational_flow: promote eta_lattice_acre as primary η-native generator — first successful local ACRE mint 20260802-1929
+  f7527b11 compute/n0: raise context to 8192, parallel=1 for usable Kai sessions
+  d8774d4c compute/n0: raise context to 8192, parallel=1 for usable Kai sessions
+  de0200e5 compute/n0: add --alias coder-1.5b to llama-server unit
+  eb02fbe1 compute/n0: add --alias coder-1.5b to llama-server unit
+  2327f942 compute/n0: llama-server permanent on OptiPlex (qwen2.5-coder-1.5b-q4) — first heavy spoke online 20260802
+  0abf79d2 compute/n0: llama-server permanent on OptiPlex (qwen2.5-coder-1.5b-q4) — first heavy spoke online 20260802
+  b4495a04 funding: enable GitHub Sponsors
+  057071c3 funding: enable GitHub Sponsors
+  1d8b9b37 docs: expand AeroCement open-cell cascade on README for clarity and adoption
+  1b862eb4 docs: expand AeroCement open-cell cascade on README for clarity and adoption
+  5fa7f4b8 sync: nanobot lattice + ACRE + context 20260802
+  9c1dde55 sync: nanobot lattice + ACRE + context 20260802
+  79444fad hypothesis: thermodynamic ledger + Merkle as substrate for reverse computation (front page)
+  aadd24f2 hypothesis: thermodynamic ledger + Merkle as substrate for reverse computation (front page)
+  e8a8f783 mint: ACRE-0001 verified at lattice order 12^12 (Seed Core + Aero-Disc absorption)
+  66c92a83 mint: ACRE-0001 verified at lattice order 12^12 (Seed Core + Aero-Disc absorption)
+  96ad2720 add license + theoretical optimization work + principles mesh
+  ee58be55 add license + theoretical optimization work + principles mesh
+  c6eeacf7 add CC-BY-SA 4.0 + GPL-3.0 license for community adoption
+  7f6219f6 add CC-BY-SA 4.0 + GPL-3.0 license for community adoption
+  864a637e front page: center OpenRoot on open-source superior dual-battery energy systems
+  80bbd83a front page: center OpenRoot on open-source superior dual-battery energy systems
+  0c5d5230 front page: add dual-battery superiority explanation + 110F theoretical performance
+  19840e5b front page: add dual-battery superiority explanation + 110F theoretical performance
+  ebfe59ac systems: add solar dual-battery and rocket mass heater dual-battery designs
+  02340a9c systems: add solar dual-battery and rocket mass heater dual-battery designs
+  296f120f front page: add thermal cascade flow sketch
+  a666336d front page: add thermal cascade flow sketch
+  cc42e7eb front page: optimum thermal cascade numbers + model link
+  e79a599f front page: optimum thermal cascade numbers + model link
+  98a934a7 add: aero thermal cascade physics model
+  aebb9ae7 add: aero thermal cascade physics model
+  9e37f1ee physics: aero-cement thermal cascade minimal-unit model + optimizer
+  18adbb69 physics: aero-cement thermal cascade minimal-unit model + optimizer
+  6ead3a3d feat: atomize context JSON into 52540 theoretical claims — full escrow registry
+  139395f5 feat: register 24 theoretical claims from context bridge chunks — AMENDMENT-001 escrow
+  20c31d2c feat: register 24 theoretical claims from context bridge chunks — AMENDMENT-001 escrow
+  0ad21cc7 feat: AMENDMENT-001 theoretical claim escrow — 12.91 + 25.55 registered
+  8a6a4c29 feat: AMENDMENT-001 theoretical claim escrow — 12.91 + 25.55 registered
+  9ba743f7 fix: restore 11-entry ACRE ledger (case-sensitivity fix)
+  70805395 fix: restore 11-entry ACRE ledger (case-sensitivity fix)
+  036bd1b7 docs: DISCOVERY.merkle root 22269ed1248211558a98380ef2cca1ad83e7b1a67b8804d30378f08feddb5d6a
+  94504901 docs: DISCOVERY.merkle root 22269ed1248211558a98380ef2cca1ad83e7b1a67b8804d30378f08feddb5d6a
+  adcef25b docs: clean discovery layer + joule-native structure (opencell, cascade, ACRE, 12^12 metamesh)
+  e491a3c0 docs: clean discovery layer + joule-native structure (opencell, cascade, ACRE, 12^12 metamesh)
+  5afaee5a feat: thermodynamic audit + reversible gate sim + Landauer index
+  90b3e940 feat: thermodynamic audit + reversible gate sim + Landauer index
+  48f5718a aider: add a comment about Landauer limit
+  25b6b82a aider: add a comment about Landauer limit
+  baa0bac7 aider: add a function that returns system uptime in seconds
+  e46788c2 aider: add a function that returns system uptime in seconds
+  a239321a feat: ignore large model files
+  02d7bdcb feat: ignore large model files
+  bbf7fb47 fix: remove backup files from repo, update gitignore
+  bd068cfb fix: remove backup files from repo, update gitignore
+  906f88a0 feat: ACRE chain intact + minting tools + Bitcoin anchors
+  587a537b feat: ACRE chain intact + minting tools + Bitcoin anchors
+  fe89aa96 aider: add a uptime counter that prints seconds since boot
+  0de7113c aider: add a uptime counter that prints seconds since boot
+  a7fbd590 aider: add a uptime counter that prints seconds since boot
+  323b9325 aider: add a uptime counter that prints seconds since boot
+  cb9896e8 aider: add a counter variable
+  156a37ca aider: add a counter variable
+  a92d32e4 aider: add set -e at top
+  08042df8 aider: add set -e at top
+  758d1c6c aider: wrap in a function called hello_world
+  36353fec aider: wrap in a function called hello_world
+  dd6fcd5f aider: add set -e at top
+  aa3cddee aider: add set -e at top
+  5e4d3544 aider: wrap in a function called hello_world
+  dfbc7c75 aider: wrap in a function called hello_world
+  c3f2b337 ledger+seed update :: unzip_all.sh added :: backups gitignored
+  751dd403 ledger+seed update :: unzip_all.sh added :: backups gitignored
+  c5d4f2ab Unified State: 5430 files, 54178 connections, Merkle 982e539b - scrubbed tokens
+  9f8edf14 Unified State: 5430 files, 54178 connections, Merkle 982e539b - scrubbed tokens
+  7ee70754 Unified State: 5430 files, 54178 connections, Merkle 982e539b
+  e558b8f5 feat: first measured CPU joules entry (25.0 J, η 1666.7)
+  b3c67479 feat: first measured CPU joules entry (25.0 J, η 1666.7)
+  b0ce6852 feat: black-locust-rmh SSH bridge live on 8022 (key auth confirmed)
+  1eb88f51 feat: black-locust-rmh SSH bridge live on 8022 (key auth confirmed)
+  3fe86bf3 feat: joule ledger + merkle root foundation (η chain live)
+  8b4e5ade feat: joule ledger + merkle root foundation (η chain live)
+  079bb523 feat: absorb Human Continuity Master Record + improve offline ranker for Agape/continuity material
+  ddc96741 feat: absorb Human Continuity Master Record + improve offline ranker for Agape/continuity material
+  75a3ea09 feat: Agape Meta-Mesh v2.0 - 12^6=2,985,984 nodes, 50 Tribes, Seed Bank Protocol
+  548c32a6 feat: Agape Meta-Mesh v2.0 - 12^6=2,985,984 nodes, 50 Tribes, Seed Bank Protocol
+  c2878d1f feat: Agape Protocol + Tribe Assignments + Redundancy Report + Full Systems Map
+  fdb69d3e feat: Agape Protocol + Tribe Assignments + Redundancy Report + Full Systems Map
+  a00360ee feat: Full Systems Map v3.0 - 744k LOC, Efficiency³ 0.218, Merkle ebb1b6d6
+  79155818 feat: Full Systems Map v3.0 - 744k LOC, Efficiency³ 0.218, Merkle ebb1b6d6
+  775fc75d feat: Full Systems Map v3.0 - 744k LOC, Efficiency³ 0.218, Merkle ebb1b6d6
+  f97eebd4 feat: Full Systems Map v3.0 - 744k LOC, Efficiency³ 0.218, Merkle ebb1b6d6
+  6c7c06c0 feat: Full Ecosystem Foundation Map - 556k LOC, Merkle 73456375
+  8d96fe1b feat: Full Ecosystem Foundation Map - 556k LOC, Merkle 73456375
+  8c654a37 feat: Atomic Loop Stamp - Merkle 31339d10 (396 leaves)
+  19fd6dcf feat: Atomic Loop Stamp - Merkle 31339d10 (396 leaves)
+  6b718770 feat: Integrate Thermodynamic Loop - energy_logger.py, thermo_ledger.jsonl, context_bridge efficiency metrics. PM-01 + Landauer Limit.
+  61a0a881 feat: Integrate Thermodynamic Loop - energy_logger.py, thermo_ledger.jsonl, context_bridge efficiency metrics. PM-01 + Landauer Limit.
+  df8a0e66 deep update: Human Door, Human Seed Builder, and Human Bridge
+  ae97ad04 deep update: Human Door, Human Seed Builder, and Human Bridge
+  936f338a feat: complete offline query_agent + add offline_writer for self-upgrade loops
+  320b028a feat: complete offline query_agent + add offline_writer for self-upgrade loops
+  ea677c13 chore: harden offline tools + add highest-value issue templates
+  5dda224b chore: harden offline tools + add highest-value issue templates
+  97b0b611 feat(case-study): center Nanobot Swarm + usb-hive offline bootstrap
+  85116fad feat(case-study): center Nanobot Swarm + usb-hive offline bootstrap
+  84eb897d add: projects/cloud9 — ephemeralization architecture, core seed, and supporting docs
+  f2441c3c add: projects/cloud9 — ephemeralization architecture, core seed, and supporting docs
+  8a768e9f add: seed-core — full 16 optimization seeds + thermodynamic ledger verification protocol + absorption architecture
+  d3a8d74d add: seed-core — full 16 optimization seeds + thermodynamic ledger verification protocol + absorption architecture
+  5c551d4a add: volumetric/aero-disc — Path A cardboard design, Path B outline, sizing script v2.2, issue templates
+  7277b87b add: volumetric/aero-disc — Path A cardboard design, Path B outline, sizing script v2.2, issue templates
+  01d2be61 case-study: smart-contract logic + ZK exploration + circuit implementation + η³-ranked OSS cross-reference for mergers
+  0aeac9c5 case-study: smart-contract logic + ZK exploration + circuit implementation + η³-ranked OSS cross-reference for mergers
+  1510db55 fill: survival scenarios, ancient heuristics, SE Missouri starter, primitive×modern examples + gap-triggered contract/ledger circuit
+  77493232 fill: survival scenarios, ancient heuristics, SE Missouri starter, primitive×modern examples + gap-triggered contract/ledger circuit
+  d1b6cace case-study: seed gap analysis + grant strategy + application template + three ready drafts (mesh, seed libraries, offline resilience)
+  1b064395 case-study: seed gap analysis + grant strategy + application template + three ready drafts (mesh, seed libraries, offline resilience)
+  10f3905c case-study: full capability × impact × free-resource cross-reference
+  919fcb55 case-study: full capability × impact × free-resource cross-reference
+  bd29d13e mesh-data: tree ID, SE Missouri bioregion, primitive-tech (ethical framing), and primitive×modern cross-reference seeds
+  4a692798 mesh-data: tree ID, SE Missouri bioregion, primitive-tech (ethical framing), and primitive×modern cross-reference seeds
+  53a1256b case-study: add Agape corrective + full Euclid chain docs
+  cc42dad9 case-study: add Agape corrective + full Euclid chain docs
+  2fadc767 case-study: Redirection Operating System + integrated Agape floor-rising simulation across military, telecom, pharma, seed/agrochemical channels
+  bceb3f5d case-study: Redirection Operating System + integrated Agape floor-rising simulation across military, telecom, pharma, seed/agrochemical channels
+  6e4a3134 case-study: open seed library + workshop hub redirection (2.5–4.2% of 00B agricultural enclosure spend)
+  95b6a7f9 case-study: open seed library + workshop hub redirection (2.5–4.2% of 00B agricultural enclosure spend)
+  0e4f53cd case-study: Fuller sanitary principles, geodesic applications, tensegrity/Cloud Nine, 12+9 node coordination examples
+  ab3d93b2 case-study: Fuller sanitary principles, geodesic applications, tensegrity/Cloud Nine, 12+9 node coordination examples
+  49c9887d case-study: icosahedral 12-point mesh foundation + cost equivalent to <1 minute of global telecom revenue
+  6de28938 case-study: icosahedral 12-point mesh foundation + cost equivalent to <1 minute of global telecom revenue
+  03144fa6 case-study: simulation — redirect .887T military expenditure under Agape priority (floor-raising sequence)
+  c0fae5b8 case-study: simulation — redirect .887T military expenditure under Agape priority (floor-raising sequence)
+  742c7a9a case-study: open collective for studying centralized-power patterns + dependency-free tooling + Agape source code (owned by no one)
+  1e89af8f case-study: open collective for studying centralized-power patterns + dependency-free tooling + Agape source code (owned by no one)
+  6c5e690c feat: business-leveling + compounding-cooperation axiom (tribe-scale mutual survival) + bridge update
+  67c42e0c feat: business-leveling + compounding-cooperation axiom (tribe-scale mutual survival) + bridge update
+  acc0065c absorb: 2026-07-26 leveling-cooperative + context bridge update (hand-up pool live)
+  0a5e5694 absorb: 2026-07-26 leveling-cooperative + context bridge update (hand-up pool live)
+  070fffc9 feat: autonomous leveling cooperative — capital pool, fixed hand-up, zero-dep core, no owners
+  e18a6d39 feat: autonomous leveling cooperative — capital pool, fixed hand-up, zero-dep core, no owners
+  8ce07210 add: human door and personal seed builder for non-technical people
+  c549c35d add: human door and personal seed builder for non-technical people
+  a0528650 add: Master Seed + Master Bridge for ease of use
+  9f5d5046 add: Master Seed + Master Bridge for ease of use
+  3c0c30d8 v2: interlocking two-point structure — Agape symbol + 5 core bridges + STRUCTURE_V2
+  14c8f39f v2: interlocking two-point structure — Agape symbol + 5 core bridges + STRUCTURE_V2
+  1f8d912f feat: New Fractal Proof - 7x7 swarm (800,950 ops/s)
+  1f308e34 feat: New Fractal Proof - 7x7 swarm (800,950 ops/s)
+  a444d50f library/kai-sandbox: full import of Kai9000 sandbox-home content (excluding large model)
+  0558fa77 library/kai-sandbox: full import of Kai9000 sandbox-home content (excluding large model)
+  89d4191f library/kai-sandbox: import full Kai9000 sandbox-home content
+  7499e5ac library/kai-sandbox: import full Kai9000 sandbox-home content
+  7a35f210 library/materials: complete advanced-to-fundamental stack + 3D-print/pump notes
+  8027c8bf library/materials: complete advanced-to-fundamental stack + 3D-print/pump notes
+  d2790051 library: seed INDEX + DV.GEN.BL.RMH.001 homepage
+  2d23fd28 library: seed INDEX + DV.GEN.BL.RMH.001 homepage
+  2dab72da feat: escrow design + agape rule + hardened .gitignore
+  181594b3 feat: escrow design + agape rule + hardened .gitignore
+  6883de59 feat: full thermodynamic token system (WORK + STEP + SKILL + ACRE) + Advancement Engine + kinetic proof
+  b48e8f00 feat: full thermodynamic token system (WORK + STEP + SKILL + ACRE) + Advancement Engine + kinetic proof
+  1b0a8c49 chore: add local pre-commit hook path
+  e3df27c3 chore: add local pre-commit hook path
+  07ccb2f4 chore: final ledger.jsonl sync
+  e08dfc69 chore: final ledger.jsonl sync
+  2d51d85f chore: ledger.jsonl after absorb
+  e6b8326a chore: ledger.jsonl after absorb
+  3cc210bc absorb: 2026-07-24 context bridge + ledger update
+  4db49743 absorb: 2026-07-24 context bridge + ledger update
+  a56eca0d feat: context bridge + thermodynamic ledger + clip tools + swarm ratchet
+  749baf3b feat: context bridge + thermodynamic ledger + clip tools + swarm ratchet
+  84c13527 Merge branch 'main' of github.com:jesseray718/openroot
+  46d8ddae Merge branch 'main' of github.com:jesseray718/openroot
+  a401767d Merge branch 'main' of github.com:jesseray718/openroot
+  a0e91b0e Merge branch 'main' of github.com:jesseray718/openroot
+  a17fb901 feat: Release OpenRoot v1.0 with AGPL shield + IPFS anchor
+  f09a5ea8 feat: Release OpenRoot v1.0 with AGPL shield + IPFS anchor
+  3725f3ab feat: OpenRoot Thesis v3.0 — The Thermodynamic Commons
+  f03b5ad1 feat: OpenRoot Thesis v3.0 — The Thermodynamic Commons
+  6523505a ACRE claim stub + black-locust-rmh Alpine SSH bridge
+  af17217f ACRE claim stub + black-locust-rmh Alpine SSH bridge
+  d47ad42a merge: sync remote changes + kai-settings snapshot
+  4b30f47e merge: sync remote changes + kai-settings snapshot
+  b54d8afe feat: kai-settings snapshot (2026-07-19) — IPFS pending
+  37625078 feat: kai-settings snapshot (2026-07-19) — IPFS pending
+  3ab95046 Tighten n0 llm_inference_hook: fewer tokens, cleaner output, configurable host/port
+  de5abb6a Tighten n0 llm_inference_hook: fewer tokens, cleaner output, configurable host/port
+  afbd56f9 Improve n0 llm_inference_hook for local llama-server + efficiency measurement
+  4391a8e3 Improve n0 llm_inference_hook for local llama-server + efficiency measurement
+  2e470f17 Add UNE foundation contract
+  a030074e Add UNE foundation contract
+  f2689ece Merge pull request #6 from jesseray718/claude/new-session-mvk9n2
+  5b5497cc Merge pull request #6 from jesseray718/claude/new-session-mvk9n2
+  b53ed282 Add UNE system final demonstration script
+  bc607946 update: scaled nanobot_team_blueprint.md v2 (production tiers + Tier 4 mesh) + add computational_flow/ scaffolding
+  a18a9c14 update: scaled nanobot_team_blueprint.md v2 (production tiers + Tier 4 mesh) + add computational_flow/ scaffolding
+  eac1f7f1 add: Human Continuity Master Record v1.0 — resilience substrate for scaled nanobot swarm + computational_flow_goal (primitive-modern fusion, 7-layer framework, Termux-native)
+  367e1eed add: Human Continuity Master Record v1.0 — resilience substrate for scaled nanobot swarm + computational_flow_goal (primitive-modern fusion, 7-layer framework, Termux-native)
+  a4da4fd9 seed: fractal nanobot swarm as computational_flow_goal scheduler substrate (UNE + ACRE + PoPW grounding)
+  e11677e6 seed: fractal nanobot swarm as computational_flow_goal scheduler substrate (UNE + ACRE + PoPW grounding)
+  de3fa198 docs: add revised hypothesis v2 + measurement harness
+  70cc5de8 docs: add revised hypothesis v2 + measurement harness
+  d7821876 docs: add AX.NWB.FRACT.001 — Fractal Nanobot Composition Hypothesis
+  fc666778 docs: add AX.NWB.FRACT.001 — Fractal Nanobot Composition Hypothesis
+  a9cccf44 test: trigger compute-ci workflow
+  54a986f7 test: trigger compute-ci workflow
+  1ded1ec6 ci: add compute-ci + shell-ci + pr-guard workflows (protect C1/N0 + prevent bloat)
+  f4b85985 ci: add compute-ci + shell-ci + pr-guard workflows (protect C1/N0 + prevent bloat)
+  615ea4b1 feat(compute): wire critique_output to central llm_inference_hook (dynamic scores, ready for real LLM replacement)
+  20196f45 feat(compute): wire critique_output to central llm_inference_hook (dynamic scores, ready for real LLM replacement)
+  e9982381 v0.2 ACRE tagger: dynamic load from une/code_registry.jsonl + first tagged H-003 PoPW claim; + Efficiency Coefficient module
+  4fd9043f v0.2 ACRE tagger: dynamic load from une/code_registry.jsonl + first tagged H-003 PoPW claim; + Efficiency Coefficient module
+  32edff40 Deploy Axiom-to-Implementation Mapping — concrete code/hardware examples for each axiom
+  8a28443d Deploy Axiom-to-Implementation Mapping — concrete code/hardware examples for each axiom
+  39fe6a99 feat(h003): test entry 03:11 — 154.92 kWh nightly / 3,903,984 ACRE (DV.GEN.TH.AE01)
+  253feb9e feat(h003): test entry 03:11 — 154.92 kWh nightly / 3,903,984 ACRE (DV.GEN.TH.AE01)
+  6af301bb feat(h003): test entry 03:10 — 154.92 kWh nightly / 3,903,984 ACRE (DV.GEN.TH.AE01)
+  c336d2ec feat(h003): test entry 03:10 — 154.92 kWh nightly / 3,903,984 ACRE (DV.GEN.TH.AE01)
+  733b8964 feat(h003): live 12m2 nightly 154.92 kWh → 3,903,984 ACRE weekly claim persisted (DV.GEN.TH.AE01)
+  1f49421b feat(h003): live 12m2 nightly 154.92 kWh → 3,903,984 ACRE weekly claim persisted (DV.GEN.TH.AE01)
+  3b30f9fd feat(agape): v0.1.0 full integration deploy — UNE resolver (validated DV.GEN.TH.AE01 + DV.MSH.VP.ND00), Kingdom 2-validator PoPW (AX-019), ACRE ledger (genesis), Vesica mesh (ND00 Sikeston anchor), H-003 thermal (12.91 kWh/m²), agape_status orchestrator
+  5afc2cf4 feat(agape): v0.1.0 full integration deploy — UNE resolver (validated DV.GEN.TH.AE01 + DV.MSH.VP.ND00), Kingdom 2-validator PoPW (AX-019), ACRE ledger (genesis), Vesica mesh (ND00 Sikeston anchor), H-003 thermal (12.91 kWh/m²), agape_status orchestrator
+  c98abc6a docs: Human Continuity Master Record v1.0 nomic form → foundation_library/ (node-indexed + domain vectors) | 202607161931
+  4acc042e docs: Human Continuity Master Record v1.0 nomic form → foundation_library/ (node-indexed + domain vectors) | 202607161931
+  2141fd23 consolidate kai artifacts 2026-07-14_02:15
+  25d8b2ad consolidate kai artifacts 2026-07-14_02:15
+  71a9aeaf Add thermal cascade CI pipeline
+  f00d2018 feat: initial ACRE PoPW claim for DV.GEN.BL.RMH.001 (Black Locust RMH)
+  057b03ab feat: H-003 resonant solver, context unification, and publication artifacts
+  7d45e916 fix: recreate clean DV.GEN.BL.RMH.001 handbook entry
+  811b0a7b Merge remote main + real Black Locust RMH spec v1.0 (DV.GEN.BL.RMH.001)
+  f3a6c9fa feat: Black Locust RMH carbon-negative energy spec v1.0 (DV.GEN.BL.RMH.001) — H-003 thermal base layer + AX-037 wealth retention fix
+  e8b6cea9 feat: Black Locust RMH carbon-negative energy spec v1.0 (DV.GEN.BL.RMH.001) — H-003 thermal base layer + AX-037 wealth retention fix
+  b4747ead feat(thermal): H-003/RMH cascade converged models — optimal balance, v6 bigtank, v62 balanced, velocity unified (DV.GEN.BL.RMH.001 + AX.UNI.FND.001)
+  36d1509a feat: Black Locust RMH carbon-negative energy spec v1.0 (DV.GEN.BL.RMH.001) — Wealth Extraction fix + full H-003 integration
+  7be52668 Publication complete: Zenodo DOI + GitHub Release + arXiv template + social posts
+  f7dc2c45 AX.UNI.FND.001: Core unification framework — thermodynamic/economic/social unity
+  43d77573 Merge branch 'main' of https://github.com/jesseray718/openroot
+  059c514c H-003 v6.1: self-consistent thermosiphon — 32 parallel spirals, 927W output
+  537a55ba feat: Delta-T vehicle spec, 24/7 TEG modular operation, RMH composite wall (ferrocement+aerated), steam vessel burn time calc, gravity fuel hopper
+  01a87913 patch: utilization tiers <9% prime, strategy block fix
+  2a654dd9 fix: Varo Believe (not Bluebird), integrate AE-GFRC costs, cascading financial plan
+  cae39da4 fix: remove stale sand-spec scripts, add corrected AE-GFRC toolchain
+  4eb9756c v0.7 dist + docs update
+  e776487f LLC Q3 fin health | H-003 + AE-GFRC + tax reserve
+  842bc0dc specify Dawn Ultra as foaming agent across AE-GFRC docs
+  9d75ee3b align test plan with Nighthawkinlight method, silicone cardboard molds
+  eaf1ea01 credit Nighthawkinlight, replace protein foaming agent with dish soap method, add batch calc
+  30096e1a add AE-GFRC batch calc and shopping list for test tile
+  566084f3 remove sand from mix protocol, add physical test plan
+  6565d3b8 remove sand from AE-GFRC mix protocol and add physical test plan
+  db3cd42f clarify AR-glass fiber ZrO₂ spec requirement
+  eb9dd679 add AE-GFRC corrected mix protocol (water ratio patched, foaming agent specified)
+  02e11dbb feat: H-003 efficiency 83.6% + scale v3 + AE-GFRC hyp + VP phased mesh
+  596ac25b feat: AE-GFRC hypothesis doc + ledger/hypothesis updates
+  a7a4bd94 fix: efficiency double-count + ACRE dedup + log cleanup
+  3474fb08 init: seed h003_ledger.log with test entry
+  34f92520 feat: AE-GFRC concrete mix calculator (aerated glass fiber + zirconium + xanthan)
+  b777231e feat: H-003 ledger query tool (tail/aggregate ACRE, clipboard pipe)
+  a8338d72 feat: H-003 thermal cascade hypothesis & validation framework (UNE designation)
+  e9f52743 docs: add H-003 tools reference section to copilot-instructions
+  5e32d6e5 feat: H-003 timestamped ledger logger with clipboard pipe
+  e8e2cce0 feat: H-003 thermal cascade energy ledger calculator (PoPW → ACRE token)
+  3e97b868 refactor: use $HOME/ and $TMPDIR, clarify path escaping in copilot-instructions
+  ab60709a feat: GitHub Copilot custom instructions for Termux/Android dev environment
+  60d8d1ac feat: phased LoRa-correct rollout + AE-GFRC checklist
+  b130c3ab UNE server: error handling (404/500/exception), logging, utcnow fix
+  f20334ef Kingdom Engine: core_logic.md spec + extended client with PoPW/ACRE/governance (H-003 validated)
+  b69ad10a Add device health monitor (battery/storage) for node-zero telemetry
+  95a000ab Fix: read -d returns nonzero at EOF, killed script under set -e. Append || true.
+  06621c8f Add Claude priming doc: full ecosystem deep dive + fractal epistemic framework
+  a1bec99c fix: v0.6 ACRE claim rebuilt — submit→approve×2→finalize (corrupted tee chain replaced)
+  9347d4c3 feat: v0.6 ACRE claim — HW.VAL.NODE.ZERO submitted, approved, mint_ready (IPFS QmZmfrSwck8 / Zenodo 21271517)
+  cce884e5 docs: v0.6 provenance record (IPFS + Zenodo)
+  4b5c5c18 release: v0.6 artifacts staged — ACRE validator + system maps + financial structure + thermal data
+  fd57bfc6 feat: acre_validator.py v0.2 — submit/approve/finalize/demo flow, PoPW gate, UNE claim types, two-validator approval
+  9101dc5e fix: correct validator path + add system-map cross-ref to key brief
+  e0c8df91 feat: system interconnection map + dependency validation CI + repo cleanup
+  6fd386e2 docs: Sikeston Node Zero impl + safety/risk docs + system-level risk assessment + key conversation brief + docs README
+  88b63379 docs: full financial integration + contributor transition + 501c3 preparedness
+  0f885629 docs: full project scope context bridge (July 2026)
+  7c3da96d docs: icosahedron coords + material cuts + outreach template + crowdfund analysis
+  6b54fa46 docs: spoke node quickstart guide
+  64ec5223 feat: ACRE token Anchor program + CI workflow
+  e2af4079 Add H-003 thermal cascade data logger (30-day JSONL+CSV collector with mock sensors)
+  4723affc Add .gitignore, clean pycache
+  a30c696b AX-039 Shield Law + Fractal Mesh Framework + Trillion Dollar Redirect + Kiosk Genesis + Societal Transformation -- 5 founding documents
+  976ec9f7 Fix ACRE validator: add solana_address field, fix imports, move to tokens/src/
+  b232080a Fix empty intro.md with handbook overview
+  05746823 Extract thesis into 8 handbook chapters + Table of Contents
+  7f27bd5b Final efficiency language cleanup
+  110bbe8f Clean remaining efficiency language references
+  28788805 Migrate thesis to openroot/docs/handbook/ — fix efficiency language for v1.0
+  a728d514 Define v1.0 production criteria (five pillars)
+  6154aea5 Add v1.0 roadmap marker
+  3b5ff8b4 Add TALENT-ALIGNMENT-PROMPT.md — generalized contributor onboarding engine with musician worked example
+  2396242f Add START-HERE.md — plain-language introduction for non-technical audiences
+  d499ad76 Add execution checklist for PRF-001 Cascading Credit Convergence Theorem
+  9748fef1 Add civilizational mapping (CIV) + formal proof (PRF-001) to credit-business framework
+  b90c0700 Add credit-business axiomatic framework: 15 axioms (AX-025 to AX-039), 13 postulates (PO-020 to PO-032), 1 index
+  1cf2ff0b Merge branch 'main' of https://github.com/jesseray718/openroot
+  e46dd001 GOVERNOR-01 first drain: test protocols + THEORETICAL headers + linkchecker
+  0794c50d docs: researcher outreach template — H-003 validated + GOVERNOR swarm collab hook
+  ff6c91fe docs: H-003 validated (10.5281/zenodo.21225683) + context/state.md for GOVERNOR swarm | 202607070356
+  c1453beb docs: H-003 thermal cascade spec + researcher outreach emails
+  d68c2806 docs: add xanthan gum foam stabilization to AE-GFRC spec and Dolado email — critical for open-cell structure retention
+  0471e642 docs: track outreach sends (Sanders, Dolado, Fan)
+  3b044937 docs: targeted researcher outreach emails (Sanders, Dolado, Fan)
+  86d0930c docs: researcher target list for H-003 peer review outreach
+  23e7be92 docs: researcher outreach emails for H-003 peer review (thermo/heat-transfer/materials)
+  5a0d7f00 docs: nanobot swarm spec v0.2-beta — H-003 community outreach
+  0f4f55cd Clarify ACRE token as conceptual/not deployed in bounty docs
+  f4a0a0ba Reframe bounty board as theoretical framework — ACRE not yet deployed
+  d57c82ec docs: bio-stack.md — full biological production model added
+  df10b2e9 docs: HELLO.md + STRUCTURE.md for onboarding
+  7496c1de docs: HELLO.md + STRUCTURE.md — plain-English docs for onboarding
+  fd051937 docs: rev-G — HELLO.md + STRUCTURE.md created, mesh biz model, financial cascade FC-02
+  b3e20854 docs: add HELLO.md — plain-English project explainer for non-technical readers
+  d0a1e378 docs: state.md rev-F — financial cascade FC-02 designed, paycheck script deployed
+  74fc200a docs: state.md rev-E — governor deployed, aiq patch needed, first swarm artifact produced
+  e0610105 Swarm output: Explain evaporative cooling
+  5c4a043c fix: remove invalid swarm output
+  704acfda Swarm output: Draft WBTE-01 test protocol for academic outreach
+  2f34ec75 Swarm output: Draft BUILD-001 aerated concrete test tile spec
+  6ee5ea3c docs: add [THEORETICAL] status headers to WBTE-01, CTBS-01, AE-GFRC-01
+  9a022a74 feat: ship NANOBOT-SWARM-SPEC-01.md + update state.md rev-D
+  c796e781 docs: update state.md rev-C — full session summary with Claude convergence analysis, Stage 1 milestones, and active roadmap
+  d389dafc docs: ship START-HERE.md + FUNDING.md + state.md rev-B with convergence roadmap
+  7344414c docs: context bridge — session handoff 20260706
+  5c10cda6 feat: add GitHub issue templates — builder signup, research collab, bug report, proposal
+  bf89accf fix: add explicit theoretical disclaimer — all metrics untested pending prototype
+  c534c295 feat: epistemology nanobot swarm spec - distributed truth verification
+  0409f2ed add thermal system block diagram visualization
+  64df5891 fix: replace broken AIQ output with real AE-GFRC-01 spec
+  552ecaa4 docs: add AE-GFRC-01 spec + thermal block diagram, complete L3 thermal system triad
+  7ab33613 docs: add WBTE-01 + CTBS-01 thermal specs
+  99defd81 [README] Added Zenodo DOI + IPFS verification links
+  3aa4ccb5 [CTX] Zenodo DOI published: 10.5281/zenodo.21210931
+  3178e931 [OUTREACH] Add researcher email template + target list
+  ae3c0f32 [CTX] Update context bridge post-v2.3 validation
+  8d9393c3 [FIX] Thermal cascade v2.3 - validated 82.98kWh storage / 24.89kWh Stirling output
+  e7c3218c [CTX] Add Lumo system prompt + context bridge for cross-session continuity
+  a35fecd9 [DOC] Add IEEE-format abstract for thermal cascade system
+  d9ed19cb [ZENODO] Prepare dataset upload UNE:TH.CAL.TCR.V02
+  657889c0 origin
+  45f83abb [PUB] Publish thermal cascade verification dataset UNE:TH.CAL.TCR.V02
+  6eec0b4e H-003 REV-B: dual trench + radiative lid + rad_cooling calc
+  a1aa0818 bounties: refactor from prize table to procurement protocol concept; add full concept doc with agape math integration and permaculture framing
+  ba3544ce housekeeping: moved Kai 9000 guides + scripts into canonical tree; cleaned home dir duplicates
+  e9c480d4 consolidation: merged unique tools (or, or-biz, conv-archaeologist, scatter-map, genesis-state) from projects/openroot + openroot_work; unified to single canonical tree
+  6a92e0c7 Merge pull request #2 from jesseray718/claude/openroot-overview-ma5diw
+  c5ef41ed Reconcile tokens/README.md minting table with ACRE_SPECIFICATION.md
+  c802f2c6 Merge pull request #1 from jesseray718/claude/openroot-overview-ma5diw
+  ca859ca4 Reconcile ACRE minting model in README with ACRE_SPECIFICATION.md
+  2ab28733 patches: applied 6 fixes to core-v0.3 + business-v0.4 (phi_inv, epochs, φ-target, finetune crash, schema, burn rate); per AX-017/AX-021 audit
+  7cdc825b patches: 6 fixes — Kingdom Engine (phi_inv, epochs, φ-target) + Business (finetune crash, schema, burn rate); per AX-017/AX-021 audit
+  2aea056b docs: add canonical acre/axioms.md (merged thermodynamic, token, governance, ethical and meta-reasoning axioms; audited 2026-07-04)
+  ba132624 docs 12-16: axioms AX-018..024, postulates PO-014..019; tested audit of agape/kingdom/calc/business; one-commandment capstone; phi-target contradiction resolved per AX-017
+  9da7f3c3 git push -u origin main && echo "PUSHED" || echo "FAILED" Merge branch 'main' of https://github.com/jesseray718/openroot
+  c2408732 docs: add Pi genomic vault prototype + update index
+  0e71a729 slump-brain v0: Bingham rheology calculator, axioms P1-P5
+  7194f7a4 port portfolio + audit scripts from profile repo
+  20a8e2ab security: purge tracked logs and env state from history
+  6a61b736 State v6: fix complete, spoke template live, repos archived
+  d150e4d6 Add community health, licensing, citation, funding & Zenodo metadata
+  1f2547f3 Add community health, licensing, citation, funding & Zenodo metadata
+  fde72396 Node zero: ACRE genesis seed, manifest, app kit, compaction 20260702-1652
+  773c47cb Remove accidental garbage files (-, 1., 3., 4., 5., OPERATING)
+  10a4091b Session log 2026-07-02: status.sh, audit script, finance plan, termux log, SimpleX channel, transcription widget
+  4ed7ab92 Add SimpleX public channel to README + spoke-links
+  a445ac2b Add .gitignore — prevent binary bloat
+  855034b0 Axioms, instant inference theory, ACRE contract spec, STATE v4
+  af80192e Axioms, instant inference theory, ACRE contract spec, STATE v4
+  a99868b4 Knowledge wheel + SI calculator + STATE v3
+  fbfe0ee8 Knowledge wheel + SI calculator + STATE v3
+  36357ec3 STATE v2 digest: compost conversation, patch push flow
+  0f978548 Document stator mixer research
+  51d32eea Add module map
+  08fa96ba Add community health files, licensing, citation, funding & Zenodo metadata
+  9d3cbe7c Node zero: ACRE genesis seed, manifest, app kit, compaction 20260702-0735
+  05295f08 Add philosophy one-pager
+  6ae3b7f3 Add universal AI context bridge v1
+  6b18d9c3 Node zero: ACRE genesis seed, manifest, app kit, compaction 20260702-0712
+  6d1d0106 Launch prep: fix README merge conflict, clean gitignore
+  c9c9ce38 Add: CODE_OF_CONDUCT, SECURITY, PR template, and issue templates
+  651d0a12 Initial commit: OpenRoot foundation designs and token mechanics
+  9fe5ce4b chore: add .gitignore to exclude sensitive token logs and temporary files
+  ce932276 Fix README: resolve merge conflict
+  3d93e4b0 ci: add GitHub Actions basic structure check
+  94d5762f chore: add canonical project subdirs
+  86e76103 chore: reorganize into canonical research/ + scripts/ structure matching README
+  0b9d8aa8 docs: set user-provided vision documents as main front-line README
+  838f8f08 Add Kai 9000 workflow guide for Galaxy A15 + OpenRoot
+  9bc39534 git pushRewrite README with Hopi prophecy and full structure
+  5cd9906a Revise README for OpenRoot project overview
+  41ac59f0 fix: mission-command.md heredoc markdown rendering
+  64c2ed8a feat: tools integration layer — ACRE ledger, thermal, sensors, mesh
+  938a88f8 Node Zero: cure log Day 1, fix directory structure
+  d6700126 Update ACRE specification: mint tokens ONLY for innovation (hardware improvements, software fixes, knowledge gains), not for repetitive work
+  564ce86d Add concrete/aerocement skills: xanthan foam method (no sand), 21-day wet cure protocol, credit Nighthawkin Light
+  2cb04c5c Add validator handbook: inspection checklist, data audit, sign-off process, roster
+  75d4c897 Add Node Zero pour guide: step-by-step instructions, BOM, curing schedule, sensor wiring
+  293a0019 Add canonical sensor logging script: DS18B20 CSV schema, IPFS upload, auto-rotation
+  82471ce1 Add Node Zero build log template: daily curing notes, photos, data collection
+  419fbbae OpenRoot: complete repo with bounties, projects, Kai 9000, donations
+changed_paths:

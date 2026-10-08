@@ -1,0 +1,1232 @@
+{
+  "by_label": {
+    "bom": [
+      "designs/thermal-cascade/BOM.md",
+      "designs/thermal-cascade/bom/BOM.csv",
+      "designs/thermal-cascade/bom/BOM.md",
+      "designs/thermal-cascade/BUILD.md",
+      "designs/thermal-cascade/docs/build-instructions.md",
+      "designs/thermal-cascade/docs/test-protocol.md",
+      "designs/thermal-cascade/INTAKE.md",
+      "designs/thermal-cascade/README.md",
+      "designs/thermal-cascade/release/REPRODUCE.md",
+      "docs/DESIGN_PACKETS.md",
+      "docs/OPEN_HARDWARE_STATUS.md",
+      "docs/PROJECT_ROADMAP.md",
+      "docs/README.draft.md",
+      "docs/README.md",
+      "docs/RELEASE_PROCESS.md",
+      "docs/REPOSITORIES.md"
+    ],
+    "build": [
+      "designs/thermal-cascade/BOM.md",
+      "designs/thermal-cascade/bom/BOM.md",
+      "designs/thermal-cascade/BUILD.md",
+      "designs/thermal-cascade/docs/build-instructions.md",
+      "designs/thermal-cascade/docs/operation.md",
+      "designs/thermal-cascade/docs/replication-notes.md",
+      "designs/thermal-cascade/docs/test-protocol.md",
+      "designs/thermal-cascade/LICENSE.md",
+      "designs/thermal-cascade/PROVENANCE.md",
+      "designs/thermal-cascade/README.md",
+      "designs/thermal-cascade/release/REPRODUCE.md",
+      "designs/thermal-cascade/SYSTEM.md",
+      "docs/BLOCKCHAIN-OF-CONTRIBUTIONS.md",
+      "docs/GOALS.md",
+      "docs/LICENSING.md",
+      "docs/markdown/MARKDOWN_DOCS.md",
+      "docs/markdown/MASTER_INDEX.md",
+      "docs/markdown/SHELL_SCRIPTS.md",
+      "docs/MASTER_TODO.md",
+      "docs/OPEN_HARDWARE_STATUS.md",
+      "docs/OPEN_INVITATION.md",
+      "docs/PROJECT_ROADMAP.md",
+      "docs/README.draft.md",
+      "docs/README.md",
+      "docs/RELEASE_PROCESS.md",
+      "docs/REPOSITORIES.md",
+      "docs/SCOPE.md",
+      "docs/SUPERLINEAR.md",
+      "docs/SYSTEM_ACTION_PLAN.md",
+      "docs/UNIFIED_ARCHITECTURE.md",
+      "README.md"
+    ],
+    "design": [
+      "designs/thermal-cascade/BOM.md",
+      "designs/thermal-cascade/bom/BOM.csv",
+      "designs/thermal-cascade/bom/BOM.md",
+      "designs/thermal-cascade/BUILD.md",
+      "designs/thermal-cascade/docs/build-instructions.md",
+      "designs/thermal-cascade/docs/operation.md",
+      "designs/thermal-cascade/docs/problem.md",
+      "designs/thermal-cascade/docs/safety.md",
+      "designs/thermal-cascade/docs/test-protocol.md",
+      "designs/thermal-cascade/INTAKE.md",
+      "designs/thermal-cascade/LICENSE.md",
+      "designs/thermal-cascade/MEASUREMENTS.md",
+      "designs/thermal-cascade/metadata.yaml",
+      "designs/thermal-cascade/PROVENANCE.md",
+      "designs/thermal-cascade/README.md",
+      "designs/thermal-cascade/release-manifest.json",
+      "designs/thermal-cascade/release/REPRODUCE.md",
+      "designs/thermal-cascade/router_context.json",
+      "designs/thermal-cascade/SAFETY.md",
+      "designs/thermal-cascade/STATUS.md",
+      "designs/thermal-cascade/SYSTEM.md",
+      "designs/thermal-cascade/TEST_PLAN.md",
+      "designs/thermal-cascade/THEORY_AND_EVIDENCE.md",
+      "docs/BLOCKCHAIN-OF-CONTRIBUTIONS.md",
+      "docs/DESIGN_PACKETS.md",
+      "docs/EVIDENCE_LEVELS.md",
+      "docs/GOALS.md",
+      "docs/LICENSING.md",
+      "docs/MASTER_TODO.md",
+      "docs/OPEN_HARDWARE_STATUS.md",
+      "docs/PERMACULTURE_ROUTER.md",
+      "docs/PROJECT_ROADMAP.md",
+      "docs/README.draft.md",
+      "docs/README.md",
+      "docs/RELEASE_PROCESS.md",
+      "docs/REPOSITORIES.md",
+      "docs/research/argf-durability.md",
+      "docs/research/cardboard-membrane.md",
+      "docs/research/cascade-heatbalance.md",
+      "docs/research/cloud9-relay.md",
+      "docs/research/dish-mesh-reflector.md",
+      "docs/research/double-skin-catenary.md",
+      "docs/research/labyrinth-cooling.md",
+      "docs/research/opencell-absorber.md",
+      "docs/research/thixo-foam.md",
+      "docs/SCOPE.md",
+      "docs/SUPERLINEAR.md",
+      "docs/SYSTEM_ACTION_PLAN.md",
+      "docs/UNIFIED_ARCHITECTURE.md",
+      "README.md"
+    ],
+    "evidence": [
+      "designs/thermal-cascade/BOM.md",
+      "designs/thermal-cascade/BUILD.md",
+      "designs/thermal-cascade/docs/replication-notes.md",
+      "designs/thermal-cascade/docs/safety.md",
+      "designs/thermal-cascade/INTAKE.md",
+      "designs/thermal-cascade/MEASUREMENTS.md",
+      "designs/thermal-cascade/metadata.yaml",
+      "designs/thermal-cascade/PROVENANCE.md",
+      "designs/thermal-cascade/README.md",
+      "designs/thermal-cascade/release-manifest.json",
+      "designs/thermal-cascade/release/REPRODUCE.md",
+      "designs/thermal-cascade/router_context.json",
+      "designs/thermal-cascade/SAFETY.md",
+      "designs/thermal-cascade/STATUS.md",
+      "designs/thermal-cascade/SYSTEM.md",
+      "designs/thermal-cascade/TEST_PLAN.md",
+      "designs/thermal-cascade/THEORY_AND_EVIDENCE.md",
+      "docs/BLOCKCHAIN-OF-CONTRIBUTIONS.md",
+      "docs/CONTRIBUTING.md",
+      "docs/DESIGN_PACKETS.md",
+      "docs/EVIDENCE_LEVELS.md",
+      "docs/LESSON_RECORD_SCHEMA.md",
+      "docs/markdown/PYTHON_FILES.md",
+      "docs/MASTER_TODO.md",
+      "docs/OPEN_HARDWARE_STATUS.md",
+      "docs/OPEN_INVITATION.md",
+      "docs/PERMACULTURE_ROUTER.md",
+      "docs/PROJECT_ROADMAP.md",
+      "docs/README.draft.md",
+      "docs/README.md",
+      "docs/RELEASE_PROCESS.md",
+      "docs/REPOSITORIES.md",
+      "docs/research/argf-durability.md",
+      "docs/research/cardboard-membrane.md",
+      "docs/research/cascade-heatbalance.md",
+      "docs/research/cloud9-relay.md",
+      "docs/research/dish-mesh-reflector.md",
+      "docs/research/double-skin-catenary.md",
+      "docs/research/labyrinth-cooling.md",
+      "docs/research/opencell-absorber.md",
+      "docs/research/thixo-foam.md",
+      "docs/SCOPE.md",
+      "docs/SUPERLINEAR.md",
+      "docs/SUPERLOOP.md",
+      "README.md"
+    ],
+    "license": [
+      "designs/thermal-cascade/BOM.md",
+      "designs/thermal-cascade/bom/BOM.md",
+      "designs/thermal-cascade/BUILD.md",
+      "designs/thermal-cascade/calculations/assumptions.md",
+      "designs/thermal-cascade/calculations/formulas.md",
+      "designs/thermal-cascade/docs/build-instructions.md",
+      "designs/thermal-cascade/docs/maintenance.md",
+      "designs/thermal-cascade/docs/operation.md",
+      "designs/thermal-cascade/docs/problem.md",
+      "designs/thermal-cascade/docs/replication-notes.md",
+      "designs/thermal-cascade/docs/results.md",
+      "designs/thermal-cascade/docs/safety.md",
+      "designs/thermal-cascade/docs/system-architecture.md",
+      "designs/thermal-cascade/docs/test-protocol.md",
+      "designs/thermal-cascade/INTAKE.md",
+      "designs/thermal-cascade/LICENSE.md",
+      "designs/thermal-cascade/MEASUREMENTS.md",
+      "designs/thermal-cascade/metadata.yaml",
+      "designs/thermal-cascade/PROVENANCE.md",
+      "designs/thermal-cascade/README.md",
+      "designs/thermal-cascade/release/REPRODUCE.md",
+      "designs/thermal-cascade/SAFETY.md",
+      "designs/thermal-cascade/STATUS.md",
+      "designs/thermal-cascade/SYSTEM.md",
+      "designs/thermal-cascade/TEST_PLAN.md",
+      "designs/thermal-cascade/THEORY_AND_EVIDENCE.md",
+      "docs/BLOCKCHAIN-OF-CONTRIBUTIONS.md",
+      "docs/DESIGN_PACKETS.md",
+      "docs/EVIDENCE_LEVELS.md",
+      "docs/LESSON_RECORD_SCHEMA.md",
+      "docs/LICENSING.md",
+      "docs/markdown/MARKDOWN_DOCS.md",
+      "docs/OPEN_HARDWARE_STATUS.md",
+      "docs/PERMACULTURE_ROUTER.md",
+      "docs/PROJECT_ROADMAP.md",
+      "docs/README.draft.md",
+      "docs/README.md",
+      "docs/RELEASE_PROCESS.md",
+      "docs/SUPERLOOP.md",
+      "docs/UNIFIED_ARCHITECTURE.md",
+      "README.md"
+    ],
+    "measurement": [
+      "designs/thermal-cascade/BOM.md",
+      "designs/thermal-cascade/bom/BOM.csv",
+      "designs/thermal-cascade/BUILD.md",
+      "designs/thermal-cascade/docs/build-instructions.md",
+      "designs/thermal-cascade/docs/results.md",
+      "designs/thermal-cascade/docs/system-architecture.md",
+      "designs/thermal-cascade/docs/test-protocol.md",
+      "designs/thermal-cascade/INTAKE.md",
+      "designs/thermal-cascade/MEASUREMENTS.md",
+      "designs/thermal-cascade/metadata.yaml",
+      "designs/thermal-cascade/PROVENANCE.md",
+      "designs/thermal-cascade/README.md",
+      "designs/thermal-cascade/release/REPRODUCE.md",
+      "designs/thermal-cascade/router_context.json",
+      "designs/thermal-cascade/STATUS.md",
+      "designs/thermal-cascade/SYSTEM.md",
+      "designs/thermal-cascade/TEST_PLAN.md",
+      "designs/thermal-cascade/THEORY_AND_EVIDENCE.md",
+      "docs/BLOCKCHAIN-OF-CONTRIBUTIONS.md",
+      "docs/CONTRIBUTING.md",
+      "docs/EVIDENCE_LEVELS.md",
+      "docs/LESSON_RECORD_SCHEMA.md",
+      "docs/markdown/JSON_DATA.md",
+      "docs/markdown/MARKDOWN_DOCS.md",
+      "docs/markdown/MASTER_INDEX.md",
+      "docs/markdown/SHELL_SCRIPTS.md",
+      "docs/OPEN_HARDWARE_STATUS.md",
+      "docs/OPEN_INVITATION.md",
+      "docs/PERMACULTURE_ROUTER.md",
+      "docs/PROJECT_ROADMAP.md",
+      "docs/README.draft.md",
+      "docs/README.md",
+      "docs/RELEASE_PROCESS.md",
+      "docs/REPOSITORIES.md",
+      "docs/research/argf-durability.md",
+      "docs/research/cardboard-membrane.md",
+      "docs/research/cascade-heatbalance.md",
+      "docs/research/cloud9-relay.md",
+      "docs/research/dish-mesh-reflector.md",
+      "docs/research/double-skin-catenary.md",
+      "docs/research/labyrinth-cooling.md",
+      "docs/research/opencell-absorber.md",
+      "docs/research/thixo-foam.md",
+      "docs/SCOPE.md",
+      "docs/SUPERLINEAR.md",
+      "docs/SUPERLOOP.md",
+      "docs/SYSTEM_ACTION_PLAN.md",
+      "README.md"
+    ],
+    "readme": [
+      "designs/thermal-cascade/PROVENANCE.md",
+      "designs/thermal-cascade/README.md",
+      "designs/thermal-cascade/SYSTEM.md",
+      "designs/thermal-cascade/THEORY_AND_EVIDENCE.md",
+      "docs/markdown/MARKDOWN_DOCS.md",
+      "docs/markdown/MASTER_INDEX.md",
+      "docs/MASTER_TODO.md",
+      "docs/README.draft.md",
+      "docs/README.md",
+      "docs/research/argf-durability.md",
+      "docs/research/cardboard-membrane.md",
+      "docs/research/cascade-heatbalance.md",
+      "docs/research/cloud9-relay.md",
+      "docs/research/dish-mesh-reflector.md",
+      "docs/research/double-skin-catenary.md",
+      "docs/research/labyrinth-cooling.md",
+      "docs/research/opencell-absorber.md",
+      "docs/research/thixo-foam.md",
+      "docs/SYSTEM_ACTION_PLAN.md",
+      "README.md"
+    ],
+    "safety": [
+      "designs/thermal-cascade/BOM.md",
+      "designs/thermal-cascade/BUILD.md",
+      "designs/thermal-cascade/docs/safety.md",
+      "designs/thermal-cascade/docs/test-protocol.md",
+      "designs/thermal-cascade/INTAKE.md",
+      "designs/thermal-cascade/metadata.yaml",
+      "designs/thermal-cascade/PROVENANCE.md",
+      "designs/thermal-cascade/README.md",
+      "designs/thermal-cascade/release-manifest.json",
+      "designs/thermal-cascade/release/REPRODUCE.md",
+      "designs/thermal-cascade/router_context.json",
+      "designs/thermal-cascade/SAFETY.md",
+      "designs/thermal-cascade/STATUS.md",
+      "designs/thermal-cascade/SYSTEM.md",
+      "designs/thermal-cascade/TEST_PLAN.md",
+      "designs/thermal-cascade/THEORY_AND_EVIDENCE.md",
+      "docs/DESIGN_PACKETS.md",
+      "docs/EVIDENCE_LEVELS.md",
+      "docs/LESSON_RECORD_SCHEMA.md",
+      "docs/OPEN_HARDWARE_STATUS.md",
+      "docs/PERMACULTURE_ROUTER.md",
+      "docs/PROJECT_ROADMAP.md",
+      "docs/README.md",
+      "docs/RELEASE_PROCESS.md",
+      "docs/REPOSITORIES.md",
+      "docs/SUPERLOOP.md",
+      "README.md"
+    ],
+    "status": [
+      "designs/thermal-cascade/BOM.md",
+      "designs/thermal-cascade/BUILD.md",
+      "designs/thermal-cascade/MEASUREMENTS.md",
+      "designs/thermal-cascade/metadata.yaml",
+      "designs/thermal-cascade/PROVENANCE.md",
+      "designs/thermal-cascade/README.md",
+      "designs/thermal-cascade/release-manifest.json",
+      "designs/thermal-cascade/release/REPRODUCE.md",
+      "designs/thermal-cascade/SAFETY.md",
+      "designs/thermal-cascade/STATUS.md",
+      "designs/thermal-cascade/SYSTEM.md",
+      "designs/thermal-cascade/TEST_PLAN.md",
+      "designs/thermal-cascade/THEORY_AND_EVIDENCE.md",
+      "docs/BLOCKCHAIN-OF-CONTRIBUTIONS.md",
+      "docs/GOALS.md",
+      "docs/LESSON_RECORD_SCHEMA.md",
+      "docs/markdown/JSON_DATA.md",
+      "docs/markdown/MARKDOWN_DOCS.md",
+      "docs/markdown/MASTER_INDEX.md",
+      "docs/markdown/SHELL_SCRIPTS.md",
+      "docs/OPEN_HARDWARE_STATUS.md",
+      "docs/PROJECT_ROADMAP.md",
+      "docs/README.draft.md",
+      "docs/README.md",
+      "docs/RELEASE_PROCESS.md",
+      "docs/REPOSITORIES.md",
+      "docs/research/argf-durability.md",
+      "docs/research/cardboard-membrane.md",
+      "docs/research/cascade-heatbalance.md",
+      "docs/research/cloud9-relay.md",
+      "docs/research/dish-mesh-reflector.md",
+      "docs/research/double-skin-catenary.md",
+      "docs/research/labyrinth-cooling.md",
+      "docs/research/opencell-absorber.md",
+      "docs/research/thixo-foam.md",
+      "docs/SUPERLINEAR.md",
+      "docs/SUPERLOOP.md",
+      "docs/UNIFIED_ARCHITECTURE.md",
+      "README.md"
+    ],
+    "test": [
+      "designs/thermal-cascade/BOM.md",
+      "designs/thermal-cascade/bom/BOM.csv",
+      "designs/thermal-cascade/bom/BOM.md",
+      "designs/thermal-cascade/BUILD.md",
+      "designs/thermal-cascade/docs/build-instructions.md",
+      "designs/thermal-cascade/docs/results.md",
+      "designs/thermal-cascade/docs/safety.md",
+      "designs/thermal-cascade/docs/test-protocol.md",
+      "designs/thermal-cascade/INTAKE.md",
+      "designs/thermal-cascade/MEASUREMENTS.md",
+      "designs/thermal-cascade/PROVENANCE.md",
+      "designs/thermal-cascade/README.md",
+      "designs/thermal-cascade/release/REPRODUCE.md",
+      "designs/thermal-cascade/router_context.json",
+      "designs/thermal-cascade/STATUS.md",
+      "designs/thermal-cascade/TEST_PLAN.md",
+      "designs/thermal-cascade/THEORY_AND_EVIDENCE.md",
+      "docs/BLOCKCHAIN-OF-CONTRIBUTIONS.md",
+      "docs/LESSON_RECORD_SCHEMA.md",
+      "docs/markdown/PYTHON_FILES.md",
+      "docs/markdown/SHELL_SCRIPTS.md",
+      "docs/MASTER_TODO.md",
+      "docs/OPEN_HARDWARE_STATUS.md",
+      "docs/OPEN_INVITATION.md",
+      "docs/PERMACULTURE_ROUTER.md",
+      "docs/PROJECT_ROADMAP.md",
+      "docs/README.draft.md",
+      "docs/README.md",
+      "docs/RELEASE_PROCESS.md",
+      "docs/REPOSITORIES.md",
+      "docs/research/argf-durability.md",
+      "docs/research/cardboard-membrane.md",
+      "docs/research/cascade-heatbalance.md",
+      "docs/research/cloud9-relay.md",
+      "docs/research/dish-mesh-reflector.md",
+      "docs/research/double-skin-catenary.md",
+      "docs/research/labyrinth-cooling.md",
+      "docs/research/opencell-absorber.md",
+      "docs/research/thixo-foam.md",
+      "docs/SUPERLINEAR.md",
+      "docs/SUPERLOOP.md",
+      "docs/SYSTEM_ACTION_PLAN.md",
+      "README.md"
+    ]
+  },
+  "counts": {
+    "files": 65,
+    "labels": {
+      "bom": 16,
+      "build": 31,
+      "design": 50,
+      "evidence": 45,
+      "license": 41,
+      "measurement": 48,
+      "readme": 20,
+      "safety": 27,
+      "status": 39,
+      "test": 43
+    }
+  },
+  "files": [
+    {
+      "bytes": 1468,
+      "labels": [
+        "bom",
+        "build",
+        "design",
+        "evidence",
+        "license",
+        "measurement",
+        "safety",
+        "status",
+        "test"
+      ],
+      "path": "designs/thermal-cascade/BOM.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 429,
+      "labels": [
+        "bom",
+        "design",
+        "measurement",
+        "test"
+      ],
+      "path": "designs/thermal-cascade/bom/BOM.csv",
+      "suffix": ".csv"
+    },
+    {
+      "bytes": 418,
+      "labels": [
+        "bom",
+        "build",
+        "design",
+        "license",
+        "test"
+      ],
+      "path": "designs/thermal-cascade/bom/BOM.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 1432,
+      "labels": [
+        "bom",
+        "build",
+        "design",
+        "evidence",
+        "license",
+        "measurement",
+        "safety",
+        "status",
+        "test"
+      ],
+      "path": "designs/thermal-cascade/BUILD.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 227,
+      "labels": [
+        "license"
+      ],
+      "path": "designs/thermal-cascade/calculations/assumptions.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 203,
+      "labels": [
+        "license"
+      ],
+      "path": "designs/thermal-cascade/calculations/formulas.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 551,
+      "labels": [
+        "bom",
+        "build",
+        "design",
+        "license",
+        "measurement",
+        "test"
+      ],
+      "path": "designs/thermal-cascade/docs/build-instructions.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 209,
+      "labels": [
+        "license"
+      ],
+      "path": "designs/thermal-cascade/docs/maintenance.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 386,
+      "labels": [
+        "build",
+        "design",
+        "license"
+      ],
+      "path": "designs/thermal-cascade/docs/operation.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 280,
+      "labels": [
+        "design",
+        "license"
+      ],
+      "path": "designs/thermal-cascade/docs/problem.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 227,
+      "labels": [
+        "build",
+        "evidence",
+        "license"
+      ],
+      "path": "designs/thermal-cascade/docs/replication-notes.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 300,
+      "labels": [
+        "license",
+        "measurement",
+        "test"
+      ],
+      "path": "designs/thermal-cascade/docs/results.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 535,
+      "labels": [
+        "design",
+        "evidence",
+        "license",
+        "safety",
+        "test"
+      ],
+      "path": "designs/thermal-cascade/docs/safety.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 451,
+      "labels": [
+        "license",
+        "measurement"
+      ],
+      "path": "designs/thermal-cascade/docs/system-architecture.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 587,
+      "labels": [
+        "bom",
+        "build",
+        "design",
+        "license",
+        "measurement",
+        "safety",
+        "test"
+      ],
+      "path": "designs/thermal-cascade/docs/test-protocol.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 2149,
+      "labels": [
+        "bom",
+        "design",
+        "evidence",
+        "license",
+        "measurement",
+        "safety",
+        "test"
+      ],
+      "path": "designs/thermal-cascade/INTAKE.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 451,
+      "labels": [
+        "build",
+        "design",
+        "license"
+      ],
+      "path": "designs/thermal-cascade/LICENSE.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 1162,
+      "labels": [
+        "design",
+        "evidence",
+        "license",
+        "measurement",
+        "status",
+        "test"
+      ],
+      "path": "designs/thermal-cascade/MEASUREMENTS.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 598,
+      "labels": [
+        "design",
+        "evidence",
+        "license",
+        "measurement",
+        "safety",
+        "status"
+      ],
+      "path": "designs/thermal-cascade/metadata.yaml",
+      "suffix": ".yaml"
+    },
+    {
+      "bytes": 3139,
+      "labels": [
+        "build",
+        "design",
+        "evidence",
+        "license",
+        "measurement",
+        "readme",
+        "safety",
+        "status",
+        "test"
+      ],
+      "path": "designs/thermal-cascade/PROVENANCE.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 1319,
+      "labels": [
+        "bom",
+        "build",
+        "design",
+        "evidence",
+        "license",
+        "measurement",
+        "readme",
+        "safety",
+        "status",
+        "test"
+      ],
+      "path": "designs/thermal-cascade/README.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 550,
+      "labels": [
+        "design",
+        "evidence",
+        "safety",
+        "status"
+      ],
+      "path": "designs/thermal-cascade/release-manifest.json",
+      "suffix": ".json"
+    },
+    {
+      "bytes": 341,
+      "labels": [
+        "bom",
+        "build",
+        "design",
+        "evidence",
+        "license",
+        "measurement",
+        "safety",
+        "status",
+        "test"
+      ],
+      "path": "designs/thermal-cascade/release/REPRODUCE.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 1291,
+      "labels": [
+        "design",
+        "evidence",
+        "measurement",
+        "safety",
+        "test"
+      ],
+      "path": "designs/thermal-cascade/router_context.json",
+      "suffix": ".json"
+    },
+    {
+      "bytes": 1679,
+      "labels": [
+        "design",
+        "evidence",
+        "license",
+        "safety",
+        "status"
+      ],
+      "path": "designs/thermal-cascade/SAFETY.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 535,
+      "labels": [
+        "design",
+        "evidence",
+        "license",
+        "measurement",
+        "safety",
+        "status",
+        "test"
+      ],
+      "path": "designs/thermal-cascade/STATUS.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 4388,
+      "labels": [
+        "build",
+        "design",
+        "evidence",
+        "license",
+        "measurement",
+        "readme",
+        "safety",
+        "status"
+      ],
+      "path": "designs/thermal-cascade/SYSTEM.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 1691,
+      "labels": [
+        "design",
+        "evidence",
+        "license",
+        "measurement",
+        "safety",
+        "status",
+        "test"
+      ],
+      "path": "designs/thermal-cascade/TEST_PLAN.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 3719,
+      "labels": [
+        "design",
+        "evidence",
+        "license",
+        "measurement",
+        "readme",
+        "safety",
+        "status",
+        "test"
+      ],
+      "path": "designs/thermal-cascade/THEORY_AND_EVIDENCE.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 7558,
+      "labels": [
+        "build",
+        "design",
+        "evidence",
+        "license",
+        "measurement",
+        "status",
+        "test"
+      ],
+      "path": "docs/BLOCKCHAIN-OF-CONTRIBUTIONS.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 290,
+      "labels": [
+        "evidence",
+        "measurement"
+      ],
+      "path": "docs/CONTRIBUTING.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 532,
+      "labels": [
+        "bom",
+        "design",
+        "evidence",
+        "license",
+        "safety"
+      ],
+      "path": "docs/DESIGN_PACKETS.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 526,
+      "labels": [
+        "design",
+        "evidence",
+        "license",
+        "measurement",
+        "safety"
+      ],
+      "path": "docs/EVIDENCE_LEVELS.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 863,
+      "labels": [
+        "build",
+        "design",
+        "status"
+      ],
+      "path": "docs/GOALS.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 662,
+      "labels": [
+        "evidence",
+        "license",
+        "measurement",
+        "safety",
+        "status",
+        "test"
+      ],
+      "path": "docs/LESSON_RECORD_SCHEMA.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 378,
+      "labels": [
+        "build",
+        "design",
+        "license"
+      ],
+      "path": "docs/LICENSING.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 756,
+      "labels": [
+        "measurement",
+        "status"
+      ],
+      "path": "docs/markdown/JSON_DATA.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 742,
+      "labels": [
+        "build",
+        "license",
+        "measurement",
+        "readme",
+        "status"
+      ],
+      "path": "docs/markdown/MARKDOWN_DOCS.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 1036,
+      "labels": [
+        "build",
+        "measurement",
+        "readme",
+        "status"
+      ],
+      "path": "docs/markdown/MASTER_INDEX.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 1133,
+      "labels": [
+        "evidence",
+        "test"
+      ],
+      "path": "docs/markdown/PYTHON_FILES.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 1056,
+      "labels": [
+        "build",
+        "measurement",
+        "status",
+        "test"
+      ],
+      "path": "docs/markdown/SHELL_SCRIPTS.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 845,
+      "labels": [
+        "build",
+        "design",
+        "evidence",
+        "readme",
+        "test"
+      ],
+      "path": "docs/MASTER_TODO.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 1426,
+      "labels": [
+        "bom",
+        "build",
+        "design",
+        "evidence",
+        "license",
+        "measurement",
+        "safety",
+        "status",
+        "test"
+      ],
+      "path": "docs/OPEN_HARDWARE_STATUS.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 698,
+      "labels": [
+        "build",
+        "evidence",
+        "measurement",
+        "test"
+      ],
+      "path": "docs/OPEN_INVITATION.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 3538,
+      "labels": [
+        "design",
+        "evidence",
+        "license",
+        "measurement",
+        "safety",
+        "test"
+      ],
+      "path": "docs/PERMACULTURE_ROUTER.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 2998,
+      "labels": [
+        "bom",
+        "build",
+        "design",
+        "evidence",
+        "license",
+        "measurement",
+        "safety",
+        "status",
+        "test"
+      ],
+      "path": "docs/PROJECT_ROADMAP.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 6035,
+      "labels": [
+        "bom",
+        "build",
+        "design",
+        "evidence",
+        "license",
+        "measurement",
+        "readme",
+        "status",
+        "test"
+      ],
+      "path": "docs/README.draft.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 29849,
+      "labels": [
+        "bom",
+        "build",
+        "design",
+        "evidence",
+        "license",
+        "measurement",
+        "readme",
+        "safety",
+        "status",
+        "test"
+      ],
+      "path": "docs/README.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 3396,
+      "labels": [
+        "bom",
+        "build",
+        "design",
+        "evidence",
+        "license",
+        "measurement",
+        "safety",
+        "status",
+        "test"
+      ],
+      "path": "docs/RELEASE_PROCESS.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 4565,
+      "labels": [
+        "bom",
+        "build",
+        "design",
+        "evidence",
+        "measurement",
+        "safety",
+        "status",
+        "test"
+      ],
+      "path": "docs/REPOSITORIES.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 2084,
+      "labels": [
+        "design",
+        "evidence",
+        "measurement",
+        "readme",
+        "status",
+        "test"
+      ],
+      "path": "docs/research/argf-durability.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 2092,
+      "labels": [
+        "design",
+        "evidence",
+        "measurement",
+        "readme",
+        "status",
+        "test"
+      ],
+      "path": "docs/research/cardboard-membrane.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 2086,
+      "labels": [
+        "design",
+        "evidence",
+        "measurement",
+        "readme",
+        "status",
+        "test"
+      ],
+      "path": "docs/research/cascade-heatbalance.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 2114,
+      "labels": [
+        "design",
+        "evidence",
+        "measurement",
+        "readme",
+        "status",
+        "test"
+      ],
+      "path": "docs/research/cloud9-relay.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 2084,
+      "labels": [
+        "design",
+        "evidence",
+        "measurement",
+        "readme",
+        "status",
+        "test"
+      ],
+      "path": "docs/research/dish-mesh-reflector.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 2120,
+      "labels": [
+        "design",
+        "evidence",
+        "measurement",
+        "readme",
+        "status",
+        "test"
+      ],
+      "path": "docs/research/double-skin-catenary.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 2096,
+      "labels": [
+        "design",
+        "evidence",
+        "measurement",
+        "readme",
+        "status",
+        "test"
+      ],
+      "path": "docs/research/labyrinth-cooling.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 2098,
+      "labels": [
+        "design",
+        "evidence",
+        "measurement",
+        "readme",
+        "status",
+        "test"
+      ],
+      "path": "docs/research/opencell-absorber.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 2074,
+      "labels": [
+        "design",
+        "evidence",
+        "measurement",
+        "readme",
+        "status",
+        "test"
+      ],
+      "path": "docs/research/thixo-foam.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 1210,
+      "labels": [
+        "build",
+        "design",
+        "evidence",
+        "measurement"
+      ],
+      "path": "docs/SCOPE.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 2832,
+      "labels": [
+        "build",
+        "design",
+        "evidence",
+        "measurement",
+        "status",
+        "test"
+      ],
+      "path": "docs/SUPERLINEAR.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 3177,
+      "labels": [
+        "evidence",
+        "license",
+        "measurement",
+        "safety",
+        "status",
+        "test"
+      ],
+      "path": "docs/SUPERLOOP.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 4123,
+      "labels": [
+        "build",
+        "design",
+        "measurement",
+        "readme",
+        "test"
+      ],
+      "path": "docs/SYSTEM_ACTION_PLAN.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 1664,
+      "labels": [
+        "build",
+        "design",
+        "license",
+        "status"
+      ],
+      "path": "docs/UNIFIED_ARCHITECTURE.md",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 8365,
+      "labels": [
+        "build",
+        "design",
+        "evidence",
+        "license",
+        "measurement",
+        "readme",
+        "safety",
+        "status",
+        "test"
+      ],
+      "path": "README.md",
+      "suffix": ".md"
+    }
+  ],
+  "generated_at": "2026-09-28T19:03:21.828221+00:00",
+  "mode": "read_only_catalog",
+  "mutation_performed": false,
+  "recommended_core": {
+    "BOM": "Parts, quantities, specifications, sources, substitutions, and cost/date context.",
+    "BUILD": "Stepwise build/assembly procedure with tools, prerequisites, and images or diagrams where possible.",
+    "DESIGN": "Editable design source files in open formats; exported renders alone are not sufficient.",
+    "EVIDENCE": "Clear separation between concepts, prototypes, measurements, and externally reproducible claims.",
+    "LICENSE": "Explicit license coverage for documentation, software/firmware, and hardware design files.",
+    "MEASUREMENTS": "Raw/derived observations with units, dates, conditions, and method provenance.",
+    "README": "Project purpose, current status, scope, safety boundary, and links to the build packet.",
+    "SAFETY": "Hazards, PPE, failure modes, safe operating limits, and what has not been validated.",
+    "TEST": "Test plan with acceptance criteria, instrumentation, repeatable protocol, and known limitations."
+  },
+  "repository": "/home/jesse/openroot",
+  "schema": "openroot.oshw_supporting_documents.v1"
+}

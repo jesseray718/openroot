@@ -1,0 +1,45 @@
+=== HANDOFF CANONICAL PROMOTION ===
+[banked] py_compile PASS: ladder and handoff
+[banked] active_sessions_pre_promotion=0
+[banked] direct canonical lifecycle proof begins
+[banked] handoff created: /home/jesse/openroot/context_bridge/handoffs/session_20260926T221842Z_d97bcefd328c622f.md
+[banked] session_id: 20260926T221842Z_d97bcefd328c622f
+[banked] handoff_phase=start
+[banked] direct_start_session_id=20260926T221842Z_d97bcefd328c622f
+[banked] active_sessions_after_direct_start=1
+[banked] session_closed=20260926T221842Z_d97bcefd328c622f
+[banked] handoff created: /home/jesse/openroot/context_bridge/handoffs/session_20260926T221842Z_d97bcefd328c622f.md
+[banked] session_id: 20260926T221842Z_d97bcefd328c622f
+[banked] handoff_phase=end
+[banked] bounded handoff end PASS
+[banked] active_sessions_after_direct_end=0
+[banked] direct_end_handoff=context_bridge/handoffs/session_20260926T221842Z_d97bcefd328c622f.md
+[banked] pre_calibration_status=locked
+name                 status  maturity  checks_ok  attempts  last_action                                                                       last_ts                   evidence                                                                    
+-------------------  ------  --------  ---------  --------  --------------------------------------------------------------------------------  ------------------------  ----------------------------------------------------------------------------
+handoff_operational  locked  auto      0          0         handoff lifecycle and canonical session-id format repaired; awaiting calibration  2026-09-26T22:16:29.560Z  canonical timestamp+token session ID; start/end passed; zero active sessions
+[gate] canonical ladder calibration begins: handoff_operational
+[banked] calibration PASSED → handoff_operational promoted to CALIBRATED
+[exit=0]
+[banked] ladder_calibrate_exit_code=0
+[banked] post_calibration_status=calibrated
+name                 status      maturity  checks_ok  attempts  last_action                         last_ts                    evidence                                                                                                           
+-------------------  ----------  --------  ---------  --------  ----------------------------------  -------------------------  -------------------------------------------------------------------------------------------------------------------
+handoff_operational  calibrated  auto      0          0         calibration PASSED (real, bounded)  2026-09-26T22:18:43+00:00  [banked] handoff created: /home/jesse/openroot/context_bridge/handoffs/session_20260926T221843Z_c6414b332a20e5d7.md
+                                                                                                                               [banked] session_id: 20260926T221843Z_c6414b332a20e5d7                                                             
+                                                                                                                               [banked] handoff_phase=start                                                                                       
+[banked] active_sessions_before_ladder_run=1
+[banked] ladder_calibration_session_id=20260926T221843Z_c6414b332a20e5d7
+[gate] canonical ladder run plus exit verification begins: handoff_operational
+[banked] handoff_operational VERIFIED GREEN — success endured
+[auto-trigger] → calibrating next stage: contributor_seal
+[exit=0]
+[banked] ladder_run_exit_code=0
+[banked] active_sessions_final=0
+[banked] final_status=verified
+name                 status    maturity  checks_ok  attempts  last_action       last_ts                    evidence        
+-------------------  --------  --------  ---------  --------  ----------------  -------------------------  ----------------
+handoff_operational  verified  auto      1          0         run+verify GREEN  2026-09-26T22:18:44+00:00  all checks green
+[banked] handoff_operational VERIFIED
+[banked] next_stage=contributor_seal
+[banked] contributor_seal remains human-only by declared policy

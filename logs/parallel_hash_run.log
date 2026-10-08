@@ -1,0 +1,13 @@
+nohup: ignoring input
+[gate] parallel hash queue: 468,262 files, 347.6 GiB, 6 workers
+  5,000/468,262 (1%) 211s elapsed, 24 files/s
+  10,000/468,262 (2%) 410s elapsed, 24 files/s
+  15,000/468,262 (3%) 624s elapsed, 24 files/s
+  20,000/468,262 (4%) 808s elapsed, 25 files/s
+  25,000/468,262 (5%) 1010s elapsed, 25 files/s
+  30,000/468,262 (6%) 1226s elapsed, 24 files/s
+  35,000/468,262 (7%) 1452s elapsed, 24 files/s
+  40,000/468,262 (9%) 1652s elapsed, 24 files/s
+  45,000/468,262 (10%) 1865s elapsed, 24 files/s
+Process ForkPoolWorker-6:
+Traceback (most recent call last):

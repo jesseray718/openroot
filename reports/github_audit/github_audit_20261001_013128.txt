@@ -1,0 +1,360 @@
+# OpenRoot GitHub Audit
+
+generated_utc=2026-10-01T01:31:28Z
+repo_root=/home/jesse/openroot
+
+## Git identity
+jesseray718
+jrm8908@proton.me
+
+## Current repository state
+branch=main
+
+ M data/superlinear/rapl_samples.jsonl
+?? .tinycrew/
+?? artifacts/
+?? context_bridge/mistake_solutions/b1a37e490c1a49af.md
+?? data/doc_gaps.json
+?? data/operator_holds/
+?? docs/newton_chain/
+?? model_registry/
+?? perplexity_outbox/
+
+## Remotes
+Reh1t	https://github.com/Reh1t/openroot.git (fetch)
+Reh1t	https://github.com/Reh1t/openroot.git (push)
+origin	git@github.com:jesseray718/openroot.git (fetch)
+origin	git@github.com:jesseray718/openroot.git (push)
+upstream	https://github.com/jesseray718/openroot.git (fetch)
+upstream	https://github.com/jesseray718/openroot.git (push)
+
+## Recent commits
+d353440b [ADD][DOC] bank delayed files from dead gate-1 commit: mistake solutions 6daeb91f/d4313a95 + reconcile_main_v1 + github_hygiene_v1 (restored pre_reconstruct, syntax-gated) — AI-assisted, human-gated
+879a6558 [FIX][ADD] README diagram fenced + redact_fixtures_v1.py ingest-side credential-fixture scrubber (smoke-passed) — mistake classes 6daeb91f/d4313a95 sealed
+94c9e8f1 [DOC] README: kai9000 routing stack (fp5s/FTS5/Nomic) + bot-runner executor + API-tier escalation — full architecture docs, not placeholders
+749986d9 [ADD] kai9000 retrieval+ingest+FTS pipeline tools — restored from pre_reconstruct, py_compile-gated
+ec58b7d6 [FIX] QUARANTINE + REDACT: test API keys leaked into lumo_inbox (session seed + inbound queue) — doctrine: keys live in .env only, never in git-tracked inbox files
+521297ea [DOC] README: routing stack architecture — bot-runner executor (not aider), lumo_inbox trunk, API tier with env-key doctrine
+d424dc27 [DOC] README: routing stack architecture — bot-runner executor (not aider), lumo_inbox trunk, API tier with env-key doctrine
+15ed7ef1 [DOC] seal mistake solution 3e253167272a91eb: gitignored ledgers never enter git add args
+a813297a [DOC] session handoff 2026-09-30: git slimdown 6.9G->192M, paste-glue solved, harvest_hold held — AI-assisted, human-gated
+bc2d525d [ADD] promote hash_assign_v1 + tinycrew superloop v2 from root strays — syntax-gated, provenance: paste debris triage 20260930
+cd465782 [FIX] openroot_board_v1.sh pending change from pre_reconstruct era — AI-assisted, human-gated
+a7c12a83 [ADD] salvage: workflow+tracker tools extracted from pre-rewrite branches, provenance: branch extraction 20260930
+
+## GitHub CLI authentication
+github.com
+  ✓ Logged in to github.com account jesseray718 (/home/jesse/.config/gh/hosts.yml)
+  - Active account: true
+  - Git operations protocol: https
+  - Token: ghp_************************************
+  - Token scopes: 'admin:enterprise', 'admin:gpg_key', 'admin:org', 'admin:org_hook', 'admin:public_key', 'admin:repo_hook', 'admin:ssh_signing_key', 'audit_log', 'codespace', 'copilot', 'delete:packages', 'delete_repo', 'gist', 'notifications', 'project', 'repo', 'user', 'workflow', 'write:discussion', 'write:network_configurations', 'write:packages'
+
+## GitHub repository metadata
+{"defaultBranchRef":{"name":"main"},"description":"Off-grid passive solar + opencell concrete thermal systems — open hardware, permaculture computation, PoPW-verified","hasDiscussionsEnabled":true,"hasIssuesEnabled":true,"isArchived":false,"isPrivate":false,"nameWithOwner":"jesseray718/openroot","url":"https://github.com/jesseray718/openroot","visibility":"PUBLIC"}
+
+## Branches
+  backup/agape-prime                            346688c6 Fix broken regex operator in pr-guard size-check workflow
+  backup/agape/add-coordination-theorem         709d4496 ci: restrict workflow token permissions
+  backup/main                                   841d509a or38 (#39) (#41)
+  backup/pr13-conflict-state                    841d509a or38 (#39) (#41)
+  backup/pr42-large-sync                        f66a8761 Agape/add coordination theorem (#33)
+  backup/preserve/pr44-salvage-20260905T181407Z a8a114c5 your next change
+  backup/salvage/full-local-sync                a8a114c5 your next change
+  chore/superloop-ci-cd-foundation              ae07f1a5 Merge remote-tracking branch 'origin/main' into chore/superloop-ci-cd-foundation
+  copilot/build-offline-first-toolkit           282fe2f5 fix: add explicit permissions to offline-ci.yml workflow
+  copilot/writing-thesis                        bd48c937 front: CLOSED-LOOP AGAPE COSMOLOGICAL ENGINE v7.0 front-and-center — no more fuzzy middle
+  docs-pr42-clean                               33783207 docs: add contribution hub workflow and provenance templates (clean scope)
+  docs/contribution-hub-20260825                a8a114c5 your next change
+  docs/contribution-hub-clean                   c4f47048 git pushMerge branch 'rescue/all-work-2026-09-02' into docs/contribution-hub-clean
++ docs/l0-cached-pathway-v1                     99b7e445 (/home/jesse/openroot-l0-cache-docs) [origin/docs/l0-cached-pathway-v1: gone] ci: skip optional model registry validation
+  feat/release                                  842d284e feat(ledger): append-only popw jsonl chain (#37)
+  force-coderabbit-20260821-0456                c48d97a4 docs: add unredacted WIKILEAKS_USER_MANUAL (absolute paths, frozen core, mesh, CodeRabbit)
+  integrate/pr34-clean                          7af5a99c Resolve merge conflicts: keep docs/contribution-hub-clean versions for PR34 integration
+* main                                          d353440b [origin/main] [ADD][DOC] bank delayed files from dead gate-1 commit: mistake solutions 6daeb91f/d4313a95 + reconcile_main_v1 + github_hygiene_v1 (restored pre_reconstruct, syntax-gated) — AI-assisted, human-gated
+  preserve/pr44-salvage-20260905T181407Z        a8a114c5 your next change
+
+## Tracked files with sensitive-looking names
+context_bridge/runtime_backups/team_gate.pre-rebase-20260920_222737.db
+data/canonical_index.db
+data/fts_index.db
+data/md_fts_v1.db
+data/mesh.db
+data/mesh_index.db
+data/proof_cache.db
+data/refinement.db
+data/refinery.db
+data/relay.db
+data/repo_drift.db
+data/species.db
+data/terminal_log.db
+data/theorem_forge/theorem_forge.db
+
+## Tracked files larger than 5 MiB
+    41403599  consolidation-backups/markor.tgz
+    40380461  consolidation-backups/markor/objects/pack/pack-899e8bdab558ef8223cc90f0c10439dbe37631bc.pack
+    22482944  data/fts_index.db
+     6106352  data/superlinear/rapl_samples.jsonl
+
+## Candidate generated/private local paths
+20260928_024955_deep_harvest.log
+20260928_031005_expertise_setup.log
+20260928_032245_hive_locate.log
+20260928_032626_full_loop_setup.log
+20260928_033142_hive_inspect.log
+20260928_041449_hive_inspect_v3.log
+.aider.tags.cache.v4/cache.db
+analysis/frp12_20260920_011836/quality_failure.log
+analysis/frp12_20260920_012032/quality_failure.log
+analysis/frp12_20260920_012638/quality_failure.log
+analysis/frp12_20260920_012726/quality_failure.log
+analysis/frp5_20260919_233659/fetch.log
+analysis/frp5_20260919_233659/stack_gate.log
+analysis/frp5_20260919_234220/fetch.log
+analysis/frp5_20260919_234220/stack_gate.log
+analysis/uplift_ledger.log
+archive/window-20260921_004746/__pycache__
+attic/rescue_staging_vendor/__pycache__
+autoupdate.log
+bin/__pycache__
+canon/src/__pycache__
+consolidation-backups/untracked_collision_20260919-072429/canonical_index.db
+consolidation-backups/untracked_collision_20260919-072429/seed_master.log
+consolidation-backups/untracked_collision_20260919-072429/venv
+context_bridge/BIN-TRIAGE-V2_20260924_205225.log
+context_bridge/BIN-TRIAGE-V2_20260924_205431.log
+context_bridge/bot_loop_20260920_144050.log
+context_bridge/gov_fix_v2_20260928_051638/fix.log
+context_bridge/gov_smoke3_20260928_044838/smoke.log
+context_bridge/gov_smoke3_failfix_20260928_045247/retest.log
+context_bridge/gov_smoke4_fp5s_20260928_050324/smoke.log
+context_bridge/lumo_inbox/ingested.sqlite
+context_bridge/lumo_inbox/kai_embeddings.db
+context_bridge/mega-audit-20260924_020624/__pycache__
+context_bridge/openroot_models_probe_20260928_050743/probe.log
+context_bridge/__pycache__
+context_bridge/ram_audit_20260928_052408/audit.log
+context_bridge/ram_audit_20260928_052607/audit.log
+context_bridge/readme-loop-20260920_204318.log
+context_bridge/readme-loop-20260920_205456-popw.log
+context_bridge/router-detached-20260920_234544.log
+context_bridge/router-detached-20260921_142840.log
+context_bridge/runtime_backups/team_gate.pre-rebase-20260920_222737.db
+context_bridge/seed_master-20260920_052939.log
+context_bridge/seed_master-20260920_053533.log
+context_bridge/seed_master-20260920_054032.log
+context_bridge/seed_master.log
+context_bridge/session_ledger.db
+context_bridge/SLWF-CACHE-V1_20260924_194359.log
+context_bridge/SLWF-CACHE-V1_20260924_204517.log
+context_bridge/swap_cleanup_20260928_052842/cleanup.log
+ctx_backup_20260923_194243/bot_loop_20260920_144050.log
+ctx_backup_20260923_194243/readme-loop-20260920_204318.log
+ctx_backup_20260923_194243/readme-loop-20260920_205456-popw.log
+ctx_backup_20260923_194243/router-detached-20260920_234544.log
+ctx_backup_20260923_194243/router-detached-20260921_142840.log
+ctx_backup_20260923_194243/runtime_backups/team_gate.pre-rebase-20260920_222737.db
+ctx_backup_20260923_194243/seed_master-20260920_052939.log
+ctx_backup_20260923_194243/seed_master-20260920_053533.log
+ctx_backup_20260923_194243/seed_master-20260920_054032.log
+data/api_keys.db
+data/canonical_index.db
+data/capability_exchange.db
+data/code_pathways.db
+data/compost_v1.db
+data/cycle_state.db
+data/dedup_ledger.db
+data/doc_index.db
+data/embed_cache.db
+data/embeddings.db
+data/.env
+data/expertise_fp5s.db
+data/fts_index.db
+data/goals_ledger.db
+data/gov_smoke.db
+data/grant_tracker.db
+data/hash_manifest_optiplex.db
+data/hash_manifest_optiplex_smoke.db
+data/hash_manifest_optiplex_smoke.db-shm
+data/hash_manifest_optiplex_smoke.db-wal
+data/knowledge_base.db
+data/knowledge.db
+data/ladder_diagnostics/commit_readiness_inventory.20260926T222333Z.log
+data/ladder_diagnostics/forensic_handoff_end.20260926T215730Z.log
+data/ladder_diagnostics/forensic_handoff_end.20260926T215823Z.log
+data/ladder_diagnostics/forensic_handoff_end.20260926T220054Z.log
+data/ladder_diagnostics/forensic_handoff_operational_ladder_calibration.20260926T220617Z.log
+data/ladder_diagnostics/forensic_ledgers_compost_runner.20260926T215349Z.log
+data/ladder_diagnostics/promote_handoff_operational.20260926T215638Z.log
+data/ladder_diagnostics/promote_handoff_operational_canonical.20260926T221842Z.log
+data/ladder_diagnostics/promote_handoff_operational_safe.20260926T220435Z.log
+data/ladder_diagnostics/promote_ledgers_green.20260926T212754Z.log
+data/ladder_diagnostics/promote_ledgers_green_bounded.20260926T215236Z.log
+data/ladder_diagnostics/promote_ledgers_green_bounded_v2.20260926T215532Z.log
+data/ladder_diagnostics/promote_mistake_engine_ready.20260926T210847Z.log
+data/ladder_diagnostics/promote_tooling_green.20260926T205354Z.log
+data/ladder_diagnostics/promote_vector_index_calibrated.20260926T212707Z.log
+data/ladder_diagnostics/repair_handoff_secrets_import.20260926T221131Z.log
+data/ladder_diagnostics/repair_handoff_session_id_collision.20260926T220915Z.log
+data/ladder_diagnostics/repair_handoff_session_id_collision.20260926T220956Z.log
+data/ladder_diagnostics/repair_handoff_session_id_collision.20260926T221036Z.log
+data/ladder_diagnostics/repair_handoff_session_id_format.20260926T221515Z.log
+data/ladder_diagnostics/repair_handoff_session_id_format.20260926T221628Z.log
+data/ladder_diagnostics/repair_handoff_start_idempotency.20260926T220804Z.log
+data/ladder_diagnostics/run_mistake_engine_ready.20260926T210211Z.log
+data/ladder_diagnostics/run_tooling_green.20260926T205954Z.log
+data/ladder_diagnostics/tooling_green.20260926T205056Z.log
+data/launch_ladder.db
+data/lb_loop.db
+data/lessons.db
+data/log_feed.db
+data/lumo_inbox.db
+data/md_fts_v1.db
+data/measurements/thermal_ledger.db
+data/mesh.db
+data/mesh_index.db
+data/mesh_refine_v1.db
+data/mistake_chain_ledger.db
+data/mistake_index.db
+data/mistakes.db
+data/model_pulls.log
+data/newton_chain.db
+data/openroot_knowledge/openroot_knowledge.db
+data/openroot_knowledge/openroot_knowledge.db-shm
+data/openroot_knowledge/openroot_knowledge.db-wal
+data/openroot_local_loop.db
+data/pathway_cache.db
+data/popw_ledger.db
+data/problem_solution_cache.sqlite
+data/proof_cache.db
+data/__pycache__
+data/qa_corpus.db
+data/queue_advance.db
+data/readme_loop.db
+data/refinement.db
+data/refinery.db
+data/relay.db
+data/relay_ledger.db
+data/relay_smoke_20260918-211656.log
+data/repo_drift.db
+data/route_cache.db
+data/router_corpus.sqlite
+data/router_ledger.db
+data/routing_ledger.sqlite
+data/sdcard-sync/h003_ledger.log
+data/sdcard-sync/ollama.log
+data/secret_audit.db
+data/shared_context.db
+data/species.db
+data/superlinear/superlinear.db
+data/syntax_failures.log
+data/team_gate.db
+data/terminal_log.db
+data/theorem_forge/theorem_forge.db
+data/tidbit_registry.db
+data/tier_dispatch.db
+data/universal_doc_ledger.db
+harvest/seed_oracle_boot.log
+knowledge_base.db
+logs/bank_week_20260924_172655.log
+logs/bank_week_20260924_172840.log
+logs/bank_week_20260924_173142.log
+logs/bank_week_20260924_173228.log
+logs/bank_week_20260924_173406.log
+logs/bank_week_20260924_191651.log
+logs/bank_week_20260924_191854.log
+logs/bot_20260923_203743.log
+logs/bot_20260923_210730.log
+logs/bot_20260927_144514.log
+logs/bot_daemon_20260923_212714.log
+logs/contributor_ack_20260924_164115.log
+logs/contributor_ack_20260924_164302.log
+logs/court_detach_20260925_031919.log
+logs/court_v6_20260925_031919.log
+logs/cron_dispatch.log
+logs/cron_thermal.log
+logs/dispatch_v5_20260925_024014.log
+logs/finish_vision_v2_20260927_234634.log
+logs/git_absorb_20260925_020454.log
+logs/hash_assign_optiplex.log
+logs/hash_assign_optiplex.nohup.log
+logs/hash_assign_optiplex_smoke.log
+logs/logbridge_20260925_014850.log
+logs/logbridge_20260925_014903.log
+logs/logbridge_20260925_014914.log
+logs/logbridge_20260925_015138.log
+logs/lumo_ingest.log
+logs/queue_sweep_20260924_155206.log
+logs/queue_sweep_20260924_155332.log
+logs/queue_sweep_20260924_160327.log
+logs/rapl_sampler_20260927_220322.log
+logs/rapl_sampler_20260927_220333.log
+logs/rapl_sampler_20260927_220923.log
+logs/recovery_20260923_193909.log
+logs/recovery_20260923_193927.log
+logs/recovery_20260923_194243.log
+logs/reh1t_credit_20260924_155930.log
+logs/reh1t_credit_20260924_160034.log
+logs/reh1t_credit_20260924_160318.log
+logs/reh1t_pr53_20260924_155134.log
+logs/reh1t_v2_20260924_155728.log
+logs/reh1t_v2_20260924_160020.log
+logs/replybot_daemon.log
+logs/stack_test_20260924_112821.log
+logs/superlinear_sampler_20260927_214425.log
+logs/superlinear_sampler_20260927_214510.log
+logs/superloop_cron.log
+logs/superloop.log
+logs/todo_tick_20260924_160603.log
+logs/todo_tick_20260924_160905.log
+logs/vision_all_v1_20260927_233818.log
+__pycache__
+quarantine_handoff_corrupt/cred_leak_20260930_190258/ingested.sqlite
+reports/dispatch_20260928T203922Z.log
+reports/dispatch_20260929T110001Z.log
+reports/dispatch_20260930T110001Z.log
+reports/gh_audit_detached_20260919_120307.log
+reports/gh_audit_detached_20260919_123906.log
+reports/gh_audit_detached_20260919_124217.log
+reports/local_loop_20260928T121543Z_555468_17801/run.log
+reports/local_loop_20260928T121627Z_558053_22345/run.log
+scripts/__pycache__
+seed_master.log
+tests/__pycache__
+.tinycrew/logs/tinycrew-20260928_221311.log
+tools/__pycache__
+workareas/bridge_cycle_20260921_040040.log
+
+## Git ignore effectiveness
+.env                                                           IGNORED
+data/knowledge_base.db                                         IGNORED
+data/knowledge.db                                              IGNORED
+data/newton_chain.db                                           IGNORED
+context_bridge/lumo_inbox/ingested.sqlite                      IGNORED
+data/hash_manifest_a15.db                                      IGNORED
+data/hash_manifest_optiplex.db                                 IGNORED
+.cache/example.cache                                           NOT_IGNORED
+logs/example.log                                               IGNORED
+
+## GitHub Actions
+completed	failure	[ADD][DOC] bank delayed files from dead gate-1 commit: mistake soluti…	CodeQL Advanced	main	push	36795235635	3m58s	2026-10-01T00:15:17Z
+completed	success	[ADD][DOC] bank delayed files from dead gate-1 commit: mistake soluti…	OpenRoot Node CI	main	push	36795235623	13s	2026-10-01T00:15:17Z
+completed	failure	[ADD][DOC] bank delayed files from dead gate-1 commit: mistake soluti…	Instruments Before Builders	main	push	36795235599	12s	2026-10-01T00:15:17Z
+completed	success	[ADD][DOC] bank delayed files from dead gate-1 commit: mistake soluti…	OpenRoot Permaculture CI	main	push	36795235596	14s	2026-10-01T00:15:17Z
+completed	failure	[ADD][DOC] bank delayed files from dead gate-1 commit: mistake soluti…	OpenRoot CI	main	push	36795235590	47s	2026-10-01T00:15:17Z
+completed	success	Push on main	CodeQL	main	dynamic	36795234375	4m48s	2026-10-01T00:15:16Z
+completed	success	[FIX][ADD] README diagram fenced + redact_fixtures_v1.py ingest-side …	OpenRoot CI	main	push	36794765263	14s	2026-10-01T00:09:53Z
+completed	success	[FIX][ADD] README diagram fenced + redact_fixtures_v1.py ingest-side …	Instruments Before Builders	main	push	36794765211	13s	2026-10-01T00:09:53Z
+completed	success	[FIX][ADD] README diagram fenced + redact_fixtures_v1.py ingest-side …	OpenRoot Permaculture CI	main	push	36794765198	20s	2026-10-01T00:09:53Z
+completed	failure	[FIX][ADD] README diagram fenced + redact_fixtures_v1.py ingest-side …	CodeQL Advanced	main	push	36794765190	5m45s	2026-10-01T00:09:53Z
+completed	success	[FIX][ADD] README diagram fenced + redact_fixtures_v1.py ingest-side …	OpenRoot Node CI	main	push	36794765176	10s	2026-10-01T00:09:53Z
+completed	success	Push on main	CodeQL	main	dynamic	36794764307	4m30s	2026-10-01T00:09:52Z
+completed	success	[DOC] README: kai9000 routing stack (fp5s/FTS5/Nomic) + bot-runner ex…	OpenRoot Permaculture CI	main	push	36794191183	15s	2026-10-01T00:03:04Z
+completed	success	[DOC] README: kai9000 routing stack (fp5s/FTS5/Nomic) + bot-runner ex…	Instruments Before Builders	main	push	36794191144	10s	2026-10-01T00:03:04Z
+completed	success	[DOC] README: kai9000 routing stack (fp5s/FTS5/Nomic) + bot-runner ex…	OpenRoot CI	main	push	36794191007	12s	2026-10-01T00:03:04Z
+
+## Open pull requests
+104	[HYGIENE] merge chore/superloop-ci-cd-foundation	chore/superloop-ci-cd-foundation	OPEN	2026-09-30T22:12:07Z
+
+## Safety marker
+READ_ONLY_AUDIT_COMPLETE

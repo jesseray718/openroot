@@ -1,0 +1,65 @@
+=== HANDOFF PRE-PROMOTION ===
+[banked] py_compile PASS: ladder and handoff manager
+[banked] handoff interface proof begins
+usage: handoff_manager.py [-h] [--goal GOAL] [--script SCRIPT]
+                          [--version VERSION] [--action ACTION]
+                          [{init,start,end,show,register-goal}]
+
+[HANDOFFV1] session handoff manager
+
+positional arguments:
+  {init,start,end,show,register-goal}
+
+options:
+  -h, --help            show this help message and exit
+  --goal GOAL           goal text to register
+  --script SCRIPT       script name for change log
+  --version VERSION     version string for change log
+  --action ACTION       change action: added/updated/deleted
+[banked] direct handoff-show proof begins
+Last 1 handoff(s):
+
+--- session_20260926_215535_55b7ba7c.md ---
+# SESSION HANDOFF — 20260926_215535_55b7ba7c
+_Generated 2026-09-26T21:55:36+00:00 | Phase: START | HEAD: 331060e9c184_
+
+## Session Status
+- Active prior sessions: No active sessions
+- Recent scripts (last 3 days): 1473
+
+## Running Tasks Queue (priority order)
+```
+1. Verify bin/ tracking status (git ls-files bin/)
+2. Review RELEASE_PLAN.md top candidate and execute with human gate
+3. Run compost_v1.py all to register waste streams and distill keypoints
+4. Update GOALS.md with completed/ongoing items
+5. Log kinetics: record joules human / joules useful / k_delta / shared
+```
+
+## Goals Implemented (Current Session)
+- [ ] bin/ tracking verification
+- [ ] A1 hub mirroring complete
+- [ ] Compost loop closed
+[banked] handoff_show_exit_code=0
+[banked] session_ledger_present=28672_bytes
+[banked] pre_calibration_status=calibrated
+name                 status      maturity  checks_ok  attempts  last_action                         last_ts                    evidence                                                                                                  
+-------------------  ----------  --------  ---------  --------  ----------------------------------  -------------------------  ----------------------------------------------------------------------------------------------------------
+handoff_operational  calibrated  auto      0          0         calibration PASSED (real, bounded)  2026-09-26T21:55:36+00:00  [banked] handoff created: /home/jesse/openroot/context_bridge/handoffs/session_20260926_215535_55b7ba7c.md
+                                                                                                                               [banked] session_id: 20260926_215535_55b7ba7c                                                             
+                                                                                                                               [gate] Review handoff, then proceed with tasks                                                            
+[gate] bounded handoff calibration begins: handoff_operational
+[banked] calibration PASSED → handoff_operational promoted to CALIBRATED
+[exit=0]
+[banked] ladder_calibrate_exit_code=0
+[banked] post_calibration_status=calibrated
+name                 status      maturity  checks_ok  attempts  last_action                         last_ts                    evidence                                                                                                  
+-------------------  ----------  --------  ---------  --------  ----------------------------------  -------------------------  ----------------------------------------------------------------------------------------------------------
+handoff_operational  calibrated  auto      0          0         calibration PASSED (real, bounded)  2026-09-26T21:56:39+00:00  [banked] handoff created: /home/jesse/openroot/context_bridge/handoffs/session_20260926_215639_69ae6e70.md
+                                                                                                                               [banked] session_id: 20260926_215639_69ae6e70                                                             
+                                                                                                                               [gate] Review handoff, then proceed with tasks                                                            
+[gate] declared runner is handoff end; inspect before side-effecting run
+[banked] declared_calibration=None
+[banked] declared_runner=None
+[held] handoff runner may close or mutate session state
+[gate] inspect exact handoff end behavior before authorizing run

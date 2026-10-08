@@ -1,0 +1,26 @@
+{
+ "marginal_ratio": 37.5,
+ "runs": [
+  {
+   "policy": "bottom-first",
+   "final_min_floor": 1.0,
+   "final_mean_floor": 1.0,
+   "gap": 0.0,
+   "cumulative_welfare": 258.39
+  },
+  {
+   "policy": "equal",
+   "final_min_floor": 1.0,
+   "final_mean_floor": 1.0,
+   "gap": 0.0,
+   "cumulative_welfare": 258.39
+  },
+  {
+   "policy": "merit-top",
+   "final_min_floor": 1.0,
+   "final_mean_floor": 1.0,
+   "gap": 0.0,
+   "cumulative_welfare": 258.39
+  }
+ ]
+}

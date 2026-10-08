@@ -1,0 +1,176 @@
+{
+  "designs": [
+    {
+      "artifact_groups": {
+        "all_files": [
+          "INTAKE.md",
+          "LICENSE.md",
+          "README.md",
+          "STATUS.md",
+          "bom/BOM.csv",
+          "bom/BOM.md",
+          "calculations/assumptions.md",
+          "calculations/formulas.md",
+          "docs/build-instructions.md",
+          "docs/maintenance.md",
+          "docs/operation.md",
+          "docs/problem.md",
+          "docs/replication-notes.md",
+          "docs/results.md",
+          "docs/safety.md",
+          "docs/system-architecture.md",
+          "docs/test-protocol.md",
+          "metadata.yaml",
+          "release/REPRODUCE.md",
+          "router_context.json"
+        ],
+        "build_information": [
+          "bom/BOM.csv",
+          "bom/BOM.md",
+          "docs/build-instructions.md"
+        ],
+        "design_definition": [
+          "INTAKE.md",
+          "README.md",
+          "metadata.yaml"
+        ],
+        "design_files": [],
+        "status_and_governance": [
+          "LICENSE.md",
+          "STATUS.md",
+          "docs/safety.md"
+        ],
+        "test_and_evidence": [
+          "docs/results.md",
+          "docs/test-protocol.md"
+        ]
+      },
+      "blockers": [
+        "Evidence remains conceptual/documentary. Do not represent this packet as a validated physical system."
+      ],
+      "claim_signals": [],
+      "evidence_level": "L0",
+      "metadata": {
+        "claim_boundary": ">-",
+        "code": "GPL-3.0-or-later",
+        "design_id": "THERMAL_CASCADE",
+        "documentation": "CC-BY-SA-4.0",
+        "evidence_level": "L0",
+        "hardware": "CERN-OHL-S-2.0",
+        "last_reviewed": "2026-09-25",
+        "licenses": "",
+        "maintainer": "Jesse Ray McMillen",
+        "name": "OpenRoot Thermal Cascade",
+        "schema_version": "1.0",
+        "slug": "thermal-cascade",
+        "status": "draft",
+        "version": "0.1.0"
+      },
+      "missing_required_files": [],
+      "path": "designs/thermal-cascade",
+      "readiness": {
+        "build": 70,
+        "documentation": 49,
+        "evidence": 30,
+        "release": 100
+      },
+      "required_files": {
+        "INTAKE.md": true,
+        "README.md": true,
+        "STATUS.md": true,
+        "metadata.yaml": true
+      },
+      "router": {
+        "context_kind": "intake",
+        "decision": null,
+        "evidence_level": 0,
+        "present": true,
+        "report_available": false,
+        "risk_level": 2,
+        "valid_json": true
+      },
+      "slug": "thermal-cascade",
+      "upgrade_paths": [
+        "Create a bounded non-pressurized or otherwise appropriately safe test protocol with conditions, instruments, stop conditions, raw-data location, and caveats.",
+        "Add versioned design artifacts: system sketch, CAD/drawing, schematic, simulation, or reproducible calculation."
+      ]
+    }
+  ],
+  "generated_at_utc": "2026-09-26T06:10:40+00:00",
+  "invariants": [
+    "No automatic evidence promotion.",
+    "No Git mutations.",
+    "No release creation.",
+    "No physical-system control.",
+    "No modification of protected local runtime state."
+  ],
+  "mode": "read-only preview",
+  "report_version": 1,
+  "repository": {
+    "branch": "main",
+    "head": "4fa0bc64",
+    "origin": "git@github.com:jesseray718/openroot.git",
+    "protected_staged_files": [],
+    "staged_files": [
+      "designs/thermal-cascade/INTAKE.md",
+      "designs/thermal-cascade/LICENSE.md",
+      "designs/thermal-cascade/README.md",
+      "designs/thermal-cascade/STATUS.md",
+      "designs/thermal-cascade/bom/BOM.csv",
+      "designs/thermal-cascade/bom/BOM.md",
+      "designs/thermal-cascade/calculations/assumptions.md",
+      "designs/thermal-cascade/calculations/formulas.md",
+      "designs/thermal-cascade/docs/build-instructions.md",
+      "designs/thermal-cascade/docs/maintenance.md",
+      "designs/thermal-cascade/docs/operation.md",
+      "designs/thermal-cascade/docs/problem.md",
+      "designs/thermal-cascade/docs/replication-notes.md",
+      "designs/thermal-cascade/docs/results.md",
+      "designs/thermal-cascade/docs/safety.md",
+      "designs/thermal-cascade/docs/system-architecture.md",
+      "designs/thermal-cascade/docs/test-protocol.md",
+      "designs/thermal-cascade/metadata.yaml",
+      "designs/thermal-cascade/release/REPRODUCE.md"
+    ],
+    "status_short": [
+      "M context_bridge/superloop_DASHBOARD.md",
+      " M data/model_registry.json",
+      " M data/superloop_chains.json",
+      "A  designs/thermal-cascade/INTAKE.md",
+      "A  designs/thermal-cascade/LICENSE.md",
+      "A  designs/thermal-cascade/README.md",
+      "A  designs/thermal-cascade/STATUS.md",
+      "A  designs/thermal-cascade/bom/BOM.csv",
+      "A  designs/thermal-cascade/bom/BOM.md",
+      "A  designs/thermal-cascade/calculations/assumptions.md",
+      "A  designs/thermal-cascade/calculations/formulas.md",
+      "A  designs/thermal-cascade/docs/build-instructions.md",
+      "A  designs/thermal-cascade/docs/maintenance.md",
+      "A  designs/thermal-cascade/docs/operation.md",
+      "A  designs/thermal-cascade/docs/problem.md",
+      "A  designs/thermal-cascade/docs/replication-notes.md",
+      "A  designs/thermal-cascade/docs/results.md",
+      "A  designs/thermal-cascade/docs/safety.md",
+      "A  designs/thermal-cascade/docs/system-architecture.md",
+      "A  designs/thermal-cascade/docs/test-protocol.md",
+      "AM designs/thermal-cascade/metadata.yaml",
+      "A  designs/thermal-cascade/release/REPRODUCE.md",
+      "?? .ci/",
+      "?? .github/workflows/permaculture-ci.yml",
+      "?? bin/quarantine_pyfails_final_v2/",
+      "?? data/permaculture_principles.yaml",
+      "?? data/router_examples/",
+      "?? designs/thermal-cascade/router_context.json",
+      "?? docs/PERMACULTURE_ROUTER.md",
+      "?? schemas/permaculture_context.schema.json",
+      "?? scripts/install_permaculture_router.sh",
+      "?? scripts/permaculture_ci.py",
+      "?? scripts/permaculture_router.py",
+      "?? scripts/preview_open_hardware.py",
+      "?? scripts/preview_open_hardware_suite.sh",
+      "?? scripts/render_permaculture_report.py",
+      "?? scripts/validate_permaculture_context.py",
+      "?? tests/test_permaculture_router.py"
+    ]
+  }
+}

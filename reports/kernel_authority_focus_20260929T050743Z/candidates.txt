@@ -1,0 +1,6 @@
+agape_kb/universal_axioms/universal_axioms.json
+bin/0112_postulates.py
+bin/0012_newton_chain.py
+bin/0773_proof_builder.py
+bin/0798_agape_oracle.py
+bin/turing_tidbits_v1.py

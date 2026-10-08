@@ -1,0 +1,114 @@
+=== REPOSITORY SCOPE ===
+/home/jesse/openroot
+main
+HEAD=2e9c68398fb4d2be67c08bde2441bf8826925788
+DATE=2026-09-27T23:58:33-05:00
+SUBJECT=[FIX] handoff: fill PR #9 URL placeholder (AI-assisted, human-gated)
+
+=== TEXT FILE CANDIDATES ===
+candidate_text_files=116924
+
+=== KEYWORD HITS ===
+keyword_hits=14848
+
+=== HIGH-VALUE FILES BY HIT COUNT ===
+  1121 ./context_bridge/grep_sweep_20260927_205916/philosophy_in_code.txt
+   455 ./context_bridge/grep_sweep_20260927_205916/model_config_refs.txt
+   332 ./context_bridge/concept_sweeps/20260928_010158-corrected/cooperation.txt
+   316 ./context_bridge/concept_sweeps/20260928_004258/synergy.txt
+   287 ./context_bridge/concept_sweeps/20260928_010158-corrected/agapekb.txt
+   273 ./context_bridge/grep_sweep_20260927_205916/ledger_state.txt
+   247 ./context_bridge/concept_sweeps/20260928_004258/46656.txt
+   207 ./context_bridge/concept_sweeps/20260928_004258/resonance.txt
+   169 ./ctx_backup_20260923_194243/doc_compile_termux_20260920_222842.md
+   169 ./context_bridge/doc_compile_termux_20260920_222842.md
+   121 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_200743.md
+   121 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_200743.md
+   120 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_200044.md
+   120 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193401.md
+   120 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193350.md
+   120 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193339.md
+   120 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193328.md
+   120 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193316.md
+   120 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193305.md
+   120 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193254.md
+   120 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193243.md
+   120 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193220.md
+   120 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193209.md
+   120 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193157.md
+   120 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193146.md
+   120 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193135.md
+   120 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193123.md
+   120 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_200044.md
+   120 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193401.md
+   120 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193350.md
+   120 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193339.md
+   120 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193328.md
+   120 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193316.md
+   120 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193305.md
+   120 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193254.md
+   120 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193243.md
+   120 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193220.md
+   120 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193209.md
+   120 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193157.md
+   120 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193146.md
+   120 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193135.md
+   120 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193123.md
+   119 ./context_bridge/concept_sweeps/20260928_004258/synergetic.txt
+   103 ./consolidation-backups/untracked_collision_20260919-072429/venv/api/lib/python3.12/site-packages/pydantic_core-2.46.5.dist-info/sboms/pydantic-core.cyclonedx.json
+    82 ./context_bridge/concept_mining/distill_20260928_012029/CONCEPT_SOURCES.clean.md
+    81 ./context_bridge/grep_sweep_20260927_205916/digest_files.txt
+    72 ./context_bridge/concept_sweeps/20260928_004258/synergetics.txt
+    69 ./context_bridge/grep_sweep_20260927_205916/energy_research.txt
+    63 ./context_bridge/concept_sweeps/20260928_004258/tidbit.txt
+    62 ./context_bridge/concept_sweeps/20260928_010158-corrected/philos.txt
+    61 ./context_bridge/concept_sweeps/20260928_004258/swarm.txt
+    60 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193111.md
+    60 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193111.md
+    60 ./analysis/frp12_20260920_012726/prune_targets.json
+    60 ./analysis/frp12_20260920_012638/prune_targets.json
+    60 ./analysis/frp12_20260920_012032/prune_targets.json
+    56 ./context_bridge/grep_sweep_20260927_205916/device_sync.txt
+    46 ./context_bridge/concept_mining/distill_20260928_012029/read_20260928_012238/DIGEST_TOP5_20260928_012423.md
+    44 ./context_bridge/kai_deep_harvest_20260928_024955/text/kai-settings.json
+    43 ./context_bridge/grep_sweep_20260927_205916/handoff_artifacts.txt
+    42 ./context_bridge/concept_sweeps/20260928_004258/agape.txt
+    42 ./bin/0012_newton_chain.py
+    42 ./attic/rescue_staging_vendor/0012_newton_chain.py
+    39 ./context_bridge/gov_promote_proofs_20260928_041935/parent_hash.txt
+    39 ./context_bridge/gov_promote_proofs_20260928_041935/nest_hash.txt
+    38 ./context_bridge/grep_sweep_20260927_205916/gates_canaries.txt
+    37 ./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/huggingface_hub/inference/_client.py
+    37 ./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/cryptography-50.0.1.dist-info/sboms/cryptography-rust.cyclonedx.json
+    36 ./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/litellm/llms/huggingface/huggingface_llms_metadata/hf_text_generation_models.txt
+    35 ./context_bridge/concept_mining/20260928_011449/CONCEPT_DIGEST.clean.md
+    34 ./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/huggingface_hub/inference/_generated/_async_client.py
+    34 ./bin/quarantine_pyfails_final_v2/placeholder/0770_energy_theorems.py
+    34 ./attic/rescue_staging_vendor/0770_energy_theorems.py
+    33 ./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/litellm/model_prices_and_context_window_backup.json
+    32 ./context_bridge/concept_sweeps/20260928_010158-corrected/0cost.txt
+    31 ./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/huggingface_hub/hf_api.py
+    30 ./ctx_backup_20260923_194243/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193059.md
+    30 ./context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193059.md
+    30 ./bin/0817_Packet.py
+    30 ./attic/rescue_staging_vendor/0817_Packet.py
+    28 ./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/spatial/distance.py
+    27 ./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/cryptography/x509/base.py
+    26 ./analysis/knowledge_probe_report_2026-09-18.md
+    25 ./bin/knowledge_probe_v1.py
+    24 ./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/tests/test_optimize.py
+    24 ./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/fastmcp/server/auth/auth.py
+    22 ./context_bridge/grep_sweep_20260927_205737/router_orchestrator.txt
+    22 ./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/networkx/generators/geometric.py
+    22 ./bin/0775_sacred_language_theorem.py
+    22 ./attic/rescue_staging_vendor/0775_sacred_language_theorem.py
+    20 ./consolidation-backups/untracked_collision_20260919-072429/venv/aider/lib/python3.12/site-packages/scipy/optimize/_minimize.py
+    20 ./bin/0821_Transport.py
+    20 ./attic/rescue_staging_vendor/0821_Transport.py
+    19 ./bin/quarantine_pyfails_final_v2/realbug/0044_v7.py
+    19 ./attic/rescue_staging_vendor/0044_v7.py
+    18 ./tests/test_lumo_lib.py
+    18 ./context_bridge/concept_mining/distill_20260928_012029/read_20260928_012238/06_auto_20260830_162350_log.md
+    18 ./bin/0015_lattice_cli.py
+    18 ./attic/rescue_staging_vendor/0015_lattice_cli.py
+    17 ./tests/test_knowledge_probe.py

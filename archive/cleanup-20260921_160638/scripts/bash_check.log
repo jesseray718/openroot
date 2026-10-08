@@ -1,0 +1,4 @@
+bin/hive_live_convergence_v1.sh: line 76: unexpected EOF while looking for matching `''
+bin/refinement_loop_v1.sh: line 99: syntax error: unexpected end of file
+bin/workflow_recover.sh: line 1: syntax error near unexpected token `newline'
+bin/workflow_recover.sh: line 1: `<content above>'

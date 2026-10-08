@@ -1,0 +1,23 @@
+[banked] report=/home/jesse/openroot/data/ladder_diagnostics/promote_tooling_green.20260926T205354Z.log
+[banked] stage=tooling_green
+[banked] timestamp_utc=20260926T205354Z
+[banked] py_compile PASS: /home/jesse/openroot/bin/launch_ladder_v1.py
+[banked] py_compile PASS: /home/jesse/openroot/bin/a1_core_v1.py
+[banked] py_compile PASS: /home/jesse/openroot/bin/compost_v1.py
+[banked] py_compile PASS: /home/jesse/openroot/bin/agape_vector_index.py
+[banked] py_compile PASS: /home/jesse/openroot/bin/mistake_engine_v1.py
+[banked] py_compile PASS: /home/jesse/openroot/bin/handoff_manager.py
+=== PRE-CALIBRATION STATE ===
+name           status  maturity  checks_ok  attempts  last_action  last_ts  evidence
+-------------  ------  --------  ---------  --------  -----------  -------  --------
+tooling_green  locked  auto      0          0                                       
+=== ENTRY CHECKS: RAW ===
+[banked] calibration PASSED → tooling_green promoted to CALIBRATED
+[exit=0]
+[banked] calibrate_exit_code=0
+=== POST-CALIBRATION STATE ===
+name           status      maturity  checks_ok  attempts  last_action                         last_ts                    evidence        
+-------------  ----------  --------  ---------  --------  ----------------------------------  -------------------------  ----------------
+tooling_green  calibrated  auto      0          0         calibration PASSED (real, bounded)  2026-09-26T20:54:41+00:00  TOOLING_CALIB_OK
+[held] calibration did not establish CALIBRATED: calibrated
+[gate] inspect report signals; do not force state

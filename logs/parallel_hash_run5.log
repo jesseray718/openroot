@@ -1,0 +1,33 @@
+nohup: ignoring input
+[gate] parallel hash queue: 151,261 files, 2 workers (WAL + optimized cache)
+  5,000/151,261 (3%) 843s elapsed, 6 files/s
+  10,000/151,261 (7%) 972s elapsed, 10 files/s
+  15,000/151,261 (10%) 1055s elapsed, 14 files/s
+  20,000/151,261 (13%) 1088s elapsed, 18 files/s
+  25,000/151,261 (17%) 1131s elapsed, 22 files/s
+  30,000/151,261 (20%) 1427s elapsed, 21 files/s
+  35,000/151,261 (23%) 1847s elapsed, 19 files/s
+  40,000/151,261 (26%) 1876s elapsed, 21 files/s
+  45,000/151,261 (30%) 1910s elapsed, 24 files/s
+  50,000/151,261 (33%) 1948s elapsed, 26 files/s
+  55,000/151,261 (36%) 1969s elapsed, 28 files/s
+  60,000/151,261 (40%) 2013s elapsed, 30 files/s
+  65,000/151,261 (43%) 2031s elapsed, 32 files/s
+  70,000/151,261 (46%) 2048s elapsed, 34 files/s
+  75,000/151,261 (50%) 2081s elapsed, 36 files/s
+  80,000/151,261 (53%) 2244s elapsed, 36 files/s
+  85,000/151,261 (56%) 2322s elapsed, 37 files/s
+  90,000/151,261 (59%) 2362s elapsed, 38 files/s
+  95,000/151,261 (63%) 2745s elapsed, 35 files/s
+  100,000/151,261 (66%) 2806s elapsed, 36 files/s
+  105,000/151,261 (69%) 2829s elapsed, 37 files/s
+  110,000/151,261 (73%) 2878s elapsed, 38 files/s
+  115,000/151,261 (76%) 3078s elapsed, 37 files/s
+  120,000/151,261 (79%) 3181s elapsed, 38 files/s
+  125,000/151,261 (83%) 3203s elapsed, 39 files/s
+  130,000/151,261 (86%) 3262s elapsed, 40 files/s
+  135,000/151,261 (89%) 3887s elapsed, 35 files/s
+  140,000/151,261 (93%) 4514s elapsed, 31 files/s
+  145,000/151,261 (96%) 4534s elapsed, 32 files/s
+  150,000/151,261 (99%) 4548s elapsed, 33 files/s
+[banked] parallel pass complete: 151,261 files in 4773s, remaining NULL=0

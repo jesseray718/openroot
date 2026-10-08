@@ -1,0 +1,72 @@
+{
+ "regime": {
+  "kappa": 0.15,
+  "seed_tax": 0.3,
+  "seed_target": 0.5,
+  "shock_gen": 12,
+  "shock_loss": 0.6,
+  "seed_loss": 0.4
+ },
+ "runs": [
+  {
+   "policy": "bottom-first",
+   "shocked": false,
+   "final_min_floor": 0.7454,
+   "final_median_floor": 0.7559,
+   "final_gini": 0.0368,
+   "mean_seed_stock": 0.2282,
+   "recovery_gens": "never",
+   "cumulative_welfare": 295.92
+  },
+  {
+   "policy": "bottom-first",
+   "shocked": true,
+   "final_min_floor": 0.1758,
+   "final_median_floor": 0.1804,
+   "final_gini": 0.0669,
+   "mean_seed_stock": 0.0492,
+   "recovery_gens": "never",
+   "cumulative_welfare": 191.65
+  },
+  {
+   "policy": "equal",
+   "shocked": false,
+   "final_min_floor": 0.4433,
+   "final_median_floor": 0.6258,
+   "final_gini": 0.1661,
+   "mean_seed_stock": 0.1814,
+   "recovery_gens": "never",
+   "cumulative_welfare": 304.64
+  },
+  {
+   "policy": "equal",
+   "shocked": true,
+   "final_min_floor": 0.0886,
+   "final_median_floor": 0.1616,
+   "final_gini": 0.2637,
+   "mean_seed_stock": 0.0413,
+   "recovery_gens": "never",
+   "cumulative_welfare": 223.62
+  },
+  {
+   "policy": "merit-top",
+   "shocked": false,
+   "final_min_floor": 0.01,
+   "final_median_floor": 0.2183,
+   "final_gini": 0.5607,
+   "mean_seed_stock": 0.0686,
+   "recovery_gens": "never",
+   "cumulative_welfare": 251.04
+  },
+  {
+   "policy": "merit-top",
+   "shocked": true,
+   "final_min_floor": 0.01,
+   "final_median_floor": 0.0484,
+   "final_gini": 0.6253,
+   "mean_seed_stock": 0.0536,
+   "recovery_gens": "never",
+   "cumulative_welfare": 125.65
+  }
+ ]
+}

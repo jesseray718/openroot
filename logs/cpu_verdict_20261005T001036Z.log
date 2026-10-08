@@ -1,0 +1,10 @@
+/home/jesse/.lumo_cpu_verdict_v1.py:18: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
+[banked] mistake solve 2a85b0546b88b3e4 rc=0 [banked] solution sealed: /home/jesse/openroot/context_bridge/mistake_solutions/2a85b0546b88b3e4.md
+[evidence] governor=powersave driver=intel_pstate cores=6 mhz_min=3900 mhz_max=3900
+[verdict] CORES AT FULL BOOST (>=3GHz). intel_pstate 'powersave' is NOT the 0.25-0.48 tok/s cause. Prime suspects: 99.9%-CPU stray bash process + llama-server thread config (249%/600% CPU). NOT switching governor on this evidence.
+Traceback (most recent call last):
+  File "/home/jesse/.lumo_cpu_verdict_v1.py", line 50, in <module>
+    hot = [l for l in ps_out.splitlines()[1:] if float(l.split(None, 2)[2]) >= 80][:5]
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: '307 31.0 5663784 5031624 ?     Rl   19:07  10:44 /usr/local/lib/ollama/llama-server --model /usr/share/ollama/.ollama/models/blobs/sha256-60e05f2100071479f596b964f89f510f057ce397ea22f2833a0cfe029bfc2463 --port 44307 --host 127.0.0.1 --no-webui --offline -c 4096 -np 1 --log-verbosity 4 --no-log-prefix --no-log-timestamps --no-jinja --chat-template chatml --load-mode none --flash-attn auto -b 512 -ub 512 --context-shift --keep 4'

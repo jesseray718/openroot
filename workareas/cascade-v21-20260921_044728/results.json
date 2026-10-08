@@ -1,0 +1,36 @@
+{
+ "regime": {
+  "headroom": 73.5,
+  "total_supply": 37.5,
+  "decay": 0.01
+ },
+ "runs": [
+  {
+   "policy": "bottom-first",
+   "final_min_floor": 0.3244,
+   "final_mean_floor": 0.3896,
+   "final_gini": 0.1145,
+   "cumulative_welfare": 178.88,
+   "gen_to_min_half": "never",
+   "saturated_nodes": 0
+  },
+  {
+   "policy": "equal",
+   "final_min_floor": 0.145,
+   "final_mean_floor": 0.3896,
+   "final_gini": 0.3154,
+   "cumulative_welfare": 204.78,
+   "gen_to_min_half": "never",
+   "saturated_nodes": 0
+  },
+  {
+   "policy": "merit-top",
+   "final_min_floor": 0.01,
+   "final_mean_floor": 0.39,
+   "final_gini": 0.5616,
+   "cumulative_welfare": 232.76,
+   "gen_to_min_half": "never",
+   "saturated_nodes": 0
+  }
+ ]
+}

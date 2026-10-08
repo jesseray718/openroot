@@ -1,0 +1,28 @@
+[banked] py_compile PASS: ladder and mistake engine
+[banked] direct runner proof
+[COMPOST] distinct=106 solved=22 occurrences=351 recycle=20.8%
+[COMPOST] [banked] report: /home/jesse/openroot/context_bridge/compost-20260926_160847.md
+[banked] pre_calibration_status=locked
+name                  status  maturity  checks_ok  attempts  last_action                                  last_ts                   evidence                                                 
+--------------------  ------  --------  ---------  --------  -------------------------------------------  ------------------------  ---------------------------------------------------------
+mistake_engine_ready  locked  auto      0          0         runner repaired; awaiting fresh calibration  2026-09-26T21:07:13.820Z  runner changed from unsupported list to supported compost
+[gate] bounded real calibration begins: mistake_engine_ready
+[banked] calibration PASSED → mistake_engine_ready promoted to CALIBRATED
+[exit=0]
+[banked] calibrate_exit_code=0
+[banked] post_calibration_status=calibrated
+name                  status      maturity  checks_ok  attempts  last_action                         last_ts                    evidence                                               
+--------------------  ----------  --------  ---------  --------  ----------------------------------  -------------------------  -------------------------------------------------------
+mistake_engine_ready  calibrated  auto      0          0         calibration PASSED (real, bounded)  2026-09-26T21:08:48+00:00  usage: hook EC CMD | solve KEY FIX | show KEY | compost
+[gate] full real run plus exit verification begins: mistake_engine_ready
+[banked] mistake_engine_ready VERIFIED GREEN — success endured
+[auto-trigger] → calibrating next stage: vector_index_calibrated
+[exit=0]
+[banked] ladder_run_exit_code=0
+[banked] final_status=verified
+name                  status    maturity  checks_ok  attempts  last_action       last_ts                    evidence        
+--------------------  --------  --------  ---------  --------  ----------------  -------------------------  ----------------
+mistake_engine_ready  verified  auto      1          0         run+verify GREEN  2026-09-26T21:08:48+00:00  all checks green
+[banked] mistake_engine_ready VERIFIED
+[banked] next_stage=vector_index_calibrated
+[banked] next_stage_calibration may have auto-triggered

@@ -1,0 +1,128 @@
+=== CANDIDATE MANIFEST ===
+bin/0012_newton_chain.py                                         389  33076  0cd3a6176896cf7c009240268d71d9256e713141d5e0f5264f29aae5635cfd94
+bin/0054_agape_ledger_chain.py                                   404  14576  e169e8f6f177d8627ee44d141402aa121e47ffed34611bde5880874a32299271
+bin/0107_agape_mesh_oracle.py                                    206  8387   0d6f04d6d890942e1807452dbbc8a3e763f8aacb7e041f17e183d5bd1143b6c4
+bin/0534_feed_oracle.py                                          49   2100   b06c31a8702d7c0a45dedeaf48b89871f3e1ee6481f0fe8b6941ed9c3c12049a
+bin/0677_physics_ledger_v1.py                                    136  5514   5045d79f48f4e152eff23fa52d0866721caec11a227e0a409b5de80c2b9a2a62
+bin/0678_physics_ledger_v2.py                                    163  6664   352fb65f307ca1583968483a6d5f962ad3ad28a6c2714d4be5586fb69a2308fb
+bin/0768_agape_cooperation_theorem.py                            84   3487   98fc5fe02d66255527ca1960a27d1d0cfd0b29211246993cc8d195cc535322da
+bin/0773_proof_builder.py                                        73   2609   9d048c003806c6529468385fbd67222c66131c816dd73fa5ca1220bb95c90db1
+bin/0775_sacred_language_theorem.py                              105  4369   51cb379a1942918918342af3caab67608785910d57dbb059e3de67fe2f2a89f4
+bin/0776_sacred_merkle_system.py                                 179  6508   38cb53a56a88adc3e42b9efd760e7dabd62166eba073a64cea620e9aa0ef772b
+bin/0778_theorem_generator.py                                    72   3217   897de37a8acee6ac9acc20b329ff5d1884cb70347ff947be9c7340d6bd5353c0
+bin/0779_theorem_generator_batch2.py                             76   3591   2d92c102dd1f51977149f1d2fb2b9dfab3d225eeec05cdebb57ba87744c61c10
+bin/0780_theorem_generator_batch3.py                             86   4072   68a4c288ce9d0c2cef4437b098674b2a0fba4a089e38b7f3cb41700d52e7dd3b
+bin/0781_theorem_generator_batch4.py                             106  5620   d85fe70db8bac08608485d30e367e4f8b4a68acc99f760a9234f313e3c4cfa35
+bin/0782_theorem_generator_batch5.py                             104  6568   67066a546000a59b9dddb0f3340d5104406eef77835df731787bc51970f35dd7
+bin/0783_theorems_extend.py                                      107  4535   84b79b011ac247adc09d21375420f9d12a2e2ca63e676d656f543d9b5520a3c6
+bin/0798_agape_oracle.py                                         139  5775   d7c20749fcdc997da08df47b423cb18023ab742d23152d8b842138436c865f0b
+bin/turing_tidbits_v1.py                                         370  11611  c439bb749e16323a314a63da68220a8eac7dd78db8b94814a4973ea3411dcf97
+bin/tidbit_registry_v1.py                                        142  5546   be0733bf59e1fcf5af5260d012e90f6738b58313fd1263af2313e47ed28ccdb3
+bin/popw_ledger.py                                               79   3551   b1b605df445df56f5ceeca33bd2c67bf543ada11324465240938785616a71eea
+bin/cache_pathway_orchestrator_v1.py                             176  7224   498f6eb12f6cb46bf7527987b29af7f3f8a5de6f9eaf0e286683b6e5b036bb59
+bin/route_promotion_plan_v1.py                                   266  7981   ad348da06ebafb3845d16d56d5f83b2c7a0bf73fd7166dfdfe61886b4d78f3d4
+bin/router_cache_probe_v1.py                                     252  6558   458a82c2429aa46c7555667df49a1c537e8a35ed46442826dbe4cc112fb22492
+bin/router_cache_probe_v2.py                                     272  6807   f049c93e57e3e9a016077e707469aa14d7b5f67f1048e30a951f933b86cd39a0
+bin/smart_router.py                                              146  5162   d1df9cbb93df9673a54bd7906504fc9589b9e61cc764e2bf385d27a4bebf9709
+bin/offline_route_cache_v1.sh                                    79   3263   19feacd95de6ed771ba022e7ee37767b91034dda1b02e591f0b1f40f7eb1bf05
+bin/build_turing_tidbits_kernel_v1.sh                            443  13933  29a63d459f24b53b443100ef34385e9cee7e519b310bc25f1ed456bedc7e35a7
+context_bridge/handoff-20260928_232839-l0-exact-cache-sealed.md  51   1890   5d81274095fc454fef832756fb5e9c8dca0b3eff065bbbc302fa36d7cf61e358
+
+=== SYNTAX / COMPILE RESULTS ===
+PASS bin/0012_newton_chain.py
+PASS bin/0054_agape_ledger_chain.py
+PASS bin/0107_agape_mesh_oracle.py
+PASS bin/0534_feed_oracle.py
+PASS bin/0677_physics_ledger_v1.py
+PASS bin/0678_physics_ledger_v2.py
+PASS bin/0768_agape_cooperation_theorem.py
+PASS bin/0773_proof_builder.py
+PASS bin/0775_sacred_language_theorem.py
+PASS bin/0776_sacred_merkle_system.py
+PASS bin/0778_theorem_generator.py
+PASS bin/0779_theorem_generator_batch2.py
+PASS bin/0780_theorem_generator_batch3.py
+PASS bin/0781_theorem_generator_batch4.py
+PASS bin/0782_theorem_generator_batch5.py
+PASS bin/0783_theorems_extend.py
+PASS bin/0798_agape_oracle.py
+PASS bin/turing_tidbits_v1.py
+PASS bin/tidbit_registry_v1.py
+PASS bin/popw_ledger.py
+PASS bin/cache_pathway_orchestrator_v1.py
+PASS bin/route_promotion_plan_v1.py
+PASS bin/router_cache_probe_v1.py
+PASS bin/router_cache_probe_v2.py
+PASS bin/smart_router.py
+PASS bin/offline_route_cache_v1.sh
+PASS bin/build_turing_tidbits_kernel_v1.sh
+
+=== MISSING CANDIDATES ===
+context_bridge/modular_turing_tidbit_v1.md
+
+=== ACTIVE ROUTE CACHE TABLES ===
+route_cache              route_cache_fts_config   route_cache_fts_docsize
+route_cache_fts          route_cache_fts_data     route_cache_fts_idx    
+--- route_cache schema ---
+CREATE TABLE route_cache (
+      key TEXT PRIMARY KEY,
+      query TEXT NOT NULL,
+      route TEXT NOT NULL,
+      model TEXT DEFAULT '',
+      response TEXT NOT NULL,
+      hits INTEGER DEFAULT 0,
+      provenance TEXT DEFAULT 'network',
+      ts TEXT DEFAULT (datetime('now'))
+    );
+CREATE INDEX idx_route ON route_cache(route);
+--- route_cache record count ---
+1
+
+=== TIDBIT / KERNEL FILES PRESENT ===
+.tinycrew/runs/tinycrew-20260928_221311/tidbit-cli-contract-20260928_223551.md
+.tinycrew/runs/tinycrew-20260928_221311/tidbit-cli-contract-20260928_223551.md.sha256
+.tinycrew/runs/tinycrew-20260928_221311/tidbit-ingest-20260928_230030.out
+.tinycrew/runs/tinycrew-20260928_221311/tidbit-ingest-20260928_230030.receipt
+.tinycrew/runs/tinycrew-20260928_221311/tidbit-ingest-20260928_230030.receipt.sha256
+.tinycrew/runs/tinycrew-20260928_221311/tidbit-verify-20260928_230030.out
+agape_kb/love_language/KERNEL_SEED
+agape_kb/universal_axioms/KERNEL_SEED
+agape_kb/universal_axioms/universal_axioms.json
+bin/0028_agape_neurogenic_kernel.py
+bin/0053_agape_kernel_v2.py
+bin/0093_deploy_openroot_kernel.py
+bin/0112_postulates.py
+bin/0586_axiom_cli.py
+bin/0626_kernel_translator.py
+bin/0766_axiom_mesh_sync_optiplex.py
+bin/0774_reorganize_postulates.py
+bin/0786_test_tidbit_library.py
+bin/__pycache__/0028_agape_neurogenic_kernel.cpython-312.pyc
+bin/__pycache__/0053_agape_kernel_v2.cpython-312.pyc
+bin/__pycache__/0093_deploy_openroot_kernel.cpython-312.pyc
+bin/__pycache__/0112_postulates.cpython-312.pyc
+bin/__pycache__/0586_axiom_cli.cpython-312.pyc
+bin/__pycache__/0626_kernel_translator.cpython-312.pyc
+bin/__pycache__/0766_axiom_mesh_sync_optiplex.cpython-312.pyc
+bin/__pycache__/0774_reorganize_postulates.cpython-312.pyc
+bin/__pycache__/0786_test_tidbit_library.cpython-312.pyc
+bin/__pycache__/tidbit_registry_v1.cpython-312.pyc
+bin/__pycache__/turing_tidbits_v1.cpython-312.pyc
+bin/build_turing_tidbits_kernel_v1.sh
+bin/tidbit_registry_v1.py
+bin/turing_tidbits_v1.py
+context_bridge/concept_sweeps/20260928_004258/tidbit.txt
+context_bridge/concepts/modular_turing_tidbit_v1.md
+cosmos_engine/KERNEL_SEED
+kernel/KERNEL_SEED
+
+=== SHA-256 RECEIPTS ===
+README.md: FAILED
+candidates.txt: FAILED open or read
+manifest.tsv: FAILED open or read
+function_index.txt: FAILED open or read
+logic_markers.txt: FAILED open or read
+compile_results.txt: FAILED open or read
+missing.txt: FAILED open or read
+errors.txt: FAILED open or read
+summary.txt: FAILED open or read

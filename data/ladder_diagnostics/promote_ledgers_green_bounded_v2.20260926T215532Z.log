@@ -1,0 +1,42 @@
+=== LEDGERS BOUNDED PROMOTION V2 ===
+[banked] py_compile PASS: ladder, a1, compost
+[banked] direct calibration proof begins
+[banked] scan optiplex: roots 3 | seen 100 | hashed 1 | cache-hit 99 | new-unique 0 | skipped-unreadable 0 | skipped-nonregular 0 | limit-reached yes
+[banked] direct_calibration_exit_code=0 elapsed_ms=285
+[banked] direct runner proof begins
+[banked] scan optiplex: roots 3 | seen 500 | hashed 1 | cache-hit 499 | new-unique 0 | skipped-unreadable 0 | skipped-nonregular 0 | limit-reached yes
+[banked] candidates=0
+[banked] direct_runner_exit_code=0 elapsed_ms=425
+[banked] ledger_rows=501 forbidden_rows=0
+[banked] pre_calibration_status=failed
+name           status  maturity  checks_ok  attempts  last_action                         last_ts                    evidence                                                                                                      
+-------------  ------  --------  ---------  --------  ----------------------------------  -------------------------  --------------------------------------------------------------------------------------------------------------
+ledgers_green  failed  auto      0          0         calibration PASSED (real, bounded)  2026-09-26T21:32:58+00:00  runner:  line 153, in main                                                                                    
+                                                                                                                         scan(con)                                                                                                 
+                                                                                                                       File "/home/jesse/openroot/bin/a1_core_v1.py", line 90, in scan                                             
+                                                                                                                         digest = sha256_file(fp)                                                                                  
+                                                                                                                                  ^^^^^^^^^^^^^^^                                                                                  
+                                                                                                                       File "/home/jesse/openroot/bin/a1_core_v1.py", line 59, in sha256_file                                      
+                                                                                                                         with open(p, "rb") as f:                                                                                  
+                                                                                                                              ^^^^^^^^^^^^^                                                                                        
+                                                                                                                     PermissionError: [Errno 13] Permission denied: '/home/jesse/openroot/consolidation-backups/untracked_collision
+[gate] bounded ladder calibration begins: ledgers_green
+[banked] calibration PASSED → ledgers_green promoted to CALIBRATED
+[exit=0]
+[banked] ladder_calibrate_exit_code=0
+[banked] post_calibration_status=calibrated
+name           status      maturity  checks_ok  attempts  last_action                         last_ts                    evidence                                                                                                                                             
+-------------  ----------  --------  ---------  --------  ----------------------------------  -------------------------  -----------------------------------------------------------------------------------------------------------------------------------------------------
+ledgers_green  calibrated  auto      0          0         calibration PASSED (real, bounded)  2026-09-26T21:55:34+00:00  [banked] scan optiplex: roots 3 | seen 100 | hashed 1 | cache-hit 99 | new-unique 0 | skipped-unreadable 0 | skipped-nonregular 0 | limit-reached yes
+[gate] bounded ladder run plus exit verification begins: ledgers_green
+[banked] ledgers_green VERIFIED GREEN — success endured
+[auto-trigger] → calibrating next stage: handoff_operational
+[banked] calibration PASSED → handoff_operational promoted to CALIBRATED
+[exit=0]
+[banked] ladder_run_exit_code=0
+[banked] final_status=verified
+name           status    maturity  checks_ok  attempts  last_action       last_ts                    evidence        
+-------------  --------  --------  ---------  --------  ----------------  -------------------------  ----------------
+ledgers_green  verified  auto      1          0         run+verify GREEN  2026-09-26T21:55:34+00:00  all checks green
+[banked] ledgers_green VERIFIED
+[banked] next_stage=handoff_operational

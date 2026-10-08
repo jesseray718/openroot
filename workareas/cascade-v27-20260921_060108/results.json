@@ -1,0 +1,163 @@
+{
+ "regime": {
+  "kappa": 0.08,
+  "gens": 40,
+  "decacy": 0.01,
+  "seed_tax": 0.3,
+  "seed_target": 0.5,
+  "shock_gen": 12,
+  "shock_loss": 0.6,
+  "seed_loss": 0.4,
+  "deploy_gens": 5,
+  "deploy_frac": 0.5,
+  "edge_bonus": 1.5,
+  "growth_cap": 0.08,
+  "return_frac": 0.3
+ },
+ "runs": [
+  {
+   "policy": "bottom-first",
+   "shocked": false,
+   "final_min_floor": 0.8069,
+   "final_median_floor": 0.8146,
+   "final_gini": 0.0267,
+   "frac_at_cap": 0.0,
+   "mean_seed_stock": 0.2517,
+   "recovery_gens": "never",
+   "cumulative_welfare": 231.4,
+   "ledger_leak": 231.397144,
+   "flow": {
+    "parked": 25.17,
+    "drawn": 0.0,
+    "granted": 0.0,
+    "overflow_cap": 0.0
+   }
+  },
+  {
+   "policy": "bottom-first",
+   "shocked": true,
+   "final_min_floor": 0.2761,
+   "final_median_floor": 0.2778,
+   "final_gini": 0.0206,
+   "frac_at_cap": 0.0,
+   "mean_seed_stock": 0.0491,
+   "recovery_gens": 24,
+   "cumulative_welfare": 83.94,
+   "ledger_leak": 175.565505,
+   "flow": {
+    "parked": 8.57,
+    "drawn": 0.0,
+    "granted": 3.01,
+    "overflow_cap": 0.0
+   }
+  },
+  {
+   "policy": "equal",
+   "shocked": false,
+   "final_min_floor": 0.5231,
+   "final_median_floor": 0.7056,
+   "final_gini": 0.1366,
+   "frac_at_cap": 0.07,
+   "mean_seed_stock": 0.2051,
+   "recovery_gens": "never",
+   "cumulative_welfare": 211.72,
+   "ledger_leak": 211.719143,
+   "flow": {
+    "parked": 20.51,
+    "drawn": 0.0,
+    "granted": 0.0,
+    "overflow_cap": 3.51
+   }
+  },
+  {
+   "policy": "equal",
+   "shocked": true,
+   "final_min_floor": 0.1641,
+   "final_median_floor": 0.2371,
+   "final_gini": 0.1877,
+   "frac_at_cap": 0.0,
+   "mean_seed_stock": 0.043,
+   "recovery_gens": "never",
+   "cumulative_welfare": 65.55,
+   "ledger_leak": 157.178403,
+   "flow": {
+    "parked": 7.13,
+    "drawn": 0.0,
+    "granted": 2.35,
+    "overflow_cap": 0.0
+   }
+  },
+  {
+   "policy": "merit-top",
+   "shocked": false,
+   "final_min_floor": 0.01,
+   "final_median_floor": 0.2102,
+   "final_gini": 0.5506,
+   "frac_at_cap": 0.2,
+   "mean_seed_stock": 0.0753,
+   "recovery_gens": "never",
+   "cumulative_welfare": -27.28,
+   "ledger_leak": -27.275917,
+   "flow": {
+    "parked": 7.56,
+    "drawn": 0.03,
+    "granted": 0.0,
+    "overflow_cap": 12.5
+   }
+  },
+  {
+   "policy": "merit-top",
+   "shocked": true,
+   "final_min_floor": 0.01,
+   "final_median_floor": 0.01,
+   "final_gini": 0.6377,
+   "frac_at_cap": 0.04,
+   "mean_seed_stock": 0.0642,
+   "recovery_gens": "never",
+   "cumulative_welfare": -88.37,
+   "ledger_leak": -23.619434,
+   "flow": {
+    "parked": 9.75,
+    "drawn": 0.01,
+    "granted": 2.8,
+    "overflow_cap": 2.34
+   }
+  },
+  {
+   "policy": "permaculture",
+   "shocked": false,
+   "final_min_floor": 0.7638,
+   "final_median_floor": 0.81,
+   "final_gini": 0.0362,
+   "frac_at_cap": 0.0,
+   "mean_seed_stock": 0.2398,
+   "recovery_gens": "never",
+   "cumulative_welfare": 228.75,
+   "ledger_leak": 228.746619,
+   "flow": {
+    "parked": 24.01,
+    "drawn": 0.03,
+    "granted": 0.0,
+    "overflow_cap": 0.0
+   }
+  },
+  {
+   "policy": "permaculture",
+   "shocked": true,
+   "final_min_floor": 0.2029,
+   "final_median_floor": 0.2451,
+   "final_gini": 0.1445,
+   "frac_at_cap": 0.0,
+   "mean_seed_stock": 0.0455,
+   "recovery_gens": "never",
+   "cumulative_welfare": 74.54,
+   "ledger_leak": 166.173865,
+   "flow": {
+    "parked": 7.73,
+    "drawn": 0.01,
+    "granted": 2.62,
+    "overflow_cap": 0.0
+   }
+  }
+ ]
+}

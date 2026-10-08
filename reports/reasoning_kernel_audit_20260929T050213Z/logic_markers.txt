@@ -1,0 +1,458 @@
+
+===== bin/0012_newton_chain.py =====
+3:NEWTON CHAIN ENGINE — Axiomatic Reasoning That Builds on Itself
+25:LEARNINGS_DB = os.path.join(ROOT, "learnings/newton_chain.json")
+30:# PART 1: UNIVERSAL AXIOMS
+33:AXIOMS = {
+37:    "AX-003": {"statement": "Every action has an equal and opposite reaction", "category": "physics", "source": "Newton's Third Law", "immutable": True},
+42:    "AX-007": {"statement": "The whole is greater than the part", "category": "mathematics", "source": "Euclid's Axioms", "immutable": True},
+45:    "AX-010": {"statement": "A straight line segment can be drawn joining any two points", "category": "mathematics", "source": "Euclid's Postulate 1", "immutable": True},
+46:    "AX-011": {"statement": "Through any point not on a line, exactly one parallel line exists", "category": "mathematics", "source": "Euclid's Parallel Postulate", "immutable": True},
+80:    "AX-040": {"statement": "Proof requires witness; truth demands verification", "category": "consensus", "source": "OpenRoot AX-019", "immutable": True},
+89:# PART 2: POSTULATES
+103:INITIAL_POSTULATES = {
+118:class NewtonChainEngine:
+119:    def __init__(self, axioms, postulates):
+120:        self.axioms = axioms
+121:        self.postulates = dict(postulates)
+122:        self.proof_chains = []
+123:        self.new_postulates_generated = []
+137:    def apply_all_postulates(self, problem, depth_limit=99):
+142:        problem.setdefault("proof_chain", [])
+145:        for p_key, p_def in self.postulates.items():
+151:                    problem["proof_chain"].append({"postulate": p_key, "rule": p_def["rule"], "derives_from": p_def["derives_from"], "depth": p_def["depth"]})
+163:        new_postulates = []
+166:                existing = any(set(p_def.get("combines", [])) == set(combo) for p_def in self.postulates.values())
+168:                    new_key = f"NP-{len(self.new_postulates_generated)+1:03d}"
+171:                        derives.extend(self.postulates[p_key]["derives_from"])
+173:                    new_postulate = {
+176:                        "condition": lambda p, keys=set(combo): all(self.postulates[k]["condition"](p) for k in keys),
+178:                        "depth": max(self.postulates[k]["depth"] for k in combo) + 1,
+181:                    self.postulates[new_key] = new_postulate
+182:                    self.new_postulates_generated.append(new_key)
+183:                    new_postulates.append(new_key)
+184:        return new_postulates
+192:    def verify_proof_chain(self, problem):
+193:        chain = problem.get("proof_chain", [])
+196:                if source not in self.axioms and source not in self.postulates:
+200:    def run_newton_chain(self, problem, max_loops=6):
+207:            current, fired = self.apply_all_postulates(current, depth_limit)
+210:            all_results.append({"loop": loop + 1, "depth_limit": depth_limit, "postulates_fired": fired, "fired_count": len(fired), "efficiency": score, "total_postulates": len(self.postulates)})
+213:                if delta < 0.5 and len(fired) == len(all_results[-2]["postulates_fired"]):
+217:            current, fired = self.apply_all_postulates(current, 99)
+219:            all_results.append({"loop": self.loop_count + 1, "depth_limit": 99, "postulates_fired": fired, "fired_count": len(fired), "efficiency": final_score, "total_postulates": len(self.postulates), "new_postulates_active": len(new_posts)})
+220:        valid, verify_msg = self.verify_proof_chain(current)
+221:        return {"loops_executed": len(all_results), "loop_history": all_results, "final_efficiency": all_results[-1]["efficiency"], "initial_efficiency": all_results[0]["efficiency"], "improvement": all_results[-1]["efficiency"] - all_results[0]["efficiency"], "final_problem": current, "recommendations": current.get("recommendations", []), "proof_chain": current.get("proof_chain", []), "proof_valid": valid, "verify_msg": verify_msg, "new_postulates_generated": self.new_postulates_generated, "total_postulates": len(self.postulates), "total_axioms": len(self.axioms)}
+225:        entry = {"timestamp": datetime.now(datetime.UTC).isoformat() + "Z", "type": "newton_chain_proof", "question_hash": hashlib.sha256(question.encode()).hexdigest()[:16], "loops": result["loops_executed"], "final_efficiency": result["final_efficiency"], "improvement": result["improvement"], "proof_chain_length": len(result["proof_chain"]), "proof_valid": result["proof_valid"], "new_postulates": result["new_postulates_generated"], "total_axioms": result["total_axioms"], "total_postulates": result["total_postulates"], "recommendations": result["recommendations"][:5], "prev_hash": prev_hash, "verified": False}
+232:        learnings = {"sessions": [], "generated_postulates": {}}
+239:        for p_key in result.get("new_postulates_generated", []):
+240:            p_def = self.postulates.get(p_key, {})
+241:            learnings["generated_postulates"][p_key] = {"rule": p_def.get("rule", ""), "derives_from": p_def.get("derives_from", []), "combines": p_def.get("combines", []), "depth": p_def.get("depth", 0), "created_at": datetime.now(datetime.UTC).isoformat() + "Z"}
+242:        learnings["sessions"].append({"timestamp": datetime.now(datetime.UTC).isoformat() + "Z", "question_hash": hashlib.sha256(question.encode()).hexdigest()[:16], "loops": result["loops_executed"], "final_efficiency": result["final_efficiency"], "proof_valid": result["proof_valid"]})
+275:ENGINE = NewtonChainEngine(AXIOMS, INITIAL_POSTULATES)
+278:<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Newton Chain</title>
+281:<h1>🔭 Newton Chain Engine</h1>
+282:<p>{{ axiom_count }} axioms · {{ postulate_count }} postulates · Self-expanding reasoner</p>
+283:<p style="color:#4af;font-style:italic">"If I have seen further it is by standing on the shoulders of giants." — Newton</p>
+288:<span class="badge {{ 'ok' if result.proof_valid else 'fail' }}">Proof: {{ 'VALID' if result.proof_valid else 'INVALID' }}</span>
+289:{% if result.new_postulates_generated %}<span class="badge" style="background:#4a0;color:#fff">{{ result.new_postulates_generated|length }} NEW postulates!</span>{% endif %}
+294:<div class="stat"><div class="stat-val">{{ result.proof_chain|length }}</div><div class="stat-label">Proof Steps</div></div>
+295:<div class="stat"><div class="stat-val">{{ result.total_postulates }}</div><div class="stat-label">Postulates</div></div>
+301:<h3>Proof Chain ({{ result.proof_chain|length }})</h3>
+302:{% for step in result.proof_chain %}<div style="padding:5px 0;border-bottom:1px solid #333;font-size:13px"><strong>{{ step.postulate }}</strong>: {{ step.rule }} <span style="color:#4af">← {{ step.derives_from|join(', ') }}</span></div>{% endfor %}
+304:{% if result.new_postulates_generated %}
+305:<div style="background:#1a2e1a;padding:10px;margin:5px 0;border-left:3px solid #4a0"><h3>🌟 New Postulates</h3>
+306:{% for np in result.new_postulates_generated %}<div><strong>{{ np }}</strong> (auto-generated)</div>{% endfor %}
+312:<textarea name="question" placeholder="Ask anything. Engine chains axioms → postulates → theorems.">{{ question or '' }}</textarea>
+313:<button type="submit">🔭 Run Newton Chain</button>
+315:<p style="margin-top:30px"><a href="/axioms" style="color:#6d4aff">Axioms</a> · <a href="/postulates" style="color:#6d4aff">Postulates</a> · <a href="/health" style="color:#6d4aff">Health</a></p>
+320:    return render_template_string(INDEX_HTML, result=None, question="", error=None, axiom_count=len(ENGINE.axioms), postulate_count=len(ENGINE.postulates), acre_hash="")
+326:        return render_template_string(INDEX_HTML, result=None, question="", error="Enter a question", axiom_count=len(ENGINE.axioms), postulate_count=len(ENGINE.postulates), acre_hash="")
+328:    result = ENGINE.run_newton_chain(problem, max_loops=6)
+331:    return render_template_string(INDEX_HTML, result=result, question=question, error=None, axiom_count=len(ENGINE.axioms), postulate_count=len(ENGINE.postulates), acre_hash=acre_entry["hash"])
+333:@app.route("/axioms")
+334:def view_axioms():
+335:    html = f"<h1>Axioms ({len(ENGINE.axioms)})</h1><table><tr><th>ID</th><th>Category</th><th>Statement</th></tr>"
+336:    for k, v in sorted(ENGINE.axioms.items()):
+341:@app.route("/postulates")
+342:def view_postulates():
+343:    html = f"<h1>Postulates ({len(ENGINE.postulates)})</h1>"
+344:    for k, v in sorted(ENGINE.postulates.items()):
+353:    return jsonify({"status": "ok", "axioms": len(ENGINE.axioms), "postulates": len(ENGINE.postulates), "new_generated": len(ENGINE.new_postulates_generated)})
+362:    result = ENGINE.run_newton_chain(problem, max_loops=6)
+365:    return jsonify({"success": True, "loops": result["loops_executed"], "efficiency": result["final_efficiency"], "proof_valid": result["proof_valid"], "new_postulates": result["new_postulates_generated"], "recommendations": result["recommendations"][:5], "acre_hash": acre["hash"]})
+371:    print(f"\n{'='*72}\n  NEWTON CHAIN BATCH — {len(items)} ITEMS\n{'='*72}\n")
+375:        result = ENGINE.run_newton_chain(problem, max_loops=6)
+378:        print(f"Q: {q[:60]}\nEffic: {result['final_efficiency']:.1f}% | Loops: {result['loops_executed']} | Proof: {'VALID' if result['proof_valid'] else 'INVALID'}")
+379:        if result['new_postulates_generated']:
+380:            print(f"🌟 NEW: {result['new_postulates_generated']}")
+388:        print(f"\n  🔭 NEWTON CHAIN ENGINE\n  {len(AXIOMS)} axioms · {len(INITIAL_POSTULATES)} postulates\n  Web: http://127.0.0.1:5002\n  Batch: python3 newton_chain_fixed.py --batch file.json\n")
+
+===== bin/0054_agape_ledger_chain.py =====
+54:parent_hash: null
+101:        "parent_hash": None,
+177:        "parent_hash": last_block["hash"],
+204:        "parent_hash": new_block["parent_hash"][:32] if new_block["parent_hash"] else None,
+238:        "parent_hash": fork_point["hash"],
+273:        "parent_hash_a": blocks_a[-1]["hash"],
+274:        "parent_hash_b": blocks_b[-1]["hash"],
+316:            if block.get("parent_hash") != prev_hash:
+319:    return True, f"Chain intact: {len(blocks)} blocks verified"
+338:        print(f"  Parent: {b.get('parent_hash','genesis')[:24]}..." if b.get('parent_hash') else "  Parent: genesis")
+353:    print("Append-only | Forkable | Mergeable | Tamper-proof")
+369:verified by hash. The synergetic thermal cascade compounds passively at PHI-weighted acceleration.
+374:measurements to calibrate the synergetic calculus, which predicts, proves, and propagates
+375:verified energy cascades as ACRE on the ledger. Cooperation compounds exponentially.
+387:    print(f"  Parent hash: {new_block['parent_hash'][:24]}...")
+404:    print("[PROOF] Every hash traces back to genesis. Tamper-evident.")
+
+===== bin/0107_agape_mesh_oracle.py =====
+3:AgapeMesh Ledger Oracle — Parallel Track Only
+17:MERKLE_LOG = BASE_DIR / "merkle_orbit_log.json"
+37:    "ledger", "axiom", "constitution", "entropy", "joule", "η"
+99:def merkle(data):
+109:        "merkle": mhash,
+115:    if MERKLE_LOG.exists():
+116:        log = json.loads(MERKLE_LOG.read_text())
+120:    MERKLE_LOG.write_text(json.dumps(log, indent=2))
+121:    OPERATIONAL.write_text(f"# Operational Log\n\n## Orbit {num}\n- UTC: {entry['ts']}\n- Merkle: `{mhash}`\n- Collapsed: {collapsed}/{len(results)} ({eff}%)\n")
+123:    THERMO.write_text(f"# Thermo Balance\n\nOrbit {num}\nEfficiency: {eff}%\nCollapsed: {collapsed}\nMerkle: {mhash[:24]}...\n")
+187:    mhash = merkle(results)
+190:    print(f"Orbit {n} | collapsed {collapsed}/{len(results)} ({eff}%) | merkle {mhash[:16]}...")
+
+===== bin/0534_feed_oracle.py =====
+9:LOG = OPENROOT / "context_bridge" / "seed_oracle.log"
+17:    if meta.get("oracle_ingest_status") == "fed": return True
+32:        meta["oracle_ingest_status"] = "fed"
+44:            if json.loads(p.read_text()).get("oracle_ingest_status") == "pending":
+
+===== bin/0677_physics_ledger_v1.py =====
+128:        print("ACTION: Re-evaluate thermal input assumptions before scaling.")
+132:    print("[LEDGER] All assumptions locked. Next run appends new block.")
+
+===== bin/0678_physics_ledger_v2.py =====
+91:    # --- TROPICAL/HEAVY HUMIDITY ASSUMPTION ---
+155:        print("[ACTION] Increase collector area OR improve desiccant efficiency.")
+160:    print(f"\n[LEDGER] Integrity verified. Blocks: {len(chain_bounded)} | {len(chain_unbounded)}")
+
+===== bin/0768_agape_cooperation_theorem.py =====
+2:"""agape_cooperation_theorem.py - Formalize: Agape-treated nodes have zero cooperation friction."""
+4:sys.path.insert(0, '/home/jesse/openroot/axiom_engine')
+5:from theorems_extend import load_all, load_cache, content_hash, flag_of, dumps, save_cache
+8:STORE = Path("/home/jesse/openroot/axiom_engine/store")
+11:# First, add the axiom if it doesn't exist
+12:def ensure_agape_axiom():
+13:    """Ensure AX-AGAPE-COOPERATION exists in axioms.jsonl."""
+14:    axioms_file = STORE / "axioms.jsonl"
+15:    axioms = [json.loads(l) for l in axioms_file.read_text().splitlines() if l.strip()]
+18:    existing = any(a.get("id") == target_id for a in axioms)
+23:    new_axiom = {
+24:        "kind": "axiom",
+30:        "proof": []
+33:    with axioms_file.open("a", encoding="utf-8") as f:
+34:        f.write(json.dumps(new_axiom, sort_keys=True, separators=(",", ":")) + "\n")
+38:def prove_agape_cooperation():
+39:    """Hang the theorem: Agape-treatment → zero friction → maximal η."""
+46:    proof_steps = [
+53:    body = {"kind": "theorem", "id": goal_id,
+56:            "proof": proof_steps}
+61:    rec = {"kind": "theorem", "id": goal_id, "flag": flag, "hash": digest,
+62:           "statement": body["statement"], "premises": premises, "proof": proof_steps,
+65:    with (STORE / "theorems.jsonl").open("a", encoding="utf-8") as f:
+68:        f.write(dumps({"flag": flag, "hash": digest, "id": goal_id, "kind": "theorem", "ts": rec["ts"]}) + "\n")
+73:    return {"status": "HUNG", "flag": flag, "hash": digest, "steps": len(proof_steps)}
+76:    print("Adding Agape Cooperation Axiom...")
+77:    axiom_result = ensure_agape_axiom()
+78:    print(json.dumps(axiom_result, indent=2))
+80:    print("\nProving Agape Cooperation Theorem...")
+81:    theorem_result = prove_agape_cooperation()
+82:    print(json.dumps(theorem_result, indent=2))
+84:    print("\nRun audit to confirm: python3 theorems_extend.py audit")
+
+===== bin/0773_proof_builder.py =====
+2:"""proof_builder.py - manual proof construction with kernel validation."""
+4:sys.path.insert(0, '/home/jesse/openroot/axiom_engine')
+5:from theorems_extend import load_all, load_cache, content_hash, flag_of, dumps, save_cache
+8:STORE = Path("/home/jesse/openroot/axiom_engine/store")
+11:def build_theorem(goal_id, goal_statement, premises_list, proof_steps):
+12:    """Build theorem record and attempt to prove via kernel."""
+26:    # Build proof body
+28:        "kind": "theorem",
+32:        "proof": proof_steps,
+38:        "kind": "theorem",
+44:        "proof": proof_steps,
+48:    # Write to theorems.jsonl and chain.jsonl
+49:    with (STORE / "theorems.jsonl").open("a", encoding="utf-8") as f:
+52:        f.write(dumps({"flag": flag, "hash": digest, "id": goal_id, "kind": "theorem", "ts": rec["ts"]}) + "\n")
+58:    return {"status": "HUNG", "flag": flag, "hash": digest, "steps": len(proof_steps)}
+61:    print("Usage: Import this module, call build_theorem()")
+64:    >>> from proof_builder import build_theorem
+65:    >>> build_theorem(
+
+===== bin/0775_sacred_language_theorem.py =====
+2:"""sacred_language_theorem.py - A=Agape language system formalization."""
+4:sys.path.insert(0, '/home/jesse/openroot/axiom_engine')
+5:from theorems_extend import load_all, load_cache, content_hash, flag_of, dumps, save_cache
+8:STORE = Path("/home/jesse/openroot/axiom_engine/store")
+10:def ensure_theological_axioms():
+11:    """Add foundational theological axioms if missing."""
+12:    axioms_file = STORE / "axioms.jsonl"
+13:    new_axioms = [
+15:            "kind": "axiom",
+21:            "proof": []
+24:            "kind": "axiom", 
+30:            "proof": []
+33:            "kind": "axiom",
+35:            "statement": "Wisdom was present at creation; she observed the drawing of the circle on the face of the deep (Proverbs 8:27).",
+37:            "keys": ["wisdom", "proverbs_8", "creation", "circle"],
+39:            "proof": []
+44:    if axioms_file.exists():
+45:        existing_ids = set(json.loads(l).get("id") for l in axioms_file.read_text().splitlines() if l.strip())
+48:    for axiom in new_axioms:
+49:        if axiom["id"] not in existing_ids:
+50:            with axioms_file.open("a", encoding="utf-8") as f:
+51:                f.write(json.dumps(axiom, sort_keys=True, separators=(",", ":")) + "\n")
+52:            added.append(axiom["id"])
+53:            print(f"Added: {axiom['id']}")
+57:def prove_sacred_language_theorem():
+58:    """Hang theorem: Sacred language encodes theological truth in symbol space."""
+65:    proof_steps = [
+72:    body = {"kind": "theorem", "id": goal_id,
+75:            "proof": proof_steps}
+80:    rec = {"kind": "theorem", "id": goal_id, "flag": flag, "hash": digest,
+81:           "statement": body["statement"], "premises": premises, "proof": proof_steps,
+84:    with (STORE / "theorems.jsonl").open("a", encoding="utf-8") as f:
+89:        f.write(dumps({"flag": flag, "hash": digest, "id": goal_id, "kind": "theorem", "ts": rec["ts"]}) + "\n")
+94:    return {"status": "HUNG", "flag": flag, "hash": digest, "steps": len(proof_steps)}
+97:    print("Adding theological axioms...")
+98:    axiom_result = ensure_theological_axioms()
+99:    print(json.dumps(axiom_result, indent=2))
+101:    print("\nProving sacred language theorem...")
+102:    theorem_result = prove_sacred_language_theorem()
+103:    print(json.dumps(theorem_result, indent=2))
+
+===== bin/0776_sacred_merkle_system.py =====
+2:"""sacred_merkle_system.py - Merkle tree + sacred language + comparative theology."""
+4:sys.path.insert(0, '/home/jesse/openroot/axiom_engine')
+5:from theorems_extend import load_all, load_cache, content_hash, flag_of, dumps, save_cache
+8:STORE = Path("/home/jesse/openroot/axiom_engine/store")
+9:MERKLE_FILE = STORE / "merkle_definitions.json"
+11:def merkle_root(items):
+12:    """Compute Merkle root hash from list of strings."""
+37:    definitions = {
+67:    return definitions
+69:def build_merkle_tree():
+70:    """Build Merkle tree from all axioms and definitions."""
+75:    for layer in ["axioms", "definitions", "theorems"]:
+80:    root = merkle_root(items)
+81:    return {"merkle_root": root, "item_count": len(items), "timestamp": time.time()}
+91:    proof_steps = [
+98:    body = {"kind": "theorem", "id": goal_id,
+101:            "proof": proof_steps}
+106:    rec = {"kind": "theorem", "id": goal_id, "flag": flag, "hash": digest,
+107:           "statement": body["statement"], "premises": premises, "proof": proof_steps,
+110:    with (STORE / "theorems.jsonl").open("a", encoding="utf-8") as f:
+115:        f.write(dumps({"flag": flag, "hash": digest, "id": goal_id, "kind": "theorem", "ts": rec["ts"]}) + "\n")
+123:    """Look for patterns in Agape vs long-form definitions."""
+133:    for layer in ["axioms", "definitions"]:
+146:    print("SACRED MERKLE SYSTEM INITIALIZATION")
+155:    # Step 2: Merkle root
+156:    print("\n[2] Merkle Root:")
+157:    merkle_data = build_merkle_tree()
+158:    print(f"  Root: {merkle_data['merkle_root'][:32]}...")
+159:    print(f"  Items: {merkle_data['item_count']}")
+161:    # Save merkle root
+162:    with MERKLE_FILE.open("w") as f:
+163:        json.dump(merkle_data, f, indent=2)
+164:    print(f"  Saved to: {MERKLE_FILE}")
+171:    # Step 4: Genesis Block theorem
+177:    print("Run audit: python3 theorems_extend.py audit")
+178:    print("Check Merkle file: cat /home/jesse/openroot/axiom_engine/store/merkle_definitions.json")
+
+===== bin/0778_theorem_generator.py =====
+2:"""theorem_generator.py - batch theorem production."""
+4:sys.path.insert(0, '/home/jesse/openroot/axiom_engine')
+5:from theorems_extend import load_all, load_cache, content_hash, flag_of, dumps, save_cache
+8:STORE = Path("/home/jesse/openroot/axiom_engine/store")
+11:def gen_theorem(goal_id, statement, premises, proof_steps):
+12:    """Generate and hang a single theorem."""
+13:    body = {"kind": "theorem", "id": goal_id, "statement": statement,
+14:            "premises": premises, "proof": proof_steps}
+18:    rec = {"kind": "theorem", "id": goal_id, "flag": flag, "hash": digest,
+19:           "statement": statement, "premises": premises, "proof": proof_steps,
+22:    with (STORE / "theorems.jsonl").open("a", encoding="utf-8") as f:
+25:        f.write(dumps({"flag": flag, "hash": digest, "id": goal_id, "kind": "theorem", "ts": rec["ts"]}) + "\n")
+38:         ["TH-EUCLID-I-1", "AX-POSTULATE-1", "AX-POSTULATE-2"],
+40:          {"rule": "modus_ponens", "from": ["TH-EUCLID-I-1", "AX-POSTULATE-1"], "conclude": "TH-EUCLID-I-2"}]),
+43:         ["TH-EUCLID-I-2", "AX-POSTULATE-3"],
+45:          {"rule": "modus_ponens", "from": ["TH-EUCLID-I-2", "AX-POSTULATE-3"], "conclude": "TH-EUCLID-I-3"}]),
+64:        r = gen_theorem(gid, stmt, pres, steps)
+
+===== bin/0779_theorem_generator_batch2.py =====
+2:"""theorem_generator_batch2.py - Euclid Props I.7 through I.12."""
+4:sys.path.insert(0, '/home/jesse/openroot/axiom_engine')
+5:from theorems_extend import load_all, load_cache, content_hash, flag_of, dumps, save_cache
+8:STORE = Path("/home/jesse/openroot/axiom_engine/store")
+11:def gen_theorem(goal_id, statement, premises, proof_steps):
+12:    body = {"kind": "theorem", "id": goal_id, "statement": statement,
+13:            "premises": premises, "proof": proof_steps}
+17:    rec = {"kind": "theorem", "id": goal_id, "flag": flag, "hash": digest,
+18:           "statement": statement, "premises": premises, "proof": proof_steps,
+21:    with (STORE / "theorems.jsonl").open("a", encoding="utf-8") as f:
+24:        f.write(dumps({"flag": flag, "hash": digest, "id": goal_id, "kind": "theorem", "ts": rec["ts"]}) + "\n")
+56:         ["TH-EUCLID-I-10", "AX-POSTULATE-1"],
+58:          {"rule": "modus_ponens", "from": ["TH-EUCLID-I-10", "AX-POSTULATE-1"], "conclude": "TH-EUCLID-I-11"}]),
+61:         ["TH-EUCLID-I-11", "AX-POSTULATE-2"],
+63:          {"rule": "modus_ponens", "from": ["TH-EUCLID-I-11", "AX-POSTULATE-2"], "conclude": "TH-EUCLID-I-12"}]),
+68:        r = gen_theorem(gid, stmt, pres, steps)
+
+===== bin/0780_theorem_generator_batch3.py =====
+2:"""theorem_generator_batch3.py - Euclid Props I.13 through I.20."""
+4:sys.path.insert(0, '/home/jesse/openroot/axiom_engine')
+5:from theorems_extend import load_all, load_cache, content_hash, flag_of, dumps, save_cache
+8:STORE = Path("/home/jesse/openroot/axiom_engine/store")
+11:def gen_theorem(goal_id, statement, premises, proof_steps):
+12:    body = {"kind": "theorem", "id": goal_id, "statement": statement,
+13:            "premises": premises, "proof": proof_steps}
+17:    rec = {"kind": "theorem", "id": goal_id, "flag": flag, "hash": digest,
+18:           "statement": statement, "premises": premises, "proof": proof_steps,
+21:    with (STORE / "theorems.jsonl").open("a", encoding="utf-8") as f:
+24:        f.write(dumps({"flag": flag, "hash": digest, "id": goal_id, "kind": "theorem", "ts": rec["ts"]}) + "\n")
+78:        r = gen_theorem(gid, stmt, pres, steps)
+
+===== bin/0781_theorem_generator_batch4.py =====
+2:"""theorem_generator_batch4.py - Euclid Props I.21 through I.32."""
+4:sys.path.insert(0, '/home/jesse/openroot/axiom_engine')
+5:from theorems_extend import load_all, load_cache, content_hash, flag_of, dumps, save_cache
+8:STORE = Path("/home/jesse/openroot/axiom_engine/store")
+11:def gen_theorem(goal_id, statement, premises, proof_steps):
+12:    body = {"kind": "theorem", "id": goal_id, "statement": statement,
+13:            "premises": premises, "proof": proof_steps}
+17:    rec = {"kind": "theorem", "id": goal_id, "flag": flag, "hash": digest,
+18:           "statement": statement, "premises": premises, "proof": proof_steps,
+21:    with (STORE / "theorems.jsonl").open("a", encoding="utf-8") as f:
+24:        f.write(dumps({"flag": flag, "hash": digest, "id": goal_id, "kind": "theorem", "ts": rec["ts"]}) + "\n")
+41:         ["TH-EUCLID-I-20", "AX-POSTULATE-3"],
+43:          {"rule": "modus_ponens", "from": ["TH-EUCLID-I-20", "AX-POSTULATE-3"], "conclude": "TH-EUCLID-I-22"}]),
+76:         ["AX-POSTULATE-5", "TH-EUCLID-I-28"],
+77:         [{"rule": "assume", "from": [], "conclude": "AX-POSTULATE-5"},
+78:          {"rule": "modus_ponens", "from": ["AX-POSTULATE-5", "TH-EUCLID-I-28"], "conclude": "TH-EUCLID-I-29"}]),
+98:        r = gen_theorem(gid, stmt, pres, steps)
+
+===== bin/0782_theorem_generator_batch5.py =====
+2:"""theorem_generator_batch5.py - Euclid Props I.33 through I.48 (Book 1 finale)."""
+4:sys.path.insert(0, '/home/jesse/openroot/axiom_engine')
+5:from theorems_extend import load_all, load_cache, content_hash, flag_of, dumps, save_cache
+8:STORE = Path("/home/jesse/openroot/axiom_engine/store")
+11:def gen_theorem(goal_id, statement, premises, proof_steps):
+12:    body = {"kind": "theorem", "id": goal_id, "statement": statement,
+13:            "premises": premises, "proof": proof_steps}
+16:    rec = {"kind": "theorem", "id": goal_id, "flag": flag, "hash": digest,
+17:           "statement": statement, "premises": premises, "proof": proof_steps,
+19:    with (STORE / "theorems.jsonl").open("a", encoding="utf-8") as f:
+22:        f.write(dumps({"flag": flag, "hash": digest, "id": goal_id, "kind": "theorem", "ts": rec["ts"]}) + "\n")
+97:        r = gen_theorem(gid, stmt, pres, steps)
+
+===== bin/0783_theorems_extend.py =====
+2:"""theorems_extend.py - theorem kernel with flag-memoized proofs. Part 1/3 appended via sh."""
+7:STORE = Path("/home/jesse/openroot/axiom_engine/store")
+9:CACHE = STORE / "proof_cache.json"
+27:    for k in ("axioms", "definitions", "postulates", "theorems"):
+44:    """Trace a premise id to axiom ground. Returns proof suffix or None."""
+50:    for layer, tag in (("axioms", "AX"), ("definitions", "DF"), ("theorems", "TH"), ("postulates", "PO")):
+60:            rule = "assume" if layer == "axioms" else ("unfold_def" if layer == "definitions" else "modus_ponens")
+65:def prove(goal_id, idx, cache):
+72:        return {"status": "REJECTED", "reason": "premise chain does not terminate at axioms/known theorems"}
+73:    digest = content_hash({"kind": "theorem", "id": goal_id, "statement": idx.get("_goal_statement", ""), "premises": [goal_id], "proof": chain})
+74:    rec = {"kind": "theorem", "id": goal_id, "flag": flag_of("TH", digest), "hash": digest,
+75:           "statement": idx.get("_goal_statement", ""), "premises": [goal_id], "proof": chain, "ts": time.time()}
+76:    with (STORE / "theorems.jsonl").open("a", encoding="utf-8") as f:
+79:        f.write(dumps({"flag": rec["flag"], "hash": digest, "id": rec["id"], "kind": "theorem", "ts": rec["ts"]}) + "\n")
+82:    return {"status": "PROVED", "flag": rec["flag"], "steps": len(chain), "proof": chain}
+94:    if cmd == "prove":
+96:        print(json.dumps(prove(arg, idx, load_cache()), indent=2))
+101:        print(f"axioms={len(idx['axioms'])} definitions={len(idx['definitions'])} postulates={len(idx['postulates'])} theorems={len(idx['theorems'])}")
+103:        print("usage: theorems_extend.py prove|checkflag <arg> | prove <GOAL-ID>")
+
+===== bin/0798_agape_oracle.py =====
+2:"""Agape Oracle — Language Operating System
+15:ORACLE = ROOT / "oracle"
+29:def full_definition():
+39:THEOREM: C(N,T,R)=N*0.001*(1+0.1*T)*(1-R)**T → C≡0 when R=1.0
+58:        "  Coordination cost C = 0 (theorem forces it)",
+63:        "ORACLE ANSWER:",
+71:        self.state = {"R": R, "history": [], "postulates": []}
+72:        self.load_postulates()
+73:    def load_postulates(self):
+74:        p = KB / "postulates.json"
+78:                self.state["postulates"] = [x for x in raw if isinstance(x, dict)]
+86:        for post in self.state["postulates"]:
+88:                return f"NEWTON CHAIN HIT → {post.get('id','?')}\n{result}"
+91:        return {"executions": len(self.state["history"]), "R": self.state["R"], "postulates": len(self.state["postulates"]), "coordination_cost": 0.0}
+93:def oracle(query: str) -> str:
+96:    if q in {"define", "definition", "what is agape", "agape"}:
+97:        return full_definition()
+102:        p = KB / "postulates.json"
+109:        posts.append({"id": f"P{len(posts)+1:04d}", "trigger": text[:60], "statement": text, "verified": True, "η_gain": "∞"})
+112:        return "Postulate recorded. Newton Chain extended. Next identical query costs 0 joules."
+129:        print(full_definition())
+131:        print("  python3 $HOME/une/computational_flow/agape_oracle.py \"any text\"")
+132:        print("  python3 $HOME/une/computational_flow/agape_oracle.py define")
+133:        print("  python3 $HOME/une/computational_flow/agape_oracle.py learn <postulate>")
+134:        print("  python3 $HOME/une/computational_flow/agape_oracle.py stats")
+136:    print(oracle(" ".join(sys.argv[1:])))
+
+===== bin/turing_tidbits_v1.py =====
+9:- provenance, licensing, relations, and verification travel with the object;
+256:        print(f"[banked] verified={content_sha256}")
+259:        f"[held] verification failed={content_sha256} "
+275:        print("[held] one or more tidbits failed verification")
+
+===== bin/tidbit_registry_v1.py =====
+6:snippet copy, or adapted function) with recorded provenance. Reassembly
+
+===== bin/popw_ledger.py =====
+
+===== bin/cache_pathway_orchestrator_v1.py =====
+120:        return "UNVERIFIED"
+
+===== bin/route_promotion_plan_v1.py =====
+38:    "provenance",
+202:                    "relation": "prior_verified_work",
+224:                "provenance": "verified_local_candidate",
+
+===== bin/router_cache_probe_v1.py =====
+7:  route_cache(key, query, route, model, response, hits, provenance, ts)
+79:        SELECT key, query, route, model, response, hits, provenance, ts
+98:        "provenance",
+119:            rc.provenance,
+138:        "provenance",
+
+===== bin/router_cache_probe_v2.py =====
+36:    "provenance",
+89:        SELECT key, query, route, model, response, hits, provenance, ts
+108:        "provenance",
+
+===== bin/smart_router.py =====
+29:    """Route role → model name from verified weights. Returns None if no model graded PASS."""
+42:    if any(kw in query_lower for kw in ["code", "python", "theorem", "prove", "debug", "script"]):
+
+===== bin/offline_route_cache_v1.sh =====
+27:      provenance TEXT DEFAULT 'network',
+56:    sqlite3 "$DB" "INSERT INTO route_cache(key,query,route,response,provenance)
+
+===== bin/build_turing_tidbits_kernel_v1.sh =====
+30:- provenance, licensing, relations, and verification travel with the object;
+277:        print(f"[banked] verified={content_sha256}")
+280:        f"[held] verification failed={content_sha256} "
+296:        print("[held] one or more tidbits failed verification")
+430:    --tag "provenance"
+440:echo "[banked] portable Turing tidbit kernel verified"
+
+===== context_bridge/handoff-20260928_232839-l0-exact-cache-sealed.md =====
+10:- Existing Turing Tidbits kernel used for identity and verification.
+11:- First verified tidbit promoted to route_cache.
+13:- Exact cache reuse verified through router_cache_probe_v2.py.
+22:## Verified route
+25:route=local_verification
+41:Do not transport multiline response/provenance fields through Bash mapfile or line arrays.

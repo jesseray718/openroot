@@ -1,0 +1,10 @@
+{
+  "arguments": {
+    "query": "commits, PRs, issues",
+    "repos": [
+      "jesseray718/jesseray718",
+      "jesseray718/openroot"
+    ]
+  },
+  "name": "search_github"
+}

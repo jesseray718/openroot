@@ -1,0 +1,35 @@
+=== LEDGERS PRE-PROMOTION ===
+[banked] py_compile PASS: ladder, a1 core, compost
+[banked] universal_doc_ledger_present=24576_bytes
+[banked] a1 check-bin proof begins
+[banked] bin/ tracked in git: 1585 files
+[banked] ledger schema proof begins
+docs
+kinetics
+red_words
+[banked] ledger_table_count=3
+[banked] pre_calibration_status=calibrated
+name           status      maturity  checks_ok  attempts  last_action                         last_ts                    evidence                                
+-------------  ----------  --------  ---------  --------  ----------------------------------  -------------------------  ----------------------------------------
+ledgers_green  calibrated  auto      0          0         calibration PASSED (real, bounded)  2026-09-26T21:27:09+00:00  [banked] bin/ tracked in git: 1585 files
+[banked] post_calibration_status=calibrated
+name           status      maturity  checks_ok  attempts  last_action                         last_ts                    evidence                                
+-------------  ----------  --------  ---------  --------  ----------------------------------  -------------------------  ----------------------------------------
+ledgers_green  calibrated  auto      0          0         calibration PASSED (real, bounded)  2026-09-26T21:27:09+00:00  [banked] bin/ tracked in git: 1585 files
+[gate] bounded real ledger scan and compost ranking begins: ledgers_green
+[exit=0]
+[banked] ladder_run_exit_code=0
+[banked] final_status=failed
+name           status  maturity  checks_ok  attempts  last_action                         last_ts                    evidence                                                                                                      
+-------------  ------  --------  ---------  --------  ----------------------------------  -------------------------  --------------------------------------------------------------------------------------------------------------
+ledgers_green  failed  auto      0          0         calibration PASSED (real, bounded)  2026-09-26T21:32:58+00:00  runner:  line 153, in main                                                                                    
+                                                                                                                         scan(con)                                                                                                 
+                                                                                                                       File "/home/jesse/openroot/bin/a1_core_v1.py", line 90, in scan                                             
+                                                                                                                         digest = sha256_file(fp)                                                                                  
+                                                                                                                                  ^^^^^^^^^^^^^^^                                                                                  
+                                                                                                                       File "/home/jesse/openroot/bin/a1_core_v1.py", line 59, in sha256_file                                      
+                                                                                                                         with open(p, "rb") as f:                                                                                  
+                                                                                                                              ^^^^^^^^^^^^^                                                                                        
+                                                                                                                     PermissionError: [Errno 13] Permission denied: '/home/jesse/openroot/consolidation-backups/untracked_collision
+[held] ledgers_green final status='failed'
+[gate] inspect exact scan, compost, or exit-verification output

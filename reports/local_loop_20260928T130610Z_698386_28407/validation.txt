@@ -1,0 +1,262 @@
+=== Shell syntax: maintained paths only ===
+PASS archive/cleanup-20260921_160638/scripts/ci_heal_v1.sh
+PASS archive/cleanup-20260921_160638/scripts/or_install_v1.sh
+PASS archive/cleanup-20260921_161947/scripts/or_fullrepo_seal_v1.sh
+PASS archive/cleanup-20260921_161947/scripts/or_optclean_v1.sh
+PASS archive/session-20260925/superloop_anchor_v3p4.sh
+PASS archive/session-20260925/superloop_census_v3p3.sh
+PASS archive/session-20260925/superloop_patch_v3p2.sh
+archive/session-20260925/superloop_wire_v4.sh: line 181: syntax error: unexpected end of file
+FAIL archive/session-20260925/superloop_wire_v4.sh
+PASS archive/window-20260921_004746/bot_stop.sh
+PASS bin/abstract_grade.sh
+PASS bin/add_contributor_acknowledgment_v1.sh
+PASS bin/agape_node_bridge.sh
+PASS bin/agent.sh
+PASS bin/bank_week_scripts_v1.1.sh
+PASS bin/bank_week_scripts_v1.sh
+PASS bin/board.sh
+PASS bin/bot_stop.sh
+PASS bin/build_openroot_knowledge_intake_v1.sh
+PASS bin/build_turing_tidbits_kernel_v1.sh
+PASS bin/calibrate_then_run_tooling_green_v1.sh
+PASS bin/cascade_release_v2.sh
+PASS bin/ci_fail_diagnosis_v1.sh
+PASS bin/compound_orchestrate.sh
+PASS bin/compound_v1.sh
+PASS bin/concept_sweep_v1.sh
+PASS bin/core_view_server.sh
+PASS bin/daily_loop_v1.sh
+PASS bin/db_tune.sh
+PASS bin/diagnose_tooling_green_v1.sh
+PASS bin/dispatch_court_v6.sh
+PASS bin/doctrine_v1.sh
+PASS bin/final_cleanup.sh
+PASS bin/finalize_workflow.sh
+PASS bin/finish_vision_v2.sh
+PASS bin/fix_launch_ladder_bug1_v2.sh
+PASS bin/fleet_check_v1.sh
+PASS bin/fleet_final_hygiene_v4.sh
+PASS bin/fleet_snapshot_symposium.sh
+PASS bin/fleet_squash_hygiene_v1.sh
+PASS bin/fleet_squash_hygiene_v2.sh
+PASS bin/frp10_probe.sh
+PASS bin/frp11_forensics.sh
+PASS bin/frp12_execute.sh
+PASS bin/frp5_deep_audit.sh
+PASS bin/frp6_fleet_squash.sh
+PASS bin/frp7_triage.sh
+PASS bin/frp8_prune_classify.sh
+PASS bin/frp9_tree_dedupe.sh
+PASS bin/fuse_router_lb_seal_v1.sh
+PASS bin/gh_audit_v2.sh
+PASS bin/gh_audit_v3.sh
+PASS bin/gh_audit_v3_patched.sh
+PASS bin/gh_fleet_housekeeping_v1.1.sh
+PASS bin/gh_fleet_housekeeping_v1.sh
+PASS bin/git_absorb_v1.sh
+PASS bin/goals_rebuild_v1.sh
+PASS bin/goals_rebuild_v4.sh
+PASS bin/hygiene_fix_driver_v1.sh
+PASS bin/hygiene_fix_driver_v3.sh
+PASS bin/hygiene_fixes_v1.sh
+PASS bin/hype_gate.sh
+PASS bin/inspect_ladder_bug1_v1.sh
+PASS bin/key_setup_fuse_v2.sh
+PASS bin/knowledge_weave.sh
+PASS bin/lb.sh
+PASS bin/lb_commit_seal_v2.sh
+PASS bin/lb_stack_gate_all.sh
+PASS bin/lb_stack_sweep.sh
+PASS bin/lb_team_gate_call.sh
+PASS bin/lessons_v1.sh
+PASS bin/logbridge_v1.sh
+PASS bin/lumo_bridge_run.sh
+PASS bin/master_finalize_v1.sh
+PASS bin/master_finalize_v2.sh
+PASS bin/master_finalize_v3.sh
+PASS bin/master_salvage_v1.sh
+PASS bin/merge_pr59_v1.sh
+PASS bin/merge_pr59_v2.sh
+PASS bin/merge_pr59_v3.sh
+PASS bin/mesh_fix_v3.sh
+PASS bin/mesh_publish_v2.sh
+PASS bin/mesh_recruit_v1.sh
+PASS bin/mesh_refine_v1.sh
+PASS bin/mesh_retry_v1.sh
+PASS bin/mesh_ship_v2.sh
+PASS bin/mobile_audit_trigger.sh
+PASS bin/model_prune.sh
+PASS bin/next_actions_20260920_v1.sh
+PASS bin/ollama_diagnose.sh
+PASS bin/onepass_v3.sh
+PASS bin/openroot_board_v1.sh
+PASS bin/openroot_unified_launch_v1.sh
+PASS bin/pathway_chain_test.sh
+PASS bin/pathway_closeout_v6.sh
+PASS bin/pathway_rescue_v5.sh
+bin/pathway_settlement_v7.sh: line 64: syntax error near unexpected token `<<'
+bin/pathway_settlement_v7.sh: line 64: `case "$FIRST" in cat*<<*) MATCH=1;; *) MATCH=0;; esac; if [ "$MATCH" = "1" ]; then'
+FAIL bin/pathway_settlement_v7.sh
+PASS bin/permaculture_orchestrator_v3.sh
+PASS bin/pr59_rescue_v1.sh
+PASS bin/pr_intake.sh
+PASS bin/profile_update_v1.sh
+PASS bin/promote_mistake_engine_ready_v2.sh
+PASS bin/promote_tooling_green_v2.sh
+PASS bin/queue_sweep_v1.sh
+PASS bin/readme_contributors.sh
+PASS bin/readme_draft_loop.sh
+PASS bin/rebuild_core_workflow.sh
+PASS bin/recover_v1.sh
+PASS bin/recovery_final_status.sh
+PASS bin/refine_next.sh
+PASS bin/refinement_loop_v2.sh
+PASS bin/refinement_loop_v3.sh
+PASS bin/register_pathway.sh
+PASS bin/reh1t_credit_check_v1.sh
+PASS bin/reh1t_pr53_make_right_v1.sh
+PASS bin/reh1t_reconcile_v2.sh
+PASS bin/repair_ladder_registration_v2.sh
+PASS bin/repair_mistake_engine_runner_v1.sh
+PASS bin/repair_mistake_engine_runner_v2.sh
+PASS bin/repair_tooling_green_blockers_v1.sh
+PASS bin/repo_clean_v1.sh
+PASS bin/research_ready_v1.sh
+PASS bin/resolve_pathway.sh
+PASS bin/resolve_pr58_v1.sh
+bin/rollout_openroot.sh: line 56: warning: here-document at line 41 delimited by end-of-file (wanted `README_EOF')
+PASS bin/rollout_openroot.sh
+PASS bin/run_calibrated_mistake_engine_v1.sh
+PASS bin/run_calibrated_tooling_green_v1.sh
+PASS bin/run_handoff_v1.sh
+PASS bin/run_tooling_green_v1.sh
+PASS bin/seal_perma_v3.sh
+PASS bin/seal_session_v1.sh
+PASS bin/stack_gate.sh
+PASS bin/superlinear.sh
+PASS bin/sync_to_optiplex.sh
+PASS bin/task_recall.sh
+PASS bin/team_gate_v2.sh
+PASS bin/todo_tick_v1.sh
+PASS bin/uplift_debris_classifier_v1.sh
+PASS bin/uplift_debris_classifier_v2.sh
+PASS bin/uplift_pathway_audit_v3.sh
+PASS bin/verify_openroot.sh
+PASS bin/weekly_audit_v1.sh
+PASS bin/window_cadence_v1.sh
+PASS bin/write_context_bridge.sh
+PASS bot_stop.sh
+context_bridge/refinement_loop_v1.sh: line 99: syntax error: unexpected end of file
+FAIL context_bridge/refinement_loop_v1.sh
+context_bridge/workflow_recover.sh: line 1: syntax error near unexpected token `newline'
+context_bridge/workflow_recover.sh: line 1: `<content above>'
+FAIL context_bridge/workflow_recover.sh
+PASS recovery_minimal_v2026.09.24.sh
+PASS recovery_superlinear_v2026.09.24.sh
+PASS run-remote.sh
+PASS scripts/install_permaculture_router.sh
+PASS scripts/new_design_packet.sh
+PASS scripts/preview_open_hardware_suite.sh
+PASS setup-optiplex.sh
+PASS tools/run-task-optiplex.sh
+PASS tools/run-task-ssh.sh
+PASS tools/run-task.sh
+
+=== Python compile: maintained paths only ===
+bin/0557_test-loadable.py:1394: SyntaxWarning: invalid escape sequence '\['
+  ("SCAN (TABLE )?t VIRTUAL TABLE INDEX 0:3{___}___\[___"),
+bin/0928_gperf_fold_key_conv.py:10: SyntaxWarning: invalid escape sequence '\s'
+  REG_HASH_FUNC = re.compile('hash\s*\(register\s+const\s+char\s*\*\s*str,\s*register\s+size_t\s+len\s*\)')
+bin/0928_gperf_fold_key_conv.py:11: SyntaxWarning: invalid escape sequence '\['
+  REG_STR_AT = re.compile('str\[(\d+)\]')
+bin/0928_gperf_fold_key_conv.py:12: SyntaxWarning: invalid escape sequence '\s'
+  REG_RETURN_TYPE = re.compile('^const\s+short\s+int\s*\*')
+bin/0928_gperf_fold_key_conv.py:13: SyntaxWarning: invalid escape sequence '\d'
+  REG_FOLD_KEY = re.compile('unicode_fold(\d)_key\s*\(register\s+const\s+char\s*\*\s*str,\s*register\s+size_t\s+len\)')
+bin/0928_gperf_fold_key_conv.py:14: SyntaxWarning: invalid escape sequence '\{'
+  REG_ENTRY = re.compile('\{".*?",\s*(-?\d+)\s*\}')
+bin/0928_gperf_fold_key_conv.py:15: SyntaxWarning: invalid escape sequence '\s'
+  REG_IF_LEN = re.compile('\s*if\s*\(\s*len\s*<=\s*MAX_WORD_LENGTH.+')
+bin/0928_gperf_fold_key_conv.py:16: SyntaxWarning: invalid escape sequence '\s'
+  REG_GET_HASH = re.compile('(?:register\s+)?(?:unsigned\s+)?int\s+key\s*=\s*hash\s*\(str,\s*len\);')
+bin/0928_gperf_fold_key_conv.py:17: SyntaxWarning: invalid escape sequence '\s'
+  REG_GET_CODE = re.compile('(?:register\s+)?const\s+char\s*\*\s*s\s*=\s*wordlist\[key\]\.name;')
+bin/0928_gperf_fold_key_conv.py:18: SyntaxWarning: invalid escape sequence '\s'
+  REG_CODE_CHECK = re.compile('if\s*\(\*str\s*==\s*\*s\s*&&\s*!strncmp.+\)')
+bin/0928_gperf_fold_key_conv.py:19: SyntaxWarning: invalid escape sequence '\s'
+  REG_RETURN_WL = re.compile('return\s+&wordlist\[key\];')
+bin/0929_gperf_unfold_key_conv.py:10: SyntaxWarning: invalid escape sequence '\s'
+  REG_HASH_FUNC = re.compile('hash\s*\(register\s+const\s+char\s*\*\s*str,\s*register\s+size_t\s+len\s*\)')
+bin/0929_gperf_unfold_key_conv.py:11: SyntaxWarning: invalid escape sequence '\['
+  REG_STR_AT = re.compile('str\[(\d+)\]')
+bin/0929_gperf_unfold_key_conv.py:12: SyntaxWarning: invalid escape sequence '\s'
+  REG_UNFOLD_KEY = re.compile('onigenc_unicode_unfold_key\s*\(register\s+const\s+char\s*\*\s*str,\s*register\s+size_t\s+len\)')
+bin/0929_gperf_unfold_key_conv.py:13: SyntaxWarning: invalid escape sequence '\{'
+  REG_ENTRY = re.compile('\{".+?",\s*/\*(.+?)\*/\s*(-?\d+),\s*(\d)\}')
+bin/0929_gperf_unfold_key_conv.py:14: SyntaxWarning: invalid escape sequence '\{'
+  REG_EMPTY_ENTRY = re.compile('\{"",\s*(-?\d+),\s*(\d)\}')
+bin/0929_gperf_unfold_key_conv.py:15: SyntaxWarning: invalid escape sequence '\s'
+  REG_IF_LEN = re.compile('\s*if\s*\(\s*len\s*<=\s*MAX_WORD_LENGTH.+')
+bin/0929_gperf_unfold_key_conv.py:16: SyntaxWarning: invalid escape sequence '\s'
+  REG_GET_HASH = re.compile('(?:register\s+)?(?:unsigned\s+)?int\s+key\s*=\s*hash\s*\(str,\s*len\);')
+bin/0929_gperf_unfold_key_conv.py:17: SyntaxWarning: invalid escape sequence '\s'
+  REG_GET_CODE = re.compile('(?:register\s+)?const\s+char\s*\*\s*s\s*=\s*wordlist\[key\]\.name;')
+bin/0929_gperf_unfold_key_conv.py:18: SyntaxWarning: invalid escape sequence '\s'
+  REG_CODE_CHECK = re.compile('if\s*\(\*str\s*==\s*\*s\s*&&\s*!strncmp.+\)')
+bin/0930_make_unicode_egcb_data.py:11: SyntaxWarning: invalid escape sequence '\s'
+  PR_TOTAL_REG = re.compile("#\s*Total\s+(?:code\s+points|elements):")
+bin/0930_make_unicode_egcb_data.py:12: SyntaxWarning: invalid escape sequence '\s'
+  PR_LINE_REG  = re.compile("([0-9A-Fa-f]+)(?:..([0-9A-Fa-f]+))?\s*;\s*(\w+)")
+bin/0930_make_unicode_egcb_data.py:13: SyntaxWarning: invalid escape sequence '\w'
+  PA_LINE_REG  = re.compile("(\w+)\s*;\s*(\w+)")
+bin/0930_make_unicode_egcb_data.py:14: SyntaxWarning: invalid escape sequence '\s'
+  PVA_LINE_REG = re.compile("(sc|gc)\s*;\s*(\w+)\s*;\s*(\w+)(?:\s*;\s*(\w+))?")
+bin/0930_make_unicode_egcb_data.py:15: SyntaxWarning: invalid escape sequence '\.'
+  BL_LINE_REG  = re.compile("([0-9A-Fa-f]+)\.\.([0-9A-Fa-f]+)\s*;\s*(.*)")
+bin/0930_make_unicode_egcb_data.py:16: SyntaxWarning: invalid escape sequence '\s'
+  VERSION_REG  = re.compile("#\s*.*-(\d+)\.(\d+)\.(\d+)\.txt")
+bin/0931_make_unicode_fold_data.py:18: SyntaxWarning: invalid escape sequence '\s'
+  LINE_REG = re.compile("([0-9A-F]{1,6}); (.); ([0-9A-F]{1,6})(?: ([0-9A-F]{1,6}))?(?: ([0-9A-F]{1,6}))?;(?:\s*#\s*)(.*)")
+bin/0931_make_unicode_fold_data.py:19: SyntaxWarning: invalid escape sequence '\d'
+  VERSION_REG  = re.compile("#.*-(\d+)\.(\d+)\.(\d+)\.txt")
+bin/0932_make_unicode_property_data.py:19: SyntaxWarning: invalid escape sequence '\s'
+  UD_FIRST_REG = re.compile("<.+,\s*First>")
+bin/0932_make_unicode_property_data.py:20: SyntaxWarning: invalid escape sequence '\s'
+  UD_LAST_REG  = re.compile("<.+,\s*Last>")
+bin/0932_make_unicode_property_data.py:21: SyntaxWarning: invalid escape sequence '\s'
+  PR_TOTAL_REG = re.compile("#\s*Total\s+(?:code\s+points|elements):")
+bin/0932_make_unicode_property_data.py:22: SyntaxWarning: invalid escape sequence '\s'
+  PR_LINE_REG  = re.compile("([0-9A-Fa-f]+)(?:..([0-9A-Fa-f]+))?\s*;\s*(\w+)")
+bin/0932_make_unicode_property_data.py:23: SyntaxWarning: invalid escape sequence '\w'
+  PA_LINE_REG  = re.compile("(\w+)\s*;\s*(\w+)")
+bin/0932_make_unicode_property_data.py:24: SyntaxWarning: invalid escape sequence '\s'
+  PVA_LINE_REG = re.compile("(sc|gc)\s*;\s*(\w+)\s*;\s*(\w+)(?:\s*;\s*(\w+))?")
+bin/0932_make_unicode_property_data.py:25: SyntaxWarning: invalid escape sequence '\.'
+  BL_LINE_REG  = re.compile("([0-9A-Fa-f]+)\.\.([0-9A-Fa-f]+)\s*;\s*(.*)")
+bin/0932_make_unicode_property_data.py:26: SyntaxWarning: invalid escape sequence '\s'
+  UNICODE_VERSION_REG = re.compile("#\s*.*-(\d+)\.(\d+)\.(\d+)\.txt")
+bin/0932_make_unicode_property_data.py:27: SyntaxWarning: invalid escape sequence '\s'
+  EMOJI_VERSION_REG   = re.compile("(?i)#.+Version\s+(\d+)\.(\d+)")
+bin/0933_make_unicode_wb_data.py:11: SyntaxWarning: invalid escape sequence '\s'
+  PR_TOTAL_REG = re.compile("#\s*Total\s+(?:code\s+points|elements):")
+bin/0933_make_unicode_wb_data.py:12: SyntaxWarning: invalid escape sequence '\s'
+  PR_LINE_REG  = re.compile("([0-9A-Fa-f]+)(?:..([0-9A-Fa-f]+))?\s*;\s*(\w+)")
+bin/0933_make_unicode_wb_data.py:13: SyntaxWarning: invalid escape sequence '\w'
+  PA_LINE_REG  = re.compile("(\w+)\s*;\s*(\w+)")
+bin/0933_make_unicode_wb_data.py:14: SyntaxWarning: invalid escape sequence '\s'
+  PVA_LINE_REG = re.compile("(sc|gc)\s*;\s*(\w+)\s*;\s*(\w+)(?:\s*;\s*(\w+))?")
+bin/0933_make_unicode_wb_data.py:15: SyntaxWarning: invalid escape sequence '\.'
+  BL_LINE_REG  = re.compile("([0-9A-Fa-f]+)\.\.([0-9A-Fa-f]+)\s*;\s*(.*)")
+bin/0933_make_unicode_wb_data.py:16: SyntaxWarning: invalid escape sequence '\s'
+  VERSION_REG  = re.compile("#\s*.*-(\d+)\.(\d+)\.(\d+)\.txt")
+compileall=PASS
+
+=== Git diff check ===
+diff_check=PASS
+
+=== Validation summary ===
+shell_failures=4
+python_failures=0
+diff_failures=0
+validation_status=FAIL

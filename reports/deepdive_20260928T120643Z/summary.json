@@ -1,0 +1,15 @@
+{
+  "branch": null,
+  "fatal_events": 0,
+  "git_dirty": true,
+  "head": "2e9c68398fb4d2be67c08bde2441bf8826925788",
+  "manifest_mentions": 5,
+  "next_actions": [
+    "Read report.md and identify only evidence-backed failures.",
+    "Use a bounded local proposal generator to produce a patch plan, not automatic edits.",
+    "Run syntax/tests before staging any source changes.",
+    "Require a durable human hold file to be absent before commit or push."
+  ],
+  "report": "/home/jesse/openroot/reports/deepdive_20260928T120643Z/report.md",
+  "write_failures": 0
+}

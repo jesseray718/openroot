@@ -1,0 +1,87 @@
+=== SEARCH REPAIR ===
+repaired_at=2026-09-29T00:33:18-05:00
+matching_method=fixed_string_per_term
+searchable_files=2376
+all_hits=20902
+
+=== TOP CANDIDATE FILES ===
+  2874	./context_bridge/a15_backup/termux_20260928_191232/data/data/com.termux/files/home/sha256.txt
+  2874	./context_bridge/a15_backup/termux_20260928_190708/data/data/com.termux/files/home/sha256.txt
+  1832	./context_bridge/grep_sweep_20260927_205916/model_config_refs.txt
+  1742	./context_bridge/gov_promote_proofs_20260928_041935/parent_hash.txt
+  1689	./context_bridge/gov_promote_proofs_20260928_041935/nest_hash.txt
+  1212	./context_bridge/grep_sweep_20260927_205916/philosophy_in_code.txt
+   718	./bin/0263__emoji_codes.py
+   632	./context_bridge/concept_sweeps/20260928_004258/synergetics.txt
+   425	./context_bridge/concept_sweeps/20260928_004258/synergetic.txt
+   328	./context_bridge/doc_compile_termux_20260920_222842.md
+   294	./context_bridge/concept_sweeps/20260928_004258/synergy.txt
+   258	./context_bridge/concept_sweeps/20260928_004258/agape.txt
+   253	./context_bridge/concept_sweeps/20260928_010158-corrected/cooperation.txt
+   234	./context_bridge/concept_sweeps/20260928_004258/resonance.txt
+   227	./context_bridge/grep_sweep_20260927_205916/rag_layer.txt
+   204	./context_bridge/concept_sweeps/20260928_004258/emergent.txt
+   187	./context_bridge/concept_sweeps/20260928_004258/46656.txt
+   136	./context_bridge/grep_sweep_20260927_205916/digest_files.txt
+   130	./context_bridge/concept_sweeps/20260928_004258/tidbit.txt
+   129	./context_bridge/concept_sweeps/20260928_004258/swarm.txt
+   126	./context_bridge/concept_sweeps/20260928_010158-corrected/philos.txt
+   118	./context_bridge/grep_sweep_20260927_205916/gates_canaries.txt
+   109	./bin/0186_idnadata.py
+   102	./bin/0963_typing_extensions.py
+    95	./context_bridge/kai_deep_harvest_20260928_024955/text/kai-settings.json
+    90	./bin/1166__generate_schema.py
+    76	./context_bridge/concept_sweeps/20260928_010158-corrected/coreatomic.txt
+    68	./bin/0782_theorem_generator_batch5.py
+    68	./bin/0189_uts46data.py
+    58	./bin/1247__trio.py
+    56	./context_bridge/concept_mining/20260928_011449/CONCEPT_DIGEST.clean.md
+    52	./bin/0781_theorem_generator_batch4.py
+    46	./bin/1167__generics.py
+    38	./context_bridge/concept_sweeps/20260928_004258/hive.txt
+    38	./bin/0609_esptool.py
+    37	./bin/1210_fields.py
+    37	./bin/0780_theorem_generator_batch3.py
+    36	./context_bridge/concept_mining/distill_20260928_012029/CONCEPT_SOURCES.clean.md
+    34	./bin/0992_introspection.py
+    32	./bin/1243_http_proxy.py
+    32	./bin/1229_http_proxy.py
+    31	./context_bridge/concept_mining/distill_20260928_012029/read_20260928_012238/DIGEST_TOP5_20260928_012423.md
+    31	./analysis/knowledge_probe_report_2026-09-18.md
+    30	./bin/0471_session.py
+    29	./context_bridge/report-git-push-delete-20260920_023056.md
+    29	./bin/0779_theorem_generator_batch2.py
+    28	./context_bridge/grep_sweep_20260927_205916/device_sync.txt
+    28	./bin/1032_types.py
+    28	./bin/1024_main.py
+    27	./bin/1220_typing.py
+    27	./bin/0829_link.py
+    24	./context_bridge/concept_sweeps/20260928_010158-corrected/atomicfunction.txt
+    24	./context_bridge/concept_sweeps/20260928_010158-corrected/0cost.txt
+    24	./context_bridge/concept_mining/distill_20260928_012029/read_20260928_012238/04_knowledge_db.md
+    24	./bin/1063__models.py
+    24	./bin/0936_unicode.py
+    24	./bin/0778_theorem_generator.py
+    24	./analysis/frp7_20260920_002113/triage.json
+    23	./bin/1211_generics.py
+    23	./bin/1180__typing_extra.py
+    23	./bin/1164__fields.py
+    22	./context_bridge/grep_sweep_20260927_205916/energy_research.txt
+    21	./bin/0345__macos.py
+    19	./context_bridge/tree_snapshot_latest.txt
+    19	./bin/1245_socks_proxy.py
+    19	./bin/1231_socks_proxy.py
+    19	./bin/0348__windows.py
+    19	./bin/0089_agapenet_cosmos_engine.py
+    18	./context_bridge/grep_sweep_20260927_205916/ledger_state.txt
+    18	./context_bridge/concept_sweeps/20260928_010158-corrected/agapekb.txt
+    18	./bin/resolve_pr58_v1.sh
+    18	./bin/resolve_pr58_final.py
+    18	./bin/1018_fields.py
+    18	./bin/0863_rnodeconf.py
+    18	./bin/0157_cache.py
+    17	./bin/0570_bench.py
+    17	./bin/0360_response.py
+    17	./bin/0234_unistring.py
+    16	./bin/merge_pr59_v1.sh
+    16	./bin/master_salvage_v1.sh

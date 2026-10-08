@@ -1,0 +1,77 @@
+# Permaculture Workflow Receipt — 2026-10-05
+generated: 2026-10-05T01:21:44Z host=optiplex3060 script=gen_receipt_v1
+Gates: keep-alive [banked] | data-plane [banked] (11 models) | beat delivery [banked] (20261004T231614)
+Starvation: orphan -bash 1d23h CPU killed 00:47Z -> 3B=14.96 tok/s, 7B=6.70 tok/s
+eta: ~180 kJ human -> ~537k tok/day recovered (~25x)
+Compost keys solved tonight:
+0208aa6febda4535
+06ad87aa44efc30b
+0f16e2bc9fdbd34c
+105299f27b165955
+154587b29fd69615
+193af16dcf503af5
+1cb23ecfcd41475d
+1fb2e29500781a5d
+25b144784922c43a
+27ab944372909f1c
+2a85b0546b88b3e4
+2f02b3aed04592aa
+2fd36c27d44f32d5
+388883a4f5121f97
+39185ba6ff60ab04
+3ac9462dbdb6e0fc
+3dcf1b985f95808a
+3e253167272a91eb
+4617d53fe3430c96
+5991272f4502dc56
+63ae101130ce4cd4
+65b0a2517a9d6e31
+675c27cf4847cf5f
+6daeb91f8bcf5765
+70ccef38aa30cee1
+716ddae802871bbf
+725a2d3583985fd8
+73a1f848917e7393
+74ddc1196072082d
+74fadd49f36647f6
+75c64230991e8aa8
+83a3c44bc889f03d
+83df30a2fadaf1f0
+85e76a45b928a51b
+8ffa9c1f8fae068a
+952b9364f78dca93
+9ef2faffd23e7fdd
+a71a4e72670407be
+ab68e66064bffdd0
+af189dfff2411d21
+afbd8ad75c5a820b
+b047cfd49012ef86
+b0ae03cf14b5c4f6
+b1a37e490c1a49af
+b35f1f72118121c9
+bb9f7768ff60db52
+c56e72f7f2f1e03a
+c8475cf988604fff
+c9628dbc12d03bea
+ca953549e9ca52ed
+cd0b126ad1ee890f
+cdc3c13fee435d1a
+d4313a95dd4495e7
+d4db71eecc1adeea
+d9c4f6acf4d03868
+daf3c7a118ae1f30
+dbb913e340d5827a
+de3ae692206d52b1
+e0e31415a98b4157
+e397112d47036e91
+e431a21305f088df
+e579225f90e59b48
+eaa1def40b324b87
+eec7e0d32e1ff362
+f5032fdc2b43f7bc
+fc35551700bc287b
+openroot-foundation: OWNED BY jesseray718 (gh-verified), spoke of openroot-codon...
+openroot-foundation: OWNED BY jesseray718 (gh-verified), spokes of openroot-canon; f7 → under openroot-canon ledger gap closed
+Repos on GitHub: 48 (gh ground truth)
+NEXT: heartbeat 7B decision | A15 manifest regen | 48-repo ledger reconciliation | bin/ tracking
+A15 sshd down — receipt in outbox, ferry on revival

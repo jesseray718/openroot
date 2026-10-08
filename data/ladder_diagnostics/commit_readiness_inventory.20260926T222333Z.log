@@ -1,0 +1,235 @@
+=== OPENROOT COMMIT READINESS INVENTORY ===
+
+=== REPOSITORY IDENTITY ===
+/home/jesse/openroot
+main
+331060e9 (HEAD -> main, origin/main) fix(ci): add SPDX headers to permaculture tooling
+Reh1t	https://github.com/Reh1t/openroot.git (fetch)
+Reh1t	https://github.com/Reh1t/openroot.git (push)
+origin	git@github.com:jesseray718/openroot.git (fetch)
+origin	git@github.com:jesseray718/openroot.git (push)
+upstream	https://github.com/jesseray718/openroot.git (fetch)
+upstream	https://github.com/jesseray718/openroot.git (push)
+
+=== VERIFIED LADDER STATE ===
+name                     status    maturity  checks_ok  last_action       last_ts                    evidence                                                                                                
+-----------------------  --------  --------  ---------  ----------------  -------------------------  --------------------------------------------------------------------------------------------------------
+tooling_green            verified  auto      1          run+verify GREEN  2026-09-26T21:00:42+00:00  all checks green                                                                                        
+mistake_engine_ready     verified  auto      1          run+verify GREEN  2026-09-26T21:08:48+00:00  all checks green                                                                                        
+vector_index_calibrated  verified  auto      1          run+verify GREEN  2026-09-26T21:27:09+00:00  all checks green                                                                                        
+ledgers_green            verified  auto      1          run+verify GREEN  2026-09-26T21:55:34+00:00  all checks green                                                                                        
+handoff_operational      verified  auto      1          run+verify GREEN  2026-09-26T22:18:44+00:00  all checks green                                                                                        
+contributor_seal         failed    human     0                            2026-09-26T22:18:44+00:00  calibration: GraphQL: Could not resolve to a PullRequest with the number of 53. (repository.pullRequest)
+first_release            locked    hybrid    0                                                                                                                                                               
+public_face              locked    human     0                                                                                                                                                               
+
+=== NEXT HUMAN-ONLY GATE ===
+106-            "timeout": 45,
+107-        },
+108-    },
+109-    {
+110:        "name": "contributor_seal",
+111-        "desc": "Reh1t PR #53 resolved with credit — goodwill is scarcest asset",
+112-        "maturity": "human",  # TRUE human-only: judgment cannot be automated
+113-        "checks": ['gh pr view 53 --repo jesseray718/openroot --json state -q .state | grep -qi merged'],
+114-        "calib": {"cmd": "gh pr view 53 --repo jesseray718/openroot --json state,author,title", "timeout": 60},
+115-        "runner": {"cmd": "echo '[gate] PR 53 merge is HUMAN-ADJUDICATED'", "timeout": 60, "human_only": True},
+116-    },
+117-    {
+118-        "name": "first_release",
+119-        "desc": "aerocement-panel-v0 standalone repo with BOM + build evidence",
+120-        "maturity": "hybrid",  # auto-checks, human gates publish
+121-        "checks": ["test -d aerocement-panel-v0 || gh repo list jesseray718 --limit 20 | grep -q aerocement"],
+122-        "calib": {"cmd": "python3 bin/a1_core_v1.py route --task 'draft README for aerocement panel BOM'", "timeout": 60},
+123-        "runner": {"cmd": "echo '[gate] finalize README + gh release create'", "timeout": 120, "human_only": True},
+124-    },
+125-    {
+126-        "name": "public_face",
+
+=== COMPLETE WORKTREE STATUS ===
+ M README.md
+ D bin/superloop_mine_v2.py
+ M context_bridge/superloop_DASHBOARD.md
+ M data/model_registry.json
+ M data/superloop_chains.json
+ M docs/README.md
+?? .ci/
+?? CHANGELOG.md
+?? bin/a1_core_v1.py
+?? bin/agape_vector_index.py
+?? bin/build_openroot_knowledge_intake_v1.sh
+?? bin/build_turing_tidbits_kernel_v1.sh
+?? bin/calibrate_then_run_tooling_green_v1.sh
+?? bin/compost_v1.py
+?? bin/diagnose_tooling_green_v1.sh
+?? bin/fix_launch_ladder_bug1_v1.sh
+?? bin/fix_launch_ladder_bug1_v2.sh
+?? bin/handoff_manager.py
+?? bin/inspect_ladder_bug1_v1.sh
+?? bin/launch_ladder_v1.py
+?? bin/openroot_knowledge_intake_v1.py
+?? bin/promote_mistake_engine_ready_v2.sh
+?? bin/promote_tooling_green_v2.sh
+?? bin/quarantine_pyfails_final_v2/
+?? bin/repair_ladder_registration_v1.sh
+?? bin/repair_ladder_registration_v2.sh
+?? bin/repair_mistake_engine_runner_v1.sh
+?? bin/repair_mistake_engine_runner_v2.sh
+?? bin/repair_tooling_green_blockers_v1.sh
+?? bin/run_calibrated_mistake_engine_v1.sh
+?? bin/run_calibrated_tooling_green_v1.sh
+?? bin/run_tooling_green_v1.sh
+?? bin/turing_tidbits_v1.py
+?? context_bridge/compost-20260926_053011.md
+?? context_bridge/compost-20260926_160713.md
+?? context_bridge/compost-20260926_160847.md
+?? context_bridge/compost-20260926_160848.md
+?? context_bridge/court-v6-report-20260926_040026.md
+?? context_bridge/handoffs/
+?? context_bridge/mistake_solutions/716ddae802871bbf.md
+?? context_bridge/mistake_solutions/cd0b126ad1ee890f.md
+?? context_bridge/relay-recovery-20260926_040359.md
+?? data/a1_config.json
+?? data/openroot_knowledge/
+?? data/turing_tidbits/
+?? docs/OPEN_HARDWARE_STATUS.md
+?? docs/PROJECT_ROADMAP.md
+?? docs/RELEASE_PROCESS.md
+?? quarantine_compile_fails_20260926_142638/
+?? quarantine_handoff_corrupt/
+
+=== TRACKED MODIFICATIONS ===
+M	README.md
+D	bin/superloop_mine_v2.py
+M	context_bridge/superloop_DASHBOARD.md
+M	data/model_registry.json
+M	data/superloop_chains.json
+M	docs/README.md
+ README.md                             |  16 +++
+ bin/superloop_mine_v2.py              | 242 ----------------------------------
+ context_bridge/superloop_DASHBOARD.md |  60 +++++----
+ data/model_registry.json              |  51 +++----
+ data/superloop_chains.json            |  51 +++----
+ docs/README.md                        |  16 +++
+ 6 files changed, 104 insertions(+), 332 deletions(-)
+
+=== STAGED CHANGES ===
+
+=== UNTRACKED CANDIDATES: SOURCE / CONFIG / DOCS ===
+bin/a1_core_v1.py
+bin/agape_vector_index.py
+bin/build_openroot_knowledge_intake_v1.sh
+bin/build_turing_tidbits_kernel_v1.sh
+bin/calibrate_then_run_tooling_green_v1.sh
+bin/compost_v1.py
+bin/diagnose_tooling_green_v1.sh
+bin/fix_launch_ladder_bug1_v1.sh
+bin/fix_launch_ladder_bug1_v2.sh
+bin/handoff_manager.py
+bin/inspect_ladder_bug1_v1.sh
+bin/launch_ladder_v1.py
+bin/openroot_knowledge_intake_v1.py
+bin/promote_mistake_engine_ready_v2.sh
+bin/promote_tooling_green_v2.sh
+bin/quarantine_pyfails_final_v2/pasteshell/0589_test_rmh_labyrinth_model.py
+bin/quarantine_pyfails_final_v2/pasteshell/0590_test_psychrometric_model.py
+bin/quarantine_pyfails_final_v2/pasteshell/0591_rmh_labyrinth_model.py
+bin/quarantine_pyfails_final_v2/pasteshell/0592_psychrometric_model.py
+bin/quarantine_pyfails_final_v2/pasteshell/0593_generate_rmh_report.py
+bin/quarantine_pyfails_final_v2/pasteshell/0665_chunk_sender.py
+bin/quarantine_pyfails_final_v2/pasteshell/0761_deploy_v101.py
+bin/quarantine_pyfails_final_v2/placeholder/0770_energy_theorems.py
+bin/quarantine_pyfails_final_v2/placeholder/1351_meta_upgrade_20260805_000212.py
+bin/quarantine_pyfails_final_v2/realbug/0031_unified_agape_engine.py
+bin/quarantine_pyfails_final_v2/realbug/0044_v7.py
+bin/quarantine_pyfails_final_v2/realbug/0061_diagnose_and_fix.py
+bin/quarantine_pyfails_final_v2/realbug/0073_audit_repo.py
+bin/quarantine_pyfails_final_v2/realbug/0598_generate_rmh_report.py
+bin/quarantine_pyfails_final_v2/realbug/0627_fusion_core.py
+bin/quarantine_pyfails_final_v2/realbug/0796_agape_board_advisor.py
+bin/quarantine_pyfails_final_v2/realbug/1279_setup.py
+bin/quarantine_pyfails_final_v2/realbug/compute_marketplace.py
+bin/repair_ladder_registration_v1.sh
+bin/repair_ladder_registration_v2.sh
+bin/repair_mistake_engine_runner_v1.sh
+bin/repair_mistake_engine_runner_v2.sh
+bin/repair_tooling_green_blockers_v1.sh
+bin/run_calibrated_mistake_engine_v1.sh
+bin/run_calibrated_tooling_green_v1.sh
+bin/run_tooling_green_v1.sh
+bin/turing_tidbits_v1.py
+CHANGELOG.md
+data/a1_config.json
+docs/OPEN_HARDWARE_STATUS.md
+docs/PROJECT_ROADMAP.md
+docs/RELEASE_PROCESS.md
+
+=== UNTRACKED RUNTIME / GENERATED / EXCLUDED CANDIDATES ===
+.ci/permaculture/data__router_examples__thermal-cascade-l0.report.json
+.ci/permaculture/designs__thermal-cascade__router_context.report.json
+.ci/permaculture/summary.json
+.ci/permaculture/thermal-cascade-l0.local.report.json
+.ci/permaculture/thermal-cascade-l0.report.json
+context_bridge/compost-20260926_053011.md
+context_bridge/compost-20260926_160713.md
+context_bridge/compost-20260926_160847.md
+context_bridge/compost-20260926_160848.md
+context_bridge/court-v6-report-20260926_040026.md
+context_bridge/handoffs/session_20260926_215535_55b7ba7c.md
+context_bridge/handoffs/session_20260926_215639_69ae6e70.md
+context_bridge/handoffs/session_20260926_220435_6c2d280e.md
+context_bridge/handoffs/session_20260926_220617_80fa6c9e.md
+context_bridge/handoffs/session_20260926_220805_6953c9af.md
+context_bridge/handoffs/session_20260926T221516Z_c6f0d97375d6355b.md
+context_bridge/handoffs/session_20260926T221629Z_6916f7ea0432b4f2.md
+context_bridge/handoffs/session_20260926T221842Z_d97bcefd328c622f.md
+context_bridge/handoffs/session_20260926T221843Z_c6414b332a20e5d7.md
+context_bridge/handoffs/session_session_20260926T221132+0000_7c2056b18e27b61c.md
+context_bridge/handoffs/session_session_20260926T221133+0000_5a4cf6fec1712d95.md
+context_bridge/mistake_solutions/716ddae802871bbf.md
+context_bridge/mistake_solutions/cd0b126ad1ee890f.md
+context_bridge/relay-recovery-20260926_040359.md
+data/openroot_knowledge/exports/openroot_evidence_map.md
+data/turing_tidbits/events/events.jsonl
+data/turing_tidbits/exports/tidbits_manifest.json
+data/turing_tidbits/metadata/598abb02a3f213b92a017e552dfb3e99f27ccf061d8cd061f15eee3bc9988040.json
+data/turing_tidbits/metadata/7e2b3e69eca89242998ffbdb9e347ce229ab9873e7a0205fa06ca9b1d48b9c58.json
+data/turing_tidbits/metadata/9fd061cec6e8907e4f36d90a00d3c7b74765ee462d549d488668f77cbaf155af.json
+data/turing_tidbits/objects/59/8a/598abb02a3f213b92a017e552dfb3e99f27ccf061d8cd061f15eee3bc9988040
+data/turing_tidbits/objects/7e/2b/7e2b3e69eca89242998ffbdb9e347ce229ab9873e7a0205fa06ca9b1d48b9c58
+data/turing_tidbits/objects/9f/d0/9fd061cec6e8907e4f36d90a00d3c7b74765ee462d549d488668f77cbaf155af
+quarantine_compile_fails_20260926_142638/superloop_mine_v2.py
+quarantine_handoff_corrupt/handoff_manager.py.corrupt.2026-09-26T185930+0000
+
+=== VERIFIED-PIPELINE SOURCE FILES ===
+[present] bin/launch_ladder_v1.py sha256=83f23fecfebfc85aad97a9e21f91cab49e1966ca2715b590a6c41c2bc2ecd42e bytes=13169
+[present] bin/mistake_engine_v1.py sha256=04f25a197569b05994d6763149fcb83c465d3355dabfafa21170a0a7f6409965 bytes=7101
+[present] bin/agape_vector_index.py sha256=09bf9ed9c989aebbfa65e73273c40462d7f204104411f3879ef7985571d9bd70 bytes=12127
+[present] bin/a1_core_v1.py sha256=dc8b4145d6345affdb5205e73b082656c1ac32d04aacf447185edab76693467c bytes=9135
+[present] bin/compost_v1.py sha256=598abb02a3f213b92a017e552dfb3e99f27ccf061d8cd061f15eee3bc9988040 bytes=6153
+[present] bin/handoff_manager.py sha256=2d771c62423b094fb76654b58510258f71d7208ef59ccc95ad4f70f5446ca8f0 bytes=11489
+[present] data/a1_config.json sha256=98583a6f474047353188db08032638f5ae9029528ea8010edc1e619bcb704cd1 bytes=277
+
+=== PROTECTED RUNTIME / GENERATED STATE ===
+[runtime] data/launch_ladder.db
+[runtime] data/universal_doc_ledger.db
+[runtime] data/embeddings.db
+[runtime] data/compost_v1.db
+[runtime] context_bridge/session_ledger.db
+[runtime] context_bridge/handoffs
+[runtime] data/ladder_diagnostics
+
+=== PYTHON COMPILE PROOF: VERIFIED COMPONENTS ===
+[banked] verified pipeline py_compile PASS
+
+=== GIT IGNORE CHECKS ===
+data/launch_ladder.db -> .gitignore:43:*.db	data/launch_ladder.db
+data/universal_doc_ledger.db -> .gitignore:43:*.db	data/universal_doc_ledger.db
+data/embeddings.db -> .gitignore:43:*.db	data/embeddings.db
+data/compost_v1.db -> .gitignore:43:*.db	data/compost_v1.db
+context_bridge/session_ledger.db -> .gitignore:43:*.db	context_bridge/session_ledger.db
+data/ladder_diagnostics/example.log -> .gitignore:35:*.log	data/ladder_diagnostics/example.log
+context_bridge/handoffs/example.md -> [not ignored]
+
+=== NO WRITE ACTIONS PERFORMED ===
+[banked] inventory only: no git add, commit, push, deletion, or database mutation

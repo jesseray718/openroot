@@ -1,0 +1,1017 @@
+{
+ "generated": "2026-09-21T07:56:41+00:00",
+ "window_hours": 24,
+ "files": {
+  "context_bridge/readme-loop-20260920_204318.log": {
+   "mtime": 1789955625,
+   "sha16": "f648cbd8b7525313",
+   "bytes": 507
+  },
+  "context_bridge/held-refinement_loop_v1.sh-20260920_200006.bak": {
+   "mtime": 1789974595,
+   "sha16": "a519193d7b3ba9af",
+   "bytes": 4156
+  },
+  "context_bridge/held-workflow_recover.sh-20260920_200006.bak": {
+   "mtime": 1789974595,
+   "sha16": "e9fd9422a8822ff1",
+   "bytes": 16
+  },
+  "context_bridge/seed_master-20260920_054032.log": {
+   "mtime": 1789974595,
+   "sha16": "2b16fc8ca4d115b8",
+   "bytes": 172
+  },
+  "context_bridge/session-2026-09-21-lbloop-seal-v2.md": {
+   "mtime": 1789950549,
+   "sha16": "10cbb04a2bebd387",
+   "bytes": 814
+  },
+  "context_bridge/report-goals-rebuild-20260920_032224.md": {
+   "mtime": 1789892544,
+   "sha16": "fb0876cd7da24883",
+   "bytes": 1399
+  },
+  "context_bridge/session-2026-09-20-floorlift.md": {
+   "mtime": 1789944426,
+   "sha16": "4839ef86b0b03a24",
+   "bytes": 1086
+  },
+  "context_bridge/bot_loop_20260920_144050.log": {
+   "mtime": 1789944426,
+   "sha16": "35501accd9d2c371",
+   "bytes": 63
+  },
+  "context_bridge/refinement_loop_v1.sh": {
+   "mtime": 1789974595,
+   "sha16": "a519193d7b3ba9af",
+   "bytes": 4156
+  },
+  "context_bridge/hive-live-convergence-20260920_230844.md": {
+   "mtime": 1789964132,
+   "sha16": "f38cf7cc338647b0",
+   "bytes": 1095
+  },
+  "context_bridge/popw.tail": {
+   "mtime": 1789974595,
+   "sha16": "e3e642f5842e5c7b",
+   "bytes": 48
+  },
+  "context_bridge/seed_next-compound-v1.1-20260920_074847.md": {
+   "mtime": 1789908527,
+   "sha16": "0663c2768caccb71",
+   "bytes": 614
+  },
+  "context_bridge/seed_next-compound-v1.1-20260920_074315.md": {
+   "mtime": 1789908195,
+   "sha16": "b1c2e788770eb8d1",
+   "bytes": 614
+  },
+  "context_bridge/doc_compile_termux_20260920_222842.md": {
+   "mtime": 1789973135,
+   "sha16": "3db3b885de47e443",
+   "bytes": 745057
+  },
+  "context_bridge/seed_master-20260920_053533.log": {
+   "mtime": 1789974595,
+   "sha16": "ec28125892f7db52",
+   "bytes": 158
+  },
+  "context_bridge/INBOX.md": {
+   "mtime": 1789974595,
+   "sha16": "b4538d7f61fef78d",
+   "bytes": 318
+  },
+  "context_bridge/POPW.report": {
+   "mtime": 1789974595,
+   "sha16": "b0c3d6a32ab9ee08",
+   "bytes": 312
+  },
+  "context_bridge/seed_master-20260920_052939.log": {
+   "mtime": 1789974595,
+   "sha16": "46ae81506ac1640b",
+   "bytes": 199
+  },
+  "context_bridge/readme-loop-20260920_205456-popw.log": {
+   "mtime": 1789974595,
+   "sha16": "c2f43ab9ab2f9aeb",
+   "bytes": 291
+  },
+  "context_bridge/router-detached-20260920_234544.log": {
+   "mtime": 1789974595,
+   "sha16": "1c8473ba95fccd81",
+   "bytes": 793
+  },
+  "context_bridge/handoff_window-close-20260921.md": {
+   "mtime": 1789973135,
+   "sha16": "36f20750365ea7f5",
+   "bytes": 1251
+  },
+  "context_bridge/lessons_draft_20260920.md": {
+   "mtime": 1789902844,
+   "sha16": "56c6186d8d0d71e6",
+   "bytes": 1854
+  },
+  "context_bridge/workflow_recover.sh": {
+   "mtime": 1789974595,
+   "sha16": "e9fd9422a8822ff1",
+   "bytes": 16
+  },
+  "context_bridge/session-2026-09-21-lbloop-fix4.md": {
+   "mtime": 1789952872,
+   "sha16": "36ebdd609ca18ec3",
+   "bytes": 522
+  },
+  "context_bridge/gitignore.local-20260920_174704.patch": {
+   "mtime": 1789974595,
+   "sha16": "c95702b9ba684cf2",
+   "bytes": 185
+  },
+  "context_bridge/seed_refinery_20260920_143226.md": {
+   "mtime": 1789974595,
+   "sha16": "bc38fe0704eb52cf",
+   "bytes": 449
+  },
+  "context_bridge/handoff_window-close-20260921-am.md": {
+   "mtime": 1789975556,
+   "sha16": "f965107dbd8df7d4",
+   "bytes": 1441
+  },
+  "context_bridge/session-2026-09-21-lbloop-fix3.md": {
+   "mtime": 1789952505,
+   "sha16": "7744286cc263ef2a",
+   "bytes": 594
+  },
+  "context_bridge/.gate_exclude": {
+   "mtime": 1789952406,
+   "sha16": "110189313247294c",
+   "bytes": 57
+  },
+  "context_bridge/session-2026-09-20-floorlift-seal.md": {
+   "mtime": 1789950549,
+   "sha16": "718d19b107128c88",
+   "bytes": 566
+  },
+  "context_bridge/lb-loop-milestone-final.md": {
+   "mtime": 1789974595,
+   "sha16": "0a6348e980ddc85f",
+   "bytes": 1621
+  },
+  "context_bridge/quarantine-docs-20260920_204735/.optiplex_lb_sync.sh": {
+   "mtime": 1789950547,
+   "sha16": "1081daaca76594c0",
+   "bytes": 2054
+  },
+  "context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_200743.md": {
+   "mtime": 1789952863,
+   "sha16": "ec0b3d49fa9bc334",
+   "bytes": 621466
+  },
+  "context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_200044.md": {
+   "mtime": 1789952444,
+   "sha16": "23eaff8c738eafdf",
+   "bytes": 620472
+  },
+  "context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193220.md": {
+   "mtime": 1789950740,
+   "sha16": "2deab1ab9c10099b",
+   "bytes": 620472
+  },
+  "context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193111.md": {
+   "mtime": 1789950671,
+   "sha16": "e1aba94cffe49ee1",
+   "bytes": 310028
+  },
+  "context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193243.md": {
+   "mtime": 1789950763,
+   "sha16": "8597a8bf9f29d16f",
+   "bytes": 620472
+  },
+  "context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193305.md": {
+   "mtime": 1789950785,
+   "sha16": "9b5f6428007d8fd6",
+   "bytes": 620472
+  },
+  "context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193316.md": {
+   "mtime": 1789950796,
+   "sha16": "32d70f957ed85a3e",
+   "bytes": 620472
+  },
+  "context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193209.md": {
+   "mtime": 1789950729,
+   "sha16": "0e597dd0c602616d",
+   "bytes": 620472
+  },
+  "context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193328.md": {
+   "mtime": 1789950808,
+   "sha16": "50421f1657222285",
+   "bytes": 620472
+  },
+  "context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193059.md": {
+   "mtime": 1789950659,
+   "sha16": "437ee7d52a8cea11",
+   "bytes": 154806
+  },
+  "context_bridge/quarantine-docs-20260920_204735/.lb_resume.sh": {
+   "mtime": 1789950756,
+   "sha16": "05b4da3349eab77e",
+   "bytes": 2026
+  },
+  "context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193339.md": {
+   "mtime": 1789950819,
+   "sha16": "53ed444155ca4705",
+   "bytes": 620472
+  },
+  "context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193135.md": {
+   "mtime": 1789950695,
+   "sha16": "eeed4a2cd2d2473d",
+   "bytes": 620472
+  },
+  "context_bridge/quarantine-docs-20260920_204735/.fix_lb_loop.sh": {
+   "mtime": 1789951253,
+   "sha16": "376d7de8a2539e37",
+   "bytes": 4971
+  },
+  "context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193123.md": {
+   "mtime": 1789950683,
+   "sha16": "80b2887d5b8f74ce",
+   "bytes": 620472
+  },
+  "context_bridge/quarantine-docs-20260920_204735/.fix_lb_loop_v2.sh": {
+   "mtime": 1789951935,
+   "sha16": "afd1d426f8250044",
+   "bytes": 6036
+  },
+  "context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193254.md": {
+   "mtime": 1789950774,
+   "sha16": "db8b1b3c5a280779",
+   "bytes": 620472
+  },
+  "context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193157.md": {
+   "mtime": 1789950717,
+   "sha16": "a6ae76661af85916",
+   "bytes": 620472
+  },
+  "context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193350.md": {
+   "mtime": 1789950830,
+   "sha16": "27e4edf69c89b5bb",
+   "bytes": 620472
+  },
+  "context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193146.md": {
+   "mtime": 1789950706,
+   "sha16": "5a50971ecf384f24",
+   "bytes": 620472
+  },
+  "context_bridge/quarantine-docs-20260920_204735/doc_compile_optiplex_20260920_193401.md": {
+   "mtime": 1789950841,
+   "sha16": "a6e4efdf343cb888",
+   "bytes": 620472
+  },
+  "context_bridge/archive-20260920/MASTER_TODO.meshdraft.retry1.20260920_053533.md": {
+   "mtime": 1789900622,
+   "sha16": "6208b85eb23b98dc",
+   "bytes": 881
+  },
+  "context_bridge/archive-20260920/MASTER_TODO.meshdraft.retry2.20260920_053533.md": {
+   "mtime": 1789900700,
+   "sha16": "0408438cc3a1feb4",
+   "bytes": 1242
+  },
+  "context_bridge/archive-20260920/MASTER_TODO.meshdraft.20260920_052939.md": {
+   "mtime": 1789900325,
+   "sha16": "a1a7b6318995c0b3",
+   "bytes": 359
+  },
+  "context_bridge/runtime_backups/team_gate.pre-rebase-20260920_222737.db": {
+   "mtime": 1789973135,
+   "sha16": "f2ebd2fc0539c143",
+   "bytes": 12288
+  },
+  "context_bridge/fragments/README.md": {
+   "mtime": 1789974595,
+   "sha16": "6f27f3f9734e42ad",
+   "bytes": 423
+  },
+  "bin/window_fuse_v1.py": {
+   "mtime": 1789977372,
+   "sha16": "8c1c454de792ae24",
+   "bytes": 7965
+  },
+  "bin/contribution_tier_v2.py": {
+   "mtime": 1789944426,
+   "sha16": "ca0e79d12d57d50f",
+   "bytes": 5567
+  },
+  "bin/lb_team_gate_call.sh": {
+   "mtime": 1789952851,
+   "sha16": "0c2e2ec6d021c881",
+   "bytes": 516
+  },
+  "bin/lesson_ingest.py": {
+   "mtime": 1789973184,
+   "sha16": "8e34abbf799b7c3c",
+   "bytes": 1239
+  },
+  "bin/bot_stop.sh": {
+   "mtime": 1789944426,
+   "sha16": "d56130d33b4e32a5",
+   "bytes": 264
+  },
+  "bin/team_gate_v2.sh": {
+   "mtime": 1789944426,
+   "sha16": "151427029b0d01e1",
+   "bytes": 807
+  },
+  "bin/init_knowledge_db.py": {
+   "mtime": 1789944426,
+   "sha16": "c8d223872a93d1cb",
+   "bytes": 1509
+  },
+  "bin/multi_router.py": {
+   "mtime": 1789965944,
+   "sha16": "bdaf3fcb69b59093",
+   "bytes": 15450
+  },
+  "bin/goals_rebuild_v1_20260920.py": {
+   "mtime": 1789891508,
+   "sha16": "0c519ed32e9756f6",
+   "bytes": 4813
+  },
+  "bin/contribution_tier_v1.py": {
+   "mtime": 1789944426,
+   "sha16": "f0e11bc0e60fefde",
+   "bytes": 7675
+  },
+  "bin/lb_loop_v2.py": {
+   "mtime": 1789952851,
+   "sha16": "ca292c2021c229e9",
+   "bytes": 11177
+  },
+  "bin/push_guard.py": {
+   "mtime": 1789944426,
+   "sha16": "9b6c72b529d3b50e",
+   "bytes": 712
+  },
+  "bin/light_cone_router.py": {
+   "mtime": 1789944426,
+   "sha16": "adfb3096460bf877",
+   "bytes": 1143
+  },
+  "bin/lb_stack_gate_all.sh": {
+   "mtime": 1789951936,
+   "sha16": "795872dcf9740507",
+   "bytes": 969
+  },
+  "bin/goals_rebuild_v3_20260920.py": {
+   "mtime": 1789892543,
+   "sha16": "2d8ec439c6be73a9",
+   "bytes": 2860
+  },
+  "bin/lesson_stage_v1.py": {
+   "mtime": 1789975357,
+   "sha16": "ffd54eb137ee7706",
+   "bytes": 7146
+  },
+  "bin/env_map.py": {
+   "mtime": 1789944426,
+   "sha16": "f3900e520a622002",
+   "bytes": 1272
+  },
+  "bin/tier_dispatch_v1.py": {
+   "mtime": 1789944426,
+   "sha16": "69cec1a0cf11418b",
+   "bytes": 6369
+  },
+  "bin/compound_v1.sh": {
+   "mtime": 1789909360,
+   "sha16": "fc67248798b80851",
+   "bytes": 3619
+  },
+  "bin/fuse_router_lb_seal_v1.sh": {
+   "mtime": 1789974595,
+   "sha16": "5407fb78d1298d89",
+   "bytes": 6442
+  },
+  "bin/lb_stack_sweep.sh": {
+   "mtime": 1789950549,
+   "sha16": "1923c58b310fd64c",
+   "bytes": 742
+  },
+  "bin/readme_draft_loop.sh": {
+   "mtime": 1789974595,
+   "sha16": "dc30d7fd33c4a15c",
+   "bytes": 3359
+  },
+  "bin/mesh_retry_v1.sh": {
+   "mtime": 1789900532,
+   "sha16": "8d5567aa9f8ae4aa",
+   "bytes": 5049
+  },
+  "bin/config_tiers.py": {
+   "mtime": 1789944426,
+   "sha16": "90ffc9384bf663d5",
+   "bytes": 3145
+  },
+  "bin/popw_ledger.py": {
+   "mtime": 1789974595,
+   "sha16": "928be079cfa988e5",
+   "bytes": 3511
+  },
+  "bin/openrouter_client_v1.py": {
+   "mtime": 1789944426,
+   "sha16": "e4ed5ef17344ee9d",
+   "bytes": 6253
+  },
+  "bin/bot_loop_v1.py": {
+   "mtime": 1789944426,
+   "sha16": "ae8a585b5c03656a",
+   "bytes": 4492
+  },
+  "bin/mesh_refine_v1.sh": {
+   "mtime": 1789900178,
+   "sha16": "13dde54aa3d8b8de",
+   "bytes": 5756
+  },
+  "bin/hive_nursery.py": {
+   "mtime": 1789965944,
+   "sha16": "1cec34203bab25d7",
+   "bytes": 5459
+  },
+  "bin/lb.sh": {
+   "mtime": 1789907578,
+   "sha16": "72ddfc54812932ac",
+   "bytes": 2182
+  },
+  "bin/recover_v1.sh": {
+   "mtime": 1789900178,
+   "sha16": "09fc9cede512ad14",
+   "bytes": 2962
+  },
+  "bin/agent.sh": {
+   "mtime": 1789944426,
+   "sha16": "4b41ead96db0b83f",
+   "bytes": 974
+  },
+  "bin/rebuild_core_workflow.sh": {
+   "mtime": 1789944426,
+   "sha16": "9d318ef1d30fdf8a",
+   "bytes": 15538
+  },
+  "bin/mesh_ship_v2.sh": {
+   "mtime": 1789900830,
+   "sha16": "e319af444baded4d",
+   "bytes": 4816
+  },
+  "bin/stack_gate.sh": {
+   "mtime": 1789944426,
+   "sha16": "c694cc193c3822f8",
+   "bytes": 1005
+  },
+  "bin/terminal_log_rag.py": {
+   "mtime": 1789944426,
+   "sha16": "2d0a8d2e80e454c8",
+   "bytes": 1457
+  },
+  "bin/finalize_workflow.sh": {
+   "mtime": 1789944426,
+   "sha16": "1dd97e00a66fe534",
+   "bytes": 4445
+  },
+  "bin/window_extract_v1.py": {
+   "mtime": 1789973135,
+   "sha16": "8b9041cd2b5024f1",
+   "bytes": 5357
+  },
+  "bin/refine_next.sh": {
+   "mtime": 1789944426,
+   "sha16": "2efebae25f17a23a",
+   "bytes": 284
+  },
+  "bin/markor_compiler.py": {
+   "mtime": 1789944426,
+   "sha16": "3a5bd0e8191b5671",
+   "bytes": 8143
+  },
+  "bin/hive_live_convergence_v1.sh": {
+   "mtime": 1789974595,
+   "sha16": "e621b8a438cb68fc",
+   "bytes": 4582
+  },
+  "bin/doc_compile.py": {
+   "mtime": 1789944426,
+   "sha16": "f37dcfbd8eeabeeb",
+   "bytes": 5932
+  },
+  "bin/onepass_v3.sh": {
+   "mtime": 1789944426,
+   "sha16": "3e98e69bffade358",
+   "bytes": 1520
+  },
+  "bin/superlinear.sh": {
+   "mtime": 1789974595,
+   "sha16": "d56bf5cea47b486b",
+   "bytes": 1166
+  },
+  "bin/workflow_recover.sh": {
+   "mtime": 1789944426,
+   "sha16": "e9fd9422a8822ff1",
+   "bytes": 16
+  },
+  "bin/compound_orchestrate.sh": {
+   "mtime": 1789944426,
+   "sha16": "f69d9b127bb8d5fd",
+   "bytes": 4913
+  },
+  "bin/qa_fts5.py": {
+   "mtime": 1789974595,
+   "sha16": "e7c1c85440b50d33",
+   "bytes": 5712
+  },
+  "bin/aider_task_runner.py": {
+   "mtime": 1789944426,
+   "sha16": "d20f8b65aa75d3bb",
+   "bytes": 1049
+  },
+  "bin/goals_rebuild_v2_20260920.py": {
+   "mtime": 1789891742,
+   "sha16": "024de654f4cf2b29",
+   "bytes": 4739
+  },
+  "bin/__pycache__/git_push_delete_v9_20260920.cpython-312.pyc": {
+   "mtime": 1789950845,
+   "sha16": "696bb970b7df1d94",
+   "bytes": 6728
+  },
+  "bin/__pycache__/env_map.cpython-312.pyc": {
+   "mtime": 1789950844,
+   "sha16": "b48d5849128665e2",
+   "bytes": 2662
+  },
+  "bin/__pycache__/model_symposium.cpython-312.pyc": {
+   "mtime": 1789950845,
+   "sha16": "b430813774f2e3df",
+   "bytes": 11671
+  },
+  "bin/__pycache__/doc_compile.cpython-312.pyc": {
+   "mtime": 1789950844,
+   "sha16": "a7c194acf7e7f764",
+   "bytes": 10376
+  },
+  "bin/__pycache__/session_seal_v2.cpython-312.pyc": {
+   "mtime": 1789950846,
+   "sha16": "3d6f8cbb89ad2690",
+   "bytes": 9607
+  },
+  "bin/__pycache__/window_fuse_v1.cpython-312.pyc": {
+   "mtime": 1789977373,
+   "sha16": "0ded3cc08d7fae35",
+   "bytes": 12093
+  },
+  "bin/__pycache__/aider_task_runner.cpython-312.pyc": {
+   "mtime": 1789950844,
+   "sha16": "8baa19b3f0f957b3",
+   "bytes": 1708
+  },
+  "bin/__pycache__/multi_router.cpython-312.pyc": {
+   "mtime": 1789965944,
+   "sha16": "97d5188781d29bb2",
+   "bytes": 24250
+  },
+  "bin/__pycache__/next_actions_v2_20260920.cpython-312.pyc": {
+   "mtime": 1789950845,
+   "sha16": "5b54a80dfb44b933",
+   "bytes": 7903
+  },
+  "bin/__pycache__/need_gate.cpython-312.pyc": {
+   "mtime": 1789950845,
+   "sha16": "5e6e2d73149bf605",
+   "bytes": 2806
+  },
+  "bin/__pycache__/goals_rebuild_v2_20260920.cpython-312.pyc": {
+   "mtime": 1789950845,
+   "sha16": "65db5e1441986fa7",
+   "bytes": 7303
+  },
+  "bin/__pycache__/secure_and_commit_v5_20260920.cpython-312.pyc": {
+   "mtime": 1789950846,
+   "sha16": "c5925c1149e88351",
+   "bytes": 5845
+  },
+  "bin/__pycache__/goals_rebuild_v1_20260920.cpython-312.pyc": {
+   "mtime": 1789950845,
+   "sha16": "12cb73059b79ddd2",
+   "bytes": 7025
+  },
+  "bin/__pycache__/lesson_stage_v1.cpython-312.pyc": {
+   "mtime": 1789975357,
+   "sha16": "98d44f1edf20e532",
+   "bytes": 12412
+  },
+  "bin/__pycache__/contribution_tier_v2.cpython-312.pyc": {
+   "mtime": 1789950844,
+   "sha16": "f41ac3fd55ae95d8",
+   "bytes": 9292
+  },
+  "bin/__pycache__/knowledge_probe_v1.cpython-312.pyc": {
+   "mtime": 1789950845,
+   "sha16": "8c741973a5b71f96",
+   "bytes": 15769
+  },
+  "bin/__pycache__/master_truth_v10_20260920.cpython-312.pyc": {
+   "mtime": 1789950845,
+   "sha16": "4aaff39acae99a28",
+   "bytes": 6529
+  },
+  "bin/__pycache__/master_purge_v7_20260920.cpython-312.pyc": {
+   "mtime": 1789950845,
+   "sha16": "1d55091c57cbc551",
+   "bytes": 5109
+  },
+  "bin/__pycache__/run_triage.cpython-312.pyc": {
+   "mtime": 1789950846,
+   "sha16": "95f2dace6316e33a",
+   "bytes": 2845
+  },
+  "bin/__pycache__/contribution_tier_v1.cpython-312.pyc": {
+   "mtime": 1789950844,
+   "sha16": "0b29b4fe8b1fb0ed",
+   "bytes": 12266
+  },
+  "bin/__pycache__/terminal_log_rag.cpython-312.pyc": {
+   "mtime": 1789950846,
+   "sha16": "7d06518e4dd979d7",
+   "bytes": 2770
+  },
+  "bin/__pycache__/asset_preclassify.cpython-312.pyc": {
+   "mtime": 1789950844,
+   "sha16": "6bce94ec5ba17dc4",
+   "bytes": 3711
+  },
+  "bin/__pycache__/asset_assign_pipeline.cpython-312.pyc": {
+   "mtime": 1789950844,
+   "sha16": "3462073aade2f142",
+   "bytes": 10699
+  },
+  "bin/__pycache__/hive_nursery.cpython-312.pyc": {
+   "mtime": 1789965944,
+   "sha16": "5893d01df6f04e5c",
+   "bytes": 9690
+  },
+  "bin/__pycache__/rescue_a15_unique.cpython-312.pyc": {
+   "mtime": 1789950846,
+   "sha16": "1c9025c9dea493d4",
+   "bytes": 3885
+  },
+  "bin/__pycache__/master_harvest_v3_20260920.cpython-312.pyc": {
+   "mtime": 1789950845,
+   "sha16": "57da754036ed3b2a",
+   "bytes": 8981
+  },
+  "bin/__pycache__/openroot_mcp_v1.cpython-312.pyc": {
+   "mtime": 1789950845,
+   "sha16": "a5ed1c95d1ccb9cd",
+   "bytes": 2890
+  },
+  "bin/__pycache__/popw_hang.cpython-312.pyc": {
+   "mtime": 1789950845,
+   "sha16": "e25463ea6c1060e2",
+   "bytes": 3225
+  },
+  "bin/__pycache__/restore_readme_profile_landing_v1.cpython-312.pyc": {
+   "mtime": 1789950846,
+   "sha16": "5905cec3b03cccda",
+   "bytes": 20542
+  },
+  "bin/__pycache__/asset_preclassify_v2.cpython-312.pyc": {
+   "mtime": 1789950844,
+   "sha16": "22fbea68bf99ed3d",
+   "bytes": 10351
+  },
+  "bin/__pycache__/cosmo_rack.cpython-312.pyc": {
+   "mtime": 1789950844,
+   "sha16": "ccf4b60a27b7d4d2",
+   "bytes": 5194
+  },
+  "bin/__pycache__/universal_index_pipeline.cpython-312.pyc": {
+   "mtime": 1789950846,
+   "sha16": "da92be5084aa10b4",
+   "bytes": 10850
+  },
+  "bin/__pycache__/embed_index_v1.cpython-312.pyc": {
+   "mtime": 1789950844,
+   "sha16": "f747cc4e0e8c33d5",
+   "bytes": 10501
+  },
+  "bin/__pycache__/tier_dispatch_v1.cpython-312.pyc": {
+   "mtime": 1789950846,
+   "sha16": "ca10f43442c62d2f",
+   "bytes": 8966
+  },
+  "bin/__pycache__/triage100.cpython-312.pyc": {
+   "mtime": 1789950846,
+   "sha16": "d1be88c71a28b57e",
+   "bytes": 13685
+  },
+  "bin/__pycache__/push_guard.cpython-312.pyc": {
+   "mtime": 1789950845,
+   "sha16": "2935b12d000308b1",
+   "bytes": 1302
+  },
+  "bin/__pycache__/agape_qa_engine.cpython-312.pyc": {
+   "mtime": 1789950844,
+   "sha16": "d4c95ba78170b6a8",
+   "bytes": 17808
+  },
+  "bin/__pycache__/queue_advance_v1.cpython-312.pyc": {
+   "mtime": 1789950846,
+   "sha16": "2094185d18eb6dcf",
+   "bytes": 10291
+  },
+  "bin/__pycache__/sqlite_params.cpython-312.pyc": {
+   "mtime": 1789950846,
+   "sha16": "0f48ecb05b512bba",
+   "bytes": 1276
+  },
+  "bin/__pycache__/goals_rebuild_v3_20260920.cpython-312.pyc": {
+   "mtime": 1789950845,
+   "sha16": "bc1f5f310a74ee31",
+   "bytes": 5382
+  },
+  "bin/__pycache__/llm_rag_integration.cpython-312.pyc": {
+   "mtime": 1789950845,
+   "sha16": "c0a853fdd5b85aa0",
+   "bytes": 5420
+  },
+  "bin/__pycache__/openroot_master_deploy.cpython-312.pyc": {
+   "mtime": 1789950845,
+   "sha16": "d498852d70a8ae64",
+   "bytes": 9116
+  },
+  "bin/__pycache__/force_merge_push_v1.cpython-312.pyc": {
+   "mtime": 1789950845,
+   "sha16": "415bc07cddfcaa4a",
+   "bytes": 3855
+  },
+  "bin/__pycache__/relay_v1.cpython-312.pyc": {
+   "mtime": 1789950846,
+   "sha16": "58daffe3ef589945",
+   "bytes": 18366
+  },
+  "bin/__pycache__/gh_hygiene_apply_v1.cpython-312.pyc": {
+   "mtime": 1789950845,
+   "sha16": "4625e2665621cd62",
+   "bytes": 9101
+  },
+  "bin/__pycache__/queue_directive.cpython-312.pyc": {
+   "mtime": 1789950846,
+   "sha16": "611f339efc50c833",
+   "bytes": 2519
+  },
+  "bin/__pycache__/db_recon.cpython-312.pyc": {
+   "mtime": 1789950844,
+   "sha16": "71df5600498bce1f",
+   "bytes": 9681
+  },
+  "bin/__pycache__/lb_loop_v2.cpython-312.pyc": {
+   "mtime": 1789952851,
+   "sha16": "bdfa74127ecb67ac",
+   "bytes": 17285
+  },
+  "bin/__pycache__/zd_census.cpython-312.pyc": {
+   "mtime": 1789950846,
+   "sha16": "fa00663b89c8f0e4",
+   "bytes": 2871
+  },
+  "bin/__pycache__/config_tiers.cpython-312.pyc": {
+   "mtime": 1789950844,
+   "sha16": "6d140501205ba384",
+   "bytes": 4701
+  },
+  "bin/__pycache__/resolve_pr58_final.cpython-312.pyc": {
+   "mtime": 1789950846,
+   "sha16": "004a3f1c341c1b0b",
+   "bytes": 10569
+  },
+  "bin/__pycache__/unified_workflow_v1.cpython-312.pyc": {
+   "mtime": 1789950846,
+   "sha16": "92eedfb06a141545",
+   "bytes": 18228
+  },
+  "bin/__pycache__/qa_fts5.cpython-312.pyc": {
+   "mtime": 1789972674,
+   "sha16": "8163e79a2e641465",
+   "bytes": 10737
+  },
+  "bin/__pycache__/openrouter_client_v1.cpython-312.pyc": {
+   "mtime": 1789950845,
+   "sha16": "b44b36a0f3c6878d",
+   "bytes": 10865
+  },
+  "bin/__pycache__/lesson_ingest.cpython-312.pyc": {
+   "mtime": 1789973184,
+   "sha16": "23bcfd920a2111d9",
+   "bytes": 2369
+  },
+  "bin/__pycache__/large_file_cleanup.cpython-312.pyc": {
+   "mtime": 1789950845,
+   "sha16": "dcc7785ceeb9b486",
+   "bytes": 9594
+  },
+  "bin/__pycache__/zombie_ref_kill_v8_20260920.cpython-312.pyc": {
+   "mtime": 1789950846,
+   "sha16": "20f27235826025b0",
+   "bytes": 5510
+  },
+  "bin/__pycache__/fix_planetary_math_v1.cpython-312.pyc": {
+   "mtime": 1789950844,
+   "sha16": "ea4122ed581d6e61",
+   "bytes": 14891
+  },
+  "bin/__pycache__/license_fleet_continue_v1.cpython-312.pyc": {
+   "mtime": 1789950845,
+   "sha16": "f5a4a18057b30c3f",
+   "bytes": 6552
+  },
+  "bin/__pycache__/lumo_lib.cpython-312.pyc": {
+   "mtime": 1789950845,
+   "sha16": "7363eff9a1d9d238",
+   "bytes": 5796
+  },
+  "bin/__pycache__/todo_processor.cpython-312.pyc": {
+   "mtime": 1789950846,
+   "sha16": "a25e07dd22bcb4b0",
+   "bytes": 10165
+  },
+  "bin/__pycache__/fix_planetary_math_commit_v2.cpython-312.pyc": {
+   "mtime": 1789950844,
+   "sha16": "1238934c63eb5666",
+   "bytes": 3759
+  },
+  "bin/__pycache__/boardroom_router.cpython-312.pyc": {
+   "mtime": 1789950844,
+   "sha16": "c19a996c6bd2be4e",
+   "bytes": 5894
+  },
+  "bin/__pycache__/build_core_view.cpython-312.pyc": {
+   "mtime": 1789950844,
+   "sha16": "7b91cd42dc9d803c",
+   "bytes": 7468
+  },
+  "bin/__pycache__/init_knowledge_db.cpython-312.pyc": {
+   "mtime": 1789950845,
+   "sha16": "5a1c30e65686d371",
+   "bytes": 2077
+  },
+  "bin/__pycache__/popw_ledger.cpython-312.pyc": {
+   "mtime": 1789972674,
+   "sha16": "fbf9ac943a1dd500",
+   "bytes": 6430
+  },
+  "bin/__pycache__/pr59_reopen_squash_v2.cpython-312.pyc": {
+   "mtime": 1789950845,
+   "sha16": "4f57c6e477238c9c",
+   "bytes": 2428
+  },
+  "bin/__pycache__/fleet_closeout_v6_20260920.cpython-312.pyc": {
+   "mtime": 1789950844,
+   "sha16": "6d24091730be9154",
+   "bytes": 7443
+  },
+  "bin/__pycache__/bot_loop_v1.cpython-312.pyc": {
+   "mtime": 1789950844,
+   "sha16": "018b7b7bc78a6819",
+   "bytes": 7394
+  },
+  "bin/__pycache__/markor_compiler.cpython-312.pyc": {
+   "mtime": 1789950845,
+   "sha16": "5aee534d85948c51",
+   "bytes": 11715
+  },
+  "bin/__pycache__/light_cone_router.cpython-312.pyc": {
+   "mtime": 1789950845,
+   "sha16": "60efa036de66205b",
+   "bytes": 2398
+  },
+  "bin/__pycache__/universal_unpack.cpython-312.pyc": {
+   "mtime": 1789950846,
+   "sha16": "59c895d4117c13b5",
+   "bytes": 5865
+  },
+  "bin/__pycache__/h003_log.cpython-312.pyc": {
+   "mtime": 1789950845,
+   "sha16": "255c8e1c049d1783",
+   "bytes": 2963
+  },
+  "data/popw_ledger.db": {
+   "mtime": 1789956133,
+   "sha16": "2be4ea6a2a6ca10e",
+   "bytes": 8192
+  },
+  "data/qa_corpus.db": {
+   "mtime": 1789957015,
+   "sha16": "5f4f17a1bfb5f46f",
+   "bytes": 1510359040
+  },
+  "data/readme_loop.db": {
+   "mtime": 1789956133,
+   "sha16": "994ed09eaea4c1a6",
+   "bytes": 45056
+  },
+  "data/refinery.db": {
+   "mtime": 1789914746,
+   "sha16": "be2d5a9b9f98462c",
+   "bytes": 16384
+  },
+  "data/parallel_ideas.jsonl": {
+   "mtime": 1789977024,
+   "sha16": "ba0ba0977ac004db",
+   "bytes": 22501
+  },
+  "data/env_map.json": {
+   "mtime": 1789944426,
+   "sha16": "8f23313b38eb791d",
+   "bytes": 361
+  },
+  "data/relay.db": {
+   "mtime": 1789944426,
+   "sha16": "26cc58db3fbc56be",
+   "bytes": 143360
+  },
+  "data/canonical_index.db": {
+   "mtime": 1789944426,
+   "sha16": "e3b0c44298fc1c14",
+   "bytes": 0
+  },
+  "data/a15_only_canonical.tar.gz": {
+   "mtime": 1789944426,
+   "sha16": "9535263a7d1e3db2",
+   "bytes": 3748677
+  },
+  "data/species.db": {
+   "mtime": 1789911436,
+   "sha16": "7a305f8717faa8e8",
+   "bytes": 24576
+  },
+  "data/agape_cascade_test_v2.py": {
+   "mtime": 1789950549,
+   "sha16": "2e2c2fea4c020bc5",
+   "bytes": 1209
+  },
+  "data/router_ledger.db": {
+   "mtime": 1789964131,
+   "sha16": "dad9aeace01a4074",
+   "bytes": 8192
+  },
+  "data/mesh_index.db": {
+   "mtime": 1789944426,
+   "sha16": "a50398aefb64e8cf",
+   "bytes": 2846720
+  },
+  "data/orchestrate_metrics.json": {
+   "mtime": 1789944426,
+   "sha16": "71e60b7a8610755b",
+   "bytes": 449
+  },
+  "data/terminal_log.db": {
+   "mtime": 1789944426,
+   "sha16": "6a64b5f2e279a02e",
+   "bytes": 20480
+  },
+  "data/fts_index.db": {
+   "mtime": 1789944426,
+   "sha16": "fcdb81f4a4fa632d",
+   "bytes": 22482944
+  },
+  "data/master_index.txt": {
+   "mtime": 1789974595,
+   "sha16": "041eb31f7d0aeb86",
+   "bytes": 39
+  },
+  "data/mesh_refine_v1.db": {
+   "mtime": 1789900924,
+   "sha16": "313ac1aa52cab2db",
+   "bytes": 131072
+  },
+  "data/lessons.db": {
+   "mtime": 1789975542,
+   "sha16": "a401606b95a4e4c8",
+   "bytes": 32768
+  },
+  "data/repo_drift.db": {
+   "mtime": 1789944426,
+   "sha16": "e3b0c44298fc1c14",
+   "bytes": 0
+  },
+  "data/md_fts_v1.db": {
+   "mtime": 1789944426,
+   "sha16": "b5d9135ceffc9600",
+   "bytes": 57344
+  },
+  "data/lb_loop.db": {
+   "mtime": 1789953751,
+   "sha16": "18123c9fb3a39c61",
+   "bytes": 114688
+  }
+ },
+ "count": 202
+}

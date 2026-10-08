@@ -1,0 +1,139 @@
+[banked] diagnostic_report=/home/jesse/openroot/data/ladder_diagnostics/tooling_green.20260926T205056Z.log
+[banked] timestamp_utc=20260926T205056Z
+
+=== PYTHON COMPILE: LAUNCH LADDER ===
+[banked] ladder py_compile PASS
+
+=== LADDER: STAGE REGISTRY ===
+39-STAGES = [
+40-    {
+41:        "name": "tooling_green",
+42-        "desc": "every bin/*.py compiles + all canaries present",
+43-        "maturity": "auto",
+44-        "checks": [
+45-            "for f in bin/*.py; do python3 -m py_compile \"$f\" || exit 1; done",
+46-            "grep -l 'A1COREV1\\|COMPOSTV1\\|HANDOFFV1\\|LADDERV1' bin/*.py",
+47-        ],
+48-        "calib": {"cmd": "python3 -m py_compile bin/a1_core_v1.py && echo TOOLING_CALIB_OK", "timeout": 30},
+49-        "runner": {"cmd": "python3 bin/a1_core_v1.py check-bin", "timeout": 120},
+50-    },
+51-    {
+52-        "name": "mistake_engine_ready",
+53-        "desc": "mistake→solution hash pairing active",
+54-        "maturity": "auto",  # UPGRADED: now has real runner instead of echo
+55-        "checks": [
+
+=== LADDER: ENTRY CHECK IMPLEMENTATION ===
+41:        "name": "tooling_green",
+45:            "for f in bin/*.py; do python3 -m py_compile \"$f\" || exit 1; done",
+48:        "calib": {"cmd": "python3 -m py_compile bin/a1_core_v1.py && echo TOOLING_CALIB_OK", "timeout": 30},
+49:        "runner": {"cmd": "python3 bin/a1_core_v1.py check-bin", "timeout": 120},
+57:            "python3 -m py_compile bin/mistake_engine_v1.py",
+68:            "python3 -m py_compile bin/agape_vector_index.py",
+80:            "python3 -m py_compile bin/a1_core_v1.py bin/compost_v1.py",
+82:        "calib": {"cmd": "python3 bin/a1_core_v1.py check-bin", "timeout": 120},
+150:def run_checks(con, st):
+157:def calibrate(con, st):
+268:        else: print("[held] entry checks red — repair instruments first")
+
+=== DATABASE: TOOLING GREEN ===
+name           status  maturity  checks_ok  attempts  last_action  last_ts  evidence
+-------------  ------  --------  ---------  --------  -----------  -------  --------
+tooling_green  locked  auto      0          0                                       
+
+=== DATABASE: ALL STAGES ===
+name                     status  maturity  checks_ok  attempts  last_action  last_ts
+-----------------------  ------  --------  ---------  --------  -----------  -------
+contributor_seal         locked  human     0          0                             
+first_release            locked  hybrid    0          0                             
+handoff_operational      locked  auto      0          0                             
+ledgers_green            locked  auto      0          0                             
+mistake_engine_ready     locked  auto      0          0                             
+public_face              locked  human     0          0                             
+tooling_green            locked  auto      0          0                             
+vector_index_calibrated  locked  hybrid    0          0                             
+
+=== GIT: CURRENT STATE ===
+ M README.md
+ D bin/superloop_mine_v2.py
+ M context_bridge/superloop_DASHBOARD.md
+ M data/model_registry.json
+ M data/superloop_chains.json
+ M docs/README.md
+?? .ci/
+?? CHANGELOG.md
+?? bin/a1_core_v1.py
+?? bin/agape_vector_index.py
+?? bin/build_openroot_knowledge_intake_v1.sh
+?? bin/calibrate_then_run_tooling_green_v1.sh
+?? bin/diagnose_tooling_green_v1.sh
+?? bin/fix_launch_ladder_bug1_v1.sh
+?? bin/fix_launch_ladder_bug1_v2.sh
+?? bin/handoff_manager.py
+?? bin/inspect_ladder_bug1_v1.sh
+?? bin/launch_ladder_v1.py
+?? bin/openroot_knowledge_intake_v1.py
+?? bin/quarantine_pyfails_final_v2/
+?? bin/repair_ladder_registration_v1.sh
+?? bin/repair_ladder_registration_v2.sh
+?? bin/run_tooling_green_v1.sh
+?? context_bridge/compost-20260926_053011.md
+?? context_bridge/court-v6-report-20260926_040026.md
+?? context_bridge/mistake_solutions/716ddae802871bbf.md
+?? context_bridge/mistake_solutions/cd0b126ad1ee890f.md
+?? context_bridge/relay-recovery-20260926_040359.md
+?? data/openroot_knowledge/
+?? docs/OPEN_HARDWARE_STATUS.md
+?? docs/PROJECT_ROADMAP.md
+?? docs/RELEASE_PROCESS.md
+?? quarantine_compile_fails_20260926_142638/
+?? quarantine_handoff_corrupt/
+
+331060e9 fix(ci): add SPDX headers to permaculture tooling
+57a79226 feat(permaculture): add evidence-gated router and hardware preview
+4fa0bc64 docs: add open hardware design packet framework
+d91898f9 chore: ignore local permaculture pulse reports
+16b9ea15 fix(ci): scope legacy script gate to changed files
+18b7cf3a [ADD] fleet hygiene arc v1-v7: squash-merge, fork-aware purge, uplift pathway audit, blob-sha adjudication, PR59 settlement, CI fossil fix; 103 branches purged, ~14 compost keys sealed — AI-assisted, human-gated
+0abec276 [MERGE] #93 chore: superloop CI governance foundation (jesseray718) [AI-assisted, human-gated]
+05595397 [SEAL] superloop session provenance: v1→v4 script evolution, paste-truncation lessons; AI-assisted, human-gated
+2c00199a [ADD][SUPERLOOP] wire mined registry routing into smart_router + CI gate (py_compile, SPDX, registry sanity); AI-assisted, human-gated
+7e12d4ee [ADD][SUPERLOOP] prompt-anchored recall, legacy-quarantine, 13-bucket classifier, gist pulse, 3 composted mistakes; AI-assisted, human-gated
+
+=== FILES: REQUIRED LADDER INSTRUMENTS ===
+[banked] present /home/jesse/openroot/bin/a1_core_v1.py
+[banked] py_compile PASS /home/jesse/openroot/bin/a1_core_v1.py
+[banked] present /home/jesse/openroot/bin/mistake_engine_v1.py
+[banked] py_compile PASS /home/jesse/openroot/bin/mistake_engine_v1.py
+[banked] present /home/jesse/openroot/bin/handoff_manager.py
+[banked] py_compile PASS /home/jesse/openroot/bin/handoff_manager.py
+[held] missing /home/jesse/openroot/bin/compost_v1.py
+[banked] present /home/jesse/openroot/bin/agape_vector_index.py
+  File "/home/jesse/openroot/bin/agape_vector_index.py", line 431
+    global LOCATION_CONTEXT
+    ^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: name 'LOCATION_CONTEXT' is assigned to before global declaration
+
+=== LADDER: CALIBRATE DIAGNOSTIC ===
+[held] entry checks red — repair instruments first
+[exit=0]
+[banked] calibrate_exit_code=0
+
+=== DATABASE: POST-CALIBRATE STATE ===
+name           status  maturity  checks_ok  attempts  last_action  last_ts  evidence
+-------------  ------  --------  ---------  --------  -----------  -------  --------
+tooling_green  locked  auto      0          0                                       
+
+=== DIRECT TOOL CHECK: A1 CHECK-BIN ===
+[banked] bin/ tracked in git: 1585 files
+[banked] a1_check_bin_exit_code=0
+
+=== GREP: RED/HELD/FAIL SIGNALS ===
+37:268:        else: print("[held] entry checks red — repair instruments first")
+76:?? bin/quarantine_pyfails_final_v2/
+89:?? quarantine_compile_fails_20260926_142638/
+101:7e12d4ee [ADD][SUPERLOOP] prompt-anchored recall, legacy-quarantine, 13-bucket classifier, gist pulse, 3 composted mistakes; AI-assisted, human-gated
+110:[held] missing /home/jesse/openroot/bin/compost_v1.py
+115:SyntaxError: name 'LOCATION_CONTEXT' is assigned to before global declaration
+118:[held] entry checks red — repair instruments first
+131:=== GREP: RED/HELD/FAIL SIGNALS ===

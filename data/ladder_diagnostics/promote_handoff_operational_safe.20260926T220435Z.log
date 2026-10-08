@@ -1,0 +1,29 @@
+=== HANDOFF SAFE PROMOTION ===
+[banked] py_compile PASS: ladder and handoff manager
+[banked] active_sessions_before_start=0
+[banked] direct single-session start proof begins
+[banked] handoff created: /home/jesse/openroot/context_bridge/handoffs/session_20260926_220435_6c2d280e.md
+[banked] session_id: 20260926_220435_6c2d280e
+[banked] handoff_phase=start
+[banked] handoff_start_exit_code=0
+[banked] active_sessions_after_start=1
+[banked] direct single-session end proof begins
+[banked] session_closed=20260926_220435_6c2d280e
+[banked] handoff created: /home/jesse/openroot/context_bridge/handoffs/session_20260926_220435_6c2d280e.md
+[banked] session_id: 20260926_220435_6c2d280e
+[banked] handoff_phase=end
+[banked] bounded handoff end PASS
+[banked] handoff_end_exit_code=0
+[banked] active_sessions_after_end=0
+[banked] latest_end_handoff=/home/jesse/openroot/context_bridge/handoffs/session_20260926_220435_6c2d280e.md
+[banked] pre_calibration_status=calibrated
+name                 status      maturity  checks_ok  attempts  last_action                         last_ts                    evidence                                                                                                  
+-------------------  ----------  --------  ---------  --------  ----------------------------------  -------------------------  ----------------------------------------------------------------------------------------------------------
+handoff_operational  calibrated  auto      0          0         calibration PASSED (real, bounded)  2026-09-26T21:56:39+00:00  [banked] handoff created: /home/jesse/openroot/context_bridge/handoffs/session_20260926_215639_69ae6e70.md
+                                                                                                                               [banked] session_id: 20260926_215639_69ae6e70                                                             
+                                                                                                                               [gate] Review handoff, then proceed with tasks                                                            
+[gate] bounded ladder calibration begins: handoff_operational
+[exit=0]
+[banked] ladder_calibrate_exit_code=0
+[banked] post_calibration_status=failed
+[held] ladder calibration did not establish calibrated state

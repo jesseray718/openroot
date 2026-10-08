@@ -1,0 +1,357 @@
+=== COMPOST RUNNER FORENSICS ===
+[banked] py_compile PASS: compost and ladder
+
+=== COMPOST HELP ===
+usage: compost_v1.py [-h] {register,list,search} ...
+
+positional arguments:
+  {register,list,search}
+
+options:
+  -h, --help            show this help message and exit
+
+=== COMPOST SUBCOMMAND HELPS ===
+--- command=register ---
+usage: compost_v1.py register [-h] [--visibility VISIBILITY] [--reach REACH]
+                              [--sysfit SYSFIT] [--floor-weight FLOOR_WEIGHT]
+                              [--effort EFFORT]
+                              path reason
+
+positional arguments:
+  path
+  reason
+
+options:
+  -h, --help            show this help message and exit
+  --visibility VISIBILITY
+  --reach REACH
+  --sysfit SYSFIT
+  --floor-weight FLOOR_WEIGHT
+  --effort EFFORT
+[banked] compost_register_help_exit_code=0
+--- command=list ---
+usage: compost_v1.py list [-h]
+
+options:
+  -h, --help  show this help message and exit
+[banked] compost_list_help_exit_code=0
+--- command=search ---
+usage: compost_v1.py search [-h] [--limit LIMIT] query
+
+positional arguments:
+  query
+
+options:
+  -h, --help     show this help message and exit
+  --limit LIMIT
+[banked] compost_search_help_exit_code=0
+
+=== COMPOST ARGPARSE / MAIN IMPLEMENTATION ===
+94:def register(args: argparse.Namespace) -> int:
+136:def listing(_: argparse.Namespace) -> int:
+150:def search(args: argparse.Namespace) -> int:
+167:def main() -> int:
+170:    add = sub.add_parser("register")
+171:    add.add_argument("path")
+172:    add.add_argument("reason")
+173:    add.add_argument("--visibility", type=float, default=1.0)
+174:    add.add_argument("--reach", type=float, default=1.0)
+175:    add.add_argument("--sysfit", type=float, default=1.0)
+176:    add.add_argument("--floor-weight", type=float, default=1.0)
+177:    add.add_argument("--effort", type=float, default=1.0)
+178:    add.set_defaults(func=register)
+179:    ls = sub.add_parser("list")
+180:    ls.set_defaults(func=listing)
+181:    find = sub.add_parser("search")
+182:    find.add_argument("query")
+183:    find.add_argument("--limit", type=int, default=20)
+184:    find.set_defaults(func=search)
+
+=== COMPOST TAIL ===
+     1	#!/usr/bin/env python3
+     2	# SPDX-License-Identifier: GPL-3.0-only
+     3	"""
+     4	[COMPOSTV1] OpenRoot waste-stream transmutation ledger.
+     5	
+     6	Registers candidates without deleting anything, extracts conservative keypoints,
+     7	indexes records with SQLite FTS5 when available, and ranks release candidates.
+     8	No delete operation exists in this utility.
+     9	"""
+    10	from __future__ import annotations
+    11	
+    12	import argparse
+    13	import hashlib
+    14	import json
+    15	import math
+    16	import re
+    17	import sqlite3
+    18	import sys
+    19	from datetime import datetime, timezone
+    20	from pathlib import Path
+    21	
+    22	REPO = Path("/home/jesse/openroot")
+    23	DATA = REPO / "data"
+    24	DB = DATA / "compost_v1.db"
+    25	TAG = "[COMPOSTV1]"
+    26	
+    27	
+    28	def now() -> str:
+    29	    return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+    30	
+    31	
+    32	def sha256_text(value: str) -> str:
+    33	    return hashlib.sha256(value.encode("utf-8")).hexdigest()
+    34	
+    35	
+    36	def connect() -> sqlite3.Connection:
+    37	    DATA.mkdir(parents=True, exist_ok=True)
+    38	    con = sqlite3.connect(DB)
+    39	    con.execute(
+    40	        """
+    41	        CREATE TABLE IF NOT EXISTS candidates (
+    42	            candidate_id TEXT PRIMARY KEY,
+    43	            path TEXT NOT NULL,
+    44	            reason TEXT NOT NULL,
+    45	            visibility REAL NOT NULL DEFAULT 1.0,
+    46	            reach REAL NOT NULL DEFAULT 1.0,
+    47	            sysfit REAL NOT NULL DEFAULT 1.0,
+    48	            floor_weight REAL NOT NULL DEFAULT 1.0,
+    49	            effort REAL NOT NULL DEFAULT 1.0,
+    50	            score REAL NOT NULL,
+    51	            status TEXT NOT NULL DEFAULT 'registered_no_delete',
+    52	            keypoints TEXT NOT NULL DEFAULT '',
+    53	            created_at TEXT NOT NULL,
+    54	            updated_at TEXT NOT NULL
+    55	        )
+    56	        """
+    57	    )
+    58	    con.execute(
+    59	        """
+    60	        CREATE VIRTUAL TABLE IF NOT EXISTS compost_fts
+    61	        USING fts5(candidate_id UNINDEXED, path, reason, keypoints)
+    62	        """
+    63	    )
+    64	    con.commit()
+    65	    return con
+    66	
+    67	
+    68	def keypoints(path: Path, limit: int = 12) -> str:
+    69	    if not path.is_file():
+    70	        return "path unavailable; metadata-only registration"
+    71	    try:
+    72	        raw = path.read_text(encoding="utf-8", errors="replace")
+    73	    except OSError as exc:
+    74	        return f"unreadable: {exc}"
+    75	    found = []
+    76	    for line in raw.splitlines():
+    77	        clean = line.strip()
+    78	        if re.match(r"^(#{1,6}\s+|[A-Z][A-Z0-9 _:-]{5,}$)", clean):
+    79	            found.append(clean[:240])
+    80	        if len(found) >= limit:
+    81	            break
+    82	    if found:
+    83	        return "\n".join(found)
+    84	    words = re.findall(r"[A-Za-z0-9][A-Za-z0-9_-]{2,}", raw[:12000])
+    85	    return " ".join(words[:80]) if words else "no extractable text"
+    86	
+    87	
+    88	def score(v: float, r: float, s: float, f: float, e: float) -> float:
+    89	    if e <= 0:
+    90	        raise ValueError("effort must be greater than zero")
+    91	    return (v * r * s * f) / math.pow(e, 1.5)
+    92	
+    93	
+    94	def register(args: argparse.Namespace) -> int:
+    95	    con = connect()
+    96	    candidate_path = Path(args.path)
+    97	    resolved = str(candidate_path.resolve(strict=False))
+    98	    points = keypoints(candidate_path)
+    99	    value = score(args.visibility, args.reach, args.sysfit, args.floor_weight, args.effort)
+   100	    cid = sha256_text(f"{resolved}\0{args.reason}")[:32]
+   101	    timestamp = now()
+   102	    con.execute(
+   103	        """
+   104	        INSERT INTO candidates(
+   105	            candidate_id,path,reason,visibility,reach,sysfit,floor_weight,
+   106	            effort,score,status,keypoints,created_at,updated_at
+   107	        ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)
+   108	        ON CONFLICT(candidate_id) DO UPDATE SET
+   109	            visibility=excluded.visibility,
+   110	            reach=excluded.reach,
+   111	            sysfit=excluded.sysfit,
+   112	            floor_weight=excluded.floor_weight,
+   113	            effort=excluded.effort,
+   114	            score=excluded.score,
+   115	            keypoints=excluded.keypoints,
+   116	            updated_at=excluded.updated_at
+   117	        """,
+   118	        (
+   119	            cid, resolved, args.reason, args.visibility, args.reach, args.sysfit,
+   120	            args.floor_weight, args.effort, value, "registered_no_delete",
+   121	            points, timestamp, timestamp,
+   122	        ),
+   123	    )
+   124	    con.execute("DELETE FROM compost_fts WHERE candidate_id=?", (cid,))
+   125	    con.execute(
+   126	        "INSERT INTO compost_fts(candidate_id,path,reason,keypoints) VALUES(?,?,?,?)",
+   127	        (cid, resolved, args.reason, points),
+   128	    )
+   129	    con.commit()
+   130	    print(f"[banked] candidate_id={cid}")
+   131	    print(f"[banked] score={value:.6f}")
+   132	    print("[held] registered_no_delete; human review required before any external cleanup")
+   133	    return 0
+   134	
+   135	
+   136	def listing(_: argparse.Namespace) -> int:
+   137	    con = connect()
+   138	    rows = con.execute(
+   139	        """
+   140	        SELECT candidate_id,path,reason,round(score,6),status,updated_at
+   141	        FROM candidates ORDER BY score DESC, updated_at DESC
+   142	        """
+   143	    ).fetchall()
+   144	    for row in rows:
+   145	        print("\t".join(str(value) for value in row))
+   146	    print(f"[banked] candidates={len(rows)}")
+   147	    return 0
+   148	
+   149	
+   150	def search(args: argparse.Namespace) -> int:
+   151	    con = connect()
+   152	    rows = con.execute(
+   153	        """
+   154	        SELECT candidate_id,path,reason,keypoints
+   155	        FROM compost_fts
+   156	        WHERE compost_fts MATCH ?
+   157	        LIMIT ?
+   158	        """,
+   159	        (args.query, args.limit),
+   160	    ).fetchall()
+   161	    for row in rows:
+   162	        print(json.dumps({"id": row[0], "path": row[1], "reason": row[2], "keypoints": row[3]}, ensure_ascii=False))
+   163	    print(f"[banked] matches={len(rows)}")
+   164	    return 0
+   165	
+   166	
+   167	def main() -> int:
+   168	    parser = argparse.ArgumentParser(prog="compost_v1.py")
+   169	    sub = parser.add_subparsers(dest="command", required=True)
+   170	    add = sub.add_parser("register")
+   171	    add.add_argument("path")
+   172	    add.add_argument("reason")
+   173	    add.add_argument("--visibility", type=float, default=1.0)
+   174	    add.add_argument("--reach", type=float, default=1.0)
+   175	    add.add_argument("--sysfit", type=float, default=1.0)
+   176	    add.add_argument("--floor-weight", type=float, default=1.0)
+   177	    add.add_argument("--effort", type=float, default=1.0)
+   178	    add.set_defaults(func=register)
+   179	    ls = sub.add_parser("list")
+   180	    ls.set_defaults(func=listing)
+   181	    find = sub.add_parser("search")
+   182	    find.add_argument("query")
+   183	    find.add_argument("--limit", type=int, default=20)
+   184	    find.set_defaults(func=search)
+   185	    args = parser.parse_args()
+   186	    return args.func(args)
+   187	
+   188	
+   189	if __name__ == "__main__":
+   190	    raise SystemExit(main())
+
+=== LEDGERS STAGE CONTRACT ===
+    {
+        "name": "ledgers_green",
+        "desc": "universal doc ledger + compost pipeline real scan (bounded)",
+        "maturity": "auto",
+        "checks": [
+            "test -f data/universal_doc_ledger.db",
+            "python3 -m py_compile bin/a1_core_v1.py bin/compost_v1.py",
+        ],
+        "calib": {"cmd": "python3 bin/a1_core_v1.py check-bin", "timeout": 120},
+        "runner": {"cmd": "python3 bin/a1_core_v1.py scan && python3 bin/compost_v1.py rank", "timeout": 3600},
+    },
+    {
+
+=== LADDER REFERENCES TO COMPOST ===
+75:        "name": "ledgers_green",
+80:            "python3 -m py_compile bin/a1_core_v1.py bin/compost_v1.py",
+83:        "runner": {"cmd": "python3 bin/a1_core_v1.py scan && python3 bin/compost_v1.py rank", "timeout": 3600},
+
+=== COMPOST DATA / DATABASE CANDIDATES ===
+0 data/sdcard-sync/kit/cas_ledger.sqlite-wal
+29 data/sdcard-sync/h003_ledger.log
+78 data/sdcard-sync/computational_flow/powp_ledger.json
+94 data/sdcard-sync/learnings/knowledge_base.json
+157 data/oracle_etha_ledger.jsonl
+176 context_bridge/compost-20260925_033441.md
+185 data/sdcard-sync/agape_kb/knowledge_base.json
+201 data/sdcard-sync/reports/ENERGY_TIME_LEDGER.md
+236 context_bridge/compost-20260925_032247.md
+236 context_bridge/compost-20260925_032317.md
+375 data/sdcard-sync/bridges/ledger_bridge.md
+430 data/sdcard-sync/context_bridge/thermo_ledger.jsonl
+450 data/sdcard-sync/bin/h003_ledger.sh
+568 data/sdcard-sync/research/h003_ledger.log
+602 data/sdcard-sync/acre/ledger.jsonl
+624 data/logs/boardroom_ledger.jsonl
+647 data/ladder_diagnostics/promote_ledgers_green_bounded.20260926T215236Z.log
+686 data/sdcard-sync/context_bridge/ledger_wiring.json
+692 data/sdcard-sync/ledger/thermo_ledger.json
+748 context_bridge/compost-20260925_053028.md
+810 data/sdcard-sync/bin/acre_ledger.sh
+928 context_bridge/compost-20260926_160713.md
+928 context_bridge/compost-20260926_160847.md
+928 context_bridge/compost-20260926_160848.md
+939 context_bridge/compost-20260926_053011.md
+1086 data/sdcard-sync/data/popw_ledger.jsonl
+1150 data/sdcard-sync/ledger/thermo_ledger.py
+1294 data/sdcard-sync/ledger.jsonl
+1952 context_bridge/release-notes-v2026.09.21-agape-cascade-ledger-discipline-20260921_062311.md
+1952 context_bridge/release-notes-v2026.09.21-agape-cascade-ledger-discipline-20260921_062339.md
+2009 context_bridge/release-notes-v2026.09.21-agape-cascade-ledger-discipline-20260921_062731.md
+2246 data/sdcard-sync/ledger/thermo_ledger_sqlite.py
+2566 context_bridge/release-notes-v2026.09.21-agape-cascade-ledger-discipline-20260921_061920.md
+2594 data/superlinear_ledger.jsonl
+2792 data/sdcard-sync/ledger/joule_ledger.jsonl
+2879 data/sdcard-sync/tools/infer_ledger.py
+4115 data/ladder_diagnostics/promote_ledgers_green.20260926T212754Z.log
+4292 data/sdcard-sync/tools/popw_ledger.py
+4497 data/master_heads_ledger_20260920_020335.json
+4930 data/sdcard-sync/acre/.syncthing.LEDGER.jsonl.tmp
+5732 data/sdcard-sync/ledger/merkle_joule_ledger.py
+8192 data/popw_ledger.db
+8192 data/router_ledger.db
+8192 data/routing_ledger.sqlite
+9823 data/sdcard-sync/bin/instrument_ledger.py
+10485 data/ladder_diagnostics/forensic_ledgers_compost_runner.20260926T215349Z.log
+14313 data/debate_ledger.jsonl
+19650 data/sdcard-sync/markor/oracle_ledger_record.md
+20480 data/goals_ledger.db
+28672 data/sdcard-sync/agape_kb/knowledge.db
+28672 data/sdcard-sync/kit/cas_ledger.sqlite
+32768 data/compost_v1.db
+32768 data/sdcard-sync/kit/cas_ledger.sqlite-shm
+52284 data/cost_ledger.jsonl
+61440 data/openroot_knowledge/openroot_knowledge.db
+69632 data/universal_doc_ledger.db
+647168 data/knowledge.db
+
+=== CURRENT LEDGERS STAGE ROW ===
+name           status  maturity  checks_ok  attempts  last_action                         last_ts                    evidence                                                                                                      
+-------------  ------  --------  ---------  --------  ----------------------------------  -------------------------  --------------------------------------------------------------------------------------------------------------
+ledgers_green  failed  auto      0          0         calibration PASSED (real, bounded)  2026-09-26T21:32:58+00:00  runner:  line 153, in main                                                                                    
+                                                                                                                         scan(con)                                                                                                 
+                                                                                                                       File "/home/jesse/openroot/bin/a1_core_v1.py", line 90, in scan                                             
+                                                                                                                         digest = sha256_file(fp)                                                                                  
+                                                                                                                                  ^^^^^^^^^^^^^^^                                                                                  
+                                                                                                                       File "/home/jesse/openroot/bin/a1_core_v1.py", line 59, in sha256_file                                      
+                                                                                                                         with open(p, "rb") as f:                                                                                  
+                                                                                                                              ^^^^^^^^^^^^^                                                                                        
+                                                                                                                     PermissionError: [Errno 13] Permission denied: '/home/jesse/openroot/consolidation-backups/untracked_collision
+
+=== GIT BOUNDARY ===
+?? bin/a1_core_v1.py
+?? bin/compost_v1.py
+?? bin/launch_ladder_v1.py
+?? data/a1_config.json

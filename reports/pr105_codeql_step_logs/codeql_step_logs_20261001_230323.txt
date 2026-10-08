@@ -1,0 +1,406 @@
+# CodeQL Advanced Raw Step-Log Capture
+generated_utc=2026-10-01T23:03:23Z
+repo=jesseray718/openroot
+
+### JOB=110326963982
+/home/jesse/openroot/reports/pr105_codeql_step_logs/job_110326963982.raw: Unicode text, UTF-8 (with BOM) text, with very long lines (523)
+
+#### Perform CodeQL Analysis context
+
+#### Error-like lines
+5246:2026-10-01T10:30:40.1205585Z [2026-10-01 10:30:40] [build-stdout] [WARN] [3] Failed to find ._signature, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/1159__dataclasses.py
+5267:2026-10-01T10:30:40.9885497Z [2026-10-01 10:30:40] [build-stdout] [WARN] [1] Failed to find ._sockets, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1264__eventloop.py
+5268:2026-10-01T10:30:40.9945410Z [2026-10-01 10:30:40] [build-stdout] [WARN] [1] Failed to find ._subprocesses, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1264__eventloop.py
+5269:2026-10-01T10:30:40.9947324Z [2026-10-01 10:30:40] [build-stdout] [WARN] [1] Failed to find ._testing, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1264__eventloop.py
+5282:2026-10-01T10:30:41.3111200Z [2026-10-01 10:30:41] [build-stdout] [INFO] [3] Extracted file /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0387_exceptions.py in 44ms
+5289:2026-10-01T10:30:41.4179299Z [2026-10-01 10:30:41] [build-stdout] [WARN] [3] Failed to find .ext, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0190___init__.py
+5290:2026-10-01T10:30:41.4212054Z [2026-10-01 10:30:41] [build-stdout] [WARN] [3] Failed to find .fallback, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0190___init__.py
+5291:2026-10-01T10:30:41.4285542Z [2026-10-01 10:30:41] [build-stdout] [WARN] [3] Failed to find ._cmsgpack, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0190___init__.py
+5301:2026-10-01T10:30:41.6425848Z [2026-10-01 10:30:41] [build-stdout] [WARN] [1] Failed to find .speech, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/1143_audio.py
+5302:2026-10-01T10:30:41.6455611Z [2026-10-01 10:30:41] [build-stdout] [WARN] [1] Failed to find .translations, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/1143_audio.py
+5303:2026-10-01T10:30:41.6485550Z [2026-10-01 10:30:41] [build-stdout] [WARN] [1] Failed to find .transcriptions, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/1143_audio.py
+5310:2026-10-01T10:30:42.1935964Z [2026-10-01 10:30:42] [build-stdout] [WARN] [4] Failed to find ._multipart, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1045__content.py
+5318:2026-10-01T10:30:42.4218536Z [2026-10-01 10:30:42] [build-stdout] [WARN] [4] Failed to find ..util, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0363___init__.py
+5332:2026-10-01T10:30:43.0375888Z [2026-10-01 10:30:43] [build-stdout] [WARN] [3] Failed to find .chat_completion_content_part_param, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/1131_chat_completion_tool_message_param.py
+5336:2026-10-01T10:30:43.1065818Z [2026-10-01 10:30:43] [build-stdout] [WARN] [3] Failed to find .styled, no parent package of Python module at /home/runner/work/openroot/openroot/bin/0336_tree.py
+5347:2026-10-01T10:30:43.3796094Z [2026-10-01 10:30:43] [build-stdout] [WARN] [3] Failed to find ._synchronization, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/1252__fileio.py
+5349:2026-10-01T10:30:43.3995662Z [2026-10-01 10:30:43] [build-stdout] [WARN] [1] Failed to find ._validators, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/1171__known_annotated_metadata.py
+5351:2026-10-01T10:30:43.6306189Z [2026-10-01 10:30:43] [build-stdout] [WARN] [1] Failed to find .abstract, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0388_resolution.py
+5359:2026-10-01T10:30:44.0495854Z [2026-10-01 10:30:44] [build-stdout] [INFO] [1] Extracted file /home/runner/work/openroot/openroot/bin/1251__exceptions.py in 59ms
+5370:2026-10-01T10:30:44.4865533Z [2026-10-01 10:30:44] [build-stdout] [WARN] [4] Failed to find .requirements, no parent package of Python module at /home/runner/work/openroot/openroot/bin/0201_dependency_groups.py
+5373:2026-10-01T10:30:44.5826074Z [2026-10-01 10:30:44] [build-stdout] [WARN] [3] Failed to find .auth, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0250_models.py
+5374:2026-10-01T10:30:44.5855551Z [2026-10-01 10:30:44] [build-stdout] [WARN] [3] Failed to find .cookies, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0250_models.py
+5375:2026-10-01T10:30:44.5857706Z [2026-10-01 10:30:44] [build-stdout] [WARN] [3] Failed to find .hooks, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0250_models.py
+5376:2026-10-01T10:30:44.5859800Z [2026-10-01 10:30:44] [build-stdout] [WARN] [3] Failed to find .status_codes, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0250_models.py
+5377:2026-10-01T10:30:44.5862219Z [2026-10-01 10:30:44] [build-stdout] [WARN] [3] Failed to find .structures, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0250_models.py
+5382:2026-10-01T10:30:44.8155879Z [2026-10-01 10:30:44] [build-stdout] [WARN] [4] Failed to find ..lowlevel, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1258__synchronization.py
+5388:2026-10-01T10:30:45.1885453Z [2026-10-01 10:30:45] [build-stderr] <unknown>:1: SyntaxWarning: invalid escape sequence '\s'
+5389:2026-10-01T10:30:45.1925120Z [2026-10-01 10:30:45] [build-stderr] <unknown>:1: SyntaxWarning: invalid escape sequence '\d'
+5395:2026-10-01T10:30:45.7096030Z [2026-10-01 10:30:45] [build-stdout] [INFO] [3] Extracted file /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/1061__exceptions.py in 59ms
+5396:2026-10-01T10:30:45.7145635Z [2026-10-01 10:30:45] [build-stdout] [WARN] [3] Failed to find ._path, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/1070___init__.py
+5397:2026-10-01T10:30:45.7175474Z [2026-10-01 10:30:45] [build-stdout] [WARN] [3] Failed to find ._proxy, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/1070___init__.py
+5398:2026-10-01T10:30:45.7195542Z [2026-10-01 10:30:45] [build-stdout] [WARN] [3] Failed to find ._typing, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/1070___init__.py
+5399:2026-10-01T10:30:45.7215478Z [2026-10-01 10:30:45] [build-stdout] [WARN] [3] Failed to find ._transform, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/1070___init__.py
+5400:2026-10-01T10:30:45.7218070Z [2026-10-01 10:30:45] [build-stdout] [WARN] [3] Failed to find ._reflection, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/1070___init__.py
+5424:2026-10-01T10:30:46.3465723Z [2026-10-01 10:30:46] [build-stdout] [WARN] [1] Failed to find .__version__, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/1039___init__.py
+5425:2026-10-01T10:30:46.3485720Z [2026-10-01 10:30:46] [build-stdout] [WARN] [1] Failed to find ._api, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/1039___init__.py
+5426:2026-10-01T10:30:46.3487808Z [2026-10-01 10:30:46] [build-stdout] [WARN] [1] Failed to find ._transports, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/1039___init__.py
+5427:2026-10-01T10:30:46.3489852Z [2026-10-01 10:30:46] [build-stdout] [WARN] [1] Failed to find ._main, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/1039___init__.py
+5432:2026-10-01T10:30:46.8047248Z [2026-10-01 10:30:46] [build-stdout] [WARN] [3] Failed to find ._spdx, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0399___init__.py
+5446:2026-10-01T10:30:47.6276908Z [2026-10-01 10:30:47] [build-stdout] [WARN] [1] Failed to find .chat_completion_content_part_text_param, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1118_chat_completion_content_part_param.py
+5447:2026-10-01T10:30:47.6306202Z [2026-10-01 10:30:47] [build-stdout] [WARN] [1] Failed to find .chat_completion_content_part_image_param, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1118_chat_completion_content_part_param.py
+5452:2026-10-01T10:30:48.0705742Z [2026-10-01 10:30:48] [build-stdout] [WARN] [1] Failed to find .runner, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1332___main__.py
+5462:2026-10-01T10:30:49.0575757Z [2026-10-01 10:30:49] [build-stdout] [WARN] [4] Failed to find ._windows, no parent package of Python module at /home/runner/work/openroot/openroot/bin/0344__api.py
+5463:2026-10-01T10:30:49.0605277Z [2026-10-01 10:30:49] [build-stdout] [WARN] [4] Failed to find ._macos, no parent package of Python module at /home/runner/work/openroot/openroot/bin/0344__api.py
+5464:2026-10-01T10:30:49.0645340Z [2026-10-01 10:30:49] [build-stdout] [WARN] [4] Failed to find ._openssl, no parent package of Python module at /home/runner/work/openroot/openroot/bin/0344__api.py
+5474:2026-10-01T10:30:49.8415572Z [2026-10-01 10:30:49] [build-stdout] [WARN] [2] Failed to find ..annotated_handlers, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1166__generate_schema.py
+5475:2026-10-01T10:30:49.8417677Z [2026-10-01 10:30:49] [build-stdout] [WARN] [2] Failed to find ..functional_validators, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1166__generate_schema.py
+5476:2026-10-01T10:30:49.8445411Z [2026-10-01 10:30:49] [build-stdout] [WARN] [2] Failed to find ..json_schema, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1166__generate_schema.py
+5477:2026-10-01T10:30:49.8447315Z [2026-10-01 10:30:49] [build-stdout] [WARN] [2] Failed to find ..version, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1166__generate_schema.py
+5478:2026-10-01T10:30:49.8449172Z [2026-10-01 10:30:49] [build-stdout] [WARN] [2] Failed to find ._docs_extraction, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1166__generate_schema.py
+5479:2026-10-01T10:30:49.8451127Z [2026-10-01 10:30:49] [build-stdout] [WARN] [2] Failed to find ._schema_gather, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1166__generate_schema.py
+5480:2026-10-01T10:30:49.8453099Z [2026-10-01 10:30:49] [build-stdout] [WARN] [2] Failed to find ._schema_generation_shared, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1166__generate_schema.py
+5481:2026-10-01T10:30:49.8455266Z [2026-10-01 10:30:49] [build-stdout] [WARN] [2] Failed to find ._dataclasses, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1166__generate_schema.py
+5499:2026-10-01T10:30:51.5025685Z [2026-10-01 10:30:51] [build-stdout] [WARN] [4] Failed to find .aes128, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0909___init__.py
+5500:2026-10-01T10:30:51.5027864Z [2026-10-01 10:30:51] [build-stdout] [WARN] [4] Failed to find .aes256, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0909___init__.py
+5505:2026-10-01T10:30:51.6265734Z [2026-10-01 10:30:51] [build-stdout] [WARN] [2] Failed to find .LXMessage, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0618___init__.py
+5506:2026-10-01T10:30:51.6295603Z [2026-10-01 10:30:51] [build-stdout] [WARN] [2] Failed to find .LXMRouter, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0618___init__.py
+5540:2026-10-01T10:30:52.9727875Z [2026-10-01 10:30:52] [build-stdout] [WARN] [4] Failed to find ._wrap, no parent package of Python module at /home/runner/work/openroot/openroot/bin/0332_text.py
+5541:2026-10-01T10:30:52.9735438Z [2026-10-01 10:30:52] [build-stdout] [WARN] [4] Failed to find .containers, no parent package of Python module at /home/runner/work/openroot/openroot/bin/0332_text.py
+5542:2026-10-01T10:30:52.9755337Z [2026-10-01 10:30:52] [build-stdout] [WARN] [4] Failed to find .control, no parent package of Python module at /home/runner/work/openroot/openroot/bin/0332_text.py
+5554:2026-10-01T10:30:53.2268793Z [2026-10-01 10:30:53] [build-stdout] [WARN] [3] Failed to find .markers, no parent package of Python module at /home/runner/work/openroot/openroot/bin/0206_pylock.py
+5555:2026-10-01T10:30:53.2295483Z [2026-10-01 10:30:53] [build-stdout] [WARN] [3] Failed to find .tags, no parent package of Python module at /home/runner/work/openroot/openroot/bin/0206_pylock.py
+5556:2026-10-01T10:30:53.2355467Z [2026-10-01 10:30:53] [build-stdout] [WARN] [2] Failed to find .resources, no parent package of Python module at /home/runner/work/openroot/openroot/bin/0180_scripts.py
+5596:2026-10-01T10:30:54.7436259Z [2026-10-01 10:30:54] [build-stdout] [WARN] [3] Failed to find ._urls, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/1055__utils.py
+5600:2026-10-01T10:30:55.0136201Z [2026-10-01 10:30:55] [build-stdout] [WARN] [3] Failed to find .__version__, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/1043__client.py
+5601:2026-10-01T10:30:55.0205931Z [2026-10-01 10:30:55] [build-stdout] [WARN] [3] Failed to find ._auth, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/1043__client.py
+5602:2026-10-01T10:30:55.0235668Z [2026-10-01 10:30:55] [build-stdout] [WARN] [3] Failed to find ._decoders, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/1043__client.py
+5603:2026-10-01T10:30:55.0255668Z [2026-10-01 10:30:55] [build-stdout] [WARN] [3] Failed to find ._status_codes, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/1043__client.py
+5604:2026-10-01T10:30:55.0257876Z [2026-10-01 10:30:55] [build-stdout] [WARN] [3] Failed to find ._transports, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/1043__client.py
+5607:2026-10-01T10:30:55.1505854Z [2026-10-01 10:30:55] [build-stdout] [INFO] [4] Extracted file /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0878_exceptions.py in 20ms
+5612:2026-10-01T10:30:55.2585905Z [2026-10-01 10:30:55] [build-stdout] [INFO] [1] Extracted file /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0894_exception.py in 15ms
+5616:2026-10-01T10:30:55.4285886Z [2026-10-01 10:30:55] [build-stdout] [WARN] [1] Failed to find .req_file, no parent package of Python module at /home/runner/work/openroot/openroot/bin/0477___init__.py
+5617:2026-10-01T10:30:55.4315387Z [2026-10-01 10:30:55] [build-stdout] [WARN] [1] Failed to find .req_install, no parent package of Python module at /home/runner/work/openroot/openroot/bin/0477___init__.py
+5618:2026-10-01T10:30:55.4345433Z [2026-10-01 10:30:55] [build-stdout] [WARN] [1] Failed to find .req_set, no parent package of Python module at /home/runner/work/openroot/openroot/bin/0477___init__.py
+5624:2026-10-01T10:30:55.7515984Z [2026-10-01 10:30:55] [build-stdout] [WARN] [1] Failed to find .Interfaces, no parent package of Python module at /home/runner/work/openroot/openroot/bin/0820_Reticulum.py
+5640:2026-10-01T10:30:56.8445534Z [2026-10-01 10:30:56] [build-stdout] [WARN] [3] Failed to find .completions, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1148_chat.py
+5654:2026-10-01T10:30:57.7655612Z [2026-10-01 10:30:57] [build-stdout] [WARN] [1] Failed to find ._ratio, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0304_layout.py
+5655:2026-10-01T10:30:57.7658070Z [2026-10-01 10:30:57] [build-stdout] [WARN] [1] Failed to find .repr, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0304_layout.py
+5659:2026-10-01T10:30:57.8945263Z [2026-10-01 10:30:57] [build-stdout] [INFO] [2] Extracted file /home/runner/work/openroot/openroot/bin/1061__exceptions.py in 69ms
+5668:2026-10-01T10:30:58.7015583Z [2026-10-01 10:30:58] [build-stdout] [WARN] [2] Failed to find ._path, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1070___init__.py
+5669:2026-10-01T10:30:58.7025452Z [2026-10-01 10:30:58] [build-stdout] [WARN] [2] Failed to find ._sync, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1070___init__.py
+5670:2026-10-01T10:30:58.7055308Z [2026-10-01 10:30:58] [build-stdout] [WARN] [2] Failed to find ._proxy, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1070___init__.py
+5671:2026-10-01T10:30:58.7075384Z [2026-10-01 10:30:58] [build-stdout] [WARN] [2] Failed to find ._typing, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1070___init__.py
+5672:2026-10-01T10:30:58.7105348Z [2026-10-01 10:30:58] [build-stdout] [WARN] [2] Failed to find ._transform, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1070___init__.py
+5673:2026-10-01T10:30:58.7115508Z [2026-10-01 10:30:58] [build-stdout] [WARN] [2] Failed to find ._reflection, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1070___init__.py
+5674:2026-10-01T10:30:58.7145436Z [2026-10-01 10:30:58] [build-stdout] [WARN] [2] Failed to find ._datetime_parse, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1070___init__.py
+5718:2026-10-01T10:31:01.9888446Z [2026-10-01 10:31:01] [build-stdout] [WARN] [4] Failed to find .._resource, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/1087_files.py
+5719:2026-10-01T10:31:01.9935498Z [2026-10-01 10:31:01] [build-stdout] [WARN] [4] Failed to find .._response, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/1087_files.py
+5720:2026-10-01T10:31:01.9937710Z [2026-10-01 10:31:01] [build-stdout] [WARN] [4] Failed to find .._base_client, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/1087_files.py
+5736:2026-10-01T10:31:02.9055969Z [2026-10-01 10:31:02] [build-stdout] [WARN] [1] Failed to find .log, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0877_aiosam.py
+5739:2026-10-01T10:31:03.0275600Z [2026-10-01 10:31:03] [build-stdout] [WARN] [2] Failed to find ._resources, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1255__sockets.py
+5740:2026-10-01T10:31:03.0277567Z [2026-10-01 10:31:03] [build-stdout] [WARN] [2] Failed to find ._synchronization, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1255__sockets.py
+5755:2026-10-01T10:31:03.5740897Z [2026-10-01 10:31:03] [build-stdout] [WARN] [4] Failed to find ..._streaming, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/1149_completions.py
+5790:2026-10-01T10:31:04.9705860Z [2026-10-01 10:31:04] [build-stdout] [WARN] [2] Failed to find .color, no parent package of Python module at /home/runner/work/openroot/openroot/bin/0329_syntax.py
+5804:2026-10-01T10:31:05.6700501Z [2026-10-01 10:31:05] [build-stderr] <unknown>:1: SyntaxWarning: invalid escape sequence '\s'
+5805:2026-10-01T10:31:05.6724955Z [2026-10-01 10:31:05] [build-stderr] <unknown>:1: SyntaxWarning: invalid escape sequence '\s'
+5806:2026-10-01T10:31:05.6754903Z [2026-10-01 10:31:05] [build-stderr] <unknown>:1: SyntaxWarning: invalid escape sequence '\w'
+5807:2026-10-01T10:31:05.6795086Z [2026-10-01 10:31:05] [build-stderr] <unknown>:1: SyntaxWarning: invalid escape sequence '\s'
+5808:2026-10-01T10:31:05.6845002Z [2026-10-01 10:31:05] [build-stderr] <unknown>:1: SyntaxWarning: invalid escape sequence '\.'
+5809:2026-10-01T10:31:05.6864932Z [2026-10-01 10:31:05] [build-stderr] <unknown>:1: SyntaxWarning: invalid escape sequence '\s'
+5819:2026-10-01T10:31:06.0209793Z [2026-10-01 10:31:06] [build-stdout] [WARN] [1] Failed to find ..aliases, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/1156__config.py
+5839:2026-10-01T10:31:07.3505947Z [2026-10-01 10:31:07] [build-stdout] [WARN] [1] Failed to find .chat_completion_message_tool_call_param, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1115_chat_completion_assistant_message_param.py
+5843:2026-10-01T10:31:07.8660124Z [2026-10-01 10:31:07] [build-stdout] [INFO] [1] Extracted file /home/runner/work/openroot/openroot/bin/0159_exceptions.py in 498ms
+5845:2026-10-01T10:31:07.9076064Z [2026-10-01 10:31:07] [build-stdout] [WARN] [1] Failed to find ._macos, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0344__api.py
+5846:2026-10-01T10:31:07.9105659Z [2026-10-01 10:31:07] [build-stdout] [WARN] [1] Failed to find ._openssl, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0344__api.py
+5849:2026-10-01T10:31:08.1676225Z [2026-10-01 10:31:08] [build-stdout] [WARN] [3] Failed to find .models, no parent package of Python module at /home/runner/work/openroot/openroot/bin/0241_adapters.py
+5878:2026-10-01T10:31:09.3326046Z [2026-10-01 10:31:09] [build-stdout] [WARN] [3] Failed to find .retry, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0366___init__.py
+5879:2026-10-01T10:31:09.3345662Z [2026-10-01 10:31:09] [build-stdout] [WARN] [3] Failed to find .wait, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0366___init__.py
+5898:2026-10-01T10:31:09.8476085Z [2026-10-01 10:31:09] [build-stdout] [WARN] [1] Failed to find ._async, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0996___init__.py
+5899:2026-10-01T10:31:09.8495523Z [2026-10-01 10:31:09] [build-stdout] [WARN] [1] Failed to find ._backends, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0996___init__.py
+5900:2026-10-01T10:31:09.8535492Z [2026-10-01 10:31:09] [build-stdout] [WARN] [1] Failed to find ._ssl, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0996___init__.py
+5911:2026-10-01T10:31:10.0627200Z [2026-10-01 10:31:10] [build-stdout] [WARN] [3] Failed to find ._spinners, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0325_spinner.py
+5912:2026-10-01T10:31:10.0655628Z [2026-10-01 10:31:10] [build-stdout] [WARN] [3] Failed to find .live, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0325_spinner.py
+5920:2026-10-01T10:31:10.2125461Z [2026-10-01 10:31:10] [build-stdout] [WARN] [3] Failed to find ._api, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1039___init__.py
+5921:2026-10-01T10:31:10.2155510Z [2026-10-01 10:31:10] [build-stdout] [WARN] [3] Failed to find ._content, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1039___init__.py
+5922:2026-10-01T10:31:10.2175473Z [2026-10-01 10:31:10] [build-stdout] [WARN] [3] Failed to find ._main, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1039___init__.py
+5945:2026-10-01T10:31:11.4835408Z [2026-10-01 10:31:11] [build-stderr] <unknown>:1: SyntaxWarning: invalid escape sequence '\['
+5971:2026-10-01T10:31:13.4105652Z [2026-10-01 10:31:13] [build-stdout] [WARN] [4] Failed to find .pretty, no parent package of Python module at /home/runner/work/openroot/openroot/attic/rescue_staging_vendor/0322_scope.py
+5974:2026-10-01T10:31:13.5375795Z [2026-10-01 10:31:13] [build-stdout] [WARN] [4] Failed to find ._client, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1067__streaming.py
+5975:2026-10-01T10:31:13.5405377Z [2026-10-01 10:31:13] [build-stdout] [WARN] [4] Failed to find ._base_client, no parent package of Python module at /home/runner/work/openroot/openroot/bin/1067__streaming.py
+5994:2026-10-01T10:31:14.5695356Z [2026-10-01 10:31:14] [build-stderr] <unknown>:1: SyntaxWarning: invalid escape sequence '\s'
+5995:2026-10-01T10:31:14.5746171Z [2026-10-01 10:31:14] [build-stderr] <unknown>:1: SyntaxWarning: invalid escape sequence '\s'
+5996:2026-10-01T10:31:14.5765238Z [2026-10-01 10:31:14] [build-stderr] <unknown>:1: SyntaxWarning: invalid escape sequence '\w'
+5997:2026-10-01T10:31:14.5788307Z [2026-10-01 10:31:14] [build-stderr] <unknown>:1: SyntaxWarning: invalid escape sequence '\s'
+5998:2026-10-01T10:31:14.5814928Z [2026-10-01 10:31:14] [build-stderr] <unknown>:1: SyntaxWarning: invalid escape sequence '\.'
+5999:2026-10-01T10:31:14.5815961Z [2026-10-01 10:31:14] [build-stderr] <unknown>:1: SyntaxWarning: invalid escape sequence '\s'
+6007:2026-10-01T10:31:14.8375464Z [2026-10-01 10:31:14] [build-stdout] [WARN] [2] Failed to find .pure25519, no parent package of Python module at /home/runner/work/openroot/openroot/bin/0832_Ed25519.py
+6284:2026-10-01T10:33:06.8297752Z Interpreted pathproblem query "Information exposure through an exception" (py/stack-trace-exposure) at path /home/runner/work/_temp/codeql_databases/python/results/codeql/python-queries/Security/CWE-209/StackTraceExposure.bqrs.
+6311:2026-10-01T10:33:06.8434066Z Interpreted problem query "Failure to use secure cookies" (py/insecure-cookie) at path /home/runner/work/_temp/codeql_databases/python/results/codeql/python-queries/Security/CWE-614/InsecureCookie.bqrs.
+6327:2026-10-01T10:33:08.1905563Z Exporting results to SARIF...
+6328:2026-10-01T10:33:08.5026908Z Exported results to SARIF (313ms).
+6332:2026-10-01T10:33:08.5297346Z   * attic/rescue_staging_vendor/0031_unified_agape_engine.py#L955C4:4: A parse error occurred while processing `attic/rescue_staging_vendor/0031_unified_agape_engine.py`, and as a result this file could not be analyzed. Check the syntax of the file using the `python -m py_compile` command and correct any invalid syntax.
+6333:2026-10-01T10:33:08.5299262Z   * attic/rescue_staging_vendor/0598_generate_rmh_report.py#L48C0:0: A parse error occurred while processing `attic/rescue_staging_vendor/0598_generate_rmh_report.py`, and as a result this file could not be analyzed. Check the syntax of the file using the `python -m py_compile` command and correct any invalid syntax.
+6334:2026-10-01T10:33:08.5301267Z   * attic/rescue_staging_vendor/0591_rmh_labyrinth_model.py#L1C4:4: A parse error occurred while processing `attic/rescue_staging_vendor/0591_rmh_labyrinth_model.py`, and as a result this file could not be analyzed. Check the syntax of the file using the `python -m py_compile` command and correct any invalid syntax.
+6335:2026-10-01T10:33:08.5303548Z   * attic/rescue_staging_vendor/0061_diagnose_and_fix.py#L61C40:40: A parse error occurred while processing `attic/rescue_staging_vendor/0061_diagnose_and_fix.py`, and as a result this file could not be analyzed. Check the syntax of the file using the `python -m py_compile` command and correct any invalid syntax.
+6336:2026-10-01T10:33:08.5306440Z   * attic/rescue_staging_vendor/0590_test_psychrometric_model.py#L1C4:4: A parse error occurred while processing `attic/rescue_staging_vendor/0590_test_psychrometric_model.py`, and as a result this file could not be analyzed. Check the syntax of the file using the `python -m py_compile` command and correct any invalid syntax.
+6337:2026-10-01T10:33:08.5308426Z   * attic/rescue_staging_vendor/0592_psychrometric_model.py#L1C4:4: A parse error occurred while processing `attic/rescue_staging_vendor/0592_psychrometric_model.py`, and as a result this file could not be analyzed. Check the syntax of the file using the `python -m py_compile` command and correct any invalid syntax.
+6338:2026-10-01T10:33:08.5310208Z   * attic/rescue_staging_vendor/0044_v7.py#L8C1:1: A parse error occurred while processing `attic/rescue_staging_vendor/0044_v7.py`, and as a result this file could not be analyzed. Check the syntax of the file using the `python -m py_compile` command and correct any invalid syntax.
+6339:2026-10-01T10:33:08.5312043Z   * attic/rescue_staging_vendor/0589_test_rmh_labyrinth_model.py#L1C4:4: A parse error occurred while processing `attic/rescue_staging_vendor/0589_test_rmh_labyrinth_model.py`, and as a result this file could not be analyzed. Check the syntax of the file using the `python -m py_compile` command and correct any invalid syntax.
+6340:2026-10-01T10:33:08.5314598Z   * attic/rescue_staging_vendor/0627_fusion_core.py#L58C32:32: A parse error occurred while processing `attic/rescue_staging_vendor/0627_fusion_core.py`, and as a result this file could not be analyzed. Check the syntax of the file using the `python -m py_compile` command and correct any invalid syntax.
+6341:2026-10-01T10:33:08.5316447Z   * attic/rescue_staging_vendor/0796_agape_board_advisor.py#L46C82:82: A parse error occurred while processing `attic/rescue_staging_vendor/0796_agape_board_advisor.py`, and as a result this file could not be analyzed. Check the syntax of the file using the `python -m py_compile` command and correct any invalid syntax.
+6342:2026-10-01T10:33:08.5318257Z   * attic/rescue_staging_vendor/0761_deploy_v101.py#L1C1:1: A parse error occurred while processing `attic/rescue_staging_vendor/0761_deploy_v101.py`, and as a result this file could not be analyzed. Check the syntax of the file using the `python -m py_compile` command and correct any invalid syntax.
+6343:2026-10-01T10:33:08.5320070Z   * attic/rescue_staging_vendor/0593_generate_rmh_report.py#L1C4:4: A parse error occurred while processing `attic/rescue_staging_vendor/0593_generate_rmh_report.py`, and as a result this file could not be analyzed. Check the syntax of the file using the `python -m py_compile` command and correct any invalid syntax.
+6344:2026-10-01T10:33:08.5321968Z   * attic/rescue_staging_vendor/1351_meta_upgrade_20260805_000212.py#L1C0:0: A parse error occurred while processing `attic/rescue_staging_vendor/1351_meta_upgrade_20260805_000212.py`, and as a result this file could not be analyzed. Check the syntax of the file using the `python -m py_compile` command and correct any invalid syntax.
+6345:2026-10-01T10:33:08.5323855Z   * attic/rescue_staging_vendor/0770_energy_theorems.py#L1C1:1: A parse error occurred while processing `attic/rescue_staging_vendor/0770_energy_theorems.py`, and as a result this file could not be analyzed. Check the syntax of the file using the `python -m py_compile` command and correct any invalid syntax.
+6346:2026-10-01T10:33:08.5326818Z   * attic/rescue_staging_vendor/0665_chunk_sender.py#L1C0:0: A parse error occurred while processing `attic/rescue_staging_vendor/0665_chunk_sender.py`, and as a result this file could not be analyzed. Check the syntax of the file using the `python -m py_compile` command and correct any invalid syntax.
+6348:2026-10-01T10:33:08.5328653Z ##[group]Skipped improved incremental analysis because it failed previously with similar hardware resources (1 result)
+6349:2026-10-01T10:33:08.5330556Z   * Improved incremental analysis was skipped because it previously failed for this repository with CodeQL version 2.27.1 on a runner with similar hardware resources. One possible reason for this is that improved incremental analysis can require a significant amount of disk space for some repositories. If you want to try re-enabling improved incremental analysis, increase the disk space available to the runner. If that doesn't help, contact GitHub Support for further assistance.
+6355:2026-10-01T10:33:08.5337129Z Post-processing sarif files: ["/home/runner/work/openroot/results/python.sarif"]
+6356:2026-10-01T10:33:08.5454588Z Adding fingerprints to SARIF file. See https://docs.github.com/en/code-security/reference/code-scanning/sarif-support-for-code-scanning#data-for-preventing-duplicated-alerts for more information.
+6357:2026-10-01T10:33:08.5457474Z ##[group]Uploading code scanning results
+6358:2026-10-01T10:33:08.6056524Z Uploading results
+6359:2026-10-01T10:33:09.3602853Z Successfully uploaded results
+6362:2026-10-01T10:33:14.6590747Z Analysis upload status is failed.
+6364:2026-10-01T10:33:14.6614651Z ##[error]Code Scanning could not process the submitted SARIF file:
+6368:2026-10-01T10:33:16.0419483Z [command]/opt/hostedtoolcache/CodeQL/2.27.1/x64/codeql/codeql database export-diagnostics /home/runner/work/_temp/codeql_databases --db-cluster --format=sarif-latest --output=../codeql-failed-run.sarif --sarif-include-diagnostics -vvv --sarif-category /language:python
+6389:2026-10-01T10:33:17.0353003Z Uploading failed SARIF file ../codeql-failed-run.sarif
+6390:2026-10-01T10:33:17.0354931Z Post-processing sarif files: ["../codeql-failed-run.sarif"]
+6391:2026-10-01T10:33:17.0369110Z Adding fingerprints to SARIF file. See https://docs.github.com/en/code-security/reference/code-scanning/sarif-support-for-code-scanning#data-for-preventing-duplicated-alerts for more information.
+6392:2026-10-01T10:33:17.0371589Z ##[group]Uploading code scanning results
+
+#### Last lines
+2026-10-01T10:33:08.5294666Z ##[endgroup]
+2026-10-01T10:33:08.5295157Z Analysis produced the following diagnostic information:
+2026-10-01T10:33:08.5296038Z ##[group]Could not process some files due to syntax errors (15 results)
+2026-10-01T10:33:08.5297346Z   * attic/rescue_staging_vendor/0031_unified_agape_engine.py#L955C4:4: A parse error occurred while processing `attic/rescue_staging_vendor/0031_unified_agape_engine.py`, and as a result this file could not be analyzed. Check the syntax of the file using the `python -m py_compile` command and correct any invalid syntax.
+2026-10-01T10:33:08.5299262Z   * attic/rescue_staging_vendor/0598_generate_rmh_report.py#L48C0:0: A parse error occurred while processing `attic/rescue_staging_vendor/0598_generate_rmh_report.py`, and as a result this file could not be analyzed. Check the syntax of the file using the `python -m py_compile` command and correct any invalid syntax.
+2026-10-01T10:33:08.5301267Z   * attic/rescue_staging_vendor/0591_rmh_labyrinth_model.py#L1C4:4: A parse error occurred while processing `attic/rescue_staging_vendor/0591_rmh_labyrinth_model.py`, and as a result this file could not be analyzed. Check the syntax of the file using the `python -m py_compile` command and correct any invalid syntax.
+2026-10-01T10:33:08.5303548Z   * attic/rescue_staging_vendor/0061_diagnose_and_fix.py#L61C40:40: A parse error occurred while processing `attic/rescue_staging_vendor/0061_diagnose_and_fix.py`, and as a result this file could not be analyzed. Check the syntax of the file using the `python -m py_compile` command and correct any invalid syntax.
+2026-10-01T10:33:08.5306440Z   * attic/rescue_staging_vendor/0590_test_psychrometric_model.py#L1C4:4: A parse error occurred while processing `attic/rescue_staging_vendor/0590_test_psychrometric_model.py`, and as a result this file could not be analyzed. Check the syntax of the file using the `python -m py_compile` command and correct any invalid syntax.
+2026-10-01T10:33:08.5308426Z   * attic/rescue_staging_vendor/0592_psychrometric_model.py#L1C4:4: A parse error occurred while processing `attic/rescue_staging_vendor/0592_psychrometric_model.py`, and as a result this file could not be analyzed. Check the syntax of the file using the `python -m py_compile` command and correct any invalid syntax.
+2026-10-01T10:33:08.5310208Z   * attic/rescue_staging_vendor/0044_v7.py#L8C1:1: A parse error occurred while processing `attic/rescue_staging_vendor/0044_v7.py`, and as a result this file could not be analyzed. Check the syntax of the file using the `python -m py_compile` command and correct any invalid syntax.
+2026-10-01T10:33:08.5312043Z   * attic/rescue_staging_vendor/0589_test_rmh_labyrinth_model.py#L1C4:4: A parse error occurred while processing `attic/rescue_staging_vendor/0589_test_rmh_labyrinth_model.py`, and as a result this file could not be analyzed. Check the syntax of the file using the `python -m py_compile` command and correct any invalid syntax.
+2026-10-01T10:33:08.5314598Z   * attic/rescue_staging_vendor/0627_fusion_core.py#L58C32:32: A parse error occurred while processing `attic/rescue_staging_vendor/0627_fusion_core.py`, and as a result this file could not be analyzed. Check the syntax of the file using the `python -m py_compile` command and correct any invalid syntax.
+2026-10-01T10:33:08.5316447Z   * attic/rescue_staging_vendor/0796_agape_board_advisor.py#L46C82:82: A parse error occurred while processing `attic/rescue_staging_vendor/0796_agape_board_advisor.py`, and as a result this file could not be analyzed. Check the syntax of the file using the `python -m py_compile` command and correct any invalid syntax.
+2026-10-01T10:33:08.5318257Z   * attic/rescue_staging_vendor/0761_deploy_v101.py#L1C1:1: A parse error occurred while processing `attic/rescue_staging_vendor/0761_deploy_v101.py`, and as a result this file could not be analyzed. Check the syntax of the file using the `python -m py_compile` command and correct any invalid syntax.
+2026-10-01T10:33:08.5320070Z   * attic/rescue_staging_vendor/0593_generate_rmh_report.py#L1C4:4: A parse error occurred while processing `attic/rescue_staging_vendor/0593_generate_rmh_report.py`, and as a result this file could not be analyzed. Check the syntax of the file using the `python -m py_compile` command and correct any invalid syntax.
+2026-10-01T10:33:08.5321968Z   * attic/rescue_staging_vendor/1351_meta_upgrade_20260805_000212.py#L1C0:0: A parse error occurred while processing `attic/rescue_staging_vendor/1351_meta_upgrade_20260805_000212.py`, and as a result this file could not be analyzed. Check the syntax of the file using the `python -m py_compile` command and correct any invalid syntax.
+2026-10-01T10:33:08.5323855Z   * attic/rescue_staging_vendor/0770_energy_theorems.py#L1C1:1: A parse error occurred while processing `attic/rescue_staging_vendor/0770_energy_theorems.py`, and as a result this file could not be analyzed. Check the syntax of the file using the `python -m py_compile` command and correct any invalid syntax.
+2026-10-01T10:33:08.5326818Z   * attic/rescue_staging_vendor/0665_chunk_sender.py#L1C0:0: A parse error occurred while processing `attic/rescue_staging_vendor/0665_chunk_sender.py`, and as a result this file could not be analyzed. Check the syntax of the file using the `python -m py_compile` command and correct any invalid syntax.
+2026-10-01T10:33:08.5328039Z ##[endgroup]
+2026-10-01T10:33:08.5328653Z ##[group]Skipped improved incremental analysis because it failed previously with similar hardware resources (1 result)
+2026-10-01T10:33:08.5330556Z   * Improved incremental analysis was skipped because it previously failed for this repository with CodeQL version 2.27.1 on a runner with similar hardware resources. One possible reason for this is that improved incremental analysis can require a significant amount of disk space for some repositories. If you want to try re-enabling improved incremental analysis, increase the disk space available to the runner. If that doesn't help, contact GitHub Support for further assistance.
+2026-10-01T10:33:08.5332177Z     
+2026-10-01T10:33:08.5333359Z     Improved incremental analysis will be automatically retried when the next version of CodeQL is released. You can also manually trigger a retry by [removing](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/manage-caches#deleting-cache-entries) `codeql-overlay-status-*` entries from the Actions cache.
+2026-10-01T10:33:08.5335215Z ##[endgroup]
+2026-10-01T10:33:08.5335351Z 
+2026-10-01T10:33:08.5335751Z To speed up pull request analysis, file coverage information is only enabled when analyzing the default branch and protected branches.
+2026-10-01T10:33:08.5337129Z Post-processing sarif files: ["/home/runner/work/openroot/results/python.sarif"]
+2026-10-01T10:33:08.5454588Z Adding fingerprints to SARIF file. See https://docs.github.com/en/code-security/reference/code-scanning/sarif-support-for-code-scanning#data-for-preventing-duplicated-alerts for more information.
+2026-10-01T10:33:08.5457474Z ##[group]Uploading code scanning results
+2026-10-01T10:33:08.6056524Z Uploading results
+2026-10-01T10:33:09.3602853Z Successfully uploaded results
+2026-10-01T10:33:09.3603597Z ##[endgroup]
+2026-10-01T10:33:09.3704943Z ##[group]Waiting for processing to finish
+2026-10-01T10:33:14.6590747Z Analysis upload status is failed.
+2026-10-01T10:33:14.6591742Z ##[endgroup]
+2026-10-01T10:33:14.6614651Z ##[error]Code Scanning could not process the submitted SARIF file:
+CodeQL analyses from advanced configurations cannot be processed when the default setup is enabled
+2026-10-01T10:33:15.0332997Z Post job cleanup.
+2026-10-01T10:33:15.2961589Z Post job cleanup.
+2026-10-01T10:33:16.0419483Z [command]/opt/hostedtoolcache/CodeQL/2.27.1/x64/codeql/codeql database export-diagnostics /home/runner/work/_temp/codeql_databases --db-cluster --format=sarif-latest --output=../codeql-failed-run.sarif --sarif-include-diagnostics -vvv --sarif-category /language:python
+2026-10-01T10:33:16.5566158Z Writing logs to /home/runner/work/_temp/codeql_databases/log/database-export-diagnostics-20261001.103316.549.log.
+2026-10-01T10:33:16.8127761Z Interpreting diagnostic messages...
+2026-10-01T10:33:16.8140224Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/python/diagnostic...
+2026-10-01T10:33:16.8154003Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/python/diagnostic/extractors...
+2026-10-01T10:33:16.8155673Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/python/diagnostic/extractors/yaml...
+2026-10-01T10:33:16.8157113Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/python/diagnostic/extractors/python...
+2026-10-01T10:33:16.8158439Z Found diagnostics file /home/runner/work/_temp/codeql_databases/python/diagnostic/extractors/python/worker-4.jsonl.
+2026-10-01T10:33:16.8562469Z Found diagnostics file /home/runner/work/_temp/codeql_databases/python/diagnostic/extractors/python/worker-1.jsonl.
+2026-10-01T10:33:16.8638393Z Found diagnostics file /home/runner/work/_temp/codeql_databases/python/diagnostic/extractors/python/worker-2.jsonl.
+2026-10-01T10:33:16.8710062Z Found diagnostics file /home/runner/work/_temp/codeql_databases/python/diagnostic/extractors/python/worker-3.jsonl.
+2026-10-01T10:33:16.8763687Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/python/diagnostic/tracer...
+2026-10-01T10:33:16.8767478Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/python/diagnostic/codeql-action...
+2026-10-01T10:33:16.8769323Z Found diagnostics file /home/runner/work/_temp/codeql_databases/python/diagnostic/codeql-action/codeql-action-2026-10-01T102824.942Z-1.json.
+2026-10-01T10:33:16.8832652Z Found diagnostics file /home/runner/work/_temp/codeql_databases/python/diagnostic/codeql-action/codeql-action-2026-10-01T102824.942Z-0.json.
+2026-10-01T10:33:16.8873154Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/diagnostic...
+2026-10-01T10:33:16.8874601Z Found diagnostics file /home/runner/work/_temp/codeql_databases/diagnostic/cli-diagnostics-add-20261001T102828.854Z.json.
+2026-10-01T10:33:16.8932554Z Found 24 raw diagnostic messages.
+2026-10-01T10:33:16.9165811Z There are multiple results visible on the status page for the diagnostic 'Could not process some files due to syntax errors'. Combining them into a single result.
+2026-10-01T10:33:16.9225101Z Processed diagnostic messages (removed 0 due to limits, created 1 summary diagnostics for status page).
+2026-10-01T10:33:16.9235074Z Interpreted diagnostic messages (109ms).
+2026-10-01T10:33:17.0353003Z Uploading failed SARIF file ../codeql-failed-run.sarif
+2026-10-01T10:33:17.0354931Z Post-processing sarif files: ["../codeql-failed-run.sarif"]
+2026-10-01T10:33:17.0369110Z Adding fingerprints to SARIF file. See https://docs.github.com/en/code-security/reference/code-scanning/sarif-support-for-code-scanning#data-for-preventing-duplicated-alerts for more information.
+2026-10-01T10:33:17.0371589Z ##[group]Uploading code scanning results
+2026-10-01T10:33:17.0575133Z CodeQL job status was configuration error.
+2026-10-01T10:33:17.0664038Z Sending status report for init-post step.
+2026-10-01T10:33:17.3455861Z Status report sent for init-post step.
+2026-10-01T10:33:17.3649453Z Post job cleanup.
+2026-10-01T10:33:17.4542057Z [command]/usr/bin/git version
+2026-10-01T10:33:17.4592237Z git version 2.55.0
+2026-10-01T10:33:17.4632407Z Temporarily overriding HOME='/home/runner/work/_temp/861db5b1-5b61-4794-aa5c-ece86976a4c3' before making global git config changes
+2026-10-01T10:33:17.4633781Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-01T10:33:17.4648884Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/openroot/openroot
+2026-10-01T10:33:17.4698983Z Removing SSH command configuration
+2026-10-01T10:33:17.4699910Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-01T10:33:17.4754013Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-01T10:33:17.5097120Z Removing HTTP extra header
+2026-10-01T10:33:17.5103791Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-01T10:33:17.5143863Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-01T10:33:17.5447190Z Removing includeIf entries pointing to credentials config files
+2026-10-01T10:33:17.5456199Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-01T10:33:17.5490525Z includeif.gitdir:/home/runner/work/openroot/openroot/.git.path
+2026-10-01T10:33:17.5491510Z includeif.gitdir:/home/runner/work/openroot/openroot/.git/worktrees/*.path
+2026-10-01T10:33:17.5492472Z includeif.gitdir:/github/workspace/.git.path
+2026-10-01T10:33:17.5493061Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-01T10:33:17.5500698Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/openroot/openroot/.git.path
+2026-10-01T10:33:17.5529180Z /home/runner/work/_temp/git-credentials-ce95bf1b-b8dd-4e39-ada6-5eaac4620781.config
+2026-10-01T10:33:17.5542594Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/openroot/openroot/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-ce95bf1b\-b8dd\-4e39\-ada6\-5eaac4620781\.config
+2026-10-01T10:33:17.5599462Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/openroot/openroot/.git/worktrees/*.path
+2026-10-01T10:33:17.5636032Z /home/runner/work/_temp/git-credentials-ce95bf1b-b8dd-4e39-ada6-5eaac4620781.config
+2026-10-01T10:33:17.5645400Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/openroot/openroot/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-ce95bf1b\-b8dd\-4e39\-ada6\-5eaac4620781\.config
+2026-10-01T10:33:17.5685954Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-01T10:33:17.5716543Z /github/runner_temp/git-credentials-ce95bf1b-b8dd-4e39-ada6-5eaac4620781.config
+2026-10-01T10:33:17.5724159Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-ce95bf1b\-b8dd\-4e39\-ada6\-5eaac4620781\.config
+2026-10-01T10:33:17.5763222Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-01T10:33:17.5791441Z /github/runner_temp/git-credentials-ce95bf1b-b8dd-4e39-ada6-5eaac4620781.config
+2026-10-01T10:33:17.5801459Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-ce95bf1b\-b8dd\-4e39\-ada6\-5eaac4620781\.config
+2026-10-01T10:33:17.5845725Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-01T10:33:17.6090018Z Removing credentials config '/home/runner/work/_temp/git-credentials-ce95bf1b-b8dd-4e39-ada6-5eaac4620781.config'
+2026-10-01T10:33:17.6244844Z Cleaning up orphan processes
+3336f116d0fe7b3aecdca02e67a25a980a6e0b5ae66d8aabd58ada6fd93608db  /home/jesse/openroot/reports/pr105_codeql_step_logs/job_110326963982.raw
+3336f116d0fe7b3aecdca02e67a25a980a6e0b5ae66d8aabd58ada6fd93608db  /home/jesse/openroot/reports/pr105_codeql_step_logs/job_110326963982.txt
+
+### JOB=110326964268
+/home/jesse/openroot/reports/pr105_codeql_step_logs/job_110326964268.raw: Unicode text, UTF-8 (with BOM) text, with very long lines (523)
+
+#### Perform CodeQL Analysis context
+
+#### Error-like lines
+181:2026-10-01T10:28:27.2881528Z     "databaseInterpretResultsSupportsSarifRunProperty": true,
+192:2026-10-01T10:28:27.2886327Z     "sarifMergeRunsFromEqualCategory": true,
+1011:2026-10-01T10:28:33.4159759Z   upload: always
+1014:2026-10-01T10:28:33.4160734Z   upload-database: true
+1021:2026-10-01T10:28:33.4164630Z   expect-error: false
+1026:2026-10-01T10:28:33.4166131Z   CODEQL_ACTION_FEATURE_SARIF_COMBINE: true
+1027:2026-10-01T10:28:33.4166424Z   CODEQL_ACTION_FEATURE_WILL_UPLOAD: true
+1199:2026-10-01T10:28:50.2087213Z Exporting results to SARIF...
+1200:2026-10-01T10:28:50.3768105Z Exported results to SARIF (166ms).
+1203:2026-10-01T10:28:50.4025110Z Post-processing sarif files: ["/home/runner/work/openroot/results/actions.sarif"]
+1204:2026-10-01T10:28:50.4041110Z Adding fingerprints to SARIF file. See https://docs.github.com/en/code-security/reference/code-scanning/sarif-support-for-code-scanning#data-for-preventing-duplicated-alerts for more information.
+1205:2026-10-01T10:28:50.4043535Z ##[group]Uploading code scanning results
+1206:2026-10-01T10:28:50.4280495Z Uploading results
+1207:2026-10-01T10:28:50.7784333Z Successfully uploaded results
+1210:2026-10-01T10:28:55.9936453Z Analysis upload status is failed.
+1212:2026-10-01T10:28:55.9965413Z ##[error]Code Scanning could not process the submitted SARIF file:
+1216:2026-10-01T10:28:57.3020527Z [command]/opt/hostedtoolcache/CodeQL/2.27.1/x64/codeql/codeql database export-diagnostics /home/runner/work/_temp/codeql_databases --db-cluster --format=sarif-latest --output=../codeql-failed-run.sarif --sarif-include-diagnostics -vvv --sarif-category /language:actions
+1230:2026-10-01T10:28:58.2888108Z Uploading failed SARIF file ../codeql-failed-run.sarif
+1231:2026-10-01T10:28:58.2890234Z Post-processing sarif files: ["../codeql-failed-run.sarif"]
+1232:2026-10-01T10:28:58.2909947Z Adding fingerprints to SARIF file. See https://docs.github.com/en/code-security/reference/code-scanning/sarif-support-for-code-scanning#data-for-preventing-duplicated-alerts for more information.
+1233:2026-10-01T10:28:58.2911306Z ##[group]Uploading code scanning results
+
+#### Last lines
+2026-10-01T10:28:49.7605262Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.1/x64/codeql/qlpacks/codeql/actions-queries/0.6.36/Security/CWE-349/CachePoisoningViaDirectCache.ql...
+2026-10-01T10:28:49.7675064Z  ... found results file at /home/runner/work/_temp/codeql_databases/actions/results/codeql/actions-queries/Security/CWE-349/CachePoisoningViaDirectCache.bqrs.
+2026-10-01T10:28:49.7710023Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.1/x64/codeql/qlpacks/codeql/actions-queries/0.6.36/Security/CWE-349/CachePoisoningViaPoisonableStep.ql...
+2026-10-01T10:28:49.7714006Z  ... found results file at /home/runner/work/_temp/codeql_databases/actions/results/codeql/actions-queries/Security/CWE-349/CachePoisoningViaPoisonableStep.bqrs.
+2026-10-01T10:28:49.7744734Z Interpreting /opt/hostedtoolcache/CodeQL/2.27.1/x64/codeql/qlpacks/codeql/actions-queries/0.6.36/Diagnostics/SuccessfullyExtractedFiles.ql...
+2026-10-01T10:28:49.7774812Z  ... found results file at /home/runner/work/_temp/codeql_databases/actions/results/codeql/actions-queries/Diagnostics/SuccessfullyExtractedFiles.bqrs.
+2026-10-01T10:28:49.8864234Z Interpreted pathproblem query "Code injection" (actions/code-injection/critical) at path /home/runner/work/_temp/codeql_databases/actions/results/codeql/actions-queries/Security/CWE-094/CodeInjectionCritical.bqrs.
+2026-10-01T10:28:49.8882632Z Interpreted problem query "Untrusted Checkout TOCTOU" (actions/untrusted-checkout-toctou/high) at path /home/runner/work/_temp/codeql_databases/actions/results/codeql/actions-queries/Security/CWE-367/UntrustedCheckoutTOCTOUHigh.bqrs.
+2026-10-01T10:28:49.8915318Z Interpreted pathproblem query "Untrusted Checkout TOCTOU" (actions/untrusted-checkout-toctou/critical) at path /home/runner/work/_temp/codeql_databases/actions/results/codeql/actions-queries/Security/CWE-367/UntrustedCheckoutTOCTOUCritical.bqrs.
+2026-10-01T10:28:49.8924074Z Interpreted problem query "Workflow does not contain permissions" (actions/missing-workflow-permissions) at path /home/runner/work/_temp/codeql_databases/actions/results/codeql/actions-queries/Security/CWE-275/MissingActionsPermissions.bqrs.
+2026-10-01T10:28:49.8944496Z Interpreted problem query "Excessive Secrets Exposure" (actions/excessive-secrets-exposure) at path /home/runner/work/_temp/codeql_databases/actions/results/codeql/actions-queries/Security/CWE-312/ExcessiveSecretsExposure.bqrs.
+2026-10-01T10:28:49.8947607Z Interpreted problem query "Storage of sensitive information in GitHub Actions artifact" (actions/secrets-in-artifacts) at path /home/runner/work/_temp/codeql_databases/actions/results/codeql/actions-queries/Security/CWE-312/SecretsInArtifacts.bqrs.
+2026-10-01T10:28:49.8952321Z Interpreted problem query "Unmasked Secret Exposure" (actions/unmasked-secret-exposure) at path /home/runner/work/_temp/codeql_databases/actions/results/codeql/actions-queries/Security/CWE-312/UnmaskedSecretExposure.bqrs.
+2026-10-01T10:28:49.8955808Z Interpreted problem query "Checkout of untrusted code in a privileged context" (actions/untrusted-checkout/high) at path /home/runner/work/_temp/codeql_databases/actions/results/codeql/actions-queries/Security/CWE-829/UntrustedCheckoutHigh.bqrs.
+2026-10-01T10:28:49.8958989Z Interpreted pathproblem query "Artifact poisoning" (actions/artifact-poisoning/critical) at path /home/runner/work/_temp/codeql_databases/actions/results/codeql/actions-queries/Security/CWE-829/ArtifactPoisoningCritical.bqrs.
+2026-10-01T10:28:49.8962530Z Interpreted pathproblem query "Checkout of untrusted code in a privileged context" (actions/untrusted-checkout/critical) at path /home/runner/work/_temp/codeql_databases/actions/results/codeql/actions-queries/Security/CWE-829/UntrustedCheckoutCritical.bqrs.
+2026-10-01T10:28:49.8966462Z Interpreted pathproblem query "Environment variable built from user-controlled sources" (actions/envvar-injection/critical) at path /home/runner/work/_temp/codeql_databases/actions/results/codeql/actions-queries/Security/CWE-077/EnvVarInjectionCritical.bqrs.
+2026-10-01T10:28:49.8970007Z Interpreted pathproblem query "PATH environment variable built from user-controlled sources" (actions/envpath-injection/critical) at path /home/runner/work/_temp/codeql_databases/actions/results/codeql/actions-queries/Security/CWE-077/EnvPathInjectionCritical.bqrs.
+2026-10-01T10:28:49.8973533Z Interpreted problem query "Improper Access Control" (actions/improper-access-control) at path /home/runner/work/_temp/codeql_databases/actions/results/codeql/actions-queries/Security/CWE-285/ImproperAccessControl.bqrs.
+2026-10-01T10:28:49.8976597Z Interpreted problem query "Use of a known vulnerable action" (actions/vulnerable-action) at path /home/runner/work/_temp/codeql_databases/actions/results/codeql/actions-queries/Security/CWE-1395/UseOfKnownVulnerableAction.bqrs.
+2026-10-01T10:28:49.8979823Z Interpreted pathproblem query "Cache Poisoning via code injection" (actions/cache-poisoning/code-injection) at path /home/runner/work/_temp/codeql_databases/actions/results/codeql/actions-queries/Security/CWE-349/CachePoisoningViaCodeInjection.bqrs.
+2026-10-01T10:28:49.8983357Z Interpreted pathproblem query "Cache Poisoning via caching of untrusted files" (actions/cache-poisoning/direct-cache) at path /home/runner/work/_temp/codeql_databases/actions/results/codeql/actions-queries/Security/CWE-349/CachePoisoningViaDirectCache.bqrs.
+2026-10-01T10:28:49.8986789Z Interpreted pathproblem query "Cache Poisoning via execution of untrusted code" (actions/cache-poisoning/poisonable-step) at path /home/runner/work/_temp/codeql_databases/actions/results/codeql/actions-queries/Security/CWE-349/CachePoisoningViaPoisonableStep.bqrs.
+2026-10-01T10:28:49.8990063Z Interpreted diagnostic query "Extracted files" (actions/diagnostics/successfully-extracted-files) at path /home/runner/work/_temp/codeql_databases/actions/results/codeql/actions-queries/Diagnostics/SuccessfullyExtractedFiles.bqrs.
+2026-10-01T10:28:49.8994089Z Reading source archive /home/runner/work/_temp/codeql_databases/actions/src.zip
+2026-10-01T10:28:49.9982809Z Interpreting diagnostic messages...
+2026-10-01T10:28:50.0231003Z Found 1 raw diagnostic messages.
+2026-10-01T10:28:50.0334371Z Processed diagnostic messages (removed 0 due to limits, created 0 summary diagnostics for status page).
+2026-10-01T10:28:50.0354760Z Interpreted diagnostic messages (35ms).
+2026-10-01T10:28:50.2087213Z Exporting results to SARIF...
+2026-10-01T10:28:50.3768105Z Exported results to SARIF (166ms).
+2026-10-01T10:28:50.4012676Z ##[endgroup]
+2026-10-01T10:28:50.4013686Z To speed up pull request analysis, file coverage information is only enabled when analyzing the default branch and protected branches.
+2026-10-01T10:28:50.4025110Z Post-processing sarif files: ["/home/runner/work/openroot/results/actions.sarif"]
+2026-10-01T10:28:50.4041110Z Adding fingerprints to SARIF file. See https://docs.github.com/en/code-security/reference/code-scanning/sarif-support-for-code-scanning#data-for-preventing-duplicated-alerts for more information.
+2026-10-01T10:28:50.4043535Z ##[group]Uploading code scanning results
+2026-10-01T10:28:50.4280495Z Uploading results
+2026-10-01T10:28:50.7784333Z Successfully uploaded results
+2026-10-01T10:28:50.7785176Z ##[endgroup]
+2026-10-01T10:28:50.7908646Z ##[group]Waiting for processing to finish
+2026-10-01T10:28:55.9936453Z Analysis upload status is failed.
+2026-10-01T10:28:55.9937421Z ##[endgroup]
+2026-10-01T10:28:55.9965413Z ##[error]Code Scanning could not process the submitted SARIF file:
+CodeQL analyses from advanced configurations cannot be processed when the default setup is enabled
+2026-10-01T10:28:56.3797472Z Post job cleanup.
+2026-10-01T10:28:56.6641655Z Post job cleanup.
+2026-10-01T10:28:57.3020527Z [command]/opt/hostedtoolcache/CodeQL/2.27.1/x64/codeql/codeql database export-diagnostics /home/runner/work/_temp/codeql_databases --db-cluster --format=sarif-latest --output=../codeql-failed-run.sarif --sarif-include-diagnostics -vvv --sarif-category /language:actions
+2026-10-01T10:28:57.8156802Z Writing logs to /home/runner/work/_temp/codeql_databases/log/database-export-diagnostics-20261001.102857.812.log.
+2026-10-01T10:28:58.0957636Z Interpreting diagnostic messages...
+2026-10-01T10:28:58.0971303Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/actions/diagnostic...
+2026-10-01T10:28:58.0974765Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/actions/diagnostic/extractors...
+2026-10-01T10:28:58.0976698Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/actions/diagnostic/extractors/actions...
+2026-10-01T10:28:58.0978876Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/actions/diagnostic/tracer...
+2026-10-01T10:28:58.0980223Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/actions/diagnostic/codeql-action...
+2026-10-01T10:28:58.0986594Z Found diagnostics file /home/runner/work/_temp/codeql_databases/actions/diagnostic/codeql-action/codeql-action-2026-10-01T102829.171Z-0.json.
+2026-10-01T10:28:58.1373032Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/diagnostic...
+2026-10-01T10:28:58.1384546Z Found diagnostics file /home/runner/work/_temp/codeql_databases/diagnostic/cli-diagnostics-add-20261001T102833.120Z.json.
+2026-10-01T10:28:58.1453107Z Found 3 raw diagnostic messages.
+2026-10-01T10:28:58.1619963Z Processed diagnostic messages (removed 0 due to limits, created 0 summary diagnostics for status page).
+2026-10-01T10:28:58.1634887Z Interpreted diagnostic messages (66ms).
+2026-10-01T10:28:58.2888108Z Uploading failed SARIF file ../codeql-failed-run.sarif
+2026-10-01T10:28:58.2890234Z Post-processing sarif files: ["../codeql-failed-run.sarif"]
+2026-10-01T10:28:58.2909947Z Adding fingerprints to SARIF file. See https://docs.github.com/en/code-security/reference/code-scanning/sarif-support-for-code-scanning#data-for-preventing-duplicated-alerts for more information.
+2026-10-01T10:28:58.2911306Z ##[group]Uploading code scanning results
+2026-10-01T10:28:58.3108716Z CodeQL job status was configuration error.
+2026-10-01T10:28:58.3181450Z Sending status report for init-post step.
+2026-10-01T10:28:58.6746331Z Status report sent for init-post step.
+2026-10-01T10:28:58.6922711Z Post job cleanup.
+2026-10-01T10:28:58.7840093Z [command]/usr/bin/git version
+2026-10-01T10:28:58.7888013Z git version 2.55.0
+2026-10-01T10:28:58.7929912Z Temporarily overriding HOME='/home/runner/work/_temp/7a071afb-cc7a-46f0-8937-0c564db6e434' before making global git config changes
+2026-10-01T10:28:58.7931248Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-01T10:28:58.7936522Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/openroot/openroot
+2026-10-01T10:28:58.7977546Z Removing SSH command configuration
+2026-10-01T10:28:58.7985050Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-01T10:28:58.8042028Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-01T10:28:58.8324519Z Removing HTTP extra header
+2026-10-01T10:28:58.8325787Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-01T10:28:58.8372182Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-01T10:28:58.8646509Z Removing includeIf entries pointing to credentials config files
+2026-10-01T10:28:58.8654628Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-01T10:28:58.8692938Z includeif.gitdir:/home/runner/work/openroot/openroot/.git.path
+2026-10-01T10:28:58.8694667Z includeif.gitdir:/home/runner/work/openroot/openroot/.git/worktrees/*.path
+2026-10-01T10:28:58.8695354Z includeif.gitdir:/github/workspace/.git.path
+2026-10-01T10:28:58.8696012Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-01T10:28:58.8706874Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/openroot/openroot/.git.path
+2026-10-01T10:28:58.8738497Z /home/runner/work/_temp/git-credentials-f3fe19b2-fb4a-4c85-939b-70a79d2e9763.config
+2026-10-01T10:28:58.8752104Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/openroot/openroot/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-f3fe19b2\-fb4a\-4c85\-939b\-70a79d2e9763\.config
+2026-10-01T10:28:58.8808355Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/openroot/openroot/.git/worktrees/*.path
+2026-10-01T10:28:58.8857425Z /home/runner/work/_temp/git-credentials-f3fe19b2-fb4a-4c85-939b-70a79d2e9763.config
+2026-10-01T10:28:58.8869076Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/openroot/openroot/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-f3fe19b2\-fb4a\-4c85\-939b\-70a79d2e9763\.config
+2026-10-01T10:28:58.8916572Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-01T10:28:58.8951374Z /github/runner_temp/git-credentials-f3fe19b2-fb4a-4c85-939b-70a79d2e9763.config
+2026-10-01T10:28:58.8961477Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-f3fe19b2\-fb4a\-4c85\-939b\-70a79d2e9763\.config
+2026-10-01T10:28:58.9005783Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-01T10:28:58.9037133Z /github/runner_temp/git-credentials-f3fe19b2-fb4a-4c85-939b-70a79d2e9763.config
+2026-10-01T10:28:58.9047387Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-f3fe19b2\-fb4a\-4c85\-939b\-70a79d2e9763\.config
+2026-10-01T10:28:58.9096223Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-01T10:28:58.9352474Z Removing credentials config '/home/runner/work/_temp/git-credentials-f3fe19b2-fb4a-4c85-939b-70a79d2e9763.config'
+2026-10-01T10:28:58.9501405Z Cleaning up orphan processes
+e707558f75af41713d1e29ae2c8af8aa00edc34b6d060122eed0f8d52a2c8618  /home/jesse/openroot/reports/pr105_codeql_step_logs/job_110326964268.raw
+e707558f75af41713d1e29ae2c8af8aa00edc34b6d060122eed0f8d52a2c8618  /home/jesse/openroot/reports/pr105_codeql_step_logs/job_110326964268.txt

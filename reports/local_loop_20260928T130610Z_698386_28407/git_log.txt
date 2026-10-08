@@ -1,0 +1,25 @@
+2e9c6839 (HEAD -> main, origin/main) [FIX] handoff: fill PR #9 URL placeholder (AI-assisted, human-gated)
+7c99a3d1 [DOC] session closeout: vision_all sealed, ladder 8/8, dedup v2 live, incidents composted (AI-assisted, human-gated)
+a168fb9c [FIX] dedup v2: WAL+periodic commits heal lock incident b35f1f72181c9; rung 8 open_invitation; first sweep 23k files / 5.9k dup groups (AI-assisted, human-gated)
+a9316b19 [DOC] vision handoff: OSHW repo family + dedup doctrine + legacy-to-architecture mapping (AI-assisted, human-gated)
+2265c4aa [FIX] guard stage-status demotion: verified rungs immune (patched at both UPDATE sites — second anchor discovered mid-patch, idempotent for re-runs) + mistake_engine calib subcommand + error-swallow class + bank 6 mistake solutions + config-vs-runtime law (AI-assisted, human-gated)
+c01fe429 [ADD] dedicated RAPL sampler daemon + systemd unit — VERIFIED RUNNING
+6c6ed8db [FIX] doctrine: untrack runtime derivatives (chains.json, DASHBOARD.md), codify config-vs-runtime law
+87f48e4a feat(trio): bank verified mistake-engine repair scripts + kernel builders
+f2eddb5f [ADD] superlinear v1 — canonical gauntlet router + PIPELINE.md
+30b790bc [ADD] rung 8 → open_invitation: CONTRIBUTING.md credit covenant + ladder reframing (AI-assisted, human-gated)
+930dbc9c [FIX] track linked docs: OPEN_HARDWARE_STATUS, PROJECT_ROADMAP, RELEASE_PROCESS (disk-exists ≠ git-tracked; AI-assisted, human-gated)
+66b47cee [DOC] credit @Reh1t for RAG integration PR #63 + contributor_seal instrument retarget (AI-assisted, human-gated)
+47c04564 [FIX] quarantine superloop_mine_v2 + bank ladder repair/tooling scripts + release manifest v0.3.1 (AI-assisted, human-gated)
+6349a90d (tag: v0.3.1-thermal-cascade-docs) docs(thermal-cascade): add source-linked architecture and evidence register
+4b4584ea docs(thermal-cascade): add L0 build and evidence boundaries
+da6c8d30 docs: establish OpenRoot ecosystem map and public entry point
+d1c1f76a feat(local): add bounded evidence pipeline foundations
+331060e9 fix(ci): add SPDX headers to permaculture tooling
+57a79226 feat(permaculture): add evidence-gated router and hardware preview
+4fa0bc64 docs: add open hardware design packet framework
+d91898f9 chore: ignore local permaculture pulse reports
+16b9ea15 fix(ci): scope legacy script gate to changed files
+18b7cf3a [ADD] fleet hygiene arc v1-v7: squash-merge, fork-aware purge, uplift pathway audit, blob-sha adjudication, PR59 settlement, CI fossil fix; 103 branches purged, ~14 compost keys sealed — AI-assisted, human-gated
+0abec276 [MERGE] #93 chore: superloop CI governance foundation (jesseray718) [AI-assisted, human-gated]
+05595397 [SEAL] superloop session provenance: v1→v4 script evolution, paste-truncation lessons; AI-assisted, human-gated

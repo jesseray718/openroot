@@ -1,0 +1,4 @@
+  File "<stdin>", line 9
+    print(f"[evidence] tok/s={tps:.2f} eval_count={d[chr(39)+chr(39)] if False else d[\"eval_count\"]} load_s={d.get(\"load_duration\",0)/1e9:.1f}")
+                                                                                       ^
+SyntaxError: unexpected character after line continuation character

@@ -1,0 +1,101 @@
+{
+  "generated": "2026-10-05T03:15:01.360486+00:00",
+  "bucket_counts": {
+    "other": 200,
+    "author": 20,
+    "net": 3,
+    "model": 6,
+    "system": 1,
+    "files": 11,
+    "exec": 6,
+    "bridge": 1,
+    "gitops": 1,
+    "gate": 1
+  },
+  "transition_weights": [
+    {
+      "rule": "other->other",
+      "count": 166
+    },
+    {
+      "rule": "other->author",
+      "count": 18
+    },
+    {
+      "rule": "author->other",
+      "count": 13
+    },
+    {
+      "rule": "other->files",
+      "count": 7
+    },
+    {
+      "rule": "files->other",
+      "count": 6
+    },
+    {
+      "rule": "model->other",
+      "count": 5
+    },
+    {
+      "rule": "author->exec",
+      "count": 5
+    },
+    {
+      "rule": "other->model",
+      "count": 4
+    },
+    {
+      "rule": "exec->other",
+      "count": 3
+    },
+    {
+      "rule": "files->files",
+      "count": 3
+    }
+  ],
+  "routing_weights": {
+    "bridge": {
+      "route_to": "smart_router",
+      "pref_model": "7b"
+    },
+    "gitops": {
+      "route_to": "smart_router",
+      "pref_model": "7b"
+    },
+    "model": {
+      "route_to": "qwen2.5-coder:7b",
+      "pref_model": "7b"
+    },
+    "author": {
+      "route_to": "7b",
+      "pref_model": "7b"
+    },
+    "exec": {
+      "route_to": "3b",
+      "pref_model": "3b"
+    },
+    "gate": {
+      "route_to": "team_gate",
+      "pref_model": "3b"
+    },
+    "system": {
+      "route_to": "local_shell",
+      "pref_model": "none"
+    },
+    "net": {
+      "route_to": "smart_router",
+      "pref_model": "7b"
+    },
+    "files": {
+      "route_to": "local_shell",
+      "pref_model": "none"
+    },
+    "other": {
+      "route_to": "lumo",
+      "pref_model": "max"
+    }
+  },
+  "dominant_bucket": "other",
+  "recalled_n": 250
+}

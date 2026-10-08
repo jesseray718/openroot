@@ -1,0 +1,14 @@
+[banked] py_compile PASS: ladder and mistake engine
+[banked] pre_run_status=calibrated
+name                  status      maturity  checks_ok  attempts  last_action                         last_ts                    evidence                                               
+--------------------  ----------  --------  ---------  --------  ----------------------------------  -------------------------  -------------------------------------------------------
+mistake_engine_ready  calibrated  auto      0          0         calibration PASSED (real, bounded)  2026-09-26T21:00:42+00:00  usage: hook EC CMD | solve KEY FIX | show KEY | compost
+[gate] full real run plus exit verification begins: mistake_engine_ready
+[exit=0]
+[banked] ladder_run_exit_code=0
+[banked] final_status=failed
+name                  status  maturity  checks_ok  attempts  last_action                         last_ts                    evidence                                                       
+--------------------  ------  --------  ---------  --------  ----------------------------------  -------------------------  ---------------------------------------------------------------
+mistake_engine_ready  failed  auto      0          0         calibration PASSED (real, bounded)  2026-09-26T21:02:12+00:00  runner: usage: hook EC CMD | solve KEY FIX | show KEY | compost
+[held] mistake_engine_ready final status='failed'
+[gate] inspect exact runner or exit-verification failure

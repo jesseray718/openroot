@@ -1,0 +1,5 @@
+[BANKWK1v1] START 20260924_191651
+[gate] MISSING: bin/merge_ledgers.py — skipped
+[gate] MISSING: bin/warm_models.sh — skipped
+[banked] all 20 scripts pass syntax gates
+fatal: pathspec 'bin/merge_ledgers.py' did not match any files

@@ -1,0 +1,32 @@
+[
+ {
+  "candidate": "equal-spread",
+  "verdict": "VALID",
+  "metrics": {
+   "floor_lift": 0.2375,
+   "gap_compression": 0.10000000000000003,
+   "weight_score": 5.527680526598298,
+   "regressions": []
+  }
+ },
+ {
+  "candidate": "bottom-first (Mt 25:40)",
+  "verdict": "VALID",
+  "metrics": {
+   "floor_lift": 0.425,
+   "gap_compression": 0.24499999999999994,
+   "weight_score": 12.05532549839374,
+   "regressions": []
+  }
+ },
+ {
+  "candidate": "merit-top (beast-pattern control)",
+  "verdict": "VALID",
+  "metrics": {
+   "floor_lift": 0.0475,
+   "gap_compression": -0.03749999999999992,
+   "weight_score": 1.416646537420167,
+   "regressions": []
+  }
+ }
+]

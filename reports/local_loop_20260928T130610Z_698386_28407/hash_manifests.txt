@@ -1,0 +1,8 @@
+--- host=a15 ---
+pidfile=absent
+manifest_db=absent path=/home/jesse/openroot/data/hash_manifest_a15.db
+--- host=optiplex ---
+pidfile=/home/jesse/openroot/run/hash_assign_optiplex.pid pid=371069
+    PID    PPID     ELAPSED %CPU %MEM STAT CMD
+ 371069       1    01:50:47  2.1  0.0 S    bash /home/jesse/openroot/hash_assign_v1.sh
+rows=18848 ok=18848 errors=0 unique=11029 latest=2026-09-28T08:06:13-05:00

@@ -1,0 +1,556 @@
+=== HANDOFF LADDER CALIBRATION FORENSICS ===
+[banked] py_compile PASS: ladder and handoff
+
+=== CURRENT STAGE ROW ===
+name                 status  maturity  checks_ok  attempts  last_action                         last_ts                    evidence                                                                           
+-------------------  ------  --------  ---------  --------  ----------------------------------  -------------------------  -----------------------------------------------------------------------------------
+handoff_operational  failed  auto      0          0         calibration PASSED (real, bounded)  2026-09-26T22:04:35+00:00  calibration: Traceback (most recent call last):                                    
+                                                                                                                             File "/home/jesse/openroot/bin/handoff_manager.py", line 299, in <module>        
+                                                                                                                               main()                                                                         
+                                                                                                                             File "/home/jesse/openroot/bin/handoff_manager.py", line 275, in main            
+                                                                                                                               generate_handoff(con, session_id, "start")                                     
+                                                                                                                             File "/home/jesse/openroot/bin/handoff_manager.py", line 217, in generate_handoff
+                                                                                                                               con.execute(                                                                   
+                                                                                                                           sqlite3.IntegrityError: UNIQUE constraint fai                                      
+
+=== STAGE SOURCE BLOCK ===
+87-        "runner": {
+88-            "cmd": "timeout 30s python3 bin/a1_core_v1.py scan --max-files 500 && python3 bin/compost_v1.py list",
+89-            "timeout": 45,
+90-        },
+91-    },
+92-    {
+93:        "name": "handoff_operational",
+94-        "desc": "bounded single-session close plus durable handoff record",
+95-        "maturity": "auto",
+96-        "checks": [
+97-            "python3 bin/handoff_manager.py show",
+98-            "test -s context_bridge/session_ledger.db",
+99-        ],
+100-        "calib": {
+101-            "cmd": "python3 bin/handoff_manager.py start",
+102-            "timeout": 30,
+103-        },
+104-        "runner": {
+105-            "cmd": "timeout 30s python3 bin/handoff_manager.py end",
+106-            "timeout": 45,
+107-        },
+108-    },
+109-    {
+110-        "name": "contributor_seal",
+111-        "desc": "Reh1t PR #53 resolved with credit — goodwill is scarcest asset",
+112-        "maturity": "human",  # TRUE human-only: judgment cannot be automated
+113-        "checks": ['gh pr view 53 --repo jesseray718/openroot --json state -q .state | grep -qi merged'],
+114-        "calib": {"cmd": "gh pr view 53 --repo jesseray718/openroot --json state,author,title", "timeout": 60},
+115-        "runner": {"cmd": "echo '[gate] PR 53 merge is HUMAN-ADJUDICATED'", "timeout": 60, "human_only": True},
+116-    },
+117-    {
+118-        "name": "first_release",
+119-        "desc": "aerocement-panel-v0 standalone repo with BOM + build evidence",
+120-        "maturity": "hybrid",  # auto-checks, human gates publish
+121-        "checks": ["test -d aerocement-panel-v0 || gh repo list jesseray718 --limit 20 | grep -q aerocement"],
+
+=== LADDER CALIBRATE / STATUS IMPLEMENTATION ===
+14:import argparse, os, sqlite3, subprocess, sys, glob
+27:        r = subprocess.run(cmd, shell=True, capture_output=True, text=True,
+30:    except subprocess.TimeoutExpired:
+36:#   hybrid  = auto-calibrate, but full run needs manual trigger
+63:        "name": "vector_index_calibrated",
+115:        "runner": {"cmd": "echo '[gate] PR 53 merge is HUMAN-ADJUDICATED'", "timeout": 60, "human_only": True},
+119:        "desc": "aerocement-panel-v0 standalone repo with BOM + build evidence",
+123:        "runner": {"cmd": "echo '[gate] finalize README + gh release create'", "timeout": 120, "human_only": True},
+131:        "runner": {"cmd": "echo '[gate] pin 4 repos + insert [PHOTO] via gh'", "timeout": 60, "human_only": True},
+139:      name TEXT PRIMARY KEY, status TEXT DEFAULT 'locked',
+141:      last_action TEXT, last_ts TEXT, evidence TEXT);
+152:        "SELECT status FROM stages WHERE name=?", (STAGES[idx-1]["name"],)
+157:        con.execute("UPDATE stages SET status='failed', evidence=?, last_ts=? WHERE name=?",
+163:def run_checks(con, st):
+170:def calibrate(con, st):
+174:    con.execute("UPDATE stages SET status='calibrated', last_action='calibration PASSED (real, bounded)', "
+175:                "last_ts=?, evidence=? WHERE name=?", (now(), out[:200], st["name"]))
+180:def run_stage(con, st):
+184:    if r.get("human_only"):
+194:    con.execute("UPDATE stages SET status='verified', checks_ok=1, last_action='run+verify GREEN', "
+195:                "last_ts=?, evidence=? WHERE name=?", (now(), ev[:200], st["name"]))
+204:            calibrate(con, ns)
+208:    """Manual verification for human_only stages. Records timestamp + reason."""
+214:    con.execute("UPDATE stages SET status='verified', last_action='manually acknowledged (human verified)', "
+224:            calibrate(con, ns)
+236:def status(con):
+237:    print(f"{'stage':<22} {'status':<12} {'mat':<6} {'attempts'} desc")
+240:        row = con.execute("SELECT status, maturity, attempts FROM stages WHERE name=?", (s["name"],)).fetchone()
+253:def main():
+255:    ap.add_argument("cmd", choices=["status", "calibrate", "run", "acknowledge", "upgrade", "repair"])
+260:    if a.cmd == "status":
+261:        status(con); print("[exit=0]"); return
+265:        print("[held] specify stage; run `status` first"); sys.exit(1)
+278:    elif a.cmd == "calibrate":
+280:        if ok: calibrate(con, st)
+283:        row = con.execute("SELECT status FROM stages WHERE name=?", (a.stage,)).fetchone()
+284:        if row[0] not in ("calibrated", "verified", "failed"):
+285:            print("[held] stage not calibrated yet: run `calibrate` first"); sys.exit(1)
+
+=== LADDER RELEVANT CONTEXT ===
+     1	#!/usr/bin/env python3
+     2	# SPDX-License-Identifier: GPL-3.0-only
+     3	"""
+     4	launch_ladder_v1.py -- [LADDERV1] v2.1 WITH AUTONOMY MIGRATION
+     5	Success-gated stage launcher with progressive autonomy. Human-only stages can be
+     6	acknowledged (manual verify) OR upgraded to auto-verify as instrumentation matures.
+     7	Each stage tracks maturity_level (human|hybrid|auto). Upgrades unlock self-propelling
+     8	runs without manual intervention.
+     9	
+    10	Doctrine: Endure proof before promotion. Guarantee = all instrumented checks green.
+    11	Auto-trigger fires next calibration on verified success, never the full run.
+    12	Human is the only commit gate; destructive ops require CONFIRM=1.
+    13	"""
+    14	import argparse, os, sqlite3, subprocess, sys, glob
+    15	from datetime import datetime, timezone
+    16	from pathlib import Path
+    17	
+    18	CANARY = "[LADDERV1]"
+    19	OR = Path("/home/jesse/openroot")
+    20	DB = OR / "data" / "launch_ladder.db"
+    21	MISTAKE_ENGINE = OR / "bin" / "mistake_engine_v1.py"
+    22	
+    23	def now(): return datetime.now(timezone.utc).isoformat(timespec="seconds")
+    24	
+    25	def sh(cmd, timeout=600, cwd=str(OR)):
+    26	    try:
+    27	        r = subprocess.run(cmd, shell=True, capture_output=True, text=True,
+    28	                           timeout=timeout, cwd=cwd)
+    29	        return r.returncode == 0, (r.stdout + r.stderr).strip()[-500:]
+    30	    except subprocess.TimeoutExpired:
+    31	        return False, f"TIMEOUT({timeout}s): {cmd[:80]}"
+    32	
+    33	# ---------------------------------------------------------------------------
+    34	# STAGE REGISTRY: EACH HAS maturity_level TRACKER
+    35	#   human   = requires explicit 'ladder acknowledge <stage>' to advance
+    36	#   hybrid  = auto-calibrate, but full run needs manual trigger
+    37	#   auto    = full self-propelling chain (next calibration fires on verified)
+    38	# ---------------------------------------------------------------------------
+    39	STAGES = [
+    40	    {
+    41	        "name": "tooling_green",
+    42	        "desc": "every bin/*.py compiles + all canaries present",
+    43	        "maturity": "auto",
+    44	        "checks": [
+    45	            "for f in bin/*.py; do python3 -m py_compile \"$f\" || exit 1; done",
+    46	            "grep -l 'A1COREV1\\|COMPOSTV1\\|HANDOFFV1\\|LADDERV1' bin/*.py",
+    47	        ],
+    48	        "calib": {"cmd": "python3 -m py_compile bin/a1_core_v1.py && echo TOOLING_CALIB_OK", "timeout": 30},
+    49	        "runner": {"cmd": "python3 bin/a1_core_v1.py check-bin", "timeout": 120},
+    50	    },
+    51	    {
+    52	        "name": "mistake_engine_ready",
+    53	        "desc": "mistake→solution hash pairing active",
+    54	        "maturity": "auto",  # UPGRADED: now has real runner instead of echo
+    55	        "checks": [
+    56	            "test -f bin/mistake_engine_v1.py",
+    57	            "python3 -m py_compile bin/mistake_engine_v1.py",
+    58	        ],
+    59	        "calib": {"cmd": "python3 bin/mistake_engine_v1.py list 2>&1 | head -5 || echo 'engine alive'", "timeout": 60},
+    60	        "runner": {"cmd": "python3 bin/mistake_engine_v1.py compost", "timeout": 60},
+    61	    },
+    62	    {
+    63	        "name": "vector_index_calibrated",
+    64	        "desc": "local Ollama-backed provenance-preserving vector index with bounded self-retrieval proof",
+    65	        "maturity": "auto",
+    66	        "checks": [
+    67	            "test -f bin/agape_vector_index.py",
+    68	            "python3 -m py_compile bin/agape_vector_index.py",
+    69	            "ollama list | grep -Fq 'nomic-embed-text'",
+    70	        ],
+    71	        "calib": {"cmd": "python3 bin/agape_vector_index.py --light-init 2>&1 | grep -Fq '[banked] vector calibration PASS'", "timeout": 120},
+    72	        "runner": {"cmd": "python3 bin/agape_vector_index.py --query 'prepare semantic search query for Goals.md' --limit 3", "timeout": 120},
+    73	    },
+    74	    {
+    75	        "name": "ledgers_green",
+    76	        "desc": "bounded local document-ledger scan plus read-only compost candidate listing",
+    77	        "maturity": "auto",
+    78	        "checks": [
+    79	            "test -f data/universal_doc_ledger.db",
+    80	            "python3 -m py_compile bin/a1_core_v1.py bin/compost_v1.py",
+    81	            "python3 bin/compost_v1.py list >/dev/null",
+    82	        ],
+    83	        "calib": {
+    84	            "cmd": "timeout 20s python3 bin/a1_core_v1.py scan --max-files 100",
+    85	            "timeout": 30,
+    86	        },
+    87	        "runner": {
+    88	            "cmd": "timeout 30s python3 bin/a1_core_v1.py scan --max-files 500 && python3 bin/compost_v1.py list",
+    89	            "timeout": 45,
+    90	        },
+    91	    },
+    92	    {
+    93	        "name": "handoff_operational",
+    94	        "desc": "bounded single-session close plus durable handoff record",
+    95	        "maturity": "auto",
+    96	        "checks": [
+    97	            "python3 bin/handoff_manager.py show",
+    98	            "test -s context_bridge/session_ledger.db",
+    99	        ],
+   100	        "calib": {
+   101	            "cmd": "python3 bin/handoff_manager.py start",
+   102	            "timeout": 30,
+   103	        },
+   104	        "runner": {
+   105	            "cmd": "timeout 30s python3 bin/handoff_manager.py end",
+   106	            "timeout": 45,
+   107	        },
+   108	    },
+   109	    {
+   110	        "name": "contributor_seal",
+   111	        "desc": "Reh1t PR #53 resolved with credit — goodwill is scarcest asset",
+   112	        "maturity": "human",  # TRUE human-only: judgment cannot be automated
+   113	        "checks": ['gh pr view 53 --repo jesseray718/openroot --json state -q .state | grep -qi merged'],
+   114	        "calib": {"cmd": "gh pr view 53 --repo jesseray718/openroot --json state,author,title", "timeout": 60},
+   115	        "runner": {"cmd": "echo '[gate] PR 53 merge is HUMAN-ADJUDICATED'", "timeout": 60, "human_only": True},
+   116	    },
+   117	    {
+   118	        "name": "first_release",
+   119	        "desc": "aerocement-panel-v0 standalone repo with BOM + build evidence",
+   120	        "maturity": "hybrid",  # auto-checks, human gates publish
+   121	        "checks": ["test -d aerocement-panel-v0 || gh repo list jesseray718 --limit 20 | grep -q aerocement"],
+   122	        "calib": {"cmd": "python3 bin/a1_core_v1.py route --task 'draft README for aerocement panel BOM'", "timeout": 60},
+   123	        "runner": {"cmd": "echo '[gate] finalize README + gh release create'", "timeout": 120, "human_only": True},
+   124	    },
+   125	    {
+   126	        "name": "public_face",
+   127	        "desc": "profile pinned repos + README photo slot + stranger-readable front page",
+   128	        "maturity": "human",  # identity-level judgment
+   129	        "checks": ["test -s README.md && grep -qi 'aerocement\\|OpenCell\\|agape' README.md"],
+   130	        "calib": {"cmd": "grep -ci 'four engines\\|openroot' README.md", "timeout": 30},
+   131	        "runner": {"cmd": "echo '[gate] pin 4 repos + insert [PHOTO] via gh'", "timeout": 60, "human_only": True},
+   132	    },
+   133	]
+   134	
+   135	def connect():
+   136	    con = sqlite3.connect(str(DB))
+   137	    con.executescript("""
+   138	    CREATE TABLE IF NOT EXISTS stages(
+   139	      name TEXT PRIMARY KEY, status TEXT DEFAULT 'locked',
+   140	      maturity TEXT DEFAULT 'human', checks_ok INTEGER DEFAULT 0, attempts INTEGER DEFAULT 0,
+   141	      last_action TEXT, last_ts TEXT, evidence TEXT);
+   142	    """)
+   143	    for s in STAGES:
+   144	        con.execute("INSERT INTO stages(name, maturity) VALUES(?, ?) ON CONFLICT(name) DO UPDATE SET maturity=excluded.maturity", (s["name"], s["maturity"]))
+   145	    con.commit()
+   146	    return con
+   147	
+   148	def stage_idx(name): return next(i for i, s in enumerate(STAGES) if s["name"] == name)
+   149	
+   150	def prior_verified(con, idx):
+   151	    return idx == 0 or con.execute(
+   152	        "SELECT status FROM stages WHERE name=?", (STAGES[idx-1]["name"],)
+   153	    ).fetchone()[0] == "verified"
+   154	
+   155	def report_mistake(con, stage, detail):
+   156	    try:
+   157	        con.execute("UPDATE stages SET status='failed', evidence=?, last_ts=? WHERE name=?",
+   158	                    (detail[:400], now(), stage))
+   159	        con.commit()
+   160	    except sqlite3.Error:
+   161	        pass
+   162	
+   163	def run_checks(con, st):
+   164	    for chk in st["checks"]:
+   165	        ok, out = sh(chk, timeout=120)
+   166	        if not ok:
+   167	            return False, f"CHECK FAILED: {chk[:100]} | {out}"
+   168	    return True, "all checks green"
+   169	
+   170	def calibrate(con, st):
+   171	    ok, out = sh(st["calib"]["cmd"], timeout=st["calib"]["timeout"])
+   172	    if not ok:
+   173	        report_mistake(con, st["name"], f"calibration: {out}"); return False
+   174	    con.execute("UPDATE stages SET status='calibrated', last_action='calibration PASSED (real, bounded)', "
+   175	                "last_ts=?, evidence=? WHERE name=?", (now(), out[:200], st["name"]))
+   176	    con.commit()
+   177	    print(f"[banked] calibration PASSED → {st['name']} promoted to CALIBRATED")
+   178	    return True
+   179	
+   180	def run_stage(con, st):
+   181	    r = st["runner"]
+   182	    if r.get("destructive") and os.environ.get("CONFIRM") != "1":
+   183	        print("[held] destructive runner requires CONFIRM=1"); return False
+   184	    if r.get("human_only"):
+   185	        print(f"[gate] {r['cmd']}")
+   186	        print(f"[acknowledge] Stage requires manual verification. Run `ladder acknowledge {st['name']}` after completing work.")
+   187	        return False
+   188	    ok, out = sh(r["cmd"], timeout=r["timeout"])
+   189	    if not ok:
+   190	        report_mistake(con, st["name"], f"runner: {out}"); return False
+   191	    ok2, ev = run_checks(con, st)
+   192	    if not ok2:
+   193	        report_mistake(con, st["name"], ev); return False
+   194	    con.execute("UPDATE stages SET status='verified', checks_ok=1, last_action='run+verify GREEN', "
+   195	                "last_ts=?, evidence=? WHERE name=?", (now(), ev[:200], st["name"]))
+   196	    con.commit()
+   197	    print(f"[banked] {st['name']} VERIFIED GREEN — success endured")
+   198	    # AUTO-TRIGGER next calibration
+   199	    nxt = stage_idx(st["name"]) + 1
+   200	    if nxt < len(STAGES):
+   201	        ns = STAGES[nxt]
+   202	        if prior_verified(con, nxt):
+   203	            print(f"[auto-trigger] → calibrating next stage: {ns['name']}")
+   204	            calibrate(con, ns)
+   205	    return True
+   206	
+   207	def acknowledge_stage(con, stage_name):
+   208	    """Manual verification for human_only stages. Records timestamp + reason."""
+   209	    st = next((s for s in STAGES if s["name"] == stage_name), None)
+   210	    if not st:
+   211	        print(f"[held] unknown stage {stage_name}"); return False
+   212	    if st.get("maturity") not in ("human", "hybrid"):
+   213	        print(f"[held] stage {stage_name} is {st['maturity']}, no acknowledgment needed"); return False
+   214	    con.execute("UPDATE stages SET status='verified', last_action='manually acknowledged (human verified)', "
+   215	                "last_ts=?, maturity='hybrid' WHERE name=?", (now(), stage_name))
+   216	    con.commit()
+   217	    print(f"[banked] {stage_name} manually verified → maturity upgraded to hybrid")
+   218	    # Auto-trigger next
+   219	    nxt = stage_idx(stage_name) + 1
+   220	    if nxt < len(STAGES):
+   221	        ns = STAGES[nxt]
+   222	        if prior_verified(con, nxt):
+   223	            print(f"[auto-trigger] → calibrating next stage: {ns['name']}")
+   224	            calibrate(con, ns)
+   225	    return True
+   226	
+   227	def upgrade_maturity(con, stage_name, new_maturity):
+   228	    """Promote a stage from human→hybrid→auto as instrumentation improves."""
+   229	    valid_levels = ("human", "hybrid", "auto")
+   230	    if new_maturity not in valid_levels:
+   231	        print(f"[held] invalid maturity: {new_maturity}"); return False
+   232	    con.execute("UPDATE stages SET maturity=? WHERE name=?", (new_maturity, stage_name))
+   233	    con.commit()
+   234	    print(f"[banked] {stage_name} maturity upgraded to {new_maturity}")
+   235	
+   236	def status(con):
+   237	    print(f"{'stage':<22} {'status':<12} {'mat':<6} {'attempts'} desc")
+   238	    print("-"*110)
+   239	    for s in STAGES:
+   240	        row = con.execute("SELECT status, maturity, attempts FROM stages WHERE name=?", (s["name"],)).fetchone()
+   241	        mark = "***" if row[0] == "verified" else ("!" if row[0] == "failed" else "")
+   242	        print(f"{s['name']+mark:<25} {row[0]:<12} {row[1]:<6} {row[2]:<8} {s['desc'][:45]}")
+   243	
+   244	def repair_quarantine():
+   245	    q = OR / "quarantine_handoff_corrupt"
+   246	    q.mkdir(exist_ok=True)
+   247	    bad = OR / "bin" / "handoff_manager.py"
+   248	    if bad.exists():
+   249	        stamp = now().replace(":", "")
+   250	        bad.rename(q / f"handoff_manager.py.corrupt.{stamp}")
+   251	        print(f"[banked] corrupted file moved to {q}")
+   252	
+   253	def main():
+   254	    ap = argparse.ArgumentParser(description=CANARY + " v2.1 with autonomy migration")
+   255	    ap.add_argument("cmd", choices=["status", "calibrate", "run", "acknowledge", "upgrade", "repair"])
+   256	    ap.add_argument("stage", nargs="?", help="stage name")
+   257	    ap.add_argument("--maturity", default=None, help="new maturity level (human|hybrid|auto)")
+   258	    a = ap.parse_args()
+   259	    con = connect()
+   260	    if a.cmd == "status":
+   261	        status(con); print("[exit=0]"); return
+   262	    if a.cmd == "repair":
+   263	        repair_quarantine(); return
+   264	    if not a.stage:
+   265	        print("[held] specify stage; run `status` first"); sys.exit(1)
+   266	    st = next((s for s in STAGES if s["name"] == a.stage), None)
+   267	    if not st:
+   268	        print(f"[held] unknown stage {a.stage}"); sys.exit(1)
+   269	    idx = stage_idx(a.stage)
+   270	    if not prior_verified(con, idx):
+   271	        print(f"[held] gate closed: prior stage not VERIFIED"); sys.exit(1)
+   272	    if a.cmd == "acknowledge":
+   273	        acknowledge_stage(con, a.stage)
+   274	    elif a.cmd == "upgrade":
+   275	        if not a.maturity:
+   276	            print("[held] --maturity required"); sys.exit(1)
+   277	        upgrade_maturity(con, a.stage, a.maturity)
+   278	    elif a.cmd == "calibrate":
+   279	        ok, _ = run_checks(con, st)
+   280	        if ok: calibrate(con, st)
+   281	        else: print("[held] entry checks red — repair instruments first")
+   282	    elif a.cmd == "run":
+   283	        row = con.execute("SELECT status FROM stages WHERE name=?", (a.stage,)).fetchone()
+   284	        if row[0] not in ("calibrated", "verified", "failed"):
+   285	            print("[held] stage not calibrated yet: run `calibrate` first"); sys.exit(1)
+   286	        run_stage(con, st)
+   287	    print("[exit=0]")
+   288	
+   289	if __name__ == "__main__":
+   290	    main()
+
+=== ACTIVE SESSION INVARIANT BEFORE DIRECT CALIBRATION ===
+id  session_id                started                    ended                      status  notes                                                     
+--  ------------------------  -------------------------  -------------------------  ------  ----------------------------------------------------------
+3   20260926_220435_6c2d280e  2026-09-26T22:04:35+00:00  2026-09-26T22:04:35+00:00  ended                                                             
+2   20260926_215639_69ae6e70  2026-09-26T21:56:39+00:00  2026-09-26T22:02:26.332Z   ended   [auto-repaired duplicate active session; no files deleted]
+1   20260926_215535_55b7ba7c  2026-09-26T21:55:36+00:00  2026-09-26T22:03:21+00:00  ended                                                             
+[banked] active_sessions_before_direct_calibration=0
+
+=== DIRECT DECLARED CALIBRATION COMMAND ===
+[banked] handoff created: /home/jesse/openroot/context_bridge/handoffs/session_20260926_220617_80fa6c9e.md
+[banked] session_id: 20260926_220617_80fa6c9e
+[banked] handoff_phase=start
+[banked] direct_start_exit_code=0
+[banked] active_sessions_after_direct_calibration=1
+
+=== STAGE ROW AFTER DIRECT CALIBRATION ===
+name                 status  maturity  checks_ok  attempts  last_action                         last_ts                    evidence                                                                           
+-------------------  ------  --------  ---------  --------  ----------------------------------  -------------------------  -----------------------------------------------------------------------------------
+handoff_operational  failed  auto      0          0         calibration PASSED (real, bounded)  2026-09-26T22:04:35+00:00  calibration: Traceback (most recent call last):                                    
+                                                                                                                             File "/home/jesse/openroot/bin/handoff_manager.py", line 299, in <module>        
+                                                                                                                               main()                                                                         
+                                                                                                                             File "/home/jesse/openroot/bin/handoff_manager.py", line 275, in main            
+                                                                                                                               generate_handoff(con, session_id, "start")                                     
+                                                                                                                             File "/home/jesse/openroot/bin/handoff_manager.py", line 217, in generate_handoff
+                                                                                                                               con.execute(                                                                   
+                                                                                                                           sqlite3.IntegrityError: UNIQUE constraint fai                                      
+
+=== LATEST LADDER REPORTS ===
+2026-09-26T17:06:17.6991448850Z 25133 /home/jesse/openroot/data/ladder_diagnostics/forensic_handoff_operational_ladder_calibration.20260926T220617Z.log
+2026-09-26T17:04:36.0459580710Z 2343 /home/jesse/openroot/data/ladder_diagnostics/promote_handoff_operational_safe.20260926T220435Z.log
+2026-09-26T17:00:54.9632192420Z 19725 /home/jesse/openroot/data/ladder_diagnostics/forensic_handoff_end.20260926T220054Z.log
+2026-09-26T16:58:23.8922941140Z 9346 /home/jesse/openroot/data/ladder_diagnostics/forensic_handoff_end.20260926T215823Z.log
+2026-09-26T16:57:30.4711626500Z 9346 /home/jesse/openroot/data/ladder_diagnostics/forensic_handoff_end.20260926T215730Z.log
+2026-09-26T16:56:39.4320699610Z 4458 /home/jesse/openroot/data/ladder_diagnostics/promote_handoff_operational.20260926T215638Z.log
+2026-09-26T16:55:36.4493060710Z 4971 /home/jesse/openroot/data/ladder_diagnostics/promote_ledgers_green_bounded_v2.20260926T215532Z.log
+2026-09-26T16:53:50.0127330740Z 15915 /home/jesse/openroot/data/ladder_diagnostics/forensic_ledgers_compost_runner.20260926T215349Z.log
+2026-09-26T16:52:36.9346875490Z 647 /home/jesse/openroot/data/ladder_diagnostics/promote_ledgers_green_bounded.20260926T215236Z.log
+2026-09-26T16:32:58.9281514950Z 4115 /home/jesse/openroot/data/ladder_diagnostics/promote_ledgers_green.20260926T212754Z.log
+2026-09-26T16:27:09.9726452070Z 3168 /home/jesse/openroot/data/ladder_diagnostics/promote_vector_index_calibrated.20260926T212707Z.log
+2026-09-26T16:08:50.2365419280Z 2407 /home/jesse/openroot/data/ladder_diagnostics/promote_mistake_engine_ready.20260926T210847Z.log
+2026-09-26T16:02:12.2488734330Z 1453 /home/jesse/openroot/data/ladder_diagnostics/run_mistake_engine_ready.20260926T210211Z.log
+2026-09-26T16:00:42.7147764660Z 890 /home/jesse/openroot/data/ladder_diagnostics/run_tooling_green.20260926T205954Z.log
+2026-09-26T15:54:41.7990867710Z 1564 /home/jesse/openroot/data/ladder_diagnostics/promote_tooling_green.20260926T205354Z.log
+2026-09-26T15:51:40.0132856240Z 7115 /home/jesse/openroot/data/ladder_diagnostics/tooling_green.20260926T205056Z.log
+
+=== LATEST HANDOFF DIAGNOSTIC TAIL ===
+[banked] latest_report=/home/jesse/openroot/data/ladder_diagnostics/forensic_handoff_operational_ladder_calibration.20260926T220617Z.log
+   219	    nxt = stage_idx(stage_name) + 1
+   220	    if nxt < len(STAGES):
+   221	        ns = STAGES[nxt]
+   222	        if prior_verified(con, nxt):
+   223	            print(f"[auto-trigger] → calibrating next stage: {ns['name']}")
+   224	            calibrate(con, ns)
+   225	    return True
+   226	
+   227	def upgrade_maturity(con, stage_name, new_maturity):
+   228	    """Promote a stage from human→hybrid→auto as instrumentation improves."""
+   229	    valid_levels = ("human", "hybrid", "auto")
+   230	    if new_maturity not in valid_levels:
+   231	        print(f"[held] invalid maturity: {new_maturity}"); return False
+   232	    con.execute("UPDATE stages SET maturity=? WHERE name=?", (new_maturity, stage_name))
+   233	    con.commit()
+   234	    print(f"[banked] {stage_name} maturity upgraded to {new_maturity}")
+   235	
+   236	def status(con):
+   237	    print(f"{'stage':<22} {'status':<12} {'mat':<6} {'attempts'} desc")
+   238	    print("-"*110)
+   239	    for s in STAGES:
+   240	        row = con.execute("SELECT status, maturity, attempts FROM stages WHERE name=?", (s["name"],)).fetchone()
+   241	        mark = "***" if row[0] == "verified" else ("!" if row[0] == "failed" else "")
+   242	        print(f"{s['name']+mark:<25} {row[0]:<12} {row[1]:<6} {row[2]:<8} {s['desc'][:45]}")
+   243	
+   244	def repair_quarantine():
+   245	    q = OR / "quarantine_handoff_corrupt"
+   246	    q.mkdir(exist_ok=True)
+   247	    bad = OR / "bin" / "handoff_manager.py"
+   248	    if bad.exists():
+   249	        stamp = now().replace(":", "")
+   250	        bad.rename(q / f"handoff_manager.py.corrupt.{stamp}")
+   251	        print(f"[banked] corrupted file moved to {q}")
+   252	
+   253	def main():
+   254	    ap = argparse.ArgumentParser(description=CANARY + " v2.1 with autonomy migration")
+   255	    ap.add_argument("cmd", choices=["status", "calibrate", "run", "acknowledge", "upgrade", "repair"])
+   256	    ap.add_argument("stage", nargs="?", help="stage name")
+   257	    ap.add_argument("--maturity", default=None, help="new maturity level (human|hybrid|auto)")
+   258	    a = ap.parse_args()
+   259	    con = connect()
+   260	    if a.cmd == "status":
+   261	        status(con); print("[exit=0]"); return
+   262	    if a.cmd == "repair":
+   263	        repair_quarantine(); return
+   264	    if not a.stage:
+   265	        print("[held] specify stage; run `status` first"); sys.exit(1)
+   266	    st = next((s for s in STAGES if s["name"] == a.stage), None)
+   267	    if not st:
+   268	        print(f"[held] unknown stage {a.stage}"); sys.exit(1)
+   269	    idx = stage_idx(a.stage)
+   270	    if not prior_verified(con, idx):
+   271	        print(f"[held] gate closed: prior stage not VERIFIED"); sys.exit(1)
+   272	    if a.cmd == "acknowledge":
+   273	        acknowledge_stage(con, a.stage)
+   274	    elif a.cmd == "upgrade":
+   275	        if not a.maturity:
+   276	            print("[held] --maturity required"); sys.exit(1)
+   277	        upgrade_maturity(con, a.stage, a.maturity)
+   278	    elif a.cmd == "calibrate":
+   279	        ok, _ = run_checks(con, st)
+   280	        if ok: calibrate(con, st)
+   281	        else: print("[held] entry checks red — repair instruments first")
+   282	    elif a.cmd == "run":
+   283	        row = con.execute("SELECT status FROM stages WHERE name=?", (a.stage,)).fetchone()
+   284	        if row[0] not in ("calibrated", "verified", "failed"):
+   285	            print("[held] stage not calibrated yet: run `calibrate` first"); sys.exit(1)
+   286	        run_stage(con, st)
+   287	    print("[exit=0]")
+   288	
+   289	if __name__ == "__main__":
+   290	    main()
+
+=== ACTIVE SESSION INVARIANT BEFORE DIRECT CALIBRATION ===
+id  session_id                started                    ended                      status  notes                                                     
+--  ------------------------  -------------------------  -------------------------  ------  ----------------------------------------------------------
+3   20260926_220435_6c2d280e  2026-09-26T22:04:35+00:00  2026-09-26T22:04:35+00:00  ended                                                             
+2   20260926_215639_69ae6e70  2026-09-26T21:56:39+00:00  2026-09-26T22:02:26.332Z   ended   [auto-repaired duplicate active session; no files deleted]
+1   20260926_215535_55b7ba7c  2026-09-26T21:55:36+00:00  2026-09-26T22:03:21+00:00  ended                                                             
+[banked] active_sessions_before_direct_calibration=0
+
+=== DIRECT DECLARED CALIBRATION COMMAND ===
+[banked] handoff created: /home/jesse/openroot/context_bridge/handoffs/session_20260926_220617_80fa6c9e.md
+[banked] session_id: 20260926_220617_80fa6c9e
+[banked] handoff_phase=start
+[banked] direct_start_exit_code=0
+[banked] active_sessions_after_direct_calibration=1
+
+=== STAGE ROW AFTER DIRECT CALIBRATION ===
+name                 status  maturity  checks_ok  attempts  last_action                         last_ts                    evidence                                                                           
+-------------------  ------  --------  ---------  --------  ----------------------------------  -------------------------  -----------------------------------------------------------------------------------
+handoff_operational  failed  auto      0          0         calibration PASSED (real, bounded)  2026-09-26T22:04:35+00:00  calibration: Traceback (most recent call last):                                    
+                                                                                                                             File "/home/jesse/openroot/bin/handoff_manager.py", line 299, in <module>        
+                                                                                                                               main()                                                                         
+                                                                                                                             File "/home/jesse/openroot/bin/handoff_manager.py", line 275, in main            
+                                                                                                                               generate_handoff(con, session_id, "start")                                     
+                                                                                                                             File "/home/jesse/openroot/bin/handoff_manager.py", line 217, in generate_handoff
+                                                                                                                               con.execute(                                                                   
+                                                                                                                           sqlite3.IntegrityError: UNIQUE constraint fai                                      
+
+=== LATEST LADDER REPORTS ===
+2026-09-26T17:06:17.6991448850Z 25133 /home/jesse/openroot/data/ladder_diagnostics/forensic_handoff_operational_ladder_calibration.20260926T220617Z.log
+2026-09-26T17:04:36.0459580710Z 2343 /home/jesse/openroot/data/ladder_diagnostics/promote_handoff_operational_safe.20260926T220435Z.log
+2026-09-26T17:00:54.9632192420Z 19725 /home/jesse/openroot/data/ladder_diagnostics/forensic_handoff_end.20260926T220054Z.log
+2026-09-26T16:58:23.8922941140Z 9346 /home/jesse/openroot/data/ladder_diagnostics/forensic_handoff_end.20260926T215823Z.log
+2026-09-26T16:57:30.4711626500Z 9346 /home/jesse/openroot/data/ladder_diagnostics/forensic_handoff_end.20260926T215730Z.log
+2026-09-26T16:56:39.4320699610Z 4458 /home/jesse/openroot/data/ladder_diagnostics/promote_handoff_operational.20260926T215638Z.log
+2026-09-26T16:55:36.4493060710Z 4971 /home/jesse/openroot/data/ladder_diagnostics/promote_ledgers_green_bounded_v2.20260926T215532Z.log
+2026-09-26T16:53:50.0127330740Z 15915 /home/jesse/openroot/data/ladder_diagnostics/forensic_ledgers_compost_runner.20260926T215349Z.log
+2026-09-26T16:52:36.9346875490Z 647 /home/jesse/openroot/data/ladder_diagnostics/promote_ledgers_green_bounded.20260926T215236Z.log
+2026-09-26T16:32:58.9281514950Z 4115 /home/jesse/openroot/data/ladder_diagnostics/promote_ledgers_green.20260926T212754Z.log
+2026-09-26T16:27:09.9726452070Z 3168 /home/jesse/openroot/data/ladder_diagnostics/promote_vector_index_calibrated.20260926T212707Z.log
+2026-09-26T16:08:50.2365419280Z 2407 /home/jesse/openroot/data/ladder_diagnostics/promote_mistake_engine_ready.20260926T210847Z.log
+2026-09-26T16:02:12.2488734330Z 1453 /home/jesse/openroot/data/ladder_diagnostics/run_mistake_engine_ready.20260926T210211Z.log
+2026-09-26T16:00:42.7147764660Z 890 /home/jesse/openroot/data/ladder_diagnostics/run_tooling_green.20260926T205954Z.log
+2026-09-26T15:54:41.7990867710Z 1564 /home/jesse/openroot/data/ladder_diagnostics/promote_tooling_green.20260926T205354Z.log
+2026-09-26T15:51:40.0132856240Z 7115 /home/jesse/openroot/data/ladder_diagnostics/tooling_green.20260926T205056Z.log
+
+=== LATEST HANDOFF DIAGNOSTIC TAIL ===
+[banked] latest_report=/home/jesse/openroot/data/ladder_diagnostics/forensic_handoff_operational_ladder_calibration.20260926T220617Z.log
+
+=== GIT BOUNDARY ===
+?? bin/handoff_manager.py
+?? bin/launch_ladder_v1.py
+?? context_bridge/handoffs/

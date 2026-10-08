@@ -1,0 +1,7 @@
+[BANKWK1] START 20260924_172655
+  File "bin/compute_marketplace.py", line 126
+    elif provider["provider"] in ["lumo_api", "google", "openrouter", "openai"]:
+SyntaxError: expected 'except' or 'finally' block
+[gate] PY_COMPILE FAIL: bin/compute_marketplace.py
+[gate] MISSING: bin/goals_rebuild_from_remnants_v1.sh — skipped (not present)
+[gate] syntax failures above — fix or remove from list, rerun. Nothing staged.

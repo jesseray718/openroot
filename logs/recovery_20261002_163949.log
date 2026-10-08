@@ -1,0 +1,14 @@
+=== OPENROOT SUPERLINEAR RECOVERY STARTED === 20261002_163949
+Host: optiplex3060
+CANARY: [RECOVERY-V2-OK]
+
+===== STAGE 1: LEDGER DISCOVERY =====
+[16:39:49] 📍 Found: audit_trail.jsonl at /home/jesse/openroot/context_bridge/audit_trail.jsonl
+
+===== STAGE 2: SCRIPT CONSOLIDATION =====
+[16:39:49] ⏹️ Already in bin/: unify_v2.py
+[16:39:49] ⏹️ Already in bin/: bot_loop_v1.py
+[16:39:49] ⏹️ Already in bin/: enable_vector_embeddings.py
+[16:39:49] ⚠️ Not found anywhere: find_api_keys.sh
+[16:39:49] ⚠️ Not found anywhere: router_relaunch_proof_v1.sh
+[16:39:49] ✅ Recovered to bin/: setup-optiplex.sh (from /home/jesse/openroot)
