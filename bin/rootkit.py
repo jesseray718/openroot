@@ -33,12 +33,12 @@ WIRED = {
     "route": BIN / "a1_core_v1.py",
     "bom": BIN / "bom_from_source_v1.py",
     "migrate": BIN / "rootkit_migrate_v1.py",
+    "chunk": BIN / "chunker_v1.py",
+    "ask": BIN / "ask_router_v1.py",
 }
 
 # Organs that are planned but not built yet. Calls return HELD.
 PLANNED = {
-    "chunk": BIN / "chunker_v1.py",
-    "ask": BIN / "agape_router_v1.py",
     "attest": BIN / "popw_ledger_v1.py",
     "mint": BIN / "newton_chain_v1.py",
     "publish": BIN / "relay_loop_v1.py",
@@ -71,7 +71,6 @@ def invoke(script_path, args=None, timeout=3600):
 
 
 def finish(name, rc, out, err):
-    """Map a delegate's exit code to a rootkit exit code and log it."""
     if rc == 0:
         log_op("BANKED", f"{name} complete")
         if out.strip():
@@ -106,19 +105,17 @@ def cmd_index(args):
 
 
 def cmd_chunk(args):
-    return planned_stub("chunk")
+    target = args.target or str(ROOT)
+    log_op("GATE", f"chunk: {target}")
+    return finish("chunk", *invoke(WIRED["chunk"], [target, "--chunk-size", str(args.chunk_size)]))
 
 
 def cmd_ask(args):
     if not args.query:
         log_op("ERROR", "ask: requires --query")
         return EXIT["ERROR"]
-    # Routing hint only; no retrieval is performed yet.
-    rc, out, err = invoke(WIRED["route"], ["route", "--task", args.query])
-    log_op("HELD", "ask: retrieval not built; routing hint only")
-    if out.strip():
-        print(out.rstrip())
-    return EXIT["HELD"]
+    log_op("GATE", "ask: ask_router_v1.py")
+    return finish("ask", *invoke(WIRED["ask"], ["--query", args.query, "--limit", str(args.limit)]))
 
 
 def load_spec(raw):
@@ -148,12 +145,16 @@ def cmd_task(args):
             return EXIT["ERROR"]
         return finish("task[bom]", *invoke(WIRED["bom"], ["--source", spec["source"]]))
 
-    # No executor: never report BANKED for work that did not run.
     rc, out, err = invoke(WIRED["route"], ["route", "--task", json.dumps(spec)])
     log_op("HELD", f"task: no executor for type={ttype!r}; routing hint only")
     if out.strip():
         print(out.rstrip())
     return EXIT["HELD"]
+
+
+def cmd_migrate(args):
+    log_op("GATE", "migrate: rootkit_migrate_v1.py")
+    return finish("migrate", *invoke(WIRED["migrate"]))
 
 
 def cmd_attest(args):
@@ -206,21 +207,33 @@ def cmd_doctor(args):
 
 def main():
     handlers = {
-        "ingest": cmd_ingest, "chunk": cmd_chunk, "index": cmd_index,
-        "ask": cmd_ask, "task": cmd_task, "attest": cmd_attest,
-        "mint": cmd_mint, "publish": cmd_publish, "audit": cmd_audit,
-        "doctor": cmd_doctor, "organism": cmd_organism,
+        "ingest": cmd_ingest,
+        "chunk": cmd_chunk,
+        "index": cmd_index,
+        "ask": cmd_ask,
+        "task": cmd_task,
+        "migrate": cmd_migrate,
+        "attest": cmd_attest,
+        "mint": cmd_mint,
+        "publish": cmd_publish,
+        "audit": cmd_audit,
+        "doctor": cmd_doctor,
+        "organism": cmd_organism,
     }
     p = argparse.ArgumentParser(description=f"{CANARY} openroot dispatcher")
     p.add_argument("cmd", nargs="?", default="doctor", choices=sorted(handlers))
     p.add_argument("--query", default=None)
+    p.add_argument("--limit", type=int, default=10)
     p.add_argument("--spec", default=None)
     p.add_argument("--job-id", default=None)
     p.add_argument("--tag", default=None)
+    p.add_argument("--target", default=str(ROOT), help="[chunk] file or directory to chunk")
+    p.add_argument("--chunk-size", type=int, default=1024 * 1024, help="[chunk] fixed chunk size in bytes")
     args = p.parse_args()
 
     for d in (DATA, LOGS):
         d.mkdir(parents=True, exist_ok=True)
+
     sys.exit(handlers[args.cmd](args))
 
 
