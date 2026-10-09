@@ -11,3 +11,7 @@ data_bot_state.json
 logs/
 restore_bin_*/
 .openroot_tap.tsv
+__pycache__/
+*.db-shm
+*.db-wal
+nohup.out
