@@ -86,3 +86,5 @@ Every regular file on this machine — not just this repo — is hash-addressed.
 - Primary Node: OptiPlex 3060 (Ubuntu 24.04, 192.168.1.193 LAN, 100.122.169.43 Tailscale)
 - Mobile Control: Samsung Galaxy A15 (Termux, Shizuku, wsa-shell)
 - Storage: SD mount at /mnt/sdb1, internal SSD + HDD
+
+**Why it matters:** [WHY_IT_MATTERS.md](WHY_IT_MATTERS.md) — what this means for your life. Then: [PHILOSOPHY.md](PHILOSOPHY.md), [SYSTEM_OVERVIEW.md](SYSTEM_OVERVIEW.md).
