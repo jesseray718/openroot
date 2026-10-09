@@ -15,3 +15,13 @@ __pycache__/
 *.db-shm
 *.db-wal
 nohup.out
+# hygiene v1 20261009: caches, backups, build output, mega-reports — never track
+__pycache__/
+*.pyc
+*.bak
+*.before
+.next/
+reports/theorem_discovery_*/text_files.txt
+reports/theorem_discovery_*/keyword_hits.txt
+reports/theorem_discovery_*/direct_concepts.txt
+ledger/expansions/archives_*.manifest.jsonl
