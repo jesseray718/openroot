@@ -1,61 +1,0 @@
-[?2004h[1;32moptiplex3060[0m:~/openroot$ echo "[BANKWK1v2] START $STAMP"
-[?2004l[BANKWK1v2] START 20260924_191854
-[?2004h[1;32moptiplex3060[0m:~/openroot$ cd "$REPO"
-[?2004l[?2004h[1;32moptiplex3060[0m:~/openroot$ 
-[?2004l[?2004h[1;32moptiplex3060[0m:~/openroot$ MANIFEST=(
-[?2004l[?2004h>   bin/add_contributor_acknowledgment_v1.sh
-[?2004l[?2004h>   bin/local_stack_status_v1.py
-[?2004l[?2004h>   bin/local_stack_status_v2.py
-[?2004l[?2004h>   bin/mobile_sync_tracker_v2.py
-[?2004l[?2004h>   bin/queue_sweep_v1.sh
-[?2004l[?2004h>   bin/reh1t_credit_check_v1.sh
-[?2004l[?2004h>   bin/reh1t_pr53_make_right_v1.sh
-[?2004l[?2004h>   bin/reh1t_reconcile_v2.sh
-[?2004l[?2004h>   bin/routing_weights_v1.py
-[?2004l[?2004h>   bin/specialist_router_v1.py
-[?2004l[?2004h>   bin/stack_test_core_v1.py
-[?2004l[?2004h>   bin/superlinear_strike_v1.py
-[?2004l[?2004h>   bin/todo_tick_v1.sh
-[?2004l[?2004h>   bin/week_sweep_team_review_v1.py
-[?2004l[?2004h>   recovery_minimal_v2026.09.24.sh
-[?2004l[?2004h>   recovery_superlinear_v2026.09.24.sh
-[?2004l[?2004h>   setup_search.py
-[?2004l[?2004h>   context_bridge/solve_backup_20260924_021833.py
-[?2004l[?2004h>   bin/openroot_core_v1.py   # piggyback: core commit folded in, single push
-[?2004l[?2004h> )
-[?2004l[?2004h[1;32moptiplex3060[0m:~/openroot$ 
-[?2004l[?2004h[1;32moptiplex3060[0m:~/openroot$ # FIX: split manifest into PRESENT (gated) and MISSED (reported) — never git add ghosts
-[?2004l[?2004h[1;32moptiplex3060[0m:~/openroot$ PRESENT=(); MISSED=()
-[?2004l[?2004h[1;32moptiplex3060[0m:~/openroot$ for f in "${MANIFEST[@]}"; do
-[?2004l[?2004h>   if [[ -f "$f" ]]; then PRESENT+=("$f"); else MISSED+=("$f"); fi
-[?2004l[?2004h> done
-[?2004l[?2004h[1;32moptiplex3060[0m:~/openroot$ for f in "${MISSED[@]:-}"; do echo "[status] missing (skipped, NOT staged): $f"; done
-[?2004l[status] missing (skipped, NOT staged): 
-[?2004h[1;32moptiplex3060[0m:~/openroot$ [[ ${#PRESENT[@]} -gt 0 ]] || { echo "[held] nothing present"; exit 1; }
-[?2004l[?2004h[1;32moptiplex3060[0m:~/openroot$ 
-[?2004l[?2004h[1;32moptiplex3060[0m:~/openroot$ # gate: syntax-check every present file — any failure aborts before staging
-[?2004l[?2004h[1;32moptiplex3060[0m:~/openroot$ FAIL=0
-[?2004l[?2004h[1;32moptiplex3060[0m:~/openroot$ for f in "${PRESENT[@]}"; do
-[?2004l[?2004h>   if [[ "$f" == *.py ]]; then
-[?2004l[?2004h>     python3 -m py_compile "$f" || { echo "[gate] PY_FAIL: $f"; FAIL=1; }
-[?2004l[?2004h>   else
-[?2004l[?2004h>     bash -n "$f" || { echo "[gate] SH_FAIL: $f"; FAIL=1; }
-[?2004l[?2004h>   fi
-[?2004l[?2004h> done
-[?2004l[?2004h[1;32moptiplex3060[0m:~/openroot$ [[ "$FAIL" == "0" ]] || { echo "[gate] syntax failures — nothing staged"; exit 1; }
-[?2004l[?2004h[1;32moptiplex3060[0m:~/openroot$ echo "[banked] ${#PRESENT[@]} scripts pass syntax gates"
-[?2004l[banked] 19 scripts pass syntax gates
-[?2004h[1;32moptiplex3060[0m:~/openroot$ 
-[?2004l[?2004h[1;32moptiplex3060[0m:~/openroot$ if [[ "${CONFIRM:-0}" != "1" ]]; then
-[?2004l[?2004h>   git add "${PRESENT[@]}"
-[?2004l[?2004h>   git diff --cached --stat
-[?2004l[?2004h>   git reset -q
-[?2004l[?2004h>   echo "[held] DRY-RUN — CONFIRM=1 to commit"
-[?2004l[?2004h>   echo "[exit=0]"
-[?2004l[?2004h>   exit 0
-[?2004l[?2004h> fi
-[?2004l bin/openroot_core_v1.py | 227 ++++++++++++++++++++++++++++++++++++++++++++++++
- 1 file changed, 227 insertions(+)
-[held] DRY-RUN — CONFIRM=1 to commit
-[exit=0]
-logout

@@ -1,7 +1,0 @@
-[banked] mistake solve 2a85b0546b88b3e4
-[evidence] governor=powersave driver=intel_pstate cores=6 mhz=3900-3900
-[verdict] CORES AT FULL BOOST. 0.25-0.48 tok/s caused by thread config or process contention, not clock speed.
-[hog] pid=2060905 cpu%=365.0 comm=--model /usr/share/ollama/.ollama/models/blobs/sha256-60e05f2100071479f596b964f89f510f057ce397ea22f2833a0cfe029bfc2463 --port 44307 --host 127.0.0.1 --no-webui --offline -c 4096 -np 1 --log-verbosity 4 --no-log-prefix --no-log-timestamps --no-jinja --chat-template chatml --load-mode none --flash-attn auto -b 512 -ub 512 --context-shift --keep 4 cmdline=/usr/local/lib/ollama/llama-server --model /usr/share/ollama/.ollama/models/blobs/sha256-60e05f2100071479f596b964f89f510f057ce397ea22f2833a0
-[hog] pid=1713379 cpu%=99.9 comm=bash cmdline=-bash
-[held] HIGH-CPU PROCESSES FOUND — manual kill review recommended
-[held] no passwordless sudo. Manual install required for keep-alive

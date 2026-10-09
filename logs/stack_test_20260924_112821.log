@@ -1,8 +1,0 @@
-  [superlinear-test] layer-by-layer:
-  [ SUB-SECOND] FTS5 exact-hit query: 0.5 ms -> ['thermal_frontier_v1.json', 'thermal_frontier_v2_water.json']
-  [ SUB-SECOND] sha-cache HIT lookup: 0.2 ms payload OK, speedup-vs-hash 0.2x
-  [ SUB-SECOND] sha-cache MISS derive (stand-in): 0.0 ms novel work escalates to 7B
-  [ SUB-SECOND] dispatch 'euler overshoot' -> FTS5 (NO model call): 0.5 ms -> low-flow Euler step divergence; filter t
-  [ model-tier] qwen2.5-coder:7b generate: 32338.0 ms tokens=27 -> "7B BUILDER ALIVE. The FTS5 cache triad consists of"
-  [ model-tier] qwen2.5:3b generate: 5347.6 ms tokens=8 -> "3B GRADER ALIVE."
-  [banked] report -> data/stack_test_report_20260924_112907.json

@@ -6,3 +6,8 @@ data/operator_holds/
 data/sdcard-sync/
 lumo_inbox/
 quarantine_tooling_repair_backups_*/
+data/superlinear/rapl_samples.jsonl
+data_bot_state.json
+logs/
+restore_bin_*/
+.openroot_tap.tsv

@@ -1,9 +1,0 @@
-{
- "snapshots": {
-  "/sdcard/openroot/thermo_ledger/eta_moves.jsonl": "missing",
-  "/sdcard/openroot/parallel_analysis/ledger/ideas.jsonl": "missing",
-  "/sdcard/openroot/ledger/experiments/linux_command_persistence.jsonl": "missing"
- },
- "cycles": 3206,
- "last_ts": 1791501180.4860942
-}

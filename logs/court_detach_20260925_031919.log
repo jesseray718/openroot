@@ -1,8 +1,0 @@
-nohup: ignoring input
-[COURT-V6] boot — defense=qwen2.5-coder:7b vs prosecution=qwen2.5:3b
-[COURT-V6] FTS5 evidence mode: yes (49 excerpts)
-[COURT-V6] hearings this session: 39
-[COURT-V6] done: pass=0 hold=26 fail=13 un=13 split=21 det=5
-[context_bridge/court-v6-report-20260925_031919.md] c0378c5a8ae6f732e7680949965947323caabced1937e309086865188636f96a
-[logs/court_v6_20260925_031919.log] 9eae9633032cc1d17c0b4f313bb4d4664d89d32876e6f741bf01fbe6a85e77d7
-[COURT-V6] [exit=0]
