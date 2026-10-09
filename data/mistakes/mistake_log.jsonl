@@ -1,0 +1,1 @@
+{"id":"sticky-confirm-flag-v1","sha16":"57196d773eb412a2","detected":"2026-10-09T10:32:31Z","class":"gate-bypass-environment","incidents":["e25b121","a575de1"],"damage":"none (both commits intended)","fix":"seals end with unset CONFIRM; session-start audit of startup files"}
