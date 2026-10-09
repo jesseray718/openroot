@@ -40,8 +40,10 @@ def get_latest_hash():
     if not last_line:
         return "0000000000000000000000000000000000000000000000000000000000000000"
     block = json.loads(last_line)
-    block_str = json.dumps(block, sort_keys=True)
-    return hashlib.sha256(block_str.encode('utf-8')).hexdigest()
+    # FIX 20261009: previous_hash must be the STORED hash of the prior
+    # block, not a re-hash of the full record (different scheme -> every
+    # link was broken since genesis). CANARY:NEWTON-LINKAGE-FIX-V1
+    return block.get("hash", "0" * 64)
 
 def record_telemetry():
     LEDGER_DIR.mkdir(parents=True, exist_ok=True)
