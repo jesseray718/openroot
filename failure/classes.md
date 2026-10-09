@@ -9,3 +9,8 @@
 - **name**: gate grep literal differs in case from document text
 - **symptom**: window_bank_v2_20261009.sh exited silently at gate — grep -q 'smoke runs...' vs doc "Smoke runs..."; set -e + grep -q = zero diagnostics
 - **fix**: greps over prose must use -i, or match a short anchor token, never a hand-retyped sentence; a gate that dies silently is indistinguishable from a gate that passed
+
+## F-SQLITE-BUSY-DEADLOCK
+- **name**: deferred read-then-write lock upgrade returns immediate SQLITE_BUSY; busy_timeout does not apply
+- **symptom**: sys_ledger worker exit 1, traceback `sqlite3.OperationalError: database is locked` at batch UPDATE, only under >2 concurrent writers
+- **fix**: never hold reads then upgrade; SELECT+hash outside txn, write via BEGIN IMMEDIATE + exponential backoff retry (patched sys_ledger_v1.py v1.1)
