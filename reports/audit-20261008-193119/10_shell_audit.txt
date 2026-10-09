@@ -1,0 +1,432 @@
+
+
+===== 0. AUDIT META =====
+Started : 2026-10-08T19:31:19-05:00
+Host    : optiplex3060
+Mode    : read-only
+
+
+===== 1. HOST & HARDWARE =====
+ Static hostname: optiplex3060
+         Chassis: desktop 🖥️
+Operating System: Ubuntu 24.04.5 LTS
+          Kernel: Linux 7.0.0-34-generic
+ 19:31:19 up 11 days,  4:52,  6 users,  load average: 0.36, 0.25, 0.38
+CPU(s):                                  6
+Model name:                              Intel(R) Core(TM) i5-8500 CPU @ 3.00GHz
+Thread(s) per core:                      1
+Core(s) per socket:                      6
+CPU(s) scaling MHz:                      20%
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       4.3Gi       220Mi        32Mi        11Gi        11Gi
+Swap:           15Gi       3.9Gi        11Gi
+NAME     SIZE TYPE FSTYPE   MOUNTPOINT
+loop0      4K loop squashfs /snap/bare/5
+loop1    8.7M loop squashfs /snap/ruff/1700
+loop2     74M loop squashfs /snap/core22/2437
+loop3   66.8M loop squashfs /snap/core24/1643
+loop4   66.8M loop squashfs /snap/core24/2124
+loop5  531.4M loop squashfs /snap/gnome-42-2204/247
+loop6  531.5M loop squashfs /snap/gnome-42-2204/263
+loop7  614.5M loop squashfs /snap/gnome-46-2404/164
+loop8  615.3M loop squashfs /snap/gnome-46-2404/168
+loop9    1.5G loop squashfs /snap/kf5-core22/3
+loop10   402M loop squashfs /snap/mesa-2404/1839
+loop11  44.7M loop squashfs /snap/snapd/28254
+loop13    74M loop squashfs /snap/core22/2955
+loop14  50.3M loop squashfs /snap/snapd/27738
+loop15   8.7M loop squashfs /snap/ruff/1696
+sda      2.7T disk          
+├─sda1   976M part vfat     /boot/efi
+├─sda2   1.4T part ext4     /data
+├─sda3  15.8G part swap     [SWAP]
+└─sda4   1.4T part ext4     /
+sdb    114.6G disk iso9660  
+└─sdb1 114.6G part exfat    /mnt/sdb1
+sdc     57.6G disk          
+└─sdc1  57.6G part exfat    
+sr0     1024M rom           
+
+
+===== 2. FILESYSTEM USAGE =====
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda4       1.4T  391G  906G  31% /
+efivarfs        256K   99K  153K  40% /sys/firmware/efi/efivars
+/dev/sdb1       115G   78G   37G  68% /mnt/sdb1
+/dev/sda1       975M   15M  960M   2% /boot/efi
+/dev/sda2       1.4T  119G  1.2T  10% /data
+[audit] walking ~ for du (slowest step)
+
+
+===== 3. HOME FOOTPRINT (top 35 by size) =====
+326G	/home/jesse
+129G	/home/jesse/openroot
+46G	/home/jesse/optiplex-archive
+40G	/home/jesse/archives
+37G	/home/jesse/snap
+12G	/home/jesse/wisdom-scaffold
+9.7G	/home/jesse/.local
+8.6G	/home/jesse/wisdom-recovery
+8.0G	/home/jesse/harvest_hold
+6.0G	/home/jesse/rag-venv
+5.0G	/home/jesse/backup_a15_termux
+3.9G	/home/jesse/kai_recovery
+2.6G	/home/jesse/Kai
+2.6G	/home/jesse/Desktop
+2.4G	/home/jesse/attic
+1.8G	/home/jesse/src
+1.3G	/home/jesse/repo_audit_workspace
+1.3G	/home/jesse/code
+801M	/home/jesse/.npm
+686M	/home/jesse/.openroot_venv
+540M	/home/jesse/openroot-history-backup.git
+528M	/home/jesse/github
+425M	/home/jesse/github-traffic-scripts
+425M	/home/jesse/github-mirror
+423M	/home/jesse/une-push
+420M	/home/jesse/une
+395M	/home/jesse/.npm-global
+335M	/home/jesse/openroot-build
+325M	/home/jesse/knowledge-node
+200M	/home/jesse/github3
+189M	/home/jesse/openroot-swarm-publish
+189M	/home/jesse/openroot-public-boundary-pr
+189M	/home/jesse/openroot-newton-pr
+189M	/home/jesse/openroot-newton-integration-20261003T080401Z
+189M	/home/jesse/openroot-main-current-20261002T211546
+
+
+===== 4. SERVICES & SCHEDULERS =====
+--- newton-daemon (system scope) ---
+inactive
+not-found
+NRestarts=0
+ExecMainStartTimestamp=
+ExecMainPID=0
+ActiveState=inactive
+SubState=dead
+--- newton-daemon (user scope) ---
+failed
+--- running system services ---
+  UNIT                          LOAD   ACTIVE SUB     DESCRIPTION
+  anacron.service               loaded active running Run anacron jobs
+  avahi-daemon.service          loaded active running Avahi mDNS/DNS-SD Stack
+  cron.service                  loaded active running Regular background program processing daemon
+  cups-browsed.service          loaded active running Make remote CUPS printers available locally
+  cups.service                  loaded active running CUPS Scheduler
+  dbus.service                  loaded active running D-Bus System Message Bus
+  fail2ban.service              loaded active running Fail2Ban Service
+  fwupd.service                 loaded active running Firmware update daemon
+  getty@tty1.service            loaded active running Getty on tty1
+  kerneloops.service            loaded active running Tool to automatically collect and submit kernel crash signatures
+  llama-server.service          loaded active running llama.cpp server (OptiPlex heavy spoke - Qwen2.5-Coder-7B)
+  ModemManager.service          loaded active running Modem Manager
+  NetworkManager.service        loaded active running Network Manager
+  ollama.service                loaded active running Ollama Service
+  openroot-rapl-sampler.service loaded active running OpenRoot RAPL counter sampler (root: reads /sys/class/powercap)
+  polkit.service                loaded active running Authorization Manager
+  rsyslog.service               loaded active running System Logging Service
+  rtkit-daemon.service          loaded active running RealtimeKit Scheduling Policy Service
+  smartmontools.service         loaded active running Self Monitoring and Reporting Technology (SMART) Daemon
+  snapd.service                 loaded active running Snap Daemon
+  ssh.service                   loaded active running OpenBSD Secure Shell server
+  syncthing@jesse.service       loaded active running Syncthing - Open Source Continuous File Synchronization for jesse
+  systemd-journald.service      loaded active running Journal Service
+  systemd-logind.service        loaded active running User Login Management
+  systemd-machined.service      loaded active running Virtual Machine and Container Registration Service
+  systemd-resolved.service      loaded active running Network Name Resolution
+  systemd-timesyncd.service     loaded active running Network Time Synchronization
+  systemd-udevd.service         loaded active running Rule-based Manager for Device Events and Files
+  tailscaled.service            loaded active running Tailscale node agent
+--- running user services ---
+  UNIT                         LOAD   ACTIVE SUB     DESCRIPTION
+  dbus.service                 loaded active running D-Bus User Message Bus
+  filter-chain.service         loaded active running PipeWire filter chain daemon
+  gnome-keyring-daemon.service loaded active running GNOME Keyring daemon
+  openai-relay-9999.service    loaded active running OpenRoot OpenAI relay :9999 -> :11434 (kai9000 endpoint)
+  openclaw-gateway.service     loaded active running OpenClaw Gateway (v2026.7.1-2)
+  openroot-dash.service        loaded active running OpenRoot edge dashboard (:8766)
+  openroot-edge.service        loaded active running OpenRoot edge autopilot (keeper + daemon + claim/mint loop)
+  pipewire-pulse.service       loaded active running PipeWire PulseAudio
+  pipewire.service             loaded active running PipeWire Multimedia Service
+  wireplumber.service          loaded active running Multimedia Service Session Manager
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+10 loaded units listed.
+--- self-hosted actions runner ---
+2900057 bash -c echo "--- self-hosted actions runner ---"      pgrep -af "Runner.Listener|actions-runner" | head -5
+--- cron ---
+0 3 * * * /usr/bin/python3 /home/jesse/src/openroot-thesis/scripts/mesh_governor.py >> /home/jesse/src/openroot-thesis/audit_reports/mesh_governor.log 2>&1
+15 3 * * * /usr/bin/python3 /home/jesse/github-audit/repo_loop.py >> /home/jesse/github-audit/repo-loop.log 2>&1
+0 */6 * * * OPENROOT_MODEL=qwen2.5:3b /usr/bin/python3 /home/jesse/openroot/bin/watchdog_once.py # OPENROOT-UPLIFT
+*/30 * * * * /home/jesse/openroot/bin/ws_auto_sync.sh
+*/15 * * * * cd /home/jesse/openroot && python3 bin/superloop_composite_v3.py >> logs/superloop.log 2>&1
+# OPENROOT BOTS [CRONBRIDGEV1]
+0 * * * * cd /home/jesse/openroot && python3 bin/measure_thermal_v1.py --digest >> logs/cron_thermal.log 2>&1
+0 6 * * * cd /home/jesse/openroot && bin/task_dispatch_v1.sh >> logs/cron_dispatch.log 2>&1
+*/10 * * * * /usr/bin/python3 /home/jesse/openroot/bin/lumo_ingest.py >> /home/jesse/openroot/logs/lumo_ingest.log 2>&1
+0 3 * * * cd /home/jesse/openroot && python3 bin/file_ledger_v2.py index && python3 bin/file_ledger_parallel_v1.py 2 && python3 bin/ecosystem_v2.py >> logs/nightly_ecosystem_$(date +\%Y\%m\%d).log 2>&1
+
+
+===== 5. NEWTON DAEMON LOG (tail) =====
+-- No entries --
+Oct 08 18:15:10 optiplex3060 systemd[1184]: Starting newton-daemon.service - Newton Chain Telemetry (one block per run)...
+Oct 08 18:15:10 optiplex3060 python3[2894792]: /usr/bin/python3: can't open file '/home/jesse/openroot/bin/newton_daemon.py': [Errno 2] No such file or directory
+Oct 08 18:15:10 optiplex3060 systemd[1184]: newton-daemon.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Oct 08 18:15:10 optiplex3060 systemd[1184]: newton-daemon.service: Failed with result 'exit-code'.
+Oct 08 18:15:10 optiplex3060 systemd[1184]: Failed to start newton-daemon.service - Newton Chain Telemetry (one block per run).
+Oct 08 18:30:10 optiplex3060 systemd[1184]: Starting newton-daemon.service - Newton Chain Telemetry (one block per run)...
+Oct 08 18:30:10 optiplex3060 python3[2896137]: /usr/bin/python3: can't open file '/home/jesse/openroot/bin/newton_daemon.py': [Errno 2] No such file or directory
+Oct 08 18:30:10 optiplex3060 systemd[1184]: newton-daemon.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Oct 08 18:30:10 optiplex3060 systemd[1184]: newton-daemon.service: Failed with result 'exit-code'.
+Oct 08 18:30:10 optiplex3060 systemd[1184]: Failed to start newton-daemon.service - Newton Chain Telemetry (one block per run).
+Oct 08 18:45:02 optiplex3060 systemd[1184]: Starting newton-daemon.service - Newton Chain Telemetry (one block per run)...
+Oct 08 18:45:02 optiplex3060 python3[2896953]: /usr/bin/python3: can't open file '/home/jesse/openroot/bin/newton_daemon.py': [Errno 2] No such file or directory
+Oct 08 18:45:02 optiplex3060 systemd[1184]: newton-daemon.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Oct 08 18:45:02 optiplex3060 systemd[1184]: newton-daemon.service: Failed with result 'exit-code'.
+Oct 08 18:45:02 optiplex3060 systemd[1184]: Failed to start newton-daemon.service - Newton Chain Telemetry (one block per run).
+Oct 08 19:00:10 optiplex3060 systemd[1184]: Starting newton-daemon.service - Newton Chain Telemetry (one block per run)...
+Oct 08 19:00:10 optiplex3060 python3[2897914]: /usr/bin/python3: can't open file '/home/jesse/openroot/bin/newton_daemon.py': [Errno 2] No such file or directory
+Oct 08 19:00:10 optiplex3060 systemd[1184]: newton-daemon.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Oct 08 19:00:10 optiplex3060 systemd[1184]: newton-daemon.service: Failed with result 'exit-code'.
+Oct 08 19:00:10 optiplex3060 systemd[1184]: Failed to start newton-daemon.service - Newton Chain Telemetry (one block per run).
+Oct 08 19:15:10 optiplex3060 systemd[1184]: Starting newton-daemon.service - Newton Chain Telemetry (one block per run)...
+Oct 08 19:15:10 optiplex3060 python3[2898801]: /usr/bin/python3: can't open file '/home/jesse/openroot/bin/newton_daemon.py': [Errno 2] No such file or directory
+Oct 08 19:15:10 optiplex3060 systemd[1184]: newton-daemon.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Oct 08 19:15:10 optiplex3060 systemd[1184]: newton-daemon.service: Failed with result 'exit-code'.
+Oct 08 19:15:10 optiplex3060 systemd[1184]: Failed to start newton-daemon.service - Newton Chain Telemetry (one block per run).
+Oct 08 19:30:00 optiplex3060 systemd[1184]: Starting newton-daemon.service - Newton Chain Telemetry (one block per run)...
+Oct 08 19:30:00 optiplex3060 python3[2899702]: /usr/bin/python3: can't open file '/home/jesse/openroot/bin/newton_daemon.py': [Errno 2] No such file or directory
+Oct 08 19:30:00 optiplex3060 systemd[1184]: newton-daemon.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Oct 08 19:30:00 optiplex3060 systemd[1184]: newton-daemon.service: Failed with result 'exit-code'.
+Oct 08 19:30:00 optiplex3060 systemd[1184]: Failed to start newton-daemon.service - Newton Chain Telemetry (one block per run).
+
+
+===== 6. PROCESSES & LIVE SCRIPT PATHS =====
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+jesse       1166  0.1 27.6 8658908 4475608 ?     Ssl  Sep27  17:27 /usr/local/bin/llama-server -m /opt/models/qwen2.5-coder-7b-instruct-q4_k_m.gguf -c 8192 -ngl 0 -t 4 --host 0.0.0.0 --port 8080 --parallel 1 --alias qwen2.5-coder-7b
+jesse       1573  0.3  1.1 2773748 178712 ?      Ssl  Sep27  56:47 /usr/bin/node /home/jesse/.npm-global/lib/node_modules/openclaw/dist/index.js gateway --port 18789
+root     2340669  0.0  0.3  91484 49196 ?        S<s  Oct07   0:13 /usr/lib/systemd/systemd-journald
+root     2375223  0.1  0.2 1290604 42576 ?       Ssl  Oct07   2:07 /usr/sbin/tailscaled --state=/var/lib/tailscale/tailscaled.state --socket=/run/tailscale/tailscaled.sock --port=41641
+jesse       1220  0.0  0.1 2280308 30188 ?       SNl  Sep27  15:33 /usr/bin/syncthing serve --no-browser --no-restart --logflags=0
+root        1163  0.0  0.1 607808 28716 ?        Ssl  Sep27  12:44 /usr/bin/python3 /usr/bin/fail2ban-server -xf start
+root        3618  0.0  0.1 582792 25284 ?        Ssl  Sep27   0:55 /usr/libexec/fwupd/fwupd
+jesse    2392412  0.0  0.1 106892 20252 ?        Ss   Oct07   0:12 /usr/bin/python3 /home/jesse/openroot-edge/scripts/dashboard.py 8766
+root     1331947  0.0  0.1 2224440 20164 ?       Ssl  Sep30   1:15 /snap/snapd/current/usr/lib/snapd/snapd
+jesse    2392455  0.0  0.0  26696 15824 ?        S    Oct07   0:11 python3 /home/jesse/openroot-edge/scripts/node_daemon.py
+ollama   2373804  0.0  0.0 2179956 14788 ?       Ssl  Oct07   0:07 /usr/local/bin/ollama serve
+jesse    2075258  0.0  0.0 392228 13532 ?        Ss   Oct04   0:56 /usr/bin/python3 /home/jesse/openroot/bin/openai_relay_9999.py
+cups-br+ 2400554  0.0  0.0 269400 13040 ?        Ssl  00:00   0:00 /usr/sbin/cups-browsed
+1163 /usr/bin/python3 /usr/bin/fail2ban-server -xf start
+1176 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+1967 python3 /home/jesse/openroot/bin/bot_loop_v1.py
+18546 /usr/bin/python3 /home/jesse/openroot/bin/openroot_rapl_sampler_v1.py --interval 5
+2075258 /usr/bin/python3 /home/jesse/openroot/bin/openai_relay_9999.py
+2079554 python3 /home/jesse/openroot/bin/1349_bottom_tier.py --role SCOUT --input night-sky radiative cooling Stirling H-003 --mode live --provider local,groq
+2392412 /usr/bin/python3 /home/jesse/openroot-edge/scripts/dashboard.py 8766
+2392445 bash /home/jesse/openroot-edge/scripts/agape-keeper.sh python3 /home/jesse/openroot-edge/scripts/node_daemon.py
+2392455 python3 /home/jesse/openroot-edge/scripts/node_daemon.py
+2900085 bash -c pgrep -af python | head -15
+1573 /usr/bin/node /home/jesse/.npm-global/lib/node_modules/openclaw/dist/index.js gateway --port 18789
+1967 python3 /home/jesse/openroot/bin/bot_loop_v1.py
+2900090 bash -c pgrep -af "bot_loop|handoff|launch_ladder|newton|lumo|a1_core|tinycrew|governor|context_bridge|openclaw" | head -20
+bot_loop.pid -> 1967
+    PID     ELAPSED CMD
+   1967 11-04:48:28 python3 /home/jesse/openroot/bin/bot_loop_v1.py
+
+
+===== 7. NETWORK LISTENERS & LOCAL LLAMA =====
+State  Recv-Q Send-Q                          Local Address:Port  Peer Address:PortProcess                                    
+LISTEN 0      5                                     0.0.0.0:9999       0.0.0.0:*    users:(("python3",pid=2075258,fd=3))      
+LISTEN 0      4096                                127.0.0.1:9050       0.0.0.0:*                                              
+LISTEN 0      5                                     0.0.0.0:8766       0.0.0.0:*    users:(("python3",pid=2392412,fd=3))      
+LISTEN 0      4096                                127.0.0.1:631        0.0.0.0:*                                              
+LISTEN 0      4096                                  0.0.0.0:22         0.0.0.0:*                                              
+LISTEN 0      4096                                127.0.0.1:8384       0.0.0.0:*    users:(("syncthing",pid=1220,fd=16))      
+LISTEN 0      4096                            127.0.0.53%lo:53         0.0.0.0:*                                              
+LISTEN 0      511                                 127.0.0.1:18789      0.0.0.0:*    users:(("node-MainThread",pid=1573,fd=33))
+LISTEN 0      4096                                127.0.0.1:5037       0.0.0.0:*    users:(("adb",pid=2096674,fd=9))          
+LISTEN 0      512                                   0.0.0.0:8080       0.0.0.0:*    users:(("llama-server",pid=1166,fd=3))    
+LISTEN 0      32                              192.168.122.1:53         0.0.0.0:*                                              
+LISTEN 0      4096                               127.0.0.54:53         0.0.0.0:*                                              
+LISTEN 0      4096                100.122.169.43%tailscale0:51828      0.0.0.0:*                                              
+LISTEN 0      4096   [fd7a:115c:a1e0::1a01:a9d5]%tailscale0:37598         [::]:*                                              
+LISTEN 0      4096                                     [::]:22            [::]:*                                              
+LISTEN 0      4096                                        *:11434            *:*                                              
+LISTEN 0      4096                                    [::1]:631           [::]:*                                              
+LISTEN 0      4096                                        *:22000            *:*    users:(("syncthing",pid=1220,fd=13))      
+LISTEN 0      511                                     [::1]:18789         [::]:*    users:(("node-MainThread",pid=1573,fd=34))
+{"error":{"message":"File Not Found","type":"not_found_error","code":404}}
+
+NO RESPONSE on :11434
+
+NAME                         ID              SIZE      MODIFIED    
+nomic-embed-text:latest      0a109f422b47    274 MB    3 days ago     
+openroot-instruct:7b         4e732ee3ca45    4.7 GB    4 days ago     
+qwen2.5:7b-instruct          845dbda0ea48    4.7 GB    4 days ago     
+phi4-mini:latest             78fad5d182a7    2.5 GB    10 days ago    
+llama3.2:3b                  a80c4f17acd5    2.0 GB    10 days ago    
+qwen2.5-coder:7b             dae161e27b0e    4.7 GB    10 days ago    
+deepseek-r1:1.5b             e0979632db5a    1.1 GB    2 weeks ago    
+llama3.2:1b                  baf6a787fdff    1.3 GB    2 weeks ago    
+openroot-coder:latest        27df8bec37d6    4.7 GB    3 weeks ago    
+
+
+===== 8. OPENROOT GIT STATE (jesseray718/openroot) =====
+## main
+ M data/superlinear/rapl_samples.jsonl
+ M data_bot_state.json
+ M logs/cron_thermal.log
+ M logs/local_task_watch_v1.log
+porcelain entries: 59
+ M data/superlinear/rapl_samples.jsonl
+ M data_bot_state.json
+ M logs/cron_thermal.log
+ M logs/local_task_watch_v1.log
+ M logs/lumo_ingest.log
+ M logs/superloop.log
+ M reports/reasoning_kernel_audit_20260929T050213Z/sources/__pycache__/bin_0012_newton_chain.cpython-312.pyc
+ M reports/reasoning_kernel_audit_20260929T050213Z/sources/__pycache__/bin_0054_agape_ledger_chain.cpython-312.pyc
+ M reports/reasoning_kernel_audit_20260929T050213Z/sources/__pycache__/bin_0107_agape_mesh_oracle.cpython-312.pyc
+ M reports/reasoning_kernel_audit_20260929T050213Z/sources/__pycache__/bin_0534_feed_oracle.cpython-312.pyc
+ M reports/reasoning_kernel_audit_20260929T050213Z/sources/__pycache__/bin_0677_physics_ledger_v1.cpython-312.pyc
+ M reports/reasoning_kernel_audit_20260929T050213Z/sources/__pycache__/bin_0678_physics_ledger_v2.cpython-312.pyc
+ M reports/reasoning_kernel_audit_20260929T050213Z/sources/__pycache__/bin_0768_agape_cooperation_theorem.cpython-312.pyc
+ M reports/reasoning_kernel_audit_20260929T050213Z/sources/__pycache__/bin_0773_proof_builder.cpython-312.pyc
+ M reports/reasoning_kernel_audit_20260929T050213Z/sources/__pycache__/bin_0775_sacred_language_theorem.cpython-312.pyc
+ M reports/reasoning_kernel_audit_20260929T050213Z/sources/__pycache__/bin_0776_sacred_merkle_system.cpython-312.pyc
+ M reports/reasoning_kernel_audit_20260929T050213Z/sources/__pycache__/bin_0778_theorem_generator.cpython-312.pyc
+ M reports/reasoning_kernel_audit_20260929T050213Z/sources/__pycache__/bin_0779_theorem_generator_batch2.cpython-312.pyc
+ M reports/reasoning_kernel_audit_20260929T050213Z/sources/__pycache__/bin_0780_theorem_generator_batch3.cpython-312.pyc
+ M reports/reasoning_kernel_audit_20260929T050213Z/sources/__pycache__/bin_0781_theorem_generator_batch4.cpython-312.pyc
+ M reports/reasoning_kernel_audit_20260929T050213Z/sources/__pycache__/bin_0782_theorem_generator_batch5.cpython-312.pyc
+ M reports/reasoning_kernel_audit_20260929T050213Z/sources/__pycache__/bin_0783_theorems_extend.cpython-312.pyc
+ M reports/reasoning_kernel_audit_20260929T050213Z/sources/__pycache__/bin_0798_agape_oracle.cpython-312.pyc
+ M reports/reasoning_kernel_audit_20260929T050213Z/sources/__pycache__/bin_cache_pathway_orchestrator_v1.cpython-312.pyc
+ M reports/reasoning_kernel_audit_20260929T050213Z/sources/__pycache__/bin_popw_ledger.cpython-312.pyc
+Reh1t	https://github.com/Reh1t/openroot.git (fetch)
+Reh1t	https://github.com/Reh1t/openroot.git (push)
+origin	git@github.com:jesseray718/openroot.git (fetch)
+origin	git@github.com:jesseray718/openroot.git (push)
+upstream	https://github.com/jesseray718/openroot.git (fetch)
+upstream	https://github.com/jesseray718/openroot.git (push)
+0e12793 (HEAD -> main) inventory: clean flat history baseline for openroot
+* main 0e12793 inventory: clean flat history baseline for openroot
+fatal: no upstream configured for branch 'main'
+warning: garbage found: .git/objects/pack/tmp_pack_RZHqO2
+warning: garbage found: .git/objects/pack/tmp_pack_yA5Ost
+warning: garbage found: .git/objects/90/tmp_obj_pI9NyT
+count: 49787
+size: 1.12 GiB
+in-pack: 3690
+packs: 2
+size-pack: 162.20 MiB
+prune-packable: 0
+garbage: 3
+size-garbage: 4.50 GiB
+--- .gitignore ---
+consolidation-backups/
+venv/
+node_modules/
+*.db
+data/operator_holds/
+data/sdcard-sync/
+lumo_inbox/
+quarantine_tooling_repair_backups_*/
+IGNORED     : knowledge_index.db
+IGNORED     : openroot_vector.db
+IGNORED     : node_modules
+IGNORED     : data/fts_index.db
+NOT IGNORED : reports
+github.com
+  ✓ Logged in to github.com account jesseray718 (/home/jesse/.config/gh/hosts.yml)
+  - Active account: true
+  - Git operations protocol: https
+  - Token: ghp_************************************
+  - Token scopes: 'admin:enterprise', 'admin:gpg_key', 'admin:org', 'admin:org_hook', 'admin:public_key', 'admin:repo_hook', 'admin:ssh_signing_key', 'audit_log', 'codespace', 'copilot', 'delete:packages', 'delete_repo', 'gist', 'notifications', 'project', 'repo', 'user', 'workflow', 'write:discussion', 'write:network_configurations', 'write:packages'
+{"defaultBranchRef":{"name":"main"},"diskUsage":192727,"name":"openroot","pushedAt":"2026-10-08T21:21:35Z"}
+
+
+===== 9. REPO SPRAWL MAP (git metadata; sizes in section 3) =====
+openroot | branch=main | last=2026-10-08 18:17:26 -0500 | origin=git@github.com:jesseray718/openroot.git
+openroot-edge | branch=master | last=2026-10-07 23:28:55 -0500 | origin=none
+openroot-history-backup.git | branch=master | last=2026-09-17 06:19:56 -0500 | origin=/home/jesse/openroot
+jesseray718 | branch=main | last=2026-09-09 22:42:58 -0500 | origin=https://github.com/jesseray718/jesseray718.git
+jesseray718.github.io | branch=main | last=2026-09-10 00:23:56 -0500 | origin=https://github.com/jesseray718/jesseray718.github.io.git
+
+
+===== 10. SENSITIVE FILE POSTURE (flagged only — contents never read) =====
+-rw-------  278 bytes  /home/jesse/.api_keys
+-rw-------  72 bytes  /home/jesse/.git-credentials
+-rw-------  206 bytes  /home/jesse/github-recovery-codes.txt
+-rw-rw-r--  76 bytes  /home/jesse/openroot/.env.local
+-rwxr-xr-x  458228 bytes  /home/jesse/kai-settings.json
+-rw-------  74164 bytes  /home/jesse/.bash_history
+-rw-r--r--  757 bytes  /home/jesse/how-user jesse -p Linger
+total 68
+drwx------   2 jesse jesse  4096 Sep 21 22:28 .
+drwxr-x--- 137 jesse jesse 20480 Oct  8 18:43 ..
+-rw-------   1 jesse jesse   102 Oct  4 10:53 authorized_keys
+-rw-------   1 jesse jesse   444 Sep 21 22:28 black-locust-rmh
+-rw-r--r--   1 jesse jesse   120 Sep 21 22:28 black-locust-rmh.pub
+-rw-------   1 jesse jesse   226 Oct  2 20:41 config
+-rw-------   1 jesse jesse   411 Aug  1 15:49 id_ed25519
+-rw-------   1 jesse jesse   411 Aug  2 06:53 id_ed25519_optiplex
+-rw-r--r--   1 jesse jesse   100 Aug  2 06:53 id_ed25519_optiplex.pub
+-rw-r--r--   1 jesse jesse    99 Aug  1 15:49 id_ed25519.pub
+-rw-------   1 jesse jesse  2666 Oct  3 00:09 known_hosts
+Rule: anything secret above with group/world read bits needs chmod 600.
+
+
+===== 11. LIVE-STATE FILES (recent mtimes = active automation) =====
+-rw-rw-r-- 1 jesse jesse       4 Sep 27 14:45 /home/jesse/openroot/bot_loop.pid
+-rw-rw-r-- 1 jesse jesse     286 Oct  8 19:33 /home/jesse/openroot/data_bot_state.json
+-rw-rw-r-- 1 jesse jesse 5936708 Oct  8 19:31 /home/jesse/.openroot_tap.tsv
+20260925_050350	0	git push 
+20260925_050401	0	cd openroot 
+20260925_050411	1	gh stack checkout 61 
+20260925_050434	1	gh stack rebase 
+20260925_050442	1	gh stack push 
+
+
+===== 12. DATABASE FILES ON DISK =====
+total 4489088
+drwx------  13 jesse jesse      12288 Oct  8 18:32 .
+drwx------  33 jesse jesse      12288 Oct  8 18:15 ..
+-rw-rw-r--   1 jesse jesse        238 Sep 26 16:51 a1_config.json.pre_bounded_roots.20260926T215133Z.bak
+-rw-r--r--   1 jesse jesse      36864 Oct  2 18:55 agapenet_kb.db
+-rw-r--r--   1 jesse jesse   16875520 Oct  2 19:51 agapenet_kb_v2.db
+-rw-r--r--   1 jesse jesse      12288 Sep 13 19:12 api_keys.db
+-rw-rw-r--   1 jesse jesse        122 Sep 21 04:02 bridge_state.json
+-rw-r--r--   1 jesse jesse      28672 Sep 13 21:21 capability_exchange.db
+-rw-r--r--   1 jesse jesse      40960 Sep 28 16:12 code_pathways.db
+-rw-r--r--   1 jesse jesse      32768 Sep 26 15:53 compost_v1.db
+-rw-rw-r--   1 jesse jesse     170257 Oct  4 22:15 cost_ledger.jsonl
+-rw-r--r--   1 jesse jesse      20480 Sep 21 23:04 cycle_state.db
+-rw-rw-r--   1 jesse jesse      14313 Oct  4 04:00 debate_ledger.jsonl
+-rw-r--r--   1 jesse jesse   12656640 Sep 27 23:47 dedup_ledger.db
+-rw-r--r--   1 jesse jesse     929792 Sep 21 04:00 doc_index.db
+-rw-rw-r--   1 jesse jesse     148405 Oct  4 22:15 drift_alerts.jsonl
+-rw-r--r--   1 jesse jesse    9936896 Oct  8 06:44 ecosystem_v2.db
+-rw-r--r--   1 jesse jesse      77824 Sep 24 03:28 embed_cache.db
+drwxrwxr-x   2 jesse jesse       4096 Oct  7 17:52 embeddings
+-rw-r--r--   1 jesse jesse  137601024 Sep 27 22:49 embeddings.db
+-rw-r--r--   1 jesse jesse      32768 Oct  3 00:12 embeddings.db-shm
+-rw-r--r--   1 jesse jesse          0 Oct  3 00:12 embeddings.db-wal
+-rw-------   1 jesse jesse        128 Sep 21 03:41 .env
+-rw-r--r--   1 jesse jesse      28672 Sep 28 03:30 expertise_fp5s.db
+-rw-rw-r--   1 jesse jesse       8092 Oct  8 06:44 failure_queue_20261008.md
+-rw-r--r--   1 jesse jesse  410906624 Oct  8 04:02 file_ledger.db
+-rw-r--r--   1 jesse jesse 2116853760 Oct  8 18:32 fts_index.db
+-rw-r--r--   1 jesse jesse      20480 Sep 16 01:51 goals_ledger.db
+-rw-r--r--   1 jesse jesse      16384 Sep 28 05:22 gov_smoke.db
+-rw-r--r-- 1 jesse jesse    45056 Sep 24 00:01 /home/jesse/openroot/knowledge_base.db
+-rw-r--r-- 1 jesse jesse 22319104 Oct  5 06:41 /home/jesse/openroot/knowledge_index.db
+-rw-r--r-- 1 jesse jesse 91697152 Oct  4 23:13 /home/jesse/openroot/openroot_vector.db
+-rw-r--r-- 1 jesse jesse   217088 Oct  8 05:09 /home/jesse/openroot/provenance.db
+-rw-r--r-- 1 jesse jesse    12824 Oct  8 05:09 /home/jesse/openroot/provenance.db-journal
+-rw-r--r-- 1 jesse jesse    16384 Oct  5 03:15 /home/jesse/openroot/sqlite.db
+3.45.1 2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257ccalt1 (64-bit)
