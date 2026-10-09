@@ -1,0 +1,8 @@
+---
+Generated: 20261009T173507Z | Host: optiplex3060 | Canopy report: /home/jesse/openroot/reports/deepdive/deepdive-20261009T173507Z.md
+Deep dive sha256: 6e18112346fc5f47096b7047b314b225b5718f22dc7121689e3ddf50b0882232
+Drafts:
+  gumroad_listing_draft-20261009T173507Z.md  sha256=bfd3ce4491f8d952c1b940d444ee99811b00e01adfe82eb5503fd605361247da
+  hn_post_draft-20261009T173507Z.md  sha256=2cdcd133c01435297c0fd32fda8e7f6f916581fe79d50499406a555160d2c45e
+  sare_grant_framing-20261009T173507Z.md  sha256=d1ae030a662ce8d25662363c43974737afb3fea3edcdea31b3d33c21cb525f01
+CANARY:OPENROOT-DEEPDIVE-TRIAD-V1 COMPLETE — NO COMMITS MADE
