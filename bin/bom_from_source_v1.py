@@ -266,7 +266,6 @@ def write_outputs(bom_rows, source_path: Path, out_dir: Path):
     # JSON structure
     bom = {
         "source": str(source_path),
-        "generated_at_utc": now_iso(),
         "schema_version": "bom_from_source_v1",
         "rows": bom_rows,
     }
@@ -287,7 +286,7 @@ def write_outputs(bom_rows, source_path: Path, out_dir: Path):
         "sum_quantity": sum(float(r["quantity"]) for r in bom_rows),
     }
 
-    json_path.write_text(stable_dump(bom) + "\\n", encoding="utf-8")
+    json_path.write_text(stable_dump(bom) + "\n", encoding="utf-8")
     csv_path.write_text("", encoding="utf-8")
     with open(csv_path, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
@@ -303,7 +302,7 @@ def write_outputs(bom_rows, source_path: Path, out_dir: Path):
                 r["category"],
             ])
 
-    meta_path.write_text(stable_dump(meta) + "\\n", encoding="utf-8")
+    meta_path.write_text(stable_dump(meta) + "\n", encoding="utf-8")
 
     # Hash registration
     out_hashes = {
@@ -356,7 +355,7 @@ def main():
             "note": "estimated; actual energy use requires RAPL or measured meter"
         },
     }
-    (out_dir / "manifest.json").write_text(stable_dump(manifest) + "\\n", encoding="utf-8")
+    (out_dir / "manifest.json").write_text(stable_dump(manifest) + "\n", encoding="utf-8")
 
     if not args.no_ledger:
         ledger_touch(ROOTKIT_DB, rows)
