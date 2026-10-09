@@ -25,3 +25,12 @@ reports/theorem_discovery_*/text_files.txt
 reports/theorem_discovery_*/keyword_hits.txt
 reports/theorem_discovery_*/direct_concepts.txt
 ledger/expansions/archives_*.manifest.jsonl
+reports/gh-audit-*/local_files.tsv
+reports/gh-audit-*/github_timeline.tsv
+reports/zero_dimension_theory_discovery_*/all_hits.txt
+reports/zero_dimension_theory_discovery_*/keyword_hits.txt
+reports/zero_dimension_theory_discovery_*/direct_concepts.txt
+reports/theorem_discovery_*/text_files.txt
+reports/theorem_discovery_*/keyword_hits.txt
+reports/theorem_discovery_*/direct_concepts.txt
+ledger/expansions/archives_*.manifest.jsonl
