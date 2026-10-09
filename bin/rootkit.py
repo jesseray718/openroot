@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """
-rootkit — the unified dispatcher for openroot's 7-layer organism.
-SPDX-License-Identifier: GPL-3.0-only
+rootkit - unified dispatcher for the openroot organism.
 
 Doctrine:
-  - One ID system: SHA-256 content-addressing is the spine.
-  - All interfaces: hash-in, hash-out. No exceptions.
-  - Exit codes: 0=banked (committed), 1=held (requires gate), 2=error (abort).
+  - SHA-256 content addressing is the spine; organs talk by hash.
+  - Exit codes: 0=BANKED (work really ran), 1=HELD (human gate / not built),
+    2=ERROR (abort).
+  - Never report BANKED for work that did not run.
 """
 
 import argparse
 import hashlib
 import json
-import os
 import subprocess
 import sys
 from datetime import datetime, timezone
@@ -26,226 +26,203 @@ LOGS = ROOT / "logs"
 CANARY = "[ROOTKIT]"
 EXIT = {"BANKED": 0, "HELD": 1, "ERROR": 2}
 
-ORGANS = {
+# Organs that exist today and are really wired.
+WIRED = {
     "ingest": BIN / "lumo_ingest.py",
-    "chunk": BIN / "chunker_v1.py",
     "index": BIN / "a1_core_v1.py",
+    "route": BIN / "a1_core_v1.py",
+    "bom": BIN / "bom_from_source_v1.py",
+    "migrate": BIN / "rootkit_migrate_v1.py",
+}
+
+# Organs that are planned but not built yet. Calls return HELD.
+PLANNED = {
+    "chunk": BIN / "chunker_v1.py",
     "ask": BIN / "agape_router_v1.py",
-    "task": BIN / "a1_core_v1.py",
     "attest": BIN / "popw_ledger_v1.py",
     "mint": BIN / "newton_chain_v1.py",
     "publish": BIN / "relay_loop_v1.py",
 }
 
+
 def now():
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
+
 def log_op(severity, msg):
-    print(f"{now()} {CANARY} {severity:>8s}  {msg}")
+    print(f"{now()} {CANARY} {severity:>6s}  {msg}")
 
-def sha256_file(p):
-    h = hashlib.sha256()
-    with open(p, "rb") as f:
-        for chunk in iter(lambda: f.read(1 << 20), b""):
-            h.update(chunk)
-    return h.hexdigest()
 
-def invoke(script_path, args=None, stdin_text=None):
+def sha256_text(s):
+    return hashlib.sha256(s.encode()).hexdigest()
+
+
+def invoke(script_path, args=None, timeout=3600):
     if not script_path.exists():
         return EXIT["ERROR"], "", f"script not found: {script_path}"
-
-    cmd = [sys.executable, str(script_path)] + (args or [])
+    cmd = [sys.executable, str(script_path)] + list(args or [])
     try:
-        result = subprocess.run(cmd, capture_output=True, text=True, input=stdin_text, timeout=3600)
-        return result.returncode, result.stdout, result.stderr
+        r = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
+        return r.returncode, r.stdout, r.stderr
     except subprocess.TimeoutExpired:
         return EXIT["ERROR"], "", f"timeout invoking {script_path}"
     except Exception as e:
         return EXIT["ERROR"], "", str(e)
 
-def cmd_ingest(args):
-    log_op("GATE", "ingest: delegating to lumo_ingest.py")
-    rc, out, err = invoke(ORGANS["ingest"])
-    if rc == EXIT["BANKED"]:
-        log_op("BANKED", f"ingest complete\n{out}")
-        return EXIT["BANKED"]
-    elif rc == EXIT["HELD"]:
-        log_op("HELD", f"ingest requires human gate\n{out}")
-        return EXIT["HELD"]
-    else:
-        log_op("ERROR", f"ingest failed:\n{err}")
-        return EXIT["ERROR"]
 
-def cmd_chunk(args):
-    if not args.shard_dir:
-        log_op("ERROR", "chunk: requires --shard-dir")
-        return EXIT["ERROR"]
-    shard_path = Path(args.shard_dir)
-    if not shard_path.exists():
-        log_op("ERROR", f"chunk: shard directory absent: {shard_path}")
-        return EXIT["ERROR"]
-    log_op("GATE", f"chunk: processing shard {shard_path}")
-    rc, out, err = invoke(ORGANS["chunk"], [str(shard_path)])
-    if rc == EXIT["BANKED"]:
-        log_op("BANKED", f"chunk complete\n{out}")
+def finish(name, rc, out, err):
+    """Map a delegate's exit code to a rootkit exit code and log it."""
+    if rc == 0:
+        log_op("BANKED", f"{name} complete")
+        if out.strip():
+            print(out.rstrip())
         return EXIT["BANKED"]
-    else:
-        log_op("ERROR", f"chunk failed:\n{err}")
-        return EXIT["ERROR"]
+    if rc == 1:
+        log_op("HELD", f"{name} held (human gate)")
+        if out.strip():
+            print(out.rstrip())
+        return EXIT["HELD"]
+    log_op("ERROR", f"{name} failed rc={rc}")
+    if out.strip():
+        print(out.rstrip())
+    if err.strip():
+        print(err.rstrip(), file=sys.stderr)
+    return EXIT["ERROR"]
+
+
+def planned_stub(name):
+    log_op("HELD", f"{name}: organ not built yet ({PLANNED[name].name})")
+    return EXIT["HELD"]
+
+
+def cmd_ingest(args):
+    log_op("GATE", "ingest: lumo_ingest.py")
+    return finish("ingest", *invoke(WIRED["ingest"]))
+
 
 def cmd_index(args):
-    log_op("GATE", "index: scanning filesystem for text assets")
-    cmd_args = ["scan"]
-    if args.rebuild:
-        log_op("HELD", "index: --rebuild flag set; clearing prior ledger (human gate)")
-        cmd_args.append("--rebuild")
-    rc, out, err = invoke(ORGANS["index"], cmd_args)
-    if rc == EXIT["BANKED"]:
-        log_op("BANKED", f"index complete\n{out}")
-        return EXIT["BANKED"]
-    elif rc == EXIT["HELD"]:
-        log_op("HELD", f"index held\n{out}")
-        return EXIT["HELD"]
-    else:
-        log_op("ERROR", f"index failed:\n{err}")
-        return EXIT["ERROR"]
+    log_op("GATE", "index: a1_core_v1.py scan")
+    return finish("index", *invoke(WIRED["index"], ["scan"]))
+
+
+def cmd_chunk(args):
+    return planned_stub("chunk")
+
 
 def cmd_ask(args):
     if not args.query:
         log_op("ERROR", "ask: requires --query")
         return EXIT["ERROR"]
-    log_op("GATE", f"ask: routing query '{args.query}'")
-    log_op("HELD", "ask: router TBD (stub)")
+    # Routing hint only; no retrieval is performed yet.
+    rc, out, err = invoke(WIRED["route"], ["route", "--task", args.query])
+    log_op("HELD", "ask: retrieval not built; routing hint only")
+    if out.strip():
+        print(out.rstrip())
     return EXIT["HELD"]
+
+
+def load_spec(raw):
+    if raw.lstrip().startswith("{"):
+        return json.loads(raw)
+    with open(raw) as f:
+        return json.load(f)
+
 
 def cmd_task(args):
     if not args.spec:
         log_op("ERROR", "task: requires --spec (JSON or path)")
         return EXIT["ERROR"]
     try:
-        if args.spec.lstrip().startswith("{"):
-            spec = json.loads(args.spec)
-        else:
-            with open(args.spec) as f:
-                spec = json.load(f)
-    except (json.JSONDecodeError, FileNotFoundError) as e:
+        spec = load_spec(args.spec)
+    except (json.JSONDecodeError, OSError) as e:
         log_op("ERROR", f"task: spec parse failed: {e}")
         return EXIT["ERROR"]
 
-    spec_sha = hashlib.sha256(json.dumps(spec, sort_keys=True).encode()).hexdigest()
-    log_op("GATE", f"task: spec_sha256={spec_sha[:12]} type={spec.get('type')}")
-
-    executors = {"bom": BIN / "bom_from_source_v1.py"}
+    spec_sha = sha256_text(json.dumps(spec, sort_keys=True))
     ttype = spec.get("type")
+    log_op("GATE", f"task: spec_sha256={spec_sha[:12]} type={ttype}")
+
     if ttype == "bom":
         if not spec.get("source"):
             log_op("ERROR", "task[bom]: spec.source required")
             return EXIT["ERROR"]
-        rc, out, err = invoke(executors["bom"], ["--source", spec["source"]])
-        if rc == 0:
-            log_op("BANKED", f"task[bom] complete
-{out}")
-            return EXIT["BANKED"]
-        log_op("ERROR" if rc >= 2 else "HELD", f"task[bom] rc={rc}
-{out}{err}")
-        return EXIT["ERROR"] if rc >= 2 else EXIT["HELD"]
+        return finish("task[bom]", *invoke(WIRED["bom"], ["--source", spec["source"]]))
 
     # No executor: never report BANKED for work that did not run.
-    rc, out, err = invoke(ORGANS["task"], ["route", "--task", json.dumps(spec)])
-    log_op("HELD", f"task: no executor for type={ttype!r}; routing hint only
-{out}")
+    rc, out, err = invoke(WIRED["route"], ["route", "--task", json.dumps(spec)])
+    log_op("HELD", f"task: no executor for type={ttype!r}; routing hint only")
+    if out.strip():
+        print(out.rstrip())
     return EXIT["HELD"]
 
 
 def cmd_attest(args):
-    if not args.job_id:
-        log_op("ERROR", "attest: requires --job-id")
-        return EXIT["ERROR"]
-    log_op("GATE", f"attest: recording energy metabolism for {args.job_id}")
-    rc, out, err = invoke(ORGANS["attest"], [args.job_id])
-    if rc == EXIT["BANKED"]:
-        log_op("BANKED", f"attest complete\n{out}")
-        return EXIT["BANKED"]
-    else:
-        log_op("ERROR", f"attest failed:\n{err}")
-        return EXIT["ERROR"]
+    return planned_stub("attest")
+
 
 def cmd_mint(args):
-    if not args.job_id:
-        log_op("ERROR", "mint: requires --job-id")
-        return EXIT["ERROR"]
-    log_op("GATE", f"mint: recording block to Newton Chain for {args.job_id}")
-    rc, out, err = invoke(ORGANS["mint"], [args.job_id])
-    if rc == EXIT["BANKED"]:
-        log_op("BANKED", f"mint complete\n{out}")
-        return EXIT["BANKED"]
-    else:
-        log_op("ERROR", f"mint failed:\n{err}")
-        return EXIT["ERROR"]
+    return planned_stub("mint")
+
 
 def cmd_publish(args):
-    log_op("GATE", "publish: initiating relay loop to GitHub")
-    push_args = []
-    if args.tag:
-        push_args.extend(["--tag", args.tag])
-    rc, out, err = invoke(ORGANS["publish"], push_args)
-    if rc == EXIT["BANKED"]:
-        log_op("BANKED", f"publish complete\n{out}")
-        return EXIT["BANKED"]
-    elif rc == EXIT["HELD"]:
-        log_op("HELD", f"publish held (human gate)\n{out}")
-        return EXIT["HELD"]
-    else:
-        log_op("ERROR", f"publish failed:\n{err}")
-        return EXIT["ERROR"]
+    return planned_stub("publish")
+
 
 def cmd_audit(args):
-    log_op("GATE", "audit: running health checks")
-    log_op("HELD", "audit: health check framework TBD")
+    log_op("HELD", "audit: not built yet")
     return EXIT["HELD"]
 
+
 def cmd_organism(args):
-    if args.daemon:
-        log_op("GATE", "organism: starting daemon mode (infinite loop)")
-        log_op("HELD", "organism daemon: TBD")
+    log_op("HELD", "organism: loop not built yet")
+    return EXIT["HELD"]
+
+
+def cmd_doctor(args):
+    print(f"{CANARY} doctor: preflight")
+    wired_missing = []
+    print(" wired:")
+    for name, path in sorted(WIRED.items()):
+        ok = path.exists()
+        if not ok:
+            wired_missing.append(name)
+        print(f"  {name:8s} {path.name:28s} {'OK' if ok else 'MISSING'}")
+    planned_missing = []
+    print(" planned:")
+    for name, path in sorted(PLANNED.items()):
+        ok = path.exists()
+        if not ok:
+            planned_missing.append(name)
+        print(f"  {name:8s} {path.name:28s} {'present' if ok else 'not built'}")
+    if wired_missing:
+        log_op("ERROR", f"wired organs missing: {', '.join(wired_missing)}")
+        return EXIT["ERROR"]
+    if planned_missing:
+        log_op("HELD", f"wired OK; not built: {', '.join(planned_missing)}")
         return EXIT["HELD"]
-    else:
-        log_op("GATE", "organism: single cycle (goal rank + next task)")
-        log_op("HELD", "organism single-cycle: TBD")
-        return EXIT["HELD"]
+    log_op("BANKED", "all organs present")
+    return EXIT["BANKED"]
+
 
 def main():
-    parser = argparse.ArgumentParser(description=f"{CANARY} unified dispatcher for openroot organism")
-    parser.add_argument("cmd", nargs="?", default="organism",
-        choices=["ingest", "chunk", "index", "ask", "task", "attest", "mint", "publish", "audit", "organism"])
-    parser.add_argument("--shard-dir", default=None, help="[chunk] shard directory")
-    parser.add_argument("--rebuild", action="store_true", help="[index] clear prior ledger")
-    parser.add_argument("--query", default=None, help="[ask] natural-language query")
-    parser.add_argument("--spec", default=None, help="[task] spec JSON or path")
-    parser.add_argument("--job-id", default=None, help="[attest/mint] job UUID")
-    parser.add_argument("--tag", default=None, help="[publish] git tag")
-    parser.add_argument("--full", action="store_true", help="[audit] full scan vs. baseline")
-    parser.add_argument("--daemon", action="store_true", help="[organism] run as daemon")
-    args = parser.parse_args()
-
-    for p in (DATA, LOGS):
-        p.mkdir(parents=True, exist_ok=True)
-
     handlers = {
-        "ingest": cmd_ingest,
-        "chunk": cmd_chunk,
-        "index": cmd_index,
-        "ask": cmd_ask,
-        "task": cmd_task,
-        "attest": cmd_attest,
-        "mint": cmd_mint,
-        "publish": cmd_publish,
-        "audit": cmd_audit,
-        "organism": cmd_organism,
+        "ingest": cmd_ingest, "chunk": cmd_chunk, "index": cmd_index,
+        "ask": cmd_ask, "task": cmd_task, "attest": cmd_attest,
+        "mint": cmd_mint, "publish": cmd_publish, "audit": cmd_audit,
+        "doctor": cmd_doctor, "organism": cmd_organism,
     }
+    p = argparse.ArgumentParser(description=f"{CANARY} openroot dispatcher")
+    p.add_argument("cmd", nargs="?", default="doctor", choices=sorted(handlers))
+    p.add_argument("--query", default=None)
+    p.add_argument("--spec", default=None)
+    p.add_argument("--job-id", default=None)
+    p.add_argument("--tag", default=None)
+    args = p.parse_args()
 
-    rc = handlers[args.cmd](args)
-    sys.exit(rc)
+    for d in (DATA, LOGS):
+        d.mkdir(parents=True, exist_ok=True)
+    sys.exit(handlers[args.cmd](args))
+
 
 if __name__ == "__main__":
     main()
