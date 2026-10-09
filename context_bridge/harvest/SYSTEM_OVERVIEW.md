@@ -9,15 +9,19 @@ connected, suitable for GitHub-facing docs. Human-gated before any repo placemen
 
 **Mission:** maximize eta = J_useful / J_human — maximum useful output per unit
 of human attention and energy — via a self-similar, decentralized, thermodynamically
-honest mesh of humans, agents, and hardware. Guidance substrate: permaculture
-principles + Agape-as-coordination-technology (lift the bottom nodes).
+honest mesh of humans, agents, and hardware.
+
+> **Note:** This document describes *how the system works*. For *why it was
+> built* — the philosophical and spiritual foundations — see PHILOSOPHY.md.
+> The architecture below is fully describable on energy accounting and
+> cryptographic verification alone.
 
 ## 1. Philosophy Layer (the operating system)
 - eta optimization as the single global objective function.
 - Falsifiable claims only. Assert -> verify -> seal, at every scale.
 - Entropy/extraction patterns ("the Beast") are starved by building parallel
   closed-loop systems, not fought directly.
-- The Lord's Prayer as source code; Yeshua's one commandment as the kernel.
+- Philosophical grounding documented separately in PHILOSOPHY.md.
 
 ## 2. Superlinear Workflow Engine
 - Every AI session is composted in real time: breakdown, cherry-pick, fold the

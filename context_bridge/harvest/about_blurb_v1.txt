@@ -1,0 +1,8 @@
+OpenRoot is a local-first compute and energy system that measures everything
+in joules. It runs specialized language models on recycled hardware, chains
+every claim through SHA-256 ledgers that verify their own integrity, and
+mints a work-backed currency (acre) only when energy is demonstrably
+captured, stored, and used locally. The goal: demonstrate that
+civilization-grade infrastructure — thermal storage, power generation,
+computation, knowledge formalization — can be built, audited, and published
+by one person, one desktop, and one phone.
