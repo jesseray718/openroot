@@ -29,6 +29,7 @@ WIRED = {
     "chunk": BIN / "chunker_v1.py",
     "ask": BIN / "ask_router_v1.py",
     "popw": BIN / "popw_ledger_v1.py",
+    "chain": BIN / "newton_chain_v1.py",
 }
 
 PLANNED = {
@@ -125,33 +126,56 @@ def cmd_task(args):
             log_op("ERROR", "task[bom]: spec.source required")
             return EXIT["ERROR"]
         rc, out, err = invoke(WIRED["bom"], ["--source", spec["source"]])
-        if rc == 0:
-            # record POPW estimate after task success.
-            src_hash = hashlib.sha256(Path(spec["source"]).read_bytes()).hexdigest()
-            popw_args = [
-                "record",
-                "--job-id", f"job-bom-{src_hash[:12]}",
-                "--input-hash", src_hash,
-                "--output-hash", hashlib.sha256((out or "").encode()).hexdigest(),
-                "--meter-kind", "estimate",
-                "--joules-human", "0.0",
-                "--joules-useful", "0.0",
-                "--k-delta", "0.0",
-                "--note", "bom render estimate"
-            ]
-            popw_rc, popw_out, popw_err = invoke(WIRED["popw"], popw_args)
-            if popw_rc == 0:
-                print(popw_out.rstrip())
-            else:
-                print(popw_err.rstrip(), file=sys.stderr)
+        if rc != 0:
             return finish("task[bom]", rc, out, err)
-        return finish("task[bom]", rc, out, err)
+
+        hashes = {}
+        src_hash = None
+        for line in out.splitlines():
+            if line.startswith("[banked] output_hashes="):
+                hashes = json.loads(line.split("=", 1)[1])
+            if line.startswith("[banked] source_sha256="):
+                src_hash = line.split("=", 1)[1].strip()
+        if not hashes.get("bom.json") or not src_hash:
+            log_op("ERROR", "task[bom]: could not read hashes from renderer output")
+            return EXIT["ERROR"]
+
+        out_hash = hashes["bom.json"]
+        job_id = f"job-bom-{src_hash[:12]}-{out_hash[:8]}"
+        att_hash = sha256_text(json.dumps(
+            {"job_id": job_id, "input": src_hash, "output": out_hash,
+             "meter_kind": "estimate", "joules_human": 0.0,
+             "joules_useful": 0.0, "k_delta": 0.0}, sort_keys=True))
+
+        prc, pout, perr = invoke(WIRED["popw"], [
+            "record", "--job-id", job_id,
+            "--input-hash", src_hash, "--output-hash", out_hash,
+            "--meter-kind", "estimate",
+            "--joules-human", "0.0", "--joules-useful", "0.0", "--k-delta", "0.0",
+            "--note", "bom render; estimate only"])
+        if prc != 0:
+            log_op("ERROR", f"task[bom]: popw record failed\n{perr}")
+            return EXIT["ERROR"]
+
+        crc, cout, cerr = invoke(WIRED["chain"], [
+            "append", "--job-id", job_id,
+            "--input-hash", src_hash, "--output-hash", out_hash,
+            "--attestation-hash", att_hash, "--note", "bom render"])
+        if crc != 0:
+            log_op("ERROR", f"task[bom]: chain append failed\n{cerr}")
+            return EXIT["ERROR"]
+
+        print(out.rstrip())
+        print(pout.rstrip())
+        log_op("BANKED", f"task[bom] job={job_id} popw+chain recorded")
+        return EXIT["BANKED"]
 
     rc, out, err = invoke(WIRED["route"], ["route", "--task", json.dumps(spec)])
     log_op("HELD", f"task: no executor for type={ttype!r}; routing hint only")
     if out.strip():
         print(out.rstrip())
     return EXIT["HELD"]
+
 
 def cmd_popw(args):
     if not args.command:
