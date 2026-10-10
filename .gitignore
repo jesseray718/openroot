@@ -38,3 +38,5 @@ data/rootkit.db
 data/rootkit.db-*
 data/chunk_manifest.jsonl
 data/rootkit_chain.jsonl
+reports/bom_*/
+reports/bom_*/
