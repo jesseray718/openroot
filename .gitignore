@@ -34,3 +34,6 @@ reports/theorem_discovery_*/text_files.txt
 reports/theorem_discovery_*/keyword_hits.txt
 reports/theorem_discovery_*/direct_concepts.txt
 ledger/expansions/archives_*.manifest.jsonl
+data/rootkit.db
+data/rootkit.db-*
+data/chunk_manifest.jsonl
