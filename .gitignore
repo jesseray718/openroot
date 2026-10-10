@@ -37,3 +37,4 @@ ledger/expansions/archives_*.manifest.jsonl
 data/rootkit.db
 data/rootkit.db-*
 data/chunk_manifest.jsonl
+data/rootkit_chain.jsonl
