@@ -1,0 +1,1 @@
+{"key":"5ffb15164c8ca7785c9ed291eb913d56e9dcd664fa83fa1db347442c656e168e","out":"openroot stars=1\n","sha":"2aef6c349dca968efde9eb3471099853ec310a67a80520d2e13a6a63d72c476e","ts":1791753302.8411534,"cmd":"gh repo view jesseray718/openroot --json name,stargazerCount -q .name + \" stars=\" + (.stargazerCount|tostring)"}
