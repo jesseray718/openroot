@@ -16,7 +16,7 @@ import sqlite3, json, math, hashlib, urllib.request, sys, argparse
 
 DB = "/home/jesse/openroot/data/pathways.db"
 OLLAMA = "http://localhost:11434"
-DEFAULT_THRESHOLD = 0.45
+DEFAULT_THRESHOLD = 0.42
 
 PROBES_RELATED = [
     "what risks did the audit find in the openroot repository",
