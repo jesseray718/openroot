@@ -1,0 +1,1 @@
+{"name":"cache-pathways","status":"open","text":"Every repeatable command routes through a cached pathway with receipt; misses inherit discovered pathways from prior versions before building new.","ts":"2026-10-11T21:08:53.780745+00:00","supremacy":"bor-pin-verified","sha256":"c29912177fdb7b85eb220cbdaa4fd11823d1d1445653e681b43eba42f904a96f"}
