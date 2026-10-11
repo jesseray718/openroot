@@ -28,7 +28,11 @@ accumulated proven pathways of everything that came before.
 - [ ] theorem flags: CLIDdy/ReGen proven theorem = permanent ledger flag, never recompute.
 - [ ] weekly onepass_v3.sh absorbs this snapshot.
 
+- [ ] [production-bundle] build/run/verify container on optiplex (docker build -f deploy/docker/Dockerfile .) then human commit of deploy/ tree.
+
 ## EVENT LOG
+- [2026-10-11T17:43:03Z] [8dfabcc3ec14b465] production bundle v2 staged: docker+compose+one-shot+README+front-page+guide via 7-chunk emitter protocol (6 canaries banked)
+
 
 (empty — history starts now)
 - [2026-10-11T14:04:11Z] [1cca118a8687f76f] RIDE-ALONG v2 sealed (f-string brace bug structurally fixed). Superlinear loop CLOSED: cache-hit proven, self-churn fixed, embeddings live, pushes 5de90de + 7049831. Ledger 10 rows GREEN.
@@ -40,3 +44,4 @@ accumulated proven pathways of everything that came before.
 - [2026-10-11T14:21:22Z] [0495b4d5fce5e942] Merkle lineage banked+pushed (code only — pathways.db stays gitignored as runtime state, doctrine-consistent). First theorem 83c3b4f7 = ROOT+bin full-audit 2026-10-11. Ledger 12 rows, 1 theorem, GREEN.
 - [2026-10-11T14:35:06Z] [52a583409ac3639e] phi4-router SHIPPED: three-layer orchestration live. Branches proven: SEMANTIC-cache (0.4579), MODEL-fallback (0.3468). Defaults harmonized 0.42 across router+semantic layers. SUPERLINEAR SPINE COMPLETE: hash replay, Merkle lineage, thresholded embed, router front door.
 - [2026-10-11T14:39:28Z] [be57ceb158cc4f6d] Router parse-fix: row_sha slice offset corrected. Cosmetic-to-machine-readable defect caught from live output. Spine complete and clean.
+- [2026-10-11T17:10:02Z] [44d5d071f7d2a855] emit_window_seed_v1.sh committed to bin/. Window-seed ritual: bash ~/emit_window_seed_v1.sh on A15 emits opener+protocol+live state as one paste. Repo copy = loss-proof backup. Backlog triage (41 files, intent-to-add entries present) remains next-action #1 — commit via path-scoped commits only, no bulk commit.
