@@ -40,3 +40,5 @@ data/chunk_manifest.jsonl
 data/rootkit_chain.jsonl
 reports/bom_*/
 reports/bom_*/
+ledger/agape/index.sqlite
+ledger/agape/index.sqlite-*
