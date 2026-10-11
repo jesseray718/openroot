@@ -11,8 +11,8 @@ if a theorem stands, the whole system inherits it as flag and skips recompute.
 The endgame: an interconnected organism where the least among us is lifted by the
 accumulated proven pathways of everything that came before.
 
-## CURRENT STATE (regenerated 2026-10-11T14:50:19.152025+00:00)
-- Git: main @ 949ec41 (45 dirty entries)
+## CURRENT STATE (regenerated 2026-10-11T18:09:50.950889+00:00)
+- Git: main @ 8cc0e4e (12 dirty entries)
 - Pathway ledger: 12 rows, 2 embeddings, latest seal 83c3b4f7f2ae (2026-10-11T14:18:12)
 - Latest reports: /home/jesse/openroot/reports/audit-bin-20261011T141217Z.md
 /home/jesse/openroot/reports/audit-bin-20261011T135143Z.md
@@ -20,15 +20,16 @@ accumulated proven pathways of everything that came before.
 
 ## ACTIVE QUEUE (delete when done, never leave stale)
 - [ ] SOLUTION 1 — commit-state hashing: input basis = git rev-parse HEAD (+ dirty bit), NOT working-tree diff. Daemon ledger churn stops invalidating pathways. Audit validates what will be PUSHED.
+- [ ] SOLUTION 2 — parent-child lineage: ALTER pathways table ADD COLUMN parents TEXT (JSON list of row_shas). A->B->C composes into theorem T instead of 3 isolated seals. Bookshelf becomes spine.
+- [ ] SOLUTION 3 — thresholded semantic routing: wire cosine similarity into lookup. Semantic hit needs confidence score (start 0.75, calibrate). Hash = binary truth, embed = scored neighbor, model = last resort.
+- [ ] phi4-router front door: query -> hash lookup -> embed neighbor (scored) -> model call -> seal. NEXT ORGAN.
+- [ ] tighten audit system prompt: 7B echoes scripts back instead of enumerating per-file risks.
 - [ ] verify --embed flag fires on every audit (auto-embed new seals).
 - [ ] theorem flags: CLIDdy/ReGen proven theorem = permanent ledger flag, never recompute.
 - [ ] weekly onepass_v3.sh absorbs this snapshot.
 
-
-- [ ] [verify] docker build -t openroot -f deploy/docker/Dockerfile . — prove the public quickstart claim (<5-min clone-and-run). Currently UNPROVEN.
-- [ ] [verify] exercise embed_backfill_v1.py from router seal path once — CLI signature unproven. Check [banked] vs [held]. Last unproven spine organ.
-- [ ] [fix] tighten audit system prompt — per-file risk enumeration, not script echo (7B currently echoes scripts back).
 ## EVENT LOG
+
 - [2026-10-11T17:57:07Z] [052f1a588d81f818] queue update: stale items (SOLUTION 2, SOLUTION 3, phi4-router) removed as SHIPPED per event log; 3 next-action items added (docker build verify, embed_backfill exercise, audit prompt tightening)
 
 - [2026-10-11T17:43:03Z] [8dfabcc3ec14b465] production bundle v2 staged: docker+compose+one-shot+README+front-page+guide via 7-chunk emitter protocol (6 canaries banked)
