@@ -1,4 +1,4 @@
-# HANDOFF: Production Bundle v2 Committed + Full Backlog Sweep — ${TS}
+# HANDOFF: Production Bundle v2 Committed + Full Backlog Sweep — 20261011T175138Z
 
 ## ARTIFACTS BUILT THIS ARC (7/7 canaries banked, emitter protocol v1)
 - deploy/docker/Dockerfile (451B, ubuntu:24.04 py3+numpy+pandas)
