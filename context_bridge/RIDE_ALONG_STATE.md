@@ -20,12 +20,10 @@ accumulated proven pathways of everything that came before.
 
 ## ACTIVE QUEUE (delete when done, never leave stale)
 - [ ] SOLUTION 1 — commit-state hashing: input basis = git rev-parse HEAD (+ dirty bit), NOT working-tree diff. Daemon ledger churn stops invalidating pathways. Audit validates what will be PUSHED.
-- [ ] tighten audit system prompt: 7B echoes scripts back instead of enumerating per-file risks.
 - [ ] verify --embed flag fires on every audit (auto-embed new seals).
 - [ ] theorem flags: CLIDdy/ReGen proven theorem = permanent ledger flag, never recompute.
 - [ ] weekly onepass_v3.sh absorbs this snapshot.
 
-- [ ] [production-bundle] build/run/verify container on optiplex (docker build -f deploy/docker/Dockerfile .) then human commit of deploy/ tree.
 
 - [ ] [verify] docker build -t openroot -f deploy/docker/Dockerfile . — prove the public quickstart claim (<5-min clone-and-run). Currently UNPROVEN.
 - [ ] [verify] exercise embed_backfill_v1.py from router seal path once — CLI signature unproven. Check [banked] vs [held]. Last unproven spine organ.
