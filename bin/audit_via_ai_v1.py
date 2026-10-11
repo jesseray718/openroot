@@ -3,7 +3,7 @@
 Cached pathway hit means the AI is NEVER called for proven input."""
 import os, sys, json, hashlib, subprocess, urllib.request, datetime, argparse
 
-IGNORE = {"venv", "node_modules", ".git", "__pycache__", "archive", "attic", "quarantine_tooling_repair_backups_20260926T205307Z"}
+IGNORE = {"reports", "logs", "venv", "node_modules", ".git", "__pycache__", "archive", "attic", "quarantine_tooling_repair_backups_20260926T205307Z"}
 OLLAMA = "http://localhost:11434"
 
 def manifest(root, max_files=4000, sample_bytes=1200):
