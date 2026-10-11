@@ -42,7 +42,7 @@ def query_handler(question, threshold, model):
         parts = decision_out.split()
         sha = [p for p in parts if p.startswith("row_sha=")]
         sc = [p for p in parts if p.startswith("score=")]
-        info = f"sha={sha[0][6:] if sha else '?'} score={sc[0][6:] if sc else '?'}" if sha or sc else "?"
+        info = f"sha={sha[0][8:] if sha else '?'} score={sc[0][6:] if sc else '?'}" if sha or sc else "?"
         print(f"[banked] NEIGHBOR_FOUND → {info}")
         print(f"[gate] RETURN: semantic-cache")
         return 0
