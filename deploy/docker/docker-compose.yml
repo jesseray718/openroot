@@ -1,0 +1,12 @@
+services:
+  openroot:
+    build:
+      context: ../..
+      dockerfile: deploy/docker/Dockerfile
+    volumes:
+      - ../../data:/openroot/data
+      - ../../logs:/openroot/logs
+    environment:
+      - AGENT_MODEL=qwen2.5-coder:7b
+    working_dir: /openroot
+    command: bash -c "echo 'Spine Active (compose)' && sleep infinity"
