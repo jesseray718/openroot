@@ -1,0 +1,15 @@
+kubernetes
+helm
+kubectl
+terraform
+aws
+gcp
+azure
+airflow
+tableau
+twitter
+selenium
+scrape
+scraper
+docker-compose
+salesforce
