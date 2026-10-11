@@ -10,7 +10,7 @@ python3 -m py_compile "$ROOT/bin/pathway_ledger_v1.py" "$ROOT/bin/audit_via_ai_v
 echo "[STAGE 1] diff capture (git add -N first — diff is blind to untracked)"
 cd "$ROOT"
 git add -N .
-git diff > /tmp/openroot_pending.diff
+git diff -- . ":(exclude)reports" ":(exclude)logs" ":(exclude)data/pathways.db" ":(exclude)data/embeddings*" > /tmp/openroot_pending.diff
 DIFF_LINES=$(wc -l < /tmp/openroot_pending.diff)
 echo "[banked] pending diff: ${DIFF_LINES} lines"
 
