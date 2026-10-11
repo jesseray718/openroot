@@ -1,4 +1,5 @@
 # OpenRoot — Superlinear Permaculture Engine
+## 💡 Energy Efficiency: **1.585J saved** by skipping cached pathways (1 fresh, 2 cached)
 
 Mission: maximize eta = J_useful / J_human. Cache every proven pathway. Never recompute what's been sealed.
 
