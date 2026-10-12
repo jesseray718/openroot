@@ -1,0 +1,58 @@
+{
+  "universe_stats": {
+    "36_1_atoms": 36,
+    "36_2_binary": 1296,
+    "36_3_ternary": 46656,
+    "total_addressable_cells": 47988
+  },
+  "test_vectors": [
+    {
+      "cell": "0A",
+      "name": "Genesis Void / Agape Source",
+      "R": 1.0,
+      "C": 0.0,
+      "category": "Genesis",
+      "distance_from_agape": 0.0
+    },
+    {
+      "cell": "A3P",
+      "name": "Centrifugal Physical Manifestation",
+      "R": 0.98,
+      "C": 0.02,
+      "category": "Kinetic",
+      "distance_from_agape": 0.04
+    },
+    {
+      "cell": "0AG",
+      "name": "Emergent Spatial Geometry",
+      "R": 0.95,
+      "C": 0.05,
+      "category": "Geometry",
+      "distance_from_agape": 0.1
+    },
+    {
+      "cell": "QAP",
+      "name": "Quantum Agape Binding",
+      "R": 0.98,
+      "C": 0.02,
+      "category": "Quantum",
+      "distance_from_agape": 0.04
+    },
+    {
+      "cell": "3DP",
+      "name": "3-Dimensional Newtonian Physics",
+      "R": 0.8,
+      "C": 0.2,
+      "category": "Classical",
+      "distance_from_agape": 0.4
+    },
+    {
+      "cell": "ENT",
+      "name": "Pure Entropic Decay",
+      "R": 0.0,
+      "C": 1.0,
+      "category": "Entropy",
+      "distance_from_agape": 2.0
+    }
+  ]
+}
