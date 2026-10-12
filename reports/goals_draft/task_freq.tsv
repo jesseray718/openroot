@@ -1,0 +1,12 @@
+      2 next actions
+      1 Next Actions
+      1 Next actions
+      1 5. bench test hardware ordering (still highest-leverage physical item)
+      1 4. Reh1t PR #53 - treat gently, their clone is stale post-force-push
+      1 4. GOALS.md rebuild (setup_restore_v1.sh, gate-verified SAFE)
+      1 3. Reh1t PR #53 — embedding substrate now exists for RAG work
+      1 3. pin repos + profile photo via web UI
+      1 2. research.db identification
+      1 2. first real loop: opencell-absorber.md abstract rubric (purpose, method+instrument, measurements-pending with uncertainty, implication)
+      1 1. rebuild GOALS.md + MASTER_TODO from context_bridge remnants (setup_restore_v1.sh gate-verified SAFE)
+      1 1. confirm embed build [exit=0] + warm query latency, retire grep sweep in probe

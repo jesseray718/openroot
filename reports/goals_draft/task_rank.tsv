@@ -1,0 +1,17 @@
+score	freq	task
+1.304	2	research.db identification
+1.304	2	rebuild GOALS.md + MASTER_TODO from context_bridge remnants (setup_restore_v1.sh gate-verified SAFE)
+1.304	2	pin repos + profile photo via web UI
+1.304	2	first real loop: opencell-absorber.md abstract rubric (purpose, method+instrument, measurements-pending with uncertainty, implication)
+1.304	2	confirm embed build [exit=0] + warm query latency, retire grep sweep in probe
+1.304	2	bench test hardware ordering (still highest-leverage physical item)
+1.304	2	Reh1t PR #53 — embedding substrate now exists for RAG work
+1.304	2	Reh1t PR #53 - treat gently, their clone is stale post-force-push
+1.304	2	GOALS.md rebuild (setup_restore_v1.sh, gate-verified SAFE)
+0.980	1	support Reh1t PR #53 (clone predates force-push)
+0.980	1	rebuild GOALS.md + MASTER_TODO from context_bridge remnants
+0.980	1	pin 4 repos on profile
+0.547	1	) wire embeddings task for Reh1t issue #53 support
+0.547	1	) kill_tmp junk cleanup in repo root if any remain
+0.547	1	) aerocement-panel-v0 standalone repo with build evidence
+0.547	1	) README [PHOTO] slot + contact email decision
