@@ -51,7 +51,7 @@ def main():
     if not args or args[0] != "--":
         print("usage: gh_cache_v2.py [--ttl=3600] -- <command...>", file=sys.stderr); sys.exit(2)
     cmd = args[1:]
-    key = sha(" ".join(cmd))
+    key = sha(" ".join(cmd) + "|" + os.getcwd())
     cache = load_cache()
     entry = cache.get(key)
     now = time.time()
