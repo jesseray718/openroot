@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 set -eu
 export GIT_PAGER=cat TERM=dumb
-# SPDX-License-Identifier: GPL-3.0-only
-# bot_receipt_kernel_v1.sh — verify instruments, run suite, emit ONE report.
 BIN=/home/jesse/openroot/bin
 HARVEST=/home/jesse/openroot/context_bridge/harvest
 TS=$(date -u +%Y%m%dT%H%M%SZ)
