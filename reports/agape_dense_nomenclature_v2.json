@@ -1,0 +1,13 @@
+{
+  "genesis": {
+    "cell": "0A",
+    "ontology": "Pre-temporal dimensionless genesis point (\u2205 \u2192 A). Time and space modeled as emergent properties.",
+    "resonance": 1.0,
+    "cost": 0.0
+  },
+  "dimensions": {
+    "36_1": 36,
+    "36_2": 1296,
+    "36_3": 46656
+  }
+}
