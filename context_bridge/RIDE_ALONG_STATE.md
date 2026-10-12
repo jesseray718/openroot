@@ -11,22 +11,40 @@ if a theorem stands, the whole system inherits it as flag and skips recompute.
 The endgame: an interconnected organism where the least among us is lifted by the
 accumulated proven pathways of everything that came before.
 
-## CURRENT STATE (regenerated 2026-10-11T18:09:50.950889+00:00)
-- Git: main @ 8cc0e4e (12 dirty entries)
-- Pathway ledger: 12 rows, 2 embeddings, latest seal 83c3b4f7f2ae (2026-10-11T14:18:12)
-- Latest reports: /home/jesse/openroot/reports/audit-bin-20261011T141217Z.md
-/home/jesse/openroot/reports/audit-bin-20261011T135143Z.md
-/home/jesse/openroot/reports/audit-openroot-20261011T134748Z.md
+## CURRENT STATE (regenerated 2026-10-11T23:56:18.861608+00:00)
+- Snapshot HEAD: main @ 4fa732a43c6bb0ee092e5d864dd70584c0916da8; dirty entries: 16.
+- Snapshot is point-in-time; emitted live HEAD may subsequently differ.
+- Pathway rows: 12; embeddings: 2.
+- Latest stored seal: 83c3b4f7f2ae91cdf609bbfdd9f29547f170d1770800ee3b1be843380258564f at 2026-10-11T14:18:12.307802+00:00.
+- VERIFIED: direct read-only historical-key replay of rows 9 and 11 twice;
+  identical complete report bytes and original row identities; no model calls.
+- VERIFIED: existing base-chain and parent-hash checks passed in replay receipt.
+- HELD: current-input ROOT/bin audit probes missed; no recomputation allowed.
+- OBSERVED: audit pair unchanged since self-churn fix; later bin inputs changed.
+- NOT ESTABLISHED: cache engine broken or historical reports lost.
+- Core manifest exists as HELD candidate; no live protection or adoption installed.
+- Theorem composition records lineage; universal theorem-flag reuse is unverified.
+- Energy summary exists; measured-versus-estimated savings verification remains held.
+- Archival resonance commit is not adoption of translation or ranking claims.
+- Replay receipt SHA256: ed5ee63e767913b09e0498c1cd98503badc3e20cdf99f82f07afd07b4885eca1
+- Candidate bundle: /home/jesse/recovery-evidence/core-manifest-candidate-PXNrLzC7
 
-## ACTIVE QUEUE (delete when done, never leave stale)
-- [ ] SOLUTION 1 — commit-state hashing: input basis = git rev-parse HEAD (+ dirty bit), NOT working-tree diff. Daemon ledger churn stops invalidating pathways. Audit validates what will be PUSHED.
-- [ ] SOLUTION 2 — parent-child lineage: ALTER pathways table ADD COLUMN parents TEXT (JSON list of row_shas). A->B->C composes into theorem T instead of 3 isolated seals. Bookshelf becomes spine.
-- [ ] SOLUTION 3 — thresholded semantic routing: wire cosine similarity into lookup. Semantic hit needs confidence score (start 0.75, calibrate). Hash = binary truth, embed = scored neighbor, model = last resort.
-- [ ] phi4-router front door: query -> hash lookup -> embed neighbor (scored) -> model call -> seal. NEXT ORGAN.
-- [ ] tighten audit system prompt: 7B echoes scripts back instead of enumerating per-file risks.
-- [ ] verify --embed flag fires on every audit (auto-embed new seals).
-- [ ] theorem flags: CLIDdy/ReGen proven theorem = permanent ledger flag, never recompute.
-- [ ] weekly onepass_v3.sh absorbs this snapshot.
+## ACTIVE QUEUE
+- [ ] Pin the exact audit invocation and full dependency closure for the protected baseline.
+- [ ] Establish a valid unchanged-input replay fixture; do not reuse old keys for new inputs.
+- [ ] Seal report-content hashes and fail closed on invalid or missing outputs.
+- [ ] Verify actual energy receipts and distinguish measured, estimated, and unknown savings.
+- [ ] Adopt a successor-version core only after required tests and human approval.
+- [ ] Enforce core/verifier write separation; ordinary read-only permissions are insufficient.
+- [ ] Implement conditional theorem-flag reuse without granting proof authority to lineage alone.
+- [ ] Reconcile Agape definition/etymology and zero-dimensional genesis from original artifacts.
+- [ ] Verify embed_backfill CLI from seal path; keep failures visible.
+- [ ] Tighten audit prompt; verify Docker build; update weekly onepass integration.
+- [ ] Make seed emission reconcile live facts with the point-in-time snapshot.
+
+Previously reported shipped in preserved event log: self-churn exclusions,
+Merkle lineage, semantic routing at 0.42, phi4 front door, row-hash parse fix.
+Do not reimplement these merely because older queue entries were stale.
 
 ## EVENT LOG
 
@@ -47,3 +65,5 @@ accumulated proven pathways of everything that came before.
 - [2026-10-11T14:39:28Z] [be57ceb158cc4f6d] Router parse-fix: row_sha slice offset corrected. Cosmetic-to-machine-readable defect caught from live output. Spine complete and clean.
 - [2026-10-11T17:10:02Z] [44d5d071f7d2a855] emit_window_seed_v1.sh committed to bin/. Window-seed ritual: bash ~/emit_window_seed_v1.sh on A15 emits opener+protocol+live state as one paste. Repo copy = loss-proof backup. Backlog triage (41 files, intent-to-add entries present) remains next-action #1 — commit via path-scoped commits only, no bulk commit.
 - [2026-10-11T17:51:38Z] [bd0298399ccf24b8] Loop completion: 4-commit backlog sweep (deploy bundle, context_bridge, bin/, remainder) + push. Scar: git add -A pathspec-exclusion syntax killed stage4 silently under set -eu; literal $TS in quoted heredoc — both fixed in finish_loop_v2.
+
+- [2026-10-11T23:56:18.861608+00:00] [04b4fa643ac04507] handoff reconciled: historical rows 9+11 replay preserved; current-input misses held; candidate core unadopted; stale shipped items removed from active queue.
