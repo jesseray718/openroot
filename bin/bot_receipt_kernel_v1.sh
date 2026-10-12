@@ -12,8 +12,8 @@ for t in seal_event_log_v1.py env_hash_v1.py thermo_baseline_v1.py; do
     [ -f "$BIN/$t" ] || { echo "[held] missing $BIN/$t"; exit 1; }
     python3 -m py_compile "$BIN/$t"
 done
-[ -f "$BIN/mistake_canary_ci_v1.sh" ] || { echo "[held] missing CI"; exit 1; }
-bash -n "$BIN/mistake_canary_ci_v1.sh"
+[ -f "$BIN/mistake_canary_ci_v2.sh" ] || { echo "[held] missing CI"; exit 1; }
+bash -n "$BIN/mistake_canary_ci_v2.sh"
 echo "[STAGE 0] verified [banked]"
 "$BIN/seal_event_log_v1.py" append "{\"event\":\"bot_run\",\"run\":\"$TS\"}" > "$RUNDIR/01-event.log" 2>&1
 echo "[STAGE 1] sealed [banked]"
@@ -21,7 +21,7 @@ echo "[STAGE 1] sealed [banked]"
 echo "[STAGE 2] hashed [banked]"
 "$BIN/thermo_baseline_v1.py" --seconds 8 --label bot_idle > "$RUNDIR/03-thermo.log" 2>&1
 echo "[STAGE 3] sampled [banked]"
-bash "$BIN/mistake_canary_ci_v1.sh" > "$RUNDIR/04-mistake.log" 2>&1 || echo "[held]" >> "$RUNDIR/04-mistake.log"
+bash "$BIN/mistake_canary_ci_v2.sh" > "$RUNDIR/04-mistake.log" 2>&1 || echo "[held]" >> "$RUNDIR/04-mistake.log"
 echo "[STAGE 4] replayed [banked]"
 "$BIN/seal_event_log_v1.py" validate > "$RUNDIR/05-validate.log" 2>&1
 {
