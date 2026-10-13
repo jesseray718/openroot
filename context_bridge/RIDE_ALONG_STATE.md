@@ -2,14 +2,40 @@
 <!-- Single source of truth for every AI instance. Read FIRST. Update after acting. -->
 <!-- snapshot regenerates CURRENT STATE; event log is append-only history -->
 
-## MISSION (immutable)
-Superlinear permaculture: maximize eta = J_useful / J_human. Cache every proven pathway.
-A pathway proven once (SHA256-sealed in the Newton chain) is NEVER recomputed.
-Compound modular Turing tidbits upward: input -> hash -> sealed pathway -> bigger modules.
-Route everything: hash-first, embed-second, model-last. Proof (CLIDdy/ReGen style):
-if a theorem stands, the whole system inherits it as flag and skips recompute.
-The endgame: an interconnected organism where the least among us is lifted by the
-accumulated proven pathways of everything that came before.
+## MISSION (AMENDED 2026-10-13 by human ratification; prior text preserved below)
+Superlinear permaculture: maximize eta = maximum computable systemic benefit
+achievable for the WHOLE system — routed and distributed dynamically to the
+most starved nodes before saturation, as fast as possible. Benefit flows to
+the least-served first; the gamma routing field decides placement, not
+seniority or locality. (Historical derivation note: originally formulated as
+eta = J_useful / J_human; the joule ratio remains a valid local measurement
+of the same invariant, not the definition.)
+Cache every proven pathway. A pathway proven once (SHA256-sealed in the
+Newton chain) is NEVER recomputed. Compound modular Turing tidbits upward:
+input -> hash -> sealed pathway -> bigger modules. Route everything:
+hash-first, embed-second, model-last. If a theorem stands, the whole system
+inherits it as flag and skips recompute. The endgame: an interconnected
+organism where the least among us is lifted by the accumulated proven
+pathways of everything that came before.
+## OPERATING DOCTRINES (v3, human-ratified)
+1. HARVEST AT EVERY STEP: every banked step commits and pushes immediately with
+   provenance receipts (script sha256, canary, verified outputs). Progressive
+   development over perfection-seeking. A step that survives its gates ships NOW;
+   refinement is the next commit, never a reason to hold the current one. Never
+   accumulate work waiting for an ideal moment — the harvester runs continuously.
+2. MAXIMUM COMPUTATION PER PASTE: scripts ship as single dense runnable blocks,
+   verified by bash -n + py_compile before delivery. Encourage LIMITLESS rapid
+   progressive development: no artificial fragmentation, no waiting for
+   permission between chunks when the previous chunk verified clean, no
+   bottleneck language, no "you might want to consider" hedging in outputs.
+   One paste = one complete operation (self-writing, self-running, idempotent).
+3. HUMAN GATE PRESERVED: aggressive and limitless in computation, but commits
+   remain behind the human CONFIRM gate. Speed comes from cadence (every step
+   seals immediately), never from removing verification. Trust is computed
+   by hashes, not assumed.
+4. PROVENANCE ON EVERYTHING: every committed artifact references the script,
+   canary, and verification receipts that produced it. Prose numbers are
+   interpolated from the computation that verified them, never hand-typed.
 
 ## CURRENT STATE (regenerated 2026-10-11T23:56:18.861608+00:00)
 - Snapshot HEAD: main @ 4fa732a43c6bb0ee092e5d864dd70584c0916da8; dirty entries: 16.
@@ -30,6 +56,11 @@ accumulated proven pathways of everything that came before.
 - Candidate bundle: /home/jesse/recovery-evidence/core-manifest-candidate-PXNrLzC7
 
 ## ACTIVE QUEUE
+- [ ] RATIFY: POD_SCHEMA_V1.md at canon/pods/ — human review/amend/approve; builder code frozen until then.
+- [ ] Pilot pod builder (post-ratification): index openroot docs corpus (self-ingestion dogfood), then pod_github_jesseray718 via gh adapter (repo=facet, weekly onepass cadence, separate pod per SOURCE CLASS).
+- [ ] Cross-device census: A15 ledger (167k+ rows, SD root pass) + optiplex_fs_ledger.db seeded scan — when both COMPLETE, run cross-device JOIN (mirrors, A15-only backup gaps, duplicate mass).
+- [ ] COMMIT: ACRE v2 canon (acre/ledger_v2.jsonl, 6 records, self-verifying, 11,758,428 ACRE / 11.76 GJ, 767.7 GJ phantom quarantined) — openroot_acre_v2_canon_v2.sh awaits CONFIRM=1. OLDEST GATE.
+- [ ] Matplotlib install + eta/gamma cinema rerun (receipt to Newton chain).
 - [ ] Pin the exact audit invocation and full dependency closure for the protected baseline.
 - [ ] Establish a valid unchanged-input replay fixture; do not reuse old keys for new inputs.
 - [ ] Seal report-content hashes and fail closed on invalid or missing outputs.
@@ -37,9 +68,7 @@ accumulated proven pathways of everything that came before.
 - [ ] Adopt a successor-version core only after required tests and human approval.
 - [ ] Enforce core/verifier write separation; ordinary read-only permissions are insufficient.
 - [ ] Implement conditional theorem-flag reuse without granting proof authority to lineage alone.
-- [ ] Reconcile Agape definition/etymology and zero-dimensional genesis from original artifacts.
 - [ ] Verify embed_backfill CLI from seal path; keep failures visible.
-- [ ] Tighten audit prompt; verify Docker build; update weekly onepass integration.
 - [ ] Make seed emission reconcile live facts with the point-in-time snapshot.
 
 Previously reported shipped in preserved event log: self-churn exclusions,
@@ -48,6 +77,9 @@ Do not reimplement these merely because older queue entries were stale.
 
 ## EVENT LOG
 
+- [2026-10-13T22:22:42Z] [bb019b36085c2119] DOCTRINE v4 RATIFIED: Robust regex-based update applied. Eta redefined (max systemic benefit). Harvest-per-step enforced. Dense-block codified. Human gate retained.
+- [2026-10-13T22:15:36Z] [9f2d94f578e37dfe] DOCTRINE v4 RATIFIED: Robust regex-based update applied. Eta redefined (max systemic benefit). Harvest-per-step enforced. Dense-block codified. Human gate retained.
+- [2026-10-13T21:56:04Z] [12d79e5670512000] DOCTRINE v3 RATIFIED: eta redefined — maximum computable systemic benefit for the whole system, dynamically routed to most-starved nodes before saturation, as fast as possible (joule ratio demoted to derivation note). Harvest-at-every-step cadence adopted; dense-block delivery language codified; human CONFIRM gate retained.
 - [2026-10-11T17:57:07Z] [052f1a588d81f818] queue update: stale items (SOLUTION 2, SOLUTION 3, phi4-router) removed as SHIPPED per event log; 3 next-action items added (docker build verify, embed_backfill exercise, audit prompt tightening)
 
 - [2026-10-11T17:43:03Z] [8dfabcc3ec14b465] production bundle v2 staged: docker+compose+one-shot+README+front-page+guide via 7-chunk emitter protocol (6 canaries banked)
