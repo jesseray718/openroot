@@ -43,7 +43,7 @@ def main():
                 continue
             s = sha256_file(p)
             try:
-                conn.execute("INSERT INTO ingested VALUES (?,?,?)",
+                conn.execute("INSERT INTO ingested (sha256, path, ts_utc) VALUES (?,?,?)",
                              (s, os.path.relpath(p, ROOT), ts))
                 now_new += 1
                 status = "new"
