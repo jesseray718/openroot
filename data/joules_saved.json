@@ -1,9 +1,9 @@
 {
-  "ts": "2026-10-11T20:37:28.449908+00:00",
-  "saved_joules": 1.585078,
-  "runs_fresh": 1,
-  "runs_cached": 2,
+  "ts": "2026-10-11T21:44:03.885780+00:00",
+  "saved_joules": 3.362723,
+  "runs_fresh": 2,
+  "runs_cached": 3,
   "receipts_source": "ledger/unified/run_receipts.jsonl",
   "method": "baseline=mean fresh joules per fingerprint; saved=max(0,baseline-cached)",
-  "sha256": "836aed9cb7933c5bcc1b079b08002d556951ead69086feb21ace803c95c2064f"
+  "sha256": "e57d19ed0e2a31d8685d34f0c9f793005c00c535a331cb3bd85619c1fbcbef12"
 }
