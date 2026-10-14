@@ -1,51 +1,75 @@
-# OpenRoot — Superlinear Permaculture Engine
-## 💡 Energy Efficiency: **1.585J saved** by skipping cached pathways (1 fresh, 2 cached)
+# OpenRoot
 
-Mission: maximize eta = J_useful / J_human. Cache every proven pathway. Never recompute what's been sealed.
+OpenRoot is a local-first knowledge and appropriate-technology system.
 
-## Quick Start (under 5 minutes, any system)
+It turns source material into SHA-256-addressed, searchable, citation-capable knowledge pods. Each pod preserves provenance, supports hybrid lexical and semantic retrieval, records query receipts, and learns from human-labeled corrections.
 
-    curl -sSL https://raw.githubusercontent.com/jesseray718/openroot/main/deploy/setup_one_shot.sh | bash
+## Pod Era v1
 
-Or manually:
+The first operational knowledge pod is live:
 
-    git clone https://github.com/jesseray718/openroot.git
-    cd openroot
-    docker build -t openroot -f deploy/docker/Dockerfile .
-    docker run -it -v "$(pwd)":/openroot openroot
+- **GitHub documentation pod**: 3,748 documents, 26,430 chunks, and 26,372 Nomic embeddings.
+- **Hybrid retrieval**: SQLite FTS5 lexical search fused with vector similarity.
+- **Grounded local synthesis**: a local Qwen2.5-Coder 7B model answers only from retrieved evidence and cites sources.
+- **Query receipts**: every question stores its evidence chunk IDs, model, answer, token count, and elapsed time.
+- **Correction ledger**: human verdicts distinguish good, partial, and bad answers.
+- **Merkle-sealed corpus**: pod seal `a9689710e727bd1c72911aeba231be78`.
+- **Machine census**: 768,255 distinct files SHA-256 hashed across the primary OpenRoot node.
 
-## The Superlinear Spine
+## How it works
 
-| Layer | Function | Status |
-|-------|----------|--------|
-| HASH | SHA256 file sealing, cache-first lookup | BANKED |
-| MERKLE | Parent-child lineage, theorem composition | BANKED |
-| SEMANTIC | Cosine routing (threshold 0.42) | BANKED |
-| ROUTER | hash to embed to model cascade | BANKED |
+```text
+source document
+  -> SHA-256 content identity
+  -> semantic chunks
+  -> FTS5 lexical index
+  -> Nomic vector embeddings
+  -> hybrid retrieval
+  -> grounded local-model synthesis
+  -> cited answer
+  -> query receipt
+  -> human correction
+  -> improved retrieval pathway
+```
 
-## Core Doctrine
+OpenRoot separates four concerns:
 
-1. Pathway Sealing: every completed workflow is SHA256-sealed; future queries hit cache, skip compute.
-2. Compositional Theorems: A-B-C composes into theorem T, not 3 isolated seals. Bookshelf becomes spine.
-3. Thresholded Routing: hash lookup first, embed neighbor second (scored >= 0.42), model fallback last.
-4. Human Gate: AI proposes, human attests. Only humans commit.
+| Layer | Purpose |
+|---|---|
+| Evidence | Exact source identity through SHA-256 |
+| Retrieval | FTS5 and vector similarity |
+| Reasoning | Local model synthesis from supplied evidence |
+| Verification | Human correction, evaluation, and reusable pathways |
 
-## Repository Layout
+A hash proves what source bytes existed. Retrieval identifies relevant evidence. A model synthesizes an answer. Only a verified correction or outcome promotes a result into a reusable pathway.
 
-    openroot/
-      bin/              validated scripts (py_compile gate)
-      data/             SQLite ledgers, embeddings (gitignored)
-      context_bridge/   ride-along state, handoffs
-      logs/             audit receipts, event logs
-      reports/          generated analysis
-      deploy/           Docker + one-shot quickstart (this bundle)
+## Current status
 
-## Current State
+- Pod #1: GitHub documentation corpus is sealed and queryable.
+- Query harness v1.1: hybrid retrieval and cited local-model answers are live.
+- Correction ledger: active for human-labeled evaluation.
+- Known limitation: retrieval recall is still experimental; a hierarchy-oriented GitHub Actions query missed its best evidence and was labeled `partial`.
+- Next milestone: OpenRoot self-corpus dogfood pod, retrieval metadata, evidence-sufficiency gating, and correction-driven evaluation.
 
-Ledger 12 rows, 1 theorem (83c3b4f7), GREEN. Semantic threshold 0.42 (measured, separable gap 0.385-0.551).
+## Repository structure
+
+- `bin/`: operational scripts and tools.
+- `data/`: local runtime state, indexes, and non-canonical operational artifacts.
+- `ledger/`: append-only Newton-chain and provenance records.
+- `context_bridge/`: cross-window handoff and operational state.
+- `canon/`: human-ratified canonical definitions and schemas.
+- `docs/`: project documentation.
+- `.github/CODEOWNERS`: all paths require review by `@jesseray718`.
+
+## Principles
+
+- Local-first: useful capability should run on hardware you control.
+- Provenance-first: every important artifact carries an inspectable identity.
+- Cache proven work: a verified pathway should not be recomputed.
+- Route benefit toward the least-served nodes.
+- Keep humans in control of canonical adoption, commits, releases, and irreversible actions.
+- Distinguish evidence, retrieval, reasoning, and verification.
 
 ## License
 
-GPL-3.0-only (code) | CC BY-SA 4.0 (docs). SPDX headers required.
-
-The least among us is lifted by accumulated proven pathways.
+See repository licensing and individual source-file headers for applicable terms.
