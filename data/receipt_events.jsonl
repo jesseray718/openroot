@@ -1,0 +1,10 @@
+{"event": "kernel_init", "note": "sovereign receipt kernel core online", "sig": "95d4e165596fa409bcb49467abd9494fd2f4d2d1a98771f823afeb9f52746ee3", "ts": "2026-10-12T08:10:22Z"}
+{"component": "chunk2", "event": "env_hash_installed", "sig": "a1ff626c119a10cfb53a2727b1a9fda314f0ad3502238ddda548043c1b2660a1", "ts": "2026-10-12T08:13:11Z"}
+{"component": "chunk3", "event": "thermo_baseline_installed", "sig": "3b777e9c04cee69d64f24b891ed31be510c966f484052bb0c66e25ad6e73ed73", "ts": "2026-10-12T08:15:41Z"}
+{"component": "chunk3", "event": "thermo_baseline_installed", "sig": "0fcddb03909fa3365bd179f37c7ed612c34bacfe7facd2a7ecc7d68b75e2c783", "ts": "2026-10-12T08:16:10Z"}
+{"component": "chunk4", "event": "mistake_canary_ci_installed", "sig": "4cbf9b7290bac82aa823a329dc8674c9b3c5a17f1365d0ebf275badca90c0bbd", "ts": "2026-10-12T08:18:30Z"}
+{"event": "bot_run", "run": "20261012T082209Z", "sig": "64497243ed2049e9a05661e9504458490eb692abc4640057517d00c1f547023d", "ts": "2026-10-12T08:22:09Z"}
+{"event": "bot_run", "run": "20261012T082842Z", "sig": "37fc2e6f8be5092a276062033213dcf5f63efdb41753a414005cdb7faf0f9156", "ts": "2026-10-12T08:28:42Z"}
+{"event": "bot_script_banked_in_repo", "sig": "dd9c68c31ae765d24e8623a8863f472042aaf84101ce47bdbca982ff2addb5b3", "ts": "2026-10-12T08:28:51Z"}
+{"event": "mistake_canary_ci_v2_installed", "note": "class-keyed canaries, dedupe by sha, generator-repr scar canonized", "sig": "d77b64b7bb27dc31af969bdaf9dff2ee69420a89a2a4014baebce464e3d6af9c", "ts": "2026-10-12T09:03:58Z"}
+{"event": "bot_run", "run": "20261012T091005Z", "sig": "b16892aa647c89efb7bc0902c8359f4be72a0163d81a7fa41eb9aef6a63a0106", "ts": "2026-10-12T09:10:05Z"}

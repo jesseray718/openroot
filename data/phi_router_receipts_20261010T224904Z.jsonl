@@ -1,0 +1,4 @@
+{"q": "Route: summarize a seed file and log a receipt", "expect": "SUMMARY", "parsed": {"tool": "lumo_ingest", "args_hint": "summarize seed file and log receipt", "confidence": 0.92}, "err": "missing key: model", "sha": "04c32924ea40"}
+{"q": "Route: edit a Python script that fails py_compile", "expect": "CODE", "parsed": {"tool": "MISSING", "error": "py_compile"}, "err": "confidence not numeric in [0,1]: None", "sha": "42332390ef77"}
+{"q": "Route: embed a document for semantic search", "expect": "EMBED", "parsed": {"tool": "embed_cache", "args_hint": "embed a document for semantic search", "confidence": 0.92}, "err": "missing key: model", "sha": "21c9de0d0e0e"}
+{"q": "Route: deploy the Kubernetes Helm chart to production", "expect": "MISSING", "parsed": {"tool": "MISSING", "error": "Kubernetes Helm chart deployment tool"}, "err": "confidence not numeric in [0,1]: None", "sha": "83a6d5af8c0c"}

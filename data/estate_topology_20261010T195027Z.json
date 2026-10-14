@@ -1,0 +1,3264 @@
+{
+  "ts": "20261010T195027Z",
+  "canary": "OPENROOT-ESTATE-TOPOLOGY-V1",
+  "counts": {
+    "scripts": 49,
+    "ledgers": 94,
+    "total": 376,
+    "wired": 67,
+    "islands": 309
+  },
+  "wired": [
+    {
+      "id": "a1_core_v1.py",
+      "path": "/home/jesse/openroot/bin/a1_core_v1.py",
+      "kind": "script",
+      "sha256": "f0aea3db3c671bc786bc1936c92dfdf1af6126915fff6b27564e3c6bef4e84c0",
+      "bytes": 8050,
+      "referenced_by": [
+        "a1_core_v1.py.pre_bounded_roots.20260926T215133Z.bak",
+        "a1_core_v1.py.pre_ledger_scan_repair.20260926T214851Z.bak",
+        "a1_core_v1.py.pre_ledger_scan_repair.20260926T214957Z.bak",
+        "handoff_manager.py.pre_bounded_end.20260926T215929Z.bak",
+        "handoff_manager.py.pre_single_session_repair.20260926T220226Z.bak",
+        "launch_ladder_v1.py",
+        "launch_ladder_v1.py.pre_bounded_handoff.20260926T215929Z.bak",
+        "launch_ladder_v1.py.pre_bounded_ledgers.20260926T215444Z.bak",
+        "launch_ladder_v1.py.pre_mistake_runner_fix.20260926T210256Z.bak",
+        "launch_ladder_v1.py.pre_mistake_runner_fix_v2.20260926T210713Z.bak",
+        "launch_ladder_v1.py.pre_registration_fix_v2.20260926T201522Z.bak",
+        "professionalize_repo_v2.py",
+        "rootkit.py"
+      ],
+      "scheduled": false,
+      "calls": [
+        "a1_config.json",
+        "universal_doc_ledger.db"
+      ]
+    },
+    {
+      "id": "a1_core_v1.py.pre_bounded_roots.20260926T215133Z.bak",
+      "path": "/home/jesse/openroot/bin/a1_core_v1.py.pre_bounded_roots.20260926T215133Z.bak",
+      "kind": "script",
+      "sha256": "f0aea3db3c671bc786bc1936c92dfdf1af6126915fff6b27564e3c6bef4e84c0",
+      "bytes": 8050,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "a1_config.json",
+        "a1_core_v1.py",
+        "universal_doc_ledger.db"
+      ]
+    },
+    {
+      "id": "a1_core_v1.py.pre_ledger_scan_repair.20260926T214851Z.bak",
+      "path": "/home/jesse/openroot/bin/a1_core_v1.py.pre_ledger_scan_repair.20260926T214851Z.bak",
+      "kind": "script",
+      "sha256": "9fd061cec6e8907e4f36d90a00d3c7b74765ee462d549d488668f77cbaf155af",
+      "bytes": 6804,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "a1_config.json",
+        "a1_core_v1.py",
+        "universal_doc_ledger.db"
+      ]
+    },
+    {
+      "id": "a1_core_v1.py.pre_ledger_scan_repair.20260926T214957Z.bak",
+      "path": "/home/jesse/openroot/bin/a1_core_v1.py.pre_ledger_scan_repair.20260926T214957Z.bak",
+      "kind": "script",
+      "sha256": "9fd061cec6e8907e4f36d90a00d3c7b74765ee462d549d488668f77cbaf155af",
+      "bytes": 6804,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "a1_config.json",
+        "a1_core_v1.py",
+        "universal_doc_ledger.db"
+      ]
+    },
+    {
+      "id": "ask_router_v1.py",
+      "path": "/home/jesse/openroot/bin/ask_router_v1.py",
+      "kind": "script",
+      "sha256": "529d0c74152eee648ce9bce6fb50bacdeb3d664234d69ab76fb99fa6a5eac388",
+      "bytes": 3174,
+      "referenced_by": [
+        "professionalize_repo_v2.py",
+        "rootkit.py"
+      ],
+      "scheduled": false,
+      "calls": [
+        "rootkit.db"
+      ]
+    },
+    {
+      "id": "bom_from_source_v1.py",
+      "path": "/home/jesse/openroot/bin/bom_from_source_v1.py",
+      "kind": "script",
+      "sha256": "42a5098b21c85b3e04849b6242582641d6ce4bd5eb740b0613aa0cb59145b2dc",
+      "bytes": 6224,
+      "referenced_by": [
+        "professionalize_repo_v2.py",
+        "rootkit.py"
+      ],
+      "scheduled": false,
+      "calls": []
+    },
+    {
+      "id": "bot_loop_v1.py",
+      "path": "/home/jesse/openroot/bin/bot_loop_v1.py",
+      "kind": "script",
+      "sha256": "ae8a585b5c03656a9073d1ca6facd9bcbc0e818964765ec68096628e82521c6b",
+      "bytes": 4492,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "lessons.db"
+      ]
+    },
+    {
+      "id": "bot_loop_v1.py.backup_20260923",
+      "path": "/home/jesse/openroot/bin/bot_loop_v1.py.backup_20260923",
+      "kind": "script",
+      "sha256": "ae8a585b5c03656a9073d1ca6facd9bcbc0e818964765ec68096628e82521c6b",
+      "bytes": 4492,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "lessons.db"
+      ]
+    },
+    {
+      "id": "chunker_v1.py",
+      "path": "/home/jesse/openroot/bin/chunker_v1.py",
+      "kind": "script",
+      "sha256": "26aeea0b78b94b1a55d9c468574aec6b85d436186f3b470d795cbf7ce7c34c41",
+      "bytes": 6678,
+      "referenced_by": [
+        "professionalize_repo_v2.py",
+        "rootkit.py"
+      ],
+      "scheduled": false,
+      "calls": [
+        "chunk_manifest.jsonl",
+        "rootkit.db"
+      ]
+    },
+    {
+      "id": "corpus_system_goal_finder_v1.py",
+      "path": "/home/jesse/openroot/bin/corpus_system_goal_finder_v1.py",
+      "kind": "script",
+      "sha256": "f4071f6203ce2331b02c10aea6156ebc977bd163e58a60bf2712611efd057331",
+      "bytes": 7314,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "corpus_goal_index.db"
+      ]
+    },
+    {
+      "id": "ecosystem_v2.py",
+      "path": "/home/jesse/openroot/bin/ecosystem_v2.py",
+      "kind": "script",
+      "sha256": "8c1fd720a855f09b80ac7c333711d71cabd058c83416c16a1dde5a6cb76cf924",
+      "bytes": 8185,
+      "referenced_by": [
+        "rootkit.py"
+      ],
+      "scheduled": false,
+      "calls": [
+        "ecosystem_v2.db",
+        "file_ledger.db",
+        "file_ledger_v2.py"
+      ]
+    },
+    {
+      "id": "estate_topology_survey_v1.py",
+      "path": "/home/jesse/openroot/bin/estate_topology_survey_v1.py",
+      "kind": "script",
+      "sha256": "76d045c793357df8344b60c23c95db06f5ee0520f82fb9f9632e77ec61796cb5",
+      "bytes": 5778,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "corpus_goal_index.db",
+        "file_ledger.db",
+        "harvest_lumo_seed_v2.sh",
+        "push_guard.py",
+        "team_gate.db",
+        "topology_receipts.jsonl"
+      ]
+    },
+    {
+      "id": "file_ledger_parallel_v1.py",
+      "path": "/home/jesse/openroot/bin/file_ledger_parallel_v1.py",
+      "kind": "script",
+      "sha256": "5d7cf8b4edd0ccb59fe65bee1c0ccae3d01e8359c6be3338a1cb2a8523801568",
+      "bytes": 2789,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "file_ledger.db",
+        "file_ledger_v2.py"
+      ]
+    },
+    {
+      "id": "file_ledger_v2.py",
+      "path": "/home/jesse/openroot/bin/file_ledger_v2.py",
+      "kind": "script",
+      "sha256": "37146ea1904672b925a7d4e97f38930019bf11197faa44d45056b81bda6e90f7",
+      "bytes": 5832,
+      "referenced_by": [
+        "ecosystem_v2.py",
+        "file_ledger_parallel_v1.py"
+      ],
+      "scheduled": false,
+      "calls": [
+        "file_ledger.db"
+      ]
+    },
+    {
+      "id": "handoff_manager.py",
+      "path": "/home/jesse/openroot/bin/handoff_manager.py",
+      "kind": "script",
+      "sha256": "2d771c62423b094fb76654b58510258f71d7208ef59ccc95ad4f70f5446ca8f0",
+      "bytes": 11489,
+      "referenced_by": [
+        "handoff_manager.py.pre_bounded_end.20260926T215929Z.bak",
+        "handoff_manager.py.pre_end_session_tuple_fix.20260926T220321Z.bak",
+        "handoff_manager.py.pre_secrets_import.20260926T221131Z.bak",
+        "handoff_manager.py.pre_session_id_collision_fix.20260926T220915Z.bak",
+        "handoff_manager.py.pre_session_id_collision_fix.20260926T220956Z.bak",
+        "handoff_manager.py.pre_session_id_collision_fix.20260926T221036Z.bak",
+        "handoff_manager.py.pre_session_id_format_fix.20260926T221344Z.bak",
+        "handoff_manager.py.pre_session_id_format_fix.20260926T221515Z.bak",
+        "handoff_manager.py.pre_session_id_format_fix.20260926T221628Z.bak",
+        "handoff_manager.py.pre_single_session_repair.20260926T220226Z.bak",
+        "handoff_manager.py.pre_start_idempotency_fix.20260926T220804Z.bak",
+        "launch_ladder_v1.py",
+        "launch_ladder_v1.py.pre_bounded_handoff.20260926T215929Z.bak",
+        "launch_ladder_v1.py.pre_bounded_ledgers.20260926T215444Z.bak",
+        "launch_ladder_v1.py.pre_mistake_runner_fix.20260926T210256Z.bak",
+        "launch_ladder_v1.py.pre_mistake_runner_fix_v2.20260926T210713Z.bak",
+        "launch_ladder_v1.py.pre_registration_fix_v2.20260926T201522Z.bak"
+      ],
+      "scheduled": false,
+      "calls": [
+        "compost_v1.db",
+        "session_ledger.db",
+        "universal_doc_ledger.db"
+      ]
+    },
+    {
+      "id": "handoff_manager.py.pre_bounded_end.20260926T215929Z.bak",
+      "path": "/home/jesse/openroot/bin/handoff_manager.py.pre_bounded_end.20260926T215929Z.bak",
+      "kind": "script",
+      "sha256": "c87a82fe9163095cf3b77a19d85fa45616a39155de095349fc30e09ab670f97d",
+      "bytes": 12191,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "a1_core_v1.py",
+        "handoff_manager.py",
+        "session_ledger.db",
+        "universal_doc_ledger.db"
+      ]
+    },
+    {
+      "id": "handoff_manager.py.pre_end_session_tuple_fix.20260926T220321Z.bak",
+      "path": "/home/jesse/openroot/bin/handoff_manager.py.pre_end_session_tuple_fix.20260926T220321Z.bak",
+      "kind": "script",
+      "sha256": "a84dd3adcd71e6f109038366dc9e5ffc429d2d9bb7d5cb724e1bd3750ac940ef",
+      "bytes": 11285,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "compost_v1.db",
+        "handoff_manager.py",
+        "session_ledger.db",
+        "universal_doc_ledger.db"
+      ]
+    },
+    {
+      "id": "handoff_manager.py.pre_secrets_import.20260926T221131Z.bak",
+      "path": "/home/jesse/openroot/bin/handoff_manager.py.pre_secrets_import.20260926T221131Z.bak",
+      "kind": "script",
+      "sha256": "4ad20adef8c1568a78fcafbd269bafd88966e3d39c5571e09ce05619f6570e60",
+      "bytes": 11479,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "compost_v1.db",
+        "handoff_manager.py",
+        "session_ledger.db",
+        "universal_doc_ledger.db"
+      ]
+    },
+    {
+      "id": "handoff_manager.py.pre_session_id_collision_fix.20260926T220915Z.bak",
+      "path": "/home/jesse/openroot/bin/handoff_manager.py.pre_session_id_collision_fix.20260926T220915Z.bak",
+      "kind": "script",
+      "sha256": "b47ce678da69fdb13233135ba1140ec9092f3287355f2997d5f17a0891ca493f",
+      "bytes": 11506,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "compost_v1.db",
+        "handoff_manager.py",
+        "session_ledger.db",
+        "universal_doc_ledger.db"
+      ]
+    },
+    {
+      "id": "handoff_manager.py.pre_session_id_collision_fix.20260926T220956Z.bak",
+      "path": "/home/jesse/openroot/bin/handoff_manager.py.pre_session_id_collision_fix.20260926T220956Z.bak",
+      "kind": "script",
+      "sha256": "4ad20adef8c1568a78fcafbd269bafd88966e3d39c5571e09ce05619f6570e60",
+      "bytes": 11479,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "compost_v1.db",
+        "handoff_manager.py",
+        "session_ledger.db",
+        "universal_doc_ledger.db"
+      ]
+    },
+    {
+      "id": "handoff_manager.py.pre_session_id_collision_fix.20260926T221036Z.bak",
+      "path": "/home/jesse/openroot/bin/handoff_manager.py.pre_session_id_collision_fix.20260926T221036Z.bak",
+      "kind": "script",
+      "sha256": "4ad20adef8c1568a78fcafbd269bafd88966e3d39c5571e09ce05619f6570e60",
+      "bytes": 11479,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "compost_v1.db",
+        "handoff_manager.py",
+        "session_ledger.db",
+        "universal_doc_ledger.db"
+      ]
+    },
+    {
+      "id": "handoff_manager.py.pre_session_id_format_fix.20260926T221344Z.bak",
+      "path": "/home/jesse/openroot/bin/handoff_manager.py.pre_session_id_format_fix.20260926T221344Z.bak",
+      "kind": "script",
+      "sha256": "8426d9d4d3505178ffb645033059a207ddb3f71ba7af17a76d9372cd795fa731",
+      "bytes": 11488,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "compost_v1.db",
+        "handoff_manager.py",
+        "session_ledger.db",
+        "universal_doc_ledger.db"
+      ]
+    },
+    {
+      "id": "handoff_manager.py.pre_session_id_format_fix.20260926T221515Z.bak",
+      "path": "/home/jesse/openroot/bin/handoff_manager.py.pre_session_id_format_fix.20260926T221515Z.bak",
+      "kind": "script",
+      "sha256": "8426d9d4d3505178ffb645033059a207ddb3f71ba7af17a76d9372cd795fa731",
+      "bytes": 11488,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "compost_v1.db",
+        "handoff_manager.py",
+        "session_ledger.db",
+        "universal_doc_ledger.db"
+      ]
+    },
+    {
+      "id": "handoff_manager.py.pre_session_id_format_fix.20260926T221628Z.bak",
+      "path": "/home/jesse/openroot/bin/handoff_manager.py.pre_session_id_format_fix.20260926T221628Z.bak",
+      "kind": "script",
+      "sha256": "2d771c62423b094fb76654b58510258f71d7208ef59ccc95ad4f70f5446ca8f0",
+      "bytes": 11489,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "compost_v1.db",
+        "handoff_manager.py",
+        "session_ledger.db",
+        "universal_doc_ledger.db"
+      ]
+    },
+    {
+      "id": "handoff_manager.py.pre_single_session_repair.20260926T220226Z.bak",
+      "path": "/home/jesse/openroot/bin/handoff_manager.py.pre_single_session_repair.20260926T220226Z.bak",
+      "kind": "script",
+      "sha256": "40281602f586fc05b62a1a016fe8334af41fa1ac02dbe1f4121c044ba912cc81",
+      "bytes": 12850,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "a1_core_v1.py",
+        "handoff_manager.py",
+        "session_ledger.db",
+        "universal_doc_ledger.db"
+      ]
+    },
+    {
+      "id": "handoff_manager.py.pre_start_idempotency_fix.20260926T220804Z.bak",
+      "path": "/home/jesse/openroot/bin/handoff_manager.py.pre_start_idempotency_fix.20260926T220804Z.bak",
+      "kind": "script",
+      "sha256": "97b21f0ba2df407f1ae2c3474c80114ffbf3ffcf3ded9e7fa87065a1d4f760fe",
+      "bytes": 11666,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "compost_v1.db",
+        "handoff_manager.py",
+        "session_ledger.db",
+        "universal_doc_ledger.db"
+      ]
+    },
+    {
+      "id": "harvest_lumo_seed_v2.sh",
+      "path": "/home/jesse/openroot/bin/harvest_lumo_seed_v2.sh",
+      "kind": "script",
+      "sha256": "a675bdb6a1cc58b4c04843bc1ad5a55cda15101d9b478e29fba8d384c1211a5b",
+      "bytes": 3629,
+      "referenced_by": [
+        "estate_topology_survey_v1.py"
+      ],
+      "scheduled": false,
+      "calls": [
+        "corpus_goal_index.db"
+      ]
+    },
+    {
+      "id": "launch_ladder_v1.py",
+      "path": "/home/jesse/openroot/bin/launch_ladder_v1.py",
+      "kind": "script",
+      "sha256": "92117e4d807d0eaf4b81dfa1b47d509dd18a0ad50c009cf5eb8b46402b777292",
+      "bytes": 13089,
+      "referenced_by": [
+        "launch_ladder_v1.py.pre_bounded_handoff.20260926T215929Z.bak",
+        "launch_ladder_v1.py.pre_bounded_ledgers.20260926T215444Z.bak",
+        "launch_ladder_v1.py.pre_mistake_runner_fix.20260926T210256Z.bak",
+        "launch_ladder_v1.py.pre_mistake_runner_fix_v2.20260926T210713Z.bak",
+        "launch_ladder_v1.py.pre_registration_fix_v2.20260926T201522Z.bak"
+      ],
+      "scheduled": false,
+      "calls": [
+        "a1_core_v1.py",
+        "handoff_manager.py",
+        "launch_ladder.db",
+        "session_ledger.db",
+        "universal_doc_ledger.db"
+      ]
+    },
+    {
+      "id": "launch_ladder_v1.py.pre_bounded_handoff.20260926T215929Z.bak",
+      "path": "/home/jesse/openroot/bin/launch_ladder_v1.py.pre_bounded_handoff.20260926T215929Z.bak",
+      "kind": "script",
+      "sha256": "92117e4d807d0eaf4b81dfa1b47d509dd18a0ad50c009cf5eb8b46402b777292",
+      "bytes": 13089,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "a1_core_v1.py",
+        "handoff_manager.py",
+        "launch_ladder.db",
+        "launch_ladder_v1.py",
+        "session_ledger.db",
+        "universal_doc_ledger.db"
+      ]
+    },
+    {
+      "id": "launch_ladder_v1.py.pre_bounded_ledgers.20260926T215444Z.bak",
+      "path": "/home/jesse/openroot/bin/launch_ladder_v1.py.pre_bounded_ledgers.20260926T215444Z.bak",
+      "kind": "script",
+      "sha256": "d841720b7a4b4d13f06d6a76ac28aa82502c97073827d8667996c2352ee4744e",
+      "bytes": 12898,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "a1_core_v1.py",
+        "handoff_manager.py",
+        "launch_ladder.db",
+        "launch_ladder_v1.py",
+        "session_ledger.db",
+        "universal_doc_ledger.db"
+      ]
+    },
+    {
+      "id": "launch_ladder_v1.py.pre_mistake_runner_fix.20260926T210256Z.bak",
+      "path": "/home/jesse/openroot/bin/launch_ladder_v1.py.pre_mistake_runner_fix.20260926T210256Z.bak",
+      "kind": "script",
+      "sha256": "a6694520eb2f500c0d1aa57c7198646498710550aba172c7d75e56f772798e7f",
+      "bytes": 12892,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "a1_core_v1.py",
+        "handoff_manager.py",
+        "launch_ladder.db",
+        "launch_ladder_v1.py",
+        "session_ledger.db",
+        "universal_doc_ledger.db"
+      ]
+    },
+    {
+      "id": "launch_ladder_v1.py.pre_mistake_runner_fix_v2.20260926T210713Z.bak",
+      "path": "/home/jesse/openroot/bin/launch_ladder_v1.py.pre_mistake_runner_fix_v2.20260926T210713Z.bak",
+      "kind": "script",
+      "sha256": "a6694520eb2f500c0d1aa57c7198646498710550aba172c7d75e56f772798e7f",
+      "bytes": 12892,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "a1_core_v1.py",
+        "handoff_manager.py",
+        "launch_ladder.db",
+        "launch_ladder_v1.py",
+        "session_ledger.db",
+        "universal_doc_ledger.db"
+      ]
+    },
+    {
+      "id": "launch_ladder_v1.py.pre_registration_fix_v2.20260926T201522Z.bak",
+      "path": "/home/jesse/openroot/bin/launch_ladder_v1.py.pre_registration_fix_v2.20260926T201522Z.bak",
+      "kind": "script",
+      "sha256": "bb21e2d2b4f2d4827e8a48e64d3b43e0405e8db60dfd1b89fdd9e52ffb8641ae",
+      "bytes": 12844,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "a1_core_v1.py",
+        "handoff_manager.py",
+        "launch_ladder.db",
+        "launch_ladder_v1.py",
+        "session_ledger.db",
+        "universal_doc_ledger.db"
+      ]
+    },
+    {
+      "id": "lumo_ingest.py",
+      "path": "/home/jesse/openroot/bin/lumo_ingest.py",
+      "kind": "script",
+      "sha256": "c36605a7614f6b0f4097e88f864fc58a8bad7222add90a33b9ebfe3d47d1bd53",
+      "bytes": 2277,
+      "referenced_by": [
+        "professionalize_repo_v2.py",
+        "rootkit.py"
+      ],
+      "scheduled": false,
+      "calls": [
+        "lumo_ingest.db"
+      ]
+    },
+    {
+      "id": "newton_chain_v1.py",
+      "path": "/home/jesse/openroot/bin/newton_chain_v1.py",
+      "kind": "script",
+      "sha256": "a79a8e0c27f9197d618921fec407351ae1e7a4585686befb28659017ca058dee",
+      "bytes": 5353,
+      "referenced_by": [
+        "professionalize_repo_v2.py",
+        "relay_loop_v1.py",
+        "rootkit.py"
+      ],
+      "scheduled": false,
+      "calls": [
+        "newton_chain.jsonl",
+        "rootkit.db",
+        "rootkit_chain.jsonl"
+      ]
+    },
+    {
+      "id": "newton_daemon.py",
+      "path": "/home/jesse/openroot/bin/newton_daemon.py",
+      "kind": "script",
+      "sha256": "c2795c59e47828b7b4334885e22c5f7a130165f3445fcd25b8884c524d1d9eb2",
+      "bytes": 2668,
+      "referenced_by": [
+        "newton_daemon.py.pre_linkage_fix.20261009T030912Z.bak",
+        "newton_daemon.py.pre_linkage_fix.20261009T044159Z.bak",
+        "newton_daemon.py.pre_linkage_fix.20261009T044408Z.bak"
+      ],
+      "scheduled": true,
+      "calls": [
+        "fts_index.db",
+        "newton_chain.jsonl"
+      ]
+    },
+    {
+      "id": "newton_daemon.py.pre_linkage_fix.20261009T030912Z.bak",
+      "path": "/home/jesse/openroot/bin/newton_daemon.py.pre_linkage_fix.20261009T030912Z.bak",
+      "kind": "script",
+      "sha256": "64be4ac8ec45f0d5120e1a8549ab9755a6a09a92deeea74d3a5a6b75c471dd77",
+      "bytes": 2533,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "fts_index.db",
+        "newton_chain.jsonl",
+        "newton_daemon.py"
+      ]
+    },
+    {
+      "id": "newton_daemon.py.pre_linkage_fix.20261009T044159Z.bak",
+      "path": "/home/jesse/openroot/bin/newton_daemon.py.pre_linkage_fix.20261009T044159Z.bak",
+      "kind": "script",
+      "sha256": "c2795c59e47828b7b4334885e22c5f7a130165f3445fcd25b8884c524d1d9eb2",
+      "bytes": 2668,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "fts_index.db",
+        "newton_chain.jsonl",
+        "newton_daemon.py"
+      ]
+    },
+    {
+      "id": "newton_daemon.py.pre_linkage_fix.20261009T044408Z.bak",
+      "path": "/home/jesse/openroot/bin/newton_daemon.py.pre_linkage_fix.20261009T044408Z.bak",
+      "kind": "script",
+      "sha256": "c2795c59e47828b7b4334885e22c5f7a130165f3445fcd25b8884c524d1d9eb2",
+      "bytes": 2668,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "fts_index.db",
+        "newton_chain.jsonl",
+        "newton_daemon.py"
+      ]
+    },
+    {
+      "id": "openai_relay_9999.py",
+      "path": "/home/jesse/openroot/bin/openai_relay_9999.py",
+      "kind": "script",
+      "sha256": "bf59c9a2ba564c49b08f4206ba413f4ec456d1991634ff35ab4ee57e67ee282f",
+      "bytes": 1943,
+      "referenced_by": [],
+      "scheduled": true,
+      "calls": []
+    },
+    {
+      "id": "openroot_cleanup_and_publish_v1.py",
+      "path": "/home/jesse/openroot/bin/openroot_cleanup_and_publish_v1.py",
+      "kind": "script",
+      "sha256": "05e2df9e3be88ec2449aeed661cc4b169b9de3efbb72f393642c2ab623dd7f4a",
+      "bytes": 2563,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "newton_chain.jsonl",
+        "rootkit.py"
+      ]
+    },
+    {
+      "id": "popw_ledger_v1.py",
+      "path": "/home/jesse/openroot/bin/popw_ledger_v1.py",
+      "kind": "script",
+      "sha256": "0936fe555537badd77defb36391393f653bddd180236bad7621a7370e97ab88f",
+      "bytes": 7516,
+      "referenced_by": [
+        "professionalize_repo_v2.py",
+        "relay_loop_v1.py",
+        "rootkit.py"
+      ],
+      "scheduled": false,
+      "calls": [
+        "rootkit.db"
+      ]
+    },
+    {
+      "id": "professionalize_repo_v2.py",
+      "path": "/home/jesse/openroot/bin/professionalize_repo_v2.py",
+      "kind": "script",
+      "sha256": "b58a6f5ec81b5d84b1bc26f3f1f2e59ee0b7d0e423d29c26a0ce88c465c02f9e",
+      "bytes": 8276,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "a1_core_v1.py",
+        "ask_router_v1.py",
+        "bom_from_source_v1.py",
+        "chunker_v1.py",
+        "lumo_ingest.py",
+        "newton_chain_v1.py",
+        "popw_ledger_v1.py",
+        "relay_loop_v1.py",
+        "rootkit.py",
+        "rootkit_migrate_v1.py"
+      ]
+    },
+    {
+      "id": "push_guard.py",
+      "path": "/home/jesse/openroot/bin/push_guard.py",
+      "kind": "script",
+      "sha256": "2b785e51cd10ba8b9b56112b8f7326d0e41b627f17caa617bf3ad232172a9aa9",
+      "bytes": 4727,
+      "referenced_by": [
+        "estate_topology_survey_v1.py"
+      ],
+      "scheduled": false,
+      "calls": []
+    },
+    {
+      "id": "relay_loop_v1.py",
+      "path": "/home/jesse/openroot/bin/relay_loop_v1.py",
+      "kind": "script",
+      "sha256": "108592925afffb7f4071b241fed6a96829cc279451ffaa2fca3ffcae8bf37ca3",
+      "bytes": 5739,
+      "referenced_by": [
+        "professionalize_repo_v2.py",
+        "rootkit.py"
+      ],
+      "scheduled": false,
+      "calls": [
+        "newton_chain_v1.py",
+        "popw_ledger_v1.py"
+      ]
+    },
+    {
+      "id": "rootkit.py",
+      "path": "/home/jesse/openroot/bin/rootkit.py",
+      "kind": "script",
+      "sha256": "d2e00eb1703f37f92d1977f6900fc42fbbcacdd2468ada049230a4d48166de8c",
+      "bytes": 13750,
+      "referenced_by": [
+        "openroot_cleanup_and_publish_v1.py",
+        "professionalize_repo_v2.py"
+      ],
+      "scheduled": false,
+      "calls": [
+        "a1_core_v1.py",
+        "ask_router_v1.py",
+        "bom_from_source_v1.py",
+        "chunker_v1.py",
+        "ecosystem_v2.py",
+        "lumo_ingest.py",
+        "newton_chain_v1.py",
+        "popw_ledger_v1.py",
+        "relay_loop_v1.py",
+        "rootkit_migrate_v1.py"
+      ]
+    },
+    {
+      "id": "rootkit_migrate_v1.py",
+      "path": "/home/jesse/openroot/bin/rootkit_migrate_v1.py",
+      "kind": "script",
+      "sha256": "29411d0a00f2f522d032322e956ccb274e31d5d05ae733af422ff46192db088b",
+      "bytes": 9333,
+      "referenced_by": [
+        "professionalize_repo_v2.py",
+        "rootkit.py"
+      ],
+      "scheduled": false,
+      "calls": [
+        "file_ledger.db",
+        "lumo_ingest.db",
+        "rootkit.db",
+        "universal_doc_ledger.db"
+      ]
+    },
+    {
+      "id": "sys_ledger_v1.py",
+      "path": "/home/jesse/openroot/bin/sys_ledger_v1.py",
+      "kind": "script",
+      "sha256": "75337a1ad65dde719908a6218994c937c09b0203f047a4f5d2ddf073765d4dd4",
+      "bytes": 8674,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "file_ledger.db",
+        "sys_file_ledger.db"
+      ]
+    },
+    {
+      "id": "untracked_triage_v1.py",
+      "path": "/home/jesse/openroot/bin/untracked_triage_v1.py",
+      "kind": "script",
+      "sha256": "18025b6a92f544f388e48509b338e6c4b62a1b5c7ce20400035715fe4d03e9b7",
+      "bytes": 4052,
+      "referenced_by": [],
+      "scheduled": false,
+      "calls": [
+        "a1_config.json"
+      ]
+    },
+    {
+      "id": "a1_config.json",
+      "path": "/home/jesse/openroot/data/a1_config.json",
+      "kind": "ledger",
+      "sha256": "3cf83b41a2b3e91e9325e5ee8a1fe78f92947bbd6b1d7737149937b766530b92",
+      "bytes": 238,
+      "referenced_by": [
+        "a1_core_v1.py",
+        "a1_core_v1.py.pre_bounded_roots.20260926T215133Z.bak",
+        "a1_core_v1.py.pre_ledger_scan_repair.20260926T214851Z.bak",
+        "a1_core_v1.py.pre_ledger_scan_repair.20260926T214957Z.bak",
+        "untracked_triage_v1.py"
+      ],
+      "scheduled": false,
+      "calls": []
+    },
+    {
+      "id": "chunk_manifest.jsonl",
+      "path": "/home/jesse/openroot/data/chunk_manifest.jsonl",
+      "kind": "ledger",
+      "sha256": "97d252d3bf9fe7d0d9dd4c6398da5bf18ef11ae66c595352831051cc90bbf358",
+      "bytes": 3248,
+      "referenced_by": [
+        "chunker_v1.py"
+      ],
+      "scheduled": false,
+      "calls": []
+    },
+    {
+      "id": "compost_v1.db",
+      "path": "/home/jesse/openroot/data/compost_v1.db",
+      "kind": "ledger",
+      "sha256": "06c5fd93c7eccd20fba9f870790cad86db786efe22ce2e635c7581379abe26dc",
+      "bytes": 32768,
+      "referenced_by": [
+        "handoff_manager.py",
+        "handoff_manager.py.pre_end_session_tuple_fix.20260926T220321Z.bak",
+        "handoff_manager.py.pre_secrets_import.20260926T221131Z.bak",
+        "handoff_manager.py.pre_session_id_collision_fix.20260926T220915Z.bak",
+        "handoff_manager.py.pre_session_id_collision_fix.20260926T220956Z.bak",
+        "handoff_manager.py.pre_session_id_collision_fix.20260926T221036Z.bak",
+        "handoff_manager.py.pre_session_id_format_fix.20260926T221344Z.bak",
+        "handoff_manager.py.pre_session_id_format_fix.20260926T221515Z.bak",
+        "handoff_manager.py.pre_session_id_format_fix.20260926T221628Z.bak",
+        "handoff_manager.py.pre_start_idempotency_fix.20260926T220804Z.bak"
+      ],
+      "scheduled": false,
+      "calls": []
+    },
+    {
+      "id": "corpus_goal_index.db",
+      "path": "/home/jesse/openroot/data/corpus_goal_index.db",
+      "kind": "ledger",
+      "sha256": "b1c945bb26a3e69cff18825319cecc2ad48bb8a20c4ed9397d5a9d074c45775a",
+      "bytes": 14581760,
+      "referenced_by": [
+        "corpus_system_goal_finder_v1.py",
+        "estate_topology_survey_v1.py",
+        "harvest_lumo_seed_v2.sh"
+      ],
+      "scheduled": false,
+      "calls": []
+    },
+    {
+      "id": "ecosystem_v2.db",
+      "path": "/home/jesse/openroot/data/ecosystem_v2.db",
+      "kind": "ledger",
+      "sha256": "207be2fcf3f59c9710ab4e729f9aaf41acb73db5c57877e76dc2d07b9e36a5dd",
+      "bytes": 9936896,
+      "referenced_by": [
+        "ecosystem_v2.py"
+      ],
+      "scheduled": false,
+      "calls": []
+    },
+    {
+      "id": "file_ledger.db",
+      "path": "/home/jesse/openroot/data/file_ledger.db",
+      "kind": "ledger",
+      "sha256": "b09fbb0e84a6d832110414c679a2a60a61ed06101820a22ad5d8741714bb68c5",
+      "bytes": 637673472,
+      "referenced_by": [
+        "ecosystem_v2.py",
+        "estate_topology_survey_v1.py",
+        "file_ledger_parallel_v1.py",
+        "file_ledger_v2.py",
+        "rootkit_migrate_v1.py",
+        "sys_ledger_v1.py"
+      ],
+      "scheduled": false,
+      "calls": []
+    },
+    {
+      "id": "fts_index.db",
+      "path": "/home/jesse/openroot/data/fts_index.db",
+      "kind": "ledger",
+      "sha256": "f9f85f595cc86cd69739886dbe18c529169fcecfddcc91b3483f275489ca5475",
+      "bytes": 2116853760,
+      "referenced_by": [
+        "newton_daemon.py",
+        "newton_daemon.py.pre_linkage_fix.20261009T030912Z.bak",
+        "newton_daemon.py.pre_linkage_fix.20261009T044159Z.bak",
+        "newton_daemon.py.pre_linkage_fix.20261009T044408Z.bak"
+      ],
+      "scheduled": false,
+      "calls": []
+    },
+    {
+      "id": "launch_ladder.db",
+      "path": "/home/jesse/openroot/data/launch_ladder.db",
+      "kind": "ledger",
+      "sha256": "bb855462bed0eaa672192471a8522893861dcb418a27bb0821dc5a811ef2a3a2",
+      "bytes": 12288,
+      "referenced_by": [
+        "launch_ladder_v1.py",
+        "launch_ladder_v1.py.pre_bounded_handoff.20260926T215929Z.bak",
+        "launch_ladder_v1.py.pre_bounded_ledgers.20260926T215444Z.bak",
+        "launch_ladder_v1.py.pre_mistake_runner_fix.20260926T210256Z.bak",
+        "launch_ladder_v1.py.pre_mistake_runner_fix_v2.20260926T210713Z.bak",
+        "launch_ladder_v1.py.pre_registration_fix_v2.20260926T201522Z.bak"
+      ],
+      "scheduled": false,
+      "calls": []
+    },
+    {
+      "id": "lessons.db",
+      "path": "/home/jesse/openroot/data/lessons.db",
+      "kind": "ledger",
+      "sha256": "a757794e92d523df88b385a9a7700068b8407fcf0c00f76cb792796fa3b805ce",
+      "bytes": 40960,
+      "referenced_by": [
+        "bot_loop_v1.py",
+        "bot_loop_v1.py.backup_20260923"
+      ],
+      "scheduled": false,
+      "calls": []
+    },
+    {
+      "id": "lumo_ingest.db",
+      "path": "/home/jesse/openroot/data/lumo_ingest.db",
+      "kind": "ledger",
+      "sha256": "fce127a08180697282c2170c37bd04674f1914f8abc671b2dddb2336753759fa",
+      "bytes": 16384,
+      "referenced_by": [
+        "lumo_ingest.py",
+        "rootkit_migrate_v1.py"
+      ],
+      "scheduled": false,
+      "calls": []
+    },
+    {
+      "id": "newton_chain.jsonl",
+      "path": "/home/jesse/openroot/data/newton_chain.jsonl",
+      "kind": "ledger",
+      "sha256": "3d6d8fcc01a326a7021f85d6678ab42a2ecfe7f8e96c7655dae1427c369ea813",
+      "bytes": 1036,
+      "referenced_by": [
+        "newton_chain_v1.py",
+        "newton_daemon.py",
+        "newton_daemon.py.pre_linkage_fix.20261009T030912Z.bak",
+        "newton_daemon.py.pre_linkage_fix.20261009T044159Z.bak",
+        "newton_daemon.py.pre_linkage_fix.20261009T044408Z.bak",
+        "openroot_cleanup_and_publish_v1.py"
+      ],
+      "scheduled": false,
+      "calls": []
+    },
+    {
+      "id": "rootkit.db",
+      "path": "/home/jesse/openroot/data/rootkit.db",
+      "kind": "ledger",
+      "sha256": "ae8ce88ab13d87875a2add7e4eb17b2bd9578b62f4f55544a70fa9a76113a9f7",
+      "bytes": 609910784,
+      "referenced_by": [
+        "ask_router_v1.py",
+        "chunker_v1.py",
+        "newton_chain_v1.py",
+        "popw_ledger_v1.py",
+        "rootkit_migrate_v1.py"
+      ],
+      "scheduled": false,
+      "calls": []
+    },
+    {
+      "id": "rootkit_chain.jsonl",
+      "path": "/home/jesse/openroot/data/rootkit_chain.jsonl",
+      "kind": "ledger",
+      "sha256": "60f3dfeed2bbff7cac75ae4ea12188382be14828f967905c667436176322eac4",
+      "bytes": 3208,
+      "referenced_by": [
+        "newton_chain_v1.py"
+      ],
+      "scheduled": false,
+      "calls": []
+    },
+    {
+      "id": "sys_file_ledger.db",
+      "path": "/home/jesse/openroot/data/sys_file_ledger.db",
+      "kind": "ledger",
+      "sha256": "6832c7557677ad58069fb4e8a55b70400c7808a3842c7bb38b7f090c589d2c1d",
+      "bytes": 1187635200,
+      "referenced_by": [
+        "sys_ledger_v1.py"
+      ],
+      "scheduled": false,
+      "calls": []
+    },
+    {
+      "id": "team_gate.db",
+      "path": "/home/jesse/openroot/data/team_gate.db",
+      "kind": "ledger",
+      "sha256": "74091a1a0d7773d9f39aaf9375b6cf33425504aa91a90e8b630d1d550c1a809a",
+      "bytes": 8192,
+      "referenced_by": [
+        "estate_topology_survey_v1.py"
+      ],
+      "scheduled": false,
+      "calls": []
+    },
+    {
+      "id": "topology_receipts.jsonl",
+      "path": "/home/jesse/openroot/data/topology_receipts.jsonl",
+      "kind": "ledger",
+      "sha256": "f94fa4553de1e90d99fad80e5c6557e3b9d950a92da510788f8f19a4fd61e599",
+      "bytes": 249,
+      "referenced_by": [
+        "estate_topology_survey_v1.py"
+      ],
+      "scheduled": false,
+      "calls": []
+    },
+    {
+      "id": "universal_doc_ledger.db",
+      "path": "/home/jesse/openroot/data/universal_doc_ledger.db",
+      "kind": "ledger",
+      "sha256": "386efffdc2be1dcd6a634a4706a4d46f6ebb9449a5b9321642c7ecb1e2d43b2b",
+      "bytes": 9678848,
+      "referenced_by": [
+        "a1_core_v1.py",
+        "a1_core_v1.py.pre_bounded_roots.20260926T215133Z.bak",
+        "a1_core_v1.py.pre_ledger_scan_repair.20260926T214851Z.bak",
+        "a1_core_v1.py.pre_ledger_scan_repair.20260926T214957Z.bak",
+        "handoff_manager.py",
+        "handoff_manager.py.pre_bounded_end.20260926T215929Z.bak",
+        "handoff_manager.py.pre_end_session_tuple_fix.20260926T220321Z.bak",
+        "handoff_manager.py.pre_secrets_import.20260926T221131Z.bak",
+        "handoff_manager.py.pre_session_id_collision_fix.20260926T220915Z.bak",
+        "handoff_manager.py.pre_session_id_collision_fix.20260926T220956Z.bak",
+        "handoff_manager.py.pre_session_id_collision_fix.20260926T221036Z.bak",
+        "handoff_manager.py.pre_session_id_format_fix.20260926T221344Z.bak",
+        "handoff_manager.py.pre_session_id_format_fix.20260926T221515Z.bak",
+        "handoff_manager.py.pre_session_id_format_fix.20260926T221628Z.bak",
+        "handoff_manager.py.pre_single_session_repair.20260926T220226Z.bak",
+        "handoff_manager.py.pre_start_idempotency_fix.20260926T220804Z.bak",
+        "launch_ladder_v1.py",
+        "launch_ladder_v1.py.pre_bounded_handoff.20260926T215929Z.bak",
+        "launch_ladder_v1.py.pre_bounded_ledgers.20260926T215444Z.bak",
+        "launch_ladder_v1.py.pre_mistake_runner_fix.20260926T210256Z.bak",
+        "launch_ladder_v1.py.pre_mistake_runner_fix_v2.20260926T210713Z.bak",
+        "launch_ladder_v1.py.pre_registration_fix_v2.20260926T201522Z.bak",
+        "rootkit_migrate_v1.py"
+      ],
+      "scheduled": false,
+      "calls": []
+    },
+    {
+      "id": "session_ledger.db",
+      "path": "/home/jesse/openroot/context_bridge/session_ledger.db",
+      "kind": "bridge-other",
+      "sha256": "31a0ee3f8603c2dc0c861f7d630ece044d37662a24562250c0d4315fa2826f95",
+      "bytes": 28672,
+      "referenced_by": [
+        "handoff_manager.py",
+        "handoff_manager.py.pre_bounded_end.20260926T215929Z.bak",
+        "handoff_manager.py.pre_end_session_tuple_fix.20260926T220321Z.bak",
+        "handoff_manager.py.pre_secrets_import.20260926T221131Z.bak",
+        "handoff_manager.py.pre_session_id_collision_fix.20260926T220915Z.bak",
+        "handoff_manager.py.pre_session_id_collision_fix.20260926T220956Z.bak",
+        "handoff_manager.py.pre_session_id_collision_fix.20260926T221036Z.bak",
+        "handoff_manager.py.pre_session_id_format_fix.20260926T221344Z.bak",
+        "handoff_manager.py.pre_session_id_format_fix.20260926T221515Z.bak",
+        "handoff_manager.py.pre_session_id_format_fix.20260926T221628Z.bak",
+        "handoff_manager.py.pre_single_session_repair.20260926T220226Z.bak",
+        "handoff_manager.py.pre_start_idempotency_fix.20260926T220804Z.bak",
+        "launch_ladder_v1.py",
+        "launch_ladder_v1.py.pre_bounded_handoff.20260926T215929Z.bak",
+        "launch_ladder_v1.py.pre_bounded_ledgers.20260926T215444Z.bak",
+        "launch_ladder_v1.py.pre_mistake_runner_fix.20260926T210256Z.bak",
+        "launch_ladder_v1.py.pre_mistake_runner_fix_v2.20260926T210713Z.bak",
+        "launch_ladder_v1.py.pre_registration_fix_v2.20260926T201522Z.bak"
+      ],
+      "scheduled": false,
+      "calls": []
+    }
+  ],
+  "islands": [
+    {
+      "id": "a1_config.json.pre_bounded_roots.20260926T215133Z.bak",
+      "path": "/home/jesse/openroot/data/a1_config.json.pre_bounded_roots.20260926T215133Z.bak",
+      "kind": "ledger",
+      "sha256": "3cf83b41a2b3e91e9325e5ee8a1fe78f92947bbd6b1d7737149937b766530b92",
+      "bytes": 238
+    },
+    {
+      "id": "agapenet_kb.db",
+      "path": "/home/jesse/openroot/data/agapenet_kb.db",
+      "kind": "ledger",
+      "sha256": "681270574fcdeffec0e79c2315d8b8dc69a8fd2358ebdc67e8a45e00bb5d9d94",
+      "bytes": 36864
+    },
+    {
+      "id": "agapenet_kb_v2.db",
+      "path": "/home/jesse/openroot/data/agapenet_kb_v2.db",
+      "kind": "ledger",
+      "sha256": "b877b27e850177a057e09ceac818c7fe25046419c11a1f4c052e8006af22bacb",
+      "bytes": 16875520
+    },
+    {
+      "id": "api_keys.db",
+      "path": "/home/jesse/openroot/data/api_keys.db",
+      "kind": "ledger",
+      "sha256": "d89bbdf9e2b20b432bdda6a30ed3bcb09f1abd9c6408c3f396bae49a674dc990",
+      "bytes": 12288
+    },
+    {
+      "id": "bridge_state.json",
+      "path": "/home/jesse/openroot/data/bridge_state.json",
+      "kind": "ledger",
+      "sha256": "d182e67d8a45de94633eb0794fb610aac6278fc4eed1eb04545cf9cbecebb577",
+      "bytes": 122
+    },
+    {
+      "id": "capability_exchange.db",
+      "path": "/home/jesse/openroot/data/capability_exchange.db",
+      "kind": "ledger",
+      "sha256": "bf141179e8b92b48bd756ef54ca2772f294c412fdfbb6ecc1132c1d5b388557c",
+      "bytes": 28672
+    },
+    {
+      "id": "code_pathways.db",
+      "path": "/home/jesse/openroot/data/code_pathways.db",
+      "kind": "ledger",
+      "sha256": "958d9aeffbaecfb41023224bea0b18ca5c00aededa960bff1eec968ccefa550e",
+      "bytes": 40960
+    },
+    {
+      "id": "cost_ledger.jsonl",
+      "path": "/home/jesse/openroot/data/cost_ledger.jsonl",
+      "kind": "ledger",
+      "sha256": "90241b4e79c941cfe540698b56d5f4b3a98205ab326cb62b82c890a805f845f4",
+      "bytes": 170257
+    },
+    {
+      "id": "cycle_state.db",
+      "path": "/home/jesse/openroot/data/cycle_state.db",
+      "kind": "ledger",
+      "sha256": "ff937b18a2cd42906b7bc48a291a210141db77b5dbb7b09f407753fa645c6507",
+      "bytes": 20480
+    },
+    {
+      "id": "debate_ledger.jsonl",
+      "path": "/home/jesse/openroot/data/debate_ledger.jsonl",
+      "kind": "ledger",
+      "sha256": "cd81366db51916846a72f470873645895f0a1564bf7f697fd8b7e75455f9a5c7",
+      "bytes": 14313
+    },
+    {
+      "id": "dedup_ledger.db",
+      "path": "/home/jesse/openroot/data/dedup_ledger.db",
+      "kind": "ledger",
+      "sha256": "051cbcde398032369b1728d56c9cfc6f163e445254735c25535c1ed5358a9f0c",
+      "bytes": 12656640
+    },
+    {
+      "id": "dedup_ledger.db-shm",
+      "path": "/home/jesse/openroot/data/dedup_ledger.db-shm",
+      "kind": "ledger",
+      "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "bytes": 32768
+    },
+    {
+      "id": "dedup_ledger.db-wal",
+      "path": "/home/jesse/openroot/data/dedup_ledger.db-wal",
+      "kind": "ledger",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "id": "doc_index.db",
+      "path": "/home/jesse/openroot/data/doc_index.db",
+      "kind": "ledger",
+      "sha256": "d520ec9e984d11ccfbdc9ae9aa8f0a66f07baf73756b74e9333607c1928c81e9",
+      "bytes": 929792
+    },
+    {
+      "id": "drift_alerts.jsonl",
+      "path": "/home/jesse/openroot/data/drift_alerts.jsonl",
+      "kind": "ledger",
+      "sha256": "120384159682ca8d438e8d7b3be20348d4257b6cb567cff4e98a5e7a14cb3a2d",
+      "bytes": 148405
+    },
+    {
+      "id": "embed_cache.db",
+      "path": "/home/jesse/openroot/data/embed_cache.db",
+      "kind": "ledger",
+      "sha256": "ad250dca65227253b8eb4c03154b3d6d49ad3254f21b4fff1bb8ac6df09804f4",
+      "bytes": 77824
+    },
+    {
+      "id": "embeddings.db",
+      "path": "/home/jesse/openroot/data/embeddings.db",
+      "kind": "ledger",
+      "sha256": "d73bfc616d9bc09cb4f46226b5844746806723ab7fd097488b522eede741d14a",
+      "bytes": 137601024
+    },
+    {
+      "id": "embeddings.db-shm",
+      "path": "/home/jesse/openroot/data/embeddings.db-shm",
+      "kind": "ledger",
+      "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "bytes": 32768
+    },
+    {
+      "id": "embeddings.db-wal",
+      "path": "/home/jesse/openroot/data/embeddings.db-wal",
+      "kind": "ledger",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "id": "estate_topology_20261010T194836Z.json",
+      "path": "/home/jesse/openroot/data/estate_topology_20261010T194836Z.json",
+      "kind": "ledger",
+      "sha256": "1dac5ef922af80a3a8347935104bb0b48c91983836dde2551457acb15819e37d",
+      "bytes": 120040
+    },
+    {
+      "id": "expertise_fp5s.db",
+      "path": "/home/jesse/openroot/data/expertise_fp5s.db",
+      "kind": "ledger",
+      "sha256": "294e456c2245ccf387764ee5ab51a02f9113781067572af9dc5736899ce0959e",
+      "bytes": 28672
+    },
+    {
+      "id": "failure_queue_20261008.md",
+      "path": "/home/jesse/openroot/data/failure_queue_20261008.md",
+      "kind": "ledger",
+      "sha256": "5b362ac8a71b9c6b1c9fdecc9e5d5817d69ff51f3e59edf9dee7ab333f0d8ef0",
+      "bytes": 8092
+    },
+    {
+      "id": "file_ledger.db-shm",
+      "path": "/home/jesse/openroot/data/file_ledger.db-shm",
+      "kind": "ledger",
+      "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "bytes": 32768
+    },
+    {
+      "id": "file_ledger.db-wal",
+      "path": "/home/jesse/openroot/data/file_ledger.db-wal",
+      "kind": "ledger",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "id": "goals_ledger.db",
+      "path": "/home/jesse/openroot/data/goals_ledger.db",
+      "kind": "ledger",
+      "sha256": "cc28273e12ed1d41b3e5a8e775145bf4a599937a396298f5f65c919f2cef55c2",
+      "bytes": 20480
+    },
+    {
+      "id": "gov_smoke.db",
+      "path": "/home/jesse/openroot/data/gov_smoke.db",
+      "kind": "ledger",
+      "sha256": "49d271701c42c4fdbf40f445a392cd83bb84ac53bae05f6f6c2569db5ca316f8",
+      "bytes": 16384
+    },
+    {
+      "id": "grant_tracker.db",
+      "path": "/home/jesse/openroot/data/grant_tracker.db",
+      "kind": "ledger",
+      "sha256": "719b06552e868e46ac56207a6448311ebf41c27e503d4dc084d63e9dea04e1a1",
+      "bytes": 12288
+    },
+    {
+      "id": "hash_ledger.jsonl",
+      "path": "/home/jesse/openroot/data/hash_ledger.jsonl",
+      "kind": "ledger",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "id": "hash_manifest_optiplex.db",
+      "path": "/home/jesse/openroot/data/hash_manifest_optiplex.db",
+      "kind": "ledger",
+      "sha256": "0aa3d8f314cf35f66cfb7a46d79efc64aad8869b100e4e5c5ecb898ae7ca73a8",
+      "bytes": 371122176
+    },
+    {
+      "id": "hash_manifest_optiplex.db-shm",
+      "path": "/home/jesse/openroot/data/hash_manifest_optiplex.db-shm",
+      "kind": "ledger",
+      "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "bytes": 32768
+    },
+    {
+      "id": "hash_manifest_optiplex.db-wal",
+      "path": "/home/jesse/openroot/data/hash_manifest_optiplex.db-wal",
+      "kind": "ledger",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "id": "hash_manifest_optiplex_smoke.db",
+      "path": "/home/jesse/openroot/data/hash_manifest_optiplex_smoke.db",
+      "kind": "ledger",
+      "sha256": "5487a9bcbe2aa41532715e6edc3f507572e53dc5695f8f353ac42ca697be002a",
+      "bytes": 20480
+    },
+    {
+      "id": "hash_manifest_optiplex_smoke.db-shm",
+      "path": "/home/jesse/openroot/data/hash_manifest_optiplex_smoke.db-shm",
+      "kind": "ledger",
+      "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "bytes": 32768
+    },
+    {
+      "id": "hash_manifest_optiplex_smoke.db-wal",
+      "path": "/home/jesse/openroot/data/hash_manifest_optiplex_smoke.db-wal",
+      "kind": "ledger",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "id": "knowledge.db",
+      "path": "/home/jesse/openroot/data/knowledge.db",
+      "kind": "ledger",
+      "sha256": "4137202c02b6b32ab85f9aeeba1076396de116dae10fe84654def7add47871b6",
+      "bytes": 667648
+    },
+    {
+      "id": "knowledge_base.db",
+      "path": "/home/jesse/openroot/data/knowledge_base.db",
+      "kind": "ledger",
+      "sha256": "86b69f3abb29360f812016d738e8da0e6c263eeb0d548040d7c2335a7490d449",
+      "bytes": 45056
+    },
+    {
+      "id": "knowledge_ledger.jsonl",
+      "path": "/home/jesse/openroot/data/knowledge_ledger.jsonl",
+      "kind": "ledger",
+      "sha256": "16cc1f91089f2706431c4d6bf2b0363f20f389e9e52f9ba1160ceb77b945c305",
+      "bytes": 2666
+    },
+    {
+      "id": "launch_ladder.db.pre_bug1_fix.20260926T200545Z.bak",
+      "path": "/home/jesse/openroot/data/launch_ladder.db.pre_bug1_fix.20260926T200545Z.bak",
+      "kind": "ledger",
+      "sha256": "6810366e85c723e4ae8ff2a2acf37e8e7b96e0ead39bd8a182e699ce7a68e2c8",
+      "bytes": 12288
+    },
+    {
+      "id": "lb_loop.db",
+      "path": "/home/jesse/openroot/data/lb_loop.db",
+      "kind": "ledger",
+      "sha256": "18123c9fb3a39c6114ce17672caa5129c45ae8ca92ec3c8e5a82dcc849b2fb3d",
+      "bytes": 114688
+    },
+    {
+      "id": "lessons.jsonl",
+      "path": "/home/jesse/openroot/data/lessons.jsonl",
+      "kind": "ledger",
+      "sha256": "223053a65bcb0907818a9fe943e2cca6f1152e76f90527814c69a4677fdebc0f",
+      "bytes": 1344
+    },
+    {
+      "id": "log_feed.db",
+      "path": "/home/jesse/openroot/data/log_feed.db",
+      "kind": "ledger",
+      "sha256": "8cef95773a090932666807833d6695e15cf43afb54604033556c2364d25bc09f",
+      "bytes": 311296
+    },
+    {
+      "id": "log_feed.jsonl",
+      "path": "/home/jesse/openroot/data/log_feed.jsonl",
+      "kind": "ledger",
+      "sha256": "50ad87d296b45e643fc7fa8b798fad0d2cf51c1c40605ff50bb5936cbab67415",
+      "bytes": 11256
+    },
+    {
+      "id": "lumo_inbox.db",
+      "path": "/home/jesse/openroot/data/lumo_inbox.db",
+      "kind": "ledger",
+      "sha256": "1c03269c71942b7a0c85c8f83de2426056d57a82c30cd938bc0cbf51f4d6a25d",
+      "bytes": 24576
+    },
+    {
+      "id": "mesh_refine_v1.db",
+      "path": "/home/jesse/openroot/data/mesh_refine_v1.db",
+      "kind": "ledger",
+      "sha256": "313ac1aa52cab2db30e0a7615fafdfa5e5cd0e4eced29931483ddc0d999c185a",
+      "bytes": 131072
+    },
+    {
+      "id": "mistake_chain_ledger.db",
+      "path": "/home/jesse/openroot/data/mistake_chain_ledger.db",
+      "kind": "ledger",
+      "sha256": "09c3b73dc4fa2cceac525bc1d7d4752a5fdb953c6cb0f79d65330e7e18cc6c1e",
+      "bytes": 49152
+    },
+    {
+      "id": "mistake_index.db",
+      "path": "/home/jesse/openroot/data/mistake_index.db",
+      "kind": "ledger",
+      "sha256": "b334590a3e8dd262bec3d455ae9f8db2679f00f99c03e0382ac184e9ba625af6",
+      "bytes": 32768
+    },
+    {
+      "id": "mistakes.db",
+      "path": "/home/jesse/openroot/data/mistakes.db",
+      "kind": "ledger",
+      "sha256": "1675302a5fef02c1cef256477e597e206c715b3d0822d102fa4f061f87f63add",
+      "bytes": 561152
+    },
+    {
+      "id": "model_pulls.log",
+      "path": "/home/jesse/openroot/data/model_pulls.log",
+      "kind": "ledger",
+      "sha256": "3aafbf983d2b86964414a0440fe35a76a4ed6cfe4697becde8feedfed9948954",
+      "bytes": 1846757
+    },
+    {
+      "id": "newton_chain.db",
+      "path": "/home/jesse/openroot/data/newton_chain.db",
+      "kind": "ledger",
+      "sha256": "9dd60271f172bb3229add83022785c997e57d6b2735254329bfb3feb9f46d669",
+      "bytes": 1286144
+    },
+    {
+      "id": "newton_chain.db-shm",
+      "path": "/home/jesse/openroot/data/newton_chain.db-shm",
+      "kind": "ledger",
+      "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "bytes": 32768
+    },
+    {
+      "id": "newton_chain.db-wal",
+      "path": "/home/jesse/openroot/data/newton_chain.db-wal",
+      "kind": "ledger",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "id": "nomic_bench.json",
+      "path": "/home/jesse/openroot/data/nomic_bench.json",
+      "kind": "ledger",
+      "sha256": "ae03a4c838615242f047c3bc28991ab016a1df0a0c3ff014022e0320d072dede",
+      "bytes": 92
+    },
+    {
+      "id": "openroot_local_loop.db",
+      "path": "/home/jesse/openroot/data/openroot_local_loop.db",
+      "kind": "ledger",
+      "sha256": "06fdd3fabff6a1fc7162ad65de36b02c180973125fd38e45163f313c2c2c58be",
+      "bytes": 110592
+    },
+    {
+      "id": "orchestrator_decisions.jsonl",
+      "path": "/home/jesse/openroot/data/orchestrator_decisions.jsonl",
+      "kind": "ledger",
+      "sha256": "08943e2f0c3ef31c9cee1f133236ea5ab0a3e0b1c7da8f8e302ec187979919ad",
+      "bytes": 4273
+    },
+    {
+      "id": "parallel_ideas.jsonl",
+      "path": "/home/jesse/openroot/data/parallel_ideas.jsonl",
+      "kind": "ledger",
+      "sha256": "6515d7a3abff27106e89c55571e0ade428aec56c0c8c9609612f80b36ad8f713",
+      "bytes": 223912
+    },
+    {
+      "id": "pathway_cache.db",
+      "path": "/home/jesse/openroot/data/pathway_cache.db",
+      "kind": "ledger",
+      "sha256": "545eed04601b482138d6e8b0c1d03d7d8d9b0b13dfc2cc51ed4594f0813cc1fb",
+      "bytes": 45056
+    },
+    {
+      "id": "popw_ledger.db",
+      "path": "/home/jesse/openroot/data/popw_ledger.db",
+      "kind": "ledger",
+      "sha256": "2be4ea6a2a6ca10e2f3eec72a62638cfe585583dffd77d76871f1d5892974498",
+      "bytes": 8192
+    },
+    {
+      "id": "problem_solution_cache.sqlite",
+      "path": "/home/jesse/openroot/data/problem_solution_cache.sqlite",
+      "kind": "ledger",
+      "sha256": "99f24e23e187025bbf058fe5fbc1deadab067d94c5bbdb4bef6b6b60ca43884f",
+      "bytes": 12288
+    },
+    {
+      "id": "qa_corpus.db",
+      "path": "/home/jesse/openroot/data/qa_corpus.db",
+      "kind": "ledger",
+      "sha256": "5f4f17a1bfb5f46fe7a3c60499eb922edd5d51e7edcddea83ddebcf4264b8218",
+      "bytes": 1510359040
+    },
+    {
+      "id": "queue_advance.db",
+      "path": "/home/jesse/openroot/data/queue_advance.db",
+      "kind": "ledger",
+      "sha256": "d7ba68aebf59b793b98f3130567e777491b1793efb868b3080dadf7580df419d",
+      "bytes": 8192
+    },
+    {
+      "id": "readme_loop.db",
+      "path": "/home/jesse/openroot/data/readme_loop.db",
+      "kind": "ledger",
+      "sha256": "994ed09eaea4c1a65a61051fa1c60bc7ee09102a4114fea10660ac7a10375119",
+      "bytes": 45056
+    },
+    {
+      "id": "relay_ledger.db",
+      "path": "/home/jesse/openroot/data/relay_ledger.db",
+      "kind": "ledger",
+      "sha256": "ec110136a0fd0b9216c853f5868ce72ad87a9bddce1cdccc3659b9f2275abc33",
+      "bytes": 8192
+    },
+    {
+      "id": "route_cache.db",
+      "path": "/home/jesse/openroot/data/route_cache.db",
+      "kind": "ledger",
+      "sha256": "5b04b2acb4595e1273d0cc65845849fadbff030dbc6adfee97c260c48f0830dc",
+      "bytes": 32768
+    },
+    {
+      "id": "router_corpus.sqlite",
+      "path": "/home/jesse/openroot/data/router_corpus.sqlite",
+      "kind": "ledger",
+      "sha256": "4c8b2ce806a532e07577c8dc507658f21751fe8deb080d83b557ae3ecc8d0f0d",
+      "bytes": 24576
+    },
+    {
+      "id": "router_keywords.json",
+      "path": "/home/jesse/openroot/data/router_keywords.json",
+      "kind": "ledger",
+      "sha256": "696365b69cc81b28987e1e8ff219bc6e5871439f0775b3c7ccf970d8c3e496d4",
+      "bytes": 129
+    },
+    {
+      "id": "router_ledger.db",
+      "path": "/home/jesse/openroot/data/router_ledger.db",
+      "kind": "ledger",
+      "sha256": "c1ffc632ba3fa4bec7ed8da442e081f7d83d71951920791f0f830d2fecb54527",
+      "bytes": 8192
+    },
+    {
+      "id": "routing_ledger.sqlite",
+      "path": "/home/jesse/openroot/data/routing_ledger.sqlite",
+      "kind": "ledger",
+      "sha256": "5e2f9cfc29344ef5593316e55db0bde90c66d5010f3eeb2d9ca77053383fbedd",
+      "bytes": 8192
+    },
+    {
+      "id": "secret_audit.db",
+      "path": "/home/jesse/openroot/data/secret_audit.db",
+      "kind": "ledger",
+      "sha256": "d91a6ad6c9a99ca4b617ccba17adbb1dceb36b61698b76bcf72d853f0c18eb35",
+      "bytes": 20480
+    },
+    {
+      "id": "shared_context.db",
+      "path": "/home/jesse/openroot/data/shared_context.db",
+      "kind": "ledger",
+      "sha256": "3d602a814b7d0667276a9b5911cb8c0736f26678888df6cb2861b51e52d685ae",
+      "bytes": 20480
+    },
+    {
+      "id": "solve_cache.jsonl",
+      "path": "/home/jesse/openroot/data/solve_cache.jsonl",
+      "kind": "ledger",
+      "sha256": "ed2a3f037bd35aed586c7201b78f573887878e645239477e4a287ce21748866a",
+      "bytes": 2403
+    },
+    {
+      "id": "superlinear_ledger.jsonl",
+      "path": "/home/jesse/openroot/data/superlinear_ledger.jsonl",
+      "kind": "ledger",
+      "sha256": "88e99e9eca94ea91ded13e4e8ce702332337ba61407c02a2e1b21ccbae3755e3",
+      "bytes": 2594
+    },
+    {
+      "id": "superloop_chains.json",
+      "path": "/home/jesse/openroot/data/superloop_chains.json",
+      "kind": "ledger",
+      "sha256": "e8e352c94733e02ae5c8d2a7089a280192874e9ea301f701f9c2fb70eec1f8da",
+      "bytes": 1741
+    },
+    {
+      "id": "superloop_commands.jsonl",
+      "path": "/home/jesse/openroot/data/superloop_commands.jsonl",
+      "kind": "ledger",
+      "sha256": "776ae9f634a10fbbd4998796da125b67edeac1e42a2c492fb7591f928d5042a7",
+      "bytes": 2512507
+    },
+    {
+      "id": "syntax_failures.log",
+      "path": "/home/jesse/openroot/data/syntax_failures.log",
+      "kind": "ledger",
+      "sha256": "4e1edf8ba95355d050d1a6da40053a8813f6f24a4a1f6f7fa2d63eb30fda6fca",
+      "bytes": 1851
+    },
+    {
+      "id": "tidbit_registry.db",
+      "path": "/home/jesse/openroot/data/tidbit_registry.db",
+      "kind": "ledger",
+      "sha256": "5fc68ca6abee86c695eef75fbd73a04fdb62151da4e64e09e50d18b23539f0da",
+      "bytes": 12288
+    },
+    {
+      "id": "tier_dispatch.db",
+      "path": "/home/jesse/openroot/data/tier_dispatch.db",
+      "kind": "ledger",
+      "sha256": "c87f52e81c3f90b2b79add4ae79655bbcecd0875731d5773afbbc90c076ba1ef",
+      "bytes": 12288
+    },
+    {
+      "id": "une_ledger.db",
+      "path": "/home/jesse/openroot/data/une_ledger.db",
+      "kind": "ledger",
+      "sha256": "6ad3009142efd48dcdcf326cc8423edecd21bdef14c18a60770db54b228bf3de",
+      "bytes": 32768
+    },
+    {
+      "id": "coder_briefing_v1.md",
+      "path": "/home/jesse/openroot/context_bridge/coder_briefing_v1.md",
+      "kind": "bridge-dir-file",
+      "sha256": "08ca12f3190646a08fe2f2c2b6590a6822b52d6fa4a99b0b501658b49f4ebcb9",
+      "bytes": 3936
+    },
+    {
+      "id": "estate_wiring_20261010T194836Z.md",
+      "path": "/home/jesse/openroot/context_bridge/estate_wiring_20261010T194836Z.md",
+      "kind": "bridge-dir-file",
+      "sha256": "0cf2f26c3f841f74d8bd5e8e613e223a0aadd45fc017d4df7ec8cd5747607987",
+      "bytes": 34351
+    },
+    {
+      "id": "handoff-ai-window-20261009T0359.md",
+      "path": "/home/jesse/openroot/context_bridge/handoff-ai-window-20261009T0359.md",
+      "kind": "bridge-dir-file",
+      "sha256": "abcf99f740b7f880f2a7c28453591a5886066899b2428fea2210f9c8cfd3c8b8",
+      "bytes": 2203
+    },
+    {
+      "id": "handoff-ai-window-20261009T0427Z.md",
+      "path": "/home/jesse/openroot/context_bridge/handoff-ai-window-20261009T0427Z.md",
+      "kind": "bridge-dir-file",
+      "sha256": "c5ce91510ddf09f4e88c5f690424ded0ff3f18a5f4673ae13cd346dbad6dd85f",
+      "bytes": 1183
+    },
+    {
+      "id": "handoff-ai-window-20261009T0555Z.md",
+      "path": "/home/jesse/openroot/context_bridge/handoff-ai-window-20261009T0555Z.md",
+      "kind": "bridge-dir-file",
+      "sha256": "6fad1c2dcbd7b7e571decd685122c386f3fbe41a6b20218165dfbbf25627426b",
+      "bytes": 1178
+    },
+    {
+      "id": "handoff-triad-execute-20261009T184937Z.md",
+      "path": "/home/jesse/openroot/context_bridge/handoff-triad-execute-20261009T184937Z.md",
+      "kind": "bridge-dir-file",
+      "sha256": "05234a4056d5d1de14ef8fdd991ac521df5237c8884fa9da2a6b4d6ae60fe162",
+      "bytes": 556
+    },
+    {
+      "id": "permaculture-20260925_061017.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260925_061017.md",
+      "kind": "bridge-dir-file",
+      "sha256": "0fec3c9757ee2a81a3cca775fd48e343e85c809c06c8158fd6e02063612b8aa6",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260925_071027.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260925_071027.md",
+      "kind": "bridge-dir-file",
+      "sha256": "db431e7fcf000a7ec52233de592eba0edfe01254b7dac197a282ba945b23dd1e",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260925_081037.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260925_081037.md",
+      "kind": "bridge-dir-file",
+      "sha256": "a4bf81d8133f04d4d5b34b1f8dbc7017baf573b56e50f8071a7fc5be885b2f6f",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260925_091037.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260925_091037.md",
+      "kind": "bridge-dir-file",
+      "sha256": "c8ee0d9e0494096be47b5fdc92aa2db947fb80561674974bfdce36f25b4ea7cd",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260925_101107.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260925_101107.md",
+      "kind": "bridge-dir-file",
+      "sha256": "4129e47762444aaac9093954e7b0324733dac7286d30c073596221983c7cbe01",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260925_111107.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260925_111107.md",
+      "kind": "bridge-dir-file",
+      "sha256": "df761c5fc84aa5a48802d297cd07e628c3c9e843931098815d91567684733958",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260925_121108.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260925_121108.md",
+      "kind": "bridge-dir-file",
+      "sha256": "f7c94bec00652df35206bd4dc71c95372ec46d9177d79fbf34d793c06422e4dc",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260925_131127.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260925_131127.md",
+      "kind": "bridge-dir-file",
+      "sha256": "3bbcaac6f7c188cbe4fdbbcef0071ff27f8934719edfc5cf7fbd368d15d8a180",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260925_141136.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260925_141136.md",
+      "kind": "bridge-dir-file",
+      "sha256": "38e62f018e475eafba09895e3003bb7d54ee8a4381c6b87290f53d06730b96cf",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260925_151136.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260925_151136.md",
+      "kind": "bridge-dir-file",
+      "sha256": "1c81057c344ac0b5469f58ede704eca63fe1843700f2641bd09f493b711415d0",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260925_161157.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260925_161157.md",
+      "kind": "bridge-dir-file",
+      "sha256": "21779c38aefb3968378f62988213ee8109e65ebfbdc2ac71313672adf8b69377",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260925_171206.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260925_171206.md",
+      "kind": "bridge-dir-file",
+      "sha256": "6edf60db1b05a651f11969cc5ec273e44936d8ba1b81a7a6c43c6f33c147905b",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260925_181227.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260925_181227.md",
+      "kind": "bridge-dir-file",
+      "sha256": "1ca14eaf03cd98271b21b710d79b9b57f9c64a5cdf2e9efde37ceb86d8b55cc7",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260925_191235.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260925_191235.md",
+      "kind": "bridge-dir-file",
+      "sha256": "0dc852a004ec56f1a06e3e90e6b429af43a9dde328f9f97e914da64790d22977",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260925_201257.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260925_201257.md",
+      "kind": "bridge-dir-file",
+      "sha256": "0de9af89aa17c2a5e2f4f5e159ae06ce9dc5d74d5f88fe92f67864b5e4a5ff50",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260925_211304.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260925_211304.md",
+      "kind": "bridge-dir-file",
+      "sha256": "f79e0bd1d7d33452ad43bdd88b780643e5790b4fa8c8a636036969faef312d13",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260925_221304.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260925_221304.md",
+      "kind": "bridge-dir-file",
+      "sha256": "23439626e6e2caa68ab533aae6092397431a27f4209f79a574b65629dba1f0c5",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260925_231327.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260925_231327.md",
+      "kind": "bridge-dir-file",
+      "sha256": "1ad514c9d82c241bbb26341670d5aa3b3af571cc7c2976f5cd3a2ed1a81a255d",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260926_001334.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260926_001334.md",
+      "kind": "bridge-dir-file",
+      "sha256": "75b4046d1df6d428bbee20c9fc5ed23dbc3c4f6fb676c49d2929acc4aecec96a",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260926_011357.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260926_011357.md",
+      "kind": "bridge-dir-file",
+      "sha256": "295d9c2d50bd7da4d90c4fe689b9cbcc0545b633ec17aa4ed73918f5fe0a6906",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260926_021403.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260926_021403.md",
+      "kind": "bridge-dir-file",
+      "sha256": "526a1b7c9a904d772a86587916f424f8c04cc9abad7584f3f7d0a8536d6d7bfe",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260926_031403.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260926_031403.md",
+      "kind": "bridge-dir-file",
+      "sha256": "7c69962bea5e438546017b47fcfb2d7cb8ff75024f45f0f4ae9d2633ee351296",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260926_041404.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260926_041404.md",
+      "kind": "bridge-dir-file",
+      "sha256": "825b2f68923c0723fbfb3b07d54f678da4532125220bfe94e9ed099c6e75de4d",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260926_051427.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260926_051427.md",
+      "kind": "bridge-dir-file",
+      "sha256": "f0b2919377f1518bbff4ee6b8d6e032f254a1de90b0ed83110aa2965c20fc9b4",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260926_061433.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260926_061433.md",
+      "kind": "bridge-dir-file",
+      "sha256": "4e4d73ee9a2a2f7411e642cb41f6390553e66c8a6e61af9330cf94829b272fc4",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260926_071457.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260926_071457.md",
+      "kind": "bridge-dir-file",
+      "sha256": "2b9f161fbf2905f1f53bd5d1e8bc77bda1355227437d2ab26bd0cd87fb22efee",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260926_081502.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260926_081502.md",
+      "kind": "bridge-dir-file",
+      "sha256": "7e24af96e670930f86612ae7c43d79f28e55f0af42ccbfe7f4ff8922d28b6c7e",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260926_091502.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260926_091502.md",
+      "kind": "bridge-dir-file",
+      "sha256": "095fd194d33ceecb0efb6bdb4a424956e28e1db95dbcc5e1906b73e116e820ac",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260926_101527.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260926_101527.md",
+      "kind": "bridge-dir-file",
+      "sha256": "595575b217a81ead005e66c4a34ca994fa89b2ae5ffb514d16652490b9f9068d",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260926_111532.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260926_111532.md",
+      "kind": "bridge-dir-file",
+      "sha256": "cd96ca28009226f1693b68b2c1b7714b5ca10abbf37d52592cf3842fb7f086e4",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260926_121557.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260926_121557.md",
+      "kind": "bridge-dir-file",
+      "sha256": "2cba8be65f0d74861eb8d0b987ecfa6e65bb39a99d00c4f389d120ae7df2038d",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260926_131601.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260926_131601.md",
+      "kind": "bridge-dir-file",
+      "sha256": "161c6422887247eade24b722cfa8f126a420517f7ca41816c628114cc2581f80",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260926_141601.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260926_141601.md",
+      "kind": "bridge-dir-file",
+      "sha256": "e98f74840796183a1e315b0f1c6d839637479cea6ab4b461ad70adb82b5fc959",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260926_151627.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260926_151627.md",
+      "kind": "bridge-dir-file",
+      "sha256": "bb4ec225285832e2db98cb6360173acd9e4e8e40c76d7f53c1be3a415bb48408",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260926_161631.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260926_161631.md",
+      "kind": "bridge-dir-file",
+      "sha256": "ae15657b3bc8ba0e640c617c34c2958303e6ae963c71535300b30725eedab439",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260926_171657.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260926_171657.md",
+      "kind": "bridge-dir-file",
+      "sha256": "269bf3b8e33e7d67a7e10078175fb82b960d95deb9a92fec5f7aa80e75cf8bcf",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260926_181700.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260926_181700.md",
+      "kind": "bridge-dir-file",
+      "sha256": "0f59f4e3ba01146318e1877562c8c5d39a2ff69e4fa7968697e177b98e4203a7",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260926_191700.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260926_191700.md",
+      "kind": "bridge-dir-file",
+      "sha256": "20a5ee884f470e9b63c862e85584313b827130b9f0192ba2710dc27646185b66",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260926_201701.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260926_201701.md",
+      "kind": "bridge-dir-file",
+      "sha256": "a810fbe22f11c585dcba9e922e2d06a68cd5455930d9612aa41a93d1b3a51006",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260926_211727.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260926_211727.md",
+      "kind": "bridge-dir-file",
+      "sha256": "4b954c6a6c25b3e8432a62af49fafebf926445905d4a453e563f2fe437ce1a1a",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260926_221730.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260926_221730.md",
+      "kind": "bridge-dir-file",
+      "sha256": "deb99396f23b9e2193dd2202112dec8e96389031eb784a4808e56342159eae3e",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260926_231757.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260926_231757.md",
+      "kind": "bridge-dir-file",
+      "sha256": "195e59589e8d966289d5d7971da36d30d0c02c38ee17543b849a545bd4fae7bb",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260927_001759.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260927_001759.md",
+      "kind": "bridge-dir-file",
+      "sha256": "dc3b310d1b1e3c6a5609cce2b80d6cca12609692843b84851c85c05f661a6a37",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260927_011759.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260927_011759.md",
+      "kind": "bridge-dir-file",
+      "sha256": "3d182c795d38172849e5b09285a758e3d79582463399ebe965d46aa0bc1d2de2",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260927_021827.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260927_021827.md",
+      "kind": "bridge-dir-file",
+      "sha256": "1955b3a264e13458878151486c32a031ea47d5774e693a0fde8fbcffe592be3d",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260927_031829.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260927_031829.md",
+      "kind": "bridge-dir-file",
+      "sha256": "1248b852f9a0bd4fe14cb3472883e51197459320b385e245a6d2c06bb26356f2",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260927_144857.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260927_144857.md",
+      "kind": "bridge-dir-file",
+      "sha256": "fc114ac0ca4c98bd6014c63e2d316262239dfb4670a32ac041e7a4ae595e5aec",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260927_154907.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260927_154907.md",
+      "kind": "bridge-dir-file",
+      "sha256": "3eb8b39209f1b2bdc44ddda19252af207f2afab118b547472771b239ea2663d5",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260927_164917.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260927_164917.md",
+      "kind": "bridge-dir-file",
+      "sha256": "5a3d0659734f6caf13f5f4d55053116ef93c4737f267e73f3a01adcc8b743f0d",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260927_174926.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260927_174926.md",
+      "kind": "bridge-dir-file",
+      "sha256": "f69f86ef565a0c16f07f85998db1cd6b7fb3a2b6ad79aa3e4af049de1bae25f4",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260927_184927.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260927_184927.md",
+      "kind": "bridge-dir-file",
+      "sha256": "2622e38ac0136026614a7026ea75b71ef4cc5db230bba7e5e61f1f8f9309cab5",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260927_194947.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260927_194947.md",
+      "kind": "bridge-dir-file",
+      "sha256": "3bafaa707038113d1fbe22c502e5e0f2d46fe81b614798ab480c38c394e578a2",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260927_204955.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260927_204955.md",
+      "kind": "bridge-dir-file",
+      "sha256": "69643bf5704a4c297effc2b37f39f121a1e492fdbfaae7c8b4a1498ea63e8b49",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260927_214955.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260927_214955.md",
+      "kind": "bridge-dir-file",
+      "sha256": "2fef3326b83d53af583b72c4dfc2153a83c58fa5453506a088d51a69bc6309f9",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260927_225007.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260927_225007.md",
+      "kind": "bridge-dir-file",
+      "sha256": "0bebc788d7e10554616b3ec0f969569b20233e96b979e12f0d56af3a365e6216",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260927_235017.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260927_235017.md",
+      "kind": "bridge-dir-file",
+      "sha256": "07496bcab3f914a7870392cc8dddbd7b71e9eddae42d2743b73e9e56570e8449",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260928_005025.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260928_005025.md",
+      "kind": "bridge-dir-file",
+      "sha256": "3068ab8c17ebbd1ca434c1a439993619783f402094b1ebcc613750bbed28b686",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260928_015047.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260928_015047.md",
+      "kind": "bridge-dir-file",
+      "sha256": "bc25c8d5d612502429b4c86d275ef830b5173fb01ae2fbb5ded4fe39f148dbcf",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260928_025057.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260928_025057.md",
+      "kind": "bridge-dir-file",
+      "sha256": "6d7435f162cdec19c34322e847325e5e85baff3966a494eb357fa799ea899c11",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260928_035107.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260928_035107.md",
+      "kind": "bridge-dir-file",
+      "sha256": "bf2c612fc7e837d92bf4c8106a69dee6551767cd0d2fbab47fb2abc32e3ba433",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260928_045116.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260928_045116.md",
+      "kind": "bridge-dir-file",
+      "sha256": "2b5dfb9a196e344a5d9d83d51b59fb7c12a81bf431089ec7dbb0a7de91833f34",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260928_055117.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260928_055117.md",
+      "kind": "bridge-dir-file",
+      "sha256": "e879ca15ea5f86feb5e8eec027496f0d82017c86964aa3f127574154ab0f141e",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260928_065137.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260928_065137.md",
+      "kind": "bridge-dir-file",
+      "sha256": "731f0a0662432a2c31cc2df367fbb11b96b8fa9062dbd68139048f32568711ce",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260928_075146.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260928_075146.md",
+      "kind": "bridge-dir-file",
+      "sha256": "f4d6d8674bee4ec4df02228d5f7463f7dad46a8f87282f50602c933b15830c01",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260928_085146.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260928_085146.md",
+      "kind": "bridge-dir-file",
+      "sha256": "ef8a7631939739ab7481dc654f80c895510ad944b7328caf6f13d1db7c2b4dd9",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260928_095207.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260928_095207.md",
+      "kind": "bridge-dir-file",
+      "sha256": "a7ba9f06d6489f8b2660d858694583523b36d10bdab057f352a7bed0e881b7ac",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260928_105215.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260928_105215.md",
+      "kind": "bridge-dir-file",
+      "sha256": "269b520cfb69cee0e7cec41f759db449b993913e42a153d21b3c409415136b6a",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260928_115216.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260928_115216.md",
+      "kind": "bridge-dir-file",
+      "sha256": "776baeeb1642106bb2731b13f8dcda50d43e7d864290207d00b8882781c7d7d9",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260928_125238.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260928_125238.md",
+      "kind": "bridge-dir-file",
+      "sha256": "42dc713c73eaa01da4500c2db477fb56ba27439e21e57a7c12f8b0551bee9662",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260928_135245.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260928_135245.md",
+      "kind": "bridge-dir-file",
+      "sha256": "4650ebda855d4441ba5def8020fa28eae3841bb4d6ee0f295e1c37981d602f4b",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260928_145246.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260928_145246.md",
+      "kind": "bridge-dir-file",
+      "sha256": "d29d675864c1b3d47a406f902d4677e1756aaca3e2faac679788271531b60456",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260928_155257.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260928_155257.md",
+      "kind": "bridge-dir-file",
+      "sha256": "8331dbcb230776f472dd1e7c0fcafdb5a2b147e442924e3ab41eea32a00e4ed8",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260928_165304.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260928_165304.md",
+      "kind": "bridge-dir-file",
+      "sha256": "2bf70fb53785d1adbf0fd9f328d1e7646ab10752e9aaca974a3a7a55ea51017a",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260928_175302.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260928_175302.md",
+      "kind": "bridge-dir-file",
+      "sha256": "24621e64a0aac9c0660b88e7d5b46ea26eecd9682da7bffef6c482cba3277bb5",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260928_185307.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260928_185307.md",
+      "kind": "bridge-dir-file",
+      "sha256": "0abe8b45b10eea4e1600bf78199ece9976c42db86145e9295ab6562ac5b22a41",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260928_195317.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260928_195317.md",
+      "kind": "bridge-dir-file",
+      "sha256": "a9087651445a7cfbd00ba34a887c6c36f32835c6394382674227b8843162c59e",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260928_205317.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260928_205317.md",
+      "kind": "bridge-dir-file",
+      "sha256": "19093d5e5bb0957a7ac788d816221710c205fe7d3e9309e75dc0ada92bb2d0ef",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260928_215317.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260928_215317.md",
+      "kind": "bridge-dir-file",
+      "sha256": "4ed77e963d1832e5c741da07a13c755f278f4a84741ec5be4f65f8edc5fad8e6",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260928_225347.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260928_225347.md",
+      "kind": "bridge-dir-file",
+      "sha256": "ebcba55eea066f2ac8d75649bf08d7b905fc548389dc8225d9f3043aac65e6af",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260928_235407.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260928_235407.md",
+      "kind": "bridge-dir-file",
+      "sha256": "3e549fd3b0d15195691c66314ef221e0769f10e481aa5d0f75fac43844d4e88a",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260929_005416.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260929_005416.md",
+      "kind": "bridge-dir-file",
+      "sha256": "d4e392e1866c4ed03c9743f359ae928f01cda1cc9cf6c80eb8ebf35ee7ae0823",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260929_015417.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260929_015417.md",
+      "kind": "bridge-dir-file",
+      "sha256": "3ad34a88b54b12ba39e0f651a4a8325e6ef64e436881f462069f401e0bbaccd9",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260929_025437.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260929_025437.md",
+      "kind": "bridge-dir-file",
+      "sha256": "f9b46cf6f279edffa86774943206fe412790c8d3fffeeaa317be487e3ecf5373",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260929_035446.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260929_035446.md",
+      "kind": "bridge-dir-file",
+      "sha256": "482fed53afed02f03dd2b6cc17871d5bb012487f9c29be6988e9ae46964b1542",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260929_045507.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260929_045507.md",
+      "kind": "bridge-dir-file",
+      "sha256": "404a7656bff57587cd3c7665d4f1f77a2243d99ac0e848774f9c93435e6746b6",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260929_055515.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260929_055515.md",
+      "kind": "bridge-dir-file",
+      "sha256": "d55f1f616a5605a3656881c41456bde2432bfdbce312952f7df509671b7431cd",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260929_065516.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260929_065516.md",
+      "kind": "bridge-dir-file",
+      "sha256": "eaafd29e3e58638c1e224f38963370f690266add33fbc803bab11affdd16dc26",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260929_075537.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260929_075537.md",
+      "kind": "bridge-dir-file",
+      "sha256": "55a3a4c4e77ce09feace39382ccd3871de8e288fc0354d26216b5389c0ba2a5e",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260929_085545.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260929_085545.md",
+      "kind": "bridge-dir-file",
+      "sha256": "028cd3713a377b865a359b06d4fc35b4d9248c13dfce10c83b0887a807977629",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260929_095545.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260929_095545.md",
+      "kind": "bridge-dir-file",
+      "sha256": "1632c80c259d4705c31859087475f59f04237c9e484b5ee9d5253f4455dd90b3",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260929_105607.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260929_105607.md",
+      "kind": "bridge-dir-file",
+      "sha256": "b72811209f241ccee22dc7a19268efb59b1debcf09b724c7813deab557c6910a",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260929_115614.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260929_115614.md",
+      "kind": "bridge-dir-file",
+      "sha256": "8e238d0dd61dcf8e0cdfe8e3c6e3a7655c33dd5ae65be2877b5b28e42ecb5637",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260929_125614.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260929_125614.md",
+      "kind": "bridge-dir-file",
+      "sha256": "d501376e33d3fb8b7b36df9dd2c04ff13d96c42f96b9762c2783cc7e8bda39b4",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260929_135614.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260929_135614.md",
+      "kind": "bridge-dir-file",
+      "sha256": "7326840acee12a710112f0c73c96d5f8bf95f8bd3b0f3e89ca0de0d925a18ada",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260929_145637.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260929_145637.md",
+      "kind": "bridge-dir-file",
+      "sha256": "32594bc08a77a2f2020f65801345bcac1c39dbe5f985974b89b5b036c40e4af0",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260929_155644.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260929_155644.md",
+      "kind": "bridge-dir-file",
+      "sha256": "c55e249e265b7432e12a69c37ccc52e073c5c0a26969fe8b8ee7d3f4570e78b3",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260929_165707.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260929_165707.md",
+      "kind": "bridge-dir-file",
+      "sha256": "34539cbaeb69ecc23c9b22d0dabb1f63bf05f8b67d26e2202de46fcb1dc3fac2",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260929_175713.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260929_175713.md",
+      "kind": "bridge-dir-file",
+      "sha256": "74519035ce4f0f96dc3b9bd520d5c8d9691bfdc4f8fe72e1ad1b18d9b9456a9c",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260929_185714.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260929_185714.md",
+      "kind": "bridge-dir-file",
+      "sha256": "23eba64d26942b3544816b3646b10cfe234187c87aea60e2a8a2b50bf130cc4c",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260929_195737.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260929_195737.md",
+      "kind": "bridge-dir-file",
+      "sha256": "88750c60fa796b60d9f4b67b89f25e123e973c25932b1aa81f340d5ae3f63944",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260929_205743.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260929_205743.md",
+      "kind": "bridge-dir-file",
+      "sha256": "324d90bb3c9816dcc7856a2feeb225fe4a5f3ec5131337c3caeb567368e9e818",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260929_215743.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260929_215743.md",
+      "kind": "bridge-dir-file",
+      "sha256": "6cfe553cfbbc69b48d2f4b1383801b9ee9cfc2d2edf91fcfe390e444c9393f60",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260929_225807.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260929_225807.md",
+      "kind": "bridge-dir-file",
+      "sha256": "275f79a62e4a96e06b17c7891f604c73f2d61c6aadc486733d2312bf04a5b24a",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260929_235813.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260929_235813.md",
+      "kind": "bridge-dir-file",
+      "sha256": "edd526949bfb7a6cfea9454190d4c5a1ea42ffb9afd58f545aa57274339dfac0",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260930_005813.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260930_005813.md",
+      "kind": "bridge-dir-file",
+      "sha256": "e78a0b224be8884e23d63fafa17260d393e5186d58e211d801acefc0eb76362a",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260930_015813.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260930_015813.md",
+      "kind": "bridge-dir-file",
+      "sha256": "2b97150e17d77aebaaad120d1ed048ad6770a4218fc1ac645a4b0ee9126a8852",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260930_025815.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260930_025815.md",
+      "kind": "bridge-dir-file",
+      "sha256": "075be7df0ccd5300080f90fc5f320cf6aebc6d555c85a6a6011a12d150ff08eb",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260930_035816.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260930_035816.md",
+      "kind": "bridge-dir-file",
+      "sha256": "8b4a7e201979581b1f2d5e25f0cbc9ff54359321648efa6bbafec39982fa1a8e",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260930_045817.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260930_045817.md",
+      "kind": "bridge-dir-file",
+      "sha256": "741a88b3b13c91c020221fbec997110b75e1949c971d72e9e8c9d3577aa45cfe",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260930_055837.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260930_055837.md",
+      "kind": "bridge-dir-file",
+      "sha256": "6c4aaeff7a30500417158878b43020e5613aaeb4c63a6a3adf175c786f1ffbd2",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260930_065847.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260930_065847.md",
+      "kind": "bridge-dir-file",
+      "sha256": "033e69229d1fb8c0b0a1190b32efd3562773c76d6c885f487f89b4dec3c37ca9",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260930_075849.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260930_075849.md",
+      "kind": "bridge-dir-file",
+      "sha256": "2e0ce1b685c9e794695c078d7d0cbed2c62c203896b1420a480688042d304253",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260930_085849.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260930_085849.md",
+      "kind": "bridge-dir-file",
+      "sha256": "206aa97f580a9f2c9a60791b3243b0b77da97559dd916d47bc1382f2e8602ccd",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260930_095907.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260930_095907.md",
+      "kind": "bridge-dir-file",
+      "sha256": "a4e1388575ba7fef51a7d5737ebdfa9bef6d731df4c3f3554e99c4e4145c238a",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260930_105917.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260930_105917.md",
+      "kind": "bridge-dir-file",
+      "sha256": "1c574a66a212e43cf78958314c9395aefcac31a2fdd1fb3d4815b784274d578c",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260930_115919.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260930_115919.md",
+      "kind": "bridge-dir-file",
+      "sha256": "0704ac3c256981aa8e03338882f45d7a310adc1f24662b3c1efcb08bb2648a6b",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260930_125923.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260930_125923.md",
+      "kind": "bridge-dir-file",
+      "sha256": "5e651e6366aadb3422023233368cc693185d3cda7749656e79a61f6122ea94a3",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260930_135924.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260930_135924.md",
+      "kind": "bridge-dir-file",
+      "sha256": "7f715d92ad2aceffab0bc655ab8a44252e814ae49860e7fb0f951b8988bf987d",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260930_145924.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260930_145924.md",
+      "kind": "bridge-dir-file",
+      "sha256": "74052dfabb23c085d630d1feef82965812a4ed406c375facfae3ae0643ef2a76",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260930_155947.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260930_155947.md",
+      "kind": "bridge-dir-file",
+      "sha256": "1b55af5bbf2665711bf1dab510a7d8a6affff937b9634e01183f44f37d5d126f",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260930_165953.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260930_165953.md",
+      "kind": "bridge-dir-file",
+      "sha256": "9b75b58ef08784640f65d2a5141939e6499123452f58dc66c0aa3ff929eb56df",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20260930_175956.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260930_175956.md",
+      "kind": "bridge-dir-file",
+      "sha256": "04695520467c622b1431b49152b001a132dbf85a9f290624fe5756554d55500a",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260930_190007.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260930_190007.md",
+      "kind": "bridge-dir-file",
+      "sha256": "d3efb5b8f2528d9b316bf55c9ccf40881d56e6c44f7ba0e9b32243075469b5c3",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260930_200017.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260930_200017.md",
+      "kind": "bridge-dir-file",
+      "sha256": "234aa7b97cab7e93ccf94007db99503b1b2ae3c676b77623ab22f05da4c5ffc7",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260930_210025.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260930_210025.md",
+      "kind": "bridge-dir-file",
+      "sha256": "b1ca4aea8cdfdf4514974358485cc5cb5297e0a95be539575033e7186f187526",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260930_220025.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260930_220025.md",
+      "kind": "bridge-dir-file",
+      "sha256": "8253947e159180fdc8f0e2555ec2b19be695bf43c3c0e7b67053a1048b4ecdad",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20260930_230047.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20260930_230047.md",
+      "kind": "bridge-dir-file",
+      "sha256": "1ab54ad7d57f362c6d5fda8039f3ee9b73db444b19308e6d4f5dda1fff902276",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261001_000055.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261001_000055.md",
+      "kind": "bridge-dir-file",
+      "sha256": "29b222e28f72ab13a432b9f91fe2f46d9d9ad1b57e87bc833b489a131d7ec473",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261001_010107.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261001_010107.md",
+      "kind": "bridge-dir-file",
+      "sha256": "8700e041c401a382f7848bf632ab72a3ef71e05ebb139ac1da1cd301af3e9833",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261001_020117.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261001_020117.md",
+      "kind": "bridge-dir-file",
+      "sha256": "20679bd9ad2a667364cc08002ff52432c001911eced24b5334820cafcaf23adf",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261001_030124.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261001_030124.md",
+      "kind": "bridge-dir-file",
+      "sha256": "4c7ea16a74fe6f3279bd3206c265516c11d290bfd94bbe308c5d78fa24d5df0e",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261001_040127.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261001_040127.md",
+      "kind": "bridge-dir-file",
+      "sha256": "ba4cc1d1f44bf73fe7bc775b497214479bedcb847e128b1938c69b4b54faece3",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261001_050125.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261001_050125.md",
+      "kind": "bridge-dir-file",
+      "sha256": "7051ceabd12da868b705b71a30c590c2a76fbf1d3b7cd6271b963dcc69cd7ed3",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261001_060126.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261001_060126.md",
+      "kind": "bridge-dir-file",
+      "sha256": "87a957c2012f65f242053fa72e95feb7f7b11629a26249dc5521af41b43e7125",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261001_070147.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261001_070147.md",
+      "kind": "bridge-dir-file",
+      "sha256": "fd897145a11a577aa1100e2dafa3ee93521572fab66a71fdf127cb24c7d69392",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261001_080154.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261001_080154.md",
+      "kind": "bridge-dir-file",
+      "sha256": "878df59f3a9d9c2e0fe89d90d71905d514ee541f953250bd2f38400bc1c60fa6",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261001_090154.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261001_090154.md",
+      "kind": "bridge-dir-file",
+      "sha256": "bf726247fa061d8ace47b864b14cf74bf81467274be467975b312021fdf4c75e",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261001_100207.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261001_100207.md",
+      "kind": "bridge-dir-file",
+      "sha256": "e892572b6bd19b9d2f6839aabc7fee4152d4d603381807f5decc363e387329a8",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261001_110217.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261001_110217.md",
+      "kind": "bridge-dir-file",
+      "sha256": "4aaac6a77ce30eeae0af91bf2b6bfe9ecf07fa7199d972c2dd410988c2cb794e",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261001_120223.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261001_120223.md",
+      "kind": "bridge-dir-file",
+      "sha256": "4288b484c6d19e3215c7029027eb0b7fe12a555117b5b3cd43bb96cfddabea91",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261001_130224.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261001_130224.md",
+      "kind": "bridge-dir-file",
+      "sha256": "8ed09986fb018188e3cac1079d14c54b64511586a120bbdbd7598b2e41d8fbb2",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261001_140247.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261001_140247.md",
+      "kind": "bridge-dir-file",
+      "sha256": "5fc2fa816dc6702517d0aa02e40d2c423d031440433651bd368c2d3861172aff",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261001_150253.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261001_150253.md",
+      "kind": "bridge-dir-file",
+      "sha256": "7640893605f1a2c9352bf5b50e73ddd23c1b8b031fffcfbdb027e86b3ea48585",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261001_160307.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261001_160307.md",
+      "kind": "bridge-dir-file",
+      "sha256": "9129e19782efd064c8a4907a75ed9aad0dd69715719832e2dff68d286e6ade73",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261001_170317.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261001_170317.md",
+      "kind": "bridge-dir-file",
+      "sha256": "092b96a67245798742a91e1eb1e62238de638686aa0b4fb8b7e43142bb18f96e",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261001_180322.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261001_180322.md",
+      "kind": "bridge-dir-file",
+      "sha256": "552ef10a71fb999dff3239bf1f6d1186d2004d7a0eac992d6308294f7c9502df",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261001_190322.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261001_190322.md",
+      "kind": "bridge-dir-file",
+      "sha256": "a80d077a6468e547b6f41c78f912a67df225aaf5f1a96c24c831be7bb9817e93",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261001_200323.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261001_200323.md",
+      "kind": "bridge-dir-file",
+      "sha256": "e8f57bc33228cf43174f3d45e64a3f18adce8527d6d27cdb555e7126a551292f",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261001_210347.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261001_210347.md",
+      "kind": "bridge-dir-file",
+      "sha256": "859f12315a52c9885c4107e84068a3f99114cbe78dcffd591d70f4b63066589c",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261001_220351.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261001_220351.md",
+      "kind": "bridge-dir-file",
+      "sha256": "bafd44cd14192ada2acdf25c26c53ca42c0d0848291f9b46f38a4360f1350498",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261001_230352.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261001_230352.md",
+      "kind": "bridge-dir-file",
+      "sha256": "8e0dddfaeb293bc23a0199567f920db9f30cfacf6322a9530e5aaa4b4a3ae770",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261002_000407.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261002_000407.md",
+      "kind": "bridge-dir-file",
+      "sha256": "348da5af1810d63d6cf14bcc11a341fd476c88fa3a7fc00cc4f5268d27d8123a",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261002_010417.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261002_010417.md",
+      "kind": "bridge-dir-file",
+      "sha256": "8bb4969545ceff496be5ffd539b3d0f87e1f0cae22cfe95ef56417b069aca7b5",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261002_020421.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261002_020421.md",
+      "kind": "bridge-dir-file",
+      "sha256": "42ee031a54a9043d6e3bb80211d0e0e723ba70ce6dfef947db11de7af0c0c47c",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261002_030447.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261002_030447.md",
+      "kind": "bridge-dir-file",
+      "sha256": "a9431adea2d012f0e0ea91bb908815ef176bf96f15ee9a8dec21c9bd0b49d472",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261002_040450.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261002_040450.md",
+      "kind": "bridge-dir-file",
+      "sha256": "b38331a3eb5946a26b3f692b604cc2fc985a15004854e1b1394c5690a1c2bf96",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261002_050507.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261002_050507.md",
+      "kind": "bridge-dir-file",
+      "sha256": "08c6448c9906e8aa1e30d36d4290e634a91123c8aac50207611d9892ffef807d",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261002_060517.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261002_060517.md",
+      "kind": "bridge-dir-file",
+      "sha256": "038d418bfb5249b2a1a94430d56b40b3fc6b8ea07904044c059c73cb0be15df6",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261002_070519.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261002_070519.md",
+      "kind": "bridge-dir-file",
+      "sha256": "4e143037db7d1bf7317c09a9094d3d34cfd33b8a83d63c2158647c38d702ad86",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261002_080547.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261002_080547.md",
+      "kind": "bridge-dir-file",
+      "sha256": "b730e05eee4c7aed0125a7ac2109e3dd278c16b0d07554a71459c3fd2bd9bd98",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261002_090548.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261002_090548.md",
+      "kind": "bridge-dir-file",
+      "sha256": "265427e8736702cd0fd09d542b688985937c3b26efea0807da565b22731736d3",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261002_100549.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261002_100549.md",
+      "kind": "bridge-dir-file",
+      "sha256": "f97b5654c934e352c3674c8d44c0224c3950fd137b23c4039caeb74dee558cf1",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261002_110549.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261002_110549.md",
+      "kind": "bridge-dir-file",
+      "sha256": "4e701e8f5476a87067450fe42d95c79f30609526c88fa5d44cdb31c158aeb78a",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261002_120607.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261002_120607.md",
+      "kind": "bridge-dir-file",
+      "sha256": "5d61ad1c4da7c3cdb739cdc24836b124a3dd561fc65a464a84a8432ec91496e8",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261002_130617.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261002_130617.md",
+      "kind": "bridge-dir-file",
+      "sha256": "6e7f70733805da6fc4edb53d042ef84a5a4996c7808445a546aa425502e4191b",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261002_140618.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261002_140618.md",
+      "kind": "bridge-dir-file",
+      "sha256": "ef8f9ee74ae185d2ddb6768c15676a4871918832b7d06d5db795777602dea41f",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261002_150647.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261002_150647.md",
+      "kind": "bridge-dir-file",
+      "sha256": "20a5af613dd464fb25396b8f2b4687ca3c622e512190e08980e21296e1082d5a",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261002_160648.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261002_160648.md",
+      "kind": "bridge-dir-file",
+      "sha256": "3ede59c7a652218da4731e2b72edbba2b4b96feed793b9999ab9eac824b8f4b0",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261002_170707.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261002_170707.md",
+      "kind": "bridge-dir-file",
+      "sha256": "aac646ebb60a52ec240ca606263acf5c6d9546abcf4dbd01f63d8a78eb3e7ac2",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261002_180717.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261002_180717.md",
+      "kind": "bridge-dir-file",
+      "sha256": "2ccebfb247feaed5120f64452cca64f383b0114c5625f53aa7d0a842b17c6341",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261002_190717.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261002_190717.md",
+      "kind": "bridge-dir-file",
+      "sha256": "38d478f511b81bf7528939402d6e45a7844b61189f94e32c0f02d6b8af0fed5d",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261002_200717.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261002_200717.md",
+      "kind": "bridge-dir-file",
+      "sha256": "beff0055670727d72185a8991a1452f403b10b313d90b6a912ef3d9572f617d5",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261002_210747.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261002_210747.md",
+      "kind": "bridge-dir-file",
+      "sha256": "91636feebb2d7136880028e1bf429f45ca48412ac368ff4a7fb134f40723900d",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261002_220807.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261002_220807.md",
+      "kind": "bridge-dir-file",
+      "sha256": "9d623891ec97d4f89f43b65c51b732bf5cd5429b62a5ac1521178beef2f3b0c9",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261002_230816.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261002_230816.md",
+      "kind": "bridge-dir-file",
+      "sha256": "2e405f1e2a835ac4e672261d9dfe4b4a0911d2143b26e373a9164ba1142fe9b1",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261003_000817.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261003_000817.md",
+      "kind": "bridge-dir-file",
+      "sha256": "8a137e5fd64ecec948d4d4dfa8070c459f2161cdc502145192bbd5c77597328c",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261003_010820.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261003_010820.md",
+      "kind": "bridge-dir-file",
+      "sha256": "4c8ec8dec6b9a7482b45d0f30a1a5574a0f8ff452b22264e456b7c610bcfdcfd",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261003_020820.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261003_020820.md",
+      "kind": "bridge-dir-file",
+      "sha256": "6dabcf7fbb920dddd3c121fb5758af56f0681c71566a8bc75e7f549cd487c91f",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261003_030820.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261003_030820.md",
+      "kind": "bridge-dir-file",
+      "sha256": "a2f2e6f812c976149397f570f5835a19d2e6bc91f7331b39fa3a44e353cb5496",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261003_040821.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261003_040821.md",
+      "kind": "bridge-dir-file",
+      "sha256": "fbf1c31a6bd5d000ae8aef117dc84ff23fb50e02994bed3e2c708b24a2aab8ba",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261003_050822.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261003_050822.md",
+      "kind": "bridge-dir-file",
+      "sha256": "d9554fd78142e1f21616ef53867595d91ed3887817d53dc95e18df97f417b913",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261003_060847.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261003_060847.md",
+      "kind": "bridge-dir-file",
+      "sha256": "f0839c9dcb8946ef79ab604169fe0507d11c2ca9fcedb304dbcac2e69dfe6270",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261003_070851.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261003_070851.md",
+      "kind": "bridge-dir-file",
+      "sha256": "a171b888d1b5a10168df68bbe3454f8f8cff5b0251e14f53c06780cb6435cea5",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261003_080907.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261003_080907.md",
+      "kind": "bridge-dir-file",
+      "sha256": "3551dfb83f635e2d0a61100bd454c4165c030cc198c0d7022019fdc39bb51335",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261003_090917.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261003_090917.md",
+      "kind": "bridge-dir-file",
+      "sha256": "c38f5af365442dd19f704c8d28ae175c2561c3b6df81e232642acb7bf6dd4624",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261003_100920.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261003_100920.md",
+      "kind": "bridge-dir-file",
+      "sha256": "fd3d46b69fdbdccf3226d47ecf68f4f70dbb29a7f5241db470f8a6e2084d91f2",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261003_110920.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261003_110920.md",
+      "kind": "bridge-dir-file",
+      "sha256": "b093a61247a7d6dc8c76d771956066701d72b5b6dad58d2c4a8f8e2a93ab268d",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261003_120947.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261003_120947.md",
+      "kind": "bridge-dir-file",
+      "sha256": "5200f38aece82888aedc90a338ee97e7347a2f681d8b54e8f7e843c9f3a48e92",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261003_130950.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261003_130950.md",
+      "kind": "bridge-dir-file",
+      "sha256": "7429c88d773d0491b74cdfbf3b63a54202a80d0459b6de8fdf3ecc79fc13e97d",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261003_141007.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261003_141007.md",
+      "kind": "bridge-dir-file",
+      "sha256": "b9205b7e95b2461e96f8e96491b8041b1c85ba99ba23f63f5e24aa2dee662868",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261003_151017.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261003_151017.md",
+      "kind": "bridge-dir-file",
+      "sha256": "a8e6c3b78ab4cf274cf36923da2ca5102eb48affe12d185cddc2f62c4d8d0261",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261003_161019.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261003_161019.md",
+      "kind": "bridge-dir-file",
+      "sha256": "5f0b35056d5fa33d9304e2919ee59869778bf68d3d05918221e8ba095da517e5",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261003_171019.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261003_171019.md",
+      "kind": "bridge-dir-file",
+      "sha256": "1d5844b817fe8abf73dee334f39051bb297ddbe24efcab2ab6d7f570ba311085",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261003_181047.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261003_181047.md",
+      "kind": "bridge-dir-file",
+      "sha256": "e03eac89e866ebf78663b7f70a1ddf6114207dc449541d6e936ab0851e42151b",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261003_191049.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261003_191049.md",
+      "kind": "bridge-dir-file",
+      "sha256": "047ede372e4e8bd55f6cfeaeb1387b2768e11a6ee7d83b90f277da4bf07a76e6",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261003_201107.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261003_201107.md",
+      "kind": "bridge-dir-file",
+      "sha256": "8a0b8d4729194cdc9ef27fa36269b5b715b7718e2b2e3e6f78cb5d573a20604b",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261003_211117.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261003_211117.md",
+      "kind": "bridge-dir-file",
+      "sha256": "106ef4edc000022ea0cb26e88319200a60685ce9114ed9f9c8f1698c8405b40b",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261003_221118.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261003_221118.md",
+      "kind": "bridge-dir-file",
+      "sha256": "9000b152a812530f7a0db5a4ba5f06e01aa1dcba812301ae5e224a35fd09efd4",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261003_231118.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261003_231118.md",
+      "kind": "bridge-dir-file",
+      "sha256": "7ef9fc7be520fe7648dc3c463c66089de48842959b9be27d0ea7422ef077a144",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261004_001119.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261004_001119.md",
+      "kind": "bridge-dir-file",
+      "sha256": "69f3e4466411174eb018373494180b7a6058272fc4cef66da61f08268dbc9aa3",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261004_011147.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261004_011147.md",
+      "kind": "bridge-dir-file",
+      "sha256": "3823ce495b7d13c237e9e1e98f1c1a75cf4f40273ab7f55bae91a1a465fab4fb",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261004_021148.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261004_021148.md",
+      "kind": "bridge-dir-file",
+      "sha256": "5ee2a639b8902df8469361d28622a1f4f0e663f6df19514ecfc0dd7fb1eda7b1",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261004_031207.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261004_031207.md",
+      "kind": "bridge-dir-file",
+      "sha256": "661f58e2ca8d2ad524f5d6fb23ac74c81345381fffe248caf2c5868f4de653c3",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261004_041217.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261004_041217.md",
+      "kind": "bridge-dir-file",
+      "sha256": "ac207a81d9e95b62adcaabc7b934596df85178c379221bdac1e592da25959d82",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261004_051218.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261004_051218.md",
+      "kind": "bridge-dir-file",
+      "sha256": "4f924b107670da42a4014b5cfe74a94d043e39e4e659f02b777160c23452c18f",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261004_061247.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261004_061247.md",
+      "kind": "bridge-dir-file",
+      "sha256": "fcfc3251e3c89e99800c6f1b0ecfd3c5e9ecf3ebb1738a6ea74c3f75ed200909",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261004_071247.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261004_071247.md",
+      "kind": "bridge-dir-file",
+      "sha256": "fc526f41763efc19fdbe56fcbb32f4dea7bed92c63935fa3a37d8a69fcef53e9",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261004_081307.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261004_081307.md",
+      "kind": "bridge-dir-file",
+      "sha256": "dd20cd1634e60a251915e1434ac08e605f8be2fa207a95593a57bb60627c8003",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261004_091317.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261004_091317.md",
+      "kind": "bridge-dir-file",
+      "sha256": "858cbd6811c1d91b3ea8e5d3954b838cddc0e13e6bc77fb9c6abd571767cb3fc",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261004_101347.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261004_101347.md",
+      "kind": "bridge-dir-file",
+      "sha256": "f8602a9674e374bd137ccefd079ff62564febe87f2cb69392114f506fd5cf13c",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261004_111407.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261004_111407.md",
+      "kind": "bridge-dir-file",
+      "sha256": "244d98f6246cd272c946c52419696022c87e3948ca5bcdcd8d8b5361cb863e75",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261004_121416.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261004_121416.md",
+      "kind": "bridge-dir-file",
+      "sha256": "0a2193ee7e37ef942f928eeb53a0acf2c6aeedd6225c7c7588881848fa37689a",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261004_131417.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261004_131417.md",
+      "kind": "bridge-dir-file",
+      "sha256": "4fa3469ce86c7f9dfa070279b0de370890bd63e27f76ef186486053a172f6513",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261004_141437.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261004_141437.md",
+      "kind": "bridge-dir-file",
+      "sha256": "7654e8da729e75676ee7cb4b4588a80b8a7d516e96c4abf0c14751b7cd83ba9d",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261004_151446.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261004_151446.md",
+      "kind": "bridge-dir-file",
+      "sha256": "7066f2d1395954b030a6afe0e888e26c3daadf3e816411c307908317d0f7b201",
+      "bytes": 810
+    },
+    {
+      "id": "permaculture-20261004_161446.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261004_161446.md",
+      "kind": "bridge-dir-file",
+      "sha256": "d17bd3f9a7abfb59608b5cf1801e9f5e1c51f27592a56bc7cf8a81b2bec4bd5c",
+      "bytes": 811
+    },
+    {
+      "id": "permaculture-20261004_171447.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261004_171447.md",
+      "kind": "bridge-dir-file",
+      "sha256": "8c727946919bf31a28c0b629d4e6d0f694ed7bdb874f879101ee4388604dc8df",
+      "bytes": 814
+    },
+    {
+      "id": "permaculture-20261004_181450.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261004_181450.md",
+      "kind": "bridge-dir-file",
+      "sha256": "7b316c8083bea636da620616a67d07b5a20059ef4eeaae9b92762f0df191f06d",
+      "bytes": 814
+    },
+    {
+      "id": "permaculture-20261004_191451.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261004_191451.md",
+      "kind": "bridge-dir-file",
+      "sha256": "6ef7da56e0e91399fc0c55a921074fe7bc054157300192234cb3e64b06290b07",
+      "bytes": 814
+    },
+    {
+      "id": "permaculture-20261004_201507.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261004_201507.md",
+      "kind": "bridge-dir-file",
+      "sha256": "56aa28ea4ec938259e1e0ef3520a6dcb9b99d17e31041cbfd9997c6d636a74b9",
+      "bytes": 814
+    },
+    {
+      "id": "permaculture-20261004_211517.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261004_211517.md",
+      "kind": "bridge-dir-file",
+      "sha256": "fe972b59894af149d6b33de15198b2bb8aab802e72e925e929bc1a2204e87d8d",
+      "bytes": 814
+    },
+    {
+      "id": "permaculture-20261004_221520.md",
+      "path": "/home/jesse/openroot/context_bridge/permaculture-20261004_221520.md",
+      "kind": "bridge-dir-file",
+      "sha256": "cfe3794d36135621bf60d9e4b2b60feed51cc408b21814a45751ad69042f7a20",
+      "bytes": 814
+    },
+    {
+      "id": "refinement_loop_v1.sh.bak.20260928T150420Z",
+      "path": "/home/jesse/openroot/context_bridge/refinement_loop_v1.sh.bak.20260928T150420Z",
+      "kind": "bridge-other",
+      "sha256": "a519193d7b3ba9af355fe07666436c831e5e4bb0770f4d5f1643198c838f192f",
+      "bytes": 4156
+    },
+    {
+      "id": "session-2026-10-09-postmortem-addendum.md",
+      "path": "/home/jesse/openroot/context_bridge/session-2026-10-09-postmortem-addendum.md",
+      "kind": "bridge-dir-file",
+      "sha256": "7f7a796c5605f727603917ad79e9101e4a9e928755afca1bd1ee245d8be8cde9",
+      "bytes": 660
+    },
+    {
+      "id": "session-2026-10-09-postmortem.md",
+      "path": "/home/jesse/openroot/context_bridge/session-2026-10-09-postmortem.md",
+      "kind": "bridge-dir-file",
+      "sha256": "c114400d0478d3b893a3a15cebb08490b8fa8221b1ba291d0b3547beae237ab5",
+      "bytes": 1669
+    },
+    {
+      "id": "session-log-WHY_IT_MATTERS.md",
+      "path": "/home/jesse/openroot/context_bridge/session-log-WHY_IT_MATTERS.md",
+      "kind": "bridge-dir-file",
+      "sha256": "c44a264719d593d8e84afca4e34f08caeded6e8745b7a68a504f659af15b9d3e",
+      "bytes": 460
+    }
+  ],
+  "scheduler_consumers": [
+    "agape-autopilot.sh",
+    "autonomous.py",
+    "dashboard.py",
+    "dispatch_court_v6.sh",
+    "mistake_engine_v1.py",
+    "newton_daemon.py",
+    "newton_release_gate.sh",
+    "observer_infer.py",
+    "openai_relay_9999.py",
+    "openroot_rapl_sampler_v1.py",
+    "opti_dedupe.py",
+    "permaculture_orchestrator_v3.sh",
+    "pi_node_boot.sh",
+    "run_processing_on_change.sh",
+    "state_pulse.py"
+  ]
+}
