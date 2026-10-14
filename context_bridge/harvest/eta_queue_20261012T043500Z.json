@@ -1,0 +1,562 @@
+{
+  "generated": "20261012T043500Z",
+  "portfolio_gini": 0.814,
+  "median_value": 0.0,
+  "total_candidates": 130,
+  "auto_safe": [
+    {
+      "task": "verify FTS retrieval: text_bridge_handoff-20260928_232839-l0-exact-cache-sealed.md",
+      "source": "knowledge-db",
+      "value": 19.0,
+      "minutes": 1.0,
+      "cls": "auto-safe",
+      "detail": "W2 outstanding item #4 \u2014 retrieval must answer questions, not just titles",
+      "eta_composite": 19.0,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "verify FTS retrieval: ources/context_bridge__concepts__modular_turing_tidbit_v1.md",
+      "source": "knowledge-db",
+      "value": 18.0,
+      "minutes": 1.0,
+      "cls": "auto-safe",
+      "detail": "W2 outstanding item #4 \u2014 retrieval must answer questions, not just titles",
+      "eta_composite": 18.0,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "verify FTS retrieval: -kai/tools/ui/docs/flows/data-flow-simplified-router-mode.md",
+      "source": "knowledge-db",
+      "value": 15.0,
+      "minutes": 1.0,
+      "cls": "auto-safe",
+      "detail": "W2 outstanding item #4 \u2014 retrieval must answer questions, not just titles",
+      "eta_composite": 15.0,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "verify FTS retrieval: d7e/docs/case_studies/CASE_STUDY_006_energy_grid_monopoly.md",
+      "source": "knowledge-db",
+      "value": 13.9,
+      "minutes": 1.0,
+      "cls": "auto-safe",
+      "detail": "W2 outstanding item #4 \u2014 retrieval must answer questions, not just titles",
+      "eta_composite": 13.9,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "verify FTS retrieval: 3d00aa013c88b375/.github/ISSUE_TEMPLATE/hardware_evidence.md",
+      "source": "knowledge-db",
+      "value": 13.7,
+      "minutes": 1.0,
+      "cls": "auto-safe",
+      "detail": "W2 outstanding item #4 \u2014 retrieval must answer questions, not just titles",
+      "eta_composite": 13.7,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "verify FTS retrieval: s/reasoning_kernel_audit_20260929T050213Z/function_index.txt",
+      "source": "knowledge-db",
+      "value": 13.7,
+      "minutes": 1.0,
+      "cls": "auto-safe",
+      "detail": "W2 outstanding item #4 \u2014 retrieval must answer questions, not just titles",
+      "eta_composite": 13.7,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "verify FTS retrieval: s/reasoning_kernel_audit_20260929T050257Z/function_index.txt",
+      "source": "knowledge-db",
+      "value": 13.7,
+      "minutes": 1.0,
+      "cls": "auto-safe",
+      "detail": "W2 outstanding item #4 \u2014 retrieval must answer questions, not just titles",
+      "eta_composite": 13.7,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "verify FTS retrieval: f980f127b5b2fa581/.github/steps/4-merge-your-pull-request.md",
+      "source": "knowledge-db",
+      "value": 13.4,
+      "minutes": 1.0,
+      "cls": "auto-safe",
+      "detail": "W2 outstanding item #4 \u2014 retrieval must answer questions, not just titles",
+      "eta_composite": 13.4,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "verify FTS retrieval: ports/newton_to_cosmos_trace_20260929T055627Z/candidates.txt",
+      "source": "knowledge-db",
+      "value": 13.3,
+      "minutes": 1.0,
+      "cls": "auto-safe",
+      "detail": "W2 outstanding item #4 \u2014 retrieval must answer questions, not just titles",
+      "eta_composite": 13.3,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "verify FTS retrieval: 582fe3d00aa013c88b375/designs/example-system/MEASUREMENTS.md",
+      "source": "knowledge-db",
+      "value": 13.2,
+      "minutes": 1.0,
+      "cls": "auto-safe",
+      "detail": "W2 outstanding item #4 \u2014 retrieval must answer questions, not just titles",
+      "eta_composite": 13.2,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "verify FTS retrieval: 468072/handbook/docs/architecture/permaculture_principles.md",
+      "source": "knowledge-db",
+      "value": 13.1,
+      "minutes": 1.0,
+      "cls": "auto-safe",
+      "detail": "W2 outstanding item #4 \u2014 retrieval must answer questions, not just titles",
+      "eta_composite": 13.1,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "verify FTS retrieval: 1bf73579d7e/docs/physics/kai9000_solar_physics_validation.md",
+      "source": "knowledge-db",
+      "value": 13.1,
+      "minutes": 1.0,
+      "cls": "auto-safe",
+      "detail": "W2 outstanding item #4 \u2014 retrieval must answer questions, not just titles",
+      "eta_composite": 13.1,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "verify FTS retrieval: reports/newton_to_cosmos_trace_20260929T055627Z/excerpts.txt",
+      "source": "knowledge-db",
+      "value": 13.1,
+      "minutes": 1.0,
+      "cls": "auto-safe",
+      "detail": "W2 outstanding item #4 \u2014 retrieval must answer questions, not just titles",
+      "eta_composite": 13.1,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "verify FTS retrieval: /reports/newton_to_cosmos_trace_20260929T055627Z/missing.txt",
+      "source": "knowledge-db",
+      "value": 13.0,
+      "minutes": 1.0,
+      "cls": "auto-safe",
+      "detail": "W2 outstanding item #4 \u2014 retrieval must answer questions, not just titles",
+      "eta_composite": 13.0,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "verify FTS retrieval: 85dbf980f127b5b2fa581/.github/steps/3-open-a-pull-request.md",
+      "source": "knowledge-db",
+      "value": 13.0,
+      "minutes": 1.0,
+      "cls": "auto-safe",
+      "detail": "W2 outstanding item #4 \u2014 retrieval must answer questions, not just titles",
+      "eta_composite": 13.0,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "verify FTS retrieval: 5/reports/newton_to_cosmos_trace_20260929T055627Z/summary.md",
+      "source": "knowledge-db",
+      "value": 12.9,
+      "minutes": 1.0,
+      "cls": "auto-safe",
+      "detail": "W2 outstanding item #4 \u2014 retrieval must answer questions, not just titles",
+      "eta_composite": 12.9,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "verify FTS retrieval: 673582fe3d00aa013c88b375/designs/example-system/TEST_PLAN.md",
+      "source": "knowledge-db",
+      "value": 12.9,
+      "minutes": 1.0,
+      "cls": "auto-safe",
+      "detail": "W2 outstanding item #4 \u2014 retrieval must answer questions, not just titles",
+      "eta_composite": 12.9,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "verify FTS retrieval: a/arch/stm32/Adafruit_LittleFS_stm32/src/littlefs/LICENSE.md",
+      "source": "knowledge-db",
+      "value": 12.9,
+      "minutes": 1.0,
+      "cls": "auto-safe",
+      "detail": "W2 outstanding item #4 \u2014 retrieval must answer questions, not just titles",
+      "eta_composite": 12.9,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "verify FTS retrieval: fa/arch/stm32/Adafruit_LittleFS_stm32/src/littlefs/README.md",
+      "source": "knowledge-db",
+      "value": 12.8,
+      "minutes": 1.0,
+      "cls": "auto-safe",
+      "detail": "W2 outstanding item #4 \u2014 retrieval must answer questions, not just titles",
+      "eta_composite": 12.8,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "verify FTS retrieval: 62f85dbf980f127b5b2fa581/docs/knowledge/INTEGRATION_NOTES.md",
+      "source": "knowledge-db",
+      "value": 12.7,
+      "minutes": 1.0,
+      "cls": "auto-safe",
+      "detail": "W2 outstanding item #4 \u2014 retrieval must answer questions, not just titles",
+      "eta_composite": 12.7,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "repair gh_cache_v2 key/verify/concurrency",
+      "source": "canonical-debt",
+      "value": 40,
+      "minutes": 15.0,
+      "cls": "auto-safe",
+      "detail": "W2 def. list: argv-joined key, unverified hit path, no writer coordination",
+      "eta_composite": 2.6667,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "multilang revalidation: rerun rankings, seal deltas",
+      "source": "canonical-debt",
+      "value": 20,
+      "minutes": 10.0,
+      "cls": "auto-safe",
+      "detail": "sort fixed; confirm ranking stability",
+      "eta_composite": 2.0,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "GH survey 49 repos via cached wrapper",
+      "source": "canonical-debt",
+      "value": 35,
+      "minutes": 20.0,
+      "cls": "auto-safe",
+      "detail": "stage 3 of campaign; cache-wrapped, read-only",
+      "eta_composite": 1.75,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "docker build verification (podman path)",
+      "source": "canonical-debt",
+      "value": 25,
+      "minutes": 15.0,
+      "cls": "auto-safe",
+      "detail": "handoff #1; rootless podman decided",
+      "eta_composite": 1.6667,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "purge dead-path refs from README set",
+      "source": "canonical-debt",
+      "value": 15,
+      "minutes": 10.0,
+      "cls": "auto-safe",
+      "detail": "W1/W2 doctrine: no phantom references",
+      "eta_composite": 1.5,
+      "equity_mult": 1.0
+    }
+  ],
+  "gated": [
+    {
+      "task": "separate measured vs estimated joules in counter",
+      "source": "canonical-debt",
+      "value": 20,
+      "minutes": 15.0,
+      "cls": "gated",
+      "detail": "W2 outstanding #10 \u2014 accounting honesty",
+      "eta_composite": 1.3333,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "weekly onepass_v3.sh integration of queue",
+      "source": "canonical-debt",
+      "value": 25,
+      "minutes": 20.0,
+      "cls": "gated",
+      "detail": "handoff #7 \u2014 automation loop",
+      "eta_composite": 1.25,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "bind report bytes to verified identities (ledger)",
+      "source": "canonical-debt",
+      "value": 30,
+      "minutes": 25.0,
+      "cls": "gated",
+      "detail": "W2 outstanding #8 \u2014 schema change + commit",
+      "eta_composite": 1.2,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "fail-closed reuse when payloads change",
+      "source": "canonical-debt",
+      "value": 30,
+      "minutes": 25.0,
+      "cls": "gated",
+      "detail": "W2 outstanding #9 \u2014 core contract change",
+      "eta_composite": 1.2,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "squash/annotate drift commits c7714ee/7036a5e",
+      "source": "canonical-debt",
+      "value": 18,
+      "minutes": 15.0,
+      "cls": "gated",
+      "detail": "history-preserving option: tombstone already done, force-push NOT recommended",
+      "eta_composite": 1.2,
+      "equity_mult": 1.0
+    }
+  ],
+  "research_top25": [
+    {
+      "task": "Review and integrate source: jesseray718/jesseray718-archive/repos/openroot/symbols/agape_canonical.txt",
+      "source": "intake-csv",
+      "value": 0.0,
+      "minutes": 1.0,
+      "cls": "research",
+      "detail": "",
+      "eta_composite": 0.0,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "Review and integrate source: jesseray718/jesseray718-archive/repos/openroot/ledger/canonical/agape_v1.txt",
+      "source": "intake-csv",
+      "value": 0.0,
+      "minutes": 1.0,
+      "cls": "research",
+      "detail": "",
+      "eta_composite": 0.0,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "Review and integrate source: jesseray718/jesseray718-archive/repos/canonical/README.md",
+      "source": "intake-csv",
+      "value": 0.0,
+      "minutes": 1.0,
+      "cls": "research",
+      "detail": "",
+      "eta_composite": 0.0,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "Review and integrate source: jesseray718/openroot/ledger/constitution/00_BILL_OF_RIGHTS.md",
+      "source": "intake-csv",
+      "value": 0.0,
+      "minutes": 1.0,
+      "cls": "research",
+      "detail": "",
+      "eta_composite": 0.0,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "Review and integrate source: jesseray718/openroot/ledger/nomenclature/00_A_DEFINITION.md",
+      "source": "intake-csv",
+      "value": 0.0,
+      "minutes": 1.0,
+      "cls": "research",
+      "detail": "",
+      "eta_composite": 0.0,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "Review and integrate source: jesseray718/openroot-canon/canon/CANDIDATES.json",
+      "source": "intake-csv",
+      "value": 0.0,
+      "minutes": 1.0,
+      "cls": "research",
+      "detail": "",
+      "eta_composite": 0.0,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "Review and integrate source: jesseray718/openroot/ledger/constitution/01_CONSTITUTION.md",
+      "source": "intake-csv",
+      "value": 0.0,
+      "minutes": 1.0,
+      "cls": "research",
+      "detail": "",
+      "eta_composite": 0.0,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "Review and integrate source: jesseray718/agape-crossover-key/CONSTITUTION_POSTHASH.md",
+      "source": "intake-csv",
+      "value": 0.0,
+      "minutes": 1.0,
+      "cls": "research",
+      "detail": "",
+      "eta_composite": 0.0,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "Review and integrate source: jesseray718/openroot/reports/reasoning_kernel_audit_20260929T050213Z/sources/context_bridge_handoff-20260928_232839-l0-exact-cache-sealed.md",
+      "source": "intake-csv",
+      "value": 0.0,
+      "minutes": 1.0,
+      "cls": "research",
+      "detail": "",
+      "eta_composite": 0.0,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "Review and integrate source: jesseray718/une/agape-cosmological-engine-v7/README.md",
+      "source": "intake-csv",
+      "value": 0.0,
+      "minutes": 1.0,
+      "cls": "research",
+      "detail": "",
+      "eta_composite": 0.0,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "Review and integrate source: jesseray718/une/docs/NEWTON_CHAIN.md",
+      "source": "intake-csv",
+      "value": 0.0,
+      "minutes": 1.0,
+      "cls": "research",
+      "detail": "",
+      "eta_composite": 0.0,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "Review and integrate source: jesseray718/openroot-foundation/canon/CANON.json",
+      "source": "intake-csv",
+      "value": 0.0,
+      "minutes": 1.0,
+      "cls": "research",
+      "detail": "",
+      "eta_composite": 0.0,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "Review and integrate source: jesseray718/openroot-canon/canon/NOMENCLATURE.json",
+      "source": "intake-csv",
+      "value": 0.0,
+      "minutes": 1.0,
+      "cls": "research",
+      "detail": "",
+      "eta_composite": 0.0,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "Review and integrate source: jesseray718/Reticulum/docs/manual/_sources/index.rst.txt",
+      "source": "intake-csv",
+      "value": 0.0,
+      "minutes": 1.0,
+      "cls": "research",
+      "detail": "",
+      "eta_composite": 0.0,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "Review and integrate source: jesseray718/agape-crossover-key/CONSTITUTION_DOSSIER.md",
+      "source": "intake-csv",
+      "value": 0.0,
+      "minutes": 1.0,
+      "cls": "research",
+      "detail": "",
+      "eta_composite": 0.0,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "Review and integrate source: jesseray718/aerocement/aerocement/README_TOPFOLD.md",
+      "source": "intake-csv",
+      "value": 0.0,
+      "minutes": 1.0,
+      "cls": "research",
+      "detail": "",
+      "eta_composite": 0.0,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "Review and integrate source: jesseray718/agape-crossover-key/CONSTITUTION.md",
+      "source": "intake-csv",
+      "value": 0.0,
+      "minutes": 1.0,
+      "cls": "research",
+      "detail": "",
+      "eta_composite": 0.0,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "Review and integrate source: jesseray718/openroot-canon/canon/CANON.json",
+      "source": "intake-csv",
+      "value": 0.0,
+      "minutes": 1.0,
+      "cls": "research",
+      "detail": "",
+      "eta_composite": 0.0,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "Review and integrate source: jesseray718/MeshCore/docs/index.md",
+      "source": "intake-csv",
+      "value": 0.0,
+      "minutes": 1.0,
+      "cls": "research",
+      "detail": "",
+      "eta_composite": 0.0,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "Review and integrate source: jesseray718/openroot-thesis/docs/01_ENERGY/01_SOLAR_THERMAL_LOOP.md",
+      "source": "intake-csv",
+      "value": 0.0,
+      "minutes": 1.0,
+      "cls": "research",
+      "detail": "",
+      "eta_composite": 0.0,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "Review and integrate source: jesseray718/openroot-canon/canon/ALGORITHMS.json",
+      "source": "intake-csv",
+      "value": 0.0,
+      "minutes": 1.0,
+      "cls": "research",
+      "detail": "",
+      "eta_composite": 0.0,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "Review and integrate source: jesseray718/agape-crossover-key/CONSTITUTION_ROOT.md",
+      "source": "intake-csv",
+      "value": 0.0,
+      "minutes": 1.0,
+      "cls": "research",
+      "detail": "",
+      "eta_composite": 0.0,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "Review and integrate source: jesseray718/agape-crossover-key/CONSTITUTION_PREHASH.md",
+      "source": "intake-csv",
+      "value": 0.0,
+      "minutes": 1.0,
+      "cls": "research",
+      "detail": "",
+      "eta_composite": 0.0,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "Review and integrate source: jesseray718/openroot-thesis/docs/01_ENERGY/README.md",
+      "source": "intake-csv",
+      "value": 0.0,
+      "minutes": 1.0,
+      "cls": "research",
+      "detail": "",
+      "eta_composite": 0.0,
+      "equity_mult": 1.0
+    },
+    {
+      "task": "Review and integrate source: jesseray718/openroot/reports/newton_to_cosmos_trace_20260929T055627Z/missing.txt",
+      "source": "intake-csv",
+      "value": 0.0,
+      "minutes": 1.0,
+      "cls": "research",
+      "detail": "",
+      "eta_composite": 0.0,
+      "equity_mult": 1.0
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "repair_id": "acre-ledger-final-repair-20261012T202631Z",
+  "timestamp": "2026-10-12T20:26:31Z",
+  "canary": "CANARY:OPENROOT-ACRE-FINAL-REPAIR-V1",
+  "source_path": "/home/jesse/openroot/lumo_inbox/expanded/archives_openroot--1-.32534464/openroot (1)/acre/LEDGER.jsonl.bak.1785547700",
+  "destination_path": "/home/jesse/openroot/acre/ledger.jsonl",
+  "source_sha256": "69fdc687bd2354924dd73eb03a494dea0038a6ed3c840bda3772823b53444d5c",
+  "destination_sha256": "4381acd81f8728f4ff4cd26ed14541722b47e0aa6d238a6a374a21d52140fae2",
+  "tombstone_path": "/home/jesse/openroot/context_bridge/tombstones/acre-ledger-corruption/tombstone_corrupt-2026-10-12T20:26:31Z.md",
+  "record_count": 9,
+  "chain_status": "fully_linked",
+  "repair_method": "regenerated_missing_self_hashes_via_sha256_compact_json",
+  "genesis_recipe": "external_ots_signature",
+  "non_genesis_recipe": "sha256(compact_json_line)",
+  "verified_linkage": true
+}
