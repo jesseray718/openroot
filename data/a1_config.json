@@ -1,0 +1,14 @@
+{
+  "hosts": {
+    "optiplex": [
+      "/home/jesse/openroot",
+      "/home/jesse/src/openroot"
+    ],
+    "a15": [
+      "/sdcard/openroot",
+      "/data/data/com.termux/files/home"
+    ]
+  },
+  "eta_floor": 1.0,
+  "share_factor": 0.5
+}

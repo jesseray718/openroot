@@ -1,0 +1,14 @@
+{
+  "components": {
+    "cpu": "x86_64",
+    "distro": "Ubuntu 24.04.5 LTS",
+    "hostname": "optiplex3060",
+    "kernel": "7.0.0-34-generic",
+    "locale_env_sha": "a2b38b6d9dac1fc02ed37f0d45bb9a523bb591298abb84ef8eb9b04ef07dc7c6",
+    "ollama_models_sha": "9627c5fb5add6390bec1f64ad216f7f4338a4de0927fb7cdbf3b22743f93a95f",
+    "pip_freeze_sha": "985a70be11ee4e23b71686f89700b01c9403a2567b0c0f20ec84c557bb2a12e5",
+    "python": "3.12.3",
+    "ts": "2026-10-12T09:10:05Z"
+  },
+  "env_hash": "a3c02a8e9cd0594b212cfef620a8008099d898c675370d803bc49d4382514cb1"
+}
