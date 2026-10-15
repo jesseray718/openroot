@@ -72,3 +72,24 @@ pods/**/*.sqlite3-shm
 workspace/**/*.db
 workspace/**/*.sqlite
 workspace/**/*.sqlite3
+
+# Coder workspace generated links and databases
+workspace/pods/
+workspace/grand-unification/
+workspace/**/*.db
+workspace/**/*.sqlite
+workspace/**/*.sqlite3
+
+# Pod databases and sidecars
+pods/**/*.db
+pods/**/*.db-wal
+pods/**/*.db-shm
+pods/**/*.db-journal
+pods/**/*.sqlite
+pods/**/*.sqlite-wal
+pods/**/*.sqlite-shm
+pods/**/*.sqlite-journal
+pods/**/*.sqlite3
+pods/**/*.sqlite3-wal
+pods/**/*.sqlite3-shm
+pods/**/*.sqlite3-journal
