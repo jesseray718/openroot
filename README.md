@@ -43,6 +43,30 @@ OpenRoot separates four concerns:
 
 A hash proves what source bytes existed. Retrieval identifies relevant evidence. A model synthesizes an answer. Only a verified correction or outcome promotes a result into a reusable pathway.
 
+## A/B test: do the GitHub how-to docs help?
+
+`bin/ab_test_github_docs_v1.py` runs the same questions, model, prompt template, seed, and `temperature=0` under two conditions and logs both configurations:
+
+- `A_with_docs`: retrieval over every supplied pod, including the GitHub docs pod.
+- `B_without_docs`: retrieval over the same pods minus the GitHub docs pod.
+- `C_no_retrieval` (optional, `--include-baseline`): no evidence at all.
+
+```bash
+bin/pod ab \
+  --pod github-docs=pods/github-docs/github_docs.sqlite3 \
+  --pod self-corpus=/path/to/other/pod.db \
+  --question "How do I create a branch protection rule?" \
+  --include-baseline
+# or: --questions-file q.jsonl  (lines of {"question": "...", "expected_terms": ["..."]})
+# --no-generate gives retrieval-only signals without calling Ollama
+```
+
+What it measures (identical scoring for every condition): evidence hits and how many come from the docs pod, `evidence_term_coverage` (share of question terms found in retrieved evidence), `valid_citation_rate` (answer citations that match retrieved chunk tags), optional `expected_term_recall`, and a `composite` mean of these. `delta_composite_A_minus_B` is the comparative metric.
+
+Reading the output: a JSON report is written to `runs/ab/` with per-condition evidence provenance (pod, chunk id, chunk SHA-256), prompt and answer SHA-256, pod file SHA-256 before and after, and a summary of wins/ties plus the mean delta. A positive mean delta across many questions suggests the docs help; with few questions treat it as anecdotal, and have a human label answers in the correction ledger. Retrieval is lexical FTS5 (bm25 scores are not strictly comparable across pods), so the result measures evidence and grounding signals, not semantic recall.
+
+Safety: pods are opened `mode=ro` with `query_only`, hashed before and after (the run fails if a pod changed), and the output directory may not sit inside a pod directory. The GitHub docs pod is a sealed source corpus and is never written. Use `bin/pod check` and `bin/pod push "msg"` as usual; both compile this script.
+
 ## Current status
 
 - Pod #1: GitHub documentation corpus is sealed and queryable.
