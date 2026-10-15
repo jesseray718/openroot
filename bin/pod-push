@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+set -uo pipefail
+cd "$(dirname "$(readlink -f "$0")")/.."
+source .venv/bin/activate
+msg="${*:-update}"
+br="pod/$(date -u +%Y%m%d-%H%M)"
+
+python3 -m py_compile $(find openloom -name '*.py') || { echo "COMPILE FAIL"; exit 1; }
+python3 -m pytest -q || { echo "TESTS FAIL - not pushing"; exit 1; }
+python3 -m openloom.cli verify --pod demo-pod | grep -q '"passed": true' || { echo "VERIFY FAIL"; exit 1; }
+if git diff --cached -U0 -- . ':!bin/pod' ':!bin/pod-push' | grep -E '^\+[^+]' | grep -E '/ho''me/|/data/data/com\.termux'; then echo "ABS PATHS IN STAGED CHANGES - not pushing"; exit 1; fi
+
+git checkout -b "$br" || exit 1
+git add -A
+git status --short
+read -r -p "Commit and push these to $br? [y/N] " a
+[ "$a" = y ] || { echo aborted; exit 1; }
+git commit -m "$msg" && git push -u origin "$br"
+echo "Open PR: https://github.com/jesseray718/openroot/compare/$br?expand=1"

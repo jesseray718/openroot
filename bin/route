@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# route: log every command, optionally classify with local router model, then run it
+set -uo pipefail
+ROOT="$(dirname "$(readlink -f "$0")")/.."
+LEDGER="$ROOT/runs/command_ledger.jsonl"
+mkdir -p "$ROOT/runs"
+cmdline="$*"
+
+lane="unrouted"
+if [ -n "${ROUTER_MODEL:-}" ] && command -v ollama >/dev/null 2>&1; then
+  lane="$(printf 'Classify this command into one word: check, build, query, ingest, push, other.\nCommand: %s\nAnswer:' "$cmdline" \
+    | timeout 20 ollama run "$ROUTER_MODEL" 2>/dev/null | tr -d '\n' | head -c 20)"
+  [ -z "$lane" ] && lane="router_timeout"
+fi
+
+CMDLINE="$cmdline" LANE="$lane" LEDGER="$LEDGER" python3 - <<'PY'
+import hashlib, json, os, time
+c = os.environ["CMDLINE"]
+rec = {"ts": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+       "lane": os.environ["LANE"],
+       "cmd": c,
+       "cmd_sha256": hashlib.sha256(c.encode()).hexdigest()}
+with open(os.environ["LEDGER"], "a") as f:
+    f.write(json.dumps(rec) + "\n")
+PY
+echo "[route] lane=$lane" >&2
+exec "$@"

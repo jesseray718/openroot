@@ -14,3 +14,7 @@ openloom = "openloom.cli:main"
 
 [tool.setuptools.packages.find]
 include = ["openloom*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+norecursedirs = ["workspace", "pods", ".venv", "runs", "demo-pod", "evidence", "attic", "archive"]
