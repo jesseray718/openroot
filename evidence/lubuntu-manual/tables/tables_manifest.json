@@ -1,0 +1,122 @@
+[
+  {
+    "table_id": "lubuntu_manual_p007_t01",
+    "pdf_page": 7,
+    "rows": 2,
+    "columns": 1,
+    "csv": "/home/jesse/openloom-build/evidence/lubuntu-manual/tables/lubuntu_manual_p007_t01.csv",
+    "jsonl": "/home/jesse/openloom-build/evidence/lubuntu-manual/tables/lubuntu_manual_p007_t01.jsonl",
+    "csv_sha256": "322c8af211330a4fb9c1ed19846552d80c3d2b9d54a4cfb9e0b1a81f55c86b81",
+    "jsonl_sha256": "69a04220a34ea046cabe9b9c1b1508f08b6b831952e34eee456cf9708faed61d"
+  },
+  {
+    "table_id": "lubuntu_manual_p009_t01",
+    "pdf_page": 9,
+    "rows": 2,
+    "columns": 1,
+    "csv": "/home/jesse/openloom-build/evidence/lubuntu-manual/tables/lubuntu_manual_p009_t01.csv",
+    "jsonl": "/home/jesse/openloom-build/evidence/lubuntu-manual/tables/lubuntu_manual_p009_t01.jsonl",
+    "csv_sha256": "ec1137839e870701398ffed2d39ec0ecd6fe88bef008cd18c2c5a01d5a2f709e",
+    "jsonl_sha256": "782ad9f87ed5dbb08c0a6888d273c208a92be33dca5ff9d268bd1977831cdef6"
+  },
+  {
+    "table_id": "lubuntu_manual_p388_t01",
+    "pdf_page": 388,
+    "rows": 5,
+    "columns": 2,
+    "csv": "/home/jesse/openloom-build/evidence/lubuntu-manual/tables/lubuntu_manual_p388_t01.csv",
+    "jsonl": "/home/jesse/openloom-build/evidence/lubuntu-manual/tables/lubuntu_manual_p388_t01.jsonl",
+    "csv_sha256": "0c5c9dd6edacfef5d8002d6ee1ff2d2fc759a1a5b0f46f1288c02be9e338ea97",
+    "jsonl_sha256": "5f6349852e7f2f16dc0b2ccbc133da3327371092e9b223d34091e3f661ee77fe"
+  },
+  {
+    "table_id": "lubuntu_manual_p389_t01",
+    "pdf_page": 389,
+    "rows": 3,
+    "columns": 2,
+    "csv": "/home/jesse/openloom-build/evidence/lubuntu-manual/tables/lubuntu_manual_p389_t01.csv",
+    "jsonl": "/home/jesse/openloom-build/evidence/lubuntu-manual/tables/lubuntu_manual_p389_t01.jsonl",
+    "csv_sha256": "1bd9a5435e678e50ebe8aefb388b2dc7b48df945fd7a553b63f02f5338b8e019",
+    "jsonl_sha256": "6aede77f3b6df499d18b3e085c88b61dc5f6cc44159f1f37867b20b127accb8f"
+  },
+  {
+    "table_id": "lubuntu_manual_p389_t02",
+    "pdf_page": 389,
+    "rows": 2,
+    "columns": 2,
+    "csv": "/home/jesse/openloom-build/evidence/lubuntu-manual/tables/lubuntu_manual_p389_t02.csv",
+    "jsonl": "/home/jesse/openloom-build/evidence/lubuntu-manual/tables/lubuntu_manual_p389_t02.jsonl",
+    "csv_sha256": "400f7738e0956c9c585c6cbbdcde4105d2d0b921a0ca655bc1668d99239841ce",
+    "jsonl_sha256": "69c466c410f683c1fd1e886d6891040df808b9df43b845795b449c83acebd8e5"
+  },
+  {
+    "table_id": "lubuntu_manual_p389_t03",
+    "pdf_page": 389,
+    "rows": 6,
+    "columns": 2,
+    "csv": "/home/jesse/openloom-build/evidence/lubuntu-manual/tables/lubuntu_manual_p389_t03.csv",
+    "jsonl": "/home/jesse/openloom-build/evidence/lubuntu-manual/tables/lubuntu_manual_p389_t03.jsonl",
+    "csv_sha256": "e7200083a927bdfe5b70988926a200c3501622f87eba97413f9486d07dcba6c0",
+    "jsonl_sha256": "50713b424ec1ccce46c90f5ecc9b732f66101c4fe78b017e6773a9e1c47f5640"
+  },
+  {
+    "table_id": "lubuntu_manual_p389_t05",
+    "pdf_page": 389,
+    "rows": 1,
+    "columns": 2,
+    "csv": "/home/jesse/openloom-build/evidence/lubuntu-manual/tables/lubuntu_manual_p389_t05.csv",
+    "jsonl": "/home/jesse/openloom-build/evidence/lubuntu-manual/tables/lubuntu_manual_p389_t05.jsonl",
+    "csv_sha256": "33b0fc6aece8d4521d0e7d776b378e5d4c2d2c55c593527f1f42344fda393472",
+    "jsonl_sha256": "a45c8d454b0d43afd3d515d05e91dc628dfdd52878411daca409c903404b3133"
+  },
+  {
+    "table_id": "lubuntu_manual_p389_t07",
+    "pdf_page": 389,
+    "rows": 1,
+    "columns": 2,
+    "csv": "/home/jesse/openloom-build/evidence/lubuntu-manual/tables/lubuntu_manual_p389_t07.csv",
+    "jsonl": "/home/jesse/openloom-build/evidence/lubuntu-manual/tables/lubuntu_manual_p389_t07.jsonl",
+    "csv_sha256": "b52c2574bd4f2ac14c6559f512d6e1963c0c01f91533799972c9a5f487d3ac43",
+    "jsonl_sha256": "c1aa331de122a20d1cb409deb0b5b01c3cddbfc54d6a443c6a592be155ed866f"
+  },
+  {
+    "table_id": "lubuntu_manual_p389_t09",
+    "pdf_page": 389,
+    "rows": 2,
+    "columns": 2,
+    "csv": "/home/jesse/openloom-build/evidence/lubuntu-manual/tables/lubuntu_manual_p389_t09.csv",
+    "jsonl": "/home/jesse/openloom-build/evidence/lubuntu-manual/tables/lubuntu_manual_p389_t09.jsonl",
+    "csv_sha256": "7e33f687d656ac308702cc8ad9b5c4935e98f572afa9f15e869b90a87691b4be",
+    "jsonl_sha256": "5c8d3cdb36a77202274d26edd58ab78c827f0e539e346adfef01d8a337f6d0a6"
+  },
+  {
+    "table_id": "lubuntu_manual_p390_t01",
+    "pdf_page": 390,
+    "rows": 2,
+    "columns": 2,
+    "csv": "/home/jesse/openloom-build/evidence/lubuntu-manual/tables/lubuntu_manual_p390_t01.csv",
+    "jsonl": "/home/jesse/openloom-build/evidence/lubuntu-manual/tables/lubuntu_manual_p390_t01.jsonl",
+    "csv_sha256": "5462a1c42420fbb45d32b78e889fab1fe7b4e5cf70d927758f783dcef9ffa92b",
+    "jsonl_sha256": "82273c9ad77eab7d945d764e0698942eb6986eef3e2f1b21f5ffc6849dfbb198"
+  },
+  {
+    "table_id": "lubuntu_manual_p391_t01",
+    "pdf_page": 391,
+    "rows": 2,
+    "columns": 1,
+    "csv": "/home/jesse/openloom-build/evidence/lubuntu-manual/tables/lubuntu_manual_p391_t01.csv",
+    "jsonl": "/home/jesse/openloom-build/evidence/lubuntu-manual/tables/lubuntu_manual_p391_t01.jsonl",
+    "csv_sha256": "f948271cbc92c3998ab38137e665aa498395d3102169f464c588cd121931a460",
+    "jsonl_sha256": "6e3ac0a4b281036a826ad5dbaf3e37fcf7495a6d0e84bd1c13e2d9743da09af0"
+  },
+  {
+    "table_id": "lubuntu_manual_p393_t01",
+    "pdf_page": 393,
+    "rows": 2,
+    "columns": 1,
+    "csv": "/home/jesse/openloom-build/evidence/lubuntu-manual/tables/lubuntu_manual_p393_t01.csv",
+    "jsonl": "/home/jesse/openloom-build/evidence/lubuntu-manual/tables/lubuntu_manual_p393_t01.jsonl",
+    "csv_sha256": "d8bae09c7e713e4dd844b6a478e11204a93c88801bf3b77bd32048dffdd8cbf4",
+    "jsonl_sha256": "5ddd2184f25ab175462590bfc2315b91d7cc2247cb876658fdc4a1a7d5708268"
+  }
+]
