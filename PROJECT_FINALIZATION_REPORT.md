@@ -1,6 +1,6 @@
 # OpenLoom Recent Project Finalization Audit
 
-Generated: 20261015T031203Z
+Generated: 20261015T052628Z
 
 Scope: files modified or created in the last 5 hours.
 
@@ -8,29 +8,47 @@ Scope: files modified or created in the last 5 hours.
 
 Current branch: `feature/openloom-mvp`
 
-HEAD: `489de37d`
+HEAD: `6b560d03`
 
 ### Untracked project paths
 
-AUDIT_OUTPUT.md
-bin/ai_stack_setup.sh
-bin/audit_recent_projects.sh
-bin/run_task.sh
-config/
-demo-pod/
-evidence/
-OPENLOOM_GLOBAL_BUILD_LOG.md
-openloom/ingest_pdf_tables.py
-PROJECT_FINALIZATION_REPORT.md
-REVIEW.md
-runs/
-TASK.md
-tasks/
-.venv/
+docs/tiny-model-training/
+evaluation/
+evidence/lubuntu-manual/lubuntu_manual_tables.sqlite3
+evidence/lubuntu-manual/lubuntu_manual_tables.sqlite3-shm
+evidence/lubuntu-manual/lubuntu_manual_tables.sqlite3-wal
+evidence/lubuntu-manual/raw/
+evidence/lubuntu-manual/tables/lubuntu_manual_p007_t01.csv
+evidence/lubuntu-manual/tables/lubuntu_manual_p007_t01.jsonl
+evidence/lubuntu-manual/tables/lubuntu_manual_p009_t01.csv
+evidence/lubuntu-manual/tables/lubuntu_manual_p009_t01.jsonl
+evidence/lubuntu-manual/tables/lubuntu_manual_p388_t01.csv
+evidence/lubuntu-manual/tables/lubuntu_manual_p388_t01.jsonl
+evidence/lubuntu-manual/tables/lubuntu_manual_p389_t01.csv
+evidence/lubuntu-manual/tables/lubuntu_manual_p389_t01.jsonl
+evidence/lubuntu-manual/tables/lubuntu_manual_p389_t02.csv
+evidence/lubuntu-manual/tables/lubuntu_manual_p389_t02.jsonl
+evidence/lubuntu-manual/tables/lubuntu_manual_p389_t03.csv
+evidence/lubuntu-manual/tables/lubuntu_manual_p389_t03.jsonl
+evidence/lubuntu-manual/tables/lubuntu_manual_p389_t05.csv
+evidence/lubuntu-manual/tables/lubuntu_manual_p389_t05.jsonl
+evidence/lubuntu-manual/tables/lubuntu_manual_p389_t07.csv
+evidence/lubuntu-manual/tables/lubuntu_manual_p389_t07.jsonl
+evidence/lubuntu-manual/tables/lubuntu_manual_p389_t09.csv
+evidence/lubuntu-manual/tables/lubuntu_manual_p389_t09.jsonl
+evidence/lubuntu-manual/tables/lubuntu_manual_p390_t01.csv
+evidence/lubuntu-manual/tables/lubuntu_manual_p390_t01.jsonl
+evidence/lubuntu-manual/tables/lubuntu_manual_p391_t01.csv
+evidence/lubuntu-manual/tables/lubuntu_manual_p391_t01.jsonl
+evidence/lubuntu-manual/tables/lubuntu_manual_p393_t01.csv
+evidence/lubuntu-manual/tables/lubuntu_manual_p393_t01.jsonl
+OPENLOOM_CLIENT_HANDBOOK.md
+pods/
 
 ### Modified tracked files
 
-None.
+.gitignore
+PROJECT_FINALIZATION_REPORT.md
 
 ## Files changed in the last 5 hours
 
@@ -62,6 +80,8 @@ None.
 ./bin/bot_loop_v1.py.backup_20260923
 ./bin/bot_receipt_kernel_v1.sh
 ./bin/branch_execute_v1.sh
+./bin/build_model_access_catalog.py
+./bin/build_training_knowledge_db.py
 ./bin/chunker_v1.py
 ./bin/constitution_gate_v1.py
 ./bin/corpus_system_goal_finder_v1.py
@@ -70,6 +90,9 @@ None.
 ./bin/emit_window_seed_v1.sh
 ./bin/env_hash_v1.py
 ./bin/estate_topology_survey_v1.py
+./bin/evaluate_tiny_model.py
+./bin/evaluate_tiny_model.py.backup-20261015T042334335041Z
+./bin/evaluate_tiny_model.py.backup-20261015T042420701060Z
 ./bin/file_ledger_parallel_v1.py
 ./bin/file_ledger_v2.py
 ./bin/gh_cache_v2.py
@@ -83,6 +106,7 @@ None.
 ./bin/inject_joules_badge_v1.py
 ./bin/joules_saved_counter_v1.py
 ./bin/launch_ladder_v1.py
+./bin/load_manual_tables_db.py
 ./bin/lumo_ingest.py
 ./bin/mistake_canary_ci_v2.sh
 ./bin/newton_chain_v1.py
@@ -99,6 +123,10 @@ None.
 ./bin/popw_ledger_v1.py
 ./bin/professionalize_repo_v2.py
 ./bin/push_guard.py
+./bin/__pycache__/build_model_access_catalog.cpython-312.pyc
+./bin/__pycache__/build_training_knowledge_db.cpython-312.pyc
+./bin/__pycache__/evaluate_tiny_model.cpython-312.pyc
+./bin/__pycache__/load_manual_tables_db.cpython-312.pyc
 ./bin/relay_loop_v1.py
 ./bin/resonance_multilang_v1.py
 ./bin/resonance_rank_v1.py
@@ -534,7 +562,18 @@ None.
 ./docs/OPENROOT_ULTIMATE_PLAN_DRAFT_V1.md
 ./docs/specs/POD_SCHEMA_V1.md
 ./docs/termux-relay.md
+./docs/tiny-model-training/BASE_MODEL_STRATEGY.md
+./docs/tiny-model-training/DATA_RULES.md
+./docs/tiny-model-training/EVIDENCE_ACCESS.md
+./docs/tiny-model-training/LORA_METHOD.md
 ./.env.local
+./evaluation/all-pods-20261015T042733Z.json
+./evaluation/mixed-db-20261015T042446Z.json
+./evaluation/qwen2.5-1.5b-db-smoke.json
+./evaluation/qwen2.5-1.5b-smoke.json
+./evidence/lubuntu-manual/lubuntu_manual_tables.sqlite3
+./evidence/lubuntu-manual/lubuntu_manual_tables.sqlite3-shm
+./evidence/lubuntu-manual/lubuntu_manual_tables.sqlite3-wal
 ./evidence/lubuntu-manual/receipts/lubuntu-manual-pdf.sha256
 ./evidence/lubuntu-manual/tables/lubuntu_manual_p007_t01.csv
 ./evidence/lubuntu-manual/tables/lubuntu_manual_p007_t01.jsonl
@@ -611,6 +650,7 @@ None.
 ./newton/chain/2026-10-09T05:53:40Z
 ./newton/tick.sh
 ./openloom/chunking.py
+./OPENLOOM_CLIENT_HANDBOOK.md
 ./openloom/cli.py
 ./OPENLOOM_GLOBAL_BUILD_LOG.md
 ./openloom/ingest_csv.py
@@ -629,7 +669,17 @@ None.
 ./openloom/retrieval/__pycache__/wikipedia.cpython-312.pyc
 ./openloom/retrieval/wikipedia.py
 ./openloom/schema.py
+./openloom/ui/app.py
+./openloom/ui/__init__.py
+./openloom/ui/__pycache__/app.cpython-312.pyc
+./openloom/ui/__pycache__/__init__.cpython-312.pyc
 ./openroot_deepdive_triad_v1.sh
+./pods/model-access/model_access_catalog.json
+./pods/openloom-builder/evaluation/golden_questions.jsonl
+./pods/openloom-builder/evaluation/refusal_tests.jsonl
+./pods/openloom-builder/training/repair_examples.jsonl
+./pods/tiny-model-training/receipts/training-docs.sha256
+./pods/tiny-model-training/tiny_model_training.sqlite3
 ./PROJECT_FINALIZATION_REPORT.md
 ./provenance.db-journal
 ./pyproject.toml
@@ -921,6 +971,14 @@ None.
 ./runs/20261015T022424Z/receipt.txt
 ./runs/20261015T022424Z/stderr.log
 ./runs/20261015T022424Z/task.md
+./runs/20261015T032359Z/output.md
+./runs/20261015T032359Z/receipt.txt
+./runs/20261015T032359Z/stderr.log
+./runs/20261015T032359Z/task.md
+./runs/20261015T034253Z/output.md
+./runs/20261015T034253Z/receipt.txt
+./runs/20261015T034253Z/stderr.log
+./runs/20261015T034253Z/task.md
 ./scripts/audit/audit_detail.py
 ./scripts/audit/github_hash_inventory.py
 ./scripts/audit/restore_staging.sh
@@ -932,6 +990,8 @@ None.
 ./scripts/termux_relay/relay_verify_v6.sh
 ./seed_master.log
 ./TASK.md
+./tasks/openroot-landing-and-app-v1.md
+./tasks/ui-interface-upgrade-v1.md
 ./tasks/wikipedia-ingest.md
 ./tests/test_markdown_ingest.py
 ./.tinycrew/.bootstrap.lock
@@ -988,6 +1048,10 @@ openloom/__pycache__/schema.cpython-312.pyc
 openloom/retrieval/__pycache__/wikipedia.cpython-312.pyc
 openloom/retrieval/wikipedia.py
 openloom/schema.py
+openloom/ui/app.py
+openloom/ui/__init__.py
+openloom/ui/__pycache__/app.cpython-312.pyc
+openloom/ui/__pycache__/__init__.cpython-312.pyc
 tests/test_markdown_ingest.py
 ```
 
@@ -1008,6 +1072,8 @@ bin/bot_loop_v1.py
 bin/bot_loop_v1.py.backup_20260923
 bin/bot_receipt_kernel_v1.sh
 bin/branch_execute_v1.sh
+bin/build_model_access_catalog.py
+bin/build_training_knowledge_db.py
 bin/chunker_v1.py
 bin/constitution_gate_v1.py
 bin/corpus_system_goal_finder_v1.py
@@ -1016,6 +1082,9 @@ bin/embed_backfill_v1.py
 bin/emit_window_seed_v1.sh
 bin/env_hash_v1.py
 bin/estate_topology_survey_v1.py
+bin/evaluate_tiny_model.py
+bin/evaluate_tiny_model.py.backup-20261015T042334335041Z
+bin/evaluate_tiny_model.py.backup-20261015T042420701060Z
 bin/file_ledger_parallel_v1.py
 bin/file_ledger_v2.py
 bin/gh_cache_v2.py
@@ -1029,6 +1098,7 @@ bin/harvest_lumo_seed_v2.sh
 bin/inject_joules_badge_v1.py
 bin/joules_saved_counter_v1.py
 bin/launch_ladder_v1.py
+bin/load_manual_tables_db.py
 bin/lumo_ingest.py
 bin/mistake_canary_ci_v2.sh
 bin/newton_chain_v1.py
@@ -1045,6 +1115,10 @@ bin/phi_router_harness_v4.py
 bin/popw_ledger_v1.py
 bin/professionalize_repo_v2.py
 bin/push_guard.py
+bin/__pycache__/build_model_access_catalog.cpython-312.pyc
+bin/__pycache__/build_training_knowledge_db.cpython-312.pyc
+bin/__pycache__/evaluate_tiny_model.cpython-312.pyc
+bin/__pycache__/load_manual_tables_db.cpython-312.pyc
 bin/relay_loop_v1.py
 bin/resonance_multilang_v1.py
 bin/resonance_rank_v1.py
@@ -1064,12 +1138,17 @@ bin/todo_tick_v1.sh
 bin/unified_ledger_query.py
 bin/untracked_triage_v1.py
 config/models.global.json
+tasks/openroot-landing-and-app-v1.md
+tasks/ui-interface-upgrade-v1.md
 tasks/wikipedia-ingest.md
 ```
 
 ### Evidence artifacts
 
 ```text
+evidence/lubuntu-manual/lubuntu_manual_tables.sqlite3
+evidence/lubuntu-manual/lubuntu_manual_tables.sqlite3-shm
+evidence/lubuntu-manual/lubuntu_manual_tables.sqlite3-wal
 evidence/lubuntu-manual/receipts/lubuntu-manual-pdf.sha256
 evidence/lubuntu-manual/tables/lubuntu_manual_p007_t01.csv
 evidence/lubuntu-manual/tables/lubuntu_manual_p007_t01.jsonl
@@ -1112,6 +1191,14 @@ runs/20261015T022424Z/output.md
 runs/20261015T022424Z/receipt.txt
 runs/20261015T022424Z/stderr.log
 runs/20261015T022424Z/task.md
+runs/20261015T032359Z/output.md
+runs/20261015T032359Z/receipt.txt
+runs/20261015T032359Z/stderr.log
+runs/20261015T032359Z/task.md
+runs/20261015T034253Z/output.md
+runs/20261015T034253Z/receipt.txt
+runs/20261015T034253Z/stderr.log
+runs/20261015T034253Z/task.md
 ```
 
 ## Verification evidence

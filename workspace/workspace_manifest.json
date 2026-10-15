@@ -1,0 +1,94 @@
+{
+  "schema": "openloom.coder-workspace.v1",
+  "created_at_utc": "2026-10-15T07:12:14.545110+00:00",
+  "workspace": "/home/jesse/openloom-build/workspace",
+  "policy": "Coder operates from this workspace with read access to all linked pods. Database writes require explicit user approval. No autonomous GitHub publication.",
+  "rag_database": "/home/jesse/openloom-build/grand-unification/unified_rag.sqlite3",
+  "model_access_catalog": "/home/jesse/openloom-build/pods/model-access/model_access_catalog.json",
+  "pods": [
+    {
+      "pod": "a15-mobile",
+      "link": "/home/jesse/openloom-build/workspace/pods/a15-mobile",
+      "target": "/home/jesse/pods/pod_a15-mobile",
+      "exists": true
+    },
+    {
+      "pod": "demo-pod",
+      "link": "/home/jesse/openloom-build/workspace/pods/demo-pod",
+      "target": "/home/jesse/openloom-build/demo-pod",
+      "exists": true
+    },
+    {
+      "pod": "github-audit",
+      "link": "/home/jesse/openloom-build/workspace/pods/github-audit",
+      "target": "/home/jesse/github-audit",
+      "exists": true
+    },
+    {
+      "pod": "github-docs",
+      "link": "/home/jesse/openloom-build/workspace/pods/github-docs",
+      "target": "/home/jesse/openloom-build/pods/github-docs",
+      "exists": true
+    },
+    {
+      "pod": "github-docs-legacy",
+      "link": "/home/jesse/openloom-build/workspace/pods/github-docs-legacy",
+      "target": "/home/jesse/pods/github-docs",
+      "exists": true
+    },
+    {
+      "pod": "github-history",
+      "link": "/home/jesse/openloom-build/workspace/pods/github-history",
+      "target": "/home/jesse/pods/pod_github-history",
+      "exists": true
+    },
+    {
+      "pod": "lubuntu-evidence",
+      "link": "/home/jesse/openloom-build/workspace/pods/lubuntu-evidence",
+      "target": "/home/jesse/openloom-build/evidence",
+      "exists": true
+    },
+    {
+      "pod": "model-access",
+      "link": "/home/jesse/openloom-build/workspace/pods/model-access",
+      "target": "/home/jesse/openloom-build/pods/model-access",
+      "exists": true
+    },
+    {
+      "pod": "openclaw-state",
+      "link": "/home/jesse/openloom-build/workspace/pods/openclaw-state",
+      "target": "/home/jesse/.openclaw/state",
+      "exists": true
+    },
+    {
+      "pod": "openroot-data",
+      "link": "/home/jesse/openloom-build/workspace/pods/openroot-data",
+      "target": "/home/jesse/openroot/data",
+      "exists": true
+    },
+    {
+      "pod": "openroot-ledger",
+      "link": "/home/jesse/openloom-build/workspace/pods/openroot-ledger",
+      "target": "/home/jesse/openloom-build/ledger",
+      "exists": true
+    },
+    {
+      "pod": "openroot-recovery",
+      "link": "/home/jesse/openloom-build/workspace/pods/openroot-recovery",
+      "target": "/home/jesse/recovery-evidence",
+      "exists": true
+    },
+    {
+      "pod": "self-corpus",
+      "link": "/home/jesse/openloom-build/workspace/pods/self-corpus",
+      "target": "/home/jesse/pods/pod_self-corpus",
+      "exists": true
+    },
+    {
+      "pod": "tiny-model-training",
+      "link": "/home/jesse/openloom-build/workspace/pods/tiny-model-training",
+      "target": "/home/jesse/openloom-build/pods/tiny-model-training",
+      "exists": true
+    }
+  ]
+}
