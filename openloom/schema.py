@@ -1,3 +1,4 @@
+from pathlib import Path
 import sqlite3
 
 SCHEMA = """
@@ -96,6 +97,7 @@ END;
 """
 
 def init_pod(path):
+    Path(path).parent.mkdir(parents=True, exist_ok=True)
     connection = sqlite3.connect(path)
     connection.execute("PRAGMA foreign_keys = ON")
     connection.executescript(SCHEMA)

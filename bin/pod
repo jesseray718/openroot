@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# pod check|verify|load|last|status|ledger|push "msg"|task FILE|"free text task"
+set -uo pipefail
+ROOT="$(dirname "$(readlink -f "$0")")/.."
+cd "$ROOT"
+[ -f .venv/bin/activate ] && source .venv/bin/activate
+R="$ROOT/bin/route"
+DB=evidence/lubuntu-manual/lubuntu_manual_tables.sqlite3
+MAN=evidence/lubuntu-manual/tables/tables_manifest.json
+
+cmd="${1:-help}"
+case "$cmd" in
+  check)
+    $R python3 -m py_compile $(find openloom -name '*.py') && echo COMPILE_OK
+    $R python3 -m pytest -q tests/
+    $R python3 -m openloom.cli verify --pod demo-pod
+    if git grep -nE "/ho""me/jesse" -- openloom README.md tests; then echo ABS_PATHS_FOUND; else echo NO_ABS_PATHS; fi ;;
+  verify) $R python3 -m openloom.cli verify --pod demo-pod ;;
+  load)   rm -f "$DB"; $R python3 bin/load_manual_tables_db.py --manifest "$MAN" --db "$DB" ;;
+  last)   f="$(ls -dt runs/*/output.md 2>/dev/null | head -1)"; echo "== $f"; cat "$f" ;;
+  status) git status --short | grep -v -e '^?? .venv/' -e '^?? runs/' || true ;;
+  ledger) tail -20 runs/command_ledger.jsonl ;;
+  push)   shift; $R bin/pod-push "$@" ;;
+  task)   shift; $R ./bin/run_task.sh "$1" ;;
+  help|-h|--help) echo 'pod: check verify load last status ledger push "msg" task FILE "free text"' ;;
+  *)
+    f="tasks/adhoc-$(date -u +%Y%m%dT%H%M%SZ).md"
+    printf '# Task\n\n%s\n\nDo not commit, push, or open a PR.\n' "$*" > "$f"
+    $R ./bin/run_task.sh "$f" ;;
+esac
