@@ -1,0 +1,115 @@
+{
+  "schema": "openloom.model-access-catalog.v2",
+  "policy": "Read-only retrieval across registered OpenLoom pods. No database writes, deletion, schema changes, live SQLite/WAL/SHM sync, or autonomous GitHub publication.",
+  "databases": [
+    {
+      "pod": "data",
+      "database": "/home/jesse/openloom-build/data/problem_solution_cache.sqlite",
+      "fts_tables": [],
+      "tables": [
+        "kv"
+      ]
+    },
+    {
+      "pod": "data",
+      "database": "/home/jesse/openloom-build/data/router_corpus.sqlite",
+      "fts_tables": [
+        "corpus"
+      ],
+      "tables": [
+        "corpus",
+        "corpus_data",
+        "corpus_idx",
+        "corpus_content",
+        "corpus_docsize",
+        "corpus_config"
+      ]
+    },
+    {
+      "pod": "data",
+      "database": "/home/jesse/openloom-build/data/routing_ledger.sqlite",
+      "fts_tables": [],
+      "tables": [
+        "decisions"
+      ]
+    },
+    {
+      "pod": "demo-pod",
+      "database": "/home/jesse/openloom-build/demo-pod/pod.db",
+      "fts_tables": [
+        "chunks_fts"
+      ],
+      "tables": [
+        "sources",
+        "records",
+        "chunks",
+        "chunks_fts",
+        "chunks_fts_data",
+        "chunks_fts_idx",
+        "chunks_fts_docsize",
+        "chunks_fts_config",
+        "embeddings",
+        "queries",
+        "corrections",
+        "pathways"
+      ]
+    },
+    {
+      "pod": "evidence",
+      "database": "/home/jesse/openloom-build/evidence/lubuntu-manual/lubuntu_manual_tables.sqlite3",
+      "fts_tables": [
+        "manual_tables_fts"
+      ],
+      "tables": [
+        "manual_sources",
+        "manual_tables",
+        "manual_table_rows",
+        "manual_tables_fts",
+        "manual_tables_fts_data",
+        "manual_tables_fts_idx",
+        "manual_tables_fts_content",
+        "manual_tables_fts_docsize",
+        "manual_tables_fts_config"
+      ]
+    },
+    {
+      "pod": "ledger",
+      "database": "/home/jesse/openloom-build/ledger/agape/index.sqlite",
+      "fts_tables": [],
+      "tables": [
+        "records",
+        "measurements"
+      ]
+    },
+    {
+      "pod": "pods",
+      "database": "/home/jesse/openloom-build/pods/github-docs/github_docs.sqlite3",
+      "fts_tables": [
+        "knowledge_fts"
+      ],
+      "tables": [
+        "knowledge_fts",
+        "knowledge_fts_data",
+        "knowledge_fts_idx",
+        "knowledge_fts_content",
+        "knowledge_fts_docsize",
+        "knowledge_fts_config"
+      ]
+    },
+    {
+      "pod": "pods",
+      "database": "/home/jesse/openloom-build/pods/tiny-model-training/tiny_model_training.sqlite3",
+      "fts_tables": [
+        "documents_fts"
+      ],
+      "tables": [
+        "documents",
+        "documents_fts",
+        "documents_fts_data",
+        "documents_fts_idx",
+        "documents_fts_docsize",
+        "documents_fts_config"
+      ]
+    }
+  ]
+}

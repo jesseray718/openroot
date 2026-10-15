@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openloom"
+version = "0.1.0"
+description = "Local-first, provenance-bearing knowledge pods"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+
+[project.scripts]
+openloom = "openloom.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["openloom*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+norecursedirs = ["workspace", "pods", ".venv", "runs", "demo-pod", "evidence", "attic", "archive"]
