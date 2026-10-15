@@ -5,7 +5,7 @@ source .venv/bin/activate
 msg="${*:-update}"
 br="pod/$(date -u +%Y%m%d-%H%M)"
 
-python3 -m py_compile $(find openloom -name '*.py') || { echo "COMPILE FAIL"; exit 1; }
+python3 -m py_compile $(find openloom -name '*.py') bin/ab_test_github_docs_v1.py || { echo "COMPILE FAIL"; exit 1; }
 python3 -m pytest -q || { echo "TESTS FAIL - not pushing"; exit 1; }
 python3 -m openloom.cli verify --pod demo-pod | grep -q '"passed": true' || { echo "VERIFY FAIL"; exit 1; }
 if git diff --cached -U0 -- . ':!bin/pod' ':!bin/pod-push' | grep -E '^\+[^+]' | grep -E '/ho''me/|/data/data/com\.termux'; then echo "ABS PATHS IN STAGED CHANGES - not pushing"; exit 1; fi
