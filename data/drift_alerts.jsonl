@@ -1065,3 +1065,4 @@
 {"type": "intent_unclear", "ratio": 0.88, "msg": "over half of commands are 'other' \u2014 buckets need refinement", "timestamp": "2026-10-16T10:15:01.098899+00:00"}
 {"type": "intent_unclear", "ratio": 0.88, "msg": "over half of commands are 'other' \u2014 buckets need refinement", "timestamp": "2026-10-16T10:30:01.286139+00:00"}
 {"type": "intent_unclear", "ratio": 0.88, "msg": "over half of commands are 'other' \u2014 buckets need refinement", "timestamp": "2026-10-16T10:45:01.469704+00:00"}
+{"type": "intent_unclear", "ratio": 0.88, "msg": "over half of commands are 'other' \u2014 buckets need refinement", "timestamp": "2026-10-16T11:00:01.656445+00:00"}
