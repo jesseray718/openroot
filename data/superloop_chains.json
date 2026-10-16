@@ -1,57 +1,54 @@
 {
-  "generated": "2026-10-05T03:15:01.360486+00:00",
+  "generated": "2026-10-16T09:30:01.542262+00:00",
   "bucket_counts": {
-    "other": 200,
-    "author": 20,
-    "net": 3,
-    "model": 6,
-    "system": 1,
-    "files": 11,
-    "exec": 6,
-    "bridge": 1,
-    "gitops": 1,
+    "other": 221,
+    "author": 15,
+    "system": 6,
+    "files": 3,
+    "exec": 3,
+    "model": 1,
     "gate": 1
   },
   "transition_weights": [
     {
       "rule": "other->other",
-      "count": 166
+      "count": 205
     },
     {
       "rule": "other->author",
-      "count": 18
+      "count": 9
     },
     {
       "rule": "author->other",
-      "count": 13
+      "count": 8
     },
     {
-      "rule": "other->files",
-      "count": 7
-    },
-    {
-      "rule": "files->other",
-      "count": 6
-    },
-    {
-      "rule": "model->other",
-      "count": 5
-    },
-    {
-      "rule": "author->exec",
-      "count": 5
-    },
-    {
-      "rule": "other->model",
+      "rule": "author->author",
       "count": 4
     },
     {
-      "rule": "exec->other",
+      "rule": "other->system",
+      "count": 4
+    },
+    {
+      "rule": "system->other",
+      "count": 4
+    },
+    {
+      "rule": "other->files",
       "count": 3
     },
     {
-      "rule": "files->files",
+      "rule": "files->other",
       "count": 3
+    },
+    {
+      "rule": "author->exec",
+      "count": 3
+    },
+    {
+      "rule": "exec->author",
+      "count": 2
     }
   ],
   "routing_weights": {
