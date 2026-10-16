@@ -39,3 +39,5 @@ reports/zero_dimension_theory_discovery_*/direct_concepts.txt
 reports/zero_dimension_theory_discovery_*/keyword_hits.txt
 restore_bin_*/
 venv/
+pods/
+data/joules_saved.jsonl
