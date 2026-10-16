@@ -1,0 +1,5 @@
+{"ts": "2026-10-16T11:05:20.737862+00:00", "stage": "task1.verify", "status": "ok", "head": "8a6d996f", "remote": "8a6d996f", "ahead": "0", "dirty_count": 1, "note": "DIRTY or UNPUSHED", "sha256": "ad45d82b0ed16e51be9d494a6c68fbc730a45d87bd1372c545d3a2bbdc5e425b"}
+{"ts": "2026-10-16T11:05:20.737862+00:00", "stage": "task2.promote", "status": "hold", "note": "kept in monorepo", "sha256": "242b25ab0e24ba8de9ff4095859928b12381e27cdf5776abb306849eee59e24a"}
+{"ts": "2026-10-16T11:05:20.737862+00:00", "stage": "task3.issue", "status": "ok", "rc": 0, "url": "https://github.com/jesseray718/openroot/issues/127", "note": "issue created", "sha256": "3caca5af8bcef1564979c5dfdb7f9b90b39bcd5e111452c6d17bc38c15c4b126"}
+{"ts": "2026-10-16T11:05:20.737862+00:00", "stage": "task4.reh1t", "status": "ok", "state": "CLOSED", "note": "#53 CLOSED, 4 comments", "sha256": "cd6a5fda536f9f7218c3d328d4fc2e20912da079b52334ef54204c77114b8148"}
+{"ts": "2026-10-16T11:05:20.737862+00:00", "stage": "task5.binsweep", "status": "ok", "tracked": "82", "on_disk": "79", "gap": -3, "note": "bin/ fully tracked", "sha256": "dcc73f4d3c2200dfd4ad4033d99445878516a42b97f99bc28352ce986c98c0d0"}
