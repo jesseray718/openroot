@@ -1,0 +1,39 @@
+L01. Keep distributed source and publication checksums synchronized.
+Evidence: The earlier attachment differed from the publisher's expected revised checksum.
+Rule: Verify exact source bytes before staging.
+
+L02. Upgrade only recognized versions and preserve the original.
+Evidence: The upgrade produced the expected revised checksum and saved the original.
+Rule: Validate both input and output digests before replacement.
+
+L03. Repeated upgrades should not rewrite a current file.
+Evidence: The second upgrade returned STATUS=already_current.
+Rule: Exit without modification when the expected version is present.
+
+L04. Distinguish local preparation from remote publication.
+Evidence: The upgrade made no GitHub writes; the publisher subsequently verified commit f37455ac95027b1f300187b763169b869a8e46ee.
+Rule: Report upgrade, commit, push, and remote verification separately.
+
+L05. Publish an explicit allowlist from an isolated checkout.
+Evidence: The broad workspace contained untracked dependencies, nested repositories, and potentially sensitive paths.
+Rule: Do not bulk-stage the broad workspace or treat every local file as publishable.
+
+L06. Separate publication verification from CI verification.
+Evidence: The agent publisher verified remote source identity but explicitly did not check CI.
+Rule: Never describe a verified push as a passing CI run.
+
+L07. Preserve evidence when transforming lessons into a table.
+Evidence: The companion converter produces separate ID, lesson, evidence, and rule columns.
+Rule: Use a deterministic transformation and reject malformed records.
+
+L08. Scope workspace checks and bound their output.
+Evidence: The broad workspace listing obscured the clean agent checkout and missing lesson files.
+Rule: Require an explicit repository path and summarize status without enumerating every dependency file.
+
+L09. Encryption and hashing have different responsibilities.
+Evidence: Payload encryption was proposed, but no encryption implementation was supplied or tested in this session.
+Rule: Record encryption as planned; never claim SHA-256 decryption or implemented payload protection.
+
+L10. Preserve the boundary between this closeout and the historical backlog.
+Evidence: The checkpoint found historical untracked files outside the isolated publication checkout.
+Rule: This closeout publishes only its four named files; historical material requires a separate review.
