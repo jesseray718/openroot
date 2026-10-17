@@ -49,7 +49,10 @@ A hash proves what source bytes existed. Retrieval identifies relevant evidence.
 - Query harness v1.1: hybrid retrieval and cited local-model answers are live.
 - Correction ledger: active for human-labeled evaluation.
 - Known limitation: retrieval recall is still experimental; a hierarchy-oriented GitHub Actions query missed its best evidence and was labeled `partial`.
-- Next milestone: OpenRoot self-corpus dogfood pod, retrieval metadata, evidence-sufficiency gating, and correction-driven evaluation.
+- Unified evidence milestone: the canonical database contains 768,257 source rows, passes SQLite `integrity_check`, and has a populated FTS index.
+- Local RAG milestone: five approved OpenRoot documents produced 14 chunks and 14 Nomic embeddings at 768 dimensions. A core-objectives test query ranked the goals chunk first (cosine similarity 0.7222).
+- Vector inventory milestone: a read-only utility inventories likely embedding databases, checks schema and provenance mappings, and recommends compatibility without merging or modifying any database.
+- Next milestone: run and review the inventory on the OpenRoot node. Decide on any future merge only after verifying vector identity, chunk text, and source provenance; then continue evidence-sufficiency and correction-driven retrieval evaluation.
 
 ## Repository structure
 
