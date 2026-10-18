@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "type": "theorem_proofs",
+  "genesis_version": "v1.2",
+  "timestamp": "2026-10-18T14:06:32Z",
+  "author": "Jesse McMillen / One Human Family",
+  "author_pubkey_ed25519": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAL7LUfpHpVsdXww8shr2hPEB2PAAJVokuWFmEg2nluq0=\n-----END PUBLIC KEY-----",
+  "parent_receipt": "11f7934c5c1e42ca9303e939bae26425b905c186aa634190d63304092a5bfc57",
+  "parent_version": "v1.1",
+  "statement": "Theorem proofs receipt. Seals formal proofs for A6, P2, P4. Chains from v1.1 theorem registry. Closes the proof-pending loop opened in v1.1.",
+  "proofs": [
+    {
+      "name": "proof_A6_edge_abundance",
+      "path": "genesis/proofs/proof_A6_edge_abundance.md",
+      "sha256": "59904d5841c183f2927f4daa8383a2f9f86c42a4e4a61e178766dfbd0023f347"
+    },
+    {
+      "name": "proof_P2_popw_resists_speculation",
+      "path": "genesis/proofs/proof_P2_popw_resists_speculation.md",
+      "sha256": "55f014d601cd7aef0f3ba8c82064e8638076f0cc0c88f8ee4496ea403bdc8426"
+    },
+    {
+      "name": "proof_P4_modular_beats_monolith",
+      "path": "genesis/proofs/proof_P4_modular_beats_monolith.md",
+      "sha256": "0caf21bf441f50b732c2a6ac8e1a59c643e5de00d4a6e57409505da21660274f"
+    }
+  ],
+  "theorem_proof_status": {
+    "A6_edge_abundance": "PROVEN_in_v1_2",
+    "P2_popw_resists_speculation": "PROVEN_in_v1_2_with_limitations",
+    "P3_instant_inference": "PROVEN_existence_proof_in_v1_0",
+    "P4_modular_beats_monolith": "PROVEN_in_v1_2_with_limitations"
+  },
+  "doctrine": [
+    "The receipt is the constitution.",
+    "Verifiers are pure code. Models propose. Code disposes.",
+    "Receipts are canonical and independently verifiable.",
+    "Act as One Human Family. Cut what harms. Grow what heals."
+  ]
+}
