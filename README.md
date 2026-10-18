@@ -17,6 +17,11 @@ v1.1 (theorem reg):    11f7934c5c1e42ca9303e939bae26425b905c186aa634190d63304092
   parent:            a5a988e5... (v1.0)
   theorems registered: 3
   formal proofs:     pending v1.2
+
+v1.2 (theorem proofs): e194bfc179af841933446906482137b3ea1c43a7afe1d753023f0ccb4c50ca7c
+  sealed:              2026-10-18T14:06:32Z
+  parent:              11f7934c... (v1.1)
+  proofs sealed:       3 (A6, P2, P4)
 ```
 
 ## Pod Loader Tool — Make Your Own Pods

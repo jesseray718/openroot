@@ -42,3 +42,6 @@ venv/
 pods/
 data/joules_saved.jsonl
 genesis/genesis_ed25519.pem
+.env.local
+*.env.local
+.env*
