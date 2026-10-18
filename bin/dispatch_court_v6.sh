@@ -15,7 +15,7 @@ PROSECUTOR="${PROSECUTOR_MODEL:-qwen2.5:3b}"
 MAX="${MAX:-50}"
 STAMP="$(date +%Y%m%d_%H%M%S)"
 REPORT="context_bridge/court-v6-report-${STAMP}.md"
-LOG="logs/court_v6_${STAMP}.log"
+LOG=logs/court_v6_${STAMP}.log; touch "$LOG"
 mkdir -p logs context_bridge data
 echo "$CANARY boot — defense=$DEFENDER vs prosecution=$PROSECUTOR"
 
