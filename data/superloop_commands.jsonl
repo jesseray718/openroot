@@ -19824,3 +19824,159 @@
 {"sha": "7803175735d99dcc", "cmd": "setsid nohup python3 -u /home/jesse/openroot/bin/universal_index_overhaul_v1.py > /home/jesse/openroot/logs/universal_index_overhaul_v6_$(date -u +%Y%m%dT%H%M%SZ).log 2>&1 < /dev/null &", "bucket": "system", "ts": "2026-10-16T09:00:02.335597+00:00"}
 {"sha": "27297ca814b7bfeb", "cmd": "bash -n ~/rebuild_fts_and_test_v1.sh && grep -c STAGE ~/rebuild_fts_and_test_v1.sh && ~/rebuild_fts_and_test_v1.sh", "bucket": "exec", "ts": "2026-10-16T09:00:02.335699+00:00"}
 {"sha": "f748f6c67c87b247", "cmd": "while pgrep -f universal_index_overhaul >/dev/null; do sleep 60; done; echo \"=== WALKER EXITED ===\"; tail -3 /home/jesse/openroot/logs/universal_index_overhaul_v6_*.log; grep -q \"run complete\" /home/jesse/openroot/logs/universal_index_overhaul_v6_*.log && ~/closeout_universal_v1.sh || echo \"[held] died without SEAL \u2014 relaunch needed\"", "bucket": "gate", "ts": "2026-10-16T09:00:02.335934+00:00"}
+{"sha": "7985c35e8572a890", "cmd": "observed_ns, ingested_ns,", "bucket": "other", "ts": "2026-10-17T23:15:02.155593+00:00"}
+{"sha": "00314db662cf66c4", "cmd": "source_byte_start, source_byte_end", "bucket": "other", "ts": "2026-10-17T23:15:02.155636+00:00"}
+{"sha": "f9b8814d885a3b73", "cmd": "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", "bucket": "other", "ts": "2026-10-17T23:15:02.155664+00:00"}
+{"sha": "f5ffb4b833507e24", "cmd": "ON CONFLICT (", "bucket": "other", "ts": "2026-10-17T23:15:02.155687+00:00"}
+{"sha": "2f5bcd40105ae76a", "cmd": "source_id, source_snapshot_sha256, row_key, column_key", "bucket": "other", "ts": "2026-10-17T23:15:02.155709+00:00"}
+{"sha": "58c048752093a197", "cmd": ") DO NOTHING", "bucket": "other", "ts": "2026-10-17T23:15:02.155723+00:00"}
+{"sha": "95bcb7524c7dda93", "cmd": "\"\"\", (", "bucket": "other", "ts": "2026-10-17T23:15:02.155735+00:00"}
+{"sha": "0a5005548e3899e8", "cmd": "source_id, snapshot_sha,", "bucket": "other", "ts": "2026-10-17T23:15:02.155749+00:00"}
+{"sha": "a0a31d8828984c8f", "cmd": "row_key, column_key, logical_sha,", "bucket": "other", "ts": "2026-10-17T23:15:02.155765+00:00"}
+{"sha": "cd3a580ebad2205b", "cmd": "cell_sha, metadata_bytes, metadata_sha,", "bucket": "other", "ts": "2026-10-17T23:15:02.155781+00:00"}
+{"sha": "081c9145deb01a4d", "cmd": "version_sha,", "bucket": "other", "ts": "2026-10-17T23:15:02.155794+00:00"}
+{"sha": "f5c8e0bb999f64e1", "cmd": "source_event_ns, source_mtime_ns,", "bucket": "other", "ts": "2026-10-17T23:15:02.155808+00:00"}
+{"sha": "15e0c012a6e2b473", "cmd": "now_ns, now_ns,", "bucket": "other", "ts": "2026-10-17T23:15:02.155822+00:00"}
+{"sha": "aef848919581cac3", "cmd": "0, len(raw),", "bucket": "other", "ts": "2026-10-17T23:15:02.155834+00:00"}
+{"sha": "13713c3692359d7c", "cmd": "))", "bucket": "other", "ts": "2026-10-17T23:15:02.155845+00:00"}
+{"sha": "2a8b468f8ae32995", "cmd": "occurrence_inserted = cursor.rowcount == 1", "bucket": "other", "ts": "2026-10-17T23:15:02.155862+00:00"}
+{"sha": "0538140ba755e373", "cmd": "occurrence = con.execute(\"\"\"", "bucket": "other", "ts": "2026-10-17T23:15:02.155876+00:00"}
+{"sha": "3e957ea3feca405d", "cmd": "SELECT occurrence_id, logical_cell_sha256,", "bucket": "other", "ts": "2026-10-17T23:15:02.155893+00:00"}
+{"sha": "2b76246ee9921ec5", "cmd": "cell_sha256, metadata_bytes, metadata_sha256,", "bucket": "other", "ts": "2026-10-17T23:15:02.155909+00:00"}
+{"sha": "35ec600fa039ae10", "cmd": "cell_version_sha256, source_event_ns,", "bucket": "other", "ts": "2026-10-17T23:15:02.155925+00:00"}
+{"sha": "af2e72714c12bc5a", "cmd": "source_mtime_ns, source_byte_start, source_byte_end", "bucket": "other", "ts": "2026-10-17T23:15:02.155942+00:00"}
+{"sha": "30ba076420eb867d", "cmd": "FROM cell_occurrences", "bucket": "other", "ts": "2026-10-17T23:15:02.155955+00:00"}
+{"sha": "f9bf53b9c44fae88", "cmd": "WHERE source_id = ?", "bucket": "other", "ts": "2026-10-17T23:15:02.155969+00:00"}
+{"sha": "e508086dc170ec08", "cmd": "AND source_snapshot_sha256 = ?", "bucket": "other", "ts": "2026-10-17T23:15:02.155983+00:00"}
+{"sha": "750810ad78b54bf7", "cmd": "AND row_key = ?", "bucket": "other", "ts": "2026-10-17T23:15:02.155996+00:00"}
+{"sha": "a56b2f8e203d2a60", "cmd": "AND column_key = ?", "bucket": "other", "ts": "2026-10-17T23:15:02.156009+00:00"}
+{"sha": "79c4da91909e3834", "cmd": "source_id, snapshot_sha, row_key, column_key", "bucket": "other", "ts": "2026-10-17T23:15:02.156026+00:00"}
+{"sha": "72668fcb2ea664f3", "cmd": ")).fetchone()", "bucket": "other", "ts": "2026-10-17T23:15:02.156039+00:00"}
+{"sha": "4deb24ef8cd4fbaf", "cmd": "expected_occurrence = (", "bucket": "other", "ts": "2026-10-17T23:15:02.156053+00:00"}
+{"sha": "fc8e6c74409885b4", "cmd": "logical_sha, cell_sha, metadata_bytes, metadata_sha,", "bucket": "other", "ts": "2026-10-17T23:15:02.156071+00:00"}
+{"sha": "ee0acb54642b0122", "cmd": "version_sha, source_event_ns, source_mtime_ns,", "bucket": "other", "ts": "2026-10-17T23:15:02.156087+00:00"}
+{"sha": "a1fcbd6481f55d2f", "cmd": "if occurrence is None or occurrence[1:] != expected_occurrence:", "bucket": "other", "ts": "2026-10-17T23:15:02.156109+00:00"}
+{"sha": "7199abf2dc5017a0", "cmd": "raise RuntimeError(\"Existing occurrence conflicts with this input.\")", "bucket": "other", "ts": "2026-10-17T23:15:02.156129+00:00"}
+{"sha": "51c18e016abc3b83", "cmd": "# Recalculate the raw-byte hash from the stored payload.", "bucket": "other", "ts": "2026-10-17T23:15:02.156149+00:00"}
+{"sha": "4f9f3d3c31d1fa60", "cmd": "if sha(stored[3]) != stored[0]:", "bucket": "other", "ts": "2026-10-17T23:15:02.156165+00:00"}
+{"sha": "833ef835c9f64aaa", "cmd": "raise RuntimeError(\"Stored payload failed hash verification.\")", "bucket": "other", "ts": "2026-10-17T23:15:02.156184+00:00"}
+{"sha": "b904b98da7c05a81", "cmd": "con.execute(\"COMMIT\")", "bucket": "other", "ts": "2026-10-17T23:15:02.156198+00:00"}
+{"sha": "0343937df907eaa3", "cmd": "except BaseException:", "bucket": "other", "ts": "2026-10-17T23:15:02.156211+00:00"}
+{"sha": "fc1c200aaef8cfab", "cmd": "if con.in_transaction:", "bucket": "other", "ts": "2026-10-17T23:15:02.156224+00:00"}
+{"sha": "67f5e07c00d61cf2", "cmd": "con.execute(\"ROLLBACK\")", "bucket": "other", "ts": "2026-10-17T23:15:02.156238+00:00"}
+{"sha": "e49b5c7a9e738d48", "cmd": "raise", "bucket": "other", "ts": "2026-10-17T23:15:02.156249+00:00"}
+{"sha": "46ff7d92748a53ef", "cmd": "\"content\": \"inserted\" if content_inserted else \"already_present\",", "bucket": "other", "ts": "2026-10-17T23:15:02.156272+00:00"}
+{"sha": "26cde841bba88072", "cmd": "\"occurrence\": \"inserted\" if occurrence_inserted else \"already_present\",", "bucket": "other", "ts": "2026-10-17T23:15:02.156292+00:00"}
+{"sha": "0b60ecc6a46332cc", "cmd": "\"occurrence_id\": occurrence[0],", "bucket": "other", "ts": "2026-10-17T23:15:02.156307+00:00"}
+{"sha": "031eafc0c5357504", "cmd": "\"byte_length\": len(raw),", "bucket": "other", "ts": "2026-10-17T23:15:02.156321+00:00"}
+{"sha": "7017c5cda2bfad59", "cmd": "\"exact_value_repr\": repr(raw),", "bucket": "other", "ts": "2026-10-17T23:15:02.156336+00:00"}
+{"sha": "78d6652e3077dc82", "cmd": "\"value_sha256\": value_sha.hex(),", "bucket": "other", "ts": "2026-10-17T23:15:02.156351+00:00"}
+{"sha": "32995b96be7e5433", "cmd": "\"cell_sha256\": cell_sha.hex(),", "bucket": "other", "ts": "2026-10-17T23:15:02.156367+00:00"}
+{"sha": "be296cba93f34eac", "cmd": "\"logical_cell_sha256\": logical_sha.hex(),", "bucket": "other", "ts": "2026-10-17T23:15:02.156383+00:00"}
+{"sha": "9b7f931f67500461", "cmd": "\"metadata_sha256\": metadata_sha.hex(),", "bucket": "other", "ts": "2026-10-17T23:15:02.156399+00:00"}
+{"sha": "a3cb9e78a00852d6", "cmd": "\"cell_version_sha256\": version_sha.hex(),", "bucket": "other", "ts": "2026-10-17T23:15:02.156415+00:00"}
+{"sha": "1f310387c5ceaf91", "cmd": "\"stored_payload_verification\": \"PASS\",", "bucket": "other", "ts": "2026-10-17T23:15:02.156431+00:00"}
+{"sha": "8c25b2d39d917e05", "cmd": "\"fts_indexing\": \"not_performed\",", "bucket": "other", "ts": "2026-10-17T23:15:02.156446+00:00"}
+{"sha": "e06192ec6d370dae", "cmd": "\"merkle_checkpoint\": \"not_created\",", "bucket": "other", "ts": "2026-10-17T23:15:02.156461+00:00"}
+{"sha": "6b81fa3077bfe579", "cmd": "}, indent=2))", "bucket": "other", "ts": "2026-10-17T23:15:02.156473+00:00"}
+{"sha": "3256e61b78fa238a", "cmd": "OPENROOT_INSERT_CELL_END", "bucket": "other", "ts": "2026-10-17T23:15:02.156486+00:00"}
+{"sha": "6d83fcfa4130a545", "cmd": "CELL_DB='/absolute/path/to/your.sqlite3' python3 - <<'OPENROOT_INSERT_CELL_END'", "bucket": "other", "ts": "2026-10-17T23:15:02.156509+00:00"}
+{"sha": "de2abade832c8e35", "cmd": "import os", "bucket": "other", "ts": "2026-10-17T23:15:02.156523+00:00"}
+{"sha": "817f6e305a609b53", "cmd": "import platform", "bucket": "other", "ts": "2026-10-17T23:15:02.156536+00:00"}
+{"sha": "592dbaf6d40d22ff", "cmd": "def sha(data):", "bucket": "other", "ts": "2026-10-17T23:15:02.156551+00:00"}
+{"sha": "01e22ca51343055e", "cmd": "return hashlib.sha256(data).digest()", "bucket": "other", "ts": "2026-10-17T23:15:02.156567+00:00"}
+{"sha": "418a80ea5b2b5427", "cmd": "def enc(*parts):", "bucket": "other", "ts": "2026-10-17T23:15:02.156580+00:00"}
+{"sha": "8ffa01b4bb65a248", "cmd": "\"\"\"v1: typed fields, each prefixed by an 8-byte big-endian length.\"\"\"", "bucket": "other", "ts": "2026-10-17T23:15:02.156625+00:00"}
+{"sha": "08df176fd856c4da", "cmd": "output = bytearray()", "bucket": "other", "ts": "2026-10-17T23:15:02.156641+00:00"}
+{"sha": "14e3a4350e0c2e13", "cmd": "for value in parts:", "bucket": "other", "ts": "2026-10-17T23:15:02.156655+00:00"}
+{"sha": "98bb233dc292f9b7", "cmd": "field = b\"N\"", "bucket": "other", "ts": "2026-10-17T23:15:02.156669+00:00"}
+{"sha": "946463d870f22dc0", "cmd": "elif isinstance(value, bytes):", "bucket": "other", "ts": "2026-10-17T23:15:02.156689+00:00"}
+{"sha": "c277706e51d2add0", "cmd": "field = b\"B\" + value", "bucket": "other", "ts": "2026-10-17T23:15:02.156703+00:00"}
+{"sha": "bd804a73c0980f25", "cmd": "elif isinstance(value, str):", "bucket": "other", "ts": "2026-10-17T23:15:02.156718+00:00"}
+{"sha": "3f54520014fbe2c7", "cmd": "field = b\"T\" + value.encode(\"utf-8\")", "bucket": "other", "ts": "2026-10-17T23:15:02.156735+00:00"}
+{"sha": "6fde6f5912d1ec47", "cmd": "elif type(value) is int:", "bucket": "other", "ts": "2026-10-17T23:15:02.156749+00:00"}
+{"sha": "398f1c248eb89582", "cmd": "field = b\"I\" + str(value).encode(\"ascii\")", "bucket": "other", "ts": "2026-10-17T23:15:02.156766+00:00"}
+{"sha": "03e4eba9a0ab6536", "cmd": "raise TypeError(\"Unsupported encoding type\")", "bucket": "other", "ts": "2026-10-17T23:15:02.156784+00:00"}
+{"sha": "294747d55fe930f2", "cmd": "output.extend(len(field).to_bytes(8, \"big\"))", "bucket": "other", "ts": "2026-10-17T23:15:02.156801+00:00"}
+{"sha": "01c5f3d139ed8d8e", "cmd": "output.extend(field)", "bucket": "other", "ts": "2026-10-17T23:15:02.156814+00:00"}
+{"sha": "f5c3df1bb437eab2", "cmd": "return bytes(output)", "bucket": "other", "ts": "2026-10-17T23:15:02.156828+00:00"}
+{"sha": "85b9db5c9f4b508a", "cmd": "db = Path(os.environ[\"CELL_DB\"]).expanduser().resolve()", "bucket": "other", "ts": "2026-10-17T23:15:02.156846+00:00"}
+{"sha": "b4806c38adec0a0d", "cmd": "if not db.is_file():", "bucket": "other", "ts": "2026-10-17T23:15:02.156860+00:00"}
+{"sha": "6a19f45424fa22e9", "cmd": "raise SystemExit(\"HELD: existing database not found.\")", "bucket": "other", "ts": "2026-10-17T23:15:02.156878+00:00"}
+{"sha": "459f3be62957f4ad", "cmd": "raw = b\"Hello  world.\\n\"", "bucket": "other", "ts": "2026-10-17T23:15:02.156893+00:00"}
+{"sha": "a3ea3be859bdf2cf", "cmd": "raw.decode(\"utf-8\", errors=\"strict\")", "bucket": "other", "ts": "2026-10-17T23:15:02.156909+00:00"}
+{"sha": "007cd35faada40f8", "cmd": "source_id = \"example:cell-insert-v1:\" + platform.node()", "bucket": "other", "ts": "2026-10-17T23:15:02.156928+00:00"}
+{"sha": "3d4d9ce1fa546ed6", "cmd": "snapshot_sha = sha(raw)", "bucket": "other", "ts": "2026-10-17T23:15:02.156943+00:00"}
+{"sha": "fa4a98c9ff4d2784", "cmd": "row_key = b\"record-000001\"", "bucket": "other", "ts": "2026-10-17T23:15:02.156957+00:00"}
+{"sha": "319361bd4089c1e3", "cmd": "column_key = b\"stdout\"", "bucket": "other", "ts": "2026-10-17T23:15:02.156971+00:00"}
+{"sha": "69c557c2648bff59", "cmd": "value_type = \"text\"", "bucket": "other", "ts": "2026-10-17T23:15:02.156984+00:00"}
+{"sha": "dfe721d052612c45", "cmd": "encoding_version = \"utf8-exact-v1\"", "bucket": "other", "ts": "2026-10-17T23:15:02.156999+00:00"}
+{"sha": "d46ccc453f622dac", "cmd": "metadata = {", "bucket": "other", "ts": "2026-10-17T23:15:02.157012+00:00"}
+{"sha": "ed3922a1ea4b736a", "cmd": "\"host\": platform.node(),", "bucket": "other", "ts": "2026-10-17T23:15:02.157026+00:00"}
+{"sha": "3e294f81bb09029b", "cmd": "\"source_kind\": \"synthetic-example\",", "bucket": "other", "ts": "2026-10-17T23:15:02.157042+00:00"}
+{"sha": "44cfa2f915f7f77a", "cmd": "\"metadata_encoding\": \"sorted-json-utf8-v1\",", "bucket": "other", "ts": "2026-10-17T23:15:02.157058+00:00"}
+{"sha": "797dc697c6bbc56a", "cmd": "\"hash_encoding\": \"typed-length-prefixed-v1\",", "bucket": "other", "ts": "2026-10-17T23:15:02.157076+00:00"}
+{"sha": "de14aea0f2f9e635", "cmd": "metadata_bytes = json.dumps(", "bucket": "other", "ts": "2026-10-17T23:15:02.157091+00:00"}
+{"sha": "c8369a87a9071e4c", "cmd": "metadata,", "bucket": "other", "ts": "2026-10-17T23:15:02.157103+00:00"}
+{"sha": "f7371811c6874d26", "cmd": "sort_keys=True,", "bucket": "other", "ts": "2026-10-17T23:15:02.157116+00:00"}
+{"sha": "4d74ac102005d65f", "cmd": "separators=(\",\", \":\"),", "bucket": "other", "ts": "2026-10-17T23:15:02.157129+00:00"}
+{"sha": "bcea3b53e7d53112", "cmd": "allow_nan=False,", "bucket": "other", "ts": "2026-10-17T23:15:02.157143+00:00"}
+{"sha": "51a885391b45c4c2", "cmd": ").encode(\"utf-8\")", "bucket": "other", "ts": "2026-10-17T23:15:02.157156+00:00"}
+{"sha": "4e559b8ff4beb0c6", "cmd": "source_event_ns = None", "bucket": "other", "ts": "2026-10-17T23:15:02.157170+00:00"}
+{"sha": "bc8ac502eecf2884", "cmd": "source_mtime_ns = None", "bucket": "other", "ts": "2026-10-17T23:15:02.157183+00:00"}
+{"sha": "8c5eb1988bf6ab68", "cmd": "now_ns = time.time_ns()", "bucket": "other", "ts": "2026-10-17T23:15:02.157197+00:00"}
+{"sha": "bc348e8c741c77de", "cmd": "value_sha = sha(raw)", "bucket": "other", "ts": "2026-10-17T23:15:02.157211+00:00"}
+{"sha": "c935d0771d821493", "cmd": "cell_sha = sha(enc(", "bucket": "other", "ts": "2026-10-17T23:15:02.157224+00:00"}
+{"sha": "232f666769801621", "cmd": "\"openroot/cell-content/v1\",", "bucket": "other", "ts": "2026-10-17T23:15:02.157239+00:00"}
+{"sha": "510e39f0a25cef84", "cmd": "value_type,", "bucket": "other", "ts": "2026-10-17T23:15:02.157251+00:00"}
+{"sha": "705ad5ee28cce36a", "cmd": "encoding_version,", "bucket": "other", "ts": "2026-10-17T23:15:02.157264+00:00"}
+{"sha": "1158b6f76e71ba87", "cmd": "raw,", "bucket": "other", "ts": "2026-10-17T23:15:02.157274+00:00"}
+{"sha": "c6bc5b7e6dcd8c56", "cmd": "logical_sha = sha(enc(", "bucket": "other", "ts": "2026-10-17T23:15:02.157289+00:00"}
+{"sha": "26a30c8500d23220", "cmd": "\"openroot/cell-location/v1\",", "bucket": "other", "ts": "2026-10-17T23:15:02.157304+00:00"}
+{"sha": "81d1e2b7a01220ab", "cmd": "source_id,", "bucket": "other", "ts": "2026-10-17T23:15:02.157316+00:00"}
+{"sha": "e2668d373d4f0c0e", "cmd": "row_key,", "bucket": "other", "ts": "2026-10-17T23:15:02.157327+00:00"}
+{"sha": "0887db85ad7ae2b4", "cmd": "column_key,", "bucket": "other", "ts": "2026-10-17T23:15:02.157339+00:00"}
+{"sha": "cd87db8b7324dc3e", "cmd": "metadata_sha = sha(metadata_bytes)", "bucket": "other", "ts": "2026-10-17T23:15:02.157355+00:00"}
+{"sha": "61bbf38c29a3f6a2", "cmd": "version_sha = sha(enc(", "bucket": "other", "ts": "2026-10-17T23:15:02.157368+00:00"}
+{"sha": "f3a8937f9be2b6e6", "cmd": "\"openroot/cell-version/v1\",", "bucket": "other", "ts": "2026-10-17T23:15:02.157382+00:00"}
+{"sha": "e2e776df7d5ab057", "cmd": "logical_sha,", "bucket": "other", "ts": "2026-10-17T23:15:02.157395+00:00"}
+{"sha": "1d6f8b9016fca97e", "cmd": "cell_sha,", "bucket": "other", "ts": "2026-10-17T23:15:02.157407+00:00"}
+{"sha": "1c8f3fb99d597e27", "cmd": "metadata_sha,", "bucket": "other", "ts": "2026-10-17T23:15:02.157418+00:00"}
+{"sha": "d27643355beddde8", "cmd": "source_event_ns,", "bucket": "other", "ts": "2026-10-17T23:15:02.157431+00:00"}
+{"sha": "f64888bab018cda1", "cmd": "source_mtime_ns,", "bucket": "other", "ts": "2026-10-17T23:15:02.157443+00:00"}
+{"sha": "d2ceb95908410098", "cmd": "con = sqlite3.connect(", "bucket": "other", "ts": "2026-10-17T23:15:02.157458+00:00"}
+{"sha": "3a70ceb0761acb90", "cmd": "db.as_uri() + \"?mode=rw\",", "bucket": "other", "ts": "2026-10-17T23:15:02.157474+00:00"}
+{"sha": "4c2b12d819b01bdc", "cmd": "uri=True,", "bucket": "other", "ts": "2026-10-17T23:15:02.157485+00:00"}
+{"sha": "81af5998440a3b68", "cmd": "timeout=15,", "bucket": "other", "ts": "2026-10-17T23:15:02.157498+00:00"}
+{"sha": "85277ead93cc2a1a", "cmd": "isolation_level=None,", "bucket": "other", "ts": "2026-10-17T23:15:02.157511+00:00"}
+{"sha": "245799329ffca925", "cmd": "con.execute(\"PRAGMA foreign_keys=ON\")", "bucket": "other", "ts": "2026-10-17T23:15:02.157528+00:00"}
+{"sha": "5d5acd6b29615b8d", "cmd": "if con.execute(\"PRAGMA foreign_keys\").fetchone()[0] != 1:", "bucket": "other", "ts": "2026-10-17T23:15:02.157548+00:00"}
+{"sha": "a6797f2e0d840e37", "cmd": "raise RuntimeError(\"Foreign-key enforcement unavailable.\")", "bucket": "other", "ts": "2026-10-17T23:15:02.157579+00:00"}
+{"sha": "31b5ed5434329139", "cmd": "# Verify table names before attempting writes.", "bucket": "other", "ts": "2026-10-17T23:15:02.157598+00:00"}
+{"sha": "f0b52b622a799b5f", "cmd": "con.execute(\"SELECT cell_sha256 FROM cell_contents LIMIT 0\")", "bucket": "other", "ts": "2026-10-17T23:15:02.157618+00:00"}
+{"sha": "e3aa711d5c9f08b2", "cmd": "con.execute(\"SELECT occurrence_id FROM cell_occurrences LIMIT 0\")", "bucket": "other", "ts": "2026-10-17T23:15:02.157638+00:00"}
+{"sha": "6bf27eda679d5ab0", "cmd": "con.execute(\"BEGIN IMMEDIATE\")", "bucket": "other", "ts": "2026-10-17T23:15:02.157652+00:00"}
+{"sha": "05a095d23ce2e866", "cmd": "cursor = con.execute(\"\"\"", "bucket": "other", "ts": "2026-10-17T23:15:02.157667+00:00"}
+{"sha": "c66a8dc56ab7dc31", "cmd": "INSERT INTO cell_contents (", "bucket": "other", "ts": "2026-10-17T23:15:02.157687+00:00"}
+{"sha": "30a0a0e40ef2ebab", "cmd": "cell_sha256, value_sha256, value_type,", "bucket": "other", "ts": "2026-10-17T23:15:02.157704+00:00"}
+{"sha": "4a5b2aaab52a3afa", "cmd": "encoding_version, value_bytes, byte_length,", "bucket": "other", "ts": "2026-10-17T23:15:02.157720+00:00"}
+{"sha": "221279c6d139b651", "cmd": "first_ingested_ns", "bucket": "other", "ts": "2026-10-17T23:15:02.157732+00:00"}
+{"sha": "bf891f1653bbd3df", "cmd": "VALUES (?, ?, ?, ?, ?, ?, ?)", "bucket": "other", "ts": "2026-10-17T23:15:02.157748+00:00"}
+{"sha": "6e3c4b0b680171d3", "cmd": "ON CONFLICT(cell_sha256) DO NOTHING", "bucket": "other", "ts": "2026-10-17T23:15:02.157763+00:00"}
+{"sha": "5b301ef37463b175", "cmd": "cell_sha, value_sha, value_type,", "bucket": "other", "ts": "2026-10-17T23:15:02.157779+00:00"}
+{"sha": "5b2d9db873b34527", "cmd": "encoding_version, raw, len(raw), now_ns,", "bucket": "other", "ts": "2026-10-17T23:15:02.157795+00:00"}
+{"sha": "5cc1fea2add54f65", "cmd": "content_inserted = cursor.rowcount == 1", "bucket": "other", "ts": "2026-10-17T23:15:02.157813+00:00"}
+{"sha": "e14ec7f6b7d55619", "cmd": "stored = con.execute(\"\"\"", "bucket": "other", "ts": "2026-10-17T23:15:02.157827+00:00"}
+{"sha": "fcd4ed2f4799b5ae", "cmd": "SELECT value_sha256, value_type, encoding_version,", "bucket": "other", "ts": "2026-10-17T23:15:02.157844+00:00"}
+{"sha": "743f7f62d67a73ad", "cmd": "value_bytes, byte_length", "bucket": "other", "ts": "2026-10-17T23:15:02.157858+00:00"}
+{"sha": "5aa3926a19d309c7", "cmd": "FROM cell_contents", "bucket": "other", "ts": "2026-10-17T23:15:02.157871+00:00"}
+{"sha": "7c91df24ec0c5daa", "cmd": "WHERE cell_sha256 = ?", "bucket": "other", "ts": "2026-10-17T23:15:02.157884+00:00"}
+{"sha": "fb72dbde3ad821f1", "cmd": "\"\"\", (cell_sha,)).fetchone()", "bucket": "other", "ts": "2026-10-17T23:15:02.157899+00:00"}
+{"sha": "7609726ff98e34a5", "cmd": "expected = (", "bucket": "other", "ts": "2026-10-17T23:15:02.157911+00:00"}
+{"sha": "eabf1deaf4e6bf2f", "cmd": "value_sha, value_type, encoding_version, raw, len(raw)", "bucket": "other", "ts": "2026-10-17T23:15:02.157929+00:00"}
+{"sha": "7c75ba7bf50f94ed", "cmd": "if stored != expected:", "bucket": "other", "ts": "2026-10-17T23:15:02.157944+00:00"}
+{"sha": "17dd7b624d2bc0ea", "cmd": "raise RuntimeError(\"Existing content conflicts with computed hash.\")", "bucket": "other", "ts": "2026-10-17T23:15:02.157965+00:00"}
+{"sha": "f0be5f79ec1c8093", "cmd": "INSERT INTO cell_occurrences (", "bucket": "other", "ts": "2026-10-17T23:15:02.157980+00:00"}
+{"sha": "361776542268a864", "cmd": "source_id, source_snapshot_sha256,", "bucket": "other", "ts": "2026-10-17T23:15:02.157995+00:00"}
+{"sha": "56e6ea1a3d3c1a3f", "cmd": "row_key, column_key, logical_cell_sha256,", "bucket": "other", "ts": "2026-10-17T23:15:02.158012+00:00"}
+{"sha": "9f701983a10e38c3", "cmd": "cell_version_sha256,", "bucket": "other", "ts": "2026-10-17T23:15:02.158026+00:00"}
