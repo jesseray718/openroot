@@ -1,0 +1,36 @@
+[gate] GENESIS V1.1 SEAL — theorem registry receipt
+
+[banked] parent v1 receipt verified: a5a988e5879eb4f2...
+[banked] loaded 3 theorem entries from registry
+[banked] registry merkle root: d2bba4608f35596b50f62ec34a0fa254a2765d0c154daaafff3b46f882d4c387
+
+[gate] STAGE A — canonical receipt constructed
+  canonical bytes: 2392
+  receipt_id (sha256): 11f7934c5c1e42ca9303e939bae26425b905c186aa634190d63304092a5bfc57
+
+[gate] STAGE B — sign with Ed25519
+  signature length: 64 bytes
+  signature (hex): c252cf1f9be1b761a0282fcb51fc963ebe88bd5c86ee3eda4046ad4748dcc938dcc472150286bfaa46a7d3dd4be67f9e21e0b18e5512d82a5178b15c2c000f03
+
+[gate] STAGE C — verify with public key (SEPARATE code path)
+  [banked] Signature Verified Successfully
+
+[gate] STAGE D — write receipt + signature
+  receipt: /home/jesse/openroot/genesis/receipt_v1_1.json (2842 bytes)
+  sig:     /home/jesse/openroot/genesis/receipt_v1_1.sig (64 bytes)
+
+[gate] STAGE E — re-verify from disk
+  [banked] disk-loaded receipt verified OK
+  [banked] receipt_id matches: 11f7934c5c1e42ca9303e939bae26425b905c186aa634190d63304092a5bfc57
+
+======================================================================
+GENESIS V1.1 RECEIPT SEALED — theorem registry
+======================================================================
+  receipt_id:     11f7934c5c1e42ca9303e939bae26425b905c186aa634190d63304092a5bfc57
+  timestamp:      2026-10-18T11:49:28Z
+  parent_receipt: a5a988e5879eb4f2ce14aadc0c72ae29eded0987b0c3ca9fcf4eeb9cacf5a889
+  theorems:       3 registered
+  merkle_root:    d2bba4608f35596b50f62ec34a0fa254a2765d0c154daaafff3b46f882d4c387
+
+GENESIS_V1_1_ID=11f7934c5c1e42ca9303e939bae26425b905c186aa634190d63304092a5bfc57
+GENESIS_V1_1_TS=2026-10-18T11:49:28Z

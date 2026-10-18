@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "type": "theorem_registry",
+  "genesis_version": "v1.1",
+  "timestamp": "2026-10-18T11:49:28Z",
+  "author": "Jesse McMillen / One Human Family",
+  "author_pubkey_ed25519": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAL7LUfpHpVsdXww8shr2hPEB2PAAJVokuWFmEg2nluq0=\n-----END PUBLIC KEY-----",
+  "parent_receipt": "a5a988e5879eb4f2ce14aadc0c72ae29eded0987b0c3ca9fcf4eeb9cacf5a889",
+  "parent_version": "v1.0",
+  "statement": "Theorem registry receipt. Enumerates all proof-pending theorems across the v1.0 founding corpus. Formal proofs to be sealed in v1.2 receipt, chained from this.",
+  "theorem_registry": {
+    "registry_path": "genesis/theorem_registry.jsonl",
+    "registry_sha256": "c94bea83f710707380935202fd6e3b26ff6c72ddf2032b6f8e628069f2b18439",
+    "merkle_root": "d2bba4608f35596b50f62ec34a0fa254a2765d0c154daaafff3b46f882d4c387",
+    "entry_count": 3,
+    "entries": [
+      {
+        "id": "TH-10-001",
+        "doc": "10_axioms.md",
+        "line": 55,
+        "statement": "| A6 (Edge abundance) | Proof pending | v1.1 receipt |",
+        "statement_sha256": "74ab82aeb9ca2feb2a37a0ba0dab34dc4c9f79bdb27faeeec1a2e2e1377543ca",
+        "doc_sha256": "5cefec976aca8d0092255de533974961080e99890b6949833b73d2adfcdb8671",
+        "status": "proof-pending",
+        "proof_method": null,
+        "layer": "tier-B-human-attested"
+      },
+      {
+        "id": "TH-10-002",
+        "doc": "10_axioms.md",
+        "line": 56,
+        "statement": "| P2 (PoPW resists speculation) | Proof pending | v1.1 receipt |",
+        "statement_sha256": "8431b75c57d536f7b9c9e78018345c2ed43ce4b077580fe13d0b45caee06768a",
+        "doc_sha256": "5cefec976aca8d0092255de533974961080e99890b6949833b73d2adfcdb8671",
+        "status": "proof-pending",
+        "proof_method": null,
+        "layer": "tier-B-human-attested"
+      },
+      {
+        "id": "TH-10-003",
+        "doc": "10_axioms.md",
+        "line": 58,
+        "statement": "| P4 (Modular beats monolith) | Proof pending | v1.1 receipt |",
+        "statement_sha256": "b0a557286f62d5ef07be95c42eb6e756e0d54cf758b47302af5fe22624ea4025",
+        "doc_sha256": "5cefec976aca8d0092255de533974961080e99890b6949833b73d2adfcdb8671",
+        "status": "proof-pending",
+        "proof_method": null,
+        "layer": "tier-B-human-attested"
+      }
+    ]
+  },
+  "theorem_proof_status": {
+    "A6_edge_abundance": "registered_pending_v1_2",
+    "P2_popw_resists_speculation": "registered_pending_v1_2",
+    "P3_instant_inference": "proven_existence_proof",
+    "P4_modular_beats_monolith": "registered_pending_v1_2"
+  },
+  "doctrine": [
+    "The receipt is the constitution.",
+    "Verifiers are pure code. Models propose. Code disposes.",
+    "Receipts are canonical and independently verifiable.",
+    "Act as One Human Family. Cut what harms. Grow what heals."
+  ]
+}

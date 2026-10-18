@@ -4,18 +4,36 @@
 
 OpenRoot is a decentralized, open-source framework for civilizational regeneration based on permaculture principles, fractal mesh geometry, contribution economics, and direct work attestation. It replaces multiple layers of wealth extraction with community-owned systems that reward building, care, and productive work.
 
-## Genesis receipt (v1.0 — canonical)
+## Receipt chain
 
 ```
-receipt_id:  a5a988e5879eb4f2ce14aadc0c72ae29eded0987b0c3ca9fcf4eeb9cacf5a889
-timestamp:   2026-10-18T10:44:27Z
-documents:   14 founding docs
-supersedes:   receipt_v0 (partial, 4 docs)
-signed by:   Ed25519 (genesis/genesis_ed25519.pub)
-verify with: openssl pkeyutl -verify -pubin -inkey genesis/genesis_ed25519.pub -rawin -in <canonical> -sigfile genesis/receipt_v1.sig
+v1.0 (genesis):       a5a988e5879eb4f2ce14aadc0c72ae29eded0987b0c3ca9fcf4eeb9cacf5a889
+  sealed:              2026-10-18T09:21:54Z
+  documents:           14 founding docs
+  signed by:           Ed25519 (genesis/genesis_ed25519.pub)
+
+v1.1 (theorem reg):   11f7934c5c1e42ca9303e939bae26425b905c186aa634190d63304092a5bfc57
+  sealed:              2026-10-18T11:49:28Z
+  parent:              a5a988e5... (v1.0)
+  theorems registered: 3
+  merkle_root:         d2bba4608f35596b50f62ec34a0fa254a2765d0c154daaafff3b46f882d4c387
+  formal proofs:       pending v1.2
 ```
 
-This is the canonical founding artifact. Every future receipt chains from this. Theorems marked proof-pending will be sealed in v1.1 receipt.
+## Independent verification
+
+```bash
+git clone https://github.com/jesseray718/openroot
+cd openroot
+# Verify v1.0 genesis:
+openssl pkeyutl -verify -pubin -inkey genesis/genesis_ed25519.pub -rawin \
+  -in <(python3 -c 'import json; r=json.load(open("genesis/receipt_v1.json")); print(json.dumps(r,sort_keys=True,separators=(",",":"),ensure_ascii=False),end="")') \
+  -sigfile genesis/receipt_v1.sig
+# Verify v1.1 theorem registry:
+openssl pkeyutl -verify -pubin -inkey genesis/genesis_ed25519.pub -rawin \
+  -in <(python3 -c 'import json; r=json.load(open("genesis/receipt_v1_1.json")); print(json.dumps(r,sort_keys=True,separators=(",",":"),ensure_ascii=False),end="")') \
+  -sigfile genesis/receipt_v1_1.sig
+```
 
 ## Founding corpus (14 documents)
 
@@ -38,14 +56,14 @@ This is the canonical founding artifact. Every future receipt chains from this. 
 
 ## Status (as of 2026-10-18)
 
-- **Genesis receipt v1.0:** SEALED 2026-10-18T10:44:27Z
+- **Genesis v1.0:** sealed 2026-10-18T09:21:54Z (14 founding docs)
+- **Theorem registry v1.1:** sealed 2026-10-18T11:49:28Z (3 theorems registered)
 - **Court v6:** daily sealed receipts (patches: `${TS}→`${STAMP}` fix `06e21cc` + tee redirect `d4ee143`).
 - **Heartbeat mesh:** 15-min cycle, live.
 - **Newton chain:** live (axiom ledger).
 - **Mistake compost:** 14 scars banked.
 - **Smart contract:** Solana ACRE token + Contribution Ledger (live, CI green).
-- **Worker layer:** pending — next major arc.
-- **Theorem proofs:** pending — v1.1 receipt.
+- **Formal theorem proofs:** pending — v1.2 receipt.
 
 ## Doctrine
 
