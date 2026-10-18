@@ -1,0 +1,52 @@
+[gate] GENESIS V1 SEAL
+
+[banked] using existing keys:
+  priv: /home/jesse/openroot/genesis/genesis_ed25519.pem
+  pub:  /home/jesse/openroot/genesis/genesis_ed25519.pub
+
+[gate] STAGE A — discover founding docs
+  [sealed] 01_trillion_dollar_redirect.md (41b96c5f46355b14...)
+  [sealed] 02_full_systemic_reallocation_model.md (278d28f90010bb96...)
+  [sealed] 03_combined_telecom_energy_reallocation.md (cf6989b767594c29...)
+  [sealed] 04_global_fractal_mesh_framework.md (9f22974c97a7faf0...)
+  [sealed] 05_societal_transformation.md (bd3bde3fa8c93c01...)
+  [sealed] 06_aerocement_whitepaper_v1.md (8082e49ecaee6c39...)
+  [sealed] 07_aerocement_defensive_publication.md (24e2904795fb219e...)
+  [sealed] 08_human_continuity_master_v1.md (4595d55c9db7f183...)
+  [sealed] 09_openroot_lumo_context_bridge.md (3f3a750cf59fe456...)
+  [sealed] 10_axioms.md (5cefec976aca8d00...)
+  [sealed] 11_ax_039_absolute_protection.md (6df357e80afc4745...)
+  [sealed] 12_newtonchain_kingdom.md (8f1b335b40218643...)
+  [sealed] 13_agape_formalized.md (4cef240dc45f683f...)
+  [sealed] 14_acre_specification.md (6011f1bbe3a00285...)
+  total sealed: 14
+
+[gate] STAGE B — construct canonical receipt
+  canonical bytes: 3475
+  receipt_id (sha256): a5a988e5879eb4f2ce14aadc0c72ae29eded0987b0c3ca9fcf4eeb9cacf5a889
+
+[gate] STAGE C — sign with Ed25519 private key
+  signature length: 64 bytes
+  signature (hex): 8cd257cf1456f087c2f4d1f6169be316315a22d831a1d15904d897ae73638ff862403da40eb91a2b0433894f4be7c2852292d59d45b41d1796c0c1d0eec4c800
+
+[gate] STAGE D — verify with public key (SEPARATE code path)
+  [banked] Signature Verified Successfully
+
+[gate] STAGE E — write receipt + signature to genesis/
+  receipt: /home/jesse/openroot/genesis/receipt_v1.json (4050 bytes)
+  sig:     /home/jesse/openroot/genesis/receipt_v1.sig (64 bytes)
+
+[gate] STAGE F — re-verify from disk
+  [banked] disk-loaded receipt verified OK
+  [banked] receipt_id matches: a5a988e5879eb4f2ce14aadc0c72ae29eded0987b0c3ca9fcf4eeb9cacf5a889
+
+======================================================================
+GENESIS V1 RECEIPT SEALED
+======================================================================
+  receipt_id:  a5a988e5879eb4f2ce14aadc0c72ae29eded0987b0c3ca9fcf4eeb9cacf5a889
+  timestamp:   2026-10-18T10:44:27Z
+  documents:   14
+  supersedes:  receipt_v0 (partial)
+
+GENESIS_V1_ID=a5a988e5879eb4f2ce14aadc0c72ae29eded0987b0c3ca9fcf4eeb9cacf5a889
+GENESIS_V1_TS=2026-10-18T10:44:27Z

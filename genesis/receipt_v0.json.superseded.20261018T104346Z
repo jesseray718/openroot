@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "type": "genesis",
+  "timestamp": "2026-10-18T09:21:54Z",
+  "author": "Jesse McMillen / One Human Family",
+  "author_pubkey_ed25519": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAL7LUfpHpVsdXww8shr2hPEB2PAAJVokuWFmEg2nluq0=\n-----END PUBLIC KEY-----",
+  "statement": "Founding artifact of OpenRoot federated organism. All future receipts chain from this. Verifiers are pure code. Models propose, code disposes.",
+  "documents": [
+    {
+      "name": "redirect_paper",
+      "path": "lumo_inbox/expanded/archives_openroot--1-.32534464/openroot (1)/absorbed/dump_chunks_060_telecom_reallocation.json",
+      "sha256": "044de2481eb6be3eff321b41bc9656bff6c7a8f982c6cd00c8ef493f097b732b"
+    },
+    {
+      "name": "court_v6_script",
+      "path": "bin/dispatch_court_v6.sh",
+      "sha256": "9a65d130cb695a0472ddcc04568fa9eb15bbda548fb54c0dd6f3a200ff15a9d8"
+    },
+    {
+      "name": "openroot_readme",
+      "path": "README.md",
+      "sha256": "bbc32ca5df52a0def5f901e46098a464c88e7cb15cc039933182583be3cc2cea"
+    },
+    {
+      "name": "axioms",
+      "path": "lumo_inbox/expanded/kai_extract_20260928_015017.bca6fe9a/kai_extract_20260928_015017/stage/Download/A1reps/axioms.md",
+      "sha256": "82da8c3d21a679898fee73a61ab436ac93cada200227bf673e8b23cfba4f8f64"
+    }
+  ],
+  "doctrine": [
+    "The receipt is the constitution.",
+    "Verifiers are pure code. Models propose. Code disposes.",
+    "Receipts are canonical and independently verifiable.",
+    "Act as One Human Family. Cut what harms. Grow what heals."
+  ]
+}

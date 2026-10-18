@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "type": "genesis",
+  "genesis_version": "v1.0",
+  "timestamp": "2026-10-18T10:44:27Z",
+  "author": "Jesse McMillen / One Human Family",
+  "author_pubkey_ed25519": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAL7LUfpHpVsdXww8shr2hPEB2PAAJVokuWFmEg2nluq0=\n-----END PUBLIC KEY-----",
+  "supersedes": "receipt_v0 (partial, 4 docs, 2026-10-18T09:21:54Z)",
+  "statement": "Founding artifact of OpenRoot federated organism. All future receipts chain from this. Verifiers are pure code. Models propose, code disposes. Theorems marked proof-pending will be sealed in v1.1.",
+  "documents": [
+    {
+      "name": "01_trillion_dollar_redirect",
+      "path": "genesis/founding_docs/01_trillion_dollar_redirect.md",
+      "sha256": "41b96c5f46355b1456030a9623f656634cd7a647533f6260e1860103ce2ad033"
+    },
+    {
+      "name": "02_full_systemic_reallocation_model",
+      "path": "genesis/founding_docs/02_full_systemic_reallocation_model.md",
+      "sha256": "278d28f90010bb96d54d6c74c398d8725a07f367148ac8e7ffdd721574706130"
+    },
+    {
+      "name": "03_combined_telecom_energy_reallocation",
+      "path": "genesis/founding_docs/03_combined_telecom_energy_reallocation.md",
+      "sha256": "cf6989b767594c290ae02d1be99b70addfbcdb8eb2b4a5b38caeafbe89e44a3b"
+    },
+    {
+      "name": "04_global_fractal_mesh_framework",
+      "path": "genesis/founding_docs/04_global_fractal_mesh_framework.md",
+      "sha256": "9f22974c97a7faf09219a9728fc86452c0825ee6bf7b34661a0dfc43d7040906"
+    },
+    {
+      "name": "05_societal_transformation",
+      "path": "genesis/founding_docs/05_societal_transformation.md",
+      "sha256": "bd3bde3fa8c93c01d50f5bee24c07319737b2eeabd5a34f47915fb73eed5fd31"
+    },
+    {
+      "name": "06_aerocement_whitepaper_v1",
+      "path": "genesis/founding_docs/06_aerocement_whitepaper_v1.md",
+      "sha256": "8082e49ecaee6c392f0c7d7b02adb6fa750002dfa6e52811a0060a14379f2549"
+    },
+    {
+      "name": "07_aerocement_defensive_publication",
+      "path": "genesis/founding_docs/07_aerocement_defensive_publication.md",
+      "sha256": "24e2904795fb219e8179438c71ba60de3d602eac9b28be9907f5d1af360f6cae"
+    },
+    {
+      "name": "08_human_continuity_master_v1",
+      "path": "genesis/founding_docs/08_human_continuity_master_v1.md",
+      "sha256": "4595d55c9db7f183b86321dd4c8ce2ca67ed0b940d793fe900643dcbaa34dc5b"
+    },
+    {
+      "name": "09_openroot_lumo_context_bridge",
+      "path": "genesis/founding_docs/09_openroot_lumo_context_bridge.md",
+      "sha256": "3f3a750cf59fe456c28723caf5b8950cf15bc0e5d204f22d12193e498f5a90f6"
+    },
+    {
+      "name": "10_axioms",
+      "path": "genesis/founding_docs/10_axioms.md",
+      "sha256": "5cefec976aca8d0092255de533974961080e99890b6949833b73d2adfcdb8671"
+    },
+    {
+      "name": "11_ax_039_absolute_protection",
+      "path": "genesis/founding_docs/11_ax_039_absolute_protection.md",
+      "sha256": "6df357e80afc4745aadfc72d5baf5a508f5c87321a042d278a9b3b7099b02be0"
+    },
+    {
+      "name": "12_newtonchain_kingdom",
+      "path": "genesis/founding_docs/12_newtonchain_kingdom.md",
+      "sha256": "8f1b335b40218643d5fbedb834fa43a0c169e87dc534922f489b13e9da3d3293"
+    },
+    {
+      "name": "13_agape_formalized",
+      "path": "genesis/founding_docs/13_agape_formalized.md",
+      "sha256": "4cef240dc45f683f456c24ac1231556cdf9f866d743e101c19a0ef59d6d722b8"
+    },
+    {
+      "name": "14_acre_specification",
+      "path": "genesis/founding_docs/14_acre_specification.md",
+      "sha256": "6011f1bbe3a00285f99d67b3877588e521ec31f83360738f19d105d4bc6b7c2c"
+    }
+  ],
+  "theorem_proof_status": {
+    "A6_edge_abundance": "pending_v1_1",
+    "P2_popw_resists_speculation": "pending_v1_1",
+    "P3_instant_inference": "proven_existence_proof",
+    "P4_modular_beats_monolith": "pending_v1_1"
+  },
+  "doctrine": [
+    "The receipt is the constitution.",
+    "Verifiers are pure code. Models propose. Code disposes.",
+    "Receipts are canonical and independently verifiable.",
+    "Act as One Human Family. Cut what harms. Grow what heals."
+  ]
+}

@@ -1,78 +1,64 @@
 # OpenRoot
 
-OpenRoot is a local-first knowledge and appropriate-technology system.
+**Verifiable local autonomy. Sealed evidence, measured energy, auditable actions, physical work receipts.**
 
-It turns source material into SHA-256-addressed, searchable, citation-capable knowledge pods. Each pod preserves provenance, supports hybrid lexical and semantic retrieval, records query receipts, and learns from human-labeled corrections.
+OpenRoot is a decentralized, open-source framework for civilizational regeneration based on permaculture principles, fractal mesh geometry, contribution economics, and direct work attestation. It replaces multiple layers of wealth extraction with community-owned systems that reward building, care, and productive work.
 
-## Pod Era v1
+## Genesis receipt (v1.0 — canonical)
 
-The first operational knowledge pod is live:
-
-- **GitHub documentation pod**: 3,748 documents, 26,430 chunks, and 26,372 Nomic embeddings.
-- **Hybrid retrieval**: SQLite FTS5 lexical search fused with vector similarity.
-- **Grounded local synthesis**: a local Qwen2.5-Coder 7B model answers only from retrieved evidence and cites sources.
-- **Query receipts**: every question stores its evidence chunk IDs, model, answer, token count, and elapsed time.
-- **Correction ledger**: human verdicts distinguish good, partial, and bad answers.
-- **Merkle-sealed corpus**: pod seal `a9689710e727bd1c72911aeba231be78`.
-- **Machine census**: 768,255 distinct files SHA-256 hashed across the primary OpenRoot node.
-
-## How it works
-
-```text
-source document
-  -> SHA-256 content identity
-  -> semantic chunks
-  -> FTS5 lexical index
-  -> Nomic vector embeddings
-  -> hybrid retrieval
-  -> grounded local-model synthesis
-  -> cited answer
-  -> query receipt
-  -> human correction
-  -> improved retrieval pathway
+```
+receipt_id:  a5a988e5879eb4f2ce14aadc0c72ae29eded0987b0c3ca9fcf4eeb9cacf5a889
+timestamp:   2026-10-18T10:44:27Z
+documents:   14 founding docs
+supersedes:   receipt_v0 (partial, 4 docs)
+signed by:   Ed25519 (genesis/genesis_ed25519.pub)
+verify with: openssl pkeyutl -verify -pubin -inkey genesis/genesis_ed25519.pub -rawin -in <canonical> -sigfile genesis/receipt_v1.sig
 ```
 
-OpenRoot separates four concerns:
+This is the canonical founding artifact. Every future receipt chains from this. Theorems marked proof-pending will be sealed in v1.1 receipt.
 
-| Layer | Purpose |
-|---|---|
-| Evidence | Exact source identity through SHA-256 |
-| Retrieval | FTS5 and vector similarity |
-| Reasoning | Local model synthesis from supplied evidence |
-| Verification | Human correction, evaluation, and reusable pathways |
+## Founding corpus (14 documents)
 
-A hash proves what source bytes existed. Retrieval identifies relevant evidence. A model synthesizes an answer. Only a verified correction or outcome promotes a result into a reusable pathway.
+| # | Document | Layer |
+|---|---|---|
+| 01 | Trillion Dollar Redirect | Economics |
+| 02 | Full Systemic Reallocation Model | Economics |
+| 03 | Combined Telecom-Energy Reallocation | Economics |
+| 04 | Global Fractal Mesh Framework (Cloud 9 canonical) | Mesh |
+| 05 | Societal Transformation | Vision |
+| 06 | Aerocement Whitepaper v1.0 | Energy |
+| 07 | Aerocement Defensive Publication | IP |
+| 08 | Human Continuity Master v1.0 | Resilience |
+| 09 | OpenRoot Lumo Context Bridge | Project |
+| 10 | Axioms (Euclidean taxonomy, theorems marked) | Foundation |
+| 11 | AX-039 Absolute Protection (Shield Law) | Governance |
+| 12 | Newton Chain Kingdom Engine | Governance |
+| 13 | 12 Agape Formalized | Governance |
+| 14 | ACRE Specification | Token economics |
 
-## Current status
+## Status (as of 2026-10-18)
 
-- Pod #1: GitHub documentation corpus is sealed and queryable.
-- Query harness v1.1: hybrid retrieval and cited local-model answers are live.
-- Correction ledger: active for human-labeled evaluation.
-- Known limitation: retrieval recall is still experimental; a hierarchy-oriented GitHub Actions query missed its best evidence and was labeled `partial`.
-- Unified evidence milestone: the canonical database contains 768,257 source rows, passes SQLite `integrity_check`, and has a populated FTS index.
-- Local RAG milestone: five approved OpenRoot documents produced 14 chunks and 14 Nomic embeddings at 768 dimensions. A core-objectives test query ranked the goals chunk first (cosine similarity 0.7222).
-- Vector inventory milestone: a read-only utility inventories likely embedding databases, checks schema and provenance mappings, and recommends compatibility without merging or modifying any database.
-- Next milestone: run and review the inventory on the OpenRoot node. Decide on any future merge only after verifying vector identity, chunk text, and source provenance; then continue evidence-sufficiency and correction-driven retrieval evaluation.
+- **Genesis receipt v1.0:** SEALED 2026-10-18T10:44:27Z
+- **Court v6:** daily sealed receipts (patches: `${TS}→`${STAMP}` fix `06e21cc` + tee redirect `d4ee143`).
+- **Heartbeat mesh:** 15-min cycle, live.
+- **Newton chain:** live (axiom ledger).
+- **Mistake compost:** 14 scars banked.
+- **Smart contract:** Solana ACRE token + Contribution Ledger (live, CI green).
+- **Worker layer:** pending — next major arc.
+- **Theorem proofs:** pending — v1.1 receipt.
 
-## Repository structure
+## Doctrine
 
-- `bin/`: operational scripts and tools.
-- `data/`: local runtime state, indexes, and non-canonical operational artifacts.
-- `ledger/`: append-only Newton-chain and provenance records.
-- `context_bridge/`: cross-window handoff and operational state.
-- `canon/`: human-ratified canonical definitions and schemas.
-- `docs/`: project documentation.
-- `.github/CODEOWNERS`: all paths require review by `@jesseray718`.
-
-## Principles
-
-- Local-first: useful capability should run on hardware you control.
-- Provenance-first: every important artifact carries an inspectable identity.
-- Cache proven work: a verified pathway should not be recomputed.
-- Route benefit toward the least-served nodes.
-- Keep humans in control of canonical adoption, commits, releases, and irreversible actions.
-- Distinguish evidence, retrieval, reasoning, and verification.
+- **The receipt is the constitution.** Every action either chains from the genesis or doesn't.
+- **Verifiers are pure code.** Models propose. Code disposes. No exceptions.
+- **Receipts are canonical, independently verifiable.** Stdlib + openssl only.
+- **Act as One Human Family.** Cut what harms. Grow what heals.
 
 ## License
 
-See repository licensing and individual source-file headers for applicable terms.
+- Documentation: CC-BY-SA 4.0
+- Code: GPL v3
+- Aerocement hardware: CERN-OHL-S v2 (pending license refactor)
+
+---
+One Human Family. Build what serves. Track transparently. Reward contribution and care.

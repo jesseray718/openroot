@@ -41,3 +41,4 @@ restore_bin_*/
 venv/
 pods/
 data/joules_saved.jsonl
+genesis/genesis_ed25519.pem
