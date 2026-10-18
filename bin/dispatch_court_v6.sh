@@ -16,6 +16,7 @@ MAX="${MAX:-50}"
 STAMP="$(date +%Y%m%d_%H%M%S)"
 REPORT="context_bridge/court-v6-report-${STAMP}.md"
 LOG=logs/court_v6_${STAMP}.log; touch "$LOG"
+exec > >(tee "$LOG") 2>&1
 mkdir -p logs context_bridge data
 echo "$CANARY boot — defense=$DEFENDER vs prosecution=$PROSECUTOR"
 
