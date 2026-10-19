@@ -28,15 +28,15 @@ LOCAL_CHAIN = [
 # Cloud provider chain
 DEFAULT_CHAIN = [
     {"name":"openrouter", "base_url":"https://openrouter.ai/api/v1",
-     "free_models":["meta-llama/llama-3.3-70b-instruct:free","google/gemini-2.0-flash-exp:free","qwen/qwen-2.5-72b-instruct:free","deepseek/deepseek-r1:free"]},
+     "free_models":["meta-llama/llama-3.3-70b-instruct","google/gemini-2.0-flash-exp:free","qwen/qwen-2.5-72b-instruct:free","deepseek/deepseek-r1:free"]},
     {"name":"groq", "base_url":"https://api.groq.com/openai/v1",
-     "free_models":["meta-llama/llama-3.3-70b-instruct:free","google/gemini-2.0-flash-exp:free","qwen/qwen-2.5-72b-instruct:free","deepseek/deepseek-r1:free"]},
+     "free_models":["meta-llama/llama-3.3-70b-instruct","google/gemini-2.0-flash-exp:free","qwen/qwen-2.5-72b-instruct:free","deepseek/deepseek-r1:free"]},
     {"name":"gemini", "base_url":"https://generativelanguage.googleapis.com/v1beta",
-     "free_models":["meta-llama/llama-3.3-70b-instruct:free","google/gemini-2.0-flash-exp:free","qwen/qwen-2.5-72b-instruct:free","deepseek/deepseek-r1:free"]},
+     "free_models":["meta-llama/llama-3.3-70b-instruct","google/gemini-2.0-flash-exp:free","qwen/qwen-2.5-72b-instruct:free","deepseek/deepseek-r1:free"]},
     {"name":"cerebras", "base_url":"https://api.cerebras.ai/v1",
-     "free_models":["meta-llama/llama-3.3-70b-instruct:free","google/gemini-2.0-flash-exp:free","qwen/qwen-2.5-72b-instruct:free","deepseek/deepseek-r1:free"]},
+     "free_models":["meta-llama/llama-3.3-70b-instruct","google/gemini-2.0-flash-exp:free","qwen/qwen-2.5-72b-instruct:free","deepseek/deepseek-r1:free"]},
     {"name":"cloudflare", "base_url":"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/ai",
-     "free_models":["meta-llama/llama-3.3-70b-instruct:free","google/gemini-2.0-flash-exp:free","qwen/qwen-2.5-72b-instruct:free","deepseek/deepseek-r1:free"]},
+     "free_models":["meta-llama/llama-3.3-70b-instruct","google/gemini-2.0-flash-exp:free","qwen/qwen-2.5-72b-instruct:free","deepseek/deepseek-r1:free"]},
 ]
 
 def init_ledger():

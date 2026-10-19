@@ -10,6 +10,9 @@ KEYS_FILE = REPO / "data" / "cloud_keys.json"
 # Provider chain in priority order. Add/remove as you acquire keys.
 # Each provider has: name, base_url, free_models, daily_token_cap, daily_request_cap
 DEFAULT_CHAIN = [
+    {"name":"openrouter", "base_url":"https://openrouter.ai/api/v1",
+     "free_models":["meta-llama/llama-3.3-70b-instruct","google/gemini-2.0-flash-exp:free","qwen/qwen-2.5-72b-instruct:free"],
+     "daily_token_cap":200000, "daily_request_cap":1000},
     {"name":"groq", "base_url":"https://api.groq.com/openai/v1",
      "free_models":["llama-3.3-70b-versatile","qwen-2.5-32b"],
      "daily_token_cap":30000, "daily_request_cap":14400},
