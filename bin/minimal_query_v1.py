@@ -19,10 +19,10 @@ def run_pod_router(question):
         capture_output=True, text=True, timeout=10, cwd=str(REPO), stdin=subprocess.DEVNULL)
     return json.loads(r.stdout)
 
-def assemble_dossier(question, pods, budget=1500):
+def assemble_dossier(question, pods, budget=4000):
     r = subprocess.run(
         ["python3", str(DOSSIER), "--pods", *pods, "--query", question,
-         "--top-k", "5", "--budget", str(budget)],
+         "--top-k", "12", "--budget", str(budget)],
         capture_output=True, text=True, timeout=20, cwd=str(REPO), stdin=subprocess.DEVNULL)
     return r.stdout.strip() if r.returncode == 0 else ""
 
@@ -66,7 +66,7 @@ def main():
     rounds = []
     
     for round_idx in range(args.max_rounds):
-        dossier_text = assemble_dossier(question, pods, budget=1500)
+        dossier_text = assemble_dossier(question, pods, budget=4000)
         prompt = f"CONTEXT (minimal, from {pods}):\n{dossier_text}\n---\nQUESTION:\n{question}\n"
         packet_hash = blake3_hex(prompt.encode())
         
