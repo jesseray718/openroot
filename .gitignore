@@ -45,3 +45,13 @@ genesis/genesis_ed25519.pem
 .env.local
 *.env.local
 .env*
+pods_garden/
+attic-offrepo/
+*.tar.gz
+*.tgz
+*.tar.gz
+*.tgz
+data/cloud_keys.json
+pods_garden/
+pods_garden/
+pods_garden/

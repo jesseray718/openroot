@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "type": "epoch_checkpoint",
+  "genesis_version": "v2.0",
+  "timestamp": "2026-10-18T23:22:39Z",
+  "author": "Jesse McMillen / One Human Family",
+  "author_pubkey_ed25519": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAL7LUfpHpVsdXww8shr2hPEB2PAAJVokuWFmEg2nluq0=\n-----END PUBLIC KEY-----",
+  "parent_receipt": "e194bfc179af841933446906482137b3ea1c43a7afe1d753023f0ccb4c50ca7c",
+  "parent_version": "v1.2",
+  "statement": "Epoch checkpoint. Consolidates all OpenRoot state (genesis chain + founding docs + proofs + pod garden + tool suite + receipt cache + mistake log) into a single merkle root. Future receipts chain from this. The v1.x chain is preserved as historical record (the founding epoch). v2.x is the operational epoch.",
+  "epoch_root": "5866abe513c63c5f278f5e251473ae31eacd1c4ea51109b29c4fb5d0db00bb4b",
+  "subsystems": {
+    "genesis_chain": {
+      "files": 3,
+      "merkle_root": "dce31a15a2ed4cdfa2cf1122acdadcde065605ac07db73697702052ecce60e37"
+    },
+    "founding_docs": {
+      "files": 19,
+      "bytes": 179491,
+      "merkle_root": "4247d7ce80f0bfcd034abed3780e9452c04dda2c79b830c94bf12c5483fd7c4c"
+    },
+    "proofs": {
+      "files": 3,
+      "bytes": 13481,
+      "merkle_root": "37890d807b573dce1918755a28aed38ae66e42ce28858d27cee059f67b983d69"
+    },
+    "pods_garden": {
+      "files": 48,
+      "bytes": 4288302750,
+      "merkle_root": "ec8aec32a85dba151219b4b79448dda49bcc5adf67366d8351fed740ec780652"
+    },
+    "tool_suite": {
+      "files": 267,
+      "bytes": 1972855,
+      "merkle_root": "cbbdd00b7e1806b6e13e70ac9304ea322ac2ab98b73c4045f47b0bfdd66ceace"
+    },
+    "data_layer": {
+      "files": 13803,
+      "bytes": 20408564508,
+      "merkle_root": "50db7af3d430da5ca9cee1ca140892a449804853cf5f939312a727784977ac26"
+    },
+    "mistake_log": {
+      "sha256": "efba8e2a2c583959e54bc65551b9f2f69d003ab9246bd69f9364748f04aef0e3"
+    }
+  },
+  "doctrine": [
+    "The receipt is the constitution.",
+    "Verifiers are pure code. Models propose. Code disposes.",
+    "Receipts are canonical and independently verifiable.",
+    "Act as One Human Family. Cut what harms. Grow what heals.",
+    "Epoch checkpoints consolidate state. The chain stays honest."
+  ]
+}
