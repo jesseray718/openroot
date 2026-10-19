@@ -1,10 +1,10 @@
-# SuperLoop Composite Dashboard — 2026-10-18 17:15 UTC
+# SuperLoop Composite Dashboard — 2026-10-19 11:00 UTC
 Auto-pulsed every 15 min via cron | Canary: [SUPERLOOPV3]
 
 ## Command Flow Health
 - Commands analyzed: 250
 - Dominant bucket: `other`
-- Top transitions: other->other, gitops->other, other->gitops, gitops->gitops, other->author
+- Top transitions: other->other, other->author, author->other, other->exec, exec->other
 
 ## Routing Weights (Auto-Learned)
 | Trigger | Route | Model |

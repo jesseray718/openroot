@@ -1102,3 +1102,10 @@
 {"type": "intent_unclear", "ratio": 1.0, "msg": "over half of commands are 'other' \u2014 buckets need refinement", "timestamp": "2026-10-18T07:30:01.463751+00:00"}
 {"type": "intent_unclear", "ratio": 1.0, "msg": "over half of commands are 'other' \u2014 buckets need refinement", "timestamp": "2026-10-18T07:45:01.636365+00:00"}
 {"type": "intent_unclear", "ratio": 1.0, "msg": "over half of commands are 'other' \u2014 buckets need refinement", "timestamp": "2026-10-18T08:00:01.813509+00:00"}
+{"type": "intent_unclear", "ratio": 0.84, "msg": "over half of commands are 'other' \u2014 buckets need refinement", "timestamp": "2026-10-19T09:30:01.753131+00:00"}
+{"type": "intent_unclear", "ratio": 0.84, "msg": "over half of commands are 'other' \u2014 buckets need refinement", "timestamp": "2026-10-19T09:45:01.086384+00:00"}
+{"type": "intent_unclear", "ratio": 0.84, "msg": "over half of commands are 'other' \u2014 buckets need refinement", "timestamp": "2026-10-19T10:00:01.598678+00:00"}
+{"type": "intent_unclear", "ratio": 0.94, "msg": "over half of commands are 'other' \u2014 buckets need refinement", "timestamp": "2026-10-19T10:15:01.399222+00:00"}
+{"type": "intent_unclear", "ratio": 0.94, "msg": "over half of commands are 'other' \u2014 buckets need refinement", "timestamp": "2026-10-19T10:30:01.088469+00:00"}
+{"type": "intent_unclear", "ratio": 0.94, "msg": "over half of commands are 'other' \u2014 buckets need refinement", "timestamp": "2026-10-19T10:45:01.650664+00:00"}
+{"type": "intent_unclear", "ratio": 0.94, "msg": "over half of commands are 'other' \u2014 buckets need refinement", "timestamp": "2026-10-19T11:00:01.765004+00:00"}

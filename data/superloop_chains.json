@@ -1,12 +1,53 @@
 {
-  "generated": "2026-10-18T08:00:01.810948+00:00",
+  "generated": "2026-10-19T11:00:01.761931+00:00",
   "bucket_counts": {
-    "other": 250
+    "other": 236,
+    "author": 4,
+    "exec": 2,
+    "bridge": 3,
+    "files": 2,
+    "gitops": 3
   },
   "transition_weights": [
     {
       "rule": "other->other",
-      "count": 249
+      "count": 225
+    },
+    {
+      "rule": "other->author",
+      "count": 4
+    },
+    {
+      "rule": "author->other",
+      "count": 4
+    },
+    {
+      "rule": "other->exec",
+      "count": 2
+    },
+    {
+      "rule": "exec->other",
+      "count": 2
+    },
+    {
+      "rule": "other->bridge",
+      "count": 2
+    },
+    {
+      "rule": "other->files",
+      "count": 2
+    },
+    {
+      "rule": "files->other",
+      "count": 2
+    },
+    {
+      "rule": "gitops->gitops",
+      "count": 2
+    },
+    {
+      "rule": "bridge->bridge",
+      "count": 1
     }
   ],
   "routing_weights": {
