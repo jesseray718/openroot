@@ -1,21 +1,22 @@
 #!/usr/bin/env python3
-"""Per-pod router: picks 1-3 pods by keyword domain mapping, not all pods.
-Deterministic. No AI. Routes clarifying questions back through same pods."""
+"""Per-pod router: picks 1-3 pods by keyword domain mapping."""
 import re, sys, json, os
 from pathlib import Path
 
 REPO = Path(os.environ.get("OPENROOT_REPO", "/home/jesse/openroot"))
 GARDEN = REPO / "pods_garden"
 
-# Domain keyword map — add more as pods grow
 DOMAIN_MAP = {
     "grants": ["grant","sare","usda","reap","funding","proposal","nrcs","frg","budget","award"],
     "code": ["python","script","subprocess","ssh","git","function","class","import","bash","shell"],
-    "thermal": ["aerocement","thermal","cascade","solar","heat","stirling","joules","rapl","delta_t"],
+    "thermal": ["aerocement","thermal","cascade","solar","heat","stirling","joules","rapl","delta_t","absorber","labyrinth","geothermal"],
     "mesh": ["mesh","lora","meshtastic","tailscale","node","network","reticulum","lxmf","rnode"],
     "governance": ["axiom","constitution","agape","newton","kingdom","receipt","genesis","epoch"],
     "permaculture": ["permaculture","observe","interact","yield","compost","diversity","edge"],
     "protocols": ["subprocess","ssh","heredoc","cat","eof","installer","cheatsheet","openrouter"],
+    "hardware": ["esp32","sensor","lora","meshtastic","rnode","reticulum","cloud9","aerostat","ham","radio","relay","actuator","meshcore","lxmf","baofeng","arduino","microcontroller"],
+    "routing": ["router","dossier","cloud","cascade","packet","query","minimal","keyword"],
+    "monetary": ["capital","money","todo","synergy","agape","coefficient","investment","credit","dollar"],
 }
 
 def extract_keywords(text, max_k=8):
@@ -26,44 +27,35 @@ def extract_keywords(text, max_k=8):
     return [w for w in kws if not (w in seen or seen.add(w))][:max_k]
 
 def route_to_pods(question, max_pods=3):
-    """Pick 1-3 pods by keyword domain match. Deterministic."""
     kws = extract_keywords(question)
     kw_set = set(kws)
-    
-    # Score each domain by keyword overlap
     domain_scores = {}
     for domain, domain_kws in DOMAIN_MAP.items():
         overlap = len(kw_set & set(domain_kws))
         if overlap > 0:
             domain_scores[domain] = overlap
-    
-    # If no domain match, return general pods
     if not domain_scores:
-        return ["coding_protocols_pasteable_v1", "lesson_plan_script_doctrine"], kws
-    
-    # Pick top domains
+        return ["hardware_dossier_v1", "coding_protocols_pasteable_v1"], kws
     sorted_domains = sorted(domain_scores.items(), key=lambda x: -x[1])[:max_pods]
-    
-    # Map domains to actual pods in garden
     pod_map = {
         "grants": ["sare_grants", "grants_pod"],
         "code": ["coding_protocols_pasteable_v1", "tar_bundle_v3"],
-        "thermal": ["tar_bundle_v3", "theorem_proofs"],
-        "mesh": ["tar_bundle_v3"],
+        "thermal": ["hardware_dossier_v1", "tar_bundle_v3"],
+        "mesh": ["hardware_dossier_v1", "tar_bundle_v3"],
         "governance": ["theorem_proofs", "lesson_plan_script_doctrine"],
         "permaculture": ["lesson_plan_script_doctrine"],
         "protocols": ["coding_protocols_pasteable_v1"],
+        "hardware": ["hardware_dossier_v1", "tar_bundle_v3"],
+        "routing": ["hardware_dossier_v1", "coding_protocols_pasteable_v1"],
+        "monetary": ["hardware_dossier_v1", "tar_bundle_v3"],
     }
-    
     selected_pods = []
     for domain, score in sorted_domains:
         for pod in pod_map.get(domain, []):
             if (GARDEN / pod).exists() and pod not in selected_pods:
                 selected_pods.append(pod)
-    
     if not selected_pods:
-        selected_pods = ["coding_protocols_pasteable_v1"]
-    
+        selected_pods = ["hardware_dossier_v1"]
     return selected_pods[:max_pods], kws
 
 if __name__ == "__main__":
