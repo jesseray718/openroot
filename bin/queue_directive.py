@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # [canary] paste intact
 """queue_directive.py — write TASK.md from one model_findings row. Does not execute."""
 

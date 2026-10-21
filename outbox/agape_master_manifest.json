@@ -1,0 +1,580 @@
+{
+  "ts": "2026-09-20T03:04:25.969434+00:00",
+  "agape_drift": {
+    "el_koine": {
+      "word": "Ἀγάπη",
+      "era": "c. 30 AD",
+      "drift_metric": 0.0,
+      "def": "Unconditional volumetric goodwill"
+    },
+    "la_vulgate": {
+      "word": "Caritas",
+      "era": "c. 400 AD",
+      "drift_metric": 0.12,
+      "def": "Precious regard and active care"
+    },
+    "en_kjv_1611": {
+      "word": "Charity",
+      "era": "1611 AD",
+      "drift_metric": 0.24,
+      "def": "Benevolent community action"
+    },
+    "en_modern": {
+      "word": "Love",
+      "era": "2026 AD",
+      "drift_metric": 0.68,
+      "def": "General emotional preference"
+    }
+  },
+  "lords_prayer_exact": [
+    {
+      "greek": "Πάτερ ἡμῶν ὁ ἐν τοῖς οὐρανοῖς",
+      "literal": "Father of us, the [one] in the heavens"
+    },
+    {
+      "greek": "ἁγιασθήτω τὸ ὄνομά σου",
+      "literal": "let be sanctified the name of You"
+    },
+    {
+      "greek": "ἐλθέτω ἡ βασιλεία σου",
+      "literal": "let come the sovereign realm of You"
+    },
+    {
+      "greek": "γενηθήτω τὸ θέλημά σου, ὡς ἐν οὐρανῷ καὶ ἐπὶ γῆς",
+      "literal": "let be done the will of You, as in heaven also upon earth"
+    },
+    {
+      "greek": "τὸν ἄρτον ἡμῶν τὸν ἐπιούσιον δὸς ἡμῖν σήμερον",
+      "literal": "The bread of us, necessary for existence, give us today"
+    },
+    {
+      "greek": "καὶ ἄφες ἡμῖν τὰ ὀφειλήματα ἡμῶν",
+      "literal": "and release for us the debts of us"
+    },
+    {
+      "greek": "ὡς καὶ ἡμεῖς ἀφήκαμεν τοῖς ὀφειλέταις ἡμῶν",
+      "literal": "as also we released the debtors of us"
+    },
+    {
+      "greek": "καὶ μὴ εἰσενέγκῃς ἡμᾶς εἰς πειρασμόν, ἀλλὰ ῥῦσαι ἡμᾶς ἀπὸ τοῦ πονηροῦ",
+      "literal": "and do not lead us into trial, but deliver us from destructive evil"
+    }
+  ],
+  "taxonomy_36": {
+    "A": {
+      "symbol": "A",
+      "field": "Agape Root Axis",
+      "coords": {
+        "x": 1.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-A",
+        "order": "Agape"
+      }
+    },
+    "B": {
+      "symbol": "B",
+      "field": "Biological Energetics",
+      "coords": {
+        "x": 0.9848,
+        "y": 0.1736,
+        "z": 0.0278
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-B",
+        "order": "Biological"
+      }
+    },
+    "C": {
+      "symbol": "C",
+      "field": "Civil Construction",
+      "coords": {
+        "x": 0.9397,
+        "y": 0.342,
+        "z": 0.0556
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-C",
+        "order": "Civil"
+      }
+    },
+    "D": {
+      "symbol": "D",
+      "field": "Dynamic Heat Flow",
+      "coords": {
+        "x": 0.866,
+        "y": 0.5,
+        "z": 0.0833
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-D",
+        "order": "Dynamic"
+      }
+    },
+    "E": {
+      "symbol": "E",
+      "field": "Entropy Mitigation",
+      "coords": {
+        "x": 0.766,
+        "y": 0.6428,
+        "z": 0.1111
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-E",
+        "order": "Entropy"
+      }
+    },
+    "F": {
+      "symbol": "F",
+      "field": "Fluid Dynamics",
+      "coords": {
+        "x": 0.6428,
+        "y": 0.766,
+        "z": 0.1389
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-F",
+        "order": "Fluid"
+      }
+    },
+    "G": {
+      "symbol": "G",
+      "field": "Geodesic Structure",
+      "coords": {
+        "x": 0.5,
+        "y": 0.866,
+        "z": 0.1667
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-G",
+        "order": "Geodesic"
+      }
+    },
+    "H": {
+      "symbol": "H",
+      "field": "Hydrological Cycles",
+      "coords": {
+        "x": 0.342,
+        "y": 0.9397,
+        "z": 0.1944
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-H",
+        "order": "Hydrological"
+      }
+    },
+    "I": {
+      "symbol": "I",
+      "field": "Information Routing",
+      "coords": {
+        "x": 0.1736,
+        "y": 0.9848,
+        "z": 0.2222
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-I",
+        "order": "Information"
+      }
+    },
+    "J": {
+      "symbol": "J",
+      "field": "Jurisprudence Law",
+      "coords": {
+        "x": 0.0,
+        "y": 1.0,
+        "z": 0.25
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-J",
+        "order": "Jurisprudence"
+      }
+    },
+    "K": {
+      "symbol": "K",
+      "field": "Kinetic Conversion",
+      "coords": {
+        "x": -0.1736,
+        "y": 0.9848,
+        "z": 0.2778
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-K",
+        "order": "Kinetic"
+      }
+    },
+    "L": {
+      "symbol": "L",
+      "field": "Lattice Topologies",
+      "coords": {
+        "x": -0.342,
+        "y": 0.9397,
+        "z": 0.3056
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-L",
+        "order": "Lattice"
+      }
+    },
+    "M": {
+      "symbol": "M",
+      "field": "Material Science",
+      "coords": {
+        "x": -0.5,
+        "y": 0.866,
+        "z": 0.3333
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-M",
+        "order": "Material"
+      }
+    },
+    "N": {
+      "symbol": "N",
+      "field": "Node Recursion",
+      "coords": {
+        "x": -0.6428,
+        "y": 0.766,
+        "z": 0.3611
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-N",
+        "order": "Node"
+      }
+    },
+    "O": {
+      "symbol": "O",
+      "field": "Open Hardware",
+      "coords": {
+        "x": -0.766,
+        "y": 0.6428,
+        "z": 0.3889
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-O",
+        "order": "Open"
+      }
+    },
+    "P": {
+      "symbol": "P",
+      "field": "Permaculture Systems",
+      "coords": {
+        "x": -0.866,
+        "y": 0.5,
+        "z": 0.4167
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-P",
+        "order": "Permaculture"
+      }
+    },
+    "Q": {
+      "symbol": "Q",
+      "field": "Quantum Thermal State",
+      "coords": {
+        "x": -0.9397,
+        "y": 0.342,
+        "z": 0.4444
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-Q",
+        "order": "Quantum"
+      }
+    },
+    "R": {
+      "symbol": "R",
+      "field": "Radiant Energy",
+      "coords": {
+        "x": -0.9848,
+        "y": 0.1736,
+        "z": 0.4722
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-R",
+        "order": "Radiant"
+      }
+    },
+    "S": {
+      "symbol": "S",
+      "field": "Subterranean Mass",
+      "coords": {
+        "x": -1.0,
+        "y": 0.0,
+        "z": 0.5
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-S",
+        "order": "Subterranean"
+      }
+    },
+    "T": {
+      "symbol": "T",
+      "field": "Thermodynamic Ledger",
+      "coords": {
+        "x": -0.9848,
+        "y": -0.1736,
+        "z": 0.5278
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-T",
+        "order": "Thermodynamic"
+      }
+    },
+    "U": {
+      "symbol": "U",
+      "field": "Universal Native Descriptor",
+      "coords": {
+        "x": -0.9397,
+        "y": -0.342,
+        "z": 0.5556
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-U",
+        "order": "Universal"
+      }
+    },
+    "V": {
+      "symbol": "V",
+      "field": "Volumetric Exchange",
+      "coords": {
+        "x": -0.866,
+        "y": -0.5,
+        "z": 0.5833
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-V",
+        "order": "Volumetric"
+      }
+    },
+    "W": {
+      "symbol": "W",
+      "field": "Waste Cascades",
+      "coords": {
+        "x": -0.766,
+        "y": -0.6428,
+        "z": 0.6111
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-W",
+        "order": "Waste"
+      }
+    },
+    "X": {
+      "symbol": "X",
+      "field": "Xenobiotic Decay",
+      "coords": {
+        "x": -0.6428,
+        "y": -0.766,
+        "z": 0.6389
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-X",
+        "order": "Xenobiotic"
+      }
+    },
+    "Y": {
+      "symbol": "Y",
+      "field": "Yield Optimization",
+      "coords": {
+        "x": -0.5,
+        "y": -0.866,
+        "z": 0.6667
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-Y",
+        "order": "Yield"
+      }
+    },
+    "Z": {
+      "symbol": "Z",
+      "field": "Zero-Coordination Engine",
+      "coords": {
+        "x": -0.342,
+        "y": -0.9397,
+        "z": 0.6944
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-Z",
+        "order": "Zero-Coordination"
+      }
+    },
+    "0": {
+      "symbol": "0",
+      "field": "Primary Production 0",
+      "coords": {
+        "x": -0.1736,
+        "y": -0.9848,
+        "z": 0.7222
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-0",
+        "order": "Primary"
+      }
+    },
+    "1": {
+      "symbol": "1",
+      "field": "Storage Mass 1",
+      "coords": {
+        "x": -0.0,
+        "y": -1.0,
+        "z": 0.75
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-1",
+        "order": "Storage"
+      }
+    },
+    "2": {
+      "symbol": "2",
+      "field": "Flow Channels 2",
+      "coords": {
+        "x": 0.1736,
+        "y": -0.9848,
+        "z": 0.7778
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-2",
+        "order": "Flow"
+      }
+    },
+    "3": {
+      "symbol": "3",
+      "field": "Conversion Gates 3",
+      "coords": {
+        "x": 0.342,
+        "y": -0.9397,
+        "z": 0.8056
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-3",
+        "order": "Conversion"
+      }
+    },
+    "4": {
+      "symbol": "4",
+      "field": "Feedback Loops 4",
+      "coords": {
+        "x": 0.5,
+        "y": -0.866,
+        "z": 0.8333
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-4",
+        "order": "Feedback"
+      }
+    },
+    "5": {
+      "symbol": "5",
+      "field": "Boundary Enclosures 5",
+      "coords": {
+        "x": 0.6428,
+        "y": -0.766,
+        "z": 0.8611
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-5",
+        "order": "Boundary"
+      }
+    },
+    "6": {
+      "symbol": "6",
+      "field": "Resilience Buffer 6",
+      "coords": {
+        "x": 0.766,
+        "y": -0.6428,
+        "z": 0.8889
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-6",
+        "order": "Resilience"
+      }
+    },
+    "7": {
+      "symbol": "7",
+      "field": "System Audits 7",
+      "coords": {
+        "x": 0.866,
+        "y": -0.5,
+        "z": 0.9167
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-7",
+        "order": "System"
+      }
+    },
+    "8": {
+      "symbol": "8",
+      "field": "Network Propagation 8",
+      "coords": {
+        "x": 0.9397,
+        "y": -0.342,
+        "z": 0.9444
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-8",
+        "order": "Network"
+      }
+    },
+    "9": {
+      "symbol": "9",
+      "field": "Ecosystem Equilibrium 9",
+      "coords": {
+        "x": 0.9848,
+        "y": -0.1736,
+        "z": 0.9722
+      },
+      "taxonomy": {
+        "kingdom": "Agape Root",
+        "phylum": "Domain-9",
+        "order": "Ecosystem"
+      }
+    }
+  },
+  "aerodisc_sim": {
+    "flow_lpm": 5.0,
+    "t_in_c": 80.0,
+    "t_out_c": 54.99,
+    "watts": 8695.19,
+    "efficiency_pct": 41.7
+  },
+  "artifacts": [
+    "/home/jesse/openroot/outbox/aerodisc_casing.gcode",
+    "/home/jesse/openroot/.github/workflows/main.yml"
+  ]
+}

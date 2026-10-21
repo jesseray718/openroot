@@ -1,0 +1,85 @@
+openroot	60	Add workflow unit tests and clarify helper docstrings	2026-09-19T10:03:36Z	coderabbit/changes/3f27b749
+openroot	59	Document indexing, probing, shared helpers, and workflow functions	2026-09-19T10:02:10Z	coderabbit/changes/eb9e4190
+openroot	48	docs: add contribution hub workflow and provenance templates (clean s…	2026-09-06T00:32:19Z	backup/docs-pr42-clean
+openroot	42	docs: add contribution hub workflow and provenance templates	2026-09-05T17:24:25Z	docs/contribution-hub-20260825
+openroot	14	Offline-first toolkit: local queue, dedup, purge lifecycle, and efficiency controls	2026-08-25T22:09:54Z	copilot/build-offline-first-toolkit
+openroot	13	docs: add contribution hub workflow and provenance templates	2026-08-25T22:09:55Z	docs/contribution-hub-20260825
+openroot	7	Add nanobot swarm toolkit doc + 8 nanobot scripts, add global fractal mesh framework doc	2026-09-05T05:27:22Z	claude/new-session-ciupuz
+wisdom-scaffold	24	Add stack script unit tests and package metadata	2026-09-12T06:46:19Z	coderabbit/test-pull-request-changes/53f1efe6
+wisdom-scaffold	23	Document stack helpers and add package metadata	2026-09-12T06:46:18Z	coderabbit/improve-changed-function-docstrings/8b19c9eb
+agapenet	1	chore: uplift v4 baseline	2026-09-01T06:33:49Z	chore/uplift-v4-20260828-020649
+OpenCell-Thermal-System	10	chore: foundation uplift baseline	2026-09-01T06:32:31Z	chore/foundation-uplift-20260828-230544
+OpenCell-Thermal-System	9	chore: foundation uplift baseline	2026-09-01T06:32:33Z	chore/foundation-uplift-20260828-225816
+OpenCell-Thermal-System	7	chore: uplift v4 baseline	2026-09-01T06:32:34Z	chore/uplift-v4-20260828-020649
+OpenCell-Thermal-System	6	chore: uplift lite baseline	2026-09-01T06:32:37Z	chore/uplift-lite-20260828-015227
+OpenCell-Thermal-System	5	chore: uplift lite baseline	2026-09-01T06:32:39Z	chore/uplift-lite-20260828-012150
+OpenCell-Thermal-System	4	chore: uplift lite baseline	2026-09-01T06:32:41Z	chore/uplift-lite-20260828-011224
+OpenCell-Thermal-System	3	chore: uplift lite baseline	2026-09-01T06:32:43Z	chore/uplift-lite-20260827-231618
+fractallattice	4	chore: foundation uplift baseline	2026-09-01T06:34:15Z	chore/foundation-uplift-20260828-230544
+fractallattice	3	chore: foundation uplift baseline	2026-09-01T06:34:18Z	chore/foundation-uplift-20260828-225816
+oscillation-mesh	3	chore: foundation uplift baseline	2026-09-01T06:34:38Z	chore/foundation-uplift-20260828-225816
+agaperesonance	4	chore: foundation uplift baseline	2026-09-01T06:33:50Z	chore/foundation-uplift-20260828-230544
+agaperesonance	3	chore: foundation uplift baseline	2026-09-01T06:33:52Z	chore/foundation-uplift-20260828-225816
+aerocement	6	chore: uplift v4 baseline	2026-09-01T06:33:20Z	chore/uplift-v4-20260828-020649
+aerocement	5	chore: uplift lite baseline	2026-09-01T06:33:21Z	chore/uplift-lite-20260828-015227
+aerocement	4	chore: uplift lite baseline	2026-09-01T06:33:24Z	chore/uplift-lite-20260828-012150
+aerocement	3	chore: uplift lite baseline	2026-09-01T06:33:26Z	chore/uplift-lite-20260828-011224
+aerocement	2	chore: uplift lite baseline	2026-09-01T06:33:27Z	chore/uplift-lite-20260827-231618
+aerocement	1	chore: uplift lite baseline	2026-09-01T06:33:29Z	chore/uplift-lite-20260827-231056
+canonical	4	chore: foundation uplift baseline	2026-09-01T06:34:05Z	chore/foundation-uplift-20260828-230544
+canonical	3	chore: foundation uplift baseline	2026-09-01T06:34:07Z	chore/foundation-uplift-20260828-225816
+aerocement-calc	4	chore: foundation uplift baseline	2026-09-01T06:33:31Z	chore/foundation-uplift-20260828-230544
+aerocement-calc	3	chore: foundation uplift baseline	2026-09-01T06:33:33Z	chore/foundation-uplift-20260828-225816
+aerocement-calc	1	chore: uplift v4 baseline	2026-09-01T06:33:35Z	chore/uplift-v4-20260828-020649
+openroot-foundation	3	chore: foundation uplift baseline	2026-09-01T06:34:36Z	chore/foundation-uplift-20260828-225816
+agape-une	4	chore: foundation uplift baseline	2026-09-01T06:33:43Z	chore/foundation-uplift-20260828-230544
+agape-une	3	chore: foundation uplift baseline	2026-09-01T06:33:45Z	chore/foundation-uplift-20260828-225816
+etaledger	4	chore: foundation uplift baseline	2026-09-01T06:34:09Z	chore/foundation-uplift-20260828-230544
+etaledger	3	chore: foundation uplift baseline	2026-09-01T06:34:11Z	chore/foundation-uplift-20260828-225816
+openroot-canon	4	chore: foundation uplift baseline	2026-09-01T06:34:32Z	chore/foundation-uplift-20260828-230544
+openroot-canon	3	chore: foundation uplift baseline	2026-09-01T06:34:34Z	chore/foundation-uplift-20260828-225816
+agape-primitives	1	chore: uplift v4 baseline	2026-09-01T06:33:41Z	chore/uplift-v4-20260828-020649
+skills-introduction-to-github	4	chore: foundation uplift baseline	2026-09-01T06:34:40Z	chore/foundation-uplift-20260828-225816
+jesseray718-archive	4	chore: foundation uplift baseline	2026-09-01T06:34:20Z	chore/foundation-uplift-20260828-230544
+jesseray718-archive	3	chore: foundation uplift baseline	2026-09-01T06:34:22Z	chore/foundation-uplift-20260828-225816
+kai-memory	4	chore: foundation uplift baseline	2026-09-01T06:34:24Z	chore/foundation-uplift-20260828-230544
+axiom-library	4	chore: foundation uplift baseline	2026-09-01T06:33:56Z	chore/foundation-uplift-20260828-230544
+axiom-library	3	chore: foundation uplift baseline	2026-09-01T06:33:59Z	chore/foundation-uplift-20260828-225816
+axiom-library	1	chore: uplift v4 baseline	2026-09-01T06:34:01Z	chore/uplift-v4-20260828-020649
+kai9000	4	chore: foundation uplift baseline	2026-09-01T06:34:28Z	chore/foundation-uplift-20260828-230544
+kai9000	3	chore: foundation uplift baseline	2026-09-01T06:34:30Z	chore/foundation-uplift-20260828-225816
+black-locust-rmh	1	chore: uplift v4 baseline	2026-09-01T06:34:03Z	chore/uplift-v4-20260828-020649
+AeroCement_Ecosystem	12	chore: repository baseline uplift (CI, governance, security)	2026-09-01T06:31:54Z	chore/uplift-baseline-20260828-234015
+AeroCement_Ecosystem	11	chore: foundation uplift baseline	2026-09-01T06:31:55Z	chore/foundation-uplift-20260828-230544
+AeroCement_Ecosystem	10	chore: foundation uplift baseline	2026-09-01T06:31:57Z	chore/foundation-uplift-20260828-225816
+AeroCement_Ecosystem	9	chore: foundation uplift (CI + OpenRabbitAI + governance)	2026-09-01T06:31:59Z	chore/foundation-uplift-20260828-224849
+AeroCement_Ecosystem	8	chore: uplift v4 baseline	2026-09-01T06:32:01Z	chore/uplift-v4-20260828-053524
+AeroCement_Ecosystem	7	chore: uplift v4 baseline	2026-09-01T06:32:03Z	chore/uplift-v4-20260828-020649
+AeroCement_Ecosystem	6	chore: uplift lite baseline	2026-09-01T06:32:05Z	chore/uplift-lite-20260828-015227
+AeroCement_Ecosystem	5	chore: uplift lite baseline	2026-09-01T06:32:07Z	chore/uplift-lite-20260828-012150
+AeroCement_Ecosystem	4	chore: uplift lite baseline	2026-09-01T06:32:08Z	chore/uplift-lite-20260828-011224
+AeroCement_Ecosystem	3	chore: uplift lite baseline	2026-09-01T06:32:10Z	chore/uplift-lite-20260827-231618
+AeroCement_Ecosystem	2	chore: uplift lite baseline	2026-09-01T06:32:12Z	chore/uplift-lite-20260827-231056
+AeroCement_Ecosystem	1	chore: foundation uplift (CI + OpenRabbitAI + governance)	2026-09-01T06:32:14Z	chore/foundation-uplift-20260827-205905
+Reticulum	7	chore: foundation uplift baseline	2026-09-01T06:33:04Z	chore/foundation-uplift-20260828-230544
+Reticulum	6	chore: foundation uplift baseline	2026-09-01T06:33:06Z	chore/foundation-uplift-20260828-225816
+Reticulum	5	chore: uplift lite baseline	2026-09-01T06:33:08Z	chore/uplift-lite-20260828-015227
+Reticulum	4	chore: uplift lite baseline	2026-09-01T06:33:10Z	chore/uplift-lite-20260828-012150
+Reticulum	3	chore: uplift lite baseline	2026-09-01T06:33:12Z	chore/uplift-lite-20260828-011224
+Reticulum	2	chore: uplift lite baseline	2026-09-01T06:33:14Z	chore/uplift-lite-20260827-231618
+Reticulum	1	chore: uplift lite baseline	2026-09-01T06:33:17Z	chore/uplift-lite-20260827-231056
+RNode_Firmware	7	chore: foundation uplift baseline	2026-09-01T06:32:51Z	chore/foundation-uplift-20260828-230544
+RNode_Firmware	6	chore: foundation uplift baseline	2026-09-01T06:32:54Z	chore/foundation-uplift-20260828-225816
+RNode_Firmware	4	chore: uplift lite baseline	2026-09-01T06:32:56Z	chore/uplift-lite-20260828-012150
+RNode_Firmware	3	chore: uplift lite baseline	2026-09-01T06:32:58Z	chore/uplift-lite-20260828-011224
+RNode_Firmware	2	chore: uplift lite baseline	2026-09-01T06:33:00Z	chore/uplift-lite-20260827-231618
+RNode_Firmware	1	chore: uplift lite baseline	2026-09-01T06:33:02Z	chore/uplift-lite-20260827-231056
+LXMF	7	chore: foundation uplift baseline	2026-09-01T06:32:16Z	chore/foundation-uplift-20260828-230544
+LXMF	6	chore: foundation uplift baseline	2026-09-01T06:32:18Z	chore/foundation-uplift-20260828-225816
+LXMF	5	chore: uplift lite baseline	2026-09-01T06:32:20Z	chore/uplift-lite-20260828-015227
+LXMF	4	chore: uplift lite baseline	2026-09-01T06:32:22Z	chore/uplift-lite-20260828-012150
+LXMF	3	chore: uplift lite baseline	2026-09-01T06:32:24Z	chore/uplift-lite-20260828-011224
+LXMF	2	chore: uplift lite baseline	2026-09-01T06:32:26Z	chore/uplift-lite-20260827-231618
+LXMF	1	chore: uplift lite baseline	2026-09-01T06:32:29Z	chore/uplift-lite-20260827-231056
+tinyGS	2	chore: foundation uplift baseline	2026-09-01T06:34:43Z	chore/foundation-uplift-20260828-230544
+tinyGS	1	chore: foundation uplift baseline	2026-09-01T06:34:45Z	chore/foundation-uplift-20260828-225816

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # [canary] paste intact
 # db_recon.py v2 — PERMACULTURE-GATED SQLite inventory + keyword retrieval.
 #   STAGE 1 [observe]   : find candidate DBs, verify paths exist, no reads

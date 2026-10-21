@@ -1,0 +1,47 @@
+name: OpenRoot Permaculture CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: permaculture-ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate router and design contexts
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run OpenRoot Permaculture CI
+        run: |
+          python3 scripts/permaculture_ci.py
+
+      - name: Run router unit tests
+        run: |
+          python3 -m unittest discover -s tests -p 'test_*.py' -v
+
+      - name: Upload read-only reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: permaculture-ci-reports
+          path: .ci/permaculture/
+          if-no-files-found: warn
+          retention-days: 14

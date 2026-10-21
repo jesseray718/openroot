@@ -1,0 +1,13 @@
+{
+  "decision_id": "example-routing-001",
+  "input_id": "example-artifact-001",
+  "pathway": "local_fts5_then_embedding_rerank",
+  "constraints": [
+    "local-first",
+    "no private source export",
+    "human promotion required"
+  ],
+  "validation_command": "python3 -m unittest discover -s tests",
+  "status": "candidate",
+  "receipt_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+}

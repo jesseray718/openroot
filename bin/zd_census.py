@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # [canary] paste intact
 # zd_census.py — the REAL 0D/void census of the formal store.
 # Extracts full records matching disambiguated phrases (no hex collisions).

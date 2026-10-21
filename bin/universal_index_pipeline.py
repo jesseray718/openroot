@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # universal_index_pipeline.py — archives -> dedup -> SQLite index -> Q&A router (clean rewrite)
 # Jesse Ray / OpenRoot | v1.1 | rewrite-first: no nested patch layers, no f-string brace traps
 import os, sys, json, glob, sqlite3, hashlib, time

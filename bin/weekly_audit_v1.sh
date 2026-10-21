@@ -2,7 +2,9 @@
 set -eu
 export GIT_PAGER=cat PAGER=cat
 export OLLAMA_HOST=http://localhost:11434
-cd /home/jesse/openroot
+SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd) || exit 1
+REPO_ROOT=$(cd -- "$SCRIPT_DIR/.." && pwd) || exit 1
+cd "$REPO_ROOT" || exit 1
 echo "[canary-head] weekly_audit_v1 paste intact"
 
 echo "[stage-1] trend snapshot"

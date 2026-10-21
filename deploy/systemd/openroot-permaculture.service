@@ -1,0 +1,6 @@
+[Unit]
+Description=OpenRoot permaculture 12-principle orchestrator
+[Service]
+Type=oneshot
+WorkingDirectory=/home/jesse/openroot
+ExecStart=/home/jesse/openroot/bin/permaculture_orchestrator_v3.sh

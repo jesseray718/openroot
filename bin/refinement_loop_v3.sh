@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 set -eu
 export OLLAMA_HOST=http://localhost:11434
-cd /home/jesse/openroot
+SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd) || exit 1
+REPO_ROOT=$(cd -- "$SCRIPT_DIR/.." && pwd) || exit 1
+cd "$REPO_ROOT" || exit 1
+SQLITE_PARAMS=(python3 bin/sqlite_params.py)
 
 DOC="${1:?usage: refinement_loop_v3.sh <doc_ref> '<rubric>' [max_attempts]}"
 RUBRIC="${2:?rubric required}"
@@ -38,12 +41,15 @@ GRADER FIX REQUIRED: ${FIX:-none}"
 FIX: grader offline"
 
   printf '[grade] %s\n' "$(echo "$GRADE" | tr '\n' ' ')"
+  SAFE_GRADE=$(printf '%s' "$GRADE" | tr '\n' ' ')
 
   BEST="$CONTENT"
 
-  if echo "$GRADE" | grep -q "^VERDICT: PASS"; then
+  if printf '%s\n' "$GRADE" | grep -qxF "VERDICT: PASS"; then
     ACCEPTED=1
-    sqlite3 data/refinement.db "INSERT INTO iterations (doc_ref, attempt, attempt_path, grade, accepted) VALUES ('$DOC', $ATTEMPT, '$ATTEMPT_PATH', '$(echo "$GRADE" | tr "'" '"')', 1)"
+    "${SQLITE_PARAMS[@]}" data/refinement.db \
+      "INSERT INTO iterations (doc_ref, attempt, attempt_path, grade, accepted) VALUES (?, ?, ?, ?, 1)" \
+      "$DOC" "$ATTEMPT" "$ATTEMPT_PATH" "$SAFE_GRADE"
     cp "$ATTEMPT_PATH" "docs/${DOC}.md"
     printf '[banked] docs/%s.md after %s attempt(s)\n' "$DOC" "$ATTEMPT"
     break
@@ -51,12 +57,16 @@ FIX: grader offline"
     FIX=$(echo "$GRADE" | grep "^FIX:" | sed 's/^FIX: *//' | grep -v "^NONE$" | head -1 || true)
     [ -z "$FIX" ] && FIX="tighten accuracy against rubric"
     printf '[fix] %s\n' "${FIX:0:100}"
-    sqlite3 data/refinement.db "INSERT INTO iterations (doc_ref, attempt, attempt_path, grade) VALUES ('$DOC', $ATTEMPT, '$ATTEMPT_PATH', '$(echo "$GRADE" | tr "'" '"')')"
+    "${SQLITE_PARAMS[@]}" data/refinement.db \
+      "INSERT INTO iterations (doc_ref, attempt, attempt_path, grade) VALUES (?, ?, ?, ?)" \
+      "$DOC" "$ATTEMPT" "$ATTEMPT_PATH" "$SAFE_GRADE"
   fi
 done
 
 if [ "$ACCEPTED" -eq 0 ]; then
-  sqlite3 data/lessons.db "INSERT INTO lessons (domain,mistake,root_cause,correction,cost,source) VALUES ('refinement_loop','max attempts without pass on $DOC','grader format drift or rubric too strict','use stricter output-format constraint in grader prompt, relax rubric or increase MAX','$MAX attempts','session');"
+  "${SQLITE_PARAMS[@]}" data/lessons.db \
+    "INSERT INTO lessons (domain,mistake,root_cause,correction,cost,source) VALUES ('refinement_loop', ?, 'grader format drift or rubric too strict', 'use stricter output-format constraint in grader prompt, relax rubric or increase MAX', ?, 'session')" \
+    "max attempts without pass on $DOC" "$MAX attempts"
   printf '[held] %s attempts, no pass - latest: data/%s_attempt%s.txt\n' "$MAX" "$DOC" "$ATTEMPT"
   exit 1
 fi

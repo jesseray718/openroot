@@ -1,0 +1,17 @@
+[HIVE] qwen7b_coder: qwen2.5-coder:7b -> qwen2.5:3b (certified 3.0b, 1480.9ms)
+[BOOT] 4 tasks, 5 rounds, 6 providers
+[PREFLIGHT] ollama_base=http://localhost:11434
+[PREFLIGHT] ollama ALIVE — 5 models loaded
+[PREFLIGHT] openrouter model: cohere/north-mini-code:free (auto via unauth list (24 free))
+[PREFLIGHT] gemini: armed
+[PREFLIGHT] lumo_manual: armed (paste bridge)
+
+===== ROUTER ROUND 1/5 =====
+Traceback (most recent call last):
+  File "/home/jesse/openroot/bin/multi_router.py", line 275, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/jesse/openroot/bin/multi_router.py", line 248, in main
+    for f in sorted(os.listdir(ob))[-3:]:
+                    ^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/jesse/openroot/lumo_lane/outbox'

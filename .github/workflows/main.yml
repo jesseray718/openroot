@@ -1,0 +1,9 @@
+name: OpenRoot Node CI
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run Deploy Verification
+        run: python3 bin/openroot_master_deploy.py

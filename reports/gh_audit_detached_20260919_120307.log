@@ -1,0 +1,20 @@
+nohup: ignoring input
+[gate] start 2026-09-19T17:03:07Z CONFIRM=0 -> /home/jesse/openroot/reports/gh_audit_20260919_120307
+[banked] inventory: 46 repos (default branches resolved, not assumed)
+[gate] scanning openroot
+[gate] scanning und-protocol
+[gate] scanning openroot-spoke-template
+[gate] scanning agape-ipfs
+[gate] scanning wisdom-scaffold
+[gate] scanning agapenet
+[gate] scanning agape-coordination
+[gate] scanning openroot-product
+[gate] scanning openroot-ecosystem
+[gate] scanning jesseray718
+[gate] scanning OpenCell-Thermal-System
+[gate] scanning fractallattice
+[gate] scanning oscillation-mesh
+[gate] scanning agaperesonance
+[gate] scanning jesseray718.github.io
+[gate] scanning aerocement
+[held] DIED at line 33 (exit 1)

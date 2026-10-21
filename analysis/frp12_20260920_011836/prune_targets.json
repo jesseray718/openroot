@@ -1,0 +1,77 @@
+{
+  "chore/uplift-v4-20260828-053524": {
+    "repo": "AeroCement_Ecosystem",
+    "proof": "tree dupe 65ee14422647",
+    "kept": "chore/uplift-v4-20260828-020649"
+  },
+  "chore/uplift-v4-20260828-020649": {
+    "repo": "agape-ipfs",
+    "proof": "contained ahead_by=0",
+    "kept": "(already in default)"
+  },
+  "feat/profile-clarity": {
+    "repo": "jesseray718",
+    "proof": "contained ahead_by=0",
+    "kept": "(already in default)"
+  },
+  "thesis-restructure": {
+    "repo": "aerocement",
+    "proof": "contained ahead_by=0",
+    "kept": "(already in default)"
+  },
+  "agape/add-coordination-theorem": {
+    "repo": "une",
+    "proof": "contained ahead_by=0",
+    "kept": "(already in default)"
+  },
+  "copilot/restructure-openroot-thesis-repo": {
+    "repo": "openroot-thesis",
+    "proof": "contained ahead_by=0",
+    "kept": "(already in default)"
+  },
+  "copilot/squash-and-merge-green-checks": {
+    "repo": "openroot-thesis",
+    "proof": "contained ahead_by=0",
+    "kept": "(already in default)"
+  },
+  "chore/foundation-uplift-20260828-230544": {
+    "repo": "openroot-canon",
+    "proof": "tree dupe 2ef121999a6b",
+    "kept": "chore/foundation-uplift-20260828-225816"
+  },
+  "main": {
+    "repo": "fractallattice",
+    "proof": "tree dupe 7bde251b09a1",
+    "kept": "ci/shared-python-quality"
+  },
+  "chore/uplift-lite-20260828-011224": {
+    "repo": "AeroCement_Ecosystem",
+    "proof": "tree dupe 7ca792a7d684",
+    "kept": "chore/uplift-lite-20260827-231056"
+  },
+  "chore/uplift-lite-20260828-012150": {
+    "repo": "AeroCement_Ecosystem",
+    "proof": "tree dupe 7ca792a7d684",
+    "kept": "chore/uplift-lite-20260827-231056"
+  },
+  "chore/uplift-lite-20260828-015227": {
+    "repo": "AeroCement_Ecosystem",
+    "proof": "tree dupe 7ca792a7d684",
+    "kept": "chore/uplift-lite-20260827-231056"
+  },
+  "chore/uplift-lite-20260827-231618": {
+    "repo": "AeroCement_Ecosystem",
+    "proof": "tree dupe 7ca792a7d684",
+    "kept": "chore/uplift-lite-20260827-231056"
+  },
+  "chore/foundation-uplift-20260828-225816": {
+    "repo": "skills-introduction-to-github",
+    "proof": "tree dupe a409a08a3223",
+    "kept": "dontknow"
+  },
+  "chore/foundation-uplift-20260828-224849": {
+    "repo": "AeroCement_Ecosystem",
+    "proof": "tree dupe 2ed7aa57d89d",
+    "kept": "chore/foundation-uplift-20260827-205905"
+  }
+}

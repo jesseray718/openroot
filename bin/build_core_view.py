@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # build_core_view.py — consolidate priority docs into single self-contained HTML view
 # Jesse Ray / OpenRoot v1.0 | regenerate anytime; idempotent output path
 import os, re, html, time

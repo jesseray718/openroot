@@ -1,0 +1,190 @@
+#!/usr/bin/env python3
+"""OpenRoot recall v3 — node-detecting canonical index.
+Works identically on Termux (A15) and OptiPlex. Each node scans itself,
+then pulls the OTHER node's index over SSH and merges into one truth.
+Usage: recall <term> | recall rebuild | recall --nodes | recall --dupes"""
+
+import sys, os, sqlite3, hashlib, ast, json, subprocess
+from pathlib import Path
+
+# --- node detection ---
+IS_TERMUX = os.path.isdir("/data/data/com.termux")
+NODE = "a15" if IS_TERMUX else "optiplex"
+
+if IS_TERMUX:
+    LOCAL_ROOTS = [
+        Path("/data/data/com.termux/files/home"),
+        Path("/storage/emulated/0/openroot"),
+    ]
+    REMOTE_HOST = "optiplex"
+    REMOTE_DB = "/home/jesse/openroot/data/canonical_index.db"
+else:
+    LOCAL_ROOTS = [
+        Path("/home/jesse/src"),
+        Path("/home/jesse/openroot"),
+    ]
+    REMOTE_HOST = None  # optiplex pulls from nobody; phone is the merger
+    REMOTE_DB = None
+
+DB_PATH = Path(os.path.expanduser("~/openroot/data/mesh_index.db"))
+EXCLUDE = {".git", "__pycache__", "build", ".egg-info", "salvage",
+           "node_modules", "venv", "dist", "library", ".cache"}
+
+def sha256_file(p):
+    h = hashlib.sha256()
+    try:
+        with open(p, "rb") as f:
+            for chunk in iter(lambda: f.read(65536), b""):
+                h.update(chunk)
+        return h.hexdigest()
+    except (IOError, PermissionError):
+        return None
+
+def extract_functions(text):
+    try:
+        tree = ast.parse(text)
+        return ",".join(n.name for n in tree.body
+                        if isinstance(n, (ast.FunctionDef, ast.AsyncFunctionDef))
+                        and not n.name.startswith("_"))
+    except Exception:
+        return None
+
+def scan_local(c):
+    n = 0
+    for root in LOCAL_ROOTS:
+        if not root.exists():
+            print(f"[warn] root missing: {root}")
+            continue
+        for py in root.rglob("*.py"):
+            if any(part in EXCLUDE for part in py.parts):
+                continue
+            if not py.is_file():
+                continue
+            h = sha256_file(py)
+            if h is None:
+                continue
+            st = py.stat()
+            funcs = extract_functions(py.read_text(errors="ignore"))
+            c.execute("INSERT OR REPLACE INTO files VALUES (?,?,?,?,?,?,1)",
+                      (str(py), h, st.st_size, st.st_mtime, NODE, funcs))
+            n += 1
+    print(f"[scan] {NODE}: {n} py files indexed")
+    return n
+
+def pull_remote(c):
+    """Pull the other node's canonical index over SSH and merge."""
+    if REMOTE_HOST is None:
+        return 0
+    if NODE == "a15":
+        cmd = ["ssh", "-o", "ConnectTimeout=10", REMOTE_HOST,
+               f"sqlite3 -json {REMOTE_DB} "
+               "'SELECT path, hash FROM files WHERE is_canonical=1'"]
+    else:
+        return 0
+    try:
+        r = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
+        if r.returncode != 0 or not r.stdout.strip():
+            print(f"[warn] remote pull failed: {r.stderr.strip()[:120]}")
+            return 0
+        rows = json.loads(r.stdout)
+        for row in rows:
+            c.execute("INSERT OR REPLACE INTO files VALUES (?,?,?,?,?,?,1)",
+                      (row["path"], row["hash"], 0, 0, "optiplex", None))
+        print(f"[pull] optiplex: {len(rows)} canonical files merged")
+        return len(rows)
+    except Exception as e:
+        print(f"[warn] remote pull unavailable: {e}")
+        return 0
+
+def rebuild():
+    DB_PATH.parent.mkdir(parents=True, exist_ok=True)
+    conn = sqlite3.connect(DB_PATH)
+    c = conn.cursor()
+    c.execute("DROP TABLE IF EXISTS files")
+    c.execute("""CREATE TABLE files (
+        path TEXT PRIMARY KEY, hash TEXT NOT NULL, size INTEGER,
+        mtime REAL, node TEXT NOT NULL, function_names TEXT,
+        is_canonical INTEGER DEFAULT 1)""")
+    scan_local(c)
+    pull_remote(c)
+    # dedup across nodes: prefer optiplex, then shortest path
+    for (h, paths) in c.execute(
+            "SELECT hash, GROUP_CONCAT(path,'|') FROM files GROUP BY hash").fetchall():
+        cands = paths.split("|")
+        def key(p):
+            node = "optiplex" if p.startswith("/home/jesse") else "a15"
+            return (0 if node == "optiplex" else 1, len(p))
+        canon = sorted(cands, key=key)[0]
+        for p in cands:
+            c.execute("UPDATE files SET is_canonical=? WHERE path=?",
+                      (1 if p == canon else 0, p))
+    conn.commit()
+    total = c.execute("SELECT COUNT(*) FROM files").fetchone()[0]
+    uniq = c.execute("SELECT COUNT(*) FROM files WHERE is_canonical=1").fetchone()[0]
+    both = c.execute("""SELECT COUNT(DISTINCT hash) FROM files
+                        WHERE hash IN (SELECT hash FROM files WHERE node='optiplex')
+                        AND hash IN (SELECT hash FROM files WHERE node='a15')""").fetchone()[0]
+    conn.close()
+    print(f"[rebuild] {total} files, {uniq} canonical, {total-uniq} clones")
+    if both:
+        print(f"[rebuild] {both} files exist on BOTH nodes (mesh redundancy)")
+    print(f"[rebuild] index: {DB_PATH}")
+
+def search(term):
+    conn = sqlite3.connect(DB_PATH)
+    c = conn.cursor()
+    pat = f"%{term.lower()}%"
+    rows = c.execute("""SELECT node, path, function_names FROM files
+                        WHERE is_canonical=1 AND
+                        (LOWER(path) LIKE ? OR LOWER(function_names) LIKE ?)
+                        ORDER BY node, LENGTH(path)""", (pat, pat)).fetchall()
+    conn.close()
+    if not rows:
+        print(f"[recall] no canonical matches for '{term}'")
+        return
+    print(f"[recall] {len(rows)} canonical match(es) for '{term}':\n")
+    for node, path, funcs in rows[:25]:
+        print(f"  [{node}] {path}")
+        if funcs:
+            fl = funcs.split(",")
+            show = ", ".join(fl[:4]) + (f" (+{len(fl)-4})" if len(fl) > 4 else "")
+            print(f"         fn: {show}")
+    if len(rows) > 25:
+        print(f"  ... and {len(rows)-25} more")
+
+def nodes():
+    conn = sqlite3.connect(DB_PATH)
+    c = conn.cursor()
+    for (node, count) in c.execute(
+            "SELECT node, COUNT(*) FROM files GROUP BY node"):
+        canon = c.execute("SELECT COUNT(*) FROM files WHERE node=? AND is_canonical=1",
+                           (node,)).fetchone()[0]
+        print(f"  {node}: {count} files, {canon} canonical")
+    conn.close()
+
+def dupes():
+    conn = sqlite3.connect(DB_PATH)
+    c = conn.cursor()
+    rows = c.execute("""SELECT hash, COUNT(*) n, GROUP_CONCAT(node,'|'), GROUP_CONCAT(path,'|')
+                        FROM files GROUP BY hash HAVING n>1
+                        ORDER BY n DESC LIMIT 20""").fetchall()
+    conn.close()
+    if not rows:
+        print("[dupes] none")
+        return
+    for h, n, nd, ps in rows:
+        print(f"  {n}x [{nd}] {h[:12]}")
+        for p in ps.split("|"):
+            print(f"      {p}")
+
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print(__doc__)
+    elif sys.argv[1] == "rebuild":
+        rebuild()
+    elif sys.argv[1] == "--nodes":
+        nodes()
+    elif sys.argv[1] == "--dupes":
+        dupes()
+    else:
+        search(sys.argv[1])

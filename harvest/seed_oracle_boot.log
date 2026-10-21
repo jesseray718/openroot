@@ -1,0 +1,6 @@
+2026-09-15T22:05:00Z boot_observe start pid=9194
+python3: can't open file '/data/data/com.termux/files/home/une/computational_flow/daemons/hygiene_observe.py': [Errno 2] No such file or directory
+2026-09-15T22:05:07Z boot_observe end
+2026-09-18T02:40:23Z boot_observe start pid=10128
+python3: can't open file '/data/data/com.termux/files/home/une/computational_flow/daemons/hygiene_observe.py': [Errno 2] No such file or directory
+2026-09-18T02:40:30Z boot_observe end

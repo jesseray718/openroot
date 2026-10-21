@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # asset_preclassify.py — deterministic keyword routing of the inventory manifest
 # classifies the obvious, isolates the ambiguous for 7B batches | read-only
 import json, glob, os, hashlib, sys

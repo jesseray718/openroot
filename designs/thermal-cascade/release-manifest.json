@@ -1,0 +1,19 @@
+{
+  "name": "thermal-cascade-docs-v0.3.1",
+  "commit": "6349a90df7c418f2b5a5ba56fa18050633a4f5b4",
+  "tag": "v0.3.1-thermal-cascade-docs",
+  "release_state": "draft",
+  "allowed_paths": [
+    "designs/thermal-cascade/PROVENANCE.md",
+    "designs/thermal-cascade/SYSTEM.md",
+    "designs/thermal-cascade/THEORY_AND_EVIDENCE.md"
+  ],
+  "milestone": 14,
+  "claim_boundary": "documentation and model provenance only",
+  "forbidden_claims": [
+    "measured performance",
+    "safety certification",
+    "field readiness",
+    "deployment readiness"
+  ]
+}

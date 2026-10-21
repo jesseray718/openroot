@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # SPDX-License-Identifier: GPL-3.0-or-later
 """knowledge_probe_v1.py — cross-ledger keyword search + theorem proof cache.
 
@@ -31,18 +32,19 @@ CLUSTERS = {
 }
 
 def q(ident):  # quote sqlite identifier
-    """Return an SQLite identifier with embedded quotes escaped."""
+    """Return an escaped SQLite identifier enclosed in double quotes."""
     return '"' + ident.replace('"', '""') + '"'
 
 def scan_dbs():
-    """Return concept-cluster matches from readable ledgers except the proof cache."""
+    """Return configured keyword-cluster matches from local SQLite ledgers."""
     hits = []
     for db in sorted(glob.glob(os.path.join(DATA_DIR, "*.db"))):
         if os.path.basename(db) == os.path.basename(CACHE_DB):
             continue  # v1.1: self-referential - theorem statements contain search terms
-        con = sqlite3.connect("file:%s?mode=ro" % db, uri=True)
-        con.row_factory = sqlite3.Row
+        con = None
         try:
+            con = sqlite3.connect("file:%s?mode=ro" % db, uri=True)
+            con.row_factory = sqlite3.Row
             tables = [r[0] for r in con.execute(
                 "SELECT name FROM sqlite_master WHERE type='table'")]
             for table in tables:
@@ -75,15 +77,15 @@ def scan_dbs():
                                 cluster=cluster, term=term,
                                 rowid="match %d" % n,
                                 snippet=snippet))
+        except sqlite3.Error as exc:
+            print("[held] skipping database %s: %s" % (db, exc))
         finally:
-            con.close()
+            if con is not None:
+                con.close()
     return hits
 
 def scan_files():
-    """Return text-file paths found by a bounded concept-cluster grep sweep.
-
-    Sweep failures are reported and produce an empty result.
-    """
+    """Bounded grep sweep of repo text (excludes .git, venv)."""
     pattern = "|".join(re.escape(t) for ts in CLUSTERS.values() for t in ts)
     cmd = ["grep", "-rilE", pattern, "--include=*.md", "--include=*.json",
            "--include=*.jsonl", "--include=*.py", "--include=*.sh",
@@ -97,7 +99,7 @@ def scan_files():
         return []
 
 def ollama(prompt, model, timeout=600):
-    """Send a nonstreaming generation request and return the response text."""
+    """Submit a prompt to a local Ollama model and return its response text."""
     payload = json.dumps({"model": model, "prompt": prompt, "stream": False})
     req = urllib.request.Request(OLLAMA_URL, data=payload.encode(),
                                  headers={"Content-Type": "application/json"})
@@ -105,7 +107,7 @@ def ollama(prompt, model, timeout=600):
         return json.loads(r.read())["response"]
 
 def ensure_cache():
-    """Initialize the proof cache and return its open SQLite connection."""
+    """Initialize the proof cache schema and return an open connection."""
     con = sqlite3.connect(CACHE_DB)
     con.row_factory = sqlite3.Row
     con.execute("""CREATE TABLE IF NOT EXISTS proofs (
@@ -116,10 +118,10 @@ def ensure_cache():
     return con
 
 def prove(statement):
-    """Return the cached or newly model-graded status for a statement.
+    """Return a cached or newly graded proof result for a statement.
 
-    Previously proved and failed statements are not recomputed. New results are
-    saved in the proof cache; model failures return an ``UNBANKED`` status.
+    Cached successful and failed results are not recomputed. Failures while
+    generating or grading a new proof produce an ``UNBANKED`` result.
     """
     tid = hashlib.sha256(statement.encode()).hexdigest()[:16]
     con = ensure_cache()
@@ -145,7 +147,8 @@ def prove(statement):
             "Reply first line VERDICT: PASS or VERDICT: FAIL, "
             "second line FIX: none or a correction.\nSTATEMENT: %s\nPROOF: %s"
             % (statement, draft), MODEL_GRADER)
-        status = "PROVED" if "PASS" in verdict.upper() else "FAILED"
+        first_line = verdict.splitlines()[0] if verdict.splitlines() else ""
+        status = "PROVED" if first_line == "VERDICT: PASS" else "FAILED"
         con.execute("INSERT OR REPLACE INTO proofs VALUES (?,?,?,?,?,?,?,?)",
             (tid, statement, status, draft, verdict, MODEL_BUILDER,
              hashlib.sha256(draft.encode()).hexdigest(),
@@ -161,7 +164,7 @@ def prove(statement):
         con.close()
 
 def main():
-    """Scan ledgers and files, exercise the proof cache, and write the probe report."""
+    """Scan local knowledge sources, exercise the proof cache, and write a report."""
     print("[stage 1] scanning sqlite ledgers in %s" % DATA_DIR)
     db_hits = scan_dbs()
     print("[stage 2] sweeping repo text files (%d ledger hits so far)"

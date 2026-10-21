@@ -1,0 +1,166 @@
+#!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
+"""superloop_core_v1.py — recall, compound, persist, publish.
+Sources: ~/.bash_history (tail N), tmux scrollback (live, unflushed), daemon state.
+Outputs: data/superloop_commands.jsonl (dedup, sha256-keyed),
+         data/superloop_chains.json (bigram/trigram mined),
+         context_bridge/superloop_STATE.md (publish target).
+Canary: [SUPERLOOPV1]
+"""
+import argparse, hashlib, json, re, subprocess, sys, time
+from collections import Counter
+from datetime import datetime, timezone
+from pathlib import Path
+
+OR = Path("/home/jesse/openroot")
+DATA, CTX, LOGS = OR/"data", OR/"context_bridge", OR/"logs"
+CMDLOG, CHAINS, STATE_MD = DATA/"superloop_commands.jsonl", DATA/"superloop_chains.json", CTX/"superloop_STATE.md"
+GIST_ID = "3ffffa18763e5cbfdb5c44cc23743f4b"
+HISTFILE = Path("/home/jesse/.bash_history")
+
+BUCKETS = [
+    ("bridge",   r"\b(ssh|scp)\b"),
+    ("gitops",   r"\b(git|gh)\b"),
+    ("model",    r"(ollama|localhost:11434|qwen)"),
+    ("author",   r"cat\s*<<|heredoc|EOF"),
+    ("exec",     r"^(python3?|bash|sh)\b|py_compile"),
+    ("assistant",r"\b(lumo|hive\.sh|nanobot|smart_router|bot_loop)\b"),
+    ("gate",     r"(stack_gate|team_gate|push_guard|grep\s+-q)"),
+    ("system",   r"\b(ps|pgrep|kill|nohup|crontab|df|free)\b"),
+    ("net",      r"\b(curl|wget|tailscale)\b"),
+]
+
+def classify(cmd):
+    for name, pat in BUCKETS:
+        if re.search(pat, cmd):
+            return name
+    return "other"
+
+def sha16(s):
+    return hashlib.sha256(s.encode()).hexdigest()[:16]
+
+def load_seen(limit=2000):
+    seen = set()
+    if CMDLOG.exists():
+        lines = CMDLOG.read_text(errors="replace").splitlines()[-limit:]
+        for ln in lines:
+            try:
+                seen.add(json.loads(ln)["sha"])
+            except Exception:
+                pass
+    return seen
+
+def recall(n):
+    cmds = []
+    # 1) flushed history
+    if HISTFILE.exists():
+        raw = HISTFILE.read_text(errors="replace").splitlines()
+        cmds = [l.strip() for l in raw if l.strip() and not l.startswith("#")]
+    # 2) tmux live scrollback (commands still un-flushed from SSH sessions)
+    try:
+        sess = subprocess.run(["tmux","ls"], capture_output=True, text=True, timeout=5)
+        for line in sess.stdout.splitlines():
+            sname = line.split(":")[0].strip()
+            if not sname:
+                continue
+            cap = subprocess.run(["tmux","capture-pane","-p","-S","-%d"%n,"-t",sname],
+                                 capture_output=True, text=True, timeout=5)
+            for l in cap.stdout.splitlines():
+                t = l.strip()
+                # heuristic: lines after a $ / green-host prompt; take plausible cmd heads
+                if re.match(r"^[a-z_./][\w./-]*\s?", t) and " " in t and not t.startswith(("default","Attached")):
+                    cmds.append(t)
+    except Exception:
+        pass
+    return cmds[-n:]
+
+def recall_write(cmds, seen):
+    new = 0
+    with CMDLOG.open("a") as f:
+        for c in cmds:
+            h = sha16(c)
+            if h in seen:
+                continue
+            seen.add(h)
+            f.write(json.dumps({"sha": h, "cmd": c, "bucket": classify(c),
+                                "ts": datetime.now(timezone.utc).isoformat()})+"\n")
+            new += 1
+    return new
+
+def mine_chains(cmds):
+    cls = [classify(c) for c in cmds]
+    bigrams = Counter(zip(cls, cls[1:]))
+    top_cmds = Counter(cmds).most_common(15)
+    out = {
+        "generated": datetime.now(timezone.utc).isoformat(),
+        "bucket_counts": dict(Counter(cls)),
+        "top_transitions": [{"from": a, "to": b, "count": n} for (a,b),n in bigrams.most_common(10)],
+        "top_commands": [{"cmd": c[:120], "count": n, "sha": sha16(c)} for c,n in top_cmds],
+        "recalled_n": len(cmds),
+    }
+    CHAINS.write_text(json.dumps(out, indent=2))
+    return out
+
+def daemon_state():
+    try:
+        out = subprocess.run(["pgrep","-af","python3.*bot_loop_v1.py"],
+                             capture_output=True, text=True, timeout=5)
+        procs = [l for l in out.stdout.splitlines() if "bot_loop_v1.py" in l]
+        return len(procs), procs
+    except Exception:
+        return 0, []
+
+def respawn_daemon():
+    bot = OR/"bot_loop_v1.py"
+    if not bot.exists():
+        return "[held] bot_loop_v1.py not found at repo root"
+    ts = time.strftime("%Y%m%d_%H%M%S")
+    log = LOGS/f"bot_{ts}.log"
+    subprocess.Popen(["nohup","python3",str(bot)], stdout=log.open("a"),
+                     stderr=subprocess.STDOUT, start_new_session=True)
+    return f"[banked] daemon respawned -> {log}"
+
+def publish(confirm):
+    nc, procs = daemon_state()
+    chains = json.loads(CHAINS.read_text()) if CHAINS.exists() else {}
+    bc = chains.get("bucket_counts", {})
+    body = [
+        "# SUPERLOOP STATE — %s" % datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "auto-regenerated by cron every 15 min; do not hand-edit.",
+        "",
+        "## Recall: last %d commands -> %s new banked (sha-dedup)" %
+            (chains.get("recalled_n",0), getattr(publish,"new",0)),
+        "## Buckets: %s" % json.dumps(bc),
+        "## Top transitions: %s" % json.dumps(chains.get("top_transitions",[])[:5]),
+        "## Daemon: bot_loop_v1.py %s" % ("ALIVE" if nc else "RESPAWNED"),
+        "## Writer: OptiPlex cron anchor / A15 read-only verify",
+        "",
+    ]
+    STATE_MD.write_text("\n".join(body))
+    if not confirm:
+        return "[held] STATE written locally; CONFIRM=1 publishes to gist"
+    r = subprocess.run(["gh","gist","edit",GIST_ID,"-f","STATE.md","-",str(STATE_MD)],
+                       capture_output=True, text=True)
+    return "[banked] gist published" if r.returncode==0 else "[FAIL] gist publish: "+r.stderr[:200]
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--recall", type=int, default=250)
+    ap.add_argument("--confirm", type=int, default=0)
+    a = ap.parse_args()
+    seen = load_seen()
+    cmds = recall(a.recall)
+    publish.new = recall_write(cmds, seen)
+    ch = mine_chains(cmds)
+    nc, _ = daemon_state()
+    print("[SUPERLOOPV1] recalled=%d new=%d buckets=%s" %
+          (a.recall, publish.new, json.dumps(ch["bucket_counts"])))
+    if nc == 0:
+        print(respawn_daemon())
+    else:
+        print("[banked] daemon alive (%d proc)" % nc)
+    print(publish(a.confirm))
+    print("[exit=0]")
+
+if __name__ == "__main__":
+    main()

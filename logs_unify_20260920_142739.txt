@@ -1,0 +1,16 @@
+=== MOBILE TO OPTIPLEX UNIFIER STARTED ===
+2026-09-20T19:27:40.278955+00:00
+[1/4] Checking SSH connectivity...
+OptiPlex: reachable
+[2/4] Syncing ledgers...
+  eta_moves.jsonl -> skipped local file missing
+  ideas.jsonl -> skipped local file missing
+  linux_command_persistence.jsonl -> skipped local file missing
+[3/4] Compiling sync metadata into ideas ledger...
+  appended hash= ac100a02c1b4
+[4/4] Triggering refinery (if connected)...
+  Refinery: skipped refinery worker not deployed
+=== UNIFICATION COMPLETE ===
+Duration: 1.04 s
+canary [unify-v2-ok]
+{"status":"complete","duration_s":1.04,"optiplex_reachable":true,"ledgers":[{"local":"/sdcard/openroot/thermo_ledger/eta_moves.jsonl","remote":"data/oracle_etha_ledger.jsonl","status":"skipped","reason":"local file missing"},{"local":"/sdcard/openroot/parallel_analysis/ledger/ideas.jsonl","remote":"data/parallel_ideas.jsonl","status":"skipped","reason":"local file missing"},{"local":"/sdcard/openroot/ledger/experiments/linux_command_persistence.jsonl","remote":"ledger/experiments/linux_command_persistence.jsonl","status":"skipped","reason":"local file missing"}],"refinery":{"status":"skipped","reason":"refinery worker not deployed"},"ledger_hash":"ac100a02c1b4f4578f46b37755daddc0dd7dc686d7f7d1f7cac2e3364db407f0"}

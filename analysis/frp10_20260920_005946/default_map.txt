@@ -1,0 +1,13 @@
+[default-map] 12 repos with non-main default:
+  openroot-product: default='master'(2026-09-19T20:23:15Z) main=absent => no main branch exists
+  kai-memory: default='master'(2026-09-19T20:23:06Z) main=absent => no main branch exists
+  fractallattice: default='master'(2026-09-19T20:22:59Z) main=2026-09-10T21:54:07Z => main stale vs default — keep default
+  etaledger: default='master'(2026-09-19T20:22:57Z) main=2026-08-16T03:04:15Z => main stale vs default — keep default
+  agaperesonance: default='master'(2026-09-19T20:22:52Z) main=absent => no main branch exists
+  agape-primitives: default='master'(2026-09-19T20:22:47Z) main=2026-08-25T02:15:38Z => main stale vs default — keep default
+  agape-ipfs: default='master'(2026-09-18T01:06:38Z) main=absent => no main branch exists
+  markor: default='master'(2026-09-01T06:36:55Z) main=absent => no main branch exists
+  Reticulum: default='master'(2026-08-30T07:07:56Z) main=absent => no main branch exists
+  RNode_Firmware: default='master'(2026-08-30T07:07:03Z) main=absent => no main branch exists
+  LXMF: default='master'(2026-08-29T10:53:44Z) main=absent => no main branch exists
+  firmware: default='develop'(2026-08-12T04:06:25Z) main=absent => no main branch exists

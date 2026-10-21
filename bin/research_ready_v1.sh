@@ -2,7 +2,9 @@
 set -eu
 export GIT_PAGER=cat PAGER=cat
 export OLLAMA_HOST=http://localhost:11434
-cd /home/jesse/openroot
+SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd) || exit 1
+REPO_ROOT=$(cd -- "$SCRIPT_DIR/.." && pwd) || exit 1
+cd "$REPO_ROOT" || exit 1
 echo "[canary-head] research_ready_v1 paste intact"
 
 echo "[stage-1] research.db — claims ledger (assert nothing you have not measured)"
@@ -13,7 +15,8 @@ CREATE TABLE IF NOT EXISTS claims (
   status TEXT DEFAULT 'asserted',  -- asserted|measured|partially_measured|falsified
   measurement_protocol TEXT, instrument TEXT,
   uncertainty_pct REAL, target_metric TEXT,
-  lit_anchor TEXT);                 -- nearest published result to compare against
+  lit_anchor TEXT,                  -- nearest published result to compare against
+  UNIQUE (subsystem, claim));
 CREATE TABLE IF NOT EXISTS manuscripts (
   id INTEGER PRIMARY KEY, subsystem TEXT UNIQUE, path TEXT, stage TEXT DEFAULT 'skeleton');
 CREATE TABLE IF NOT EXISTS experiments (
@@ -21,6 +24,17 @@ CREATE TABLE IF NOT EXISTS experiments (
   subsystem TEXT, protocol TEXT, hypothesis TEXT,
   independent_vars TEXT, dependent_vars TEXT,
   instrument TEXT, calibration_std TEXT, notes TEXT, outcome TEXT DEFAULT 'planned');
+SQL
+for COLUMN_DEF in "instrument TEXT" "lit_anchor TEXT" "target_metric TEXT"; do
+  COLUMN=${COLUMN_DEF%% *}
+  if ! sqlite3 data/research.db "PRAGMA table_info(claims);" | cut -d'|' -f2 | grep -qxF "$COLUMN"; then
+    sqlite3 data/research.db "ALTER TABLE claims ADD COLUMN $COLUMN_DEF;"
+  fi
+done
+sqlite3 data/research.db <<'SQL'
+DELETE FROM claims
+WHERE id NOT IN (SELECT MIN(id) FROM claims GROUP BY subsystem, claim);
+CREATE UNIQUE INDEX IF NOT EXISTS idx_claims_identity ON claims(subsystem, claim);
 SQL
 echo "   [banked] schema live"
 
@@ -73,10 +87,10 @@ fi
 echo "[stage-3] generate peer-review manuscript skeletons (IEEE/Elsevier structure)"
 mkdir -p docs/research
 gen_ms () {
-  SUB="$1"; SLUG="$2"; FILE="docs/research/${SLUG}.md"
+  TITLE="$1"; SUB="$2"; SLUG="$3"; FILE="docs/research/${SLUG}.md"
   [ -f "$FILE" ] && { echo "   [skip] $FILE exists"; return; }
   cat > "$FILE" <<MS
-# ${SUB}: Measurement Protocol and Results
+# ${TITLE}: Measurement Protocol and Results
 
 **Status:** manuscript skeleton — every claim herein awaits its experiment
 **Claims register:** data/research.db, subsystem='${SUB}'
@@ -114,18 +128,20 @@ gen_ms () {
 ## References
 [Bibliography — Zotero/doikeys, GPL-3.0 code, CC-BY-SA-4.0 doc]
 MS
-  sqlite3 data/research.db "INSERT OR REPLACE INTO manuscripts (subsystem,path,stage) VALUES ('$SUB','$FILE','skeleton');"
+  python3 bin/sqlite_params.py data/research.db \
+    "INSERT OR REPLACE INTO manuscripts (subsystem,path,stage) VALUES (?, ?, 'skeleton')" \
+    "$SUB" "$FILE"
   echo "   [banked] $FILE"
 }
-gen_ms "OpenCell Aerocement Solar Absorber" "opencell-absorber"
-gen_ms "Thermal Cascade Heat Balance" "cascade-heatbalance"
-gen_ms "Thixotropic Gel Stator Foam Quality" "thixo-foam"
-gen_ms "ARG Fiber Alkali Durability" "argf-durability"
-gen_ms "Double Stress-Skin Catenary Ferrocement Shell" "double-skin-catenary"
-gen_ms "Waterproofed Cardboard Membrane" "cardboard-membrane"
-gen_ms "Pallet-Frame Mesh Reflector" "dish-mesh-reflector"
-gen_ms "Tethered Buoyant Relay (Cloud Nine Scaled)" "cloud9-relay"
-gen_ms "Thermal Labyrinth Passive Cooling" "labyrinth-cooling"
+gen_ms "OpenCell Aerocement Solar Absorber" "opencell_mix" "opencell-absorber"
+gen_ms "Thermal Cascade Heat Balance" "cascade" "cascade-heatbalance"
+gen_ms "Thixotropic Gel Stator Foam Quality" "thixo_gel" "thixo-foam"
+gen_ms "ARG Fiber Alkali Durability" "argf" "argf-durability"
+gen_ms "Double Stress-Skin Catenary Ferrocement Shell" "double_skin" "double-skin-catenary"
+gen_ms "Waterproofed Cardboard Membrane" "cardboard_membrane" "cardboard-membrane"
+gen_ms "Pallet-Frame Mesh Reflector" "dish_mesh" "dish-mesh-reflector"
+gen_ms "Tethered Buoyant Relay (Cloud Nine Scaled)" "cloud9" "cloud9-relay"
+gen_ms "Thermal Labyrinth Passive Cooling" "labyrinth" "labyrinth-cooling"
 
 echo "[stage-4] hype-detector gate — the phrases that get papers desk-rejected"
 cat > bin/hype_gate.sh <<'HGATE'
@@ -138,9 +154,8 @@ while IFS= read -r LINE; do
   MATCH=$(grep -inE "$LINE" "$FILE" || true)
   if [ -n "$MATCH" ]; then echo "   [FAIL] $LINE"; echo "$MATCH"; CODE=1; fi
 done <<'BANNED'
->
 free energy|over.?unity|perpetual
-more than 100\\%|exceeds 100\\%|breakthrough|revolutionary
+more than 100%|exceeds 100%|breakthrough|revolutionary
 unprecedented|miracle|game.?changing.{0,20}efficien
 magna.?flux|zero.?point
 BANNED

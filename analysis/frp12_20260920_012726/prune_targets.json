@@ -1,0 +1,272 @@
+{
+  "agape-primitives:chore/uplift-v4-20260828-053524": {
+    "repo": "agape-primitives",
+    "branch": "chore/uplift-v4-20260828-053524",
+    "proof": "contained ahead_by=0"
+  },
+  "agape-crossover-key:chore/uplift-v4-20260828-053524": {
+    "repo": "agape-crossover-key",
+    "branch": "chore/uplift-v4-20260828-053524",
+    "proof": "contained ahead_by=0"
+  },
+  "agape-ipfs:chore/uplift-v4-20260828-020649": {
+    "repo": "agape-ipfs",
+    "branch": "chore/uplift-v4-20260828-020649",
+    "proof": "contained ahead_by=0"
+  },
+  "agape-coordination:chore/uplift-v4-20260828-053524": {
+    "repo": "agape-coordination",
+    "branch": "chore/uplift-v4-20260828-053524",
+    "proof": "contained ahead_by=0"
+  },
+  "jesseray718:feat/profile-clarity": {
+    "repo": "jesseray718",
+    "branch": "feat/profile-clarity",
+    "proof": "contained ahead_by=0"
+  },
+  "aerocement:chore/uplift-v4-20260828-053524": {
+    "repo": "aerocement",
+    "branch": "chore/uplift-v4-20260828-053524",
+    "proof": "contained ahead_by=0"
+  },
+  "aerocement:thesis-restructure": {
+    "repo": "aerocement",
+    "branch": "thesis-restructure",
+    "proof": "contained ahead_by=0"
+  },
+  "une:agape/add-coordination-theorem": {
+    "repo": "une",
+    "branch": "agape/add-coordination-theorem",
+    "proof": "contained ahead_by=0"
+  },
+  "openroot-thesis:copilot/restructure-openroot-thesis-repo": {
+    "repo": "openroot-thesis",
+    "branch": "copilot/restructure-openroot-thesis-repo",
+    "proof": "contained ahead_by=0"
+  },
+  "openroot-thesis:copilot/squash-and-merge-green-checks": {
+    "repo": "openroot-thesis",
+    "branch": "copilot/squash-and-merge-green-checks",
+    "proof": "contained ahead_by=0"
+  },
+  "oscillation-mesh:chore/uplift-v4-20260828-053524": {
+    "repo": "oscillation-mesh",
+    "branch": "chore/uplift-v4-20260828-053524",
+    "proof": "tree-dupe 0c5baf4e1f08 keep=chore/uplift-v4-20260828-020649"
+  },
+  "kai9000:chore/foundation-uplift-20260828-230544": {
+    "repo": "kai9000",
+    "branch": "chore/foundation-uplift-20260828-230544",
+    "proof": "tree-dupe 5b15fb861499 keep=chore/foundation-uplift-20260828-225816"
+  },
+  "kai9000:chore/uplift-v4-20260828-053524": {
+    "repo": "kai9000",
+    "branch": "chore/uplift-v4-20260828-053524",
+    "proof": "tree-dupe 111970d56bb2 keep=chore/uplift-v4-20260828-020649"
+  },
+  "kai-memory:chore/uplift-v4-20260828-053524": {
+    "repo": "kai-memory",
+    "branch": "chore/uplift-v4-20260828-053524",
+    "proof": "tree-dupe 5df50c41e2a2 keep=chore/uplift-v4-20260828-020649"
+  },
+  "jesseray718-archive:chore/foundation-uplift-20260828-230544": {
+    "repo": "jesseray718-archive",
+    "branch": "chore/foundation-uplift-20260828-230544",
+    "proof": "tree-dupe 0b890207835d keep=chore/foundation-uplift-20260828-225816"
+  },
+  "jesseray718-archive:chore/uplift-v4-20260828-053524": {
+    "repo": "jesseray718-archive",
+    "branch": "chore/uplift-v4-20260828-053524",
+    "proof": "tree-dupe 7b831ed95eb1 keep=chore/uplift-v4-20260828-020649"
+  },
+  "fractallattice:chore/foundation-uplift-20260828-230544": {
+    "repo": "fractallattice",
+    "branch": "chore/foundation-uplift-20260828-230544",
+    "proof": "tree-dupe f9d9319a7191 keep=chore/foundation-uplift-20260828-225816"
+  },
+  "fractallattice:chore/uplift-v4-20260828-053524": {
+    "repo": "fractallattice",
+    "branch": "chore/uplift-v4-20260828-053524",
+    "proof": "tree-dupe 9d956ece87de keep=chore/uplift-v4-20260828-020649"
+  },
+  "fractallattice:main": {
+    "repo": "fractallattice",
+    "branch": "main",
+    "proof": "tree-dupe 7bde251b09a1 keep=ci/shared-python-quality"
+  },
+  "etaledger:chore/foundation-uplift-20260828-230544": {
+    "repo": "etaledger",
+    "branch": "chore/foundation-uplift-20260828-230544",
+    "proof": "tree-dupe ef057bc0e5f4 keep=chore/foundation-uplift-20260828-225816"
+  },
+  "etaledger:chore/uplift-v4-20260828-053524": {
+    "repo": "etaledger",
+    "branch": "chore/uplift-v4-20260828-053524",
+    "proof": "tree-dupe 4df55cbc9ee1 keep=chore/uplift-v4-20260828-020649"
+  },
+  "axiom-library:chore/foundation-uplift-20260828-230544": {
+    "repo": "axiom-library",
+    "branch": "chore/foundation-uplift-20260828-230544",
+    "proof": "tree-dupe f9b3508ba410 keep=chore/foundation-uplift-20260828-225816"
+  },
+  "axiom-library:chore/uplift-v4-20260828-053524": {
+    "repo": "axiom-library",
+    "branch": "chore/uplift-v4-20260828-053524",
+    "proof": "tree-dupe c093215a7f92 keep=chore/uplift-v4-20260828-020649"
+  },
+  "agapenet:chore/uplift-v4-20260828-053524": {
+    "repo": "agapenet",
+    "branch": "chore/uplift-v4-20260828-053524",
+    "proof": "tree-dupe 3b1c63417483 keep=chore/uplift-v4-20260828-020649"
+  },
+  "und-protocol:chore/uplift-v4-20260828-053524": {
+    "repo": "und-protocol",
+    "branch": "chore/uplift-v4-20260828-053524",
+    "proof": "tree-dupe e529d79fd1ec keep=chore/uplift-v4-20260828-020649"
+  },
+  "jesseray718:chore/uplift-v4-20260828-053524": {
+    "repo": "jesseray718",
+    "branch": "chore/uplift-v4-20260828-053524",
+    "proof": "tree-dupe 28860a9328c4 keep=chore/uplift-v4-20260828-020649"
+  },
+  "OpenCell-Thermal-System:chore/foundation-uplift-20260828-230544": {
+    "repo": "OpenCell-Thermal-System",
+    "branch": "chore/foundation-uplift-20260828-230544",
+    "proof": "tree-dupe ce305698027e keep=chore/foundation-uplift-20260828-225816"
+  },
+  "OpenCell-Thermal-System:chore/uplift-lite-20260828-011224": {
+    "repo": "OpenCell-Thermal-System",
+    "branch": "chore/uplift-lite-20260828-011224",
+    "proof": "tree-dupe 3030ad9d8e6b keep=chore/uplift-lite-20260827-231618"
+  },
+  "OpenCell-Thermal-System:chore/uplift-lite-20260828-012150": {
+    "repo": "OpenCell-Thermal-System",
+    "branch": "chore/uplift-lite-20260828-012150",
+    "proof": "tree-dupe 3030ad9d8e6b keep=chore/uplift-lite-20260827-231618"
+  },
+  "OpenCell-Thermal-System:chore/uplift-lite-20260828-015227": {
+    "repo": "OpenCell-Thermal-System",
+    "branch": "chore/uplift-lite-20260828-015227",
+    "proof": "tree-dupe 3030ad9d8e6b keep=chore/uplift-lite-20260827-231618"
+  },
+  "OpenCell-Thermal-System:chore/uplift-v4-20260828-053524": {
+    "repo": "OpenCell-Thermal-System",
+    "branch": "chore/uplift-v4-20260828-053524",
+    "proof": "tree-dupe c8502ea7d7e8 keep=chore/uplift-v4-20260828-020649"
+  },
+  "aerocement:chore/uplift-lite-20260827-231618": {
+    "repo": "aerocement",
+    "branch": "chore/uplift-lite-20260827-231618",
+    "proof": "tree-dupe cd82eba31843 keep=chore/uplift-lite-20260827-231056"
+  },
+  "aerocement:chore/uplift-lite-20260828-011224": {
+    "repo": "aerocement",
+    "branch": "chore/uplift-lite-20260828-011224",
+    "proof": "tree-dupe cd82eba31843 keep=chore/uplift-lite-20260827-231056"
+  },
+  "aerocement:chore/uplift-lite-20260828-012150": {
+    "repo": "aerocement",
+    "branch": "chore/uplift-lite-20260828-012150",
+    "proof": "tree-dupe cd82eba31843 keep=chore/uplift-lite-20260827-231056"
+  },
+  "aerocement:chore/uplift-lite-20260828-015227": {
+    "repo": "aerocement",
+    "branch": "chore/uplift-lite-20260828-015227",
+    "proof": "tree-dupe cd82eba31843 keep=chore/uplift-lite-20260827-231056"
+  },
+  "canonical:chore/foundation-uplift-20260828-230544": {
+    "repo": "canonical",
+    "branch": "chore/foundation-uplift-20260828-230544",
+    "proof": "tree-dupe 856339059abb keep=chore/foundation-uplift-20260828-225816"
+  },
+  "canonical:chore/uplift-v4-20260828-053524": {
+    "repo": "canonical",
+    "branch": "chore/uplift-v4-20260828-053524",
+    "proof": "tree-dupe 8e1dc6560fa0 keep=chore/uplift-v4-20260828-020649"
+  },
+  "aerocement-calc:chore/foundation-uplift-20260828-230544": {
+    "repo": "aerocement-calc",
+    "branch": "chore/foundation-uplift-20260828-230544",
+    "proof": "tree-dupe f74117dbc245 keep=chore/foundation-uplift-20260828-225816"
+  },
+  "une:chore/uplift-v4-20260828-053524": {
+    "repo": "une",
+    "branch": "chore/uplift-v4-20260828-053524",
+    "proof": "tree-dupe d865260dd47c keep=chore/uplift-v4-20260828-020649"
+  },
+  "renaissance-protocol:chore/uplift-v4-20260828-053524": {
+    "repo": "renaissance-protocol",
+    "branch": "chore/uplift-v4-20260828-053524",
+    "proof": "tree-dupe 0e6e7b8dffa1 keep=chore/uplift-v4-20260828-020649"
+  },
+  "openroot-foundation:chore/uplift-v4-20260828-053524": {
+    "repo": "openroot-foundation",
+    "branch": "chore/uplift-v4-20260828-053524",
+    "proof": "tree-dupe 42b030e9210a keep=chore/uplift-v4-20260828-020649"
+  },
+  "agape-une:chore/foundation-uplift-20260828-230544": {
+    "repo": "agape-une",
+    "branch": "chore/foundation-uplift-20260828-230544",
+    "proof": "tree-dupe c0131a3956dc keep=chore/foundation-uplift-20260828-225816"
+  },
+  "agape-une:chore/uplift-v4-20260828-053524": {
+    "repo": "agape-une",
+    "branch": "chore/uplift-v4-20260828-053524",
+    "proof": "tree-dupe d2e39ff339ea keep=chore/uplift-v4-20260828-020649"
+  },
+  "openroot-canon:chore/foundation-uplift-20260828-230544": {
+    "repo": "openroot-canon",
+    "branch": "chore/foundation-uplift-20260828-230544",
+    "proof": "tree-dupe 2ef121999a6b keep=chore/foundation-uplift-20260828-225816"
+  },
+  "openroot-canon:chore/uplift-v4-20260828-053524": {
+    "repo": "openroot-canon",
+    "branch": "chore/uplift-v4-20260828-053524",
+    "proof": "tree-dupe 604a21163a80 keep=chore/uplift-v4-20260828-020649"
+  },
+  "skills-introduction-to-github:chore/foundation-uplift-20260828-225816": {
+    "repo": "skills-introduction-to-github",
+    "branch": "chore/foundation-uplift-20260828-225816",
+    "proof": "tree-dupe a409a08a3223 keep=dontknow"
+  },
+  "skills-introduction-to-github:chore/uplift-v4-20260828-053524": {
+    "repo": "skills-introduction-to-github",
+    "branch": "chore/uplift-v4-20260828-053524",
+    "proof": "tree-dupe 43bd70bad317 keep=chore/uplift-v4-20260828-020649"
+  },
+  "black-locust-rmh:chore/uplift-v4-20260828-053524": {
+    "repo": "black-locust-rmh",
+    "branch": "chore/uplift-v4-20260828-053524",
+    "proof": "tree-dupe ae6556c7c191 keep=chore/uplift-v4-20260828-020649"
+  },
+  "AeroCement_Ecosystem:chore/foundation-uplift-20260828-224849": {
+    "repo": "AeroCement_Ecosystem",
+    "branch": "chore/foundation-uplift-20260828-224849",
+    "proof": "tree-dupe 2ed7aa57d89d keep=chore/foundation-uplift-20260827-205905"
+  },
+  "AeroCement_Ecosystem:chore/uplift-lite-20260827-231618": {
+    "repo": "AeroCement_Ecosystem",
+    "branch": "chore/uplift-lite-20260827-231618",
+    "proof": "tree-dupe 7ca792a7d684 keep=chore/uplift-lite-20260827-231056"
+  },
+  "AeroCement_Ecosystem:chore/uplift-lite-20260828-011224": {
+    "repo": "AeroCement_Ecosystem",
+    "branch": "chore/uplift-lite-20260828-011224",
+    "proof": "tree-dupe 7ca792a7d684 keep=chore/uplift-lite-20260827-231056"
+  },
+  "AeroCement_Ecosystem:chore/uplift-lite-20260828-012150": {
+    "repo": "AeroCement_Ecosystem",
+    "branch": "chore/uplift-lite-20260828-012150",
+    "proof": "tree-dupe 7ca792a7d684 keep=chore/uplift-lite-20260827-231056"
+  },
+  "AeroCement_Ecosystem:chore/uplift-lite-20260828-015227": {
+    "repo": "AeroCement_Ecosystem",
+    "branch": "chore/uplift-lite-20260828-015227",
+    "proof": "tree-dupe 7ca792a7d684 keep=chore/uplift-lite-20260827-231056"
+  },
+  "AeroCement_Ecosystem:chore/uplift-v4-20260828-053524": {
+    "repo": "AeroCement_Ecosystem",
+    "branch": "chore/uplift-v4-20260828-053524",
+    "proof": "tree-dupe 65ee14422647 keep=chore/uplift-v4-20260828-020649"
+  }
+}

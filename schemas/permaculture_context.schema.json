@@ -1,0 +1,189 @@
+{
+  "$id": "https://openroot.local/schemas/permaculture_context.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "adaptation_option_exists": {
+      "default": false,
+      "type": "boolean"
+    },
+    "change_detected": {
+      "default": false,
+      "type": "boolean"
+    },
+    "claimed_outputs": {
+      "default": [],
+      "items": {
+        "maxLength": 500,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "compatible_nodes": {
+      "default": 0,
+      "minimum": 0,
+      "type": "integer"
+    },
+    "concentration_risk": {
+      "default": 0,
+      "maximum": 1,
+      "minimum": 0,
+      "type": "number"
+    },
+    "connection_cost": {
+      "default": 1,
+      "minimum": 0,
+      "type": "number"
+    },
+    "connection_value": {
+      "default": 0,
+      "minimum": 0,
+      "type": "number"
+    },
+    "context_kind": {
+      "default": "intake",
+      "description": "intake/analysis/simulation are non-physical contexts. pilot/physical_test/field_operation require stricter safety validation.",
+      "enum": [
+        "intake",
+        "analysis",
+        "simulation",
+        "pilot",
+        "physical_test",
+        "field_operation"
+      ],
+      "type": "string"
+    },
+    "description": {
+      "maxLength": 4000,
+      "type": "string"
+    },
+    "edge_opportunity_score": {
+      "default": 0,
+      "maximum": 1,
+      "minimum": 0,
+      "type": "number"
+    },
+    "evidence_artifacts": {
+      "default": [],
+      "items": {
+        "maxLength": 500,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "evidence_level": {
+      "description": "0=idea, 1=documented source/calculation, 2=controlled measurement, 3=replicated measurement, 4=field validation, 5=independent replication",
+      "maximum": 5,
+      "minimum": 0,
+      "type": "integer"
+    },
+    "expected_yield": {
+      "default": 0,
+      "minimum": 0,
+      "type": "number"
+    },
+    "feedback_exists": {
+      "default": false,
+      "type": "boolean"
+    },
+    "intervention_scale": {
+      "maximum": 5,
+      "minimum": 0,
+      "type": "integer"
+    },
+    "lifecycle_benefit": {
+      "default": 0,
+      "type": "number"
+    },
+    "metric_out_of_bounds": {
+      "default": false,
+      "type": "boolean"
+    },
+    "minimum_yield": {
+      "default": 1,
+      "minimum": 0,
+      "type": "number"
+    },
+    "missing_measurements": {
+      "default": true,
+      "type": "boolean"
+    },
+    "name": {
+      "maxLength": 240,
+      "minLength": 3,
+      "type": "string"
+    },
+    "renewable_option_viable": {
+      "default": false,
+      "type": "boolean"
+    },
+    "reuse_path_exists": {
+      "default": false,
+      "type": "boolean"
+    },
+    "reversibility": {
+      "maximum": 1,
+      "minimum": 0,
+      "type": "number"
+    },
+    "risk_level": {
+      "maximum": 5,
+      "minimum": 0,
+      "type": "integer"
+    },
+    "safety_review_complete": {
+      "type": "boolean"
+    },
+    "schema_version": {
+      "const": 1,
+      "type": "integer"
+    },
+    "stop_conditions_defined": {
+      "default": false,
+      "type": "boolean"
+    },
+    "storage_capacity": {
+      "default": 0,
+      "minimum": 0,
+      "type": "number"
+    },
+    "surplus_flow": {
+      "default": 0,
+      "minimum": 0,
+      "type": "number"
+    },
+    "system_map_exists": {
+      "default": false,
+      "type": "boolean"
+    },
+    "tags": {
+      "default": [],
+      "items": {
+        "maxLength": 80,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "uncertainty": {
+      "maximum": 1,
+      "minimum": 0,
+      "type": "number"
+    },
+    "waste_stream_detected": {
+      "default": false,
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "schema_version",
+    "name",
+    "evidence_level",
+    "risk_level",
+    "uncertainty",
+    "intervention_scale",
+    "reversibility",
+    "safety_review_complete"
+  ],
+  "title": "OpenRoot Permaculture Router Context",
+  "type": "object"
+}

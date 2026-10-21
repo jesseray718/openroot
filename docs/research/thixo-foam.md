@@ -1,7 +1,7 @@
 # Thixotropic Gel Stator Foam Quality: Measurement Protocol and Results
 
 **Status:** manuscript skeleton — every claim herein awaits its experiment
-**Claims register:** data/research.db, subsystem='Thixotropic Gel Stator Foam Quality'
+**Claims register:** data/research.db, subsystem='thixo_gel'
 
 ## Abstract (draft — must pass bin/hype_gate.sh before submission)
 [Purpose in one sentence.] [Method in one sentence, naming instruments.] [Headline result with uncertainty, or 'measurements pending'.] [Implication for low-cost vernacular infrastructure in one sentence.]

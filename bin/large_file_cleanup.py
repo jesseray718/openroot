@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """
 openroot_large_file_cleanup.py
 Removes large files from git history (>100MB) and prepares repo for push.

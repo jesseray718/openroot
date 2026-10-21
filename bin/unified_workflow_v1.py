@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # OpenRoot Unified Workflow Controller v2026-09-18
 import os, sys, json, hashlib, sqlite3, subprocess, re
 from datetime import datetime
 from pathlib import Path
 
-WORKSPACE = Path("/home/jesse/openroot")
+WORKSPACE = Path(__file__).resolve().parent.parent
 DATA_DIR = WORKSPACE / "data"
 DOCS_DIR = WORKSPACE / "docs"
 CTX_BRIDGE = WORKSPACE / "context_bridge"
@@ -24,16 +25,47 @@ def sha256_file(p):
     return h.hexdigest()
 
 def init_dbs():
-    """Create the data directory and initialize the research and lesson ledgers."""
+    """Create the research and lessons ledgers and their required tables."""
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-    conn = sqlite3.connect(DATA_DIR / "research.db")
-    c = conn.cursor()
-    c.execute("CREATE TABLE IF NOT EXISTS claims (id INTEGER PRIMARY KEY AUTOINCREMENT, subsystem TEXT NOT NULL, claim TEXT NOT NULL, status TEXT DEFAULT 'asserted', created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP)")
-    c.execute("CREATE TABLE IF NOT EXISTS manuscripts (id INTEGER PRIMARY KEY AUTOINCREMENT, subsystem TEXT NOT NULL, path TEXT UNIQUE, stage TEXT DEFAULT 'skeleton', created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP)")
-    conn.commit(); conn.close()
-    conn = sqlite3.connect(DATA_DIR / "lessons.db")
-    conn.execute("CREATE TABLE IF NOT EXISTS lessons (id INTEGER PRIMARY KEY AUTOINCREMENT, domain TEXT NOT NULL, mistake TEXT, root_cause TEXT, correction TEXT, cost TEXT, source TEXT, created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP)")
-    conn.commit(); conn.close()
+    with sqlite3.connect(DATA_DIR / "research.db") as conn:
+        conn.execute("""CREATE TABLE IF NOT EXISTS claims (
+            id INTEGER PRIMARY KEY, ts TEXT DEFAULT (datetime('now')),
+            subsystem TEXT NOT NULL, claim TEXT NOT NULL,
+            status TEXT DEFAULT 'asserted', measurement_protocol TEXT,
+            instrument TEXT, uncertainty_pct REAL, target_metric TEXT,
+            lit_anchor TEXT, UNIQUE (subsystem, claim))""")
+        claim_columns = {row[1] for row in conn.execute("PRAGMA table_info(claims)")}
+        for name, definition in {
+            "ts": "TEXT", "measurement_protocol": "TEXT", "instrument": "TEXT",
+            "uncertainty_pct": "REAL", "target_metric": "TEXT", "lit_anchor": "TEXT",
+        }.items():
+            if name not in claim_columns:
+                conn.execute("ALTER TABLE claims ADD COLUMN %s %s" % (name, definition))
+        conn.execute("""DELETE FROM claims WHERE id NOT IN
+                     (SELECT MIN(id) FROM claims GROUP BY subsystem, claim)""")
+        conn.execute("CREATE UNIQUE INDEX IF NOT EXISTS idx_claims_identity ON claims(subsystem, claim)")
+        conn.execute("""CREATE TABLE IF NOT EXISTS manuscripts (
+            id INTEGER PRIMARY KEY, subsystem TEXT UNIQUE, path TEXT,
+            stage TEXT DEFAULT 'skeleton')""")
+
+    with sqlite3.connect(DATA_DIR / "lessons.db") as conn:
+        conn.execute("""CREATE TABLE IF NOT EXISTS lessons (
+            id INTEGER PRIMARY KEY, ts TEXT DEFAULT (datetime('now')),
+            domain TEXT NOT NULL, mistake TEXT NOT NULL, root_cause TEXT,
+            correction TEXT, cost TEXT, verified INTEGER DEFAULT 0,
+            recurrence_of INTEGER REFERENCES lessons(id), source TEXT)""")
+        lesson_columns = {row[1] for row in conn.execute("PRAGMA table_info(lessons)")}
+        for name, definition in {
+            "ts": "TEXT", "root_cause": "TEXT", "correction": "TEXT",
+            "cost": "TEXT", "verified": "INTEGER DEFAULT 0",
+            "recurrence_of": "INTEGER", "source": "TEXT",
+        }.items():
+            if name not in lesson_columns:
+                conn.execute("ALTER TABLE lessons ADD COLUMN %s %s" % (name, definition))
+        conn.execute("CREATE INDEX IF NOT EXISTS idx_lessons_domain ON lessons(domain)")
+        conn.execute("""CREATE TABLE IF NOT EXISTS tasks (
+            id INTEGER PRIMARY KEY, ts TEXT DEFAULT (datetime('now')),
+            description TEXT, lesson_ids TEXT, outcome TEXT)""")
     log("db_init", "Ledgers initialized", "[banked]")
 
 CLAIMS = [
@@ -48,15 +80,15 @@ CLAIMS = [
     ("labyrinth", "underground thermal labyrinth achieves 35F drop from 120F inlet"),
 ]
 MANUSCRIPTS = [
-    ("OpenCell Aerocement Solar Absorber", "opencell-absorber"),
-    ("Thermal Cascade Heat Balance", "cascade-heatbalance"),
-    ("Thixotropic Gel Stator Foam Quality", "thixo-foam"),
-    ("ARG Fiber Alkali Durability", "argf-durability"),
-    ("Double Stress-Skin Catenary Ferrocement Shell", "double-skin-catenary"),
-    ("Waterproofed Cardboard Membrane", "cardboard-membrane"),
-    ("Pallet-Frame Mesh Reflector", "dish-mesh-reflector"),
-    ("Tethered Buoyant Relay (Cloud Nine Scaled)", "cloud9-relay"),
-    ("Thermal Labyrinth Passive Cooling", "labyrinth-cooling"),
+    ("OpenCell Aerocement Solar Absorber", "opencell_mix", "opencell-absorber"),
+    ("Thermal Cascade Heat Balance", "cascade", "cascade-heatbalance"),
+    ("Thixotropic Gel Stator Foam Quality", "thixo_gel", "thixo-foam"),
+    ("ARG Fiber Alkali Durability", "argf", "argf-durability"),
+    ("Double Stress-Skin Catenary Ferrocement Shell", "double_skin", "double-skin-catenary"),
+    ("Waterproofed Cardboard Membrane", "cardboard_membrane", "cardboard-membrane"),
+    ("Pallet-Frame Mesh Reflector", "dish_mesh", "dish-mesh-reflector"),
+    ("Tethered Buoyant Relay (Cloud Nine Scaled)", "cloud9", "cloud9-relay"),
+    ("Thermal Labyrinth Passive Cooling", "labyrinth", "labyrinth-cooling"),
 ]
 
 TEMPLATE = """# {sub}: Measurement Protocol and Results
@@ -101,7 +133,7 @@ TEMPLATE = """# {sub}: Measurement Protocol and Results
 BANNED = [r"free\s+energy|over.?unity|perpetual", r"breakthrough|revolutionary", r"unprecedented|miracle", r"magna.?flux|zero.?point"]
 
 def hype_gate(md_path):
-    """Report banned phrases in a Markdown file and return whether none were found."""
+    """Print banned-phrase findings and return whether a manuscript passes."""
     text = Path(md_path).read_text()
     fails = []
     for pat in BANNED:
@@ -117,9 +149,9 @@ def hype_gate(md_path):
     return True
 
 def run(cmd, input_text=None, timeout=120):
-    """Run a command and return its exit code and stripped standard output.
+    """Run a command and return its status and stripped standard output.
 
-    Process-launch and timeout errors are converted to ``(1, "")``.
+    Process-launch and communication errors are represented by ``(1, "")``.
     """
     try:
         r = subprocess.run(cmd, input=input_text, capture_output=True, text=True, timeout=timeout)
@@ -128,7 +160,7 @@ def run(cmd, input_text=None, timeout=120):
         return 1, ""
 
 def ollama_run(model, prompt, input_text=None, timeout=120):
-    """Run an Ollama prompt and return its output or an offline sentinel."""
+    """Run an Ollama model or return an offline marker if no text is produced."""
     try:
         r = subprocess.run(["ollama", "run", model, prompt], input=input_text, capture_output=True, text=True, timeout=timeout)
         if r.returncode == 0 and r.stdout.strip():
@@ -137,10 +169,9 @@ def ollama_run(model, prompt, input_text=None, timeout=120):
         pass
     return "UNAVAILABLE (model offline)"
 def main():
-    """Build workflow artifacts, audit visibility, and record a session handoff.
+    """Run the workflow and persist its ledgers, drafts, and session handoff.
 
-    When ``CONFIRM=1``, nonpublic repositories found by the visibility audit are
-    changed to public.
+    When ``CONFIRM=1``, repositories found to be non-public may be made public.
     """
     os.chdir(WORKSPACE)
     print("[canary-head] unified_workflow_v1 paste intact")
@@ -155,18 +186,22 @@ def main():
 
     (DOCS_DIR / "research").mkdir(parents=True, exist_ok=True)
     conn = sqlite3.connect(DATA_DIR / "research.db")
-    for sub, slug in MANUSCRIPTS:
+    for sub, subsystem, slug in MANUSCRIPTS:
         fp = DOCS_DIR / "research" / (slug + ".md")
         if fp.exists():
             log("manuscript", "[skip] %s exists" % fp.name)
-            continue
-        fp.write_text(TEMPLATE.format(sub=sub, slug=slug))
-        conn.execute("INSERT OR REPLACE INTO manuscripts (subsystem, path, stage) VALUES (?, ?, 'skeleton')", (slug, str(fp)))
-        log("manuscript", "[banked] %s" % fp.name)
+        else:
+            fp.write_text(TEMPLATE.format(sub=sub, slug=subsystem))
+            log("manuscript", "[banked] %s" % fp.name)
+        conn.execute("INSERT OR REPLACE INTO manuscripts (subsystem, path, stage) VALUES (?, ?, 'skeleton')", (subsystem, str(fp)))
     conn.commit(); conn.close()
 
-    for _, slug in MANUSCRIPTS:
-        hype_gate(DOCS_DIR / "research" / (slug + ".md"))
+    hype_ok = True
+    for _, _, slug in MANUSCRIPTS:
+        hype_ok = hype_gate(DOCS_DIR / "research" / (slug + ".md")) and hype_ok
+    if not hype_ok:
+        print("[held] manuscript processing stopped: hype gate failed")
+        return 1
 
     hero = ollama_run("qwen2.5-coder:7b", "Write a single-paragraph hero statement for an open-source project called OpenRoot. It builds vernacular energy infrastructure using solar heat directly, with materials like cement, cellulose, surfactant, glass fiber. Lineage: Fuller, Guastavino, Heyman. Method: measurement-first, every claim logged in public ledger. Tone: confident but falsifiable, no hype phrases. Exactly 3 sentences, max 25 words each.")
     grade = ollama_run("qwen2.5:3b", "Grade this README hero paragraph. Output exactly 3 lines: VERDICT: PASS|FAIL | CONCISENESS: good|weak | HYPE_CHECK: clean|flagged", input_text=hero, timeout=90)
@@ -207,10 +242,11 @@ def main():
     print("next: 2) pin repos + email via web UI")
     print("next: 3) CONFIRM=1 python3 bin/unified_workflow_v1.py if visibility fixes needed")
     print("[done] [exit=0]")
+    return 0
 
 if __name__ == "__main__":
     try:
-        main()
+        sys.exit(main())
     except KeyboardInterrupt:
         sys.exit(130)
     except Exception as e:

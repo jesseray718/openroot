@@ -1,0 +1,1428 @@
+{
+  "version": "FRONTV1",
+  "timestamp": "2026-09-24T06:05:32.562900",
+  "region_basis": "SE Missouri ~4.5-5 equiv sun-hours (capacity basis applied downstream)",
+  "note": "Best steam delivery per 10C band, v6.3 audited physics, no target imposed",
+  "frontier": [
+    {
+      "n_ch": 4,
+      "n_p": 24,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 3121.8,
+      "q_steam_W": 2417,
+      "electric_W": 561,
+      "complexity": 2400
+    },
+    {
+      "n_ch": 4,
+      "n_p": 23,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 3059.5,
+      "q_steam_W": 2412,
+      "electric_W": 560,
+      "complexity": 2300
+    },
+    {
+      "n_ch": 4,
+      "n_p": 22,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 2995.0,
+      "q_steam_W": 2408,
+      "electric_W": 559,
+      "complexity": 2200
+    },
+    {
+      "n_ch": 4,
+      "n_p": 21,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 2928.3,
+      "q_steam_W": 2403,
+      "electric_W": 557,
+      "complexity": 2100
+    },
+    {
+      "n_ch": 4,
+      "n_p": 20,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 2858.9,
+      "q_steam_W": 2397,
+      "electric_W": 556,
+      "complexity": 2000
+    },
+    {
+      "n_ch": 4,
+      "n_p": 19,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 2787.1,
+      "q_steam_W": 2392,
+      "electric_W": 555,
+      "complexity": 1900
+    },
+    {
+      "n_ch": 4,
+      "n_p": 18,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 2712.6,
+      "q_steam_W": 2385,
+      "electric_W": 553,
+      "complexity": 1800
+    },
+    {
+      "n_ch": 4,
+      "n_p": 23,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 2654.8,
+      "q_steam_W": 2380,
+      "electric_W": 552,
+      "complexity": 2300
+    },
+    {
+      "n_ch": 4,
+      "n_p": 17,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 2635.1,
+      "q_steam_W": 2378,
+      "electric_W": 552,
+      "complexity": 1700
+    },
+    {
+      "n_ch": 4,
+      "n_p": 22,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 2595.3,
+      "q_steam_W": 2374,
+      "electric_W": 551,
+      "complexity": 2200
+    },
+    {
+      "n_ch": 4,
+      "n_p": 16,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 2554.6,
+      "q_steam_W": 2370,
+      "electric_W": 550,
+      "complexity": 1600
+    },
+    {
+      "n_ch": 4,
+      "n_p": 21,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 2533.9,
+      "q_steam_W": 2368,
+      "electric_W": 549,
+      "complexity": 2100
+    },
+    {
+      "n_ch": 4,
+      "n_p": 15,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 2470.5,
+      "q_steam_W": 2362,
+      "electric_W": 548,
+      "complexity": 1500
+    },
+    {
+      "n_ch": 4,
+      "n_p": 24,
+      "ch_d_cm": 5,
+      "chimney_m": 10,
+      "temp_C": 2418.4,
+      "q_steam_W": 2356,
+      "electric_W": 547,
+      "complexity": 2400
+    },
+    {
+      "n_ch": 4,
+      "n_p": 19,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 2405.2,
+      "q_steam_W": 2355,
+      "electric_W": 546,
+      "complexity": 1900
+    },
+    {
+      "n_ch": 4,
+      "n_p": 14,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 2383.0,
+      "q_steam_W": 2352,
+      "electric_W": 546,
+      "complexity": 1400
+    },
+    {
+      "n_ch": 4,
+      "n_p": 23,
+      "ch_d_cm": 5,
+      "chimney_m": 10,
+      "temp_C": 2365.0,
+      "q_steam_W": 2350,
+      "electric_W": 545,
+      "complexity": 2300
+    },
+    {
+      "n_ch": 4,
+      "n_p": 18,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 2337.8,
+      "q_steam_W": 2347,
+      "electric_W": 544,
+      "complexity": 1800
+    },
+    {
+      "n_ch": 4,
+      "n_p": 22,
+      "ch_d_cm": 5,
+      "chimney_m": 10,
+      "temp_C": 2310.2,
+      "q_steam_W": 2343,
+      "electric_W": 544,
+      "complexity": 2200
+    },
+    {
+      "n_ch": 4,
+      "n_p": 13,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 2291.6,
+      "q_steam_W": 2341,
+      "electric_W": 543,
+      "complexity": 1300
+    },
+    {
+      "n_ch": 4,
+      "n_p": 17,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 2268.0,
+      "q_steam_W": 2338,
+      "electric_W": 542,
+      "complexity": 1700
+    },
+    {
+      "n_ch": 4,
+      "n_p": 21,
+      "ch_d_cm": 5,
+      "chimney_m": 10,
+      "temp_C": 2253.8,
+      "q_steam_W": 2336,
+      "electric_W": 542,
+      "complexity": 2100
+    },
+    {
+      "n_ch": 4,
+      "n_p": 12,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 2195.9,
+      "q_steam_W": 2329,
+      "electric_W": 540,
+      "complexity": 1200
+    },
+    {
+      "n_ch": 4,
+      "n_p": 23,
+      "ch_d_cm": 5,
+      "chimney_m": 12,
+      "temp_C": 2146.3,
+      "q_steam_W": 2322,
+      "electric_W": 539,
+      "complexity": 2300
+    },
+    {
+      "n_ch": 4,
+      "n_p": 19,
+      "ch_d_cm": 5,
+      "chimney_m": 10,
+      "temp_C": 2136.2,
+      "q_steam_W": 2321,
+      "electric_W": 538,
+      "complexity": 1900
+    },
+    {
+      "n_ch": 4,
+      "n_p": 15,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 2121.1,
+      "q_steam_W": 2318,
+      "electric_W": 538,
+      "complexity": 1500
+    },
+    {
+      "n_ch": 4,
+      "n_p": 11,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 2095.6,
+      "q_steam_W": 2315,
+      "electric_W": 537,
+      "complexity": 1100
+    },
+    {
+      "n_ch": 4,
+      "n_p": 18,
+      "ch_d_cm": 5,
+      "chimney_m": 10,
+      "temp_C": 2074.9,
+      "q_steam_W": 2311,
+      "electric_W": 536,
+      "complexity": 1800
+    },
+    {
+      "n_ch": 4,
+      "n_p": 14,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 2043.6,
+      "q_steam_W": 2307,
+      "electric_W": 535,
+      "complexity": 1400
+    },
+    {
+      "n_ch": 4,
+      "n_p": 17,
+      "ch_d_cm": 5,
+      "chimney_m": 10,
+      "temp_C": 2011.7,
+      "q_steam_W": 2302,
+      "electric_W": 534,
+      "complexity": 1700
+    },
+    {
+      "n_ch": 4,
+      "n_p": 10,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 1990.2,
+      "q_steam_W": 2298,
+      "electric_W": 533,
+      "complexity": 1000
+    },
+    {
+      "n_ch": 4,
+      "n_p": 13,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 1963.1,
+      "q_steam_W": 2294,
+      "electric_W": 532,
+      "complexity": 1300
+    },
+    {
+      "n_ch": 4,
+      "n_p": 16,
+      "ch_d_cm": 5,
+      "chimney_m": 10,
+      "temp_C": 1946.6,
+      "q_steam_W": 2291,
+      "electric_W": 531,
+      "complexity": 1600
+    },
+    {
+      "n_ch": 4,
+      "n_p": 19,
+      "ch_d_cm": 5,
+      "chimney_m": 12,
+      "temp_C": 1935.5,
+      "q_steam_W": 2289,
+      "electric_W": 531,
+      "complexity": 1900
+    },
+    {
+      "n_ch": 4,
+      "n_p": 23,
+      "ch_d_cm": 5,
+      "chimney_m": 15,
+      "temp_C": 1901.9,
+      "q_steam_W": 2283,
+      "electric_W": 530,
+      "complexity": 2300
+    },
+    {
+      "n_ch": 4,
+      "n_p": 9,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 1879.2,
+      "q_steam_W": 2279,
+      "electric_W": 529,
+      "complexity": 900
+    },
+    {
+      "n_ch": 4,
+      "n_p": 22,
+      "ch_d_cm": 5,
+      "chimney_m": 15,
+      "temp_C": 1856.3,
+      "q_steam_W": 2274,
+      "electric_W": 528,
+      "complexity": 2200
+    },
+    {
+      "n_ch": 4,
+      "n_p": 17,
+      "ch_d_cm": 5,
+      "chimney_m": 12,
+      "temp_C": 1821.4,
+      "q_steam_W": 2268,
+      "electric_W": 526,
+      "complexity": 1700
+    },
+    {
+      "n_ch": 4,
+      "n_p": 14,
+      "ch_d_cm": 5,
+      "chimney_m": 10,
+      "temp_C": 1809.7,
+      "q_steam_W": 2265,
+      "electric_W": 526,
+      "complexity": 1400
+    },
+    {
+      "n_ch": 4,
+      "n_p": 11,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 1791.9,
+      "q_steam_W": 2262,
+      "electric_W": 525,
+      "complexity": 1100
+    },
+    {
+      "n_ch": 4,
+      "n_p": 8,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 1762.0,
+      "q_steam_W": 2256,
+      "electric_W": 523,
+      "complexity": 800
+    },
+    {
+      "n_ch": 4,
+      "n_p": 13,
+      "ch_d_cm": 5,
+      "chimney_m": 10,
+      "temp_C": 1737.7,
+      "q_steam_W": 2250,
+      "electric_W": 522,
+      "complexity": 1300
+    },
+    {
+      "n_ch": 4,
+      "n_p": 19,
+      "ch_d_cm": 5,
+      "chimney_m": 15,
+      "temp_C": 1713.2,
+      "q_steam_W": 2245,
+      "electric_W": 521,
+      "complexity": 1900
+    },
+    {
+      "n_ch": 4,
+      "n_p": 10,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 1700.8,
+      "q_steam_W": 2242,
+      "electric_W": 520,
+      "complexity": 1000
+    },
+    {
+      "n_ch": 4,
+      "n_p": 12,
+      "ch_d_cm": 5,
+      "chimney_m": 10,
+      "temp_C": 1663.1,
+      "q_steam_W": 2233,
+      "electric_W": 518,
+      "complexity": 1200
+    },
+    {
+      "n_ch": 4,
+      "n_p": 14,
+      "ch_d_cm": 5,
+      "chimney_m": 12,
+      "temp_C": 1637.5,
+      "q_steam_W": 2227,
+      "electric_W": 517,
+      "complexity": 1400
+    },
+    {
+      "n_ch": 4,
+      "n_p": 17,
+      "ch_d_cm": 5,
+      "chimney_m": 15,
+      "temp_C": 1611.7,
+      "q_steam_W": 2221,
+      "electric_W": 515,
+      "complexity": 1700
+    },
+    {
+      "n_ch": 4,
+      "n_p": 9,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 1605.2,
+      "q_steam_W": 2219,
+      "electric_W": 515,
+      "complexity": 900
+    },
+    {
+      "n_ch": 4,
+      "n_p": 11,
+      "ch_d_cm": 5,
+      "chimney_m": 10,
+      "temp_C": 1585.5,
+      "q_steam_W": 2214,
+      "electric_W": 514,
+      "complexity": 1100
+    },
+    {
+      "n_ch": 4,
+      "n_p": 13,
+      "ch_d_cm": 5,
+      "chimney_m": 12,
+      "temp_C": 1572.3,
+      "q_steam_W": 2211,
+      "electric_W": 513,
+      "complexity": 1300
+    },
+    {
+      "n_ch": 4,
+      "n_p": 16,
+      "ch_d_cm": 5,
+      "chimney_m": 15,
+      "temp_C": 1559.0,
+      "q_steam_W": 2207,
+      "electric_W": 512,
+      "complexity": 1600
+    },
+    {
+      "n_ch": 4,
+      "n_p": 8,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 1504.8,
+      "q_steam_W": 2192,
+      "electric_W": 509,
+      "complexity": 800
+    },
+    {
+      "n_ch": 4,
+      "n_p": 14,
+      "ch_d_cm": 5,
+      "chimney_m": 15,
+      "temp_C": 1449.1,
+      "q_steam_W": 2175,
+      "electric_W": 505,
+      "complexity": 1400
+    },
+    {
+      "n_ch": 4,
+      "n_p": 11,
+      "ch_d_cm": 5,
+      "chimney_m": 12,
+      "temp_C": 1434.8,
+      "q_steam_W": 2171,
+      "electric_W": 504,
+      "complexity": 1100
+    },
+    {
+      "n_ch": 4,
+      "n_p": 9,
+      "ch_d_cm": 5,
+      "chimney_m": 10,
+      "temp_C": 1420.5,
+      "q_steam_W": 2166,
+      "electric_W": 503,
+      "complexity": 900
+    },
+    {
+      "n_ch": 4,
+      "n_p": 13,
+      "ch_d_cm": 5,
+      "chimney_m": 15,
+      "temp_C": 1391.6,
+      "q_steam_W": 2156,
+      "electric_W": 500,
+      "complexity": 1300
+    },
+    {
+      "n_ch": 4,
+      "n_p": 10,
+      "ch_d_cm": 5,
+      "chimney_m": 12,
+      "temp_C": 1362.1,
+      "q_steam_W": 2146,
+      "electric_W": 498,
+      "complexity": 1000
+    },
+    {
+      "n_ch": 4,
+      "n_p": 8,
+      "ch_d_cm": 5,
+      "chimney_m": 10,
+      "temp_C": 1332.2,
+      "q_steam_W": 2135,
+      "electric_W": 495,
+      "complexity": 800
+    },
+    {
+      "n_ch": 4,
+      "n_p": 9,
+      "ch_d_cm": 5,
+      "chimney_m": 12,
+      "temp_C": 1286.4,
+      "q_steam_W": 2118,
+      "electric_W": 491,
+      "complexity": 900
+    },
+    {
+      "n_ch": 4,
+      "n_p": 11,
+      "ch_d_cm": 5,
+      "chimney_m": 15,
+      "temp_C": 1270.8,
+      "q_steam_W": 2111,
+      "electric_W": 490,
+      "complexity": 1100
+    },
+    {
+      "n_ch": 8,
+      "n_p": 24,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 1229.3,
+      "q_steam_W": 2094,
+      "electric_W": 486,
+      "complexity": 4800
+    },
+    {
+      "n_ch": 8,
+      "n_p": 23,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 1209.9,
+      "q_steam_W": 2085,
+      "electric_W": 484,
+      "complexity": 4600
+    },
+    {
+      "n_ch": 8,
+      "n_p": 22,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 1189.7,
+      "q_steam_W": 2076,
+      "electric_W": 482,
+      "complexity": 4400
+    },
+    {
+      "n_ch": 8,
+      "n_p": 21,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 1168.7,
+      "q_steam_W": 2066,
+      "electric_W": 479,
+      "complexity": 4200
+    },
+    {
+      "n_ch": 8,
+      "n_p": 20,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 1146.9,
+      "q_steam_W": 2055,
+      "electric_W": 477,
+      "complexity": 4000
+    },
+    {
+      "n_ch": 8,
+      "n_p": 19,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 1124.1,
+      "q_steam_W": 2043,
+      "electric_W": 474,
+      "complexity": 3800
+    },
+    {
+      "n_ch": 8,
+      "n_p": 18,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 1100.4,
+      "q_steam_W": 2031,
+      "electric_W": 471,
+      "complexity": 3600
+    },
+    {
+      "n_ch": 8,
+      "n_p": 23,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 1081.8,
+      "q_steam_W": 2020,
+      "electric_W": 469,
+      "complexity": 4600
+    },
+    {
+      "n_ch": 8,
+      "n_p": 17,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 1075.5,
+      "q_steam_W": 2017,
+      "electric_W": 468,
+      "complexity": 3400
+    },
+    {
+      "n_ch": 8,
+      "n_p": 22,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 1062.6,
+      "q_steam_W": 2009,
+      "electric_W": 466,
+      "complexity": 4400
+    },
+    {
+      "n_ch": 8,
+      "n_p": 16,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 1049.5,
+      "q_steam_W": 2001,
+      "electric_W": 464,
+      "complexity": 3200
+    },
+    {
+      "n_ch": 8,
+      "n_p": 15,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 1022.2,
+      "q_steam_W": 1984,
+      "electric_W": 460,
+      "complexity": 3000
+    },
+    {
+      "n_ch": 8,
+      "n_p": 24,
+      "ch_d_cm": 5,
+      "chimney_m": 10,
+      "temp_C": 1005.2,
+      "q_steam_W": 1973,
+      "electric_W": 458,
+      "complexity": 4800
+    },
+    {
+      "n_ch": 8,
+      "n_p": 14,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 993.5,
+      "q_steam_W": 1966,
+      "electric_W": 456,
+      "complexity": 2800
+    },
+    {
+      "n_ch": 8,
+      "n_p": 23,
+      "ch_d_cm": 5,
+      "chimney_m": 10,
+      "temp_C": 987.6,
+      "q_steam_W": 1962,
+      "electric_W": 455,
+      "complexity": 4600
+    },
+    {
+      "n_ch": 8,
+      "n_p": 18,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 978.6,
+      "q_steam_W": 1955,
+      "electric_W": 454,
+      "complexity": 3600
+    },
+    {
+      "n_ch": 8,
+      "n_p": 22,
+      "ch_d_cm": 5,
+      "chimney_m": 10,
+      "temp_C": 969.5,
+      "q_steam_W": 1949,
+      "electric_W": 452,
+      "complexity": 4400
+    },
+    {
+      "n_ch": 8,
+      "n_p": 17,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 955.6,
+      "q_steam_W": 1939,
+      "electric_W": 450,
+      "complexity": 3400
+    },
+    {
+      "n_ch": 8,
+      "n_p": 12,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 931.5,
+      "q_steam_W": 1921,
+      "electric_W": 446,
+      "complexity": 2400
+    },
+    {
+      "n_ch": 8,
+      "n_p": 23,
+      "ch_d_cm": 5,
+      "chimney_m": 12,
+      "temp_C": 914.8,
+      "q_steam_W": 1908,
+      "electric_W": 443,
+      "complexity": 4600
+    },
+    {
+      "n_ch": 8,
+      "n_p": 15,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 906.3,
+      "q_steam_W": 1901,
+      "electric_W": 441,
+      "complexity": 3000
+    },
+    {
+      "n_ch": 8,
+      "n_p": 11,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 897.7,
+      "q_steam_W": 1894,
+      "electric_W": 439,
+      "complexity": 2200
+    },
+    {
+      "n_ch": 8,
+      "n_p": 14,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 880.1,
+      "q_steam_W": 1879,
+      "electric_W": 436,
+      "complexity": 2800
+    },
+    {
+      "n_ch": 8,
+      "n_p": 17,
+      "ch_d_cm": 5,
+      "chimney_m": 10,
+      "temp_C": 869.2,
+      "q_steam_W": 1869,
+      "electric_W": 434,
+      "complexity": 3400
+    },
+    {
+      "n_ch": 8,
+      "n_p": 13,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 852.6,
+      "q_steam_W": 1854,
+      "electric_W": 430,
+      "complexity": 2600
+    },
+    {
+      "n_ch": 8,
+      "n_p": 16,
+      "ch_d_cm": 5,
+      "chimney_m": 10,
+      "temp_C": 846.9,
+      "q_steam_W": 1849,
+      "electric_W": 429,
+      "complexity": 3200
+    },
+    {
+      "n_ch": 8,
+      "n_p": 23,
+      "ch_d_cm": 5,
+      "chimney_m": 15,
+      "temp_C": 831.5,
+      "q_steam_W": 1834,
+      "electric_W": 426,
+      "complexity": 4600
+    },
+    {
+      "n_ch": 8,
+      "n_p": 9,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 823.7,
+      "q_steam_W": 1827,
+      "electric_W": 424,
+      "complexity": 1800
+    },
+    {
+      "n_ch": 8,
+      "n_p": 22,
+      "ch_d_cm": 5,
+      "chimney_m": 15,
+      "temp_C": 815.7,
+      "q_steam_W": 1819,
+      "electric_W": 422,
+      "complexity": 4400
+    },
+    {
+      "n_ch": 8,
+      "n_p": 17,
+      "ch_d_cm": 5,
+      "chimney_m": 12,
+      "temp_C": 803.5,
+      "q_steam_W": 1806,
+      "electric_W": 419,
+      "complexity": 3400
+    },
+    {
+      "n_ch": 8,
+      "n_p": 14,
+      "ch_d_cm": 5,
+      "chimney_m": 10,
+      "temp_C": 799.4,
+      "q_steam_W": 1802,
+      "electric_W": 418,
+      "complexity": 2800
+    },
+    {
+      "n_ch": 8,
+      "n_p": 8,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 782.7,
+      "q_steam_W": 1784,
+      "electric_W": 414,
+      "complexity": 1600
+    },
+    {
+      "n_ch": 8,
+      "n_p": 13,
+      "ch_d_cm": 5,
+      "chimney_m": 10,
+      "temp_C": 774.1,
+      "q_steam_W": 1774,
+      "electric_W": 412,
+      "complexity": 2600
+    },
+    {
+      "n_ch": 8,
+      "n_p": 19,
+      "ch_d_cm": 5,
+      "chimney_m": 15,
+      "temp_C": 765.4,
+      "q_steam_W": 1764,
+      "electric_W": 409,
+      "complexity": 3800
+    },
+    {
+      "n_ch": 12,
+      "n_p": 21,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 748.8,
+      "q_steam_W": 1745,
+      "electric_W": 405,
+      "complexity": 6300
+    },
+    {
+      "n_ch": 8,
+      "n_p": 14,
+      "ch_d_cm": 5,
+      "chimney_m": 12,
+      "temp_C": 738.5,
+      "q_steam_W": 1732,
+      "electric_W": 402,
+      "complexity": 2800
+    },
+    {
+      "n_ch": 8,
+      "n_p": 17,
+      "ch_d_cm": 5,
+      "chimney_m": 15,
+      "temp_C": 729.2,
+      "q_steam_W": 1721,
+      "electric_W": 399,
+      "complexity": 3400
+    },
+    {
+      "n_ch": 8,
+      "n_p": 11,
+      "ch_d_cm": 5,
+      "chimney_m": 10,
+      "temp_C": 719.8,
+      "q_steam_W": 1708,
+      "electric_W": 396,
+      "complexity": 2200
+    },
+    {
+      "n_ch": 12,
+      "n_p": 23,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 699.6,
+      "q_steam_W": 1681,
+      "electric_W": 390,
+      "complexity": 6900
+    },
+    {
+      "n_ch": 12,
+      "n_p": 22,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 688.7,
+      "q_steam_W": 1666,
+      "electric_W": 386,
+      "complexity": 6600
+    },
+    {
+      "n_ch": 12,
+      "n_p": 21,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 677.4,
+      "q_steam_W": 1649,
+      "electric_W": 383,
+      "complexity": 6300
+    },
+    {
+      "n_ch": 8,
+      "n_p": 14,
+      "ch_d_cm": 5,
+      "chimney_m": 15,
+      "temp_C": 669.9,
+      "q_steam_W": 1638,
+      "electric_W": 380,
+      "complexity": 2800
+    },
+    {
+      "n_ch": 8,
+      "n_p": 9,
+      "ch_d_cm": 5,
+      "chimney_m": 10,
+      "temp_C": 659.4,
+      "q_steam_W": 1622,
+      "electric_W": 376,
+      "complexity": 1800
+    },
+    {
+      "n_ch": 12,
+      "n_p": 14,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 649.1,
+      "q_steam_W": 1606,
+      "electric_W": 373,
+      "complexity": 4200
+    },
+    {
+      "n_ch": 8,
+      "n_p": 10,
+      "ch_d_cm": 5,
+      "chimney_m": 12,
+      "temp_C": 637.6,
+      "q_steam_W": 1587,
+      "electric_W": 368,
+      "complexity": 2000
+    },
+    {
+      "n_ch": 12,
+      "n_p": 17,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 627.1,
+      "q_steam_W": 1569,
+      "electric_W": 364,
+      "complexity": 5100
+    },
+    {
+      "n_ch": 12,
+      "n_p": 12,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 613.2,
+      "q_steam_W": 1544,
+      "electric_W": 358,
+      "complexity": 3600
+    },
+    {
+      "n_ch": 8,
+      "n_p": 9,
+      "ch_d_cm": 5,
+      "chimney_m": 12,
+      "temp_C": 609.0,
+      "q_steam_W": 1536,
+      "electric_W": 356,
+      "complexity": 1800
+    },
+    {
+      "n_ch": 12,
+      "n_p": 15,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 598.5,
+      "q_steam_W": 1517,
+      "electric_W": 352,
+      "complexity": 4500
+    },
+    {
+      "n_ch": 12,
+      "n_p": 18,
+      "ch_d_cm": 5,
+      "chimney_m": 10,
+      "temp_C": 589.4,
+      "q_steam_W": 1499,
+      "electric_W": 348,
+      "complexity": 5400
+    },
+    {
+      "n_ch": 16,
+      "n_p": 23,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 579.7,
+      "q_steam_W": 1479,
+      "electric_W": 343,
+      "complexity": 9200
+    },
+    {
+      "n_ch": 12,
+      "n_p": 13,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 567.0,
+      "q_steam_W": 1453,
+      "electric_W": 337,
+      "complexity": 3900
+    },
+    {
+      "n_ch": 4,
+      "n_p": 20,
+      "ch_d_cm": 8,
+      "chimney_m": 6,
+      "temp_C": 558.1,
+      "q_steam_W": 1434,
+      "electric_W": 333,
+      "complexity": 5120
+    },
+    {
+      "n_ch": 12,
+      "n_p": 9,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 549.9,
+      "q_steam_W": 1415,
+      "electric_W": 328,
+      "complexity": 2700
+    },
+    {
+      "n_ch": 4,
+      "n_p": 18,
+      "ch_d_cm": 8,
+      "chimney_m": 6,
+      "temp_C": 539.7,
+      "q_steam_W": 1391,
+      "electric_W": 323,
+      "complexity": 4608
+    },
+    {
+      "n_ch": 4,
+      "n_p": 17,
+      "ch_d_cm": 8,
+      "chimney_m": 6,
+      "temp_C": 529.8,
+      "q_steam_W": 1368,
+      "electric_W": 317,
+      "complexity": 4352
+    },
+    {
+      "n_ch": 4,
+      "n_p": 16,
+      "ch_d_cm": 8,
+      "chimney_m": 6,
+      "temp_C": 519.4,
+      "q_steam_W": 1341,
+      "electric_W": 311,
+      "complexity": 4096
+    },
+    {
+      "n_ch": 4,
+      "n_p": 15,
+      "ch_d_cm": 8,
+      "chimney_m": 6,
+      "temp_C": 508.3,
+      "q_steam_W": 1312,
+      "electric_W": 304,
+      "complexity": 3840
+    },
+    {
+      "n_ch": 4,
+      "n_p": 19,
+      "ch_d_cm": 8,
+      "chimney_m": 8,
+      "temp_C": 499.7,
+      "q_steam_W": 1289,
+      "electric_W": 299,
+      "complexity": 4864
+    },
+    {
+      "n_ch": 16,
+      "n_p": 18,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 488.1,
+      "q_steam_W": 1256,
+      "electric_W": 291,
+      "complexity": 7200
+    },
+    {
+      "n_ch": 4,
+      "n_p": 21,
+      "ch_d_cm": 8,
+      "chimney_m": 10,
+      "temp_C": 479.2,
+      "q_steam_W": 1229,
+      "electric_W": 285,
+      "complexity": 5376
+    },
+    {
+      "n_ch": 12,
+      "n_p": 8,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 469.9,
+      "q_steam_W": 1200,
+      "electric_W": 278,
+      "complexity": 2400
+    },
+    {
+      "n_ch": 20,
+      "n_p": 21,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 459.2,
+      "q_steam_W": 1166,
+      "electric_W": 270,
+      "complexity": 10500
+    },
+    {
+      "n_ch": 4,
+      "n_p": 14,
+      "ch_d_cm": 8,
+      "chimney_m": 8,
+      "temp_C": 449.7,
+      "q_steam_W": 1134,
+      "electric_W": 263,
+      "complexity": 3584
+    },
+    {
+      "n_ch": 16,
+      "n_p": 10,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 439.9,
+      "q_steam_W": 1099,
+      "electric_W": 255,
+      "complexity": 4000
+    },
+    {
+      "n_ch": 4,
+      "n_p": 23,
+      "ch_d_cm": 8,
+      "chimney_m": 15,
+      "temp_C": 429.2,
+      "q_steam_W": 1059,
+      "electric_W": 246,
+      "complexity": 5888
+    },
+    {
+      "n_ch": 12,
+      "n_p": 9,
+      "ch_d_cm": 5,
+      "chimney_m": 12,
+      "temp_C": 419.9,
+      "q_steam_W": 1022,
+      "electric_W": 237,
+      "complexity": 2700
+    },
+    {
+      "n_ch": 20,
+      "n_p": 24,
+      "ch_d_cm": 5,
+      "chimney_m": 10,
+      "temp_C": 409.2,
+      "q_steam_W": 979,
+      "electric_W": 227,
+      "complexity": 12000
+    },
+    {
+      "n_ch": 4,
+      "n_p": 10,
+      "ch_d_cm": 8,
+      "chimney_m": 8,
+      "temp_C": 398.9,
+      "q_steam_W": 934,
+      "electric_W": 217,
+      "complexity": 2560
+    },
+    {
+      "n_ch": 4,
+      "n_p": 14,
+      "ch_d_cm": 8,
+      "chimney_m": 12,
+      "temp_C": 389.0,
+      "q_steam_W": 889,
+      "electric_W": 206,
+      "complexity": 3584
+    },
+    {
+      "n_ch": 20,
+      "n_p": 19,
+      "ch_d_cm": 5,
+      "chimney_m": 10,
+      "temp_C": 379.4,
+      "q_steam_W": 842,
+      "electric_W": 195,
+      "complexity": 9500
+    },
+    {
+      "n_ch": 20,
+      "n_p": 14,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 369.2,
+      "q_steam_W": 790,
+      "electric_W": 183,
+      "complexity": 7000
+    },
+    {
+      "n_ch": 4,
+      "n_p": 14,
+      "ch_d_cm": 8,
+      "chimney_m": 15,
+      "temp_C": 358.7,
+      "q_steam_W": 733,
+      "electric_W": 170,
+      "complexity": 3584
+    },
+    {
+      "n_ch": 24,
+      "n_p": 19,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 349.6,
+      "q_steam_W": 681,
+      "electric_W": 158,
+      "complexity": 11400
+    },
+    {
+      "n_ch": 24,
+      "n_p": 13,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 339.9,
+      "q_steam_W": 622,
+      "electric_W": 144,
+      "complexity": 7800
+    },
+    {
+      "n_ch": 28,
+      "n_p": 18,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 329.9,
+      "q_steam_W": 558,
+      "electric_W": 129,
+      "complexity": 12600
+    },
+    {
+      "n_ch": 32,
+      "n_p": 24,
+      "ch_d_cm": 5,
+      "chimney_m": 6,
+      "temp_C": 319.7,
+      "q_steam_W": 487,
+      "electric_W": 113,
+      "complexity": 19200
+    },
+    {
+      "n_ch": 28,
+      "n_p": 24,
+      "ch_d_cm": 5,
+      "chimney_m": 10,
+      "temp_C": 309.4,
+      "q_steam_W": 411,
+      "electric_W": 95,
+      "complexity": 16800
+    },
+    {
+      "n_ch": 4,
+      "n_p": 22,
+      "ch_d_cm": 10,
+      "chimney_m": 8,
+      "temp_C": 298.8,
+      "q_steam_W": 327,
+      "electric_W": 76,
+      "complexity": 8800
+    },
+    {
+      "n_ch": 32,
+      "n_p": 22,
+      "ch_d_cm": 5,
+      "chimney_m": 8,
+      "temp_C": 289.4,
+      "q_steam_W": 247,
+      "electric_W": 57,
+      "complexity": 17600
+    },
+    {
+      "n_ch": 8,
+      "n_p": 24,
+      "ch_d_cm": 8,
+      "chimney_m": 10,
+      "temp_C": 279.7,
+      "q_steam_W": 158,
+      "electric_W": 37,
+      "complexity": 12288
+    },
+    {
+      "n_ch": 28,
+      "n_p": 23,
+      "ch_d_cm": 5,
+      "chimney_m": 15,
+      "temp_C": 269.9,
+      "q_steam_W": 62,
+      "electric_W": 14,
+      "complexity": 16100
+    }
+  ]
+}

@@ -1,0 +1,762 @@
+{
+  "generated_at": "2026-09-24T11:30:32.133609+00:00",
+  "author": "Jesse McMillen Ray",
+  "source_host": "optiplex3060",
+  "target_host": "a15-termux",
+  "termux_path": "/data/data/com.termux/files/home/openroot",
+  "total_files": 8964,
+  "scp_commands_found": 0,
+  "recent_sync_commands": [],
+  "categories": {
+    "thermal_ledger": {
+      "count": 1016,
+      "files": [
+        {
+          "path": "data/thermal_frontier_v2_water.json",
+          "size": "2.4KB",
+          "sha256": "fd796fd180af42ebcd85304363c7f0b8cb8254e41fa0deec91f7aafdc955707a",
+          "modified": "2026-09-24T11:13:11.187644+00:00"
+        },
+        {
+          "path": "data/thermal_frontier_v1.json",
+          "size": "26.3KB",
+          "sha256": "c6004d6f657ee9452b92497fb569ba7f8e04a62af61e4b7799fd1fb4fd607cfd",
+          "modified": "2026-09-24T11:05:35.094471+00:00"
+        },
+        {
+          "path": "bin/0708_thermal_battery_system.py",
+          "size": "4.6KB",
+          "sha256": "6099c51d60643deada69b41d0700f8d1cbfda8e00639e27381f584a4a2e4defa",
+          "modified": "2026-09-24T00:42:44.972630+00:00"
+        },
+        {
+          "path": "bin/0679_thermal_battery_check.py",
+          "size": "2.5KB",
+          "sha256": "dc18da013c5cba1dbe0f49dfbf9031d1f442d57ffba7cdd9f6cf1dc0637c6ebf",
+          "modified": "2026-09-24T00:42:44.953849+00:00"
+        },
+        {
+          "path": "bin/0115_thermal_loop.py",
+          "size": "5.0KB",
+          "sha256": "e5ab4ac5a22ebd99f08ab66c6b702e28839de9bcf0d680a06e104311779808f3",
+          "modified": "2026-09-24T00:42:44.440509+00:00"
+        },
+        {
+          "path": "bin/0095_deploy_thermal_loop.py",
+          "size": "10.1KB",
+          "sha256": "e5ba29cb1e2f21c46e3514992908d04e715eede224cfd7cfc0e1cb966861a7c5",
+          "modified": "2026-09-24T00:42:44.431985+00:00"
+        },
+        {
+          "path": "consolidation-backups/untracked_collision_20260919-072429/data/vault_extract/A15-sdcard-20260831-205152/Download/test_thermal_cascade_balance.py",
+          "size": "1.2KB",
+          "sha256": "ee335744f0f34cbc2970756cc625fbaa6a66a414d2d8727a58a11084059482cf",
+          "modified": "2026-09-13T22:02:22.284366+00:00"
+        },
+        {
+          "path": "consolidation-backups/untracked_collision_20260919-072429/data/vault_extract/A15-sdcard-20260831-205152/Download/thermal_cascade_reports.py",
+          "size": "2.0KB",
+          "sha256": "ac171630cce32504eb40b7b4fd2dfdc32bfdce5caea9c1d190e14211ad87e656",
+          "modified": "2026-09-13T22:02:22.283948+00:00"
+        },
+        {
+          "path": "consolidation-backups/untracked_collision_20260919-072429/data/vault_extract/A15-sdcard-20260831-205152/Download/thermal_cascade(1).py",
+          "size": "8.1KB",
+          "sha256": "1202eb8ea2903b91bdc3a18b36d25e9127d2b2eafe82bac332859c56043c2c11",
+          "modified": "2026-09-13T22:02:22.279849+00:00"
+        },
+        {
+          "path": "consolidation-backups/untracked_collision_20260919-072429/data/vault_extract/A15-sdcard-20260831-205152/Download/thermal_cascade.py",
+          "size": "8.1KB",
+          "sha256": "1202eb8ea2903b91bdc3a18b36d25e9127d2b2eafe82bac332859c56043c2c11",
+          "modified": "2026-09-13T22:02:22.279719+00:00"
+        },
+        {
+          "path": "consolidation-backups/untracked_collision_20260919-072429/data/vault_extract/A15-sdcard-20260831-205152/Download/thermal_cascade_reports(1).py",
+          "size": "2.0KB",
+          "sha256": "ac171630cce32504eb40b7b4fd2dfdc32bfdce5caea9c1d190e14211ad87e656",
+          "modified": "2026-09-13T22:02:22.279259+00:00"
+        },
+        {
+          "path": "consolidation-backups/untracked_collision_20260919-072429/data/vault_extract/A15-sdcard-20260831-205152/openroot/kernel/thermal_loop.py",
+          "size": "5.0KB",
+          "sha256": "e5ab4ac5a22ebd99f08ab66c6b702e28839de9bcf0d680a06e104311779808f3",
+          "modified": "2026-09-13T22:02:22.078997+00:00"
+        },
+        {
+          "path": "consolidation-backups/untracked_collision_20260919-072429/data/vault_extract/THESIS_FOLDER_BACKUP_20260829-001511/bin/thermal_velocity_unified.py",
+          "size": "27.1KB",
+          "sha256": "54085e4a6d115c111e972177ab7e4a6b4dfde5ab8bb7c27963c038d5091cc579",
+          "modified": "2026-09-13T22:02:18.393971+00:00"
+        },
+        {
+          "path": "consolidation-backups/untracked_collision_20260919-072429/data/vault_extract/THESIS_FOLDER_BACKUP_20260829-001511/bin/thermal_v62_balanced.py",
+          "size": "12.8KB",
+          "sha256": "2667739a972668538c5995f5c6b303430e4895e47b861c6e373c0e6a92044e01",
+          "modified": "2026-09-13T22:02:18.393446+00:00"
+        },
+        {
+          "path": "consolidation-backups/untracked_collision_20260919-072429/data/vault_extract/THESIS_FOLDER_BACKUP_20260829-001511/bin/thermal_optimal_v2.py",
+          "size": "13.8KB",
+          "sha256": "0876248c0b0969b160d45e59d82cd3849c72746609f6c75755858c9121f7d6e6",
+          "modified": "2026-09-13T22:02:18.392597+00:00"
+        },
+        {
+          "path": "consolidation-backups/untracked_collision_20260919-072429/data/vault_extract/THESIS_FOLDER_BACKUP_20260829-001511/bin/thermal_1m2_calc.py",
+          "size": "23.1KB",
+          "sha256": "ceec2c7fb2e571068016702911e905b54234440c071abf151297dd4ffe1d5d3b",
+          "modified": "2026-09-13T22:02:18.391289+00:00"
+        },
+        {
+          "path": "consolidation-backups/untracked_collision_20260919-072429/data/vault_extract/THESIS_FOLDER_BACKUP_20260829-001511/bin/thermal_system_v6_bigtank.py",
+          "size": "22.6KB",
+          "sha256": "851d427866680c994da17e1e2bdb8527327cad7814c70dc8e01ba93d030540d2",
+          "modified": "2026-09-13T22:02:18.390852+00:00"
+        },
+        {
+          "path": "consolidation-backups/untracked_collision_20260919-072429/data/vault_extract/THESIS_FOLDER_BACKUP_20260829-001511/bin/thermal_optimal_balance.py",
+          "size": "31.0KB",
+          "sha256": "111d75baffa96548c2d1ac59ebb6496c73b1db42eef60bf3222d0657d539ac82",
+          "modified": "2026-09-13T22:02:18.390202+00:00"
+        },
+        {
+          "path": "consolidation-backups/untracked_collision_20260919-072429/data/vault_extract/THESIS_FOLDER_BACKUP_20260829-001511/bin/thermal_cascade_v2.py",
+          "size": "13.8KB",
+          "sha256": "6487f9c45bf20edf2e6867b68e47973058ee109889a1740e04adcf52e4e0e77d",
+          "modified": "2026-09-13T22:02:18.388997+00:00"
+        },
+        {
+          "path": "consolidation-backups/untracked_collision_20260919-072429/data/vault_extract/THESIS_FOLDER_BACKUP_20260829-001511/dist/zenodo-upload/thermal_cascade_v2.py",
+          "size": "10.8KB",
+          "sha256": "9604e8c14d524fd35d6e7237cc777a9b421ddd167db7fbedc99056c74de95206",
+          "modified": "2026-09-13T22:02:18.380472+00:00"
+        }
+      ]
+    },
+    "session_handoff": {
+      "count": 258,
+      "files": [
+        {
+          "path": "context_bridge/session-2026-09-24-handoff.md",
+          "size": "3.4KB",
+          "sha256": "971c6a5bd22ec524ef945a2f9256d973ba99ca7af6a37302533c0072bcc825bf",
+          "modified": "2026-09-24T11:19:38.047636+00:00"
+        },
+        {
+          "path": "context_bridge/session-2026-09-24-embedstack-grade-guard.md",
+          "size": "2.1KB",
+          "sha256": "d231e8cd45186cf29c709956d6be263ec3c3e730657e1d339302a347ca9a0ac3",
+          "modified": "2026-09-24T06:54:56.385662+00:00"
+        },
+        {
+          "path": "ctx_backup_20260923_194243/session-20260921-weekly.md",
+          "size": "90.0B",
+          "sha256": "c2aacbbc5eb3bf388bff16ec8cd5cee4074a89044c81d9e9e9d3112742f1e475",
+          "modified": "2026-09-24T00:42:46.845049+00:00"
+        },
+        {
+          "path": "ctx_backup_20260923_194243/session-v1.0.0-launch-20260921_162046.md",
+          "size": "810.0B",
+          "sha256": "6777e86e04796cc396996c007ba2f8072f03d983f4605be618632a0167a56c67",
+          "modified": "2026-09-24T00:42:46.843930+00:00"
+        },
+        {
+          "path": "ctx_backup_20260923_194243/session-v1.0.0-launch-20260921_161947.md",
+          "size": "810.0B",
+          "sha256": "f686e9b696f3b700ad207c797a51170434908a6fb2e36c2184b7187df9612473",
+          "modified": "2026-09-24T00:42:46.828931+00:00"
+        },
+        {
+          "path": "ctx_backup_20260923_194243/session-cicd-closeout-20260921_160334.md",
+          "size": "1.8KB",
+          "sha256": "1a9f06ca626daf193358956ff4becfb3b9d4640084dbcf4bcb259a7e4e2dcbf8",
+          "modified": "2026-09-24T00:42:46.809135+00:00"
+        },
+        {
+          "path": "ctx_backup_20260923_194243/session-docrefresh-20260921_154522.md",
+          "size": "800.0B",
+          "sha256": "8f8f78f2f08fee68f21960277899a22ecbe4b1e02631720532be11efdfb53a45",
+          "modified": "2026-09-24T00:42:46.808644+00:00"
+        },
+        {
+          "path": "ctx_backup_20260923_194243/session-2026-09-21-router-results.md",
+          "size": "800.0B",
+          "sha256": "112bc957a97d9ebfd8ab8df6b02c6c48cb024b07f59da959f3263db7fa7a5de8",
+          "modified": "2026-09-24T00:42:46.807400+00:00"
+        },
+        {
+          "path": "ctx_backup_20260923_194243/session-2026-09-21-pubready-seal.md",
+          "size": "610.0B",
+          "sha256": "178a1a7f17e491eda75f6f18b7fc83254c4176b9a4c7a3be1e61d023d5b570cb",
+          "modified": "2026-09-24T00:42:46.798542+00:00"
+        },
+        {
+          "path": "ctx_backup_20260923_194243/session-2026-09-21-pub-arc-complete.md",
+          "size": "725.0B",
+          "sha256": "b5cce230c10855799fa76ebf166062a530bb272fd2fef63c38075d2252bd2833",
+          "modified": "2026-09-24T00:42:46.797932+00:00"
+        },
+        {
+          "path": "ctx_backup_20260923_194243/session-close-20260921-am.md",
+          "size": "1.1KB",
+          "sha256": "44e19fd11056318fc322deb02188a6b926c78e6bd49e08ebcf6eee88f714a5b1",
+          "modified": "2026-09-24T00:42:46.771361+00:00"
+        },
+        {
+          "path": "ctx_backup_20260923_194243/handoff_window-close-20260921-am.md",
+          "size": "1.4KB",
+          "sha256": "f965107dbd8df7d4dee7e17c3676829e4981f898430300fe0245ed568989ae7c",
+          "modified": "2026-09-24T00:42:46.758220+00:00"
+        },
+        {
+          "path": "ctx_backup_20260923_194243/session-2026-09-21-lbloop-fix4.md",
+          "size": "522.0B",
+          "sha256": "36ebdd609ca18ec324d5d8457101f0cacf23ced75a9a0fa3903145615a1ba804",
+          "modified": "2026-09-24T00:42:46.743934+00:00"
+        },
+        {
+          "path": "ctx_backup_20260923_194243/session-2026-09-21-lbloop-fix3.md",
+          "size": "594.0B",
+          "sha256": "7744286cc263ef2a285ba17e74bc9583ee63568bc7d42e8c4086f88127406e08",
+          "modified": "2026-09-24T00:42:46.730935+00:00"
+        },
+        {
+          "path": "ctx_backup_20260923_194243/session-2026-09-21-lbloop-seal-v2.md",
+          "size": "814.0B",
+          "sha256": "10cbb04a2bebd387b3c2d8af2de6b1377a48bc0f8d54e31be4515989033dbb90",
+          "modified": "2026-09-24T00:42:46.699936+00:00"
+        },
+        {
+          "path": "ctx_backup_20260923_194243/session-2026-09-20-floorlift-seal.md",
+          "size": "566.0B",
+          "sha256": "718d19b107128c88605d06ee341e1362cdd9f1c2a890a261d365e1eba43be0ef",
+          "modified": "2026-09-24T00:42:46.698936+00:00"
+        },
+        {
+          "path": "ctx_backup_20260923_194243/session-2026-09-20-floorlift.md",
+          "size": "1.1KB",
+          "sha256": "4839ef86b0b03a2411e5d4f80b2b666c6bfd6b1f8c3fd0a32d81f2d8cd25d4be",
+          "modified": "2026-09-24T00:42:46.692528+00:00"
+        },
+        {
+          "path": "ctx_backup_20260923_194243/handoff_window-close-20260921.md",
+          "size": "1.2KB",
+          "sha256": "36f20750365ea7f5230d7f6aa31f4cda6d55d020feef12592f2629fc7ab5d2f9",
+          "modified": "2026-09-24T00:42:46.616939+00:00"
+        },
+        {
+          "path": "ctx_backup_20260923_194243/session-20260918_late-sealed.md",
+          "size": "1.2KB",
+          "sha256": "10e761aba8304dcaec2e74da96dc34964a37f2cbd6f6d8593674dd100dd55860",
+          "modified": "2026-09-24T00:42:46.345021+00:00"
+        },
+        {
+          "path": "ctx_backup_20260923_194243/session-20260918_close-sealed.md",
+          "size": "1.4KB",
+          "sha256": "143b77cba7227086107b1bc0a523eb352462781ef9aa8e5d100b611daaaf451f",
+          "modified": "2026-09-24T00:42:46.344442+00:00"
+        }
+      ]
+    },
+    "simulations": {
+      "count": 568,
+      "files": [
+        {
+          "path": "ctx_backup_20260923_194243/release-notes-v2026.09.21-agape-cascade-ledger-discipline-20260921_062731.md",
+          "size": "2.0KB",
+          "sha256": "4c2d75d5439607ddac94c3c7ff86068135a323963dbc66cc057a02531ed8590b",
+          "modified": "2026-09-24T00:42:46.770698+00:00"
+        },
+        {
+          "path": "ctx_backup_20260923_194243/release-notes-v2026.09.21-agape-cascade-ledger-discipline-20260921_062339.md",
+          "size": "1.9KB",
+          "sha256": "d10209d4d585572f642ed0ad9d201dc91f32c606ffe1941bfffa705b14ed2b23",
+          "modified": "2026-09-24T00:42:46.770131+00:00"
+        },
+        {
+          "path": "ctx_backup_20260923_194243/release-notes-v2026.09.21-agape-cascade-ledger-discipline-20260921_062311.md",
+          "size": "1.9KB",
+          "sha256": "d10209d4d585572f642ed0ad9d201dc91f32c606ffe1941bfffa705b14ed2b23",
+          "modified": "2026-09-24T00:42:46.769604+00:00"
+        },
+        {
+          "path": "ctx_backup_20260923_194243/release-notes-v2026.09.21-agape-cascade-ledger-discipline-20260921_061920.md",
+          "size": "2.5KB",
+          "sha256": "94a0724a62b6bf143e2baa79ab92d8068b1b714339e50b312cedcd625e4d0665",
+          "modified": "2026-09-24T00:42:46.768990+00:00"
+        },
+        {
+          "path": "bin/0798_agape_oracle.py",
+          "size": "5.6KB",
+          "sha256": "d7c20749fcdc997da08df47b423cb18023ab742d23152d8b842138436c865f0b",
+          "modified": "2026-09-24T00:42:45.034994+00:00"
+        },
+        {
+          "path": "bin/0797_agape_engine.py",
+          "size": "3.2KB",
+          "sha256": "c7f5fded801d665cf546688a3310b8d16831e05e3837baabdebd871ae1c5c451",
+          "modified": "2026-09-24T00:42:45.034991+00:00"
+        },
+        {
+          "path": "bin/0796_agape_board_advisor.py",
+          "size": "10.7KB",
+          "sha256": "85a960ef139c4e1423e5197c1cf663915be33f988e63fe8238584b0510be834c",
+          "modified": "2026-09-24T00:42:45.034510+00:00"
+        },
+        {
+          "path": "bin/0768_agape_cooperation_theorem.py",
+          "size": "3.4KB",
+          "sha256": "98fc5fe02d66255527ca1960a27d1d0cfd0b29211246993cc8d195cc535322da",
+          "modified": "2026-09-24T00:42:45.019648+00:00"
+        },
+        {
+          "path": "bin/0107_agape_mesh_oracle.py",
+          "size": "8.2KB",
+          "sha256": "0d6f04d6d890942e1807452dbbc8a3e763f8aacb7e041f17e183d5bd1143b6c4",
+          "modified": "2026-09-24T00:42:44.436682+00:00"
+        },
+        {
+          "path": "bin/0087_agape_synergetic_calculus.py",
+          "size": "12.3KB",
+          "sha256": "2708182446d0b88938f387bcc8c6606e216fb840c02ca442f388d33f5939ddd3",
+          "modified": "2026-09-24T00:42:44.429522+00:00"
+        },
+        {
+          "path": "bin/0069_agape_net_full_integration.py",
+          "size": "16.3KB",
+          "sha256": "ac42da68fa8d315d42ca570720c64c83948b0357dfd20f5878018f21c67be154",
+          "modified": "2026-09-24T00:42:44.423896+00:00"
+        },
+        {
+          "path": "bin/0068_agape_net_setup.py",
+          "size": "15.5KB",
+          "sha256": "3716cadbe304d415aa8c830e2ada43ce03c29a94b84bc9c6c37af0a2c8456b51",
+          "modified": "2026-09-24T00:42:44.423812+00:00"
+        },
+        {
+          "path": "bin/0057_agape_primitive_forge.py",
+          "size": "43.8KB",
+          "sha256": "0070c19cfb50608838864e9dec62a4e6634740f1bc51e09e8686afe0e3f2dbb7",
+          "modified": "2026-09-24T00:42:44.420453+00:00"
+        },
+        {
+          "path": "bin/0056_agape_node_bootstrap.py",
+          "size": "4.4KB",
+          "sha256": "fdc87757b7da44b0f1de597b558227630615b203de220f14ab9cb702122b16b1",
+          "modified": "2026-09-24T00:42:44.419812+00:00"
+        },
+        {
+          "path": "bin/0054_agape_ledger_chain.py",
+          "size": "14.2KB",
+          "sha256": "e169e8f6f177d8627ee44d141402aa121e47ffed34611bde5880874a32299271",
+          "modified": "2026-09-24T00:42:44.418910+00:00"
+        },
+        {
+          "path": "bin/0053_agape_kernel_v2.py",
+          "size": "14.2KB",
+          "sha256": "c54cd37678a16457d4d5b342537c52c95f5575fb75a557bf7ced61519acf6d75",
+          "modified": "2026-09-24T00:42:44.418826+00:00"
+        },
+        {
+          "path": "bin/0050_agape_farm_os.py",
+          "size": "11.6KB",
+          "sha256": "d871e9c40bf9c9ce3c469182b806e3d018919fc127ef5bf26bccd37337a2197c",
+          "modified": "2026-09-24T00:42:44.417835+00:00"
+        },
+        {
+          "path": "bin/0031_unified_agape_engine.py",
+          "size": "53.7KB",
+          "sha256": "77667a63c4f6f743b902958329644a60ad4c4d24334b1b809e83e53aac7d1c67",
+          "modified": "2026-09-24T00:42:44.397989+00:00"
+        },
+        {
+          "path": "bin/0029_agape_evolution_v2.py",
+          "size": "12.0KB",
+          "sha256": "a36fce85f9dc35024a5221c88163eff4b7b0a4a3d6741aaa58cf59285dc03a9d",
+          "modified": "2026-09-24T00:42:44.397130+00:00"
+        },
+        {
+          "path": "bin/0028_agape_neurogenic_kernel.py",
+          "size": "56.0KB",
+          "sha256": "c2bccfd9e316e5a1526ad7c08267e290eecfdf00ad5df7fbdc6f26b08e3daacd",
+          "modified": "2026-09-24T00:42:44.397069+00:00"
+        }
+      ]
+    },
+    "router_logs": {
+      "count": 244,
+      "files": [
+        {
+          "path": "data/lumo_exchange.jsonl",
+          "size": "643.0B",
+          "sha256": "57658938f79e34daca4f814fc26388ba33d467cbabda34329e76ddfa96f7f25c",
+          "modified": "2026-09-24T09:13:02.965336+00:00"
+        },
+        {
+          "path": "logs/bot_daemon_20260923_212714.log",
+          "size": "581.0B",
+          "sha256": "32d9f4f0b6a02f39f139d6ca5a811330b894141a879a6fd1b1c5774b73ea43a2",
+          "modified": "2026-09-24T07:28:26.150016+00:00"
+        },
+        {
+          "path": "data_bot_state.json",
+          "size": "284.0B",
+          "sha256": "0f2f3791492f742558f79fa4bd0099b3e2986b8304799fd1f7ac766dce535f97",
+          "modified": "2026-09-24T07:28:05.276287+00:00"
+        },
+        {
+          "path": "bot_loop.pid",
+          "size": "7.0B",
+          "sha256": "29fc50c723ead54f6c3877a8fcb5fe9620c5c77b51748a9650395b608b2f96bb",
+          "modified": "2026-09-24T07:28:05.004040+00:00"
+        },
+        {
+          "path": "data/router_decisions.jsonl",
+          "size": "308.0B",
+          "sha256": "917bde3825f442db663b72b047e9d55ec8ae5b7b489e2bdbf564b30c3fe6420f",
+          "modified": "2026-09-24T02:27:12.397697+00:00"
+        },
+        {
+          "path": "bin/bot_daemon.py",
+          "size": "2.4KB",
+          "sha256": "1349f1426d6a858377f30600fa7b5324a1e2c957037651dd2c07e68f1b11f084",
+          "modified": "2026-09-24T02:25:39.199782+00:00"
+        },
+        {
+          "path": "bin/smart_router.py",
+          "size": "3.2KB",
+          "sha256": "fc190cd64056113896204c88e2db778da9c6c4e9eba7a46d50db799b481aeee8",
+          "modified": "2026-09-24T02:25:11.246800+00:00"
+        },
+        {
+          "path": "bin/bot_loop_with_lumo_monitor.py",
+          "size": "1.9KB",
+          "sha256": "abd0b24fbacb77715de66bb261546382b2e64eb1721662df082be9233ded6a69",
+          "modified": "2026-09-24T02:18:33.217717+00:00"
+        },
+        {
+          "path": "bin/bot_loop_v1.py.backup_20260923",
+          "size": "4.4KB",
+          "sha256": "ae8a585b5c03656a9073d1ca6facd9bcbc0e818964765ec68096628e82521c6b",
+          "modified": "2026-09-24T02:18:33.203641+00:00"
+        },
+        {
+          "path": "local_archive/debug_20260923/smart_router_broken.py.backup",
+          "size": "3.3KB",
+          "sha256": "d914771a6baaa76743d99efe0b8a4da94ee446955b3dc4e7c78480a92cf79bed",
+          "modified": "2026-09-24T02:18:10.068865+00:00"
+        },
+        {
+          "path": "logs/bot_20260923_210730.log",
+          "size": "22.0B",
+          "sha256": "0ea7cf1d885ad4976e0150df9dce6ffc37f00cf7db07e24b2b2e886ad0493c46",
+          "modified": "2026-09-24T02:07:30.077722+00:00"
+        },
+        {
+          "path": "local_archive/debug_20260923/debug_bot_loop.py",
+          "size": "1.4KB",
+          "sha256": "318058f5755a27eeceb9184c66bffa360a5f7de2024c3193efe2de7ed149f258",
+          "modified": "2026-09-24T01:44:29.285693+00:00"
+        },
+        {
+          "path": "logs/bot_20260923_203743.log",
+          "size": "22.0B",
+          "sha256": "0ea7cf1d885ad4976e0150df9dce6ffc37f00cf7db07e24b2b2e886ad0493c46",
+          "modified": "2026-09-24T01:37:43.989854+00:00"
+        },
+        {
+          "path": "ctx_backup_20260923_194243/router-detached-20260921_142840.log",
+          "size": "2.4KB",
+          "sha256": "e6b659fbe3c7365329260c30485bec7c2778caf9b576cd99233df5705918c484",
+          "modified": "2026-09-24T00:42:46.805932+00:00"
+        },
+        {
+          "path": "ctx_backup_20260923_194243/router-detached-20260920_234544.log",
+          "size": "793.0B",
+          "sha256": "1c8473ba95fccd81594811397c9f3bb3d72a6ce9eff1388fe452ec2517358892",
+          "modified": "2026-09-24T00:42:46.756087+00:00"
+        },
+        {
+          "path": "ctx_backup_20260923_194243/bot_loop_20260920_144050.log",
+          "size": "63.0B",
+          "sha256": "35501accd9d2c3712cd63b500e8546e4cf535c1cc433d173ecfd714763b75c1e",
+          "modified": "2026-09-24T00:42:46.690936+00:00"
+        },
+        {
+          "path": "bin/0636_router_fuzzer_seed_corpus.py",
+          "size": "5.0KB",
+          "sha256": "f1410525b75a6a1ac4505bc81e6337fb8ddcaa800755c32c066f3b56308cc49e",
+          "modified": "2026-09-24T00:42:44.909910+00:00"
+        },
+        {
+          "path": "context_bridge/router-detached-20260921_142840.log",
+          "size": "2.4KB",
+          "sha256": "e6b659fbe3c7365329260c30485bec7c2778caf9b576cd99233df5705918c484",
+          "modified": "2026-09-21T19:28:55.247773+00:00"
+        },
+        {
+          "path": "data/router_ledger.db",
+          "size": "8.0KB",
+          "sha256": "c1ffc632ba3fa4bec7ed8da442e081f7d83d71951920791f0f830d2fecb54527",
+          "modified": "2026-09-21T19:28:55.206630+00:00"
+        },
+        {
+          "path": "bin/lumo_bridge_bot_v1.py",
+          "size": "9.7KB",
+          "sha256": "d280cba3e15c70bc78aac74a65cdd06759dc2cd713c824b8231fe0e596c0eaa9",
+          "modified": "2026-09-21T09:00:40.433674+00:00"
+        }
+      ]
+    },
+    "documentation": {
+      "count": 6833,
+      "files": [
+        {
+          "path": "human_gate_bundle/superlinear_methodology_20260924_105843.md",
+          "size": "3.4KB",
+          "sha256": "4a3e4e717d6c6d6f8913696f5890e796dec5e38d3b22427ebfd1c9b292d42e57",
+          "modified": "2026-09-24T10:58:43.256413+00:00"
+        },
+        {
+          "path": "README.md",
+          "size": "6.5KB",
+          "sha256": "07142d561caf7b326bd5116a3d2d214bcee239539d12bceb2b9c1d5452f633ce",
+          "modified": "2026-09-24T05:42:54.264255+00:00"
+        },
+        {
+          "path": "README.md.bak.20260924_004254",
+          "size": "6.5KB",
+          "sha256": "f1c39475e4377368f578ab81cf19f56dfa56698476f0a08a3f4f053173acc91b",
+          "modified": "2026-09-24T04:16:37.878200+00:00"
+        },
+        {
+          "path": "README.md.bak.20260923_231637",
+          "size": "5.3KB",
+          "sha256": "38d55874553bce7892191bfd97e9e60e2677b3ac2060b214a42de978a5fb204a",
+          "modified": "2026-09-24T04:11:21.881093+00:00"
+        },
+        {
+          "path": "local_archive/debug_20260923/README.txt",
+          "size": "83.0B",
+          "sha256": "b741ba641c7edb31f428c75c6c525090fe49178a5a62162a13f0990ca9dfa3ae",
+          "modified": "2026-09-24T03:57:46.876258+00:00"
+        },
+        {
+          "path": "ctx_backup_20260923_194243/readme_backup_20260921_154522/README.md",
+          "size": "7.9KB",
+          "sha256": "6a579a07d2afbdd74f701a05b4e2e859088c30df76bac2f80963ac8a14429598",
+          "modified": "2026-09-24T00:42:47.342435+00:00"
+        },
+        {
+          "path": "ctx_backup_20260923_194243/readme_backup_20260921_154022/README.md",
+          "size": "7.9KB",
+          "sha256": "6a579a07d2afbdd74f701a05b4e2e859088c30df76bac2f80963ac8a14429598",
+          "modified": "2026-09-24T00:42:47.342122+00:00"
+        },
+        {
+          "path": "ctx_backup_20260923_194243/fragments/README.md",
+          "size": "423.0B",
+          "sha256": "6f27f3f9734e42ad32e2251c2d973e951ad6428a437317207ed69b111ba570d3",
+          "modified": "2026-09-24T00:42:47.254713+00:00"
+        },
+        {
+          "path": "ctx_backup_20260923_194243/archive-20260920/MASTER_TODO.meshdraft.retry2.20260920_053533.md",
+          "size": "1.2KB",
+          "sha256": "0408438cc3a1feb46d36821a521b3a60bd12c4bbf644a1cedeaebc5f196f4564",
+          "modified": "2026-09-24T00:42:46.875995+00:00"
+        },
+        {
+          "path": "ctx_backup_20260923_194243/archive-20260920/MASTER_TODO.meshdraft.retry1.20260920_053533.md",
+          "size": "881.0B",
+          "sha256": "6208b85eb23b98dc5353b48d484ff89ecc9fc5f904c8baebe467363df7d4fd31",
+          "modified": "2026-09-24T00:42:46.875518+00:00"
+        },
+        {
+          "path": "ctx_backup_20260923_194243/archive-20260920/MASTER_TODO.meshdraft.20260920_052939.md",
+          "size": "359.0B",
+          "sha256": "a1a7b6318995c0b37af3f9a6ffa47233c3d8eb470b5b9028b8db360afa50525d",
+          "modified": "2026-09-24T00:42:46.873930+00:00"
+        },
+        {
+          "path": "docs/README.md",
+          "size": "28.6KB",
+          "sha256": "56ee53b0390249cae2e79983b13e1e2de9e0e63d1ff127d2375321f15dea3416",
+          "modified": "2026-09-24T00:42:45.947962+00:00"
+        },
+        {
+          "path": "docs/SUPERLINEAR.md",
+          "size": "2.8KB",
+          "sha256": "46a47b434b066797f22abd2c28bc75d5a6b2b61670634068cd521a92ce7a34a0",
+          "modified": "2026-09-24T00:42:45.892964+00:00"
+        },
+        {
+          "path": "docs/GOALS.md",
+          "size": "863.0B",
+          "sha256": "f105230b5e91a0c63c0056705e7dc70950c1728dff6c549257ec4bf4e5f3933c",
+          "modified": "2026-09-24T00:42:45.838731+00:00"
+        },
+        {
+          "path": "docs/MASTER_TODO.md",
+          "size": "845.0B",
+          "sha256": "2563fccbb302483a86cf09b8deaa6b6a0f37719d46ac8f1f083fa1bc7a5976c6",
+          "modified": "2026-09-24T00:42:45.806106+00:00"
+        },
+        {
+          "path": "MASTER_TODO.md",
+          "size": "845.0B",
+          "sha256": "2563fccbb302483a86cf09b8deaa6b6a0f37719d46ac8f1f083fa1bc7a5976c6",
+          "modified": "2026-09-22T00:58:05.097904+00:00"
+        },
+        {
+          "path": "GOALS.md",
+          "size": "863.0B",
+          "sha256": "f105230b5e91a0c63c0056705e7dc70950c1728dff6c549257ec4bf4e5f3933c",
+          "modified": "2026-09-22T00:58:05.096405+00:00"
+        },
+        {
+          "path": "README.md.bak.20260923_231121",
+          "size": "2.9KB",
+          "sha256": "6481c31c937ac747ca94f538234f79a79e100eb3577e02ff8da44e8de018ee91",
+          "modified": "2026-09-21T21:36:39.451655+00:00"
+        },
+        {
+          "path": "archive/cleanup-20260921_162046/backups/readme_backup_20260921_154022/README.md",
+          "size": "7.9KB",
+          "sha256": "6a579a07d2afbdd74f701a05b4e2e859088c30df76bac2f80963ac8a14429598",
+          "modified": "2026-09-21T21:20:46.496937+00:00"
+        },
+        {
+          "path": "archive/cleanup-20260921_161947/backups/readme_backup_20260921_154022/README.md",
+          "size": "7.9KB",
+          "sha256": "6a579a07d2afbdd74f701a05b4e2e859088c30df76bac2f80963ac8a14429598",
+          "modified": "2026-09-21T21:19:47.944641+00:00"
+        }
+      ]
+    },
+    "lessons": {
+      "count": 45,
+      "files": [
+        {
+          "path": "bin/0025_fix_chain_verify.py",
+          "size": "3.4KB",
+          "sha256": "6f3629a6dd6b74b61c41b5b286e67bf8293e80093314eb07687fadbd1d5dc649",
+          "modified": "2026-09-24T00:42:44.396056+00:00"
+        },
+        {
+          "path": "bin/pathway_chain_test.sh",
+          "size": "2.1KB",
+          "sha256": "fa223437407413f15a0e8cca3a9e3754c0e5f287eefeb998f2daf66d3bf9045f",
+          "modified": "2026-09-22T00:56:44.828842+00:00"
+        },
+        {
+          "path": "workareas/fuse-20260921_025613/lesson_chain_seal.json",
+          "size": "1.1KB",
+          "sha256": "c3b6df64041c07ff80efb950db1a7a33a003ad7bd5fc1d09ef149e8327db0c55",
+          "modified": "2026-09-21T07:56:41.370982+00:00"
+        },
+        {
+          "path": "bin/lesson_stage_v1.py",
+          "size": "7.0KB",
+          "sha256": "ffd54eb137ee770601db18a7418188ea34548178038e300c26089a1837329882",
+          "modified": "2026-09-21T07:22:37.311810+00:00"
+        },
+        {
+          "path": "bin/lesson_ingest.py",
+          "size": "1.2KB",
+          "sha256": "8e34abbf799b7c3c3d3ff8f1e05a1de3f7a6000b68ff597b4a413bff6b040302",
+          "modified": "2026-09-21T06:46:24.725567+00:00"
+        },
+        {
+          "path": "reports/lesson_audit-20260918.md",
+          "size": "261.0B",
+          "sha256": "dc353bca74c835a380751175d8d868ba0ee70359a9cf02075b80e8a186292a11",
+          "modified": "2026-09-19T00:35:56.029902+00:00"
+        },
+        {
+          "path": "consolidation-backups/untracked_collision_20260919-072429/logs/lesson_grades.log",
+          "size": "296.0B",
+          "sha256": "b3722a5736a5886d58b3209a78770dd09b9c334e7de3e1ba27f1eaed78144ae6",
+          "modified": "2026-09-18T17:20:42.375363+00:00"
+        },
+        {
+          "path": "consolidation-backups/untracked_collision_20260919-072429/data/vault_extract/termux-full-backup-20260809-2143/home/une/bin/lesson_injector.py",
+          "size": "10.7KB",
+          "sha256": "19160d9ecfd2eb97613d591884b80a3b3d25fcfd40dcbf17d75b32ca832a577e",
+          "modified": "2026-09-13T21:57:25.441420+00:00"
+        },
+        {
+          "path": "consolidation-backups/untracked_collision_20260919-072429/data/vault_extract/termux-full-backup-20260809-2143/home/fix_chain_verify.py",
+          "size": "3.4KB",
+          "sha256": "6f3629a6dd6b74b61c41b5b286e67bf8293e80093314eb07687fadbd1d5dc649",
+          "modified": "2026-09-13T21:57:24.378689+00:00"
+        },
+        {
+          "path": "consolidation-backups/untracked_collision_20260919-072429/data/vault_extract/termux-full-backup-20260809-2143/home/ecosystem/une/bin/lesson_injector.py",
+          "size": "10.7KB",
+          "sha256": "0cd587c888f3bd733363aa7bd895d9a649edf753f7952dfbd1b9f2c972c38e58",
+          "modified": "2026-09-13T21:57:21.785450+00:00"
+        },
+        {
+          "path": "consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/9535263a7d1e3db2/0025_fix_chain_verify.py",
+          "size": "3.4KB",
+          "sha256": "6f3629a6dd6b74b61c41b5b286e67bf8293e80093314eb07687fadbd1d5dc649",
+          "modified": "2026-09-13T17:34:08.174203+00:00"
+        },
+        {
+          "path": "attic/rescue_staging_vendor/0025_fix_chain_verify.py",
+          "size": "3.4KB",
+          "sha256": "6f3629a6dd6b74b61c41b5b286e67bf8293e80093314eb07687fadbd1d5dc649",
+          "modified": "2026-09-13T17:34:08.174203+00:00"
+        },
+        {
+          "path": "data/sdcard-sync/chain_verify.py",
+          "size": "2.0KB",
+          "sha256": "3739a964ccc0b0eee480cc9195b7974fdac6306bb22a8dc8d5781acfbdc22d34",
+          "modified": "2026-09-09T03:08:27.866716+00:00"
+        },
+        {
+          "path": "data/sdcard-sync/salvage/20260912-134943/repo-root/chain_verify.py",
+          "size": "2.0KB",
+          "sha256": "3739a964ccc0b0eee480cc9195b7974fdac6306bb22a8dc8d5781acfbdc22d34",
+          "modified": "2026-09-09T03:08:27+00:00"
+        },
+        {
+          "path": "data/sdcard-sync/salvage/20260912-134943/repo-root/salvage/20260912-134943/repo-root/chain_verify.py",
+          "size": "2.0KB",
+          "sha256": "3739a964ccc0b0eee480cc9195b7974fdac6306bb22a8dc8d5781acfbdc22d34",
+          "modified": "2026-09-09T03:08:27+00:00"
+        },
+        {
+          "path": "consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/2773033765a97642/.shortcuts/termics-mark-mistake",
+          "size": "101.0B",
+          "sha256": "6a14393eaef554b4f5ebc1b9e807bf3d478fe5c8a5aeb5b1061378959d2ed383",
+          "modified": "2026-08-17T08:22:45+00:00"
+        },
+        {
+          "path": "consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/salvage/bin/termics-mark-mistake",
+          "size": "659.0B",
+          "sha256": "15ba6f01d5d34f2620f9c26cd73398d3e20f28d92e0d36e9395e1cbc37695dba",
+          "modified": "2026-08-17T08:22:20+00:00"
+        },
+        {
+          "path": "consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/2773033765a97642/bin/termics-mark-mistake",
+          "size": "659.0B",
+          "sha256": "15ba6f01d5d34f2620f9c26cd73398d3e20f28d92e0d36e9395e1cbc37695dba",
+          "modified": "2026-08-17T08:22:20+00:00"
+        },
+        {
+          "path": "consolidation-backups/untracked_collision_20260919-072429/data/universal_index/unpacked/e130e3cb1a1f7fbd/bin/termics-mark-mistake",
+          "size": "659.0B",
+          "sha256": "15ba6f01d5d34f2620f9c26cd73398d3e20f28d92e0d36e9395e1cbc37695dba",
+          "modified": "2026-08-17T08:22:20+00:00"
+        },
+        {
+          "path": "consolidation-backups/untracked_collision_20260919-072429/data/usb128-import-20260913/snap/openroot_backup/organized/scripts/newton_chain_v5.py",
+          "size": "32.1KB",
+          "sha256": "4ace2302b998f98766322ee0c7bd4b1f9d2db7e7a7c047ff22068cdc255eb369",
+          "modified": "2026-08-06T11:28:22.780000+00:00"
+        }
+      ]
+    }
+  }
+}

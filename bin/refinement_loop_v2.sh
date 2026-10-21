@@ -2,7 +2,10 @@
 # refinement_loop_v2: sqlite seeds context, 7B drafts, 3B grades, FIX feeds forward
 set -eu
 export OLLAMA_HOST=http://localhost:11434
-cd /home/jesse/openroot
+SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd) || exit 1
+REPO_ROOT=$(cd -- "$SCRIPT_DIR/.." && pwd) || exit 1
+cd "$REPO_ROOT" || exit 1
+SQLITE_PARAMS=(python3 bin/sqlite_params.py)
 
 DOC="${1:?usage: refinement_loop_v2.sh <doc_ref> '<rubric>' [max_attempts]}"
 RUBRIC="${2:?rubric required}"
@@ -43,14 +46,17 @@ FIX: grader offline"
 
   printf '[grade] %s\n' "$(printf '%s' "$GRADE" | tr '\n' ' ')"
 
-  SAFE_GRADE=$(printf '%s' "$GRADE" | tr -d "'\"" | tr '\n' ' ')
-  sqlite3 data/refinement.db "INSERT INTO iterations (doc_ref, attempt, attempt_path, grade) VALUES ('$DOC', $ATTEMPT, '$ATTEMPT_PATH', '$SAFE_GRADE')"
+  SAFE_GRADE=$(printf '%s' "$GRADE" | tr '\n' ' ')
+  "${SQLITE_PARAMS[@]}" data/refinement.db \
+    "INSERT INTO iterations (doc_ref, attempt, attempt_path, grade) VALUES (?, ?, ?, ?)" \
+    "$DOC" "$ATTEMPT" "$ATTEMPT_PATH" "$SAFE_GRADE"
 
   BEST="$CONTENT"
 
-  if printf '%s' "$GRADE" | grep -q "VERDICT: PASS"; then
+  if printf '%s\n' "$GRADE" | grep -qxF "VERDICT: PASS"; then
     ACCEPTED=1
-    sqlite3 data/refinement.db "UPDATE iterations SET accepted=1 WHERE doc_ref='$DOC' AND attempt=$ATTEMPT"
+    "${SQLITE_PARAMS[@]}" data/refinement.db \
+      "UPDATE iterations SET accepted=1 WHERE doc_ref=? AND attempt=?" "$DOC" "$ATTEMPT"
     cp "$ATTEMPT_PATH" "docs/${DOC}.md"
     printf '[banked] docs/%s.md after %s attempt(s)\n' "$DOC" "$ATTEMPT"
   else
@@ -61,7 +67,9 @@ FIX: grader offline"
 done
 
 if [ "$ACCEPTED" -eq 0 ]; then
-  sqlite3 data/lessons.db "INSERT INTO lessons (domain,mistake,root_cause,correction,cost,source) VALUES ('refinement_loop','max attempts reached without pass on $DOC','rubric too strict, grader drift, or 7B capability ceiling','relax rubric, increase max_attempts, or switch doc to manual drafting','$MAX attempts','session');"
+  "${SQLITE_PARAMS[@]}" data/lessons.db \
+    "INSERT INTO lessons (domain,mistake,root_cause,correction,cost,source) VALUES ('refinement_loop', ?, 'rubric too strict, grader drift, or 7B capability ceiling', 'relax rubric, increase max_attempts, or switch doc to manual drafting', ?, 'session')" \
+    "max attempts reached without pass on $DOC" "$MAX attempts"
   printf '[held] %s attempts, no pass - latest draft at data/%s_attempt%s.txt, full history in data/refinement.db\n' "$MAX" "$DOC" "$ATTEMPT"
   exit 1
 fi
