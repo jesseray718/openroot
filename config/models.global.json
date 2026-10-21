@@ -1,0 +1,29 @@
+{
+  "default_policy": "local_first",
+  "model_profiles": {
+    "tiny_router": {
+      "local": ["ollama:qwen2.5:0.5b-instruct", "ollama:llama3.2:1b"],
+      "remote": []
+    },
+    "evidence_extractor": {
+      "local": ["ollama:qwen2.5:1.5b-instruct", "ollama:llama3.2:3b"],
+      "remote": []
+    },
+    "grounded_synthesizer": {
+      "local": ["ollama:openroot-coder:latest", "ollama:qwen2.5-coder:7b"],
+      "remote": []
+    }
+  },
+  "remote_policy": {
+    "enabled": false,
+    "require_explicit_consent": true,
+    "allowed_endpoints": [],
+    "never_send": [
+      "secrets",
+      "credentials",
+      "private_backups",
+      "raw_unreviewed_logs",
+      "canonical_database_contents"
+    ]
+  }
+}
