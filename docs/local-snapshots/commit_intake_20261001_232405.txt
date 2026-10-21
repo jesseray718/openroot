@@ -1,0 +1,87 @@
+# OpenRoot Commit Intake
+
+generated_utc=2026-10-01T23:24:08Z
+root=/home/jesse/openroot
+current_branch=docs/public-contract-v1
+current_head=42cf6ddb145a8e3f9a312fe5b6bedff86550b9be
+origin_main=3b6edfb144e04373a9cdfc44e4808082b6617248
+snapshot_branch=safety/local-work-snapshot-20261001_232405
+
+## Divergence
+ahead_of_origin_main=3
+behind_origin_main=1
+
+## Modified tracked files
+M	.gitignore
+M	README.md
+M	SECURITY.md
+M	data/superlinear/rapl_samples.jsonl
+
+## Untracked files visible to Git
+MASTER_TODO.md.bak.20260924_160603
+MASTER_TODO.md.bak.20260924_160905
+README.md.bak.20260924_164115
+README.md.bak.20260924_164302
+artifacts/newton_chain/intake_20260929T103216Z.jsonl
+artifacts/newton_chain/intake_20260929T103216Z.summary.json
+bin/cache_pathway_orchestrator_v1.py.bak.20260924_204517
+bin/smart_router.py.bak.20260925_060857
+bin/superlinear_optimize_v1.sh.bak.20260928_161746
+bin/superlinear_setup.py.bak.20260923_223214
+bin/superlinear_setup.py.bak.20260923_223348
+context_bridge/compost-20261001_053009.md
+context_bridge/court-v6-report-20261001_040010.md
+context_bridge/mistake_solutions/b1a37e490c1a49af.md
+context_bridge/refinement_loop_v1.sh.bak.20260928T150420Z
+context_bridge/superloop_DASHBOARD.md
+data/bridge_state.json
+data/doc_gaps.json
+data/model_registry.json
+data/router_keywords.json
+data/superloop_chains.json
+data_bot_state.json
+docs/newton_chain/ELEMENTS.md
+docs/newton_chain/README.md
+ledger/experiments/linux_command_persistence.jsonl
+model_registry/roster-20260928_221311.json
+model_registry/roster-current.json
+
+## Candidate public source/docs/config
+.gitignore
+README.md
+SECURITY.md
+docs/newton_chain/README.md
+
+## Automatic excludes: runtime, recovery, archives, databases, logs
+data/superlinear/rapl_samples.jsonl
+MASTER_TODO.md.bak.20260924_160603
+MASTER_TODO.md.bak.20260924_160905
+README.md.bak.20260924_164115
+README.md.bak.20260924_164302
+artifacts/newton_chain/intake_20260929T103216Z.jsonl
+artifacts/newton_chain/intake_20260929T103216Z.summary.json
+bin/cache_pathway_orchestrator_v1.py.bak.20260924_204517
+bin/smart_router.py.bak.20260925_060857
+bin/superlinear_optimize_v1.sh.bak.20260928_161746
+bin/superlinear_setup.py.bak.20260923_223214
+bin/superlinear_setup.py.bak.20260923_223348
+context_bridge/compost-20261001_053009.md
+context_bridge/court-v6-report-20261001_040010.md
+context_bridge/mistake_solutions/b1a37e490c1a49af.md
+context_bridge/refinement_loop_v1.sh.bak.20260928T150420Z
+context_bridge/superloop_DASHBOARD.md
+ledger/experiments/linux_command_persistence.jsonl
+model_registry/roster-20260928_221311.json
+model_registry/roster-current.json
+
+## Possible policy/doc commit candidates
+.gitignore
+README.md
+SECURITY.md
+.env.example
+.gitattributes
+
+## Current staged set
+
+## Safety marker
+COMMIT_INTAKE_READ_ONLY_COMPLETE

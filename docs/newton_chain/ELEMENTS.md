@@ -104,10 +104,3 @@ automatically proofs of later claims.
 
 Handoffs, mistake records, receipts, and context bridges preserve provenance,
 correction history, implementation context, and reusable practical knowledge.
-
-
-## Counterexamples and revision
-
-A counterexample, failed replication, changed dependency, or improved
-measurement does not erase prior records. It narrows, qualifies, supersedes, or
-reopens the affected proposition with a visible revision path.
