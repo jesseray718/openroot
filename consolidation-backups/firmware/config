@@ -1,0 +1,12 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = true
+[remote "origin"]
+	url = https://github.com/jesseray718/firmware.git
+	fetch = +refs/*:refs/*
+	mirror = true
+[remote "upstream"]
+	url = https://github.com/meshtastic/firmware.git
+	fetch = +refs/heads/*:refs/remotes/upstream/*
+	gh-resolved = base

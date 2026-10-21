@@ -1,0 +1,9 @@
+# pack-refs with: peeled fully-peeled sorted 
+aa3e83b1771476ccbee02bfc17385f94dc1396c8 refs/heads/chore/uplift-v4-20260828-020649
+f580b76ed55aaccce5a503b62fc2992ba081f35a refs/heads/chore/uplift-v4-20260828-053524
+91f58c4bacafa497d293f770799a21bf73579d7e refs/heads/main
+aa3e83b1771476ccbee02bfc17385f94dc1396c8 refs/pull/1/head
+f580b76ed55aaccce5a503b62fc2992ba081f35a refs/pull/2/head
+c9eb4f7068ad871c233189387f5d8cf2f6081224 refs/pull/3/head
+f074b4984cf7e33dd1d0c85f3b53d65262e39469 refs/pull/4/head
+1b2f1da1d0467d91105b8ea2fff52fbcbf76b1f5 refs/tags/v1.0.0

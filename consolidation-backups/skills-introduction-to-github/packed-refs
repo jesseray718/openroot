@@ -1,0 +1,22 @@
+# pack-refs with: peeled fully-peeled sorted 
+4c4d0c4d189fbc88b0fe9335f2c3d1c08b6b294f refs/heads/chore/foundation-uplift-20260828-225816
+45d679ed86d3990c837642b08b916639dfa0b86b refs/heads/chore/foundation-uplift-20260828-230544
+36273ef283a8e00bfa803db18438cfcc4d961fb1 refs/heads/chore/uplift-baseline-20260828-234414
+c328e3596adcbea96a75950e27cb77443b9a5556 refs/heads/chore/uplift-v4-20260828-020649
+b3a78b03e554fe27235f12302d292b44e0a6d832 refs/heads/chore/uplift-v4-20260828-053524
+05f517b9d2b581e30818f149126b26a18ba58ffe refs/heads/dontknow
+47c8c90de2bf65aa954987ee95bfda890fab094a refs/heads/main
+ed4a358a725af81243ed98535f4edb1de099d7b9 refs/pull/10/head
+8eff7f946ee241db2d1e2b83165e63bb5fe5ebd7 refs/pull/11/head
+b56eb6d0f56526bbe3337108d039336c7fb10b57 refs/pull/12/head
+bde9114548f6a1cc99186a3dade019063d688d0a refs/pull/13/head
+b78e3b2dfec944bde62bbbb4e7d18fbb1a98bcc1 refs/pull/14/head
+05f517b9d2b581e30818f149126b26a18ba58ffe refs/pull/15/head
+c328e3596adcbea96a75950e27cb77443b9a5556 refs/pull/2/head
+b3a78b03e554fe27235f12302d292b44e0a6d832 refs/pull/3/head
+a2158c91ea4d7d4edc71936a7179577c88b06a3e refs/pull/4/head
+45d679ed86d3990c837642b08b916639dfa0b86b refs/pull/5/head
+36273ef283a8e00bfa803db18438cfcc4d961fb1 refs/pull/6/head
+8e45af10a40b8223fd2ea4b54144b0b336f3231b refs/pull/7/head
+e6d9ac30b5746e91055593abcaa602bc6b4028e3 refs/pull/8/head
+5aa7649125b0f31b67c481e1437c52eaf59dc39b refs/pull/9/head
