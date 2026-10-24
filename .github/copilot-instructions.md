@@ -94,3 +94,15 @@ Agape-as-coordination-technology. Falsifiable claims only, no hype.
   from context_bridge remnants; Reh1t issue #53 (RAG ingestion) — clone is
   stale post-force-push, handle first PR gently; quarantine branch
   quarantine-pulse-20260918 possibly still on origin (delete when confident).
+
+## OpenRoot operational continuity
+
+Before troubleshooting connections or changing routing, read:
+- docs/operations/TERMUX-OLLAMA-CONNECTION.md
+- docs/operations/OPENROOT-CONTINUITY.md
+
+Preserve the original trained non-generative router.
+Do not confuse installed phi4-router with proof of that router's identity.
+Do not promote rejected placeholder code into an implementation.
+Report observed state separately from proposed or unverified behavior.
+Never commit credentials, private pods, or unrelated dirty-worktree files.
