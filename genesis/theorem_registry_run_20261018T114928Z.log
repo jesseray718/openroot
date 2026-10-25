@@ -1,9 +1,0 @@
-[gate] CANARY:OPENROOT-THEOREM-REGISTRY-V1 2026-10-18T11:49:28Z
-=== registry summary ===
-  10_axioms.md: 3 pending
-total proof-pending: 3
-registry: /home/jesse/openroot/genesis/theorem_registry.jsonl
-merkle_root(statements): d2bba4608f35596b50f62ec34a0fa254a2765d0c154daaafff3b46f882d4c387
-REGISTRY_MERKLE=d2bba4608f35596b50f62ec34a0fa254a2765d0c154daaafff3b46f882d4c387
-REGISTRY_COUNT=3
-CANARY:OPENROOT-THEOREM-REGISTRY-V1 COMPLETE [exit=0]
