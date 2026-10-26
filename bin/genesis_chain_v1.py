@@ -72,7 +72,7 @@ def file_sha256(path):
 
 def load_receipts(db_path):
     """Read every receipt, sorted by cache_key. Read-only; never touches the live db."""
-    conn = sqlite3.connect(f"file:{db_path}?mode=ro", uri=True)
+    conn = sqlite3.connect(Path(db_path).resolve().as_uri() + "?mode=ro", uri=True)
     conn.row_factory = sqlite3.Row
     rows = conn.execute(
         f"SELECT {', '.join(RECEIPT_FIELDS)} FROM receipt_cache ORDER BY cache_key"
@@ -118,9 +118,9 @@ def cmd_seal(args):
     repo = Path(args.repo)
     db = Path(args.db) if args.db else repo / "data" / "receipt_cache.db"
     ledger = Path(args.out_dir) if args.out_dir else repo / "data" / "ledger"
-    ledger.mkdir(parents=True, exist_ok=True)
     if not db.exists():
         held(f"no cache db at {db}")
+    ledger.mkdir(parents=True, exist_ok=True)
 
     log(f"reading {db} (read-only)")
     receipts = load_receipts(db)
@@ -136,12 +136,14 @@ def cmd_seal(args):
     if prev:
         parent = prev["head_sha256"]
     elif args.parent_hash_file:
-        parent = Path(args.parent_hash_file).read_text().strip().splitlines()[0].strip()
+        parent_lines = Path(args.parent_hash_file).read_text().strip().splitlines()
+        parent = parent_lines[0].strip() if parent_lines else ""
     elif args.parent_hash:
         parent = args.parent_hash.strip()
     else:
         parent = GENESIS_PARENT
-    if len(parent) != 64:
+    parent = parent.strip().lower()
+    if len(parent) != 64 or any(c not in "0123456789abcdef" for c in parent):
         held(f"parent hash must be 64 hex chars, got: {parent!r}")
 
     total_tokens = sum(int(r["tokens_used"] or 0) for r in receipts)
@@ -218,6 +220,9 @@ def cmd_verify(args):
                 fails.append(f"epoch {ep}: receipt count mismatch "
                              f"({len(receipts)} vs header {h.get('receipt_count')})")
         prev, n = rec, n + 1
+
+    if n == 0:
+        held(f"chain verification FAILED: no epoch records in {chain}")
 
     if fails:
         for f_ in fails:

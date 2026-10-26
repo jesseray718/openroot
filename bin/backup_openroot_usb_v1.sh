@@ -54,18 +54,49 @@ MNT="$(lsblk -nrno MOUNTPOINT "$PART" | head -1 || true)"
 if [ -z "$MNT" ]; then
   log "mounting $PART ..."
   if command -v udisksctl >/dev/null 2>&1; then
-    MNT="$(udisksctl mount -b "$PART" --no-user-interaction 2>/dev/null \
-           | sed -n 's/.* at \(.*\) on behalf of .*/\1/p' || true)"
-  fi
-  if [ -z "$MNT" ]; then
-    mkdir -p /mnt/openroot_usb
-    if ! mount "$PART" /mnt/openroot_usb 2>/dev/null; then
-      if command -v sudo >/dev/null 2>&1; then sudo mount "$PART" /mnt/openroot_usb
-      else die "cannot mount $PART (try: sudo mount $PART /mnt/openroot_usb)"; fi
+    if udisksctl mount -b "$PART" --no-user-interaction; then
+      MNT="$(lsblk -dnro MOUNTPOINT "$PART" | head -1 || true)"
     fi
-    MNT=/mnt/openroot_usb
+  fi
+
+  if [ -z "$MNT" ]; then
+    run_mount_privileged() {
+      if [ "$(id -u)" -eq 0 ]; then
+        "$@"
+      elif command -v sudo >/dev/null 2>&1; then
+        sudo "$@"
+      else
+        die "mounting requires root or sudo"
+      fi
+    }
+
+    mount_dir=/mnt/openroot_usb
+    run_mount_privileged mkdir -p "$mount_dir"
+
+    if mountpoint -q "$mount_dir"; then
+      die "$mount_dir is already mounted; inspect it before proceeding"
+    fi
+
+    fs_type="$(lsblk -dnro FSTYPE "$PART")"
+    owner_uid="${SUDO_UID:-$(id -u)}"
+    owner_gid="${SUDO_GID:-$(id -g)}"
+
+    case "$fs_type" in
+      vfat|exfat)
+        run_mount_privileged mount           -o "uid=$owner_uid,gid=$owner_gid,umask=077"           "$PART" "$mount_dir"
+        ;;
+      *)
+        run_mount_privileged mount "$PART" "$mount_dir"
+        ;;
+    esac
+
+    MNT="$(lsblk -dnro MOUNTPOINT "$PART" | head -1 || true)"
   fi
 fi
+
+[ -n "$MNT" ] || die "no mount point found for $PART"
+mountpoint -q "$MNT" || die "not a mounted filesystem: $MNT"
+[ -w "$MNT" ] || die "mount point is not writable by the invoking user: $MNT"
 ok "mounted at: $MNT"
 
 # ---- 3. space check -----------------------------------------
@@ -94,18 +125,39 @@ if command -v sqlite3 >/dev/null 2>&1; then
   n_dbs=0
   while IFS= read -r -d '' f; do
     rel="${f#"$REPO"/}"
-    out="$DEST/dbs/$(printf '%s' "$rel" | tr '/' '_')"
-    if sqlite3 -readonly "$f" "VACUUM INTO '$out'" 2>/dev/null; then
-      ok "sealed snapshot: $rel"
-      n_dbs=$((n_dbs + 1))
+    out="$DEST/dbs/$rel"
+    mkdir -p "$(dirname "$out")"
+
+    [ ! -e "$out" ] || die "snapshot already exists: $out"
+    tmp="$(mktemp "$out.tmp.XXXXXX")"
+    sql_tmp="$(printf '%s' "$tmp" | sed "s/'/''/g")"
+
+    if sqlite3 -readonly "$f" "VACUUM INTO '$sql_tmp'"; then
+      if integrity="$(sqlite3 -readonly "$tmp" 'PRAGMA integrity_check;')" &&
+         [ "$integrity" = "ok" ]; then
+        mv -- "$tmp" "$out"
+        ok "sealed snapshot: $rel"
+        n_dbs=$((n_dbs + 1))
+      else
+        rm -f -- "$tmp"
+        die "snapshot integrity check failed: $rel"
+      fi
     else
-      log "could not VACUUM $rel (copied raw by rsync anyway)"
+      rm -f -- "$tmp"
+      die "consistent SQLite snapshot failed: $rel; backup incomplete"
     fi
   done < <(find "$REPO" -type f \( -name '*.db' -o -name '*.sqlite' -o -name '*.sqlite3' \) -print0)
-  [ "$n_dbs" -gt 0 ] && ok "$n_dbs consistent db snapshot(s) written" \
-                     || log "no sqlite dbs found under repo"
+
+  if [ "$n_dbs" -gt 0 ]; then
+    ok "$n_dbs consistent db snapshot(s) written"
+  else
+    log "no sqlite dbs found under repo"
+  fi
 else
-  log "sqlite3 CLI missing - raw copies from rsync stand (ok if nothing was writing)"
+  if [ "${OPENROOT_ALLOW_RAW_SQLITE:-0}" != "1" ]; then
+    die "sqlite3 CLI missing: install it; raw fallback requires OPENROOT_ALLOW_RAW_SQLITE=1 and all database writers stopped"
+  fi
+  log "WARNING: raw SQLite fallback explicitly allowed by operator; all database writers must be stopped; database consistency is not verified"
 fi
 
 # ---- 6. ollama models: manifest by default, blobs optional ---
