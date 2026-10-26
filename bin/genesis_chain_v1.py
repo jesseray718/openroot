@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-or-later
 """OpenRoot Genesis Chain v1 - seal the receipt cache into immutable, parent-linked epochs.
 
 What this gives you

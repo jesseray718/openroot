@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# SPDX-License-Identifier: GPL-3.0-or-later
 # ============================================================
 # OpenRoot USB Backup v1  (backup_openroot_usb_v1.sh)
 # Cold, verified, idempotent backup of the openroot repo to USB.
