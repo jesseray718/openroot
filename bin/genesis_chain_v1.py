@@ -36,6 +36,7 @@ import lzma
 import os
 import sqlite3
 import sys
+import tempfile
 import time
 from pathlib import Path
 
@@ -91,6 +92,37 @@ def load_receipts(db_path):
     return out
 
 
+def snapshot_receipts(db_path):
+    """Read and hash the same SQLite backup, including committed WAL data."""
+    try:
+        with tempfile.TemporaryDirectory(prefix="openroot-seal-") as directory:
+            snapshot = Path(directory) / "receipt_cache.db"
+            source = sqlite3.connect(
+                Path(db_path).resolve().as_uri() + "?mode=ro",
+                uri=True,
+            )
+            try:
+                target = sqlite3.connect(snapshot)
+                try:
+                    deadline = time.monotonic() + 30
+
+                    def progress(status, remaining, total):
+                        if time.monotonic() > deadline:
+                            raise TimeoutError("SQLite snapshot exceeded 30 seconds")
+
+                    source.backup(
+                        target, pages=256, progress=progress, sleep=0.05
+                    )
+                finally:
+                    target.close()
+            finally:
+                source.close()
+
+            return load_receipts(snapshot), file_sha256(snapshot)
+    except (sqlite3.Error, OSError, TimeoutError) as exc:
+        held(f"cannot create or read consistent SQLite snapshot: {exc}")
+
+
 def receipts_root(receipts):
     """sha256 over per-receipt hashes in cache_key order. Change one byte anywhere -> new root."""
     h = hashlib.sha256()
@@ -123,7 +155,7 @@ def cmd_seal(args):
     ledger.mkdir(parents=True, exist_ok=True)
 
     log(f"reading {db} (read-only)")
-    receipts = load_receipts(db)
+    receipts, source_db_sha256 = snapshot_receipts(db)
     root = receipts_root(receipts)
     prev = last_record(ledger)
 
@@ -156,7 +188,7 @@ def cmd_seal(args):
         "receipts_root": root,
         "receipt_count": len(receipts),
         "tokens_total": total_tokens,
-        "source_db_sha256": file_sha256(db),
+        "source_db_sha256": source_db_sha256,
     }
     head_sha = hashlib.sha256(canon(header).encode()).hexdigest()
 
@@ -268,7 +300,7 @@ def cmd_stats(args):
 
 def main():
     p = argparse.ArgumentParser(description="OpenRoot Genesis Chain v1")
-    p.add_argument("--repo", default=os.environ.get("OPENROOT_REPO", "/home/jesse/openroot"))
+    p.add_argument("--repo", default=os.environ.get("OPENROOT_REPO", str(Path(__file__).resolve().parent.parent)))
     p.add_argument("--db", default=None, help="override receipt cache db path")
     p.add_argument("--out-dir", default=None, help="override ledger dir (default <repo>/data/ledger)")
     sub = p.add_subparsers(dest="cmd", required=True)

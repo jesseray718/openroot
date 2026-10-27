@@ -36,6 +36,12 @@ log(){ echo "[gate] $*"; }
 ok(){  echo "[banked] $*"; }
 die(){ echo "[held] $*"; exit 1; }
 
+case "$TAG" in
+  ""|*[!A-Za-z0-9_-]*)
+    die "tag must contain only ASCII letters, digits, underscores, or hyphens"
+    ;;
+esac
+
 [ -d "$REPO" ] || die "repo not found: $REPO"
 
 # ---- 1. locate USB device -----------------------------------
@@ -49,13 +55,27 @@ ok "target device: $DEV ($(lsblk -dno SIZE "$DEV"))"
 # ---- 2. pick first partition + mount ------------------------
 PART="$(lsblk -nrpo NAME,TYPE "$DEV" | awk '$2=="part"{print $1; exit}')"
 PART="${PART:-$DEV}"
-MNT="$(lsblk -nrno MOUNTPOINT "$PART" | head -1 || true)"
+mount_path() {
+  lsblk --json --nodeps --output MOUNTPOINT "$1" |
+    python3 -c '
+import json, sys
+devices = json.load(sys.stdin).get("blockdevices", [])
+if len(devices) != 1:
+    raise SystemExit("expected exactly one block device")
+path = devices[0].get("mountpoint") or ""
+if any(c in path for c in "\r\n"):
+    raise SystemExit("mount paths containing line breaks are unsupported")
+sys.stdout.write(path)
+'
+}
+
+MNT="$(mount_path "$PART")"
 
 if [ -z "$MNT" ]; then
   log "mounting $PART ..."
   if command -v udisksctl >/dev/null 2>&1; then
     if udisksctl mount -b "$PART" --no-user-interaction; then
-      MNT="$(lsblk -dnro MOUNTPOINT "$PART" | head -1 || true)"
+      MNT="$(mount_path "$PART")"
     fi
   fi
 
@@ -90,7 +110,7 @@ if [ -z "$MNT" ]; then
         ;;
     esac
 
-    MNT="$(lsblk -dnro MOUNTPOINT "$PART" | head -1 || true)"
+    MNT="$(mount_path "$PART")"
   fi
 fi
 
@@ -173,8 +193,16 @@ if [ "$COPY_MODELS" = "1" ]; then
   fi
 else
   if command -v ollama >/dev/null 2>&1; then
-    ollama list > "$DEST/models_manifest.txt" 2>/dev/null || true
-    ok "models manifest written (blobs NOT copied; re-pull reproduces them; use --models to copy)"
+    model_tmp="$(mktemp "$DEST/models_manifest.txt.tmp.XXXXXX")"
+    if ollama list > "$model_tmp" && [ -s "$model_tmp" ]; then
+      mv -- "$model_tmp" "$DEST/models_manifest.txt"
+      ok "models manifest written (blobs NOT copied; use --models to copy)"
+    else
+      rm -f -- "$model_tmp"
+      die "ollama model listing failed or returned empty output; backup incomplete"
+    fi
+  else
+    log "WARNING: ollama CLI unavailable; model manifest omitted and model blobs not copied"
   fi
 fi
 
@@ -193,7 +221,7 @@ cat > "$DEST/backup_info.json" <<JSON
 JSON
 
 log "writing sha256 manifest"
-( cd "$DEST" && find . -type f ! -name MANIFEST.sha256 -print0 \
+( cd "$DEST" && find . -type f ! -path './MANIFEST.sha256' -print0 \
   | sort -z | xargs -0 sha256sum > MANIFEST.sha256 )
 
 log "verifying manifest"
