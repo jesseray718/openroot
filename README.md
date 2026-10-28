@@ -1,5 +1,13 @@
 # OpenRoot
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20549528.svg)](https://doi.org/10.5281/zenodo.20549528)
+[![PoPW ledger](https://img.shields.io/badge/PoPW-v1.2.1-blue)](https://github.com/jesseray718/openroot/releases/tag/v1.2.1-popw-ledger)
+[![thermo](https://img.shields.io/badge/thermo-v1.1.0-blue)](https://github.com/jesseray718/openroot/releases/tag/v1.1.0-native-thermo)
+[![CI](https://github.com/jesseray718/openroot/actions/workflows/tests.yml/badge.svg)](https://github.com/jesseray718/openroot/actions/workflows/tests.yml)
+[![License: GPL v3](https://img.shields.io/badge/code-GPL--3.0-blue.svg)](LICENSE)
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/docs-CC--BY--SA--4.0-lightgrey.svg)](LICENSE-docs.md)
+
+
 Local-first knowledge pods with sealed receipts.
 
 OpenRoot is an open-source appropriate-technology commons: practical thermal,
