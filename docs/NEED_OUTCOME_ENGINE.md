@@ -1,5 +1,5 @@
 <!-- SPDX-License-Identifier: Apache-2.0 -->
-# Need-to-Outcome Engine 0.1
+# Need-to-Outcome Engine 0.1.1
 
 A deterministic, standard-library-only foundation for evidence-linked
 appropriate-technology comparisons and reusable computational pathways.
@@ -64,3 +64,29 @@ in the existing provenance system before claiming change-aware freshness.
 
 Historical receipts remain historical evidence. Changed assumptions,
 sources, permissions, or policy require revalidation, not erased history.
+
+
+## Hardening contract: 0.1.1
+
+- Request identifiers need_id, context_id, policy_id, and access_scope
+  must contain at least one non-whitespace character.
+- freshness must be a nonempty, flat mapping of nonblank string names
+  to nonblank string generation identifiers. Nested objects, nulls,
+  booleans, and numeric generation values are rejected.
+- Oversized measurement integers that overflow the finite-number check
+  produce ValueError rather than an unhandled OverflowError.
+- Chain-plan output includes the engine version.
+- The implementation/version change changes cache identity.
+
+These checks validate the supplied labels, not their real-world truth.
+Freshness and authorization are still not independently verified.
+
+### Local verification
+
+The hardened implementation passed 16 regression test methods and a
+459-case refinement battery with no failures or remaining probe gaps.
+The refinement battery used deterministic seeds 17, 2026, and 718.
+
+These are synthetic tests, not evidence of live source tracking,
+concurrent-writer reliability, physical safety, or social outcomes.
+The refinement report is retained privately outside the repository.
