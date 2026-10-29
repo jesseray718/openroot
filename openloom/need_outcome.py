@@ -8,7 +8,7 @@ import sqlite3
 from datetime import datetime, timezone
 from pathlib import Path
 
-VERSION = "need-outcome/0.1"
+VERSION = "need-outcome/0.1.1"
 
 
 def canonical(value):
@@ -23,10 +23,14 @@ def sha(value):
 
 
 def number(value):
-    return (
-        type(value) in (int, float)
-        and math.isfinite(value)
-    )
+    if type(value) not in (int, float):
+        return False
+    try:
+        return math.isfinite(value)
+    except OverflowError as exc:
+        raise ValueError(
+            "measurement exceeds the supported finite numeric range"
+        ) from exc
 
 
 def require(condition, message):
@@ -38,13 +42,18 @@ def evaluate(request):
     require(isinstance(request, dict), "request must be an object")
     for key in ("need_id", "context_id", "policy_id", "access_scope"):
         require(
-            isinstance(request.get(key), str) and bool(request[key]),
+            isinstance(request.get(key), str) and bool(request[key].strip()),
             f"{key} must be a nonempty string",
         )
     require(
         isinstance(request.get("freshness"), dict)
-        and bool(request["freshness"]),
-        "freshness must identify the input/corpus/policy generations",
+        and bool(request["freshness"])
+        and all(
+            isinstance(name, str) and bool(name.strip())
+            and isinstance(generation, str) and bool(generation.strip())
+            for name, generation in request["freshness"].items()
+        ),
+        "freshness must map nonblank names to nonblank generation IDs",
     )
     policy = request.get("policy")
     require(isinstance(policy, dict), "policy must be an object")
@@ -243,7 +252,12 @@ def plan_chain(nodes):
             })
             completed.add(key)
             pending.remove(key)
-    return {"chain_sha256": sha(nodes), "plan": order, "executed": False}
+    return {
+        "engine": VERSION,
+        "chain_sha256": sha(nodes),
+        "plan": order,
+        "executed": False,
+    }
 
 
 def cached_evaluate(db_path, request):
