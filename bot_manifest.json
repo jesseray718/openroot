@@ -1,0 +1,29 @@
+{
+  "orchestrator": "bin/bot_orchestrator.py",
+  "roles": {
+    "archivist": {
+      "script": "bin/sync_state.sh",
+      "duty": "Ingest raw data into Sealed Pods",
+      "frequency": "hourly"
+    },
+    "analyst": {
+      "script": "bin/analyze_gaps.sh",
+      "duty": "Identify holes in the epistemic garden",
+      "frequency": "daily"
+    },
+    "builder": {
+      "script": "bin/cross_pollinate.py",
+      "duty": "Synthesize new logic pathways",
+      "frequency": "on-demand"
+    },
+    "auditor": {
+      "script": "bin/feedback_loop.py",
+      "duty": "Verify Newton Chain integrity",
+      "frequency": "per-commit"
+    }
+  },
+  "meta": {
+    "philosophy": "Commons",
+    "target": "Maximum Utility for Marginalized Nodes"
+  }
+}
