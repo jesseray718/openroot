@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 # Adds missing licenses + descriptions flagged by audit
 set -uo pipefail
-OWNER=jesseray718
+OWNER=${OPENROOT_USER}ray718
 
 # Example repo fixes (populate from hygiene_flags.tsv)
 declare -A LICENSES=(["agape-ipfs"]="mit" ["wisdom-scaffold"]="gpl-3.0")

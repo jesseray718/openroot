@@ -131,7 +131,7 @@ def run_stage(c, stage, cmd, iteration):
         desc, fix_cmd, auto = sol
         if auto and fix_cmd:
             print(f"[AUTO-FIX] {stage}: applying ledger solution — {desc}")
-            fr = subprocess.run(fix_cmd, shell=True, cwd=str(ROOT),
+            fr = subprocess.run(fix_cmd, shell=False, cwd=str(ROOT),
                                 capture_output=True, text=True, timeout=TIMEOUT)
             c.execute("UPDATE solutions SET applied_count=applied_count+1 WHERE mistake_sha=?", (sha,))
             c.commit()
@@ -236,7 +236,7 @@ def main():
         auto = 1 if "--auto" in sys.argv else 0
         c = conn()
         c.execute("INSERT OR REPLACE INTO solutions VALUES (?,?,?,?,?,?,?)",
-                  (sha, desc, fix_cmd, auto, "jesse", 0, now()))
+                  (sha, desc, fix_cmd, auto, "(os.getenv("OPENROOT_USER", "jesse"))", 0, now()))
         c.commit(); print(f"[BOUND] {sha} -> {desc} (auto={auto})")
     else: print(__doc__)
 

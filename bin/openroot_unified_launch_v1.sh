@@ -4,7 +4,7 @@
 # Canary: UNIFIED_V1_$(date +%Y%m%d_%H%M%S)
 
 set -euo pipefail
-ROOT="/home/jesse/openroot"
+ROOT="/home/${OPENROOT_USER}/openroot"
 cd "$ROOT"
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 CANARY="UNIFIED_V1_${TIMESTAMP}"
@@ -130,7 +130,7 @@ Git Push → GitHub
 ### Layer 1: Infrastructure
 - Git (version control)
 - Ollama (local LLM serving @ localhost:11434)
-- Tailscale (secure mesh networking 100.122.169.43)
+- Tailscale (secure mesh networking ${OPENROOT_HUB})
 - SQLite FTS5 (semantic indexing + Nomic Embed)
 
 ### Layer 2: Orchestration
@@ -226,10 +226,10 @@ if gh auth status &>/dev/null; then
     USER=$(gh api user --jq '.login' 2>/dev/null || echo "unknown")
     echo "   Authenticated as: $USER"
     
-    ISSUE_COUNT=$(gh issue list --repo jesseray718/openroot --limit 10 --json number,title --jq '.[].number' 2>/dev/null | wc -l || echo "0")
+    ISSUE_COUNT=$(gh issue list --repo ${OPENROOT_USER}ray718/openroot --limit 10 --json number,title --jq '.[].number' 2>/dev/null | wc -l || echo "0")
     echo "   Open issues: $ISSUE_COUNT"
     
-    PR_COUNT=$(gh pr list --repo jesseray718/openroot --limit 10 --json number,title --jq '.[].number' 2>/dev/null | wc -l || echo "0")
+    PR_COUNT=$(gh pr list --repo ${OPENROOT_USER}ray718/openroot --limit 10 --json number,title --jq '.[].number' 2>/dev/null | wc -l || echo "0")
     echo "   Open PRs: $PR_COUNT"
 else
     echo "[WARN] GitHub CLI not authenticated"
@@ -283,8 +283,8 @@ echo "  3. Verify: bin/stack_gate.sh (validation gate)"
 echo "  4. Check: context_bridge/ for session seeds"
 echo ""
 echo "🔗 Quick Links:"
-echo "  - GitHub: https://github.com/jesseray718/openroot"
-echo "  - SSH: ssh jesse@optiplex (LAN) or ssh jesse@100.122.169.43 (Tailscale)"
+echo "  - GitHub: https://github.com/${OPENROOT_USER}ray718/openroot"
+echo "  - SSH: ssh ${OPENROOT_USER}@optiplex (LAN) or ssh ${OPENROOT_USER}@${OPENROOT_HUB} (Tailscale)"
 echo "  - Support: https://proton.me/support/lumo"
 echo ""
 echo "Canary: ${CANARY}"

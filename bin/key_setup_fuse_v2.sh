@@ -3,7 +3,7 @@ set -eu
 export GIT_PAGER=cat
 ROOT="$HOME/openroot"
 TS=$(date +%Y%m%d_%H%M%S)
-HOST_IP="jesse@100.122.169.43"
+HOST_IP="${OPENROOT_USER}@${OPENROOT_HUB}"
 cd "$ROOT"
 
 echo "[STAGE:key] generating ed25519 key if absent (no passphrase — phone-local threat model)"
@@ -25,8 +25,8 @@ echo "[STAGE:config] ~/.ssh/config so plain 'ssh optiplex' works"
 touch "$HOME/.ssh/config"; chmod 600 "$HOME/.ssh/config"
 grep -q "Host optiplex" "$HOME/.ssh/config" || cat >> "$HOME/.ssh/config" <<CFG
 Host optiplex
-  HostName 100.122.169.43
-  User jesse
+  HostName ${OPENROOT_HUB}
+  User ${OPENROOT_USER}
   ServerAliveInterval 30
   ServerAliveCountMax 6
 CFG
@@ -100,7 +100,7 @@ if [ -f bin/lb_loop_v2.py ]; then
 import sys
 sys.path.insert(0, "bin")
 import lb_loop_v2
-crash = 'Traceback (most recent call last): File "/home/jesse/openroot/bin/multi_router.py", line 248, in main for f in sorted(os.listdir(ob))[-3:]: FileNotFoundError: [Errno 2] No such file or directory: /home/jesse/openroot/lumo_lane/outbox'
+crash = 'Traceback (most recent call last): File "/home/${OPENROOT_USER}/openroot/bin/multi_router.py", line 248, in main for f in sorted(os.listdir(ob))[-3:]: FileNotFoundError: [Errno 2] No such file or directory: /home/${OPENROOT_USER}/openroot/lumo_lane/outbox'
 print(lb_loop_v2.fingerprint(crash))
 PYEOF
 )

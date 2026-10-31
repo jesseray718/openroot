@@ -3,11 +3,11 @@
 set -euo pipefail
 export GIT_PAGER=cat
 
-REPO="/home/jesse/openroot"
-LADDER="/home/jesse/openroot/bin/launch_ladder_v1.py"
-ENGINE="/home/jesse/openroot/bin/mistake_engine_v1.py"
+REPO="/home/${OPENROOT_USER}/openroot"
+LADDER="/home/${OPENROOT_USER}/openroot/bin/launch_ladder_v1.py"
+ENGINE="/home/${OPENROOT_USER}/openroot/bin/mistake_engine_v1.py"
 STAMP="$(date -u +%Y%m%dT%H%M%SZ)"
-BACKUP="/home/jesse/openroot/bin/launch_ladder_v1.py.pre_mistake_runner_fix.${STAMP}.bak"
+BACKUP="/home/${OPENROOT_USER}/openroot/bin/launch_ladder_v1.py.pre_mistake_runner_fix.${STAMP}.bak"
 OLD='python3 bin/mistake_engine_v1.py list'
 NEW='python3 bin/mistake_engine_v1.py compost'
 

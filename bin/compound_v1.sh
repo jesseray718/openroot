@@ -6,7 +6,7 @@
 set -u
 CONFIRM="${CONFIRM:-0}"
 export GIT_PAGER=cat
-REPO=/home/jesse/openroot
+REPO=/home/${OPENROOT_USER}/openroot
 TS=$(date +%Y%m%d_%H%M%S)
 SRC="compound-v1.1-${TS}"
 
@@ -24,7 +24,7 @@ tasks_open = con.execute(q_open).fetchone()[0]
 print(f"[gate] HEAD={head} MASTER_TODO={mt_lines} lines tasks_open={tasks_open}")
 
 # ---- [stage:lessons] scan recent lb logs, ingest failures/holds idempotently ----
-logfiles = sorted(glob.glob("/home/jesse/lumo/logs/run-*.log"), key=os.path.getmtime, reverse=True)[:5]
+logfiles = sorted(glob.glob("/home/${OPENROOT_USER}/lumo/logs/run-*.log"), key=os.path.getmtime, reverse=True)[:5]
 print(f"[gate] scanning {len(logfiles)} recent lb log(s)")
 new = []
 for lf in logfiles:

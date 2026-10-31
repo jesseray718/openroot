@@ -4,7 +4,7 @@
 # Audit by default; CONFIRM=1 executes mutations.
 set -eu
 export GIT_PAGER=cat
-cd /home/jesse/openroot
+cd /home/${OPENROOT_USER}/openroot
 CONFIRM="${CONFIRM:-0}"
 
 echo "== [gate] STEP 1: divergence map =="

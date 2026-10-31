@@ -5,7 +5,7 @@
 # [canary] seal_session_v1_CANARY_MARKER
 set -euo pipefail
 export GIT_PAGER=cat PAGER=cat
-REPO=/home/jesse/openroot
+REPO=/home/${OPENROOT_USER}/openroot
 CONFIRM="${CONFIRM:-0}"
 cd "$REPO"
 say(){ printf '[%s] %s\n' "$1" "$2"; }
@@ -50,7 +50,7 @@ if grep -q '\[PHOTO\]' README.md 2>/dev/null; then
 else
   python3 - <<'PY_PHOTO'
 import re
-p = "/home/jesse/openroot/README.md"
+p = "/home/${OPENROOT_USER}/openroot/README.md"
 try: lines = open(p, encoding="utf-8").read().split("\n")
 except FileNotFoundError:
     print("[held] no README.md — skip PHOTO slot"); raise SystemExit
@@ -107,7 +107,7 @@ cat > "$HANDOFF" <<'HO_EOF'
 
 ## Next actions
 1. Run pin_repos_v1.sh -> CONFIRM=1 (pins: openroot, wisdom-scaffold, openroot-ecosystem,
-   jesseray718.github.io by default, override via PIN_REPOS)
+   ${OPENROOT_USER}ray718.github.io by default, override via PIN_REPOS)
 2. Replace README TODO-photo-path with real photo
 3. aerocement-panel-v0 standalone repo with build evidence
 4. Watch #53 for Reh1t reply; review their PR promptly when it lands

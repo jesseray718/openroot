@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -eu
-cd /home/jesse/openroot
+cd /home/${OPENROOT_USER}/openroot
 echo "=== OPENROOT SESSION CONTEXT $(date -u +%FT%TZ) ==="
 echo "HEAD: $(git rev-parse --short HEAD)"
 echo "Receipt chain:"

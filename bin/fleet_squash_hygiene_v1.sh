@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 # SPDX-License-Identifier: GPL-3.0-only
-# fleet_squash_hygiene_v1.sh — squash-merge ALL open PRs on ALL jesseray718 repos + hygiene pass
+# fleet_squash_hygiene_v1.sh — squash-merge ALL open PRs on ALL ${OPENROOT_USER}ray718 repos + hygiene pass
 # Canary: [FSQHYGV1]  | Dry-run by default. CONFIRM=1 executes destructive half.
 # Provenance: Lumo-authored, human-gated. ai-generated-199737-hygieneaidsuffix.md lineage.
 set -euo pipefail
 export GIT_PAGER=cat
 export TZ=UTC
 
-OWNER="jesseray718"
-ROOT="/home/jesse/openroot"
+OWNER="${OPENROOT_USER}ray718"
+ROOT="/home/${OPENROOT_USER}/openroot"
 TS="$(date +%Y%m%d_%H%M%S)"
 LOG="$ROOT/context_bridge/fleet_squash_hygiene_${TS}.md"
 CANARY="[FSQHYGV1]"

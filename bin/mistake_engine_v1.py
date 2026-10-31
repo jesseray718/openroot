@@ -124,7 +124,7 @@ def solve(k, sol):
     c.execute(
         "INSERT OR REPLACE INTO solutions(key,solution,path,"
         "solved_by,solved_at) VALUES(?,?,?,?,?)",
-        (k, sol, p, "jesse", now()))
+        (k, sol, p, "(os.getenv("OPENROOT_USER", "jesse"))", now()))
     c.execute("UPDATE mistakes SET solved=1 WHERE key=?", (k,))
     c.execute("DELETE FROM solution_fts WHERE key=?", (k,))
     c.execute("INSERT INTO solution_fts(key,shape,solution) "

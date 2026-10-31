@@ -2,7 +2,7 @@
 # lumo_bridge_run.sh - bound multi-cycle bridge driver. BRIDGEV1 canary.
 set -eu
 export GIT_PAGER=cat
-cd /home/jesse/openroot
+cd /home/${OPENROOT_USER}/openroot
 N=${1:-5}
 echo "[BRIDGEV1] running $N cycles, 60s apart"
 for i in $(seq 1 "$N"); do

@@ -2,8 +2,8 @@
 # frp11_forensics.sh — identify Sep 19 coordinated master pushes + python-quality failure root cause
 set -euo pipefail
 export GIT_PAGER=cat
-REPO=/home/jesse/openroot
-GH_USER=jesseray718
+REPO=/home/${OPENROOT_USER}/openroot
+GH_USER=${OPENROOT_USER}ray718
 TS=$(date +%Y%m%d_%H%M%S)
 RPT=$REPO/analysis/frp11_${TS}
 mkdir -p "$RPT"

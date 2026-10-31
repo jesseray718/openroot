@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
 # SPDX-License-Identifier: GPL-3.0-or-later
-# OpenRoot — jesseray718
+# OpenRoot — ${OPENROOT_USER}ray718
 # PANE: SSH — add Reh1t contributor acknowledgment to README.md
 # eta = useful_joules / human_joules
 set -euo pipefail
 export GIT_PAGER=cat
-REPO=/home/jesse/openroot
+REPO=/home/${OPENROOT_USER}/openroot
 STAMP=$(date +%Y%m%d_%H%M%S)
 CANARY="CONTRIB1"
-LOG=/home/jesse/openroot/logs/contributor_ack_${STAMP}.log
+LOG=/home/${OPENROOT_USER}/openroot/logs/contributor_ack_${STAMP}.log
 mkdir -p "$(dirname "$LOG")"
 exec > >(tee -a "$LOG") 2>&1
 echo "[$CANARY] START $STAMP"
 cd "$REPO"
 
-README=/home/jesse/openroot/README.md
+README=/home/${OPENROOT_USER}/openroot/README.md
 BACKUP="$README.bak.${STAMP}"
 
 # [gate] does README exist?
@@ -36,7 +36,7 @@ else
       print ""
       print "### Early Contributors"
       print ""
-      print "- **Rehan Tariq** (@Reh1t) — [PR #63](https://github.com/jesseray718/openroot/pull/63): Local LLM Agents + SQLite RAG Integration"
+      print "- **Rehan Tariq** (@Reh1t) — [PR #63](https://github.com/${OPENROOT_USER}ray718/openroot/pull/63): Local LLM Agents + SQLite RAG Integration"
       print "  - Implemented zero-dependency LLM agent orchestration with SQLite FTS5 indexing"
       print "  - Enabled local 7B/3B model routing for authoring/validation loops"
       print "  - Authorship preserved through history rewrites (commit eb247e94)"
@@ -54,7 +54,7 @@ else
 
 ### Early Contributors
 
-- **Rehan Tariq** (@Reh1t) — [PR #63](https://github.com/jesseray718/openroot/pull/63): Local LLM Agents + SQLite RAG Integration
+- **Rehan Tariq** (@Reh1t) — [PR #63](https://github.com/${OPENROOT_USER}ray718/openroot/pull/63): Local LLM Agents + SQLite RAG Integration
   - Implemented zero-dependency LLM agent orchestration with SQLite FTS5 indexing
   - Enabled local 7B/3B model routing for authoring/validation loops
   - Authorship preserved through history rewrites (commit eb247e94)

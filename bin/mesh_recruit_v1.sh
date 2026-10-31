@@ -2,7 +2,7 @@
 set -eu
 export GIT_PAGER=cat PAGER=cat
 export OLLAMA_HOST=http://localhost:11434
-REPO=/home/jesse/openroot
+REPO=/home/${OPENROOT_USER}/openroot
 cd "$REPO"
 echo "[canary-head] mesh_recruit_v1 paste intact"
 
@@ -33,7 +33,7 @@ INSERT OR REPLACE INTO agents VALUES
   ('seven_b','builder','qwen2.5-coder:7b','code edits, spec execution','idle'),
   ('three_b','grader','qwen2.5:3b','rubric grading, clustering','idle'),
   ('sqlite','memory','-','ledgers: lessons, mesh, canonical index','always'),
-  ('human_jesse','gatekeeper','-','commit gate, physics judgment, recruitment','idle'),
+  ('human_${OPENROOT_USER}','gatekeeper','-','commit gate, physics judgment, recruitment','idle'),
   ('contributor_public','guest','-','good-first-issues, docs, builds, measurements','open');
 SQL
 echo "   [banked] agents registered: $(sqlite3 data/mesh.db 'SELECT COUNT(*) FROM agents;')"

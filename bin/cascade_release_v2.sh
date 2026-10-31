@@ -4,7 +4,7 @@
 set -u
 export GIT_PAGER=cat
 ROOT=/data/data/com.termux/files/home/openroot
-REPO=jesseray718/openroot
+REPO=${OPENROOT_USER}ray718/openroot
 TS=$(date +%Y%m%d_%H%M%S)
 TAG="v2026.09.21-agape-cascade-ledger-discipline"
 MS_CLOSED="agape-cascade ledger discipline (v2.5-v2.8)"
@@ -20,10 +20,10 @@ if git ls-files --error-unmatch bin/agape_cascade_v26.py >/dev/null 2>&1; then
     echo "[held] v2.6 tracked locally"
 else
     if [ "$CONF" = "1" ]; then
-        ssh jesse@100.122.169.43 'bash -s' <<'REMOTE'
+        ssh ${OPENROOT_USER}@${OPENROOT_HUB} 'bash -s' <<'REMOTE'
 set -u
 export GIT_PAGER=cat
-cd /home/jesse/openroot
+cd /home/${OPENROOT_USER}/openroot
 git ls-files --error-unmatch bin/agape_cascade_v26.py >/dev/null 2>&1 && { echo "[held] tracked"; exit 0; }
 [ -f bin/agape_cascade_v26.py ] || { echo "[LEAK] v2.6 ABSENT on optiplex"; exit 1; }
 python3 -m py_compile bin/agape_cascade_v26.py && echo "[PASS] compiled"

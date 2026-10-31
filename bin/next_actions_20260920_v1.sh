@@ -3,7 +3,7 @@
 # master->main renames (auto-detect), unstable-PR diagnostics, GOALS/MASTER_TODO draft rebuild.
 set -eu
 export GIT_PAGER=cat PAGER=cat
-OPENROOT=/home/jesse/openroot
+OPENROOT=/home/${OPENROOT_USER}/openroot
 CANARY_TEXT="[canary] OPENROOT-next-actions-v1-20260920 paste intact"
 echo "$CANARY_TEXT"
 tail -n 1 "$0" | grep -q '\[exit=0\]' || { echo "[gate] tail-line canary FAILED — paste truncated, abort"; exit 1; }
@@ -37,11 +37,11 @@ hdr "STAGE 2 [pr-close] superseded: openroot #5 #12 #15 #16 #18"
 gh_ok || { say_ "[held] gh not authenticated — skipping"; }
 CLOSE_MSG="Closing as superseded by fleet consolidation + fork squash sync (2026-09-20). Content preserved in git history; reopen if any portion is still live."
 for n in 5 12 15 16 18; do
-  INFO=$(gh pr view "$n" -R jesseray718/openroot --json title,state,url -q '.title+" | "+.state+" | "+.url' 2>/dev/null || echo "NOT FOUND")
+  INFO=$(gh pr view "$n" -R ${OPENROOT_USER}ray718/openroot --json title,state,url -q '.title+" | "+.state+" | "+.url' 2>/dev/null || echo "NOT FOUND")
   if [[ "$INFO" == "NOT FOUND" ]]; then say_ "[held] PR #$n not found — skip"; continue; fi
   if [[ "$INFO" == *"CLOSED"* ]]; then say_ "[held] PR #$n already closed — skip"; continue; fi
   if [[ "$CONF" == "1" ]]; then
-    gh pr close "$n" -R jesseray718/openroot --comment "$CLOSE_MSG" && say_ "[banked] PR #$n closed"
+    gh pr close "$n" -R ${OPENROOT_USER}ray718/openroot --comment "$CLOSE_MSG" && say_ "[banked] PR #$n closed"
   else
     say_ "[held] preview: PR #$n would CLOSE with supersede comment :: $INFO"
   fi
@@ -60,12 +60,12 @@ gh_ok && while read -r repo; do
       say_ "[held] preview: $repo would rename master -> main"
     fi
   fi
-done < <(gh repo list jesseray718 --limit 300 --json nameWithOwner -q '.[].nameWithOwner')
+done < <(gh repo list ${OPENROOT_USER}ray718 --limit 300 --json nameWithOwner -q '.[].nameWithOwner')
 
 # ---------- STAGE 4: [ci-diag] unstable PRs / Quality CI diagnostics ----------
 hdr "STAGE 4 [ci-diag] unstable PR diagnostics (decision: close vs fix)"
-gh pr list -R jesseray718/openroot --state open --json number,title,url,headRefName,statusCheckRollup > "$OPENROOT/data/unstable_prs_$STAMP.json" 2>/dev/null || true
-gh run list -R jesseray718/openroot --limit 15 --json displayTitle,workflowName,status,conclusion,createdAt > "$OPENROOT/data/recent_runs_$STAMP.json" 2>/dev/null || true
+gh pr list -R ${OPENROOT_USER}ray718/openroot --state open --json number,title,url,headRefName,statusCheckRollup > "$OPENROOT/data/unstable_prs_$STAMP.json" 2>/dev/null || true
+gh run list -R ${OPENROOT_USER}ray718/openroot --limit 15 --json displayTitle,workflowName,status,conclusion,createdAt > "$OPENROOT/data/recent_runs_$STAMP.json" 2>/dev/null || true
 say_ "[banked] diagnostics written: data/unstable_prs_$STAMP.json, data/recent_runs_$STAMP.json"
 say_ "[held] decision deferred to human after reading diagnostics (shared-workflow root cause — fix unblocks dependabot fleet-wide)"
 

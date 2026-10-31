@@ -3,8 +3,8 @@
 # Duplicate-tree siblings are prune candidates; newest per tree kept. Duplicates carry ZERO unique work vs sibling.
 set -euo pipefail
 export GIT_PAGER=cat
-REPO=/home/jesse/openroot
-GH_USER=jesseray718
+REPO=/home/${OPENROOT_USER}/openroot
+GH_USER=${OPENROOT_USER}ray718
 TS=$(date +%Y%m%d_%H%M%S)
 RPT=$REPO/analysis/frp9_${TS}
 mkdir -p "$RPT"

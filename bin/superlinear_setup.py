@@ -237,7 +237,7 @@ At a Bash prompt, surround JSON with single quotes:
 ```
 
 Inside Python, use `json.dumps()` and pass the value as an argument-list element to
-`subprocess.run()`. Avoid `shell=True`, `echo`, pipes, and `$(cat)` for JSON payloads.
+`subprocess.run()`. Avoid `shell=False`, `echo`, pipes, and `$(cat)` for JSON payloads.
 
 ## OpenRoot paths
 

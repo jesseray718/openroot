@@ -6,7 +6,7 @@
 # [canary] merge_pr59_v3_CANARY_MARKER
 set -euo pipefail
 export GIT_PAGER=cat PAGER=cat
-REPO=/home/jesse/openroot
+REPO=/home/${OPENROOT_USER}/openroot
 WT=/tmp/wt-pr59-v3
 PR=59
 CONFIRM="${CONFIRM:-0}"

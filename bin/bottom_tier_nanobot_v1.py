@@ -46,7 +46,7 @@ class BottomTierNanobot:
         return (f"[{self.role}] (mock) Seed intent echo: {u[:160]}\n", "mock", "deterministic-stub")
 
     def _call_local(self, u):
-        base = os.environ.get("LOCAL_LLM_URL", "http://100.122.169.43:9999").rstrip("/")
+        base = os.environ.get("LOCAL_LLM_URL", "http://os.getenv('OPENROOT_HUB', '100.122.169.43'):9999").rstrip("/")
         model = os.environ.get("LOCAL_LLM_MODEL") or self.cfg.get("models", {}).get("local", "qwen2.5:3b")
         payload = json.dumps({"model": model, "max_tokens": self.contract["max_tokens"], "temperature": 0.2,
             "messages": [{"role": "system", "content": self.contract["system"]}, {"role": "user", "content": u}]}).encode()

@@ -4,7 +4,7 @@
 # Idempotent: adds section/contributor only if missing. Marker-guarded table.
 # USAGE: bin/readme_contributors.sh [handle] [description]
 set -eu
-cd /home/jesse/openroot
+cd /home/${OPENROOT_USER}/openroot
 README=README.md
 HANDLE="${1:-}"; DESC="${2:-}"
 [ -f "$README" ] || { echo "[held] README.md not found"; exit 1; }
@@ -20,5 +20,5 @@ insert_row() {
     echo "[banked] README contributor added: $1 — $2"
   fi
 }
-insert_row "jesseray718" "Founder, maintainer, OpenRoot doctrine author"
+insert_row "${OPENROOT_USER}ray718" "Founder, maintainer, OpenRoot doctrine author"
 [ -n "$HANDLE" ] && [ -n "$DESC" ] && insert_row "$HANDLE" "$DESC"

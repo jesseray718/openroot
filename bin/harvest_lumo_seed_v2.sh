@@ -3,10 +3,10 @@
 # Fetch estate context via FTS5+embedding, prepend to seed, then call 7B
 set -eu; export GIT_PAGER=cat TERM=dumb
 
-INBOX=/home/jesse/openroot/context_bridge/lumo_inbox
-HARVEST=/home/jesse/openroot/context_bridge/harvest
-RECEIPTS=/home/jesse/openroot/data/harvest_receipts.jsonl
-DB=/home/jesse/openroot/data/corpus_goal_index.db  # or your FTS5 ledger DB
+INBOX=/home/${OPENROOT_USER}/openroot/context_bridge/lumo_inbox
+HARVEST=/home/${OPENROOT_USER}/openroot/context_bridge/harvest
+RECEIPTS=/home/${OPENROOT_USER}/openroot/data/harvest_receipts.jsonl
+DB=/home/${OPENROOT_USER}/openroot/data/corpus_goal_index.db  # or your FTS5 ledger DB
 MODEL="${AGENT_MODEL:-openroot-instruct:7b}"
 
 mkdir -p "$INBOX" "$HARVEST"

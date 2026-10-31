@@ -5,7 +5,7 @@
 # DRY-RUN default, CONFIRM=1 executes. [canary] master_finalize_v3_CANARY_MARKER
 set -euo pipefail
 export GIT_PAGER=cat PAGER=cat
-REPO=/home/jesse/openroot
+REPO=/home/${OPENROOT_USER}/openroot
 WT=/tmp/wt-master-fin3
 CONFIRM="${CONFIRM:-0}"
 cd "$REPO"

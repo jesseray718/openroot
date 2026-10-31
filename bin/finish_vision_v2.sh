@@ -5,16 +5,16 @@
 # CANARY: FINISHV2. CONFIRM=1 to execute, dry-run otherwise. Idempotent: stage1 skipped.
 set -eu
 export GIT_PAGER=cat
-cd /home/jesse/openroot
+cd /home/${OPENROOT_USER}/openroot
 CONFIRM="${CONFIRM:-0}"
 
-cat <<'PYEOF' > /home/jesse/openroot/bin/dedup_pipeline_v2.py
+cat <<'PYEOF' > /home/${OPENROOT_USER}/openroot/bin/dedup_pipeline_v2.py
 # SPDX-License-Identifier: GPL-3.0-only
 """dedup_pipeline_v2.py — fixed v1: WAL + busy_timeout + periodic commits + heartbeat.
 Fixes incident b35f1f72118121c9: single end-of-run transaction caused DB lock."""
 import hashlib, json, os, sqlite3, time
-DB = "/home/jesse/openroot/data/dedup_ledger.db"
-ROOTS = ["/home/jesse/openroot"]
+DB = "/home/${OPENROOT_USER}/openroot/data/dedup_ledger.db"
+ROOTS = ["/home/${OPENROOT_USER}/openroot"]
 EXCLUDE = (".git", "node_modules", "__pycache__", ".venv", "venv", "quarantine",
             "archive", "attic", "consolidation-backups", "local_archive", "workareas")
 
@@ -72,14 +72,14 @@ def main():
     out = {"tier1_seen": t1, "tier2_hashed": t2, "dup_groups": dups,
            "redundant_copies": redundant, "elapsed_s": round(time.time()-t0, 2)}
     print("[DEDUPV2]", out, flush=True)
-    with open("/home/jesse/openroot/data/dedup_stream_latest.json", "w") as f:
+    with open("/home/${OPENROOT_USER}/openroot/data/dedup_stream_latest.json", "w") as f:
         json.dump(out, f, indent=2)
 
 if __name__ == "__main__":
     main()
 PYEOF
-python3 -m py_compile /home/jesse/openroot/bin/dedup_pipeline_v2.py
-grep -q "periodic commits" /home/jesse/openroot/bin/dedup_pipeline_v2.py
+python3 -m py_compile /home/${OPENROOT_USER}/openroot/bin/dedup_pipeline_v2.py
+grep -q "periodic commits" /home/${OPENROOT_USER}/openroot/bin/dedup_pipeline_v2.py
 
 # rung 8 content already banked by v1 run (docs/OPEN_INVITATION.md) — verify, don't rewrite
 grep -q "Credit is architectural" docs/OPEN_INVITATION.md && echo "[banked] OPEN_INVITATION.md confirmed present"

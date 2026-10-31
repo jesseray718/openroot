@@ -233,7 +233,7 @@ def main():
             alive = len(json.loads(r.read()).get("models", []))
         print(f"[PREFLIGHT] ollama ALIVE — {alive} models loaded")
     except Exception as e:
-        print(f"[PREFLIGHT] ollama DEAD ({type(e).__name__}) — set OLLAMA_HOST=http://100.122.169.43:11434 from termux")
+        print(f"[PREFLIGHT] ollama DEAD ({type(e).__name__}) — set OLLAMA_HOST=http://os.getenv('OPENROOT_HUB', '100.122.169.43'):11434 from termux")
     m, how = resolve_openrouter_model()
     print(f"[PREFLIGHT] openrouter model: {m or 'NONE'} ({how})")
     print(f"[PREFLIGHT] gemini: {'armed' if os.environ.get('GEMINI_API_KEY') else 'HELD — no key'}")

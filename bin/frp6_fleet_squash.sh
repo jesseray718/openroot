@@ -3,8 +3,8 @@
 # Dry-run default. CONFIRM=1 executes [merge-safe] and [sync-fork] only. No history rewrites, no manual branch deletions.
 set -euo pipefail
 export GIT_PAGER=cat
-GH_USER=jesseray718
-ORIG_REPO=/home/jesse/openroot
+GH_USER=${OPENROOT_USER}ray718
+ORIG_REPO=/home/${OPENROOT_USER}/openroot
 TS=$(date +%Y%m%d_%H%M%S)
 RPT=$ORIG_REPO/analysis/frp6_${TS}
 mkdir -p "$RPT"
@@ -33,7 +33,7 @@ echo "[stage:census] repos: $(python3 -c 'import json;print(len(json.load(open("
 # ---------- [stage:classify] ----------
 python3 - "$RPT" <<'PYEOF'
 import json, subprocess, sys, pathlib
-rpt = pathlib.Path(sys.argv[1]); USER = "jesseray718"
+rpt = pathlib.Path(sys.argv[1]); USER = "${OPENROOT_USER}ray718"
 inv = json.load(open(rpt / "inventory.json"))
 plan = {"actions": [], "repos": []}
 

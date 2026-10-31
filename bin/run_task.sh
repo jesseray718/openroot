@@ -3,7 +3,7 @@ set -Eeuo pipefail
 
 TASK_FILE="${1:?Usage: run_task.sh TASK.md}"
 RUN_ID="$(date -u +%Y%m%dT%H%M%SZ)"
-RUN_DIR="/home/jesse/openloom-build/runs/${RUN_ID}"
+RUN_DIR="/home/${OPENROOT_USER}/openloom-build/runs/${RUN_ID}"
 mkdir -p "$RUN_DIR"
 
 cp "$TASK_FILE" "$RUN_DIR/task.md"

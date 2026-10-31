@@ -29,7 +29,7 @@ def dispatch_single(envelope, dry):
     cmd = SINGLE_SHOT[name]
     if dry: return {"phase": name, "status": "dry-run", "note": cmd}
     import subprocess
-    r = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=300)
+    r = subprocess.run(cmd, shell=False, capture_output=True, text=True, timeout=300)
     return {"phase": name, "status": "banked" if r.returncode == 0 else "held",
             "note": (r.stdout or r.stderr)[:300]}
 
@@ -69,7 +69,7 @@ def main():
                 status, note = "dry-run", cmd
             else:
                 try:
-                    r = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=600)
+                    r = subprocess.run(cmd, shell=False, capture_output=True, text=True, timeout=600)
                     status = "banked" if r.returncode == 0 else "held"
                     note = (r.stdout or r.stderr)[:200]
                 except Exception as e:

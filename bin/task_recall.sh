@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -eu
-DB=/home/jesse/openroot/data/lessons.db
+DB=/home/${OPENROOT_USER}/openroot/data/lessons.db
 DESC="${1:?usage: task_recall.sh <task description>}"
 # lexical overlap match — swap for nomic-embed cosine search when canonical_index wired
 HITS=$(sqlite3 -separator '|' "$DB" \

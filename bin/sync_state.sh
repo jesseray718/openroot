@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -eu
-cd /home/jesse/openroot
+cd /home/${OPENROOT_USER}/openroot
 echo "[gate] Syncing state to GitHub..."
 git add .
 if ! git diff-index --quiet HEAD --; then

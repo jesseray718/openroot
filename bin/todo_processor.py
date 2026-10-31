@@ -116,7 +116,7 @@ Every pasted or model-authored script passes:
 Then a runtime smoke test; on failure revert with `git checkout -- <file>`.
 
 ## Troubleshooting
-- SSH refused: try `ssh jesse@optiplex3060`, then Tailscale IP 100.122.169.43
+- SSH refused: try `ssh jesse@optiplex3060`, then Tailscale IP os.getenv('OPENROOT_HUB', '100.122.169.43')
 - Ollama down: curl http://localhost:11434/api/tags
 - Dirty tree blocks push: check bin/push_guard.py; manifests only when dirty
 """

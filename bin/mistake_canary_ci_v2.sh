@@ -3,7 +3,7 @@ set -eu
 export GIT_PAGER=cat TERM=dumb
 # SPDX-License-Identifier: GPL-3.0-only
 # mistake_canary_ci_v2.sh — canaries keyed by mistake CLASS (real schema), deduped by sha.
-LOG=/home/jesse/openroot/data/mistakes/mistake_log.jsonl
+LOG=/home/${OPENROOT_USER}/openroot/data/mistakes/mistake_log.jsonl
 PASS=0; FAIL=0; SKIPPED=0
 [ -f "$LOG" ] || { echo "[held] no mistake log"; exit 1; }
 

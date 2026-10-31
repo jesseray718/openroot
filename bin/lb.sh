@@ -5,9 +5,9 @@
 #   lb snap   : manual snapshot |  lb undo : revert to last snapshot
 # Fully autonomous EXCEPT irreversible-remote ops (push/delete/filter-repo) → human gate.
 set -u
-DIR=/home/jesse/lumo
+DIR=/home/${OPENROOT_USER}/lumo
 IN=$DIR/inbox.sh
-REPO=/home/jesse/openroot
+REPO=/home/${OPENROOT_USER}/openroot
 SNAP=$DIR/last_snap.txt
 mkdir -p "$DIR/logs"
 TS=$(date +%Y%m%d_%H%M%S)

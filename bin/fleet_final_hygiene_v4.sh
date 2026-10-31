@@ -8,8 +8,8 @@ set -euo pipefail
 export GIT_PAGER=cat
 export TZ=UTC
 
-OWNER="jesseray718"
-ROOT="/home/jesse/openroot"
+OWNER="${OPENROOT_USER}ray718"
+ROOT="/home/${OPENROOT_USER}/openroot"
 TS="$(date +%Y%m%d_%H%M%S)"
 LOG="$ROOT/context_bridge/fleet_final_hygiene_v4_${TS}.md"
 TSV="$(mktemp /tmp/fleet_v4_${TS}_XXXXXX.tsv)"
@@ -122,6 +122,6 @@ echo "[gate] squash-merged=$TM held=$TH" | tee -a "$LOG"
 banner "SUMMARY"
 sha256sum "$LOG" | tee -a "$LOG"
 rm -f "$TSV"
-[ "$MODE" = "1" ] || echo "${CANARY} [DRY-RUN] — review, then: CONFIRM=1 bash /home/jesse/openroot/bin/fleet_final_hygiene_v4.sh"
+[ "$MODE" = "1" ] || echo "${CANARY} [DRY-RUN] — review, then: CONFIRM=1 bash /home/${OPENROOT_USER}/openroot/bin/fleet_final_hygiene_v4.sh"
 echo "${CANARY} [exit=0]"
 exit 0

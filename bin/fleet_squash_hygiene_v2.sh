@@ -6,8 +6,8 @@ set -euo pipefail
 export GIT_PAGER=cat
 export TZ=UTC
 
-OWNER="jesseray718"
-ROOT="/home/jesse/openroot"
+OWNER="${OPENROOT_USER}ray718"
+ROOT="/home/${OPENROOT_USER}/openroot"
 TS="$(date +%Y%m%d_%H%M%S)"
 LOG="$ROOT/context_bridge/fleet_squash_hygiene_v2_${TS}.md"
 CANARY="[FSQHYGV2]"
@@ -111,6 +111,6 @@ cat <<EOR >> "$LOG"
 - mode: $([ "$MODE" = "1" ] && echo EXECUTED || echo DRY-RUN)
 EOR
 echo "${CANARY} log sealed: ${LOG} [banked]"
-[ "$MODE" = "1" ] || echo "${CANARY} [DRY-RUN] — run: CONFIRM=1 bash /home/jesse/openroot/bin/fleet_squash_hygiene_v2.sh"
+[ "$MODE" = "1" ] || echo "${CANARY} [DRY-RUN] — run: CONFIRM=1 bash /home/${OPENROOT_USER}/openroot/bin/fleet_squash_hygiene_v2.sh"
 echo "${CANARY} [exit=0]"
 exit 0

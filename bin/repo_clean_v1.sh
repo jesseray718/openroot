@@ -5,7 +5,7 @@
 # [canary] repo_clean_v1_CANARY_MARKER
 set -euo pipefail
 export GIT_PAGER=cat PAGER=cat
-REPO=/home/jesse/openroot
+REPO=/home/${OPENROOT_USER}/openroot
 CONFIRM="${CONFIRM:-0}"
 cd "$REPO"
 say(){ printf '[%s] %s\n' "$1" "$2"; }
@@ -41,7 +41,7 @@ if [ "$BIN_N" -eq 0 ] && [ -d bin ] && [ "$(ls bin 2>/dev/null | wc -l)" -gt 0 ]
   say held "bin/ was UNTRACKED — staged (git add -N first so diff gate can see it)"
   if [ "$CONFIRM" = "1" ]; then
     git diff --cached --stat
-    git commit -m "bank bin/ tooling + TASK.md + analysis/ — was untracked despite 49f8c7b1 claim; jesse-gated; provenance: repo_clean_v1 staged, stack_gate+py_compile+grep to be run per-file" \
+    git commit -m "bank bin/ tooling + TASK.md + analysis/ — was untracked despite 49f8c7b1 claim; ${OPENROOT_USER}-gated; provenance: repo_clean_v1 staged, stack_gate+py_compile+grep to be run per-file" \
       && say banked "bin/ committed at $(git rev-parse --short HEAD)"
   else
     say held "rerun with CONFIRM=1 to commit staged bin/"
@@ -66,7 +66,7 @@ gh pr list --state open --json number,title,author,headRefName,isDraft,mergeable
   --jq '.[] | "#\(.number) [\(.author.login)] draft=\(.isDraft) mergeable=\(.mergeable) \(.headRefName) — \(.title)"' || say gate "no open PRs or gh auth failed"
 say held "PR #53 (Reh1t, RAG ingestion): NEVER auto-merge — filter-repo history makes their clone stale; review, comment guidance, request rebase onto 38004c62"
 if [ "$CONFIRM" = "MERGE" ]; then
-  for NUM in $(gh pr list --state open --json number,author,isDraft --jq '.[] | select(.author.login=="jesseray718" and .isDraft==false) | .number'); do
+  for NUM in $(gh pr list --state open --json number,author,isDraft --jq '.[] | select(.author.login=="${OPENROOT_USER}ray718" and .isDraft==false) | .number'); do
     gh pr merge "$NUM" --squash --delete-branch && say banked "squash-merged PR #$NUM"
   done
 else

@@ -3,16 +3,16 @@
 set -euo pipefail
 export GIT_PAGER=cat
 
-REPO="/home/jesse/openroot"
-PY="/home/jesse/openroot/bin/turing_tidbits_v1.py"
-ROOT="/home/jesse/openroot/data/turing_tidbits"
+REPO="/home/${OPENROOT_USER}/openroot"
+PY="/home/${OPENROOT_USER}/openroot/bin/turing_tidbits_v1.py"
+ROOT="/home/${OPENROOT_USER}/openroot/data/turing_tidbits"
 STAMP="$(date -u +%Y%m%dT%H%M%SZ)"
 
 cd "$REPO"
 mkdir -p "$ROOT"/{objects,metadata,events,exports}
 
 if [ -f "$PY" ]; then
-    BACKUP="/home/jesse/openroot/bin/turing_tidbits_v1.py.pre_build.${STAMP}.bak"
+    BACKUP="/home/${OPENROOT_USER}/openroot/bin/turing_tidbits_v1.py.pre_build.${STAMP}.bak"
     cp --preserve=mode,timestamps "$PY" "$BACKUP"
     test -s "$BACKUP"
     echo "[banked] existing kernel backup=$BACKUP"
@@ -45,7 +45,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-REPO = Path("/home/jesse/openroot")
+REPO = Path("/home/${OPENROOT_USER}/openroot")
 ROOT = REPO / "data" / "turing_tidbits"
 OBJECTS = ROOT / "objects"
 METADATA = ROOT / "metadata"
@@ -397,23 +397,23 @@ grep -Fq "SPDX-License-Identifier: GPL-3.0-only" "$PY"
 grep -Fq "[TURINGTIDBITSV1]" "$PY"
 
 python3 "$PY" ingest-file \
-    "/home/jesse/openroot/bin/a1_core_v1.py" \
+    "/home/${OPENROOT_USER}/openroot/bin/a1_core_v1.py" \
     --label "A1 Core V1" \
     --type "source_code" \
     --license "GPL-3.0-only" \
     --author "Jesse Ray McMillen" \
-    --source-uri "file:///home/jesse/openroot/bin/a1_core_v1.py" \
+    --source-uri "file:///home/${OPENROOT_USER}/openroot/bin/a1_core_v1.py" \
     --tag "openroot" \
     --tag "ledger" \
     --tag "local-first"
 
 python3 "$PY" ingest-file \
-    "/home/jesse/openroot/bin/compost_v1.py" \
+    "/home/${OPENROOT_USER}/openroot/bin/compost_v1.py" \
     --label "Compost V1" \
     --type "source_code" \
     --license "GPL-3.0-only" \
     --author "Jesse Ray McMillen" \
-    --source-uri "file:///home/jesse/openroot/bin/compost_v1.py" \
+    --source-uri "file:///home/${OPENROOT_USER}/openroot/bin/compost_v1.py" \
     --tag "openroot" \
     --tag "waste-stream" \
     --tag "non-destructive"

@@ -16,7 +16,7 @@ BOTSTATE = OPENROOT / "data_bot_state.json"
 UNIFIER = OPENROOT / "unify_v2.py"
 PIDFILE = OPENROOT / "bot_loop.pid"
 LOOP_INTERVAL_S = 300  # 5 min cadence
-OPTIPLEX_USER = "jesse"
+OPTIPLEX_USER = "(os.getenv("OPENROOT_USER", "jesse"))"
 OPTIPLEX_HOST = "192.168.1.193"
 OPTIPLEX_BASE = "/home/jesse/openroot"
 
@@ -60,7 +60,7 @@ def absorb_failure(stage, err_text, exit_code):
         f"echo ABSORBED'"
     )
     try:
-        proc = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=60)
+        proc = subprocess.run(cmd, shell=False, capture_output=True, text=True, timeout=60)
         return proc.returncode == 0 and "ABSORBED" in proc.stdout
     except Exception:
         return False

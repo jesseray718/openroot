@@ -2,7 +2,7 @@
 # [canary] paste intact
 set -Eeuo pipefail
 
-LEDGER="/home/jesse/.local/share/openroot/ledger.db"
+LEDGER="/home/${OPENROOT_USER}/.local/share/openroot/ledger.db"
 
 sqlite3 "${LEDGER}" "PRAGMA journal_mode=WAL; PRAGMA synchronous=NORMAL; PRAGMA cache_size=-8000;" >/dev/null
 MODE="$(sqlite3 "${LEDGER}" "PRAGMA journal_mode;")"

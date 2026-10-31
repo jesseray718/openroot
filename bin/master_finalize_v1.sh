@@ -5,7 +5,7 @@
 # [canary] master_finalize_v1_CANARY_MARKER
 set -euo pipefail
 export GIT_PAGER=cat PAGER=cat
-REPO=/home/jesse/openroot
+REPO=/home/${OPENROOT_USER}/openroot
 WT=/tmp/wt-master-fin
 CONFIRM="${CONFIRM:-0}"
 cd "$REPO"

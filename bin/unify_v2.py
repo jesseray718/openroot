@@ -5,7 +5,7 @@ import json, hashlib, time, subprocess, pathlib, sys
 from datetime import datetime, timezone
 
 MOBILE_BASE = pathlib.Path("/sdcard/openroot")
-OPTIPLEX_USER = "jesse"
+OPTIPLEX_USER = "(os.getenv("OPENROOT_USER", "jesse"))"
 OPTIPLEX_HOST = "192.168.1.193"
 OPTIPLEX_BASE = f"/home/{OPTIPLEX_USER}/openroot"
 
@@ -78,7 +78,7 @@ def trigger_refinery_advance(optiplex_conn):
         f"then bash bin/refine_next.sh 2>&1 | tail -20; else echo REFINERY_NOT_READY; fi'"
     )
     try:
-        proc = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=120)
+        proc = subprocess.run(cmd, shell=False, capture_output=True, text=True, timeout=120)
         if "REFINERY_NOT_READY" in proc.stdout:
             result["reason"] = "refinery worker not deployed"
         elif proc.returncode == 0:
@@ -100,7 +100,7 @@ def main():
     print("[1/4] Checking SSH connectivity...")
     ssh_check = subprocess.run(
         f"ssh -o BatchMode=yes -o ConnectTimeout=10 {OPTIPLEX_USER}@{OPTIPLEX_HOST} 'echo OK'",
-        shell=True, capture_output=True, text=True, timeout=20
+        shell=False, capture_output=True, text=True, timeout=20
     )
     optiplex_conn = ssh_check.returncode == 0
     print("OptiPlex:", "reachable" if optiplex_conn else "unreachable")

@@ -6,7 +6,7 @@
 # Phase 2 (CONFIRM=1): commit, push_guard, delete merged branches, open PRs.
 set -eu
 export GIT_PAGER=cat
-cd /home/jesse/openroot
+cd /home/${OPENROOT_USER}/openroot
 TS=$(date -u +%Y%m%d_%H%M%S)
 CONFIRM="${CONFIRM:-0}"
 

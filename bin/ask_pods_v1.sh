@@ -7,8 +7,8 @@ export TERM=dumb
 python3 - "$Q" <<'PYEOF'
 import sqlite3, json, urllib.request, sys
 q = sys.argv[1]
-pods = ["/home/jesse/pods/github-docs", "/home/jesse/pods/pod_github-history",
-        "/home/jesse/pods/pod_self-corpus"]
+pods = ["/home/${OPENROOT_USER}/pods/github-docs", "/home/${OPENROOT_USER}/pods/pod_github-history",
+        "/home/${OPENROOT_USER}/pods/pod_self-corpus"]
 conns = [(p.split("/")[-1], sqlite3.connect(f"file:{p}/pod.db?mode=ro", uri=True)) for p in pods]
 words = [w for w in q.split() if len(w) > 3]
 match = " OR ".join(f'"{w}"' for w in words[:6])

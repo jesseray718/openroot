@@ -49,7 +49,7 @@ def state_save(s):
     STATE.write_text(json.dumps(s, indent=1))
 
 def run_cmd(cmd, timeout=900):
-    p = subprocess.run(cmd, shell=True, cwd=str(ROOT),
+    p = subprocess.run(cmd, shell=False, cwd=str(ROOT),
                        capture_output=True, text=True, timeout=timeout)
     out = (p.stdout or "") + (p.stderr or "")
     return p.returncode, out

@@ -237,7 +237,7 @@ def classify_pane(env: dict, prompt_hostname: Optional[str] = None) -> Pane:
             prompt_host = prompt_host.split("@", 1)[1]
 
     ssh_hits = [
-        user in ("jesse", "optiplex"),
+        user in ("(os.getenv("OPENROOT_USER", "jesse"))", "optiplex"),
         host in SSH_HOSTS,
         prompt_host in SSH_HOSTS,
         any(home == h or home.startswith(h + "/") for h in BOX_HOMES),

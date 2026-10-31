@@ -3,9 +3,9 @@
 # Run this FROM Kai9000 (Alpine sandbox on A15) to bootstrap the OpenRoot connection.
 set -eu
 
-OPTIPLEX_IP="${OPTIPLEX_IP:-100.122.169.43}"
-OPTIPLEX_USER="${OPTIPLEX_USER:-jesse}"
-OPENROOT="/home/jesse/openroot"
+OPTIPLEX_IP="${OPTIPLEX_IP:-${OPENROOT_HUB}}"
+OPTIPLEX_USER="${OPTIPLEX_USER:-${OPENROOT_USER}}"
+OPENROOT="/home/${OPENROOT_USER}/openroot"
 
 echo "[gate] KAI9000 → OPTIPLEX CONNECT $(date -u +%FT%TZ)"
 echo
@@ -57,9 +57,9 @@ cat > ~/openroot_thin.sh <<'THINSH'
 # Thin client: forwards any OpenRoot command to OptiPlex via SSH
 # Usage: openroot_thin.sh "<command> <args>"
 # Example: openroot_thin.sh "python3 bin/cloud_router_v2.py --prompt 'test' --max-tokens 50"
-OPTIPLEX_IP="${OPTIPLEX_IP:-100.122.169.43}"
-OPTIPLEX_USER="${OPTIPLEX_USER:-jesse}"
-ssh "$OPTIPLEX_USER@$OPTIPLEX_IP" "cd /home/jesse/openroot && $*"
+OPTIPLEX_IP="${OPTIPLEX_IP:-${OPENROOT_HUB}}"
+OPTIPLEX_USER="${OPTIPLEX_USER:-${OPENROOT_USER}}"
+ssh "$OPTIPLEX_USER@$OPTIPLEX_IP" "cd /home/${OPENROOT_USER}/openroot && $*"
 THINSH
 chmod +x ~/openroot_thin.sh
 echo "  [banked] thin client installed at ~/openroot_thin.sh"

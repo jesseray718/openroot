@@ -2,8 +2,8 @@
 # frp10_probe.sh — failed-check detail for 5 held PRs + default-branch truth map for 12 non-main repos
 set -euo pipefail
 export GIT_PAGER=cat
-REPO=/home/jesse/openroot
-GH_USER=jesseray718
+REPO=/home/${OPENROOT_USER}/openroot
+GH_USER=${OPENROOT_USER}ray718
 TS=$(date +%Y%m%d_%H%M%S)
 RPT=$REPO/analysis/frp10_${TS}
 mkdir -p "$RPT"

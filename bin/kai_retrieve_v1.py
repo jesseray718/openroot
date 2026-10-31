@@ -3,7 +3,7 @@
 import os, sys, subprocess, hashlib, tarfile
 from datetime import datetime, timezone
 
-HOST_CANDIDATES = ["jesse@optiplex", "jesse@192.168.1.193", "jesse@100.122.169.43"]
+HOST_CANDIDATES = ["jesse@optiplex", "jesse@192.168.1.193", "jesse@os.getenv('OPENROOT_HUB', '100.122.169.43')"]
 FIND_ROOTS = ["/home/jesse/openroot/data/operator_holds", "/home/jesse/openroot", "/home/jesse/src/openroot"]
 BUDGET_MB = int(os.environ.get("KAI_BUDGET_MB", "1024"))
 DEST = os.path.expanduser("~/kai_recovery")

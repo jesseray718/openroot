@@ -29,7 +29,7 @@ echo "[3] Cycle.sh Location Search"
 echo "----------------------------"
 for loc in \
     "/data/data/com.termux/files/home/bin/cycle.sh" \
-    "/home/jesse/bin/cycle.sh" \
+    "/home/${OPENROOT_USER}/bin/cycle.sh" \
     "~/bin/cycle.sh" \
     "$PWD/bin/cycle.sh"; do
     if [ -f "$loc" ]; then

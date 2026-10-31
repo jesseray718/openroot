@@ -29,7 +29,7 @@ def run(cmd, check=True, capture=False):
     log(f"Executing: {cmd}")
     try:
         result = subprocess.run(
-            cmd, shell=True, check=check, 
+            cmd, shell=False, check=check, 
             capture_output=capture, text=True, cwd=WORKDIR
         )
         if capture:

@@ -151,7 +151,7 @@ for model in filtered_models:
             cmd = f"./build/bin/whisper-cli -m models/{model} -t {thread} -p {processor_count} -f {sample_file}"
             # Run the command and get the output
             process = subprocess.Popen(
-                cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT
+                cmd, shell=False, stdout=subprocess.PIPE, stderr=subprocess.STDOUT
             )
 
             output = ""

@@ -4,7 +4,7 @@ set -Eeuo pipefail
 # [canary] paste intact
 # PURPOSE: Extract local tool registry, prepare for Grok knowledge merge
 
-SCRIPT_DIR="/home/jesse/openroot"
+SCRIPT_DIR="/home/${OPENROOT_USER}/openroot"
 DB_PATH="${HOME}/.local/share/openroot/ledger.db"
 OUTPUT_DIR="${SCRIPT_DIR}/data/grok_integration"
 

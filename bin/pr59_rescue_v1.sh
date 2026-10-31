@@ -8,10 +8,10 @@ set -euo pipefail
 export GIT_PAGER=cat
 export TZ=UTC
 
-R="jesseray718/openroot"
+R="${OPENROOT_USER}ray718/openroot"
 BR="coderabbit/changes/eb9e4190"
 TS="$(date +%Y%m%d_%H%M%S)"
-LOG="/home/jesse/openroot/context_bridge/pr59_rescue_${TS}.md"
+LOG="/home/${OPENROOT_USER}/openroot/context_bridge/pr59_rescue_${TS}.md"
 CANARY="[P59RV1]"
 MODE="${CONFIRM:-0}"
 mkdir -p "$(dirname "$LOG")"

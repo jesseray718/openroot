@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -eu
 export GIT_PAGER=cat PAGER=cat
-cd /home/jesse/openroot
+cd /home/${OPENROOT_USER}/openroot
 echo "[canary-head] mesh_fix_v3 paste intact"
 
 echo "[stage-1] re-log lesson 3 with column/value parity (verifying this time)"

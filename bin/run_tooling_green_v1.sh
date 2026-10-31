@@ -3,9 +3,9 @@
 set -euo pipefail
 export GIT_PAGER=cat
 
-REPO="/home/jesse/openroot"
-LADDER="/home/jesse/openroot/bin/launch_ladder_v1.py"
-DB="/home/jesse/openroot/data/launch_ladder.db"
+REPO="/home/${OPENROOT_USER}/openroot"
+LADDER="/home/${OPENROOT_USER}/openroot/bin/launch_ladder_v1.py"
+DB="/home/${OPENROOT_USER}/openroot/data/launch_ladder.db"
 
 cd "$REPO"
 

@@ -10,7 +10,7 @@ set -euo pipefail
 export GIT_PAGER=cat
 export TZ=UTC
 
-ROOT="/home/jesse/openroot"
+ROOT="/home/${OPENROOT_USER}/openroot"
 TS="$(date +%Y%m%d_%H%M%S)"
 LOG="$ROOT/context_bridge/pathway_settlement_v7_${TS}.md"
 CANARY="[PSV7]"
@@ -24,7 +24,7 @@ gh auth status >/dev/null 2>&1 || { echo "[held] gh not authed"; exit 1; }
 
 # ---------- STAGE 1: skills-intro #16 — adopt newer SECURITY.md ----------
 banner "STAGE 1 — ADOPT skills-intro SECURITY.md (branch newer: Sep 5 > Aug 30)"
-R="jesseray718/skills-introduction-to-github"; HEAD="chore/foundation-uplift-20260828-225816"
+R="${OPENROOT_USER}ray718/skills-introduction-to-github"; HEAD="chore/foundation-uplift-20260828-225816"
 MSHA="$(gh api "repos/$R/contents/SECURITY.md?ref=main" --jq '.sha' 2>/dev/null || echo "")"
 BCONT="$(gh api "repos/$R/contents/SECURITY.md?ref=${HEAD}" --jq '.content' 2>/dev/null || echo "")"
 if [ -n "$BCONT" ]; then
@@ -43,7 +43,7 @@ else echo "[held] branch content unavailable — check ${HEAD} exists"; fi
 
 # ---------- STAGE 2: aerocement #12 — close stale ----------
 banner "STAGE 2 — CLOSE aerocement #12 (main newer on all 5 files)"
-R="jesseray718/aerocement"; HEAD="chore/knowledge-unify-20260901-011802-aerocement-"
+R="${OPENROOT_USER}ray718/aerocement"; HEAD="chore/knowledge-unify-20260901-011802-aerocement-"
 echo "[gate] main superseded branch (main@2026-09-10 > branch@2026-09-01)"
 if [ "$MODE" = "1" ]; then
   gh pr close 12 -R "$R" --comment "Closing as stale: main received newer revisions of all 5 files (Sep 10) after this branch diverged (Sep 1). Blob-sha audited. [AI-assisted, human-gated]" >> "$LOG" 2>&1 || true
@@ -53,12 +53,12 @@ fi
 
 # ---------- STAGE 3: agapenet PR state ----------
 banner "STAGE 3 — VERIFY agapenet pathway PR"
-gh pr list -R jesseray718/agapenet --state all --limit 5 \
+gh pr list -R ${OPENROOT_USER}ray718/agapenet --state all --limit 5 \
   --json number,state,title --jq '.[] | "\(.number) \(.state) \(.title)"' | tee -a "$LOG"
 
 # ---------- STAGE 4: OpenCell fossil — pdf-comp.py ----------
 banner "STAGE 4 — OpenCell CI FIX: remove heredoc fossil"
-R="jesseray718/OpenCell-Thermal-System"; F="1_code/src/pdf-comp.py"
+R="${OPENROOT_USER}ray718/OpenCell-Thermal-System"; F="1_code/src/pdf-comp.py"
 FIRST="$(gh api "repos/$R/contents/${F}?ref=main" --jq '.content' | base64 -d | head -n 1)"
 echo "[gate] pdf-comp.py line 1: ${FIRST}"
 case "$FIRST" in cat*<<*) MATCH=1;; *) MATCH=0;; esac; if [ "$MATCH" = "1" ]; then

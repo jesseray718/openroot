@@ -5,7 +5,7 @@ import subprocess, sys, os
 from datetime import datetime
 
 def run_cmd(cmd):
-    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+    result = subprocess.run(cmd, shell=False, capture_output=True, text=True)
     return result.returncode == 0, result.stdout.strip()
 
 def main():

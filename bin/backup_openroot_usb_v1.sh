@@ -20,7 +20,7 @@
 # ============================================================
 set -euo pipefail
 
-REPO="${OPENROOT_REPO:-/home/jesse/openroot}"
+REPO="${OPENROOT_REPO:-/home/${OPENROOT_USER}/openroot}"
 DEV=""; COPY_MODELS=0; TAG="$(date +%Y%m%d_%H%M%S)"
 
 while [ $# -gt 0 ]; do

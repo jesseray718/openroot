@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 # SPDX-License-Identifier: GPL-3.0-or-later
-# OpenRoot — jesseray718
+# OpenRoot — ${OPENROOT_USER}ray718
 # PANE: SSH — batch the parked queue items, nothing committed without CONFIRM/human gate
 # eta = useful_joules / human_joules
 set -euo pipefail
 export GIT_PAGER=cat
-REPO=/home/jesse/openroot
+REPO=/home/${OPENROOT_USER}/openroot
 STAMP=$(date +%Y%m%d_%H%M%S)
 CANARY="QSWEEP1"
-LOG=/home/jesse/openroot/logs/queue_sweep_${STAMP}.log
+LOG=/home/${OPENROOT_USER}/openroot/logs/queue_sweep_${STAMP}.log
 mkdir -p "$(dirname "$LOG")" "$REPO/context_bridge"
 exec > >(tee -a "$LOG") 2>&1
 echo "[$CANARY] START $STAMP"

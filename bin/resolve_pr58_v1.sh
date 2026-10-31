@@ -4,7 +4,7 @@
 # fix thixo-foam.md:4, merge behind CONFIRM=1. Idempotent, fork-only, no tree switches.
 set -eu
 export GIT_PAGER=cat
-cd /home/jesse/openroot
+cd /home/${OPENROOT_USER}/openroot
 HELD=0
 GT=/tmp/pr58_gate
 

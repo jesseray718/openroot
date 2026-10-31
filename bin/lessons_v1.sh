@@ -2,7 +2,7 @@
 set -eu
 export GIT_PAGER=cat PAGER=cat
 export OLLAMA_HOST=http://localhost:11434
-REPO=/home/jesse/openroot
+REPO=/home/${OPENROOT_USER}/openroot
 DB=$REPO/data/lessons.db
 mkdir -p $REPO/data
 echo "[canary-head] lessons_v1 paste intact"
@@ -51,7 +51,7 @@ echo "[stage-3] pre-task retrieval hook — consults history before every new ta
 cat > $REPO/bin/task_recall.sh <<'HOOK'
 #!/usr/bin/env bash
 set -eu
-DB=/home/jesse/openroot/data/lessons.db
+DB=/home/${OPENROOT_USER}/openroot/data/lessons.db
 DESC="${1:?usage: task_recall.sh <task description>}"
 # lexical overlap match — swap for nomic-embed cosine search when canonical_index wired
 HITS=$(sqlite3 -separator '|' "$DB" \
@@ -84,11 +84,11 @@ echo "   [gate] workflow improves iff pct_fixed rises over weeks and repeat_mist
 echo "[stage-6] example usage pattern"
 cat <<'USE'
   # before any task:
-  /home/jesse/openroot/bin/task_recall.sh "force push to github after filter-repo"
+  /home/${OPENROOT_USER}/openroot/bin/task_recall.sh "force push to github after filter-repo"
   # after success or failure, log what happened:
-  sqlite3 /home/jesse/openroot/data/lessons.db "INSERT INTO lessons (domain,mistake,root_cause,correction,source) VALUES (...);"
+  sqlite3 /home/${OPENROOT_USER}/openroot/data/lessons.db "INSERT INTO lessons (domain,mistake,root_cause,correction,source) VALUES (...);"
   # log the task outcome:
-  sqlite3 /home/jesse/openroot/data/lessons.db "INSERT INTO tasks (description,outcome) VALUES ('force push','ok');"
+  sqlite3 /home/${OPENROOT_USER}/openroot/data/lessons.db "INSERT INTO tasks (description,outcome) VALUES ('force push','ok');"
 USE
 
 echo "[stage-7] state"

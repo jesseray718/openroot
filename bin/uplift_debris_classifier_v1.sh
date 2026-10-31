@@ -6,13 +6,13 @@ set -euo pipefail
 export GIT_PAGER=cat
 export TZ=UTC
 
-OWNER="jesseray718"
+OWNER="${OPENROOT_USER}ray718"
 TS="$(date +%Y%m%d_%H%M%S)"
-LOG="/home/jesse/openroot/context_bridge/uplift_debris_${TS}.md"
+LOG="/home/${OPENROOT_USER}/openroot/context_bridge/uplift_debris_${TS}.md"
 CANARY="[UDCV1]"
 MODE="${CONFIRM:-0}"
 
-mkdir -p /home/jesse/openroot/context_bridge
+mkdir -p /home/${OPENROOT_USER}/openroot/context_bridge
 echo "# Uplift Debris Classification ${TS}" > "$LOG"
 echo "mode: $([ "$MODE" = "1" ] && echo EXECUTE || echo DRY-RUN)" >> "$LOG"
 

@@ -10,7 +10,7 @@ echo "FINAL CLEANUP: Committing Recovery Artifacts"
 echo "============================================================"
 echo ""
 
-cd /home/jesse/openroot
+cd /home/${OPENROOT_USER}/openroot
 
 # Stage all recovery artifacts
 echo "[1] Staging untracked files..."

@@ -3,7 +3,7 @@
 # Specialty routing: 7B revisions, 3B grading only. Each round addresses prior reasons.
 set -eu
 export GIT_PAPER=cat
-REPO=/home/jesse/openroot
+REPO=/home/${OPENROOT_USER}/openroot
 TS=$(date +%Y%m%d_%H%M%S)
 DB=$REPO/data/mesh_refine_v1.db
 LLM=http://localhost:11434/api/generate

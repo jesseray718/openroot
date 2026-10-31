@@ -10,7 +10,7 @@ export GIT_PAGER=cat PAGER=cat
 [ "$(hostname)" = "optiplex3060" ] || { echo "[held] run on optiplex3060, not $(hostname)"; exit 1; }
 command -v gh >/dev/null || { echo "[held] gh CLI missing"; exit 1; }
 CONFIRM="${CONFIRM:-0}"
-OWNER="jesseray718"
+OWNER="${OPENROOT_USER}ray718"
 say(){ printf '[%s] %s\n' "$1" "$2"; }
 
 if [ -n "${GH_AUDIT_BASE:-}" ]; then

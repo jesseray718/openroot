@@ -2,8 +2,8 @@
 # SPDX-License-Identifier: GPL-3.0-only
 set -euo pipefail
 export GIT_PAGER=cat
-DB="/home/jesse/openroot/data/launch_ladder.db"
-LADDER="/home/jesse/openroot/bin/launch_ladder_v1.py"
+DB="/home/${OPENROOT_USER}/openroot/data/launch_ladder.db"
+LADDER="/home/${OPENROOT_USER}/openroot/bin/launch_ladder_v1.py"
 python3 -m py_compile "$LADDER"
 echo "[banked] py_compile PASS"
 sqlite3 "$DB" "PRAGMA table_info(stages);"

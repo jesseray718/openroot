@@ -8,7 +8,7 @@
 # DRY-RUN by default; CONFIRM=1 executes merge. Human is the only commit gate.
 set -eu
 export GIT_PAGER=cat
-cd /home/jesse/openroot
+cd /home/${OPENROOT_USER}/openroot
 
 PR="${1:?usage: pr_intake.sh <PR#> <handle> <desc> [--thanks msg]}"
 HANDLE="${2:?need contributor handle}"

@@ -4,7 +4,7 @@
 # accounts tokens+joules to data/popw_ledger.db; FTS5 corpus; inbox on verdict.
 # Usage: bin/readme_draft_loop.sh [max] ; bin/readme_draft_loop.sh query "<terms>"
 set -u
-cd /home/jesse/openroot || exit 1
+cd /home/${OPENROOT_USER}/openroot || exit 1
 
 if [ "${1:-}" = "query" ]; then
   python3 - "$2" <<'PYQ'

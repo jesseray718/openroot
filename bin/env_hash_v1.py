@@ -6,7 +6,7 @@ OUT = "/home/jesse/openroot/data/env_hash.json"
 
 def sh(cmd, timeout=30):
     try:
-        p = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=timeout)
+        p = subprocess.run(cmd, shell=False, capture_output=True, text=True, timeout=timeout)
         return p.stdout.strip() if p.returncode == 0 else ""
     except Exception:
         return ""

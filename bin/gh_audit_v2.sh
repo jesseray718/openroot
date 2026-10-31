@@ -8,7 +8,7 @@ export GIT_PAGER=cat PAGER=cat
 [ "$(hostname)" = "optiplex3060" ] || { echo "[held] run on optiplex3060, not $(hostname)"; exit 1; }
 command -v gh >/dev/null || { echo "[held] gh CLI missing"; exit 1; }
 CONFIRM="${CONFIRM:-0}"
-OWNER="jesseray718"
+OWNER="${OPENROOT_USER}ray718"
 BASE="$HOME/openroot/reports/gh_audit_$(date +%Y%m%d_%H%M%S)"
 say(){ printf '[%s] %s\n' "$1" "$2"; }
 mkdir -p "$BASE"
@@ -51,7 +51,7 @@ if [ "$CONFIRM" = "1" ]; then
   while IFS='|' read -r REPO BR; do
     gh api -X DELETE "repos/$OWNER/$REPO/branches/$BR" --silent && say banked "deleted identical $REPO/$BR" || say held "kept $REPO/$BR"
   done < "$BASE/identical_branches.tsv"
-  for R in ${PIN_REPOS:-openroot wisdom-scaffold openroot-ecosystem jesseray718.github.io}; do
+  for R in ${PIN_REPOS:-openroot wisdom-scaffold openroot-ecosystem ${OPENROOT_USER}ray718.github.io}; do
     ID=$(gh api graphql -f query="query{repository(owner:\"$OWNER\",name:\"$R\"){id}}" -q '.data.repository.id')
     gh api graphql -f query="mutation(\$id:ID!){pinItem(input:{itemId:\$id}){item{... on Repository{name}}}}" -f id="$ID" >/dev/null \
       && say banked "pinned $R" || say held "pin failed $R (cap 6?)"

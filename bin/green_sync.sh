@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -eu
-cd /home/jesse/openroot
+cd /home/${OPENROOT_USER}/openroot
 
 echo "[gate] Synchronizing state for Green Checks..."
 # Ensure all scripts are executable before pushing

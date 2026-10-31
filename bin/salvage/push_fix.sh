@@ -27,7 +27,7 @@ gh auth status
 echo FIX_COORD
 if [ -d /data/data/com.termux/files/home/agape-coordination/.git ]
 then
-  git -C /data/data/com.termux/files/home/agape-coordination remote set-url origin https://github.com/jesseray718/agape-coordination.git
+  git -C /data/data/com.termux/files/home/agape-coordination remote set-url origin https://github.com/${OPENROOT_USER}ray718/agape-coordination.git
   loc=`git -C /data/data/com.termux/files/home/agape-coordination rev-parse --abbrev-ref HEAD`
   echo LOCAL
   echo "$loc"
@@ -64,7 +64,7 @@ do
     continue
   fi
   case "$url" in
-    *github.com/jesseray718/*)
+    *github.com/${OPENROOT_USER}ray718/*)
       ;;
     *)
       echo NOT_OURS

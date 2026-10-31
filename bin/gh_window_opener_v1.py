@@ -25,7 +25,7 @@ def sh(cmd, cwd=ROOT, timeout=180):
     """Run shell cmd, return (rc, stdout, stderr)."""
     try:
         p = subprocess.run(
-            cmd, cwd=cwd, shell=True, capture_output=True, text=True,
+            cmd, cwd=cwd, shell=False, capture_output=True, text=True,
             timeout=timeout,
             env=dict(os.environ, GIT_PAGER="cat", TERM="dumb"),
         )

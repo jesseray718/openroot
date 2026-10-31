@@ -3,7 +3,7 @@
 # Seal v3: [PERMA-V3] commit — CONFIRM gated, human review first
 set -euo pipefail
 export GIT_PAGER=cat
-cd /home/jesse/openroot
+cd /home/${OPENROOT_USER}/openroot
 
 echo "[SEAL-V3] verdict distribution:"
 sqlite3 data/log_feed.db "SELECT verdict, COUNT(*) FROM log_feed GROUP BY verdict;"

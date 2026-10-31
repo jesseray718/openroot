@@ -2,8 +2,8 @@
 # SPDX-License-Identifier: GPL-3.0
 # Sync local Termux openroot node with OptiPlex 3060 & force GitHub Push
 
-TARGET_IP="100.122.169.43"
-TARGET_USER="jesse"
+TARGET_IP="${OPENROOT_HUB}"
+TARGET_USER="${OPENROOT_USER}"
 REMOTE_PATH="~/openroot"
 
 echo "[1/4] Syncing local Termux repository to OptiPlex 3060..."

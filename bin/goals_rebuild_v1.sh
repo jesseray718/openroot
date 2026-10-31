@@ -7,7 +7,7 @@
 # [canary] goals_rebuild_v1_CANARY_MARKER
 set -euo pipefail
 export GIT_PAGER=cat PAGER=cat
-REPO=/home/jesse/openroot
+REPO=/home/${OPENROOT_USER}/openroot
 CONFIRM="${CONFIRM:-0}"
 cd "$REPO"
 say(){ printf '[%s] %s\n' "$1" "$2"; }

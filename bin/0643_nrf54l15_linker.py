@@ -107,10 +107,10 @@ else:
         # gcc_cmd comes verbatim from our own build.ninja (never user input) and
         # contains Windows-style paths with spaces that cannot be safely argv-split
         # with shlex, so we run it via the platform shell. nosec/nosemgrep below
-        # acknowledge this deliberate, scoped use of shell=True.
+        # acknowledge this deliberate, scoped use of shell=False.
         result = subprocess.run(  # nosec B602
             gcc_cmd,
-            shell=True,  # nosemgrep: python.lang.security.audit.subprocess-shell-true.subprocess-shell-true
+            shell=False,  # nosemgrep: python.lang.security.audit.subprocess-shell-true.subprocess-shell-true
             cwd=run_cwd,
             capture_output=True,
             text=True,

@@ -3,10 +3,10 @@
 set -euo pipefail
 export GIT_PAGER=cat
 
-REPO="/home/jesse/openroot"
-PY="/home/jesse/openroot/bin/openroot_knowledge_intake_v1.py"
-ROOT="/home/jesse/openroot/data/openroot_knowledge"
-DB="/home/jesse/openroot/data/openroot_knowledge/openroot_knowledge.db"
+REPO="/home/${OPENROOT_USER}/openroot"
+PY="/home/${OPENROOT_USER}/openroot/bin/openroot_knowledge_intake_v1.py"
+ROOT="/home/${OPENROOT_USER}/openroot/data/openroot_knowledge"
+DB="/home/${OPENROOT_USER}/openroot/data/openroot_knowledge/openroot_knowledge.db"
 
 cd "$REPO"
 mkdir -p "$ROOT"/{sources,claims,case_studies,pattern_blockers,blueprints,exports}
@@ -34,7 +34,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterable
 
-REPO = Path("/home/jesse/openroot")
+REPO = Path("/home/${OPENROOT_USER}/openroot")
 ROOT = REPO / "data" / "openroot_knowledge"
 DB = ROOT / "openroot_knowledge.db"
 TAG = "[OPENROOTKNOWLEDGEV1]"

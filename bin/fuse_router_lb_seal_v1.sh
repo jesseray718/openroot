@@ -3,7 +3,7 @@ set -eu
 export GIT_PAGER=cat
 ROOT="$HOME/openroot"
 TS=$(date +%Y%m%d_%H%M%S)
-HOST="jesse@100.122.169.43"
+HOST="${OPENROOT_USER}@${OPENROOT_HUB}"
 cd "$ROOT"
 
 echo "[STAGE:tunnel-check] OptiPlex reachable via Tailscale?"
@@ -94,7 +94,7 @@ fi
 
 echo "[STAGE:bind] fusing the crash into the lb_loop ledger — OptiPlex fingerprint namespace"
 if [ -f bin/lb_loop_v2.py ]; then
-  CRASH='Traceback (most recent call last): File "/home/jesse/openroot/bin/multi_router.py", line 248, in main for f in sorted(os.listdir(ob))[-3:]: FileNotFoundError: [Errno 2] No such file or directory: /home/jesse/openroot/lumo_lane/outbox'
+  CRASH='Traceback (most recent call last): File "/home/${OPENROOT_USER}/openroot/bin/multi_router.py", line 248, in main for f in sorted(os.listdir(ob))[-3:]: FileNotFoundError: [Errno 2] No such file or directory: /home/${OPENROOT_USER}/openroot/lumo_lane/outbox'
   SHA=$(python3 - "$CRASH" <<'PYEOF'
 import sys
 sys.path.insert(0, "bin")

@@ -35,7 +35,7 @@ def now():
 
 def sh(cmd):
     try:
-        return subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=30).stdout.strip()
+        return subprocess.run(cmd, shell=False, capture_output=True, text=True, timeout=30).stdout.strip()
     except Exception:
         return "(unavailable)"
 

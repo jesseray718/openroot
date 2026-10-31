@@ -30,7 +30,7 @@ import os, sys, json, socket
 from datetime import datetime, timezone
 from pathlib import Path
 
-OUTPUT = os.getenv("ENV_MAP_OUTPUT", "/home/jesse/openroot/data/env_map.json")
+OUTPUT = os.getenv("ENV_MAP_OUTPUT", "/home/${OPENROOT_USER}/openroot/data/env_map.json")
 if "/data/data/com.termux" in os.path.expanduser("~"):
     OUTPUT = str(Path.home() / "openroot" / "data" / "env_map.json")
 

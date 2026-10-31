@@ -5,7 +5,7 @@
 # not filename-MATCH which returned the wrong column
 set -euo pipefail
 export GIT_PAGER=cat
-cd /home/jesse/openroot
+cd /home/${OPENROOT_USER}/openroot
 
 CANARY="[COURT-V6]"
 DB="data/log_feed.db"

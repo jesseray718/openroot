@@ -3,11 +3,11 @@
 set -euo pipefail
 export GIT_PAGER=cat
 
-REPO="/home/jesse/openroot"
-LADDER="/home/jesse/openroot/bin/launch_ladder_v1.py"
-DB="/home/jesse/openroot/data/launch_ladder.db"
+REPO="/home/${OPENROOT_USER}/openroot"
+LADDER="/home/${OPENROOT_USER}/openroot/bin/launch_ladder_v1.py"
+DB="/home/${OPENROOT_USER}/openroot/data/launch_ladder.db"
 STAGE="tooling_green"
-OUTDIR="/home/jesse/openroot/data/ladder_diagnostics"
+OUTDIR="/home/${OPENROOT_USER}/openroot/data/ladder_diagnostics"
 STAMP="$(date -u +%Y%m%dT%H%M%SZ)"
 REPORT="$OUTDIR/promote_${STAGE}.${STAMP}.log"
 
@@ -21,11 +21,11 @@ mkdir -p "$OUTDIR"
 
     for path in \
         "$LADDER" \
-        "/home/jesse/openroot/bin/a1_core_v1.py" \
-        "/home/jesse/openroot/bin/compost_v1.py" \
-        "/home/jesse/openroot/bin/agape_vector_index.py" \
-        "/home/jesse/openroot/bin/mistake_engine_v1.py" \
-        "/home/jesse/openroot/bin/handoff_manager.py"
+        "/home/${OPENROOT_USER}/openroot/bin/a1_core_v1.py" \
+        "/home/${OPENROOT_USER}/openroot/bin/compost_v1.py" \
+        "/home/${OPENROOT_USER}/openroot/bin/agape_vector_index.py" \
+        "/home/${OPENROOT_USER}/openroot/bin/mistake_engine_v1.py" \
+        "/home/${OPENROOT_USER}/openroot/bin/handoff_manager.py"
     do
         if [ ! -f "$path" ]; then
             echo "[held] missing required file: $path"

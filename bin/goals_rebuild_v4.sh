@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -eu
 export GIT_PAGER=cat PAGER=cat
-cd /home/jesse/openroot
+cd /home/${OPENROOT_USER}/openroot
 echo "[canary-head] goals_rebuild_v4 paste intact"
 
 REM=context_bridge/session-20260918_015240.md

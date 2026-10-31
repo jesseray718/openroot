@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -eu
 export GIT_PAGER=cat TERM=dumb
-ROOT=/home/jesse/openroot
+ROOT=/home/${OPENROOT_USER}/openroot
 echo "[STAGE 0] preflight"
 command -v python3 >/dev/null
 curl -sf --max-time 10 http://localhost:11434/api/tags >/dev/null || { echo "[held] ollama down"; exit 1; }

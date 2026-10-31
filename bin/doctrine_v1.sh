@@ -5,7 +5,7 @@
 set -euo pipefail
 export GIT_PAGER=cat
 
-cd /home/jesse/openroot
+cd /home/${OPENROOT_USER}/openroot
 CANARY="DOCTRINEV1"
 STAMP="$(date +%Y%m%d_%H%M%S)"
 echo "[$CANARY] $(date -u +%FT%TZ) | stamp=$STAMP"

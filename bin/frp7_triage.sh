@@ -2,8 +2,8 @@
 # frp7_triage.sh — surface held-PR detail, owned-vs-fork branches, prune candidates, bin/ manifest
 set -euo pipefail
 export GIT_PAGER=cat
-REPO=/home/jesse/openroot
-GH_USER=jesseray718
+REPO=/home/${OPENROOT_USER}/openroot
+GH_USER=${OPENROOT_USER}ray718
 TS=$(date +%Y%m%d_%H%M%S)
 RPT=$REPO/analysis/frp7_${TS}
 mkdir -p "$RPT"
@@ -22,7 +22,7 @@ echo "[stage:bin-manifest] $(wc -l < "$RPT/bin_manifest.txt") lines -> bin_manif
 # ---------- [stage:pr-triage] ----------
 python3 - "$PLAN" "$RPT" <<'PYEOF'
 import json, subprocess, sys, pathlib
-plan = json.load(open(sys.argv[1])); rpt = pathlib.Path(sys.argv[2]); USER = "jesseray718"
+plan = json.load(open(sys.argv[1])); rpt = pathlib.Path(sys.argv[2]); USER = "${OPENROOT_USER}ray718"
 fork_names = {a["repo"].split("/")[-1] for a in plan["actions"] if a["tag"] == "sync-fork"}
 
 def gh(*args):

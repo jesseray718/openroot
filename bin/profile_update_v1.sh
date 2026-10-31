@@ -2,7 +2,7 @@
 set -eu
 export GIT_PAGER=cat PAGER=cat
 export OLLAMA_HOST=http://localhost:11434
-cd /home/jesse/openroot
+cd /home/${OPENROOT_USER}/openroot
 echo "[canary-head] profile_update_v1 paste intact"
 
 echo "[stage-0] gate — ensure gh is authenticated"
@@ -16,8 +16,8 @@ else
 fi
 
 echo "[stage-1] check current repo visibility (openroot-canon + flagship)"
-for REPO in openroot-canon openroot OpenCell-Thermal-System aerocement openroot-ecosystem jesseray718.github.io; do
-  VIS=$(gh api repos/jesseray718/$REPO 2>/dev/null | jq -r '.visibility // empty' || echo "missing")
+for REPO in openroot-canon openroot OpenCell-Thermal-System aerocement openroot-ecosystem ${OPENROOT_USER}ray718.github.io; do
+  VIS=$(gh api repos/${OPENROOT_USER}ray718/$REPO 2>/dev/null | jq -r '.visibility // empty' || echo "missing")
   [ "$VIS" = "public" ] && echo "   [ok] $REPO: public" || echo "   [held] $REPO: $VIS (needs fix)"
 done
 
@@ -41,9 +41,9 @@ GRADES=$(printf '%s\n' "$README_HERO" | timeout 90 ollama run qwen2.5:3b \
 echo "   3B grade: $GRADES"
 
 echo "[stage-5] check/update openroot-canon visibility"
-CANON_VIS=$(gh api repos/jesseray718/openroot-canon 2>/dev/null | jq -r '.visibility // "missing"' || echo "missing")
+CANON_VIS=$(gh api repos/${OPENROOT_USER}ray718/openroot-canon 2>/dev/null | jq -r '.visibility // "missing"' || echo "missing")
 if [ "$CANON_VIS" != "public" ]; then
-  gh api -X PATCH repos/jesseray718/openroot-canon -f private=false >/dev/null 2>&1 \
+  gh api -X PATCH repos/${OPENROOT_USER}ray718/openroot-canon -f private=false >/dev/null 2>&1 \
     && { echo "   [banked] openroot-canon set to public"; CANON_VIS="public"; } \
     || echo "   [held] failed to update openroot-canon visibility"
 else
@@ -51,7 +51,7 @@ else
 fi
 
 echo "[stage-6] update README.md in openroot-canon with hero statement"
-cd /home/jesse/src/openroot 2>/dev/null || cd /home/jesse/openroot
+cd /home/${OPENROOT_USER}/src/openroot 2>/dev/null || cd /home/${OPENROOT_USER}/openroot
 CURRENT_README=$(head -5 README.md 2>/dev/null || echo "MISSING")
 cat > README.md <<README_EOF
 # OpenRoot
@@ -106,13 +106,13 @@ See GOOD_FIRST_ISSUES.md to contribute
 README_EOF
 echo "   [banked] README.md updated ($(wc -l < README.md) lines)"
 
-echo "[stage-7] update GitHub Pages site (jesseray718.github.io)"
-cd /home/jesse/openroot 2>/dev/null || true
+echo "[stage-7] update GitHub Pages site (${OPENROOT_USER}ray718.github.io)"
+cd /home/${OPENROOT_USER}/openroot 2>/dev/null || true
 INDEX_EXISTS=0
-[ -f jesseray718.github.io/index.html ] || [ -f jesseray718.github.io/index.md ] && INDEX_EXISTS=1
+[ -f ${OPENROOT_USER}ray718.github.io/index.html ] || [ -f ${OPENROOT_USER}ray718.github.io/index.md ] && INDEX_EXISTS=1
 if [ "$INDEX_EXISTS" -eq 1 ]; then
   echo "   [ok] landing page exists"
-  cat > jesseray718.github.io/index.md <<'LANDING_EOF'
+  cat > ${OPENROOT_USER}ray718.github.io/index.md <<'LANDING_EOF'
 # Jesse Ray — OpenRoot
 
 > "Measure what you build. Every claim falsifiable. Radical credit to contributors."
@@ -141,16 +141,16 @@ For collaboration: see GitHub issues. For speaking/workshops: outreach via profi
 
 **License:** GPL-3.0 | CC-BY-SA-4.0
 LANDING_EOF
-  git add jesseray718.github.io/
+  git add ${OPENROOT_USER}ray718.github.io/
   git commit -m "docs(profile): landing page hero text + research summary"
   git push origin master || git push origin main
   echo "   [banked] landing page updated"
 else
-  echo "   [held] landing page repo not present locally - clone or create jesseray718.github.io/"
+  echo "   [held] landing page repo not present locally - clone or create ${OPENROOT_USER}ray718.github.io/"
 fi
 
 echo "[stage-8] pin flagship repos on profile (gh API has no direct pin endpoint — print manual instructions)"
-echo "   [manual] go to github.com/jesseray718 and customize pins, select:"
+echo "   [manual] go to github.com/${OPENROOT_USER}ray718 and customize pins, select:"
 echo "      openroot-canon"
 echo "      OpenCell-Thermal-System"
 echo "      aerocement"
@@ -163,10 +163,10 @@ sqlite3 data/lessons.db "INSERT INTO lessons (domain,mistake,root_cause,correcti
 echo "   [banked] lessons entry: profile_update_workflow"
 
 echo "[stage-10] final state + handoff"
-git -C /home/jesse/openroot log --oneline -1
-git -C /home/jesse/openroot status --short | head -5
+git -C /home/${OPENROOT_USER}/openroot log --oneline -1
+git -C /home/${OPENROOT_USER}/openroot status --short | head -5
 echo ""
 echo "=== HANDOFF ==="
-echo "verified: gh authenticated=$GH_OK | openroot-canon public=$(gh api repos/jesseray718/openroot-canon 2>/dev/null | jq -r '.visibility' || echo 'ERROR')"
-echo "next: 1) visit github.com/jesseray718 to pin repos, 2) update contact email in profiles, 3) commit README changes"
+echo "verified: gh authenticated=$GH_OK | openroot-canon public=$(gh api repos/${OPENROOT_USER}ray718/openroot-canon 2>/dev/null | jq -r '.visibility' || echo 'ERROR')"
+echo "next: 1) visit github.com/${OPENROOT_USER}ray718 to pin repos, 2) update contact email in profiles, 3) commit README changes"
 echo "[done] [exit=0]"

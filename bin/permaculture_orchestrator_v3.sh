@@ -3,7 +3,7 @@
 # Permaculture Orchestrator v3 — compact, short-line, paste-safe
 set -euo pipefail
 export GIT_PAGER=cat
-cd /home/jesse/openroot
+cd /home/${OPENROOT_USER}/openroot
 
 CANARY="[PERMA-V3]"
 DB="data/log_feed.db"

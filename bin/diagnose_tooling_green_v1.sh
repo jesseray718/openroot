@@ -3,10 +3,10 @@
 set -euo pipefail
 export GIT_PAGER=cat
 
-REPO="/home/jesse/openroot"
-LADDER="/home/jesse/openroot/bin/launch_ladder_v1.py"
-DB="/home/jesse/openroot/data/launch_ladder.db"
-OUTDIR="/home/jesse/openroot/data/ladder_diagnostics"
+REPO="/home/${OPENROOT_USER}/openroot"
+LADDER="/home/${OPENROOT_USER}/openroot/bin/launch_ladder_v1.py"
+DB="/home/${OPENROOT_USER}/openroot/data/launch_ladder.db"
+OUTDIR="/home/${OPENROOT_USER}/openroot/data/ladder_diagnostics"
 STAMP="$(date -u +%Y%m%dT%H%M%SZ)"
 REPORT="$OUTDIR/tooling_green.${STAMP}.log"
 STAGE="tooling_green"
@@ -54,11 +54,11 @@ mkdir -p "$OUTDIR"
 
     echo "=== FILES: REQUIRED LADDER INSTRUMENTS ==="
     for path in \
-        "/home/jesse/openroot/bin/a1_core_v1.py" \
-        "/home/jesse/openroot/bin/mistake_engine_v1.py" \
-        "/home/jesse/openroot/bin/handoff_manager.py" \
-        "/home/jesse/openroot/bin/compost_v1.py" \
-        "/home/jesse/openroot/bin/agape_vector_index.py"
+        "/home/${OPENROOT_USER}/openroot/bin/a1_core_v1.py" \
+        "/home/${OPENROOT_USER}/openroot/bin/mistake_engine_v1.py" \
+        "/home/${OPENROOT_USER}/openroot/bin/handoff_manager.py" \
+        "/home/${OPENROOT_USER}/openroot/bin/compost_v1.py" \
+        "/home/${OPENROOT_USER}/openroot/bin/agape_vector_index.py"
     do
         if [ -f "$path" ]; then
             printf '[banked] present %s\n' "$path"
@@ -85,9 +85,9 @@ mkdir -p "$OUTDIR"
     echo
 
     echo "=== DIRECT TOOL CHECK: A1 CHECK-BIN ==="
-    if [ -f "/home/jesse/openroot/bin/a1_core_v1.py" ]; then
+    if [ -f "/home/${OPENROOT_USER}/openroot/bin/a1_core_v1.py" ]; then
         set +e
-        python3 "/home/jesse/openroot/bin/a1_core_v1.py" check-bin
+        python3 "/home/${OPENROOT_USER}/openroot/bin/a1_core_v1.py" check-bin
         RC=$?
         set -e
         printf '[banked] a1_check_bin_exit_code=%s\n' "$RC"

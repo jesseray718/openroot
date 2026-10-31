@@ -2,8 +2,8 @@
 # [canary] paste intact
 set -Eeuo pipefail
 
-ROOT=/home/jesse/openroot
-DB=/home/jesse/.local/share/openroot/ledger.db
+ROOT=/home/${OPENROOT_USER}/openroot
+DB=/home/${OPENROOT_USER}/.local/share/openroot/ledger.db
 OUTDIR=${ROOT}/data/fleet_snapshots
 mkdir -p "$OUTDIR"
 STAMP=$(date +%Y%m%d-%H%M%S)

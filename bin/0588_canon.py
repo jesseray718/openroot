@@ -390,7 +390,7 @@ def main(argv: list[str] | None = None) -> int:
     fb.add_argument("target", help="N-id, token, or candidate")
     fb.add_argument("kind", choices=list(KINDS))
     fb.add_argument("note")
-    fb.add_argument("--source", default="jesse")
+    fb.add_argument("--source", default="(os.getenv("OPENROOT_USER", "jesse"))")
 
     sub.add_parser("regulate", help="show heat, review flags, killed candidates")
 

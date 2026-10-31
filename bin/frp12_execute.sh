@@ -2,8 +2,8 @@
 # frp12_execute.sh v1.1 — prune executor, keyed by repo:branch (v1.0 name-collision FIXED)
 set -euo pipefail
 export GIT_PAGER=cat
-REPO=/home/jesse/openroot
-GH_USER=jesseray718
+REPO=/home/${OPENROOT_USER}/openroot
+GH_USER=${OPENROOT_USER}ray718
 TS=$(date +%Y%m%d_%H%M%S)
 RPT=$REPO/analysis/frp12_${TS}
 mkdir -p "$RPT"

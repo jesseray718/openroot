@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 # SPDX-License-Identifier: GPL-3.0-or-later
-# OpenRoot — jesseray718
+# OpenRoot — ${OPENROOT_USER}ray718
 # PANE: SSH — reconcile Reh1t contribution against ISSUE #53 (branch feat/53-local-AI on fork Reh1t/openroot)
 set -euo pipefail
 export GIT_PAGER=cat
-REPO=/home/jesse/openroot
+REPO=/home/${OPENROOT_USER}/openroot
 STAMP=$(date +%Y%m%d_%H%M%S)
 CANARY="REH53V2"
-LOG=/home/jesse/openroot/logs/reh1t_v2_${STAMP}.log
-DATA=/home/jesse/openroot/data/reh1t
+LOG=/home/${OPENROOT_USER}/openroot/logs/reh1t_v2_${STAMP}.log
+DATA=/home/${OPENROOT_USER}/openroot/data/reh1t
 mkdir -p "$DATA" "$(dirname "$LOG")"
 exec > >(tee -a "$LOG") 2>&1
 echo "[$CANARY] START $STAMP"
@@ -64,7 +64,7 @@ fi
 
 # [held] friendly comment on ISSUE #53 — posts only with CONFIRM=1
 cat > "$DATA/comment_v2_${STAMP}.md" <<_EOF_CMT_
-Hey @Reh1t — checking in on #53. Quick heads-up: main was force-pushed (git filter-repo stripped >50 MB blobs, repo now ~15 MiB), so your clone's history has diverged and a plain pull will fight you — nothing you did wrong. Resync with: git fetch origin && git checkout main && git reset --hard origin/main. Your branch is preserved: I reconciled feat/53-local-AI onto current main as pr53-reconcile with your authorship intact. Happy to walk through any snags here. — Jesse (jesseray718)
+Hey @Reh1t — checking in on #53. Quick heads-up: main was force-pushed (git filter-repo stripped >50 MB blobs, repo now ~15 MiB), so your clone's history has diverged and a plain pull will fight you — nothing you did wrong. Resync with: git fetch origin && git checkout main && git reset --hard origin/main. Your branch is preserved: I reconciled feat/53-local-AI onto current main as pr53-reconcile with your authorship intact. Happy to walk through any snags here. — Jesse (${OPENROOT_USER}ray718)
 _EOF_CMT_
 
 if [[ "${CONFIRM:-0}" == "1" ]]; then

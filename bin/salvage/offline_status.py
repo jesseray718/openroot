@@ -17,7 +17,7 @@ LOG_FILE = LOG_DIR / f"offline_status_{STAMP}.json"
 
 def run(cmd, timeout=8):
     try:
-        r = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=timeout)
+        r = subprocess.run(cmd, shell=False, capture_output=True, text=True, timeout=timeout)
         return r.returncode, r.stdout.strip(), r.stderr.strip()
     except Exception as e:
         return 1, "", str(e)

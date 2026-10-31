@@ -4,7 +4,7 @@
 # Dry-run default. CONFIRM=1 banks. Idempotent. Absolute paths. Canary-verified.
 set -eu
 export GIT_PAGER=cat
-REPO=/home/jesse/openroot
+REPO=/home/${OPENROOT_USER}/openroot
 TS=$(date +%Y%m%d_%H%M%S)
 CANARY="[canary] paste intact marker"
 

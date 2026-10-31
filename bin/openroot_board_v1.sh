@@ -5,7 +5,7 @@
 # Run anywhere in a session to answer "where am I, what's next".
 set -u
 CANARY="[BOARDV1]"
-cd /home/jesse/openroot || { echo "$CANARY not on optiplex repo — abort"; exit 1; }
+cd /home/${OPENROOT_USER}/openroot || { echo "$CANARY not on optiplex repo — abort"; exit 1; }
 
 echo "=============================================================="
 echo "  OPENROOT BOARD v1 — $(date -Is)"
@@ -48,12 +48,12 @@ fi
 
 echo ""
 echo "--- 4/7 CACHE / FLYWHEEL ---"
-python3 /home/jesse/openroot/bin/embed_cache.py stats 2>/dev/null \
+python3 /home/${OPENROOT_USER}/openroot/bin/embed_cache.py stats 2>/dev/null \
   || echo "embed_cache unavailable"
 
 echo ""
 echo "--- 5/7 DISK HOTSPOTS ---"
-du -xh --max-depth=1 /home/jesse/openroot 2>/dev/null | sort -rh | head -6
+du -xh --max-depth=1 /home/${OPENROOT_USER}/openroot 2>/dev/null | sort -rh | head -6
 
 echo ""
 echo "--- 6/7 QUARANTINE INTEGRITY ---"

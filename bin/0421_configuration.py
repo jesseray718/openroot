@@ -244,7 +244,7 @@ class ConfigurationCommand(Command):
             )
 
         try:
-            subprocess.check_call(f'{editor} "{fname}"', shell=True)
+            subprocess.check_call(f'{editor} "{fname}"', shell=False)
         except FileNotFoundError as e:
             if not e.filename:
                 e.filename = editor

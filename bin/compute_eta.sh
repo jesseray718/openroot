@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -eu
-cd /home/jesse/openroot
+cd /home/${OPENROOT_USER}/openroot
 RECEIPT="/tmp/high_eta_receipt.json"
 [ ! -f "$RECEIPT" ] && RECEIPT="/tmp/gap_analysis.json"
 

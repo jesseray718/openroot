@@ -4,10 +4,10 @@
 # Dry-run by default. CONFIRM=1 executes. Canary [GHFLEETV1].
 set -euo pipefail
 export GIT_PAGER=cat GH_PAGER=cat
-BASE=/home/jesse/openroot
+BASE=/home/${OPENROOT_USER}/openroot
 TS=$(date +%Y%m%d_%H%M%S)
 LOG=$BASE/context_bridge/gh_fleet_housekeeping_${TS}.md
-USER=jesseray718
+USER=${OPENROOT_USER}ray718
 FLAGSHIP=openroot
 mkdir -p "$BASE/context_bridge"
 : > "$LOG"

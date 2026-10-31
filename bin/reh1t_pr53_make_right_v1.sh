@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
 # SPDX-License-Identifier: GPL-3.0-or-later
-# OpenRoot — jesseray718
+# OpenRoot — ${OPENROOT_USER}ray718
 # PANE: SSH — reconcile Reh1t PR #53 onto post-filter-repo main
 # eta = useful_joules / human_joules
 set -euo pipefail
 export GIT_PAGER=cat
-REPO=/home/jesse/openroot
+REPO=/home/${OPENROOT_USER}/openroot
 STAMP=$(date +%Y%m%d_%H%M%S)
 CANARY="REH53V1"
-LOG=/home/jesse/openroot/logs/reh1t_pr53_${STAMP}.log
-DATA=/home/jesse/openroot/data/reh1t
+LOG=/home/${OPENROOT_USER}/openroot/logs/reh1t_pr53_${STAMP}.log
+DATA=/home/${OPENROOT_USER}/openroot/data/reh1t
 mkdir -p "$(dirname "$LOG")" "$DATA"
 exec > >(tee -a "$LOG") 2>&1
 echo "[$CANARY] START $STAMP"
 
-cd /home/jesse/openroot
+cd /home/${OPENROOT_USER}/openroot
 
 # [gate] clean tree required
 if ! git diff-index --quiet HEAD --; then
@@ -70,7 +70,7 @@ Hey @Reh1t — thanks for taking #53. Heads-up: main was force-pushed recently (
     git checkout main
     git reset --hard origin/main
 
-Your work is preserved: I reconciled the PR diff onto current main as branch pr53-reconcile, with your authorship intact (Co-authored-by trailer). Happy to walk through any rebase snags here. — Jesse (jesseray718)
+Your work is preserved: I reconciled the PR diff onto current main as branch pr53-reconcile, with your authorship intact (Co-authored-by trailer). Happy to walk through any rebase snags here. — Jesse (${OPENROOT_USER}ray718)
 _EOF_CMT_
 
 if [[ "${CONFIRM:-0}" == "1" ]]; then

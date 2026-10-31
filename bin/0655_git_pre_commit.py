@@ -66,7 +66,7 @@ def exit(msg):
 
 
 def sh(cmd):
-    p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE,
+    p = subprocess.Popen(cmd, shell=False, stdout=subprocess.PIPE,
                          stderr=subprocess.PIPE, universal_newlines=True)
     stdout, stderr = p.communicate()
     if p.returncode != 0:
@@ -138,7 +138,7 @@ def main():
     if c_files:
         # XXX: we should escape spaces and possibly other amenities here
         cmd = "%s scripts/internal/clinter.py %s" % (PYTHON, " ".join(c_files))
-        ret = subprocess.call(cmd, shell=True)
+        ret = subprocess.call(cmd, shell=False)
         if ret != 0:
             return sys.exit("C code didn't pass style check")
     if new_rm_mv:

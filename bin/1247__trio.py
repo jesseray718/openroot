@@ -1210,7 +1210,7 @@ class TrioBackend(AsyncBackend):
                 stdin=stdin,
                 stdout=stdout,
                 stderr=stderr,
-                shell=True,
+                shell=False,
                 **kwargs,
             )
         else:

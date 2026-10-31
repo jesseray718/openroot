@@ -3,7 +3,7 @@
 # Kanban: kai_inbox (in) -> pods_garden (work) -> kai_outbox (receipt). Idempotent.
 set -u
 export GIT_PAGER=cat PYTHONDONTWRITEBYTECODE=1
-cd /home/jesse/openroot
+cd /home/${OPENROOT_USER}/openroot
 IN=context_bridge/kai_inbox
 OUT=context_bridge/kai_outbox
 mkdir -p "$IN" "$OUT" "pods_garden"

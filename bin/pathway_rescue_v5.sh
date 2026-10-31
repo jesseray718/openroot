@@ -10,8 +10,8 @@ set -euo pipefail
 export GIT_PAGER=cat
 export TZ=UTC
 
-OWNER="jesseray718"
-ROOT="/home/jesse/openroot"
+OWNER="${OPENROOT_USER}ray718"
+ROOT="/home/${OPENROOT_USER}/openroot"
 TS="$(date +%Y%m%d_%H%M%S)"
 LOG="$ROOT/context_bridge/pathway_rescue_v5_${TS}.md"
 CANARY="[PRV5]"

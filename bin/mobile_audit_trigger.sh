@@ -4,7 +4,7 @@
 # [canary] mobile_audit_trigger_CANARY_MARKER
 set -euo pipefail
 TARGET_HOST="${TARGET_HOST:-optiplex3060}"
-OPTIPLEX_USER="${OPTIPLEX_USER:-jesse}"
+OPTIPLEX_USER="${OPTIPLEX_USER:-${OPENROOT_USER}}"
 SCRIPT_PATH="${OPTIPLEX_SCRIPT:-/home/${OPTIPLEX_USER}/openroot/bin/gh_audit_v2.sh}"
 REMOTE_LOG="${OPTIPLEX_LOG:-/tmp/gh_audit_run4.log}"
 say(){ printf '[%s] %s\n' "$1" "$2"; }
@@ -21,7 +21,7 @@ HOST=$(hostname)
 pkill -f gh_audit_v2 2>/dev/null || true
 sleep 2
 rm -f /tmp/gh_audit_run4.log
-nohup bash /home/jesse/openroot/bin/gh_audit_v2.sh > /tmp/gh_audit_run4.log 2>&1 &
+nohup bash /home/${OPENROOT_USER}/openroot/bin/gh_audit_v2.sh > /tmp/gh_audit_run4.log 2>&1 &
 REMOTE_PID=$!
 disown
 sleep 8

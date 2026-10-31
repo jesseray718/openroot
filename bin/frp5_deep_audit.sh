@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # frp5_deep_audit.sh — full repo pass v5: GitHub deep audit + local gate + consolidate + guarded push
-# Author: frp5 script, jesse-supervised. Dry-run unless CONFIRM=1.
+# Author: frp5 script, ${OPENROOT_USER}-supervised. Dry-run unless CONFIRM=1.
 set -euo pipefail
 export GIT_PAGER=cat
 
-REPO=/home/jesse/openroot
+REPO=/home/${OPENROOT_USER}/openroot
 CANARY="[canary] frp5 paste intact"
 
 cd "$REPO"
@@ -51,11 +51,11 @@ fi
 echo "[stage:audit-github] gh API sweep"
 gh auth status > "$RPT/github/auth.txt" 2>&1 || { echo "[gate] gh not authed — aborting github stage"; exit 1; }
 
-gh repo view jesseray718/openroot --json name,pushedAt,defaultBranchRef,stargazerCount,isPrivate \
+gh repo view ${OPENROOT_USER}ray718/openroot --json name,pushedAt,defaultBranchRef,stargazerCount,isPrivate \
   > "$RPT/github/openroot.json" 2>&1 || true
-gh pr list --repo jesseray718/openroot --state open --json number,title,author,headRefName,updatedAt \
+gh pr list --repo ${OPENROOT_USER}ray718/openroot --state open --json number,title,author,headRefName,updatedAt \
   > "$RPT/github/open_prs.json" 2>&1 || true
-gh repo list jesseray718 --limit 100 --json name,updatedAt,isPrivate,visibility,stargazerCount \
+gh repo list ${OPENROOT_USER}ray718 --limit 100 --json name,updatedAt,isPrivate,visibility,stargazerCount \
   > "$RPT/github/all_repos.json" 2>&1 || true
 git ls-remote --heads origin > "$RPT/github/remote_branches.txt" 2>&1 || true
 
@@ -65,7 +65,7 @@ grep -q "quarantine-pulse-20260918" "$RPT/github/remote_branches.txt" \
   || echo "quarantine branch absent from origin" >> "$RPT/local_state.txt"
 
 # PR #53 (Reh1t) special handling — force-push rewrote history, their clone is stale
-gh pr view 53 --repo jesseray718/openroot --json number,title,state,author,mergeable \
+gh pr view 53 --repo ${OPENROOT_USER}ray718/openroot --json number,title,state,author,mergeable \
   > "$RPT/github/pr53.json" 2>&1 || echo "PR 53 not accessible" > "$RPT/github/pr53.json"
 
 # ---------- [stage:digest] ----------

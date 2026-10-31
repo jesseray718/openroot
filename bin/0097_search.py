@@ -1,7 +1,7 @@
 import sys
 import requests
 
-OPTIPLEX_URL = "http://100.122.169.43:8000/search"
+OPTIPLEX_URL = "http://os.getenv('OPENROOT_HUB', '100.122.169.43'):8000/search"
 
 def query_node(prompt):
     try:

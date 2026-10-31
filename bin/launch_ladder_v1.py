@@ -24,7 +24,7 @@ def now(): return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
 def sh(cmd, timeout=600, cwd=str(OR)):
     try:
-        r = subprocess.run(cmd, shell=True, capture_output=True, text=True,
+        r = subprocess.run(cmd, shell=False, capture_output=True, text=True,
                            timeout=timeout, cwd=cwd)
         return r.returncode == 0, (r.stdout + r.stderr).strip()[-500:]
     except subprocess.TimeoutExpired:

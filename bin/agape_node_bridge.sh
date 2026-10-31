@@ -8,7 +8,7 @@ set -eu
 
 export OLLAMA_HOST=http://localhost:11434
 export GIT_PAGER=cat PAGER=cat
-REPO_ROOT="/home/jesse/openroot"
+REPO_ROOT="/home/${OPENROOT_USER}/openroot"
 DB_PATH="${REPO_ROOT}/data/team_gate.db"
 EMBED_DB="${REPO_ROOT}/data/canonical_index.db"
 OUTPUT="/tmp/bridge_response.json"

@@ -115,7 +115,7 @@ def sh(cmd, nolog=False):
     if not nolog:
         safe_print("cmd: " + cmd)
     p = subprocess.Popen(
-        cmd, shell=True, env=os.environ, cwd=os.getcwd()  # noqa
+        cmd, shell=False, env=os.environ, cwd=os.getcwd()  # noqa
     )
     p.communicate()
     if p.returncode != 0:

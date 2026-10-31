@@ -3,10 +3,10 @@
 # Usage: dry-run default; CONFIRM=1 for full purge; ROTATED=<newhex> optional
 set -eu
 export GIT_PAGER=cat TERM=dumb PYTHONDONTWRITEBYTECODE=1
-cd /home/jesse/openroot
+cd /home/${OPENROOT_USER}/openroot
 CANARY="CANARY:OPENROOT-JWT-SCRUB-V1"
 STAMP=$(date -u +%Y%m%dT%H%M%SZ)
-LOG=/home/jesse/openroot/logs/secret_scrub_env_local_${STAMP}.log
+LOG=/home/${OPENROOT_USER}/openroot/logs/secret_scrub_env_local_${STAMP}.log
 mkdir -p "$(dirname "$LOG")"
 exec > >(tee -a "$LOG") 2>&1
 
@@ -82,7 +82,7 @@ grep -qxF '.env.local' .gitignore || { echo '.env.local' >> .gitignore; \
 
 echo "=== [STAGE 3] snapshot ==="
 git branch "safety/pre-scrub-${STAMP}" && echo "[banked] safety branch created"
-git bundle create "/home/jesse/openroot-backup-prescrub-${STAMP}.bundle" --all
+git bundle create "/home/${OPENROOT_USER}/openroot-backup-prescrub-${STAMP}.bundle" --all
 echo "[banked] rescue bundle: openroot-backup-prescrub-${STAMP}.bundle (KEEP OFFREPO)"
 
 echo "=== [STAGE 4] history rewrite ==="

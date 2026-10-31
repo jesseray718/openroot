@@ -23,7 +23,7 @@ SEED_FILE = SEED_DIR / "current_seed.json"
 
 def run(cmd, timeout=6):
     try:
-        r = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=timeout)
+        r = subprocess.run(cmd, shell=False, capture_output=True, text=True, timeout=timeout)
         return r.returncode, (r.stdout or "").strip(), (r.stderr or "").strip()
     except Exception as e:
         return 1, "", str(e)

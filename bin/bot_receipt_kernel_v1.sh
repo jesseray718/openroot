@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 set -eu
 export GIT_PAGER=cat TERM=dumb
-BIN=/home/jesse/openroot/bin
-HARVEST=/home/jesse/openroot/context_bridge/harvest
+BIN=/home/${OPENROOT_USER}/openroot/bin
+HARVEST=/home/${OPENROOT_USER}/openroot/context_bridge/harvest
 TS=$(date -u +%Y%m%dT%H%M%SZ)
-RUNDIR=/home/jesse/openroot/logs/bot-receipt-kernel-$TS
+RUNDIR=/home/${OPENROOT_USER}/openroot/logs/bot-receipt-kernel-$TS
 mkdir -p "$RUNDIR" "$HARVEST"
 REPORT=$HARVEST/bot-report-receipt-kernel-$TS.md
 CANARY="CANARY:BOT-RECEIPT-KERNEL-V1"

@@ -170,7 +170,7 @@ def main():
     import os
     os.umask(0o077)
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--pr',type=int,required=True);p.add_argument('--repo',default='jesseray718/openroot');p.add_argument('--host',default='jesse@100.122.169.43');p.add_argument('--model',default='openroot-coder:latest');p.add_argument('--max-turns',type=int,default=6);p.add_argument('--allow-wikipedia',action='store_true');p.add_argument('--archive-root',default='/data/data/com.termux/files/home/pr-context-receipts')
+    p.add_argument('--pr',type=int,required=True);p.add_argument('--repo',default='jesseray718/openroot');p.add_argument('--host',default='jesse@os.getenv('OPENROOT_HUB', '100.122.169.43')');p.add_argument('--model',default='openroot-coder:latest');p.add_argument('--max-turns',type=int,default=6);p.add_argument('--allow-wikipedia',action='store_true');p.add_argument('--archive-root',default='/data/data/com.termux/files/home/pr-context-receipts')
     args=p.parse_args()
     if args.pr<1 or not re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+',args.repo) or not 1<=args.max_turns<=12:raise ValueError('Invalid PR/repository/turn limit')
     b=Broker(args);print('ARCHIVE='+str(b.root),flush=True)

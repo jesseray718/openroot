@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 # SPDX-License-Identifier: GPL-3.0-or-later
-# OpenRoot — jesseray718
+# OpenRoot — ${OPENROOT_USER}ray718
 # PANE: SSH — bank genuine week scripts, declare backup dirs ignored, purge junk
 # eta = useful_joules / human_joules
 set -euo pipefail
 export GIT_PAGER=cat
-REPO=/home/jesse/openroot
+REPO=/home/${OPENROOT_USER}/openroot
 STAMP=$(date +%Y%m%d_%H%M%S)
 CANARY="BANKWK1"
-LOG=/home/jesse/openroot/logs/bank_week_${STAMP}.log
+LOG=/home/${OPENROOT_USER}/openroot/logs/bank_week_${STAMP}.log
 mkdir -p "$(dirname "$LOG")"
 exec > >(tee -a "$LOG") 2>&1
 echo "[$CANARY] START $STAMP"

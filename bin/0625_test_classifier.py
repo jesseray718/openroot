@@ -15,7 +15,7 @@ mod = load()
 
 SSH_ENV = {
     "HOME": "/home/jesse",
-    "USER": "jesse",
+    "USER": "(os.getenv("OPENROOT_USER", "jesse"))",
     "HOSTNAME": "optiplex3060",
     "PWD": "/home/jesse/openroot",
     "PREFIX": "",
@@ -36,7 +36,7 @@ A15_ENV = {
 }
 CONFLICT_ENV = {
     "HOME": "/data/data/com.termux/files/home",
-    "USER": "jesse",
+    "USER": "(os.getenv("OPENROOT_USER", "jesse"))",
     "HOSTNAME": "optiplex3060",
     "PWD": "/storage/emulated/0/openroot",
     "PREFIX": "/data/data/com.termux/files/usr",

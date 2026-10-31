@@ -3,12 +3,12 @@
 set -euo pipefail
 export GIT_PAGER=cat
 
-REPO="/home/jesse/openroot"
-BIN="/home/jesse/openroot/bin"
+REPO="/home/${OPENROOT_USER}/openroot"
+BIN="/home/${OPENROOT_USER}/openroot/bin"
 VECTOR="$BIN/agape_vector_index.py"
 COMPOST="$BIN/compost_v1.py"
 STAMP="$(date -u +%Y%m%dT%H%M%SZ)"
-BACKUP_DIR="/home/jesse/openroot/quarantine_tooling_repair_backups_${STAMP}"
+BACKUP_DIR="/home/${OPENROOT_USER}/openroot/quarantine_tooling_repair_backups_${STAMP}"
 
 cd "$REPO"
 mkdir -p "$BACKUP_DIR"
@@ -80,7 +80,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-REPO = Path("/home/jesse/openroot")
+REPO = Path("/home/${OPENROOT_USER}/openroot")
 DATA = REPO / "data"
 DB = DATA / "compost_v1.db"
 TAG = "[COMPOSTV1]"

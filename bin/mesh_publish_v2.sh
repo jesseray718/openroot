@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -eu
 export GIT_PAGER=cat PAGER=cat
-REPO=/home/jesse/openroot
+REPO=/home/${OPENROOT_USER}/openroot
 cd "$REPO"
 echo "[canary-head] mesh_publish_v2 paste intact"
 
@@ -115,9 +115,9 @@ fi
 
 echo "[stage-7] pin flagship repos on profile"
 if [ "$GH_OK" -eq 1 ]; then
-  gh api -X PATCH repos/jesseray718 --field pinned=- 2>/dev/null || true
+  gh api -X PATCH repos/${OPENROOT_USER}ray718 --field pinned=- 2>/dev/null || true
   # gh has no direct pin API; manual step below
-  echo "   [manual] pin these on github.com/jesseray718 (profile page, Customize pins):"
+  echo "   [manual] pin these on github.com/${OPENROOT_USER}ray718 (profile page, Customize pins):"
   echo "      openroot-canon, OpenCell-Thermal-System, aerocement, openroot-ecosystem"
 fi
 

@@ -5,7 +5,7 @@
 # Idempotent: re-runs only touch commits never seen before.
 set -euo pipefail
 export GIT_PAGER=cat
-cd /home/jesse/openroot
+cd /home/${OPENROOT_USER}/openroot
 
 TAG="[GITABSORBV1]"
 STAMP="$(date +%Y%m%d_%H%M%S)"

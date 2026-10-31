@@ -11,25 +11,25 @@ echo "=== OPENROOT STAGE+PUSH $(date -Iseconds) HOME=$HOME SD=$SD ==="
 DO_NOT_PUSH="firmware LXMF markor MeshCore Reticulum RNode_Firmware tinyGS skills-introduction-to-github civilization2.0 aerocement- open-cell-thermal-open-cell-the AeroCement_Ecosystem renaissance-protocol OpenCell-Thermal-System"
 
 declare -A REMOTE
-REMOTE[openroot]=https://github.com/jesseray718/openroot.git
-REMOTE[une]=https://github.com/jesseray718/une.git
-REMOTE[black-locust-rmh]=https://github.com/jesseray718/black-locust-rmh.git
-REMOTE[aerocement]=https://github.com/jesseray718/aerocement.git
-REMOTE[agape-une]=https://github.com/jesseray718/agape-une.git
-REMOTE[agape-primitives]=https://github.com/jesseray718/agape-primitives.git
-REMOTE[agapenet]=https://github.com/jesseray718/agapenet.git
-REMOTE[jesseray718]=https://github.com/jesseray718/jesseray718.git
-REMOTE[canonical]=https://github.com/jesseray718/canonical.git
-REMOTE[und-protocol]=https://github.com/jesseray718/und-protocol.git
-REMOTE[wisdom-scaffold]=https://github.com/jesseray718/wisdom-scaffold.git
-REMOTE[agape-coordination]=https://github.com/jesseray718/agape-coordination.git
-REMOTE[agape-ipfs]=https://github.com/jesseray718/agape-ipfs.git
-REMOTE[agape-crossover-key]=https://github.com/jesseray718/agape-crossover-key.git
-REMOTE[agaperesonance]=https://github.com/jesseray718/agaperesonance.git
-REMOTE[etaledger]=https://github.com/jesseray718/etaledger.git
-REMOTE[fractallattice]=https://github.com/jesseray718/fractallattice.git
-REMOTE[openroot-spoke-template]=https://github.com/jesseray718/openroot-spoke-template.git
-REMOTE[oscillation-mesh]=https://github.com/jesseray718/oscillation-mesh.git
+REMOTE[openroot]=https://github.com/${OPENROOT_USER}ray718/openroot.git
+REMOTE[une]=https://github.com/${OPENROOT_USER}ray718/une.git
+REMOTE[black-locust-rmh]=https://github.com/${OPENROOT_USER}ray718/black-locust-rmh.git
+REMOTE[aerocement]=https://github.com/${OPENROOT_USER}ray718/aerocement.git
+REMOTE[agape-une]=https://github.com/${OPENROOT_USER}ray718/agape-une.git
+REMOTE[agape-primitives]=https://github.com/${OPENROOT_USER}ray718/agape-primitives.git
+REMOTE[agapenet]=https://github.com/${OPENROOT_USER}ray718/agapenet.git
+REMOTE[${OPENROOT_USER}ray718]=https://github.com/${OPENROOT_USER}ray718/${OPENROOT_USER}ray718.git
+REMOTE[canonical]=https://github.com/${OPENROOT_USER}ray718/canonical.git
+REMOTE[und-protocol]=https://github.com/${OPENROOT_USER}ray718/und-protocol.git
+REMOTE[wisdom-scaffold]=https://github.com/${OPENROOT_USER}ray718/wisdom-scaffold.git
+REMOTE[agape-coordination]=https://github.com/${OPENROOT_USER}ray718/agape-coordination.git
+REMOTE[agape-ipfs]=https://github.com/${OPENROOT_USER}ray718/agape-ipfs.git
+REMOTE[agape-crossover-key]=https://github.com/${OPENROOT_USER}ray718/agape-crossover-key.git
+REMOTE[agaperesonance]=https://github.com/${OPENROOT_USER}ray718/agaperesonance.git
+REMOTE[etaledger]=https://github.com/${OPENROOT_USER}ray718/etaledger.git
+REMOTE[fractallattice]=https://github.com/${OPENROOT_USER}ray718/fractallattice.git
+REMOTE[openroot-spoke-template]=https://github.com/${OPENROOT_USER}ray718/openroot-spoke-template.git
+REMOTE[oscillation-mesh]=https://github.com/${OPENROOT_USER}ray718/oscillation-mesh.git
 
 echo "=== HOME GIT TREES ==="
 find "$HOME" -maxdepth 3 -type d -name .git 2>/dev/null | sort | while read -r g; do

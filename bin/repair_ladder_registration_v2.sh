@@ -3,10 +3,10 @@
 set -euo pipefail
 export GIT_PAGER=cat
 
-REPO="/home/jesse/openroot"
-LADDER="/home/jesse/openroot/bin/launch_ladder_v1.py"
+REPO="/home/${OPENROOT_USER}/openroot"
+LADDER="/home/${OPENROOT_USER}/openroot/bin/launch_ladder_v1.py"
 STAMP="$(date -u +%Y%m%dT%H%M%SZ)"
-BACKUP="/home/jesse/openroot/bin/launch_ladder_v1.py.pre_registration_fix_v2.${STAMP}.bak"
+BACKUP="/home/${OPENROOT_USER}/openroot/bin/launch_ladder_v1.py.pre_registration_fix_v2.${STAMP}.bak"
 OLD='INSERT OR REPLACE INTO stages(name, maturity) VALUES(?, ?)'
 NEW='INSERT INTO stages(name, maturity) VALUES(?, ?) ON CONFLICT(name) DO UPDATE SET maturity=excluded.maturity'
 

@@ -4,7 +4,7 @@
 # cost; unchanged window sha = rest (near-zero cost).
 set -eu
 export GIT_PAGER=cat
-cd /home/jesse/openroot
+cd /home/${OPENROOT_USER}/openroot
 STATE=data/.last_window_sha
 CUR=$(find context_bridge bin analysis docs workareas \
        -type f -newer data/.window_marker 2>/dev/null | wc -l; \

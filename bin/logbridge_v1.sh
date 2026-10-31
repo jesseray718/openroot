@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # SPDX-License-Identifier: GPL-3.0-only
 # logbridge_v1.sh — find *.log, sha256 dedupe, superlinear feed (SQLite+JSONL), CI/CD payload
-# Usage: bash /home/jesse/openroot/bin/logbridge_v1.sh [days]
+# Usage: bash /home/${OPENROOT_USER}/openroot/bin/logbridge_v1.sh [days]
 # CONFIRM=1 required for any state-changing git op. Nothing commits.
 set -euo pipefail
 export GIT_PAGER=cat
-cd /home/jesse/openroot
+cd /home/${OPENROOT_USER}/openroot
 
 TAG="[LOGBRIDGEV1]"
 DAYS="${1:-7}"

@@ -1,7 +1,7 @@
 #!/bin/bash
 # [BOARDV2] OpenRoot status board — read-only
 # SPDX-License-Identifier: GPL-3.0-only
-cd /home/jesse/openroot
+cd /home/${OPENROOT_USER}/openroot
 echo "== BOARD $(date '+%F %T') =="
 git log --oneline -1
 echo "ahead: $(git rev-list --count origin/main..HEAD)"

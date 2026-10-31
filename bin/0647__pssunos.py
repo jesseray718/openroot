@@ -618,7 +618,7 @@ class Process(object):
         # TODO: rewrite this in C (...but the damn netstat source code
         # does not include this part! Argh!!)
         cmd = "pfiles %s" % pid
-        p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE,
+        p = subprocess.Popen(cmd, shell=False, stdout=subprocess.PIPE,
                              stderr=subprocess.PIPE)
         stdout, stderr = p.communicate()
         if PY3:

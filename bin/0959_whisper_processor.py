@@ -24,7 +24,7 @@ def process_audio(wav_file, model_name="base.en"):
     full_command = f"./main -m {model} -f {wav_file} -nt"
 
     # Execute the command
-    process = subprocess.Popen(full_command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    process = subprocess.Popen(full_command, shell=False, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
     # Get the output and error (if any)
     output, error = process.communicate()
