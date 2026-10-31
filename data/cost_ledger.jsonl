@@ -2817,3 +2817,3387 @@
 20261019_053634|P10|models=20 verdict_types=2 scripts=107
 20261019_053634|P11|holds=36 borderline=0 quarantine_dirs=1
 20261019_053634|P12|head=44e26dd rollback_tags=12
+20261019_063657|P1|mem_pct=22.4 disk_pct=37 load=0.10 ollama=up
+20261019_063657|P2|warm_models=20 fts_excerpts=49
+20261019_063657|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261019_063657|P4|errs_blocked=8
+20261019_063657|P5|local_models=20 debate_entries=49
+20261019_063657|P6|dupes=0 total=49 graded=49
+20261019_063657|P7|schema=49ba22964598 patterned_commits=0
+20261019_063657|P8|fts=49 log_feed=49 joined=49
+20261019_063657|P9|tiny_3b=3 small_7b=5 other=12
+20261019_063657|P10|models=20 verdict_types=2 scripts=109
+20261019_063657|P11|holds=36 borderline=0 quarantine_dirs=1
+20261019_063657|P12|head=85ddf6d rollback_tags=12
+20261019_073703|P1|mem_pct=22.1 disk_pct=37 load=0.20 ollama=up
+20261019_073703|P2|warm_models=20 fts_excerpts=49
+20261019_073703|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261019_073703|P4|errs_blocked=8
+20261019_073703|P5|local_models=20 debate_entries=49
+20261019_073703|P6|dupes=0 total=49 graded=49
+20261019_073703|P7|schema=49ba22964598 patterned_commits=0
+20261019_073703|P8|fts=49 log_feed=49 joined=49
+20261019_073703|P9|tiny_3b=3 small_7b=5 other=12
+20261019_073703|P10|models=20 verdict_types=2 scripts=109
+20261019_073703|P11|holds=36 borderline=0 quarantine_dirs=1
+20261019_073703|P12|head=85ddf6d rollback_tags=12
+20261019_083703|P1|mem_pct=22.0 disk_pct=37 load=0.30 ollama=up
+20261019_083703|P2|warm_models=20 fts_excerpts=49
+20261019_083703|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261019_083703|P4|errs_blocked=8
+20261019_083703|P5|local_models=20 debate_entries=49
+20261019_083703|P6|dupes=0 total=49 graded=49
+20261019_083703|P7|schema=49ba22964598 patterned_commits=0
+20261019_083703|P8|fts=49 log_feed=49 joined=49
+20261019_083703|P9|tiny_3b=3 small_7b=5 other=12
+20261019_083703|P10|models=20 verdict_types=2 scripts=109
+20261019_083703|P11|holds=36 borderline=0 quarantine_dirs=1
+20261019_083703|P12|head=85ddf6d rollback_tags=12
+20261019_093704|P1|mem_pct=22.1 disk_pct=37 load=0.28 ollama=up
+20261019_093704|P2|warm_models=20 fts_excerpts=49
+20261019_093704|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261019_093704|P4|errs_blocked=8
+20261019_093704|P5|local_models=20 debate_entries=49
+20261019_093704|P6|dupes=0 total=49 graded=49
+20261019_093704|P7|schema=49ba22964598 patterned_commits=0
+20261019_093704|P8|fts=49 log_feed=49 joined=49
+20261019_093704|P9|tiny_3b=3 small_7b=5 other=12
+20261019_093704|P10|models=20 verdict_types=2 scripts=109
+20261019_093704|P11|holds=36 borderline=0 quarantine_dirs=1
+20261019_093704|P12|head=85ddf6d rollback_tags=12
+20261019_103707|P1|mem_pct=22.1 disk_pct=37 load=0.16 ollama=up
+20261019_103707|P2|warm_models=20 fts_excerpts=49
+20261019_103707|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261019_103707|P4|errs_blocked=8
+20261019_103707|P5|local_models=20 debate_entries=49
+20261019_103707|P6|dupes=0 total=49 graded=49
+20261019_103707|P7|schema=49ba22964598 patterned_commits=0
+20261019_103707|P8|fts=49 log_feed=49 joined=49
+20261019_103707|P9|tiny_3b=3 small_7b=5 other=12
+20261019_103707|P10|models=20 verdict_types=2 scripts=109
+20261019_103707|P11|holds=36 borderline=0 quarantine_dirs=1
+20261019_103707|P12|head=85ddf6d rollback_tags=12
+20261019_113727|P1|mem_pct=19.7 disk_pct=37 load=0.16 ollama=up
+20261019_113727|P2|warm_models=20 fts_excerpts=49
+20261019_113727|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261019_113727|P4|errs_blocked=8
+20261019_113727|P5|local_models=20 debate_entries=49
+20261019_113727|P6|dupes=0 total=49 graded=49
+20261019_113727|P7|schema=49ba22964598 patterned_commits=0
+20261019_113727|P8|fts=49 log_feed=49 joined=49
+20261019_113727|P9|tiny_3b=3 small_7b=5 other=12
+20261019_113727|P10|models=20 verdict_types=2 scripts=109
+20261019_113727|P11|holds=36 borderline=0 quarantine_dirs=1
+20261019_113727|P12|head=85ddf6d rollback_tags=12
+20261019_123732|P1|mem_pct=19.7 disk_pct=37 load=0.07 ollama=up
+20261019_123732|P2|warm_models=20 fts_excerpts=49
+20261019_123732|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261019_123732|P4|errs_blocked=8
+20261019_123732|P5|local_models=20 debate_entries=49
+20261019_123732|P6|dupes=0 total=49 graded=49
+20261019_123732|P7|schema=49ba22964598 patterned_commits=0
+20261019_123732|P8|fts=49 log_feed=49 joined=49
+20261019_123732|P9|tiny_3b=3 small_7b=5 other=12
+20261019_123732|P10|models=20 verdict_types=2 scripts=109
+20261019_123732|P11|holds=36 borderline=0 quarantine_dirs=1
+20261019_123732|P12|head=85ddf6d rollback_tags=12
+20261019_133732|P1|mem_pct=19.8 disk_pct=37 load=0.16 ollama=up
+20261019_133732|P2|warm_models=20 fts_excerpts=49
+20261019_133732|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261019_133732|P4|errs_blocked=8
+20261019_133732|P5|local_models=20 debate_entries=49
+20261019_133732|P6|dupes=0 total=49 graded=49
+20261019_133732|P7|schema=49ba22964598 patterned_commits=0
+20261019_133732|P8|fts=49 log_feed=49 joined=49
+20261019_133732|P9|tiny_3b=3 small_7b=5 other=12
+20261019_133732|P10|models=20 verdict_types=2 scripts=109
+20261019_133732|P11|holds=36 borderline=0 quarantine_dirs=1
+20261019_133732|P12|head=85ddf6d rollback_tags=12
+20261019_143757|P1|mem_pct=19.8 disk_pct=37 load=0.12 ollama=up
+20261019_143757|P2|warm_models=20 fts_excerpts=49
+20261019_143757|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261019_143757|P4|errs_blocked=8
+20261019_143757|P5|local_models=20 debate_entries=49
+20261019_143757|P6|dupes=0 total=49 graded=49
+20261019_143757|P7|schema=49ba22964598 patterned_commits=0
+20261019_143757|P8|fts=49 log_feed=49 joined=49
+20261019_143757|P9|tiny_3b=3 small_7b=5 other=12
+20261019_143757|P10|models=20 verdict_types=2 scripts=109
+20261019_143757|P11|holds=36 borderline=0 quarantine_dirs=1
+20261019_143757|P12|head=85ddf6d rollback_tags=12
+20261019_153802|P1|mem_pct=19.9 disk_pct=37 load=0.26 ollama=up
+20261019_153802|P2|warm_models=20 fts_excerpts=49
+20261019_153802|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261019_153802|P4|errs_blocked=8
+20261019_153802|P5|local_models=20 debate_entries=49
+20261019_153802|P6|dupes=0 total=49 graded=49
+20261019_153802|P7|schema=49ba22964598 patterned_commits=0
+20261019_153802|P8|fts=49 log_feed=49 joined=49
+20261019_153802|P9|tiny_3b=3 small_7b=5 other=12
+20261019_153802|P10|models=20 verdict_types=2 scripts=109
+20261019_153802|P11|holds=36 borderline=0 quarantine_dirs=1
+20261019_153802|P12|head=85ddf6d rollback_tags=12
+20261019_163807|P1|mem_pct=19.7 disk_pct=37 load=0.14 ollama=up
+20261019_163807|P2|warm_models=20 fts_excerpts=49
+20261019_163807|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261019_163807|P4|errs_blocked=8
+20261019_163807|P5|local_models=20 debate_entries=49
+20261019_163807|P6|dupes=0 total=49 graded=49
+20261019_163807|P7|schema=49ba22964598 patterned_commits=0
+20261019_163807|P8|fts=49 log_feed=49 joined=49
+20261019_163807|P9|tiny_3b=3 small_7b=5 other=12
+20261019_163807|P10|models=20 verdict_types=2 scripts=109
+20261019_163807|P11|holds=36 borderline=0 quarantine_dirs=1
+20261019_163807|P12|head=85ddf6d rollback_tags=12
+20261019_173827|P1|mem_pct=19.9 disk_pct=37 load=0.17 ollama=up
+20261019_173827|P2|warm_models=20 fts_excerpts=49
+20261019_173827|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261019_173827|P4|errs_blocked=8
+20261019_173827|P5|local_models=20 debate_entries=49
+20261019_173827|P6|dupes=0 total=49 graded=49
+20261019_173827|P7|schema=49ba22964598 patterned_commits=0
+20261019_173827|P8|fts=49 log_feed=49 joined=49
+20261019_173827|P9|tiny_3b=3 small_7b=5 other=12
+20261019_173827|P10|models=20 verdict_types=2 scripts=109
+20261019_173827|P11|holds=36 borderline=0 quarantine_dirs=1
+20261019_173827|P12|head=85ddf6d rollback_tags=12
+20261019_183831|P1|mem_pct=19.8 disk_pct=37 load=0.02 ollama=up
+20261019_183831|P2|warm_models=20 fts_excerpts=49
+20261019_183831|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261019_183831|P4|errs_blocked=8
+20261019_183831|P5|local_models=20 debate_entries=49
+20261019_183831|P6|dupes=0 total=49 graded=49
+20261019_183831|P7|schema=49ba22964598 patterned_commits=0
+20261019_183831|P8|fts=49 log_feed=49 joined=49
+20261019_183831|P9|tiny_3b=3 small_7b=5 other=12
+20261019_183831|P10|models=20 verdict_types=2 scripts=109
+20261019_183831|P11|holds=36 borderline=0 quarantine_dirs=1
+20261019_183831|P12|head=85ddf6d rollback_tags=12
+20261019_193831|P1|mem_pct=20.8 disk_pct=37 load=0.03 ollama=up
+20261019_193831|P2|warm_models=20 fts_excerpts=49
+20261019_193831|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261019_193831|P4|errs_blocked=8
+20261019_193831|P5|local_models=20 debate_entries=49
+20261019_193831|P6|dupes=0 total=49 graded=49
+20261019_193831|P7|schema=49ba22964598 patterned_commits=0
+20261019_193831|P8|fts=49 log_feed=49 joined=49
+20261019_193831|P9|tiny_3b=3 small_7b=5 other=12
+20261019_193831|P10|models=20 verdict_types=2 scripts=109
+20261019_193831|P11|holds=36 borderline=0 quarantine_dirs=1
+20261019_193831|P12|head=85ddf6d rollback_tags=12
+20261019_203857|P1|mem_pct=19.8 disk_pct=37 load=0.12 ollama=up
+20261019_203857|P2|warm_models=20 fts_excerpts=49
+20261019_203857|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261019_203857|P4|errs_blocked=8
+20261019_203857|P5|local_models=20 debate_entries=49
+20261019_203857|P6|dupes=0 total=49 graded=49
+20261019_203857|P7|schema=49ba22964598 patterned_commits=0
+20261019_203857|P8|fts=49 log_feed=49 joined=49
+20261019_203857|P9|tiny_3b=3 small_7b=5 other=12
+20261019_203857|P10|models=20 verdict_types=2 scripts=109
+20261019_203857|P11|holds=36 borderline=0 quarantine_dirs=1
+20261019_203857|P12|head=85ddf6d rollback_tags=12
+20261019_213901|P1|mem_pct=20.2 disk_pct=37 load=0.04 ollama=up
+20261019_213901|P2|warm_models=20 fts_excerpts=49
+20261019_213901|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261019_213901|P4|errs_blocked=8
+20261019_213901|P5|local_models=20 debate_entries=49
+20261019_213901|P6|dupes=0 total=49 graded=49
+20261019_213901|P7|schema=49ba22964598 patterned_commits=0
+20261019_213901|P8|fts=49 log_feed=49 joined=49
+20261019_213901|P9|tiny_3b=3 small_7b=5 other=12
+20261019_213901|P10|models=20 verdict_types=2 scripts=109
+20261019_213901|P11|holds=36 borderline=0 quarantine_dirs=1
+20261019_213901|P12|head=85ddf6d rollback_tags=12
+20261019_223907|P1|mem_pct=21.0 disk_pct=37 load=0.13 ollama=up
+20261019_223907|P2|warm_models=20 fts_excerpts=49
+20261019_223907|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261019_223907|P4|errs_blocked=8
+20261019_223907|P5|local_models=20 debate_entries=49
+20261019_223907|P6|dupes=0 total=49 graded=49
+20261019_223907|P7|schema=49ba22964598 patterned_commits=0
+20261019_223907|P8|fts=49 log_feed=49 joined=49
+20261019_223907|P9|tiny_3b=3 small_7b=5 other=12
+20261019_223907|P10|models=20 verdict_types=2 scripts=109
+20261019_223907|P11|holds=36 borderline=0 quarantine_dirs=1
+20261019_223907|P12|head=85ddf6d rollback_tags=12
+20261019_233927|P1|mem_pct=20.0 disk_pct=37 load=0.04 ollama=up
+20261019_233927|P2|warm_models=20 fts_excerpts=49
+20261019_233927|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261019_233927|P4|errs_blocked=8
+20261019_233927|P5|local_models=20 debate_entries=49
+20261019_233927|P6|dupes=0 total=49 graded=49
+20261019_233927|P7|schema=49ba22964598 patterned_commits=0
+20261019_233927|P8|fts=49 log_feed=49 joined=49
+20261019_233927|P9|tiny_3b=3 small_7b=5 other=12
+20261019_233927|P10|models=20 verdict_types=2 scripts=109
+20261019_233927|P11|holds=36 borderline=0 quarantine_dirs=1
+20261019_233927|P12|head=85ddf6d rollback_tags=12
+20261020_003930|P1|mem_pct=21.7 disk_pct=37 load=0.17 ollama=up
+20261020_003930|P2|warm_models=20 fts_excerpts=49
+20261020_003930|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261020_003930|P4|errs_blocked=8
+20261020_003930|P5|local_models=20 debate_entries=49
+20261020_003930|P6|dupes=0 total=49 graded=49
+20261020_003930|P7|schema=49ba22964598 patterned_commits=0
+20261020_003930|P8|fts=49 log_feed=49 joined=49
+20261020_003930|P9|tiny_3b=3 small_7b=5 other=12
+20261020_003930|P10|models=20 verdict_types=2 scripts=109
+20261020_003930|P11|holds=36 borderline=0 quarantine_dirs=1
+20261020_003930|P12|head=85ddf6d rollback_tags=12
+20261020_013932|P1|mem_pct=11.9 disk_pct=37 load=0.09 ollama=up
+20261020_013932|P2|warm_models=20 fts_excerpts=49
+20261020_013932|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261020_013932|P4|errs_blocked=8
+20261020_013932|P5|local_models=20 debate_entries=49
+20261020_013932|P6|dupes=0 total=49 graded=49
+20261020_013932|P7|schema=49ba22964598 patterned_commits=0
+20261020_013932|P8|fts=49 log_feed=49 joined=49
+20261020_013932|P9|tiny_3b=3 small_7b=5 other=12
+20261020_013932|P10|models=20 verdict_types=2 scripts=109
+20261020_013932|P11|holds=36 borderline=0 quarantine_dirs=1
+20261020_013932|P12|head=85ddf6d rollback_tags=12
+20261020_023957|P1|mem_pct=20.8 disk_pct=37 load=0.27 ollama=up
+20261020_023957|P2|warm_models=20 fts_excerpts=49
+20261020_023957|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261020_023957|P4|errs_blocked=8
+20261020_023957|P5|local_models=20 debate_entries=49
+20261020_023957|P6|dupes=0 total=49 graded=49
+20261020_023957|P7|schema=49ba22964598 patterned_commits=0
+20261020_023957|P8|fts=49 log_feed=49 joined=49
+20261020_023957|P9|tiny_3b=3 small_7b=5 other=12
+20261020_023957|P10|models=20 verdict_types=2 scripts=109
+20261020_023957|P11|holds=36 borderline=0 quarantine_dirs=1
+20261020_023957|P12|head=85ddf6d rollback_tags=12
+20261020_034003|P1|mem_pct=13.7 disk_pct=37 load=0.14 ollama=up
+20261020_034003|P2|warm_models=20 fts_excerpts=49
+20261020_034003|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261020_034003|P4|errs_blocked=8
+20261020_034003|P5|local_models=20 debate_entries=49
+20261020_034003|P6|dupes=0 total=49 graded=49
+20261020_034003|P7|schema=49ba22964598 patterned_commits=0
+20261020_034003|P8|fts=49 log_feed=49 joined=49
+20261020_034003|P9|tiny_3b=3 small_7b=5 other=12
+20261020_034003|P10|models=20 verdict_types=2 scripts=109
+20261020_034003|P11|holds=36 borderline=0 quarantine_dirs=1
+20261020_034003|P12|head=85ddf6d rollback_tags=12
+20261020_044003|P1|mem_pct=26.4 disk_pct=37 load=0.11 ollama=up
+20261020_044003|P2|warm_models=20 fts_excerpts=49
+20261020_044003|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261020_044003|P4|errs_blocked=8
+20261020_044003|P5|local_models=20 debate_entries=49
+20261020_044003|P6|dupes=0 total=49 graded=49
+20261020_044003|P7|schema=49ba22964598 patterned_commits=0
+20261020_044003|P8|fts=49 log_feed=49 joined=49
+20261020_044003|P9|tiny_3b=3 small_7b=5 other=12
+20261020_044003|P10|models=20 verdict_types=2 scripts=109
+20261020_044003|P11|holds=36 borderline=0 quarantine_dirs=1
+20261020_044003|P12|head=85ddf6d rollback_tags=12
+20261020_054007|P1|mem_pct=10.8 disk_pct=37 load=0.20 ollama=up
+20261020_054007|P2|warm_models=20 fts_excerpts=49
+20261020_054007|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261020_054007|P4|errs_blocked=8
+20261020_054007|P5|local_models=20 debate_entries=49
+20261020_054007|P6|dupes=0 total=49 graded=49
+20261020_054007|P7|schema=49ba22964598 patterned_commits=0
+20261020_054007|P8|fts=49 log_feed=49 joined=49
+20261020_054007|P9|tiny_3b=3 small_7b=5 other=12
+20261020_054007|P10|models=20 verdict_types=2 scripts=109
+20261020_054007|P11|holds=36 borderline=0 quarantine_dirs=1
+20261020_054007|P12|head=85ddf6d rollback_tags=12
+20261020_064027|P1|mem_pct=10.7 disk_pct=37 load=0.01 ollama=up
+20261020_064027|P2|warm_models=20 fts_excerpts=49
+20261020_064027|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261020_064027|P4|errs_blocked=8
+20261020_064027|P5|local_models=20 debate_entries=49
+20261020_064027|P6|dupes=0 total=49 graded=49
+20261020_064027|P7|schema=49ba22964598 patterned_commits=0
+20261020_064027|P8|fts=49 log_feed=49 joined=49
+20261020_064027|P9|tiny_3b=3 small_7b=5 other=12
+20261020_064027|P10|models=20 verdict_types=2 scripts=111
+20261020_064027|P11|holds=36 borderline=0 quarantine_dirs=1
+20261020_064027|P12|head=85ddf6d rollback_tags=12
+20261020_074032|P1|mem_pct=10.7 disk_pct=37 load=0.04 ollama=up
+20261020_074032|P2|warm_models=20 fts_excerpts=49
+20261020_074032|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261020_074032|P4|errs_blocked=8
+20261020_074032|P5|local_models=20 debate_entries=49
+20261020_074032|P6|dupes=0 total=49 graded=49
+20261020_074032|P7|schema=49ba22964598 patterned_commits=0
+20261020_074032|P8|fts=49 log_feed=49 joined=49
+20261020_074032|P9|tiny_3b=3 small_7b=5 other=12
+20261020_074032|P10|models=20 verdict_types=2 scripts=112
+20261020_074032|P11|holds=36 borderline=0 quarantine_dirs=1
+20261020_074032|P12|head=85ddf6d rollback_tags=12
+20261020_084032|P1|mem_pct=10.7 disk_pct=37 load=0.10 ollama=up
+20261020_084032|P2|warm_models=20 fts_excerpts=49
+20261020_084032|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261020_084032|P4|errs_blocked=8
+20261020_084032|P5|local_models=20 debate_entries=49
+20261020_084032|P6|dupes=0 total=49 graded=49
+20261020_084032|P7|schema=49ba22964598 patterned_commits=0
+20261020_084032|P8|fts=49 log_feed=49 joined=49
+20261020_084032|P9|tiny_3b=3 small_7b=5 other=12
+20261020_084032|P10|models=20 verdict_types=2 scripts=112
+20261020_084032|P11|holds=36 borderline=0 quarantine_dirs=1
+20261020_084032|P12|head=85ddf6d rollback_tags=12
+20261020_094057|P1|mem_pct=10.8 disk_pct=40 load=1.83 ollama=up
+20261020_094057|P2|warm_models=20 fts_excerpts=49
+20261020_094057|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261020_094057|P4|errs_blocked=8
+20261020_094057|P5|local_models=20 debate_entries=49
+20261020_094057|P6|dupes=0 total=49 graded=49
+20261020_094057|P7|schema=49ba22964598 patterned_commits=0
+20261020_094057|P8|fts=49 log_feed=49 joined=49
+20261020_094057|P9|tiny_3b=3 small_7b=5 other=12
+20261020_094057|P10|models=20 verdict_types=2 scripts=112
+20261020_094057|P11|holds=36 borderline=0 quarantine_dirs=1
+20261020_094057|P12|head=85ddf6d rollback_tags=12
+20261020_104101|P1|mem_pct=11.0 disk_pct=44 load=0.44 ollama=up
+20261020_104101|P2|warm_models=20 fts_excerpts=49
+20261020_104101|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261020_104101|P4|errs_blocked=8
+20261020_104101|P5|local_models=20 debate_entries=49
+20261020_104101|P6|dupes=0 total=49 graded=49
+20261020_104101|P7|schema=49ba22964598 patterned_commits=0
+20261020_104101|P8|fts=49 log_feed=49 joined=49
+20261020_104101|P9|tiny_3b=3 small_7b=5 other=12
+20261020_104101|P10|models=20 verdict_types=2 scripts=112
+20261020_104101|P11|holds=36 borderline=0 quarantine_dirs=1
+20261020_104101|P12|head=85ddf6d rollback_tags=12
+20261020_114102|P1|mem_pct=11.0 disk_pct=44 load=0.23 ollama=up
+20261020_114102|P2|warm_models=20 fts_excerpts=49
+20261020_114102|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261020_114102|P4|errs_blocked=8
+20261020_114102|P5|local_models=20 debate_entries=49
+20261020_114102|P6|dupes=0 total=49 graded=49
+20261020_114102|P7|schema=49ba22964598 patterned_commits=0
+20261020_114102|P8|fts=49 log_feed=49 joined=49
+20261020_114102|P9|tiny_3b=3 small_7b=5 other=12
+20261020_114102|P10|models=20 verdict_types=2 scripts=112
+20261020_114102|P11|holds=36 borderline=0 quarantine_dirs=1
+20261020_114102|P12|head=85ddf6d rollback_tags=12
+20261020_124107|P1|mem_pct=10.9 disk_pct=44 load=0.00 ollama=up
+20261020_124107|P2|warm_models=20 fts_excerpts=49
+20261020_124107|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261020_124107|P4|errs_blocked=8
+20261020_124107|P5|local_models=20 debate_entries=49
+20261020_124107|P6|dupes=0 total=49 graded=49
+20261020_124107|P7|schema=49ba22964598 patterned_commits=0
+20261020_124107|P8|fts=49 log_feed=49 joined=49
+20261020_124107|P9|tiny_3b=3 small_7b=5 other=12
+20261020_124107|P10|models=20 verdict_types=2 scripts=112
+20261020_124107|P11|holds=36 borderline=0 quarantine_dirs=1
+20261020_124107|P12|head=85ddf6d rollback_tags=12
+20261020_134127|P1|mem_pct=11.0 disk_pct=44 load=0.05 ollama=up
+20261020_134127|P2|warm_models=20 fts_excerpts=49
+20261020_134127|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261020_134127|P4|errs_blocked=8
+20261020_134127|P5|local_models=20 debate_entries=49
+20261020_134127|P6|dupes=0 total=49 graded=49
+20261020_134127|P7|schema=49ba22964598 patterned_commits=0
+20261020_134127|P8|fts=49 log_feed=49 joined=49
+20261020_134127|P9|tiny_3b=3 small_7b=5 other=12
+20261020_134127|P10|models=20 verdict_types=2 scripts=112
+20261020_134127|P11|holds=36 borderline=0 quarantine_dirs=1
+20261020_134127|P12|head=85ddf6d rollback_tags=12
+20261020_144131|P1|mem_pct=11.0 disk_pct=44 load=0.01 ollama=up
+20261020_144131|P2|warm_models=20 fts_excerpts=49
+20261020_144131|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261020_144131|P4|errs_blocked=8
+20261020_144131|P5|local_models=20 debate_entries=49
+20261020_144131|P6|dupes=0 total=49 graded=49
+20261020_144131|P7|schema=49ba22964598 patterned_commits=0
+20261020_144131|P8|fts=49 log_feed=49 joined=49
+20261020_144131|P9|tiny_3b=3 small_7b=5 other=12
+20261020_144131|P10|models=20 verdict_types=2 scripts=112
+20261020_144131|P11|holds=36 borderline=0 quarantine_dirs=1
+20261020_144131|P12|head=85ddf6d rollback_tags=12
+20261020_154157|P1|mem_pct=10.9 disk_pct=44 load=0.03 ollama=up
+20261020_154157|P2|warm_models=20 fts_excerpts=49
+20261020_154157|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261020_154157|P4|errs_blocked=8
+20261020_154157|P5|local_models=20 debate_entries=49
+20261020_154157|P6|dupes=0 total=49 graded=49
+20261020_154157|P7|schema=49ba22964598 patterned_commits=0
+20261020_154157|P8|fts=49 log_feed=49 joined=49
+20261020_154157|P9|tiny_3b=3 small_7b=5 other=12
+20261020_154157|P10|models=20 verdict_types=2 scripts=112
+20261020_154157|P11|holds=36 borderline=0 quarantine_dirs=1
+20261020_154157|P12|head=85ddf6d rollback_tags=12
+20261020_164200|P1|mem_pct=11.0 disk_pct=44 load=0.00 ollama=up
+20261020_164200|P2|warm_models=20 fts_excerpts=49
+20261020_164200|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261020_164200|P4|errs_blocked=8
+20261020_164200|P5|local_models=20 debate_entries=49
+20261020_164200|P6|dupes=0 total=49 graded=49
+20261020_164200|P7|schema=49ba22964598 patterned_commits=0
+20261020_164200|P8|fts=49 log_feed=49 joined=49
+20261020_164200|P9|tiny_3b=3 small_7b=5 other=12
+20261020_164200|P10|models=20 verdict_types=2 scripts=112
+20261020_164200|P11|holds=36 borderline=0 quarantine_dirs=1
+20261020_164200|P12|head=85ddf6d rollback_tags=12
+20261020_174201|P1|mem_pct=9.9 disk_pct=45 load=0.13 ollama=up
+20261020_174201|P2|warm_models=20 fts_excerpts=49
+20261020_174201|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261020_174201|P4|errs_blocked=8
+20261020_174201|P5|local_models=20 debate_entries=49
+20261020_174201|P6|dupes=0 total=49 graded=49
+20261020_174201|P7|schema=49ba22964598 patterned_commits=0
+20261020_174201|P8|fts=49 log_feed=49 joined=49
+20261020_174201|P9|tiny_3b=3 small_7b=5 other=12
+20261020_174201|P10|models=20 verdict_types=2 scripts=112
+20261020_174201|P11|holds=36 borderline=0 quarantine_dirs=1
+20261020_174201|P12|head=85ddf6d rollback_tags=12
+20261020_184207|P1|mem_pct=24.7 disk_pct=45 load=0.02 ollama=up
+20261020_184207|P2|warm_models=20 fts_excerpts=49
+20261020_184207|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261020_184207|P4|errs_blocked=8
+20261020_184207|P5|local_models=20 debate_entries=49
+20261020_184207|P6|dupes=0 total=49 graded=49
+20261020_184207|P7|schema=49ba22964598 patterned_commits=0
+20261020_184207|P8|fts=49 log_feed=49 joined=49
+20261020_184207|P9|tiny_3b=3 small_7b=5 other=12
+20261020_184207|P10|models=20 verdict_types=2 scripts=112
+20261020_184207|P11|holds=36 borderline=0 quarantine_dirs=1
+20261020_184207|P12|head=85ddf6d rollback_tags=12
+20261020_194227|P1|mem_pct=8.8 disk_pct=45 load=0.09 ollama=up
+20261020_194227|P2|warm_models=20 fts_excerpts=49
+20261020_194227|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261020_194227|P4|errs_blocked=8
+20261020_194227|P5|local_models=20 debate_entries=49
+20261020_194227|P6|dupes=0 total=49 graded=49
+20261020_194227|P7|schema=49ba22964598 patterned_commits=0
+20261020_194227|P8|fts=49 log_feed=49 joined=49
+20261020_194227|P9|tiny_3b=3 small_7b=5 other=12
+20261020_194227|P10|models=20 verdict_types=2 scripts=112
+20261020_194227|P11|holds=36 borderline=0 quarantine_dirs=1
+20261020_194227|P12|head=85ddf6d rollback_tags=12
+20261020_204230|P1|mem_pct=8.8 disk_pct=45 load=0.11 ollama=up
+20261020_204230|P2|warm_models=20 fts_excerpts=49
+20261020_204230|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261020_204230|P4|errs_blocked=8
+20261020_204230|P5|local_models=20 debate_entries=49
+20261020_204230|P6|dupes=0 total=49 graded=49
+20261020_204230|P7|schema=49ba22964598 patterned_commits=0
+20261020_204230|P8|fts=49 log_feed=49 joined=49
+20261020_204230|P9|tiny_3b=3 small_7b=5 other=12
+20261020_204230|P10|models=20 verdict_types=2 scripts=112
+20261020_204230|P11|holds=36 borderline=0 quarantine_dirs=1
+20261020_204230|P12|head=85ddf6d rollback_tags=12
+20261020_214247|P1|mem_pct=8.6 disk_pct=45 load=0.08 ollama=up
+20261020_214247|P2|warm_models=21 fts_excerpts=49
+20261020_214247|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261020_214247|P4|errs_blocked=8
+20261020_214247|P5|local_models=21 debate_entries=49
+20261020_214247|P6|dupes=0 total=49 graded=49
+20261020_214247|P7|schema=49ba22964598 patterned_commits=0
+20261020_214247|P8|fts=49 log_feed=49 joined=49
+20261020_214247|P9|tiny_3b=3 small_7b=5 other=13
+20261020_214247|P10|models=21 verdict_types=2 scripts=112
+20261020_214247|P11|holds=36 borderline=0 quarantine_dirs=1
+20261020_214247|P12|head=85ddf6d rollback_tags=12
+20261020_224250|P1|mem_pct=8.6 disk_pct=45 load=0.14 ollama=up
+20261020_224250|P2|warm_models=21 fts_excerpts=49
+20261020_224250|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261020_224250|P4|errs_blocked=8
+20261020_224250|P5|local_models=21 debate_entries=49
+20261020_224250|P6|dupes=0 total=49 graded=49
+20261020_224250|P7|schema=49ba22964598 patterned_commits=0
+20261020_224250|P8|fts=49 log_feed=49 joined=49
+20261020_224250|P9|tiny_3b=3 small_7b=5 other=13
+20261020_224250|P10|models=21 verdict_types=2 scripts=112
+20261020_224250|P11|holds=36 borderline=0 quarantine_dirs=1
+20261020_224250|P12|head=85ddf6d rollback_tags=12
+20261020_234251|P1|mem_pct=8.6 disk_pct=45 load=0.12 ollama=up
+20261020_234251|P2|warm_models=21 fts_excerpts=49
+20261020_234251|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261020_234251|P4|errs_blocked=8
+20261020_234251|P5|local_models=21 debate_entries=49
+20261020_234251|P6|dupes=0 total=49 graded=49
+20261020_234251|P7|schema=49ba22964598 patterned_commits=0
+20261020_234251|P8|fts=49 log_feed=49 joined=49
+20261020_234251|P9|tiny_3b=3 small_7b=5 other=13
+20261020_234251|P10|models=21 verdict_types=2 scripts=112
+20261020_234251|P11|holds=36 borderline=0 quarantine_dirs=1
+20261020_234251|P12|head=85ddf6d rollback_tags=12
+20261021_004251|P1|mem_pct=8.6 disk_pct=45 load=0.12 ollama=up
+20261021_004251|P2|warm_models=21 fts_excerpts=49
+20261021_004251|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261021_004251|P4|errs_blocked=8
+20261021_004251|P5|local_models=21 debate_entries=49
+20261021_004251|P6|dupes=0 total=49 graded=49
+20261021_004251|P7|schema=49ba22964598 patterned_commits=0
+20261021_004251|P8|fts=49 log_feed=49 joined=49
+20261021_004251|P9|tiny_3b=3 small_7b=5 other=13
+20261021_004251|P10|models=21 verdict_types=2 scripts=112
+20261021_004251|P11|holds=36 borderline=0 quarantine_dirs=1
+20261021_004251|P12|head=85ddf6d rollback_tags=12
+20261021_014307|P1|mem_pct=8.6 disk_pct=45 load=0.10 ollama=up
+20261021_014307|P2|warm_models=21 fts_excerpts=49
+20261021_014307|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261021_014307|P4|errs_blocked=8
+20261021_014307|P5|local_models=21 debate_entries=49
+20261021_014307|P6|dupes=0 total=49 graded=49
+20261021_014307|P7|schema=49ba22964598 patterned_commits=0
+20261021_014307|P8|fts=49 log_feed=49 joined=49
+20261021_014307|P9|tiny_3b=3 small_7b=5 other=13
+20261021_014307|P10|models=21 verdict_types=2 scripts=113
+20261021_014307|P11|holds=36 borderline=0 quarantine_dirs=1
+20261021_014307|P12|head=85ddf6d rollback_tags=12
+20261021_024317|P1|mem_pct=8.6 disk_pct=45 load=0.11 ollama=up
+20261021_024317|P2|warm_models=21 fts_excerpts=49
+20261021_024317|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261021_024317|P4|errs_blocked=8
+20261021_024317|P5|local_models=21 debate_entries=49
+20261021_024317|P6|dupes=0 total=49 graded=49
+20261021_024317|P7|schema=49ba22964598 patterned_commits=0
+20261021_024317|P8|fts=49 log_feed=49 joined=49
+20261021_024317|P9|tiny_3b=3 small_7b=5 other=13
+20261021_024317|P10|models=21 verdict_types=2 scripts=113
+20261021_024317|P11|holds=36 borderline=0 quarantine_dirs=1
+20261021_024317|P12|head=85ddf6d rollback_tags=12
+20261021_034319|P1|mem_pct=10.8 disk_pct=45 load=2.90 ollama=up
+20261021_034319|P2|warm_models=21 fts_excerpts=49
+20261021_034319|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261021_034319|P4|errs_blocked=8
+20261021_034319|P5|local_models=21 debate_entries=49
+20261021_034319|P6|dupes=0 total=49 graded=49
+20261021_034319|P7|schema=49ba22964598 patterned_commits=0
+20261021_034319|P8|fts=49 log_feed=49 joined=49
+20261021_034319|P9|tiny_3b=3 small_7b=5 other=13
+20261021_034319|P10|models=21 verdict_types=2 scripts=113
+20261021_034319|P11|holds=36 borderline=0 quarantine_dirs=1
+20261021_034319|P12|head=85ddf6d rollback_tags=12
+20261021_044327|P1|mem_pct=25.5 disk_pct=45 load=0.02 ollama=up
+20261021_044327|P2|warm_models=21 fts_excerpts=49
+20261021_044327|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261021_044327|P4|errs_blocked=8
+20261021_044327|P5|local_models=21 debate_entries=49
+20261021_044327|P6|dupes=0 total=49 graded=49
+20261021_044327|P7|schema=49ba22964598 patterned_commits=0
+20261021_044327|P8|fts=49 log_feed=49 joined=49
+20261021_044327|P9|tiny_3b=3 small_7b=5 other=13
+20261021_044327|P10|models=21 verdict_types=2 scripts=113
+20261021_044327|P11|holds=36 borderline=0 quarantine_dirs=1
+20261021_044327|P12|head=85ddf6d rollback_tags=12
+20261021_054331|P1|mem_pct=8.2 disk_pct=45 load=0.11 ollama=up
+20261021_054331|P2|warm_models=21 fts_excerpts=49
+20261021_054331|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261021_054331|P4|errs_blocked=8
+20261021_054331|P5|local_models=21 debate_entries=49
+20261021_054331|P6|dupes=0 total=49 graded=49
+20261021_054331|P7|schema=49ba22964598 patterned_commits=0
+20261021_054331|P8|fts=49 log_feed=49 joined=49
+20261021_054331|P9|tiny_3b=3 small_7b=5 other=13
+20261021_054331|P10|models=21 verdict_types=2 scripts=113
+20261021_054331|P11|holds=36 borderline=0 quarantine_dirs=1
+20261021_054331|P12|head=85ddf6d rollback_tags=12
+20261021_064332|P1|mem_pct=8.3 disk_pct=45 load=0.09 ollama=up
+20261021_064332|P2|warm_models=21 fts_excerpts=49
+20261021_064332|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261021_064332|P4|errs_blocked=8
+20261021_064332|P5|local_models=21 debate_entries=49
+20261021_064332|P6|dupes=0 total=49 graded=49
+20261021_064332|P7|schema=49ba22964598 patterned_commits=0
+20261021_064332|P8|fts=49 log_feed=49 joined=49
+20261021_064332|P9|tiny_3b=3 small_7b=5 other=13
+20261021_064332|P10|models=21 verdict_types=2 scripts=113
+20261021_064332|P11|holds=36 borderline=0 quarantine_dirs=1
+20261021_064332|P12|head=85ddf6d rollback_tags=12
+20261021_074357|P1|mem_pct=8.4 disk_pct=45 load=0.04 ollama=up
+20261021_074357|P2|warm_models=21 fts_excerpts=49
+20261021_074357|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261021_074357|P4|errs_blocked=8
+20261021_074357|P5|local_models=21 debate_entries=49
+20261021_074357|P6|dupes=0 total=49 graded=49
+20261021_074357|P7|schema=49ba22964598 patterned_commits=0
+20261021_074357|P8|fts=49 log_feed=49 joined=49
+20261021_074357|P9|tiny_3b=3 small_7b=5 other=13
+20261021_074357|P10|models=21 verdict_types=2 scripts=158
+20261021_074357|P11|holds=36 borderline=0 quarantine_dirs=1
+20261021_074357|P12|head=85ddf6d rollback_tags=12
+20261021_084400|P1|mem_pct=8.4 disk_pct=45 load=0.02 ollama=up
+20261021_084400|P2|warm_models=21 fts_excerpts=49
+20261021_084400|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261021_084400|P4|errs_blocked=8
+20261021_084400|P5|local_models=21 debate_entries=49
+20261021_084400|P6|dupes=0 total=49 graded=49
+20261021_084400|P7|schema=49ba22964598 patterned_commits=0
+20261021_084400|P8|fts=49 log_feed=49 joined=49
+20261021_084400|P9|tiny_3b=3 small_7b=5 other=13
+20261021_084400|P10|models=21 verdict_types=2 scripts=158
+20261021_084400|P11|holds=36 borderline=0 quarantine_dirs=1
+20261021_084400|P12|head=85ddf6d rollback_tags=12
+20261021_094400|P1|mem_pct=8.4 disk_pct=45 load=0.06 ollama=up
+20261021_094400|P2|warm_models=21 fts_excerpts=49
+20261021_094400|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261021_094400|P4|errs_blocked=8
+20261021_094400|P5|local_models=21 debate_entries=49
+20261021_094400|P6|dupes=0 total=49 graded=49
+20261021_094400|P7|schema=49ba22964598 patterned_commits=0
+20261021_094400|P8|fts=49 log_feed=49 joined=49
+20261021_094400|P9|tiny_3b=3 small_7b=5 other=13
+20261021_094400|P10|models=21 verdict_types=2 scripts=158
+20261021_094400|P11|holds=36 borderline=0 quarantine_dirs=1
+20261021_094400|P12|head=85ddf6d rollback_tags=12
+20261021_104407|P1|mem_pct=8.4 disk_pct=45 load=0.02 ollama=up
+20261021_104407|P2|warm_models=21 fts_excerpts=49
+20261021_104407|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261021_104407|P4|errs_blocked=8
+20261021_104407|P5|local_models=21 debate_entries=49
+20261021_104407|P6|dupes=0 total=49 graded=49
+20261021_104407|P7|schema=49ba22964598 patterned_commits=0
+20261021_104407|P8|fts=49 log_feed=49 joined=49
+20261021_104407|P9|tiny_3b=3 small_7b=5 other=13
+20261021_104407|P10|models=21 verdict_types=2 scripts=158
+20261021_104407|P11|holds=36 borderline=0 quarantine_dirs=1
+20261021_104407|P12|head=85ddf6d rollback_tags=12
+20261021_114427|P1|mem_pct=8.4 disk_pct=45 load=0.02 ollama=up
+20261021_114427|P2|warm_models=21 fts_excerpts=49
+20261021_114427|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261021_114427|P4|errs_blocked=8
+20261021_114427|P5|local_models=21 debate_entries=49
+20261021_114427|P6|dupes=0 total=49 graded=49
+20261021_114427|P7|schema=49ba22964598 patterned_commits=0
+20261021_114427|P8|fts=49 log_feed=49 joined=49
+20261021_114427|P9|tiny_3b=3 small_7b=5 other=13
+20261021_114427|P10|models=21 verdict_types=2 scripts=158
+20261021_114427|P11|holds=36 borderline=0 quarantine_dirs=1
+20261021_114427|P12|head=85ddf6d rollback_tags=12
+20261021_124429|P1|mem_pct=8.4 disk_pct=45 load=0.02 ollama=up
+20261021_124429|P2|warm_models=21 fts_excerpts=49
+20261021_124429|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261021_124429|P4|errs_blocked=8
+20261021_124429|P5|local_models=21 debate_entries=49
+20261021_124429|P6|dupes=0 total=49 graded=49
+20261021_124429|P7|schema=49ba22964598 patterned_commits=0
+20261021_124429|P8|fts=49 log_feed=49 joined=49
+20261021_124429|P9|tiny_3b=3 small_7b=5 other=13
+20261021_124429|P10|models=21 verdict_types=2 scripts=158
+20261021_124429|P11|holds=36 borderline=0 quarantine_dirs=1
+20261021_124429|P12|head=85ddf6d rollback_tags=12
+20261021_134430|P1|mem_pct=8.4 disk_pct=45 load=0.06 ollama=up
+20261021_134430|P2|warm_models=21 fts_excerpts=49
+20261021_134430|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261021_134430|P4|errs_blocked=8
+20261021_134430|P5|local_models=21 debate_entries=49
+20261021_134430|P6|dupes=0 total=49 graded=49
+20261021_134430|P7|schema=49ba22964598 patterned_commits=0
+20261021_134430|P8|fts=49 log_feed=49 joined=49
+20261021_134430|P9|tiny_3b=3 small_7b=5 other=13
+20261021_134430|P10|models=21 verdict_types=2 scripts=158
+20261021_134430|P11|holds=36 borderline=0 quarantine_dirs=1
+20261021_134430|P12|head=85ddf6d rollback_tags=12
+20261021_144457|P1|mem_pct=8.4 disk_pct=45 load=0.14 ollama=up
+20261021_144457|P2|warm_models=21 fts_excerpts=49
+20261021_144457|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261021_144457|P4|errs_blocked=8
+20261021_144457|P5|local_models=21 debate_entries=49
+20261021_144457|P6|dupes=0 total=49 graded=49
+20261021_144457|P7|schema=49ba22964598 patterned_commits=0
+20261021_144457|P8|fts=49 log_feed=49 joined=49
+20261021_144457|P9|tiny_3b=3 small_7b=5 other=13
+20261021_144457|P10|models=21 verdict_types=2 scripts=158
+20261021_144457|P11|holds=36 borderline=0 quarantine_dirs=1
+20261021_144457|P12|head=85ddf6d rollback_tags=12
+20261021_154459|P1|mem_pct=8.6 disk_pct=45 load=0.01 ollama=up
+20261021_154459|P2|warm_models=21 fts_excerpts=49
+20261021_154459|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261021_154459|P4|errs_blocked=8
+20261021_154459|P5|local_models=21 debate_entries=49
+20261021_154459|P6|dupes=0 total=49 graded=49
+20261021_154459|P7|schema=49ba22964598 patterned_commits=0
+20261021_154459|P8|fts=49 log_feed=49 joined=49
+20261021_154459|P9|tiny_3b=3 small_7b=5 other=13
+20261021_154459|P10|models=21 verdict_types=2 scripts=158
+20261021_154459|P11|holds=36 borderline=0 quarantine_dirs=1
+20261021_154459|P12|head=85ddf6d rollback_tags=12
+20261021_164507|P1|mem_pct=8.6 disk_pct=45 load=0.16 ollama=up
+20261021_164507|P2|warm_models=21 fts_excerpts=49
+20261021_164507|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261021_164507|P4|errs_blocked=8
+20261021_164507|P5|local_models=21 debate_entries=49
+20261021_164507|P6|dupes=0 total=49 graded=49
+20261021_164507|P7|schema=49ba22964598 patterned_commits=0
+20261021_164507|P8|fts=49 log_feed=49 joined=49
+20261021_164507|P9|tiny_3b=3 small_7b=5 other=13
+20261021_164507|P10|models=21 verdict_types=2 scripts=158
+20261021_164507|P11|holds=36 borderline=0 quarantine_dirs=1
+20261021_164507|P12|head=85ddf6d rollback_tags=12
+20261021_174510|P1|mem_pct=8.5 disk_pct=45 load=0.03 ollama=up
+20261021_174510|P2|warm_models=21 fts_excerpts=49
+20261021_174510|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261021_174510|P4|errs_blocked=8
+20261021_174510|P5|local_models=21 debate_entries=49
+20261021_174510|P6|dupes=0 total=49 graded=49
+20261021_174510|P7|schema=49ba22964598 patterned_commits=0
+20261021_174510|P8|fts=49 log_feed=49 joined=49
+20261021_174510|P9|tiny_3b=3 small_7b=5 other=13
+20261021_174510|P10|models=21 verdict_types=2 scripts=158
+20261021_174510|P11|holds=36 borderline=0 quarantine_dirs=1
+20261021_174510|P12|head=85ddf6d rollback_tags=12
+20261021_184510|P1|mem_pct=9.0 disk_pct=45 load=0.01 ollama=up
+20261021_184510|P2|warm_models=21 fts_excerpts=49
+20261021_184510|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261021_184510|P4|errs_blocked=8
+20261021_184510|P5|local_models=21 debate_entries=49
+20261021_184510|P6|dupes=0 total=49 graded=49
+20261021_184510|P7|schema=49ba22964598 patterned_commits=0
+20261021_184510|P8|fts=49 log_feed=49 joined=49
+20261021_184510|P9|tiny_3b=3 small_7b=5 other=13
+20261021_184510|P10|models=21 verdict_types=2 scripts=158
+20261021_184510|P11|holds=36 borderline=0 quarantine_dirs=1
+20261021_184510|P12|head=85ddf6d rollback_tags=12
+20261021_194527|P1|mem_pct=8.9 disk_pct=45 load=0.00 ollama=up
+20261021_194527|P2|warm_models=21 fts_excerpts=49
+20261021_194527|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261021_194527|P4|errs_blocked=8
+20261021_194527|P5|local_models=21 debate_entries=49
+20261021_194527|P6|dupes=0 total=49 graded=49
+20261021_194527|P7|schema=49ba22964598 patterned_commits=0
+20261021_194527|P8|fts=49 log_feed=49 joined=49
+20261021_194527|P9|tiny_3b=3 small_7b=5 other=13
+20261021_194527|P10|models=21 verdict_types=2 scripts=158
+20261021_194527|P11|holds=36 borderline=0 quarantine_dirs=1
+20261021_194527|P12|head=85ddf6d rollback_tags=12
+20261021_204527|P1|mem_pct=9.5 disk_pct=45 load=0.01 ollama=up
+20261021_204527|P2|warm_models=21 fts_excerpts=49
+20261021_204527|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261021_204527|P4|errs_blocked=8
+20261021_204527|P5|local_models=21 debate_entries=49
+20261021_204527|P6|dupes=0 total=49 graded=49
+20261021_204527|P7|schema=49ba22964598 patterned_commits=0
+20261021_204527|P8|fts=49 log_feed=49 joined=49
+20261021_204527|P9|tiny_3b=3 small_7b=5 other=13
+20261021_204527|P10|models=21 verdict_types=2 scripts=158
+20261021_204527|P11|holds=36 borderline=0 quarantine_dirs=1
+20261021_204527|P12|head=85ddf6d rollback_tags=12
+20261021_214528|P1|mem_pct=9.4 disk_pct=45 load=0.22 ollama=up
+20261021_214528|P2|warm_models=21 fts_excerpts=49
+20261021_214528|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261021_214528|P4|errs_blocked=8
+20261021_214528|P5|local_models=21 debate_entries=49
+20261021_214528|P6|dupes=0 total=49 graded=49
+20261021_214528|P7|schema=49ba22964598 patterned_commits=0
+20261021_214528|P8|fts=49 log_feed=49 joined=49
+20261021_214528|P9|tiny_3b=3 small_7b=5 other=13
+20261021_214528|P10|models=21 verdict_types=2 scripts=158
+20261021_214528|P11|holds=36 borderline=0 quarantine_dirs=1
+20261021_214528|P12|head=85ddf6d rollback_tags=12
+20261021_224557|P1|mem_pct=9.4 disk_pct=45 load=0.41 ollama=up
+20261021_224557|P2|warm_models=21 fts_excerpts=49
+20261021_224557|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261021_224557|P4|errs_blocked=8
+20261021_224557|P5|local_models=21 debate_entries=49
+20261021_224557|P6|dupes=0 total=49 graded=49
+20261021_224557|P7|schema=49ba22964598 patterned_commits=0
+20261021_224557|P8|fts=49 log_feed=49 joined=49
+20261021_224557|P9|tiny_3b=3 small_7b=5 other=13
+20261021_224557|P10|models=21 verdict_types=2 scripts=158
+20261021_224557|P11|holds=36 borderline=0 quarantine_dirs=1
+20261021_224557|P12|head=85ddf6d rollback_tags=12
+20261021_234558|P1|mem_pct=9.4 disk_pct=45 load=0.30 ollama=up
+20261021_234558|P2|warm_models=21 fts_excerpts=49
+20261021_234558|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261021_234558|P4|errs_blocked=8
+20261021_234558|P5|local_models=21 debate_entries=49
+20261021_234558|P6|dupes=0 total=49 graded=49
+20261021_234558|P7|schema=49ba22964598 patterned_commits=0
+20261021_234558|P8|fts=49 log_feed=49 joined=49
+20261021_234558|P9|tiny_3b=3 small_7b=5 other=13
+20261021_234558|P10|models=21 verdict_types=2 scripts=158
+20261021_234558|P11|holds=36 borderline=0 quarantine_dirs=1
+20261021_234558|P12|head=85ddf6d rollback_tags=12
+20261022_004607|P1|mem_pct=9.5 disk_pct=45 load=0.68 ollama=up
+20261022_004607|P2|warm_models=20 fts_excerpts=49
+20261022_004607|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261022_004607|P4|errs_blocked=8
+20261022_004607|P5|local_models=20 debate_entries=49
+20261022_004607|P6|dupes=0 total=49 graded=49
+20261022_004607|P7|schema=49ba22964598 patterned_commits=0
+20261022_004607|P8|fts=49 log_feed=49 joined=49
+20261022_004607|P9|tiny_3b=3 small_7b=5 other=12
+20261022_004607|P10|models=20 verdict_types=2 scripts=158
+20261022_004607|P11|holds=36 borderline=0 quarantine_dirs=1
+20261022_004607|P12|head=85ddf6d rollback_tags=12
+20261022_014627|P1|mem_pct=9.4 disk_pct=45 load=0.19 ollama=up
+20261022_014627|P2|warm_models=20 fts_excerpts=49
+20261022_014627|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261022_014627|P4|errs_blocked=8
+20261022_014627|P5|local_models=20 debate_entries=49
+20261022_014627|P6|dupes=0 total=49 graded=49
+20261022_014627|P7|schema=49ba22964598 patterned_commits=0
+20261022_014627|P8|fts=49 log_feed=49 joined=49
+20261022_014627|P9|tiny_3b=3 small_7b=5 other=12
+20261022_014627|P10|models=20 verdict_types=2 scripts=158
+20261022_014627|P11|holds=36 borderline=0 quarantine_dirs=1
+20261022_014627|P12|head=85ddf6d rollback_tags=12
+20261022_024657|P1|mem_pct=17.9 disk_pct=45 load=4.13 ollama=up
+20261022_024657|P2|warm_models=20 fts_excerpts=49
+20261022_024657|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261022_024657|P4|errs_blocked=8
+20261022_024657|P5|local_models=20 debate_entries=49
+20261022_024657|P6|dupes=0 total=49 graded=49
+20261022_024657|P7|schema=49ba22964598 patterned_commits=0
+20261022_024657|P8|fts=49 log_feed=49 joined=49
+20261022_024657|P9|tiny_3b=3 small_7b=5 other=12
+20261022_024657|P10|models=20 verdict_types=2 scripts=159
+20261022_024657|P11|holds=36 borderline=0 quarantine_dirs=1
+20261022_024657|P12|head=85ddf6d rollback_tags=12
+20261022_034658|P1|mem_pct=28.4 disk_pct=45 load=0.27 ollama=up
+20261022_034658|P2|warm_models=20 fts_excerpts=49
+20261022_034658|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261022_034658|P4|errs_blocked=8
+20261022_034658|P5|local_models=20 debate_entries=49
+20261022_034658|P6|dupes=0 total=49 graded=49
+20261022_034658|P7|schema=49ba22964598 patterned_commits=0
+20261022_034658|P8|fts=49 log_feed=49 joined=49
+20261022_034658|P9|tiny_3b=3 small_7b=5 other=12
+20261022_034658|P10|models=20 verdict_types=2 scripts=159
+20261022_034658|P11|holds=36 borderline=0 quarantine_dirs=1
+20261022_034658|P12|head=85ddf6d rollback_tags=12
+20261022_044658|P1|mem_pct=36.3 disk_pct=45 load=0.19 ollama=up
+20261022_044658|P2|warm_models=20 fts_excerpts=49
+20261022_044658|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261022_044658|P4|errs_blocked=8
+20261022_044658|P5|local_models=20 debate_entries=49
+20261022_044658|P6|dupes=0 total=49 graded=49
+20261022_044658|P7|schema=49ba22964598 patterned_commits=0
+20261022_044658|P8|fts=49 log_feed=49 joined=49
+20261022_044658|P9|tiny_3b=3 small_7b=5 other=12
+20261022_044658|P10|models=20 verdict_types=2 scripts=159
+20261022_044658|P11|holds=36 borderline=0 quarantine_dirs=1
+20261022_044658|P12|head=85ddf6d rollback_tags=12
+20261022_054659|P1|mem_pct=20.6 disk_pct=45 load=0.35 ollama=up
+20261022_054659|P2|warm_models=20 fts_excerpts=49
+20261022_054659|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261022_054659|P4|errs_blocked=8
+20261022_054659|P5|local_models=20 debate_entries=49
+20261022_054659|P6|dupes=0 total=49 graded=49
+20261022_054659|P7|schema=49ba22964598 patterned_commits=0
+20261022_054659|P8|fts=49 log_feed=49 joined=49
+20261022_054659|P9|tiny_3b=3 small_7b=5 other=12
+20261022_054659|P10|models=20 verdict_types=2 scripts=159
+20261022_054659|P11|holds=36 borderline=0 quarantine_dirs=1
+20261022_054659|P12|head=85ddf6d rollback_tags=12
+20261022_064707|P1|mem_pct=20.8 disk_pct=45 load=0.64 ollama=up
+20261022_064707|P2|warm_models=20 fts_excerpts=49
+20261022_064707|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261022_064707|P4|errs_blocked=8
+20261022_064707|P5|local_models=20 debate_entries=49
+20261022_064707|P6|dupes=0 total=49 graded=49
+20261022_064707|P7|schema=49ba22964598 patterned_commits=0
+20261022_064707|P8|fts=49 log_feed=49 joined=49
+20261022_064707|P9|tiny_3b=3 small_7b=5 other=12
+20261022_064707|P10|models=20 verdict_types=2 scripts=159
+20261022_064707|P11|holds=36 borderline=0 quarantine_dirs=1
+20261022_064707|P12|head=85ddf6d rollback_tags=12
+20261022_074727|P1|mem_pct=21.0 disk_pct=45 load=0.22 ollama=up
+20261022_074727|P2|warm_models=20 fts_excerpts=49
+20261022_074727|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261022_074727|P4|errs_blocked=8
+20261022_074727|P5|local_models=20 debate_entries=49
+20261022_074727|P6|dupes=0 total=49 graded=49
+20261022_074727|P7|schema=49ba22964598 patterned_commits=0
+20261022_074727|P8|fts=49 log_feed=49 joined=49
+20261022_074727|P9|tiny_3b=3 small_7b=5 other=12
+20261022_074727|P10|models=20 verdict_types=2 scripts=159
+20261022_074727|P11|holds=36 borderline=0 quarantine_dirs=1
+20261022_074727|P12|head=85ddf6d rollback_tags=12
+20261022_084728|P1|mem_pct=20.9 disk_pct=45 load=0.30 ollama=up
+20261022_084728|P2|warm_models=20 fts_excerpts=49
+20261022_084728|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261022_084728|P4|errs_blocked=8
+20261022_084728|P5|local_models=20 debate_entries=49
+20261022_084728|P6|dupes=0 total=49 graded=49
+20261022_084728|P7|schema=49ba22964598 patterned_commits=0
+20261022_084728|P8|fts=49 log_feed=49 joined=49
+20261022_084728|P9|tiny_3b=3 small_7b=5 other=12
+20261022_084728|P10|models=20 verdict_types=2 scripts=159
+20261022_084728|P11|holds=36 borderline=0 quarantine_dirs=1
+20261022_084728|P12|head=85ddf6d rollback_tags=12
+20261022_094757|P1|mem_pct=20.9 disk_pct=45 load=0.09 ollama=up
+20261022_094757|P2|warm_models=20 fts_excerpts=49
+20261022_094757|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261022_094757|P4|errs_blocked=8
+20261022_094757|P5|local_models=20 debate_entries=49
+20261022_094757|P6|dupes=0 total=49 graded=49
+20261022_094757|P7|schema=49ba22964598 patterned_commits=0
+20261022_094757|P8|fts=49 log_feed=49 joined=49
+20261022_094757|P9|tiny_3b=3 small_7b=5 other=12
+20261022_094757|P10|models=20 verdict_types=2 scripts=159
+20261022_094757|P11|holds=36 borderline=0 quarantine_dirs=1
+20261022_094757|P12|head=85ddf6d rollback_tags=12
+20261022_104757|P1|mem_pct=20.8 disk_pct=45 load=0.17 ollama=up
+20261022_104757|P2|warm_models=20 fts_excerpts=49
+20261022_104757|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261022_104757|P4|errs_blocked=8
+20261022_104757|P5|local_models=20 debate_entries=49
+20261022_104757|P6|dupes=0 total=49 graded=49
+20261022_104757|P7|schema=49ba22964598 patterned_commits=0
+20261022_104757|P8|fts=49 log_feed=49 joined=49
+20261022_104757|P9|tiny_3b=3 small_7b=5 other=12
+20261022_104757|P10|models=20 verdict_types=2 scripts=159
+20261022_104757|P11|holds=36 borderline=0 quarantine_dirs=1
+20261022_104757|P12|head=85ddf6d rollback_tags=12
+20261022_114807|P1|mem_pct=20.9 disk_pct=45 load=0.20 ollama=up
+20261022_114807|P2|warm_models=20 fts_excerpts=49
+20261022_114807|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261022_114807|P4|errs_blocked=8
+20261022_114807|P5|local_models=20 debate_entries=49
+20261022_114807|P6|dupes=0 total=49 graded=49
+20261022_114807|P7|schema=49ba22964598 patterned_commits=0
+20261022_114807|P8|fts=49 log_feed=49 joined=49
+20261022_114807|P9|tiny_3b=3 small_7b=5 other=12
+20261022_114807|P10|models=20 verdict_types=2 scripts=159
+20261022_114807|P11|holds=36 borderline=0 quarantine_dirs=1
+20261022_114807|P12|head=85ddf6d rollback_tags=12
+20261022_124827|P1|mem_pct=20.9 disk_pct=45 load=0.25 ollama=up
+20261022_124827|P2|warm_models=20 fts_excerpts=49
+20261022_124827|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261022_124827|P4|errs_blocked=8
+20261022_124827|P5|local_models=20 debate_entries=49
+20261022_124827|P6|dupes=0 total=49 graded=49
+20261022_124827|P7|schema=49ba22964598 patterned_commits=0
+20261022_124827|P8|fts=49 log_feed=49 joined=49
+20261022_124827|P9|tiny_3b=3 small_7b=5 other=12
+20261022_124827|P10|models=20 verdict_types=2 scripts=159
+20261022_124827|P11|holds=36 borderline=0 quarantine_dirs=1
+20261022_124827|P12|head=85ddf6d rollback_tags=12
+20261022_134857|P1|mem_pct=20.9 disk_pct=45 load=0.14 ollama=up
+20261022_134857|P2|warm_models=20 fts_excerpts=49
+20261022_134857|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261022_134857|P4|errs_blocked=8
+20261022_134857|P5|local_models=20 debate_entries=49
+20261022_134857|P6|dupes=0 total=49 graded=49
+20261022_134857|P7|schema=49ba22964598 patterned_commits=0
+20261022_134857|P8|fts=49 log_feed=49 joined=49
+20261022_134857|P9|tiny_3b=3 small_7b=5 other=12
+20261022_134857|P10|models=20 verdict_types=2 scripts=159
+20261022_134857|P11|holds=36 borderline=0 quarantine_dirs=1
+20261022_134857|P12|head=85ddf6d rollback_tags=12
+20261022_144907|P1|mem_pct=21.0 disk_pct=45 load=0.08 ollama=up
+20261022_144907|P2|warm_models=20 fts_excerpts=49
+20261022_144907|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261022_144907|P4|errs_blocked=8
+20261022_144907|P5|local_models=20 debate_entries=49
+20261022_144907|P6|dupes=0 total=49 graded=49
+20261022_144907|P7|schema=49ba22964598 patterned_commits=0
+20261022_144907|P8|fts=49 log_feed=49 joined=49
+20261022_144907|P9|tiny_3b=3 small_7b=5 other=12
+20261022_144907|P10|models=20 verdict_types=2 scripts=159
+20261022_144907|P11|holds=36 borderline=0 quarantine_dirs=1
+20261022_144907|P12|head=85ddf6d rollback_tags=12
+20261022_154917|P1|mem_pct=21.0 disk_pct=45 load=0.18 ollama=up
+20261022_154917|P2|warm_models=20 fts_excerpts=49
+20261022_154917|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261022_154917|P4|errs_blocked=8
+20261022_154917|P5|local_models=20 debate_entries=49
+20261022_154917|P6|dupes=0 total=49 graded=49
+20261022_154917|P7|schema=49ba22964598 patterned_commits=0
+20261022_154917|P8|fts=49 log_feed=49 joined=49
+20261022_154917|P9|tiny_3b=3 small_7b=5 other=12
+20261022_154917|P10|models=20 verdict_types=2 scripts=159
+20261022_154917|P11|holds=36 borderline=0 quarantine_dirs=1
+20261022_154917|P12|head=85ddf6d rollback_tags=12
+20261022_164926|P1|mem_pct=23.8 disk_pct=45 load=2.69 ollama=up
+20261022_164926|P2|warm_models=20 fts_excerpts=49
+20261022_164926|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261022_164926|P4|errs_blocked=8
+20261022_164926|P5|local_models=20 debate_entries=49
+20261022_164926|P6|dupes=0 total=49 graded=49
+20261022_164926|P7|schema=49ba22964598 patterned_commits=0
+20261022_164926|P8|fts=49 log_feed=49 joined=49
+20261022_164926|P9|tiny_3b=3 small_7b=5 other=12
+20261022_164926|P10|models=20 verdict_types=2 scripts=159
+20261022_164926|P11|holds=36 borderline=0 quarantine_dirs=1
+20261022_164926|P12|head=85ddf6d rollback_tags=12
+20261022_174927|P1|mem_pct=15.1 disk_pct=45 load=0.25 ollama=up
+20261022_174927|P2|warm_models=20 fts_excerpts=49
+20261022_174927|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261022_174927|P4|errs_blocked=8
+20261022_174927|P5|local_models=20 debate_entries=49
+20261022_174927|P6|dupes=0 total=49 graded=49
+20261022_174927|P7|schema=49ba22964598 patterned_commits=0
+20261022_174927|P8|fts=49 log_feed=49 joined=49
+20261022_174927|P9|tiny_3b=3 small_7b=5 other=12
+20261022_174927|P10|models=20 verdict_types=2 scripts=159
+20261022_174927|P11|holds=36 borderline=0 quarantine_dirs=1
+20261022_174927|P12|head=85ddf6d rollback_tags=12
+20261022_184947|P1|mem_pct=15.1 disk_pct=45 load=0.23 ollama=up
+20261022_184947|P2|warm_models=20 fts_excerpts=49
+20261022_184947|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261022_184947|P4|errs_blocked=8
+20261022_184947|P5|local_models=20 debate_entries=49
+20261022_184947|P6|dupes=0 total=49 graded=49
+20261022_184947|P7|schema=49ba22964598 patterned_commits=0
+20261022_184947|P8|fts=49 log_feed=49 joined=49
+20261022_184947|P9|tiny_3b=3 small_7b=5 other=12
+20261022_184947|P10|models=20 verdict_types=2 scripts=159
+20261022_184947|P11|holds=36 borderline=0 quarantine_dirs=1
+20261022_184947|P12|head=85ddf6d rollback_tags=12
+20261022_194956|P1|mem_pct=15.0 disk_pct=45 load=0.20 ollama=up
+20261022_194956|P2|warm_models=20 fts_excerpts=49
+20261022_194956|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261022_194956|P4|errs_blocked=8
+20261022_194956|P5|local_models=20 debate_entries=49
+20261022_194956|P6|dupes=0 total=49 graded=49
+20261022_194956|P7|schema=49ba22964598 patterned_commits=0
+20261022_194956|P8|fts=49 log_feed=49 joined=49
+20261022_194956|P9|tiny_3b=3 small_7b=5 other=12
+20261022_194956|P10|models=20 verdict_types=2 scripts=159
+20261022_194956|P11|holds=36 borderline=0 quarantine_dirs=1
+20261022_194956|P12|head=85ddf6d rollback_tags=12
+20261022_205007|P1|mem_pct=15.0 disk_pct=45 load=0.16 ollama=up
+20261022_205007|P2|warm_models=20 fts_excerpts=49
+20261022_205007|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261022_205007|P4|errs_blocked=8
+20261022_205007|P5|local_models=20 debate_entries=49
+20261022_205007|P6|dupes=0 total=49 graded=49
+20261022_205007|P7|schema=49ba22964598 patterned_commits=0
+20261022_205007|P8|fts=49 log_feed=49 joined=49
+20261022_205007|P9|tiny_3b=3 small_7b=5 other=12
+20261022_205007|P10|models=20 verdict_types=2 scripts=159
+20261022_205007|P11|holds=36 borderline=0 quarantine_dirs=1
+20261022_205007|P12|head=85ddf6d rollback_tags=12
+20261022_215017|P1|mem_pct=15.0 disk_pct=45 load=0.30 ollama=up
+20261022_215017|P2|warm_models=20 fts_excerpts=49
+20261022_215017|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261022_215017|P4|errs_blocked=8
+20261022_215017|P5|local_models=20 debate_entries=49
+20261022_215017|P6|dupes=0 total=49 graded=49
+20261022_215017|P7|schema=49ba22964598 patterned_commits=0
+20261022_215017|P8|fts=49 log_feed=49 joined=49
+20261022_215017|P9|tiny_3b=3 small_7b=5 other=12
+20261022_215017|P10|models=20 verdict_types=2 scripts=159
+20261022_215017|P11|holds=36 borderline=0 quarantine_dirs=1
+20261022_215017|P12|head=85ddf6d rollback_tags=12
+20261022_225025|P1|mem_pct=15.0 disk_pct=45 load=0.26 ollama=up
+20261022_225025|P2|warm_models=20 fts_excerpts=49
+20261022_225025|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261022_225025|P4|errs_blocked=8
+20261022_225025|P5|local_models=20 debate_entries=49
+20261022_225025|P6|dupes=0 total=49 graded=49
+20261022_225025|P7|schema=49ba22964598 patterned_commits=0
+20261022_225025|P8|fts=49 log_feed=49 joined=49
+20261022_225025|P9|tiny_3b=3 small_7b=5 other=12
+20261022_225025|P10|models=20 verdict_types=2 scripts=159
+20261022_225025|P11|holds=36 borderline=0 quarantine_dirs=1
+20261022_225025|P12|head=85ddf6d rollback_tags=12
+20261022_235025|P1|mem_pct=15.0 disk_pct=45 load=0.10 ollama=up
+20261022_235025|P2|warm_models=20 fts_excerpts=49
+20261022_235025|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261022_235025|P4|errs_blocked=8
+20261022_235025|P5|local_models=20 debate_entries=49
+20261022_235025|P6|dupes=0 total=49 graded=49
+20261022_235025|P7|schema=49ba22964598 patterned_commits=0
+20261022_235025|P8|fts=49 log_feed=49 joined=49
+20261022_235025|P9|tiny_3b=3 small_7b=5 other=12
+20261022_235025|P10|models=20 verdict_types=2 scripts=159
+20261022_235025|P11|holds=36 borderline=0 quarantine_dirs=1
+20261022_235025|P12|head=85ddf6d rollback_tags=12
+20261023_005047|P1|mem_pct=15.0 disk_pct=45 load=0.07 ollama=up
+20261023_005047|P2|warm_models=20 fts_excerpts=49
+20261023_005047|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261023_005047|P4|errs_blocked=8
+20261023_005047|P5|local_models=20 debate_entries=49
+20261023_005047|P6|dupes=0 total=49 graded=49
+20261023_005047|P7|schema=49ba22964598 patterned_commits=0
+20261023_005047|P8|fts=49 log_feed=49 joined=49
+20261023_005047|P9|tiny_3b=3 small_7b=5 other=12
+20261023_005047|P10|models=20 verdict_types=2 scripts=159
+20261023_005047|P11|holds=36 borderline=0 quarantine_dirs=1
+20261023_005047|P12|head=85ddf6d rollback_tags=12
+20261023_015055|P1|mem_pct=15.1 disk_pct=45 load=0.21 ollama=up
+20261023_015055|P2|warm_models=20 fts_excerpts=49
+20261023_015055|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261023_015055|P4|errs_blocked=8
+20261023_015055|P5|local_models=20 debate_entries=49
+20261023_015055|P6|dupes=0 total=49 graded=49
+20261023_015055|P7|schema=49ba22964598 patterned_commits=0
+20261023_015055|P8|fts=49 log_feed=49 joined=49
+20261023_015055|P9|tiny_3b=3 small_7b=5 other=12
+20261023_015055|P10|models=20 verdict_types=2 scripts=159
+20261023_015055|P11|holds=36 borderline=0 quarantine_dirs=1
+20261023_015055|P12|head=85ddf6d rollback_tags=12
+20261023_025107|P1|mem_pct=15.0 disk_pct=45 load=0.19 ollama=up
+20261023_025107|P2|warm_models=20 fts_excerpts=49
+20261023_025107|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261023_025107|P4|errs_blocked=8
+20261023_025107|P5|local_models=20 debate_entries=49
+20261023_025107|P6|dupes=0 total=49 graded=49
+20261023_025107|P7|schema=49ba22964598 patterned_commits=0
+20261023_025107|P8|fts=49 log_feed=49 joined=49
+20261023_025107|P9|tiny_3b=3 small_7b=5 other=12
+20261023_025107|P10|models=20 verdict_types=2 scripts=159
+20261023_025107|P11|holds=36 borderline=0 quarantine_dirs=1
+20261023_025107|P12|head=85ddf6d rollback_tags=12
+20261023_035117|P1|mem_pct=15.1 disk_pct=45 load=0.12 ollama=up
+20261023_035117|P2|warm_models=20 fts_excerpts=49
+20261023_035117|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261023_035117|P4|errs_blocked=8
+20261023_035117|P5|local_models=20 debate_entries=49
+20261023_035117|P6|dupes=0 total=49 graded=49
+20261023_035117|P7|schema=49ba22964598 patterned_commits=0
+20261023_035117|P8|fts=49 log_feed=49 joined=49
+20261023_035117|P9|tiny_3b=3 small_7b=5 other=12
+20261023_035117|P10|models=20 verdict_types=2 scripts=159
+20261023_035117|P11|holds=36 borderline=0 quarantine_dirs=1
+20261023_035117|P12|head=85ddf6d rollback_tags=12
+20261023_045124|P1|mem_pct=26.5 disk_pct=45 load=0.17 ollama=up
+20261023_045124|P2|warm_models=20 fts_excerpts=49
+20261023_045124|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261023_045124|P4|errs_blocked=8
+20261023_045124|P5|local_models=20 debate_entries=49
+20261023_045124|P6|dupes=0 total=49 graded=49
+20261023_045124|P7|schema=49ba22964598 patterned_commits=0
+20261023_045124|P8|fts=49 log_feed=49 joined=49
+20261023_045124|P9|tiny_3b=3 small_7b=5 other=12
+20261023_045124|P10|models=20 verdict_types=2 scripts=159
+20261023_045124|P11|holds=36 borderline=0 quarantine_dirs=1
+20261023_045124|P12|head=85ddf6d rollback_tags=12
+20261023_055124|P1|mem_pct=10.7 disk_pct=45 load=0.13 ollama=up
+20261023_055124|P2|warm_models=20 fts_excerpts=49
+20261023_055124|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261023_055124|P4|errs_blocked=8
+20261023_055124|P5|local_models=20 debate_entries=49
+20261023_055124|P6|dupes=0 total=49 graded=49
+20261023_055124|P7|schema=49ba22964598 patterned_commits=0
+20261023_055124|P8|fts=49 log_feed=49 joined=49
+20261023_055124|P9|tiny_3b=3 small_7b=5 other=12
+20261023_055124|P10|models=20 verdict_types=2 scripts=159
+20261023_055124|P11|holds=36 borderline=0 quarantine_dirs=1
+20261023_055124|P12|head=85ddf6d rollback_tags=12
+20261023_065147|P1|mem_pct=10.8 disk_pct=45 load=0.21 ollama=up
+20261023_065147|P2|warm_models=20 fts_excerpts=49
+20261023_065147|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261023_065147|P4|errs_blocked=8
+20261023_065147|P5|local_models=20 debate_entries=49
+20261023_065147|P6|dupes=0 total=49 graded=49
+20261023_065147|P7|schema=49ba22964598 patterned_commits=0
+20261023_065147|P8|fts=49 log_feed=49 joined=49
+20261023_065147|P9|tiny_3b=3 small_7b=5 other=12
+20261023_065147|P10|models=20 verdict_types=2 scripts=159
+20261023_065147|P11|holds=36 borderline=0 quarantine_dirs=1
+20261023_065147|P12|head=85ddf6d rollback_tags=12
+20261023_075154|P1|mem_pct=10.8 disk_pct=45 load=0.22 ollama=up
+20261023_075154|P2|warm_models=20 fts_excerpts=49
+20261023_075154|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261023_075154|P4|errs_blocked=8
+20261023_075154|P5|local_models=20 debate_entries=49
+20261023_075154|P6|dupes=0 total=49 graded=49
+20261023_075154|P7|schema=49ba22964598 patterned_commits=0
+20261023_075154|P8|fts=49 log_feed=49 joined=49
+20261023_075154|P9|tiny_3b=3 small_7b=5 other=12
+20261023_075154|P10|models=20 verdict_types=2 scripts=159
+20261023_075154|P11|holds=36 borderline=0 quarantine_dirs=1
+20261023_075154|P12|head=85ddf6d rollback_tags=12
+20261023_085207|P1|mem_pct=10.8 disk_pct=45 load=0.28 ollama=up
+20261023_085207|P2|warm_models=20 fts_excerpts=49
+20261023_085207|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261023_085207|P4|errs_blocked=8
+20261023_085207|P5|local_models=20 debate_entries=49
+20261023_085207|P6|dupes=0 total=49 graded=49
+20261023_085207|P7|schema=49ba22964598 patterned_commits=0
+20261023_085207|P8|fts=49 log_feed=49 joined=49
+20261023_085207|P9|tiny_3b=3 small_7b=5 other=12
+20261023_085207|P10|models=20 verdict_types=2 scripts=159
+20261023_085207|P11|holds=36 borderline=0 quarantine_dirs=1
+20261023_085207|P12|head=85ddf6d rollback_tags=12
+20261023_095217|P1|mem_pct=10.8 disk_pct=45 load=0.39 ollama=up
+20261023_095217|P2|warm_models=20 fts_excerpts=49
+20261023_095217|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261023_095217|P4|errs_blocked=8
+20261023_095217|P5|local_models=20 debate_entries=49
+20261023_095217|P6|dupes=0 total=49 graded=49
+20261023_095217|P7|schema=49ba22964598 patterned_commits=0
+20261023_095217|P8|fts=49 log_feed=49 joined=49
+20261023_095217|P9|tiny_3b=3 small_7b=5 other=12
+20261023_095217|P10|models=20 verdict_types=2 scripts=159
+20261023_095217|P11|holds=36 borderline=0 quarantine_dirs=1
+20261023_095217|P12|head=85ddf6d rollback_tags=12
+20261023_105223|P1|mem_pct=10.8 disk_pct=45 load=0.24 ollama=up
+20261023_105223|P2|warm_models=20 fts_excerpts=49
+20261023_105223|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261023_105223|P4|errs_blocked=8
+20261023_105223|P5|local_models=20 debate_entries=49
+20261023_105223|P6|dupes=0 total=49 graded=49
+20261023_105223|P7|schema=49ba22964598 patterned_commits=0
+20261023_105223|P8|fts=49 log_feed=49 joined=49
+20261023_105223|P9|tiny_3b=3 small_7b=5 other=12
+20261023_105223|P10|models=20 verdict_types=2 scripts=159
+20261023_105223|P11|holds=36 borderline=0 quarantine_dirs=1
+20261023_105223|P12|head=85ddf6d rollback_tags=12
+20261023_115223|P1|mem_pct=20.0 disk_pct=45 load=0.17 ollama=up
+20261023_115223|P2|warm_models=20 fts_excerpts=49
+20261023_115223|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261023_115223|P4|errs_blocked=8
+20261023_115223|P5|local_models=20 debate_entries=49
+20261023_115223|P6|dupes=0 total=49 graded=49
+20261023_115223|P7|schema=49ba22964598 patterned_commits=0
+20261023_115223|P8|fts=49 log_feed=49 joined=49
+20261023_115223|P9|tiny_3b=3 small_7b=5 other=12
+20261023_115223|P10|models=20 verdict_types=2 scripts=159
+20261023_115223|P11|holds=36 borderline=0 quarantine_dirs=1
+20261023_115223|P12|head=85ddf6d rollback_tags=12
+20261023_125224|P1|mem_pct=10.8 disk_pct=45 load=0.21 ollama=up
+20261023_125224|P2|warm_models=20 fts_excerpts=49
+20261023_125224|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261023_125224|P4|errs_blocked=8
+20261023_125224|P5|local_models=20 debate_entries=49
+20261023_125224|P6|dupes=0 total=49 graded=49
+20261023_125224|P7|schema=49ba22964598 patterned_commits=0
+20261023_125224|P8|fts=49 log_feed=49 joined=49
+20261023_125224|P9|tiny_3b=3 small_7b=5 other=12
+20261023_125224|P10|models=20 verdict_types=2 scripts=159
+20261023_125224|P11|holds=36 borderline=0 quarantine_dirs=1
+20261023_125224|P12|head=85ddf6d rollback_tags=12
+20261023_135247|P1|mem_pct=10.8 disk_pct=45 load=0.27 ollama=up
+20261023_135247|P2|warm_models=20 fts_excerpts=49
+20261023_135247|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261023_135247|P4|errs_blocked=8
+20261023_135247|P5|local_models=20 debate_entries=49
+20261023_135247|P6|dupes=0 total=49 graded=49
+20261023_135247|P7|schema=49ba22964598 patterned_commits=0
+20261023_135247|P8|fts=49 log_feed=49 joined=49
+20261023_135247|P9|tiny_3b=3 small_7b=5 other=12
+20261023_135247|P10|models=20 verdict_types=2 scripts=159
+20261023_135247|P11|holds=36 borderline=0 quarantine_dirs=1
+20261023_135247|P12|head=85ddf6d rollback_tags=12
+20261023_145252|P1|mem_pct=10.9 disk_pct=45 load=0.09 ollama=up
+20261023_145252|P2|warm_models=20 fts_excerpts=49
+20261023_145252|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261023_145252|P4|errs_blocked=8
+20261023_145252|P5|local_models=20 debate_entries=49
+20261023_145252|P6|dupes=0 total=49 graded=49
+20261023_145252|P7|schema=49ba22964598 patterned_commits=0
+20261023_145252|P8|fts=49 log_feed=49 joined=49
+20261023_145252|P9|tiny_3b=3 small_7b=5 other=12
+20261023_145252|P10|models=20 verdict_types=2 scripts=159
+20261023_145252|P11|holds=36 borderline=0 quarantine_dirs=1
+20261023_145252|P12|head=85ddf6d rollback_tags=12
+20261023_155253|P1|mem_pct=24.6 disk_pct=45 load=0.40 ollama=up
+20261023_155253|P2|warm_models=20 fts_excerpts=49
+20261023_155253|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261023_155253|P4|errs_blocked=8
+20261023_155253|P5|local_models=20 debate_entries=49
+20261023_155253|P6|dupes=0 total=49 graded=49
+20261023_155253|P7|schema=49ba22964598 patterned_commits=0
+20261023_155253|P8|fts=49 log_feed=49 joined=49
+20261023_155253|P9|tiny_3b=3 small_7b=5 other=12
+20261023_155253|P10|models=20 verdict_types=2 scripts=159
+20261023_155253|P11|holds=36 borderline=0 quarantine_dirs=1
+20261023_155253|P12|head=85ddf6d rollback_tags=12
+20261023_165307|P1|mem_pct=12.0 disk_pct=45 load=0.07 ollama=up
+20261023_165307|P2|warm_models=20 fts_excerpts=49
+20261023_165307|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261023_165307|P4|errs_blocked=8
+20261023_165307|P5|local_models=20 debate_entries=49
+20261023_165307|P6|dupes=0 total=49 graded=49
+20261023_165307|P7|schema=49ba22964598 patterned_commits=0
+20261023_165307|P8|fts=49 log_feed=49 joined=49
+20261023_165307|P9|tiny_3b=3 small_7b=5 other=12
+20261023_165307|P10|models=20 verdict_types=2 scripts=159
+20261023_165307|P11|holds=36 borderline=0 quarantine_dirs=1
+20261023_165307|P12|head=85ddf6d rollback_tags=12
+20261023_175317|P1|mem_pct=11.7 disk_pct=45 load=0.21 ollama=up
+20261023_175317|P2|warm_models=20 fts_excerpts=49
+20261023_175317|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261023_175317|P4|errs_blocked=8
+20261023_175317|P5|local_models=20 debate_entries=49
+20261023_175317|P6|dupes=0 total=49 graded=49
+20261023_175317|P7|schema=49ba22964598 patterned_commits=0
+20261023_175317|P8|fts=49 log_feed=49 joined=49
+20261023_175317|P9|tiny_3b=3 small_7b=5 other=12
+20261023_175317|P10|models=20 verdict_types=2 scripts=159
+20261023_175317|P11|holds=36 borderline=0 quarantine_dirs=1
+20261023_175317|P12|head=85ddf6d rollback_tags=12
+20261023_185322|P1|mem_pct=31.5 disk_pct=45 load=0.68 ollama=up
+20261023_185322|P2|warm_models=20 fts_excerpts=49
+20261023_185322|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261023_185322|P4|errs_blocked=8
+20261023_185322|P5|local_models=20 debate_entries=49
+20261023_185322|P6|dupes=0 total=49 graded=49
+20261023_185322|P7|schema=49ba22964598 patterned_commits=0
+20261023_185322|P8|fts=49 log_feed=49 joined=49
+20261023_185322|P9|tiny_3b=3 small_7b=5 other=12
+20261023_185322|P10|models=20 verdict_types=2 scripts=159
+20261023_185322|P11|holds=36 borderline=0 quarantine_dirs=1
+20261023_185322|P12|head=85ddf6d rollback_tags=12
+20261023_195322|P1|mem_pct=34.0 disk_pct=45 load=0.16 ollama=up
+20261023_195322|P2|warm_models=20 fts_excerpts=49
+20261023_195322|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261023_195322|P4|errs_blocked=8
+20261023_195322|P5|local_models=20 debate_entries=49
+20261023_195322|P6|dupes=0 total=49 graded=49
+20261023_195322|P7|schema=49ba22964598 patterned_commits=0
+20261023_195322|P8|fts=49 log_feed=49 joined=49
+20261023_195322|P9|tiny_3b=3 small_7b=5 other=12
+20261023_195322|P10|models=20 verdict_types=2 scripts=159
+20261023_195322|P11|holds=36 borderline=0 quarantine_dirs=1
+20261023_195322|P12|head=85ddf6d rollback_tags=12
+20261023_205324|P1|mem_pct=32.0 disk_pct=44 load=0.20 ollama=up
+20261023_205324|P2|warm_models=20 fts_excerpts=49
+20261023_205324|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261023_205324|P4|errs_blocked=8
+20261023_205324|P5|local_models=20 debate_entries=49
+20261023_205324|P6|dupes=0 total=49 graded=49
+20261023_205324|P7|schema=49ba22964598 patterned_commits=0
+20261023_205324|P8|fts=49 log_feed=49 joined=49
+20261023_205324|P9|tiny_3b=3 small_7b=5 other=12
+20261023_205324|P10|models=20 verdict_types=2 scripts=160
+20261023_205324|P11|holds=36 borderline=0 quarantine_dirs=1
+20261023_205324|P12|head=85ddf6d rollback_tags=12
+20261023_215347|P1|mem_pct=9.4 disk_pct=44 load=0.17 ollama=up
+20261023_215347|P2|warm_models=20 fts_excerpts=49
+20261023_215347|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261023_215347|P4|errs_blocked=8
+20261023_215347|P5|local_models=20 debate_entries=49
+20261023_215347|P6|dupes=0 total=49 graded=49
+20261023_215347|P7|schema=49ba22964598 patterned_commits=0
+20261023_215347|P8|fts=49 log_feed=49 joined=49
+20261023_215347|P9|tiny_3b=3 small_7b=5 other=12
+20261023_215347|P10|models=20 verdict_types=2 scripts=160
+20261023_215347|P11|holds=36 borderline=0 quarantine_dirs=1
+20261023_215347|P12|head=85ddf6d rollback_tags=13
+20261023_225353|P1|mem_pct=33.8 disk_pct=44 load=0.27 ollama=up
+20261023_225353|P2|warm_models=20 fts_excerpts=49
+20261023_225353|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261023_225353|P4|errs_blocked=8
+20261023_225353|P5|local_models=20 debate_entries=49
+20261023_225353|P6|dupes=0 total=49 graded=49
+20261023_225353|P7|schema=49ba22964598 patterned_commits=0
+20261023_225353|P8|fts=49 log_feed=49 joined=49
+20261023_225353|P9|tiny_3b=3 small_7b=5 other=12
+20261023_225353|P10|models=20 verdict_types=2 scripts=160
+20261023_225353|P11|holds=36 borderline=0 quarantine_dirs=1
+20261023_225353|P12|head=4cc90f7 rollback_tags=13
+20261023_235354|P1|mem_pct=38.8 disk_pct=45 load=0.13 ollama=up
+20261023_235354|P2|warm_models=20 fts_excerpts=49
+20261023_235354|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261023_235354|P4|errs_blocked=8
+20261023_235354|P5|local_models=20 debate_entries=49
+20261023_235354|P6|dupes=0 total=49 graded=49
+20261023_235354|P7|schema=49ba22964598 patterned_commits=0
+20261023_235354|P8|fts=49 log_feed=49 joined=49
+20261023_235354|P9|tiny_3b=3 small_7b=5 other=12
+20261023_235354|P10|models=20 verdict_types=2 scripts=160
+20261023_235354|P11|holds=36 borderline=0 quarantine_dirs=1
+20261023_235354|P12|head=4cc90f7 rollback_tags=13
+20261024_005407|P1|mem_pct=25.0 disk_pct=45 load=0.26 ollama=up
+20261024_005407|P2|warm_models=20 fts_excerpts=49
+20261024_005407|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261024_005407|P4|errs_blocked=8
+20261024_005407|P5|local_models=20 debate_entries=49
+20261024_005407|P6|dupes=0 total=49 graded=49
+20261024_005407|P7|schema=49ba22964598 patterned_commits=0
+20261024_005407|P8|fts=49 log_feed=49 joined=49
+20261024_005407|P9|tiny_3b=3 small_7b=5 other=12
+20261024_005407|P10|models=20 verdict_types=2 scripts=162
+20261024_005407|P11|holds=36 borderline=0 quarantine_dirs=1
+20261024_005407|P12|head=4cc90f7 rollback_tags=13
+20261024_015417|P1|mem_pct=29.3 disk_pct=44 load=0.31 ollama=up
+20261024_015417|P2|warm_models=20 fts_excerpts=49
+20261024_015417|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261024_015417|P4|errs_blocked=8
+20261024_015417|P5|local_models=20 debate_entries=49
+20261024_015417|P6|dupes=0 total=49 graded=49
+20261024_015417|P7|schema=49ba22964598 patterned_commits=0
+20261024_015417|P8|fts=49 log_feed=49 joined=49
+20261024_015417|P9|tiny_3b=3 small_7b=5 other=12
+20261024_015417|P10|models=20 verdict_types=2 scripts=162
+20261024_015417|P11|holds=36 borderline=0 quarantine_dirs=1
+20261024_015417|P12|head=5204d4d rollback_tags=13
+20261024_025423|P1|mem_pct=25.1 disk_pct=44 load=0.27 ollama=up
+20261024_025423|P2|warm_models=20 fts_excerpts=49
+20261024_025423|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261024_025423|P4|errs_blocked=8
+20261024_025423|P5|local_models=20 debate_entries=49
+20261024_025423|P6|dupes=0 total=49 graded=49
+20261024_025423|P7|schema=49ba22964598 patterned_commits=0
+20261024_025423|P8|fts=49 log_feed=49 joined=49
+20261024_025423|P9|tiny_3b=3 small_7b=5 other=12
+20261024_025423|P10|models=20 verdict_types=2 scripts=162
+20261024_025423|P11|holds=36 borderline=0 quarantine_dirs=1
+20261024_025423|P12|head=5204d4d rollback_tags=13
+20261024_035447|P1|mem_pct=9.4 disk_pct=46 load=0.67 ollama=up
+20261024_035447|P2|warm_models=20 fts_excerpts=49
+20261024_035447|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261024_035447|P4|errs_blocked=8
+20261024_035447|P5|local_models=20 debate_entries=49
+20261024_035447|P6|dupes=0 total=49 graded=49
+20261024_035447|P7|schema=49ba22964598 patterned_commits=0
+20261024_035447|P8|fts=49 log_feed=49 joined=49
+20261024_035447|P9|tiny_3b=3 small_7b=5 other=12
+20261024_035447|P10|models=20 verdict_types=2 scripts=1729
+20261024_035447|P11|holds=36 borderline=0 quarantine_dirs=1
+20261024_035447|P12|head=23a78af rollback_tags=1
+20261024_045456|P1|mem_pct=25.1 disk_pct=46 load=0.36 ollama=up
+20261024_045456|P2|warm_models=20 fts_excerpts=49
+20261024_045456|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261024_045456|P4|errs_blocked=8
+20261024_045456|P5|local_models=20 debate_entries=49
+20261024_045456|P6|dupes=0 total=49 graded=49
+20261024_045456|P7|schema=49ba22964598 patterned_commits=0
+20261024_045456|P8|fts=49 log_feed=49 joined=49
+20261024_045456|P9|tiny_3b=3 small_7b=5 other=12
+20261024_045456|P10|models=20 verdict_types=2 scripts=1729
+20261024_045456|P11|holds=36 borderline=0 quarantine_dirs=1
+20261024_045456|P12|head=23a78af rollback_tags=1
+20261024_055456|P1|mem_pct=9.2 disk_pct=46 load=0.26 ollama=up
+20261024_055456|P2|warm_models=20 fts_excerpts=49
+20261024_055456|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261024_055456|P4|errs_blocked=8
+20261024_055456|P5|local_models=20 debate_entries=49
+20261024_055456|P6|dupes=0 total=49 graded=49
+20261024_055456|P7|schema=49ba22964598 patterned_commits=0
+20261024_055456|P8|fts=49 log_feed=49 joined=49
+20261024_055456|P9|tiny_3b=3 small_7b=5 other=12
+20261024_055456|P10|models=20 verdict_types=2 scripts=1729
+20261024_055456|P11|holds=36 borderline=0 quarantine_dirs=1
+20261024_055456|P12|head=23a78af rollback_tags=1
+20261024_065507|P1|mem_pct=9.3 disk_pct=46 load=0.17 ollama=up
+20261024_065507|P2|warm_models=20 fts_excerpts=49
+20261024_065507|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261024_065507|P4|errs_blocked=8
+20261024_065507|P5|local_models=20 debate_entries=49
+20261024_065507|P6|dupes=0 total=49 graded=49
+20261024_065507|P7|schema=49ba22964598 patterned_commits=0
+20261024_065507|P8|fts=49 log_feed=49 joined=49
+20261024_065507|P9|tiny_3b=3 small_7b=5 other=12
+20261024_065507|P10|models=20 verdict_types=2 scripts=1729
+20261024_065507|P11|holds=36 borderline=0 quarantine_dirs=1
+20261024_065507|P12|head=23a78af rollback_tags=1
+20261024_075517|P1|mem_pct=9.2 disk_pct=46 load=0.21 ollama=up
+20261024_075517|P2|warm_models=20 fts_excerpts=49
+20261024_075517|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261024_075517|P4|errs_blocked=8
+20261024_075517|P5|local_models=20 debate_entries=49
+20261024_075517|P6|dupes=0 total=49 graded=49
+20261024_075517|P7|schema=49ba22964598 patterned_commits=0
+20261024_075517|P8|fts=49 log_feed=49 joined=49
+20261024_075517|P9|tiny_3b=3 small_7b=5 other=12
+20261024_075517|P10|models=20 verdict_types=2 scripts=1729
+20261024_075517|P11|holds=36 borderline=0 quarantine_dirs=1
+20261024_075517|P12|head=23a78af rollback_tags=1
+20261024_085525|P1|mem_pct=9.3 disk_pct=46 load=0.05 ollama=up
+20261024_085525|P2|warm_models=20 fts_excerpts=49
+20261024_085525|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261024_085525|P4|errs_blocked=8
+20261024_085525|P5|local_models=20 debate_entries=49
+20261024_085525|P6|dupes=0 total=49 graded=49
+20261024_085525|P7|schema=49ba22964598 patterned_commits=0
+20261024_085525|P8|fts=49 log_feed=49 joined=49
+20261024_085525|P9|tiny_3b=3 small_7b=5 other=12
+20261024_085525|P10|models=20 verdict_types=2 scripts=1729
+20261024_085525|P11|holds=36 borderline=0 quarantine_dirs=1
+20261024_085525|P12|head=23a78af rollback_tags=1
+20261024_095547|P1|mem_pct=9.3 disk_pct=46 load=0.23 ollama=up
+20261024_095547|P2|warm_models=20 fts_excerpts=49
+20261024_095547|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261024_095547|P4|errs_blocked=8
+20261024_095547|P5|local_models=20 debate_entries=49
+20261024_095547|P6|dupes=0 total=49 graded=49
+20261024_095547|P7|schema=49ba22964598 patterned_commits=0
+20261024_095547|P8|fts=49 log_feed=49 joined=49
+20261024_095547|P9|tiny_3b=3 small_7b=5 other=12
+20261024_095547|P10|models=20 verdict_types=2 scripts=1729
+20261024_095547|P11|holds=36 borderline=0 quarantine_dirs=1
+20261024_095547|P12|head=23a78af rollback_tags=1
+20261024_105554|P1|mem_pct=9.3 disk_pct=46 load=0.18 ollama=up
+20261024_105554|P2|warm_models=20 fts_excerpts=49
+20261024_105554|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261024_105554|P4|errs_blocked=8
+20261024_105554|P5|local_models=20 debate_entries=49
+20261024_105554|P6|dupes=0 total=49 graded=49
+20261024_105554|P7|schema=49ba22964598 patterned_commits=0
+20261024_105554|P8|fts=49 log_feed=49 joined=49
+20261024_105554|P9|tiny_3b=3 small_7b=5 other=12
+20261024_105554|P10|models=20 verdict_types=2 scripts=1729
+20261024_105554|P11|holds=36 borderline=0 quarantine_dirs=1
+20261024_105554|P12|head=23a78af rollback_tags=1
+20261024_115555|P1|mem_pct=9.3 disk_pct=46 load=0.12 ollama=up
+20261024_115555|P2|warm_models=20 fts_excerpts=49
+20261024_115555|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261024_115555|P4|errs_blocked=8
+20261024_115555|P5|local_models=20 debate_entries=49
+20261024_115555|P6|dupes=0 total=49 graded=49
+20261024_115555|P7|schema=49ba22964598 patterned_commits=0
+20261024_115555|P8|fts=49 log_feed=49 joined=49
+20261024_115555|P9|tiny_3b=3 small_7b=5 other=12
+20261024_115555|P10|models=20 verdict_types=2 scripts=1729
+20261024_115555|P11|holds=36 borderline=0 quarantine_dirs=1
+20261024_115555|P12|head=23a78af rollback_tags=1
+20261024_125607|P1|mem_pct=9.3 disk_pct=46 load=0.18 ollama=up
+20261024_125607|P2|warm_models=20 fts_excerpts=49
+20261024_125607|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261024_125607|P4|errs_blocked=8
+20261024_125607|P5|local_models=20 debate_entries=49
+20261024_125607|P6|dupes=0 total=49 graded=49
+20261024_125607|P7|schema=49ba22964598 patterned_commits=0
+20261024_125607|P8|fts=49 log_feed=49 joined=49
+20261024_125607|P9|tiny_3b=3 small_7b=5 other=12
+20261024_125607|P10|models=20 verdict_types=2 scripts=1729
+20261024_125607|P11|holds=36 borderline=0 quarantine_dirs=1
+20261024_125607|P12|head=23a78af rollback_tags=1
+20261024_135617|P1|mem_pct=9.3 disk_pct=46 load=0.29 ollama=up
+20261024_135617|P2|warm_models=20 fts_excerpts=49
+20261024_135617|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261024_135617|P4|errs_blocked=8
+20261024_135617|P5|local_models=20 debate_entries=49
+20261024_135617|P6|dupes=0 total=49 graded=49
+20261024_135617|P7|schema=49ba22964598 patterned_commits=0
+20261024_135617|P8|fts=49 log_feed=49 joined=49
+20261024_135617|P9|tiny_3b=3 small_7b=5 other=12
+20261024_135617|P10|models=20 verdict_types=2 scripts=1729
+20261024_135617|P11|holds=36 borderline=0 quarantine_dirs=1
+20261024_135617|P12|head=23a78af rollback_tags=1
+20261024_145619|P1|mem_pct=69.2 disk_pct=46 load=3.39 ollama=up
+20261024_145619|P2|warm_models=0 fts_excerpts=49
+20261024_145619|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261024_145619|P4|errs_blocked=8
+20261024_145619|P5|local_models=0 debate_entries=49
+20261024_145619|P6|dupes=0 total=49 graded=49
+20261024_145619|P7|schema=49ba22964598 patterned_commits=0
+20261024_145619|P8|fts=49 log_feed=49 joined=49
+20261024_145619|P9|tiny_3b=0 small_7b=0 other=0
+20261024_145619|P10|models=0 verdict_types=2 scripts=1729
+20261024_145619|P11|holds=36 borderline=0 quarantine_dirs=1
+20261024_145619|P12|head=23a78af rollback_tags=1
+20261024_155637|P1|mem_pct=6.4 disk_pct=46 load=0.03 ollama=up
+20261024_155637|P2|warm_models=22 fts_excerpts=49
+20261024_155637|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261024_155637|P4|errs_blocked=8
+20261024_155637|P5|local_models=22 debate_entries=49
+20261024_155637|P6|dupes=0 total=49 graded=49
+20261024_155637|P7|schema=49ba22964598 patterned_commits=0
+20261024_155637|P8|fts=49 log_feed=49 joined=49
+20261024_155637|P9|tiny_3b=3 small_7b=5 other=14
+20261024_155637|P10|models=22 verdict_types=2 scripts=1729
+20261024_155637|P11|holds=36 borderline=0 quarantine_dirs=1
+20261024_155637|P12|head=23a78af rollback_tags=1
+20261024_165642|P1|mem_pct=6.6 disk_pct=46 load=0.24 ollama=up
+20261024_165642|P2|warm_models=22 fts_excerpts=49
+20261024_165642|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261024_165642|P4|errs_blocked=8
+20261024_165642|P5|local_models=22 debate_entries=49
+20261024_165642|P6|dupes=0 total=49 graded=49
+20261024_165642|P7|schema=49ba22964598 patterned_commits=0
+20261024_165642|P8|fts=49 log_feed=49 joined=49
+20261024_165642|P9|tiny_3b=3 small_7b=5 other=14
+20261024_165642|P10|models=22 verdict_types=2 scripts=1729
+20261024_165642|P11|holds=36 borderline=0 quarantine_dirs=1
+20261024_165642|P12|head=23a78af rollback_tags=1
+20261024_175643|P1|mem_pct=6.8 disk_pct=46 load=0.98 ollama=up
+20261024_175643|P2|warm_models=23 fts_excerpts=49
+20261024_175643|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261024_175643|P4|errs_blocked=8
+20261024_175643|P5|local_models=23 debate_entries=49
+20261024_175643|P6|dupes=0 total=49 graded=49
+20261024_175643|P7|schema=49ba22964598 patterned_commits=0
+20261024_175643|P8|fts=49 log_feed=49 joined=49
+20261024_175643|P9|tiny_3b=3 small_7b=5 other=15
+20261024_175643|P10|models=23 verdict_types=2 scripts=1729
+20261024_175643|P11|holds=36 borderline=0 quarantine_dirs=1
+20261024_175643|P12|head=23a78af rollback_tags=1
+20261024_185644|P1|mem_pct=51.8 disk_pct=46 load=0.22 ollama=up
+20261024_185644|P2|warm_models=23 fts_excerpts=49
+20261024_185644|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261024_185644|P4|errs_blocked=8
+20261024_185644|P5|local_models=23 debate_entries=49
+20261024_185644|P6|dupes=0 total=49 graded=49
+20261024_185644|P7|schema=49ba22964598 patterned_commits=0
+20261024_185644|P8|fts=49 log_feed=49 joined=49
+20261024_185644|P9|tiny_3b=3 small_7b=5 other=15
+20261024_185644|P10|models=23 verdict_types=2 scripts=1729
+20261024_185644|P11|holds=36 borderline=0 quarantine_dirs=1
+20261024_185644|P12|head=23a78af rollback_tags=1
+20261024_195644|P1|mem_pct=6.9 disk_pct=46 load=0.17 ollama=up
+20261024_195644|P2|warm_models=23 fts_excerpts=49
+20261024_195644|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261024_195644|P4|errs_blocked=8
+20261024_195644|P5|local_models=23 debate_entries=49
+20261024_195644|P6|dupes=0 total=49 graded=49
+20261024_195644|P7|schema=49ba22964598 patterned_commits=0
+20261024_195644|P8|fts=49 log_feed=49 joined=49
+20261024_195644|P9|tiny_3b=3 small_7b=5 other=15
+20261024_195644|P10|models=23 verdict_types=2 scripts=1729
+20261024_195644|P11|holds=36 borderline=0 quarantine_dirs=1
+20261024_195644|P12|head=23a78af rollback_tags=1
+20261024_205707|P1|mem_pct=6.9 disk_pct=46 load=0.11 ollama=up
+20261024_205707|P2|warm_models=23 fts_excerpts=49
+20261024_205707|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261024_205707|P4|errs_blocked=8
+20261024_205707|P5|local_models=23 debate_entries=49
+20261024_205707|P6|dupes=0 total=49 graded=49
+20261024_205707|P7|schema=49ba22964598 patterned_commits=0
+20261024_205707|P8|fts=49 log_feed=49 joined=49
+20261024_205707|P9|tiny_3b=3 small_7b=5 other=15
+20261024_205707|P10|models=23 verdict_types=2 scripts=1729
+20261024_205707|P11|holds=36 borderline=0 quarantine_dirs=1
+20261024_205707|P12|head=23a78af rollback_tags=1
+20261024_215713|P1|mem_pct=6.9 disk_pct=46 load=0.32 ollama=up
+20261024_215713|P2|warm_models=23 fts_excerpts=49
+20261024_215713|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261024_215713|P4|errs_blocked=8
+20261024_215713|P5|local_models=23 debate_entries=49
+20261024_215713|P6|dupes=0 total=49 graded=49
+20261024_215713|P7|schema=49ba22964598 patterned_commits=0
+20261024_215713|P8|fts=49 log_feed=49 joined=49
+20261024_215713|P9|tiny_3b=3 small_7b=5 other=15
+20261024_215713|P10|models=23 verdict_types=2 scripts=1729
+20261024_215713|P11|holds=36 borderline=0 quarantine_dirs=1
+20261024_215713|P12|head=23a78af rollback_tags=1
+20261024_225714|P1|mem_pct=6.9 disk_pct=46 load=0.22 ollama=up
+20261024_225714|P2|warm_models=23 fts_excerpts=49
+20261024_225714|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261024_225714|P4|errs_blocked=8
+20261024_225714|P5|local_models=23 debate_entries=49
+20261024_225714|P6|dupes=0 total=49 graded=49
+20261024_225714|P7|schema=49ba22964598 patterned_commits=0
+20261024_225714|P8|fts=49 log_feed=49 joined=49
+20261024_225714|P9|tiny_3b=3 small_7b=5 other=15
+20261024_225714|P10|models=23 verdict_types=2 scripts=1729
+20261024_225714|P11|holds=36 borderline=0 quarantine_dirs=1
+20261024_225714|P12|head=23a78af rollback_tags=1
+20261024_235737|P1|mem_pct=6.9 disk_pct=46 load=0.15 ollama=up
+20261024_235737|P2|warm_models=23 fts_excerpts=49
+20261024_235737|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261024_235737|P4|errs_blocked=8
+20261024_235737|P5|local_models=23 debate_entries=49
+20261024_235737|P6|dupes=0 total=49 graded=49
+20261024_235737|P7|schema=49ba22964598 patterned_commits=0
+20261024_235737|P8|fts=49 log_feed=49 joined=49
+20261024_235737|P9|tiny_3b=3 small_7b=5 other=15
+20261024_235737|P10|models=23 verdict_types=2 scripts=1729
+20261024_235737|P11|holds=36 borderline=0 quarantine_dirs=1
+20261024_235737|P12|head=23a78af rollback_tags=1
+20261025_005743|P1|mem_pct=7.0 disk_pct=46 load=0.11 ollama=up
+20261025_005743|P2|warm_models=23 fts_excerpts=49
+20261025_005743|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261025_005743|P4|errs_blocked=8
+20261025_005743|P5|local_models=23 debate_entries=49
+20261025_005743|P6|dupes=0 total=49 graded=49
+20261025_005743|P7|schema=49ba22964598 patterned_commits=0
+20261025_005743|P8|fts=49 log_feed=49 joined=49
+20261025_005743|P9|tiny_3b=3 small_7b=5 other=15
+20261025_005743|P10|models=23 verdict_types=2 scripts=1729
+20261025_005743|P11|holds=36 borderline=0 quarantine_dirs=1
+20261025_005743|P12|head=23a78af rollback_tags=1
+20261025_015807|P1|mem_pct=7.0 disk_pct=46 load=0.12 ollama=up
+20261025_015807|P2|warm_models=23 fts_excerpts=49
+20261025_015807|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261025_015807|P4|errs_blocked=8
+20261025_015807|P5|local_models=23 debate_entries=49
+20261025_015807|P6|dupes=0 total=49 graded=49
+20261025_015807|P7|schema=49ba22964598 patterned_commits=0
+20261025_015807|P8|fts=49 log_feed=49 joined=49
+20261025_015807|P9|tiny_3b=3 small_7b=5 other=15
+20261025_015807|P10|models=23 verdict_types=2 scripts=1729
+20261025_015807|P11|holds=36 borderline=0 quarantine_dirs=1
+20261025_015807|P12|head=23a78af rollback_tags=1
+20261025_025812|P1|mem_pct=7.0 disk_pct=46 load=0.25 ollama=up
+20261025_025812|P2|warm_models=23 fts_excerpts=49
+20261025_025812|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261025_025812|P4|errs_blocked=8
+20261025_025812|P5|local_models=23 debate_entries=49
+20261025_025812|P6|dupes=0 total=49 graded=49
+20261025_025812|P7|schema=49ba22964598 patterned_commits=0
+20261025_025812|P8|fts=49 log_feed=49 joined=49
+20261025_025812|P9|tiny_3b=3 small_7b=5 other=15
+20261025_025812|P10|models=23 verdict_types=2 scripts=1729
+20261025_025812|P11|holds=36 borderline=0 quarantine_dirs=1
+20261025_025812|P12|head=23a78af rollback_tags=1
+20261025_035815|P1|mem_pct=10.0 disk_pct=46 load=4.31 ollama=up
+20261025_035815|P2|warm_models=23 fts_excerpts=49
+20261025_035815|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261025_035815|P4|errs_blocked=8
+20261025_035815|P5|local_models=23 debate_entries=49
+20261025_035815|P6|dupes=0 total=49 graded=49
+20261025_035815|P7|schema=49ba22964598 patterned_commits=0
+20261025_035815|P8|fts=49 log_feed=49 joined=49
+20261025_035815|P9|tiny_3b=3 small_7b=5 other=15
+20261025_035815|P10|models=23 verdict_types=2 scripts=1729
+20261025_035815|P11|holds=36 borderline=0 quarantine_dirs=1
+20261025_035815|P12|head=23a78af rollback_tags=1
+20261025_045817|P1|mem_pct=7.2 disk_pct=46 load=0.33 ollama=up
+20261025_045817|P2|warm_models=23 fts_excerpts=49
+20261025_045817|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261025_045817|P4|errs_blocked=8
+20261025_045817|P5|local_models=23 debate_entries=49
+20261025_045817|P6|dupes=0 total=49 graded=49
+20261025_045817|P7|schema=49ba22964598 patterned_commits=0
+20261025_045817|P8|fts=49 log_feed=49 joined=49
+20261025_045817|P9|tiny_3b=3 small_7b=5 other=15
+20261025_045817|P10|models=23 verdict_types=2 scripts=1729
+20261025_045817|P11|holds=36 borderline=0 quarantine_dirs=1
+20261025_045817|P12|head=23a78af rollback_tags=1
+20261025_055818|P1|mem_pct=8.1 disk_pct=46 load=0.27 ollama=up
+20261025_055818|P2|warm_models=23 fts_excerpts=49
+20261025_055818|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261025_055818|P4|errs_blocked=8
+20261025_055818|P5|local_models=23 debate_entries=49
+20261025_055818|P6|dupes=0 total=49 graded=49
+20261025_055818|P7|schema=49ba22964598 patterned_commits=0
+20261025_055818|P8|fts=49 log_feed=49 joined=49
+20261025_055818|P9|tiny_3b=3 small_7b=5 other=15
+20261025_055818|P10|models=23 verdict_types=2 scripts=1729
+20261025_055818|P11|holds=36 borderline=0 quarantine_dirs=1
+20261025_055818|P12|head=23a78af rollback_tags=1
+20261025_065818|P1|mem_pct=7.1 disk_pct=46 load=0.13 ollama=up
+20261025_065818|P2|warm_models=23 fts_excerpts=49
+20261025_065818|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261025_065818|P4|errs_blocked=8
+20261025_065818|P5|local_models=23 debate_entries=49
+20261025_065818|P6|dupes=0 total=49 graded=49
+20261025_065818|P7|schema=49ba22964598 patterned_commits=0
+20261025_065818|P8|fts=49 log_feed=49 joined=49
+20261025_065818|P9|tiny_3b=3 small_7b=5 other=15
+20261025_065818|P10|models=23 verdict_types=2 scripts=1729
+20261025_065818|P11|holds=36 borderline=0 quarantine_dirs=1
+20261025_065818|P12|head=23a78af rollback_tags=1
+20261025_075847|P1|mem_pct=9.9 disk_pct=46 load=0.33 ollama=up
+20261025_075847|P2|warm_models=23 fts_excerpts=49
+20261025_075847|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261025_075847|P4|errs_blocked=8
+20261025_075847|P5|local_models=23 debate_entries=49
+20261025_075847|P6|dupes=0 total=49 graded=49
+20261025_075847|P7|schema=49ba22964598 patterned_commits=0
+20261025_075847|P8|fts=49 log_feed=49 joined=49
+20261025_075847|P9|tiny_3b=3 small_7b=5 other=15
+20261025_075847|P10|models=23 verdict_types=2 scripts=1729
+20261025_075847|P11|holds=36 borderline=0 quarantine_dirs=1
+20261025_075847|P12|head=23a78af rollback_tags=1
+20261025_085848|P1|mem_pct=7.2 disk_pct=46 load=0.15 ollama=up
+20261025_085848|P2|warm_models=23 fts_excerpts=49
+20261025_085848|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261025_085848|P4|errs_blocked=8
+20261025_085848|P5|local_models=23 debate_entries=49
+20261025_085848|P6|dupes=0 total=49 graded=49
+20261025_085848|P7|schema=49ba22964598 patterned_commits=0
+20261025_085848|P8|fts=49 log_feed=49 joined=49
+20261025_085848|P9|tiny_3b=3 small_7b=5 other=15
+20261025_085848|P10|models=23 verdict_types=2 scripts=1729
+20261025_085848|P11|holds=36 borderline=0 quarantine_dirs=1
+20261025_085848|P12|head=23a78af rollback_tags=1
+20261025_095907|P1|mem_pct=7.2 disk_pct=46 load=0.03 ollama=up
+20261025_095907|P2|warm_models=23 fts_excerpts=49
+20261025_095907|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261025_095907|P4|errs_blocked=8
+20261025_095907|P5|local_models=23 debate_entries=49
+20261025_095907|P6|dupes=0 total=49 graded=49
+20261025_095907|P7|schema=49ba22964598 patterned_commits=0
+20261025_095907|P8|fts=49 log_feed=49 joined=49
+20261025_095907|P9|tiny_3b=3 small_7b=5 other=15
+20261025_095907|P10|models=23 verdict_types=2 scripts=1729
+20261025_095907|P11|holds=36 borderline=0 quarantine_dirs=1
+20261025_095907|P12|head=23a78af rollback_tags=1
+20261025_105917|P1|mem_pct=7.1 disk_pct=46 load=0.10 ollama=up
+20261025_105917|P2|warm_models=23 fts_excerpts=49
+20261025_105917|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261025_105917|P4|errs_blocked=8
+20261025_105917|P5|local_models=23 debate_entries=49
+20261025_105917|P6|dupes=0 total=49 graded=49
+20261025_105917|P7|schema=49ba22964598 patterned_commits=0
+20261025_105917|P8|fts=49 log_feed=49 joined=49
+20261025_105917|P9|tiny_3b=3 small_7b=5 other=15
+20261025_105917|P10|models=23 verdict_types=2 scripts=1729
+20261025_105917|P11|holds=36 borderline=0 quarantine_dirs=1
+20261025_105917|P12|head=23a78af rollback_tags=1
+20261025_115917|P1|mem_pct=7.2 disk_pct=46 load=0.05 ollama=up
+20261025_115917|P2|warm_models=23 fts_excerpts=49
+20261025_115917|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261025_115917|P4|errs_blocked=8
+20261025_115917|P5|local_models=23 debate_entries=49
+20261025_115917|P6|dupes=0 total=49 graded=49
+20261025_115917|P7|schema=49ba22964598 patterned_commits=0
+20261025_115917|P8|fts=49 log_feed=49 joined=49
+20261025_115917|P9|tiny_3b=3 small_7b=5 other=15
+20261025_115917|P10|models=23 verdict_types=2 scripts=1729
+20261025_115917|P11|holds=36 borderline=0 quarantine_dirs=1
+20261025_115917|P12|head=23a78af rollback_tags=1
+20261025_125947|P1|mem_pct=7.2 disk_pct=46 load=0.10 ollama=up
+20261025_125947|P2|warm_models=23 fts_excerpts=49
+20261025_125947|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261025_125947|P4|errs_blocked=8
+20261025_125947|P5|local_models=23 debate_entries=49
+20261025_125947|P6|dupes=0 total=49 graded=49
+20261025_125947|P7|schema=49ba22964598 patterned_commits=0
+20261025_125947|P8|fts=49 log_feed=49 joined=49
+20261025_125947|P9|tiny_3b=3 small_7b=5 other=15
+20261025_125947|P10|models=23 verdict_types=2 scripts=1729
+20261025_125947|P11|holds=36 borderline=0 quarantine_dirs=1
+20261025_125947|P12|head=23a78af rollback_tags=1
+20261025_140007|P1|mem_pct=7.2 disk_pct=46 load=0.19 ollama=up
+20261025_140007|P2|warm_models=23 fts_excerpts=49
+20261025_140007|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261025_140007|P4|errs_blocked=8
+20261025_140007|P5|local_models=23 debate_entries=49
+20261025_140007|P6|dupes=0 total=49 graded=49
+20261025_140007|P7|schema=49ba22964598 patterned_commits=0
+20261025_140007|P8|fts=49 log_feed=49 joined=49
+20261025_140007|P9|tiny_3b=3 small_7b=5 other=15
+20261025_140007|P10|models=23 verdict_types=2 scripts=1729
+20261025_140007|P11|holds=36 borderline=0 quarantine_dirs=1
+20261025_140007|P12|head=23a78af rollback_tags=1
+20261025_150010|P1|mem_pct=7.2 disk_pct=46 load=0.54 ollama=up
+20261025_150010|P2|warm_models=23 fts_excerpts=49
+20261025_150010|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261025_150010|P4|errs_blocked=8
+20261025_150010|P5|local_models=23 debate_entries=49
+20261025_150010|P6|dupes=0 total=49 graded=49
+20261025_150010|P7|schema=49ba22964598 patterned_commits=0
+20261025_150010|P8|fts=49 log_feed=49 joined=49
+20261025_150010|P9|tiny_3b=3 small_7b=5 other=15
+20261025_150010|P10|models=23 verdict_types=2 scripts=1729
+20261025_150010|P11|holds=36 borderline=0 quarantine_dirs=1
+20261025_150010|P12|head=23a78af rollback_tags=1
+20261025_160010|P1|mem_pct=7.2 disk_pct=46 load=0.11 ollama=up
+20261025_160010|P2|warm_models=23 fts_excerpts=49
+20261025_160010|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261025_160010|P4|errs_blocked=8
+20261025_160010|P5|local_models=23 debate_entries=49
+20261025_160010|P6|dupes=0 total=49 graded=49
+20261025_160010|P7|schema=49ba22964598 patterned_commits=0
+20261025_160010|P8|fts=49 log_feed=49 joined=49
+20261025_160010|P9|tiny_3b=3 small_7b=5 other=15
+20261025_160010|P10|models=23 verdict_types=2 scripts=1729
+20261025_160010|P11|holds=36 borderline=0 quarantine_dirs=1
+20261025_160010|P12|head=23a78af rollback_tags=1
+20261025_170010|P1|mem_pct=7.3 disk_pct=46 load=0.26 ollama=up
+20261025_170010|P2|warm_models=23 fts_excerpts=49
+20261025_170010|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261025_170010|P4|errs_blocked=8
+20261025_170010|P5|local_models=23 debate_entries=49
+20261025_170010|P6|dupes=0 total=49 graded=49
+20261025_170010|P7|schema=49ba22964598 patterned_commits=0
+20261025_170010|P8|fts=49 log_feed=49 joined=49
+20261025_170010|P9|tiny_3b=3 small_7b=5 other=15
+20261025_170010|P10|models=23 verdict_types=2 scripts=1729
+20261025_170010|P11|holds=36 borderline=0 quarantine_dirs=1
+20261025_170010|P12|head=23a78af rollback_tags=1
+20261025_180016|P1|mem_pct=7.3 disk_pct=47 load=0.10 ollama=up
+20261025_180016|P2|warm_models=23 fts_excerpts=49
+20261025_180016|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261025_180016|P4|errs_blocked=8
+20261025_180016|P5|local_models=23 debate_entries=49
+20261025_180016|P6|dupes=0 total=49 graded=49
+20261025_180016|P7|schema=49ba22964598 patterned_commits=0
+20261025_180016|P8|fts=49 log_feed=49 joined=49
+20261025_180016|P9|tiny_3b=3 small_7b=5 other=15
+20261025_180016|P10|models=23 verdict_types=2 scripts=1729
+20261025_180016|P11|holds=36 borderline=0 quarantine_dirs=1
+20261025_180016|P12|head=23a78af rollback_tags=1
+20261025_190037|P1|mem_pct=7.3 disk_pct=47 load=0.51 ollama=up
+20261025_190037|P2|warm_models=23 fts_excerpts=49
+20261025_190037|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261025_190037|P4|errs_blocked=8
+20261025_190037|P5|local_models=23 debate_entries=49
+20261025_190037|P6|dupes=0 total=49 graded=49
+20261025_190037|P7|schema=49ba22964598 patterned_commits=0
+20261025_190037|P8|fts=49 log_feed=49 joined=49
+20261025_190037|P9|tiny_3b=3 small_7b=5 other=15
+20261025_190037|P10|models=23 verdict_types=2 scripts=1729
+20261025_190037|P11|holds=36 borderline=0 quarantine_dirs=1
+20261025_190037|P12|head=23a78af rollback_tags=1
+20261025_200045|P1|mem_pct=7.3 disk_pct=47 load=0.13 ollama=up
+20261025_200045|P2|warm_models=23 fts_excerpts=49
+20261025_200045|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261025_200045|P4|errs_blocked=8
+20261025_200045|P5|local_models=23 debate_entries=49
+20261025_200045|P6|dupes=0 total=49 graded=49
+20261025_200045|P7|schema=49ba22964598 patterned_commits=0
+20261025_200045|P8|fts=49 log_feed=49 joined=49
+20261025_200045|P9|tiny_3b=3 small_7b=5 other=15
+20261025_200045|P10|models=23 verdict_types=2 scripts=1729
+20261025_200045|P11|holds=36 borderline=0 quarantine_dirs=1
+20261025_200045|P12|head=23a78af rollback_tags=1
+20261025_210046|P1|mem_pct=7.3 disk_pct=47 load=0.24 ollama=up
+20261025_210046|P2|warm_models=23 fts_excerpts=49
+20261025_210046|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261025_210046|P4|errs_blocked=8
+20261025_210046|P5|local_models=23 debate_entries=49
+20261025_210046|P6|dupes=0 total=49 graded=49
+20261025_210046|P7|schema=49ba22964598 patterned_commits=0
+20261025_210046|P8|fts=49 log_feed=49 joined=49
+20261025_210046|P9|tiny_3b=3 small_7b=5 other=15
+20261025_210046|P10|models=23 verdict_types=2 scripts=1729
+20261025_210046|P11|holds=36 borderline=0 quarantine_dirs=1
+20261025_210046|P12|head=23a78af rollback_tags=1
+20261025_220107|P1|mem_pct=8.9 disk_pct=47 load=0.29 ollama=up
+20261025_220107|P2|warm_models=23 fts_excerpts=49
+20261025_220107|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261025_220107|P4|errs_blocked=8
+20261025_220107|P5|local_models=23 debate_entries=49
+20261025_220107|P6|dupes=0 total=49 graded=49
+20261025_220107|P7|schema=49ba22964598 patterned_commits=0
+20261025_220107|P8|fts=49 log_feed=49 joined=49
+20261025_220107|P9|tiny_3b=3 small_7b=5 other=15
+20261025_220107|P10|models=23 verdict_types=2 scripts=1729
+20261025_220107|P11|holds=36 borderline=0 quarantine_dirs=1
+20261025_220107|P12|head=23a78af rollback_tags=1
+20261025_230115|P1|mem_pct=8.9 disk_pct=47 load=0.12 ollama=up
+20261025_230115|P2|warm_models=23 fts_excerpts=49
+20261025_230115|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261025_230115|P4|errs_blocked=8
+20261025_230115|P5|local_models=23 debate_entries=49
+20261025_230115|P6|dupes=0 total=49 graded=49
+20261025_230115|P7|schema=49ba22964598 patterned_commits=0
+20261025_230115|P8|fts=49 log_feed=49 joined=49
+20261025_230115|P9|tiny_3b=3 small_7b=5 other=15
+20261025_230115|P10|models=23 verdict_types=2 scripts=1729
+20261025_230115|P11|holds=36 borderline=0 quarantine_dirs=1
+20261025_230115|P12|head=23a78af rollback_tags=1
+20261026_000115|P1|mem_pct=9.2 disk_pct=47 load=0.18 ollama=up
+20261026_000115|P2|warm_models=23 fts_excerpts=49
+20261026_000115|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261026_000115|P4|errs_blocked=8
+20261026_000115|P5|local_models=23 debate_entries=49
+20261026_000115|P6|dupes=0 total=49 graded=49
+20261026_000115|P7|schema=49ba22964598 patterned_commits=0
+20261026_000115|P8|fts=49 log_feed=49 joined=49
+20261026_000115|P9|tiny_3b=3 small_7b=5 other=15
+20261026_000115|P10|models=23 verdict_types=2 scripts=1729
+20261026_000115|P11|holds=36 borderline=0 quarantine_dirs=1
+20261026_000115|P12|head=23a78af rollback_tags=1
+20261026_010137|P1|mem_pct=9.2 disk_pct=47 load=0.32 ollama=up
+20261026_010137|P2|warm_models=23 fts_excerpts=49
+20261026_010137|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261026_010137|P4|errs_blocked=8
+20261026_010137|P5|local_models=23 debate_entries=49
+20261026_010137|P6|dupes=0 total=49 graded=49
+20261026_010137|P7|schema=49ba22964598 patterned_commits=0
+20261026_010137|P8|fts=49 log_feed=49 joined=49
+20261026_010137|P9|tiny_3b=3 small_7b=5 other=15
+20261026_010137|P10|models=23 verdict_types=2 scripts=1729
+20261026_010137|P11|holds=36 borderline=0 quarantine_dirs=1
+20261026_010137|P12|head=9ad6fd5 rollback_tags=1
+20261026_020144|P1|mem_pct=9.1 disk_pct=47 load=0.03 ollama=up
+20261026_020144|P2|warm_models=23 fts_excerpts=49
+20261026_020144|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261026_020144|P4|errs_blocked=8
+20261026_020144|P5|local_models=23 debate_entries=49
+20261026_020144|P6|dupes=0 total=49 graded=49
+20261026_020144|P7|schema=49ba22964598 patterned_commits=0
+20261026_020144|P8|fts=49 log_feed=49 joined=49
+20261026_020144|P9|tiny_3b=3 small_7b=5 other=15
+20261026_020144|P10|models=23 verdict_types=2 scripts=1729
+20261026_020144|P11|holds=36 borderline=0 quarantine_dirs=1
+20261026_020144|P12|head=9ad6fd5 rollback_tags=1
+20261026_030145|P1|mem_pct=9.2 disk_pct=47 load=1.55 ollama=up
+20261026_030145|P2|warm_models=23 fts_excerpts=49
+20261026_030145|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261026_030145|P4|errs_blocked=8
+20261026_030145|P5|local_models=23 debate_entries=49
+20261026_030145|P6|dupes=0 total=49 graded=49
+20261026_030145|P7|schema=49ba22964598 patterned_commits=0
+20261026_030145|P8|fts=49 log_feed=49 joined=49
+20261026_030145|P9|tiny_3b=3 small_7b=5 other=15
+20261026_030145|P10|models=23 verdict_types=2 scripts=1729
+20261026_030145|P11|holds=36 borderline=0 quarantine_dirs=1
+20261026_030145|P12|head=9ad6fd5 rollback_tags=1
+20261026_040148|P1|mem_pct=34.9 disk_pct=47 load=2.03 ollama=up
+20261026_040148|P2|warm_models=23 fts_excerpts=49
+20261026_040148|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261026_040148|P4|errs_blocked=8
+20261026_040148|P5|local_models=23 debate_entries=49
+20261026_040148|P6|dupes=0 total=49 graded=49
+20261026_040148|P7|schema=49ba22964598 patterned_commits=0
+20261026_040148|P8|fts=49 log_feed=49 joined=49
+20261026_040148|P9|tiny_3b=3 small_7b=5 other=15
+20261026_040148|P10|models=23 verdict_types=2 scripts=1729
+20261026_040148|P11|holds=36 borderline=0 quarantine_dirs=1
+20261026_040148|P12|head=9ad6fd5 rollback_tags=1
+20261026_050147|P1|mem_pct=24.6 disk_pct=47 load=0.22 ollama=up
+20261026_050147|P2|warm_models=23 fts_excerpts=49
+20261026_050147|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261026_050147|P4|errs_blocked=8
+20261026_050147|P5|local_models=23 debate_entries=49
+20261026_050147|P6|dupes=0 total=49 graded=49
+20261026_050147|P7|schema=49ba22964598 patterned_commits=0
+20261026_050147|P8|fts=49 log_feed=49 joined=49
+20261026_050147|P9|tiny_3b=3 small_7b=5 other=15
+20261026_050147|P10|models=23 verdict_types=2 scripts=1729
+20261026_050147|P11|holds=36 borderline=0 quarantine_dirs=1
+20261026_050147|P12|head=9ad6fd5 rollback_tags=1
+20261026_060148|P1|mem_pct=9.1 disk_pct=54 load=5.48 ollama=up
+20261026_060148|P2|warm_models=23 fts_excerpts=49
+20261026_060148|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261026_060148|P4|errs_blocked=8
+20261026_060148|P5|local_models=23 debate_entries=49
+20261026_060148|P6|dupes=0 total=49 graded=49
+20261026_060148|P7|schema=49ba22964598 patterned_commits=0
+20261026_060148|P8|fts=49 log_feed=49 joined=49
+20261026_060148|P9|tiny_3b=3 small_7b=5 other=15
+20261026_060148|P10|models=23 verdict_types=2 scripts=1729
+20261026_060148|P11|holds=36 borderline=0 quarantine_dirs=1
+20261026_060148|P12|head=9ad6fd5 rollback_tags=1
+20261026_070149|P1|mem_pct=9.0 disk_pct=54 load=2.97 ollama=up
+20261026_070149|P2|warm_models=23 fts_excerpts=49
+20261026_070149|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261026_070149|P4|errs_blocked=8
+20261026_070149|P5|local_models=23 debate_entries=49
+20261026_070149|P6|dupes=0 total=49 graded=49
+20261026_070149|P7|schema=49ba22964598 patterned_commits=0
+20261026_070149|P8|fts=49 log_feed=49 joined=49
+20261026_070149|P9|tiny_3b=3 small_7b=5 other=15
+20261026_070149|P10|models=23 verdict_types=2 scripts=1729
+20261026_070149|P11|holds=36 borderline=0 quarantine_dirs=1
+20261026_070149|P12|head=9ad6fd5 rollback_tags=1
+20261026_080155|P1|mem_pct=9.1 disk_pct=54 load=0.20 ollama=up
+20261026_080155|P2|warm_models=23 fts_excerpts=49
+20261026_080155|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261026_080155|P4|errs_blocked=8
+20261026_080155|P5|local_models=23 debate_entries=49
+20261026_080155|P6|dupes=0 total=49 graded=49
+20261026_080155|P7|schema=49ba22964598 patterned_commits=0
+20261026_080155|P8|fts=49 log_feed=49 joined=49
+20261026_080155|P9|tiny_3b=3 small_7b=5 other=15
+20261026_080155|P10|models=23 verdict_types=2 scripts=1729
+20261026_080155|P11|holds=36 borderline=0 quarantine_dirs=1
+20261026_080155|P12|head=9ad6fd5 rollback_tags=1
+20261026_090155|P1|mem_pct=9.0 disk_pct=54 load=0.39 ollama=up
+20261026_090155|P2|warm_models=23 fts_excerpts=49
+20261026_090155|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261026_090155|P4|errs_blocked=8
+20261026_090155|P5|local_models=23 debate_entries=49
+20261026_090155|P6|dupes=0 total=49 graded=49
+20261026_090155|P7|schema=49ba22964598 patterned_commits=0
+20261026_090155|P8|fts=49 log_feed=49 joined=49
+20261026_090155|P9|tiny_3b=3 small_7b=5 other=15
+20261026_090155|P10|models=23 verdict_types=2 scripts=1729
+20261026_090155|P11|holds=36 borderline=0 quarantine_dirs=1
+20261026_090155|P12|head=9ad6fd5 rollback_tags=1
+20261026_100207|P1|mem_pct=10.7 disk_pct=54 load=0.29 ollama=up
+20261026_100207|P2|warm_models=23 fts_excerpts=49
+20261026_100207|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261026_100207|P4|errs_blocked=8
+20261026_100207|P5|local_models=23 debate_entries=49
+20261026_100207|P6|dupes=0 total=49 graded=49
+20261026_100207|P7|schema=49ba22964598 patterned_commits=0
+20261026_100207|P8|fts=49 log_feed=49 joined=49
+20261026_100207|P9|tiny_3b=3 small_7b=5 other=15
+20261026_100207|P10|models=23 verdict_types=2 scripts=1729
+20261026_100207|P11|holds=36 borderline=0 quarantine_dirs=1
+20261026_100207|P12|head=9ad6fd5 rollback_tags=1
+20261026_110227|P1|mem_pct=8.4 disk_pct=54 load=0.08 ollama=up
+20261026_110227|P2|warm_models=23 fts_excerpts=49
+20261026_110227|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261026_110227|P4|errs_blocked=8
+20261026_110227|P5|local_models=23 debate_entries=49
+20261026_110227|P6|dupes=0 total=49 graded=49
+20261026_110227|P7|schema=49ba22964598 patterned_commits=0
+20261026_110227|P8|fts=49 log_feed=49 joined=49
+20261026_110227|P9|tiny_3b=3 small_7b=5 other=15
+20261026_110227|P10|models=23 verdict_types=2 scripts=1729
+20261026_110227|P11|holds=36 borderline=0 quarantine_dirs=1
+20261026_110227|P12|head=9ad6fd5 rollback_tags=1
+20261026_120231|P1|mem_pct=8.6 disk_pct=54 load=0.20 ollama=up
+20261026_120231|P2|warm_models=23 fts_excerpts=49
+20261026_120231|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261026_120231|P4|errs_blocked=8
+20261026_120231|P5|local_models=23 debate_entries=49
+20261026_120231|P6|dupes=0 total=49 graded=49
+20261026_120231|P7|schema=49ba22964598 patterned_commits=0
+20261026_120231|P8|fts=49 log_feed=49 joined=49
+20261026_120231|P9|tiny_3b=3 small_7b=5 other=15
+20261026_120231|P10|models=23 verdict_types=2 scripts=1729
+20261026_120231|P11|holds=36 borderline=0 quarantine_dirs=1
+20261026_120231|P12|head=9ad6fd5 rollback_tags=1
+20261026_130257|P1|mem_pct=8.7 disk_pct=54 load=0.20 ollama=up
+20261026_130257|P2|warm_models=23 fts_excerpts=49
+20261026_130257|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261026_130257|P4|errs_blocked=8
+20261026_130257|P5|local_models=23 debate_entries=49
+20261026_130257|P6|dupes=0 total=49 graded=49
+20261026_130257|P7|schema=49ba22964598 patterned_commits=0
+20261026_130257|P8|fts=49 log_feed=49 joined=49
+20261026_130257|P9|tiny_3b=3 small_7b=5 other=15
+20261026_130257|P10|models=23 verdict_types=2 scripts=1729
+20261026_130257|P11|holds=36 borderline=0 quarantine_dirs=1
+20261026_130257|P12|head=9ad6fd5 rollback_tags=1
+20261026_140300|P1|mem_pct=8.6 disk_pct=54 load=0.09 ollama=up
+20261026_140300|P2|warm_models=23 fts_excerpts=49
+20261026_140300|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261026_140300|P4|errs_blocked=8
+20261026_140300|P5|local_models=23 debate_entries=49
+20261026_140300|P6|dupes=0 total=49 graded=49
+20261026_140300|P7|schema=49ba22964598 patterned_commits=0
+20261026_140300|P8|fts=49 log_feed=49 joined=49
+20261026_140300|P9|tiny_3b=3 small_7b=5 other=15
+20261026_140300|P10|models=23 verdict_types=2 scripts=1729
+20261026_140300|P11|holds=36 borderline=0 quarantine_dirs=1
+20261026_140300|P12|head=9ad6fd5 rollback_tags=1
+20261026_150301|P1|mem_pct=9.3 disk_pct=54 load=1.32 ollama=up
+20261026_150301|P2|warm_models=23 fts_excerpts=49
+20261026_150301|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261026_150301|P4|errs_blocked=8
+20261026_150301|P5|local_models=23 debate_entries=49
+20261026_150301|P6|dupes=0 total=49 graded=49
+20261026_150301|P7|schema=49ba22964598 patterned_commits=0
+20261026_150301|P8|fts=49 log_feed=49 joined=49
+20261026_150301|P9|tiny_3b=3 small_7b=5 other=15
+20261026_150301|P10|models=23 verdict_types=2 scripts=1729
+20261026_150301|P11|holds=36 borderline=0 quarantine_dirs=1
+20261026_150301|P12|head=9ad6fd5 rollback_tags=1
+20261026_160307|P1|mem_pct=9.2 disk_pct=54 load=0.26 ollama=up
+20261026_160307|P2|warm_models=23 fts_excerpts=49
+20261026_160307|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261026_160307|P4|errs_blocked=8
+20261026_160307|P5|local_models=23 debate_entries=49
+20261026_160307|P6|dupes=0 total=49 graded=49
+20261026_160307|P7|schema=49ba22964598 patterned_commits=0
+20261026_160307|P8|fts=49 log_feed=49 joined=49
+20261026_160307|P9|tiny_3b=3 small_7b=5 other=15
+20261026_160307|P10|models=23 verdict_types=2 scripts=1729
+20261026_160307|P11|holds=36 borderline=0 quarantine_dirs=1
+20261026_160307|P12|head=9ad6fd5 rollback_tags=1
+20261026_170327|P1|mem_pct=9.1 disk_pct=55 load=0.35 ollama=up
+20261026_170327|P2|warm_models=23 fts_excerpts=49
+20261026_170327|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261026_170327|P4|errs_blocked=8
+20261026_170327|P5|local_models=23 debate_entries=49
+20261026_170327|P6|dupes=0 total=49 graded=49
+20261026_170327|P7|schema=49ba22964598 patterned_commits=0
+20261026_170327|P8|fts=49 log_feed=49 joined=49
+20261026_170327|P9|tiny_3b=3 small_7b=5 other=15
+20261026_170327|P10|models=23 verdict_types=2 scripts=1729
+20261026_170327|P11|holds=36 borderline=0 quarantine_dirs=1
+20261026_170327|P12|head=9ad6fd5 rollback_tags=1
+20261026_180330|P1|mem_pct=9.1 disk_pct=55 load=0.20 ollama=up
+20261026_180330|P2|warm_models=23 fts_excerpts=49
+20261026_180330|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261026_180330|P4|errs_blocked=8
+20261026_180330|P5|local_models=23 debate_entries=49
+20261026_180330|P6|dupes=0 total=49 graded=49
+20261026_180330|P7|schema=49ba22964598 patterned_commits=0
+20261026_180330|P8|fts=49 log_feed=49 joined=49
+20261026_180330|P9|tiny_3b=3 small_7b=5 other=15
+20261026_180330|P10|models=23 verdict_types=2 scripts=1729
+20261026_180330|P11|holds=36 borderline=0 quarantine_dirs=1
+20261026_180330|P12|head=9ad6fd5 rollback_tags=1
+20261026_190357|P1|mem_pct=9.1 disk_pct=55 load=0.08 ollama=up
+20261026_190357|P2|warm_models=23 fts_excerpts=49
+20261026_190357|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261026_190357|P4|errs_blocked=8
+20261026_190357|P5|local_models=23 debate_entries=49
+20261026_190357|P6|dupes=0 total=49 graded=49
+20261026_190357|P7|schema=49ba22964598 patterned_commits=0
+20261026_190357|P8|fts=49 log_feed=49 joined=49
+20261026_190357|P9|tiny_3b=3 small_7b=5 other=15
+20261026_190357|P10|models=23 verdict_types=2 scripts=1729
+20261026_190357|P11|holds=36 borderline=0 quarantine_dirs=1
+20261026_190357|P12|head=9ad6fd5 rollback_tags=1
+20261026_200359|P1|mem_pct=9.2 disk_pct=55 load=0.35 ollama=up
+20261026_200359|P2|warm_models=23 fts_excerpts=49
+20261026_200359|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261026_200359|P4|errs_blocked=8
+20261026_200359|P5|local_models=23 debate_entries=49
+20261026_200359|P6|dupes=0 total=49 graded=49
+20261026_200359|P7|schema=49ba22964598 patterned_commits=0
+20261026_200359|P8|fts=49 log_feed=49 joined=49
+20261026_200359|P9|tiny_3b=3 small_7b=5 other=15
+20261026_200359|P10|models=23 verdict_types=2 scripts=1729
+20261026_200359|P11|holds=36 borderline=0 quarantine_dirs=1
+20261026_200359|P12|head=9ad6fd5 rollback_tags=1
+20261026_210400|P1|mem_pct=9.2 disk_pct=55 load=0.38 ollama=up
+20261026_210400|P2|warm_models=23 fts_excerpts=49
+20261026_210400|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261026_210400|P4|errs_blocked=8
+20261026_210400|P5|local_models=23 debate_entries=49
+20261026_210400|P6|dupes=0 total=49 graded=49
+20261026_210400|P7|schema=49ba22964598 patterned_commits=0
+20261026_210400|P8|fts=49 log_feed=49 joined=49
+20261026_210400|P9|tiny_3b=3 small_7b=5 other=15
+20261026_210400|P10|models=23 verdict_types=2 scripts=1729
+20261026_210400|P11|holds=36 borderline=0 quarantine_dirs=1
+20261026_210400|P12|head=9ad6fd5 rollback_tags=1
+20261026_220407|P1|mem_pct=9.8 disk_pct=55 load=0.25 ollama=up
+20261026_220407|P2|warm_models=23 fts_excerpts=49
+20261026_220407|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261026_220407|P4|errs_blocked=8
+20261026_220407|P5|local_models=23 debate_entries=49
+20261026_220407|P6|dupes=0 total=49 graded=49
+20261026_220407|P7|schema=49ba22964598 patterned_commits=0
+20261026_220407|P8|fts=49 log_feed=49 joined=49
+20261026_220407|P9|tiny_3b=3 small_7b=5 other=15
+20261026_220407|P10|models=23 verdict_types=2 scripts=1729
+20261026_220407|P11|holds=36 borderline=0 quarantine_dirs=1
+20261026_220407|P12|head=9ad6fd5 rollback_tags=1
+20261026_230427|P1|mem_pct=10.3 disk_pct=55 load=0.18 ollama=up
+20261026_230427|P2|warm_models=23 fts_excerpts=49
+20261026_230427|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261026_230427|P4|errs_blocked=8
+20261026_230427|P5|local_models=23 debate_entries=49
+20261026_230427|P6|dupes=0 total=49 graded=49
+20261026_230427|P7|schema=49ba22964598 patterned_commits=0
+20261026_230427|P8|fts=49 log_feed=49 joined=49
+20261026_230427|P9|tiny_3b=3 small_7b=5 other=15
+20261026_230427|P10|models=23 verdict_types=2 scripts=1729
+20261026_230427|P11|holds=36 borderline=0 quarantine_dirs=1
+20261026_230427|P12|head=9ad6fd5 rollback_tags=1
+20261027_000429|P1|mem_pct=11.6 disk_pct=55 load=0.28 ollama=up
+20261027_000429|P2|warm_models=23 fts_excerpts=49
+20261027_000429|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261027_000429|P4|errs_blocked=8
+20261027_000429|P5|local_models=23 debate_entries=49
+20261027_000429|P6|dupes=0 total=49 graded=49
+20261027_000429|P7|schema=49ba22964598 patterned_commits=0
+20261027_000429|P8|fts=49 log_feed=49 joined=49
+20261027_000429|P9|tiny_3b=3 small_7b=5 other=15
+20261027_000429|P10|models=23 verdict_types=2 scripts=1729
+20261027_000429|P11|holds=36 borderline=0 quarantine_dirs=1
+20261027_000429|P12|head=9ad6fd5 rollback_tags=1
+20261027_010457|P1|mem_pct=11.1 disk_pct=55 load=0.25 ollama=up
+20261027_010457|P2|warm_models=23 fts_excerpts=49
+20261027_010457|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261027_010457|P4|errs_blocked=8
+20261027_010457|P5|local_models=23 debate_entries=49
+20261027_010457|P6|dupes=0 total=49 graded=49
+20261027_010457|P7|schema=49ba22964598 patterned_commits=0
+20261027_010457|P8|fts=49 log_feed=49 joined=49
+20261027_010457|P9|tiny_3b=3 small_7b=5 other=15
+20261027_010457|P10|models=23 verdict_types=2 scripts=1729
+20261027_010457|P11|holds=36 borderline=0 quarantine_dirs=1
+20261027_010457|P12|head=9ad6fd5 rollback_tags=1
+20261027_020458|P1|mem_pct=9.2 disk_pct=55 load=0.16 ollama=up
+20261027_020458|P2|warm_models=23 fts_excerpts=49
+20261027_020458|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261027_020458|P4|errs_blocked=8
+20261027_020458|P5|local_models=23 debate_entries=49
+20261027_020458|P6|dupes=0 total=49 graded=49
+20261027_020458|P7|schema=49ba22964598 patterned_commits=0
+20261027_020458|P8|fts=49 log_feed=49 joined=49
+20261027_020458|P9|tiny_3b=3 small_7b=5 other=15
+20261027_020458|P10|models=23 verdict_types=2 scripts=1729
+20261027_020458|P11|holds=36 borderline=0 quarantine_dirs=1
+20261027_020458|P12|head=9ad6fd5 rollback_tags=1
+20261027_030459|P1|mem_pct=9.2 disk_pct=55 load=1.63 ollama=up
+20261027_030459|P2|warm_models=23 fts_excerpts=49
+20261027_030459|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261027_030459|P4|errs_blocked=8
+20261027_030459|P5|local_models=23 debate_entries=49
+20261027_030459|P6|dupes=0 total=49 graded=49
+20261027_030459|P7|schema=49ba22964598 patterned_commits=0
+20261027_030459|P8|fts=49 log_feed=49 joined=49
+20261027_030459|P9|tiny_3b=3 small_7b=5 other=15
+20261027_030459|P10|models=23 verdict_types=2 scripts=1729
+20261027_030459|P11|holds=36 borderline=0 quarantine_dirs=1
+20261027_030459|P12|head=9ad6fd5 rollback_tags=1
+20261027_040459|P1|mem_pct=24.8 disk_pct=55 load=1.36 ollama=up
+20261027_040459|P2|warm_models=23 fts_excerpts=49
+20261027_040459|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261027_040459|P4|errs_blocked=8
+20261027_040459|P5|local_models=23 debate_entries=49
+20261027_040459|P6|dupes=0 total=49 graded=49
+20261027_040459|P7|schema=49ba22964598 patterned_commits=0
+20261027_040459|P8|fts=49 log_feed=49 joined=49
+20261027_040459|P9|tiny_3b=3 small_7b=5 other=15
+20261027_040459|P10|models=23 verdict_types=2 scripts=1729
+20261027_040459|P11|holds=36 borderline=0 quarantine_dirs=1
+20261027_040459|P12|head=9ad6fd5 rollback_tags=1
+20261027_050507|P1|mem_pct=9.1 disk_pct=55 load=0.17 ollama=up
+20261027_050507|P2|warm_models=23 fts_excerpts=49
+20261027_050507|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261027_050507|P4|errs_blocked=8
+20261027_050507|P5|local_models=23 debate_entries=49
+20261027_050507|P6|dupes=0 total=49 graded=49
+20261027_050507|P7|schema=49ba22964598 patterned_commits=0
+20261027_050507|P8|fts=49 log_feed=49 joined=49
+20261027_050507|P9|tiny_3b=3 small_7b=5 other=15
+20261027_050507|P10|models=23 verdict_types=2 scripts=1729
+20261027_050507|P11|holds=36 borderline=0 quarantine_dirs=1
+20261027_050507|P12|head=9ad6fd5 rollback_tags=1
+20261027_060514|P1|mem_pct=9.1 disk_pct=55 load=0.18 ollama=up
+20261027_060514|P2|warm_models=23 fts_excerpts=49
+20261027_060514|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261027_060514|P4|errs_blocked=8
+20261027_060514|P5|local_models=23 debate_entries=49
+20261027_060514|P6|dupes=0 total=49 graded=49
+20261027_060514|P7|schema=49ba22964598 patterned_commits=0
+20261027_060514|P8|fts=49 log_feed=49 joined=49
+20261027_060514|P9|tiny_3b=3 small_7b=5 other=15
+20261027_060514|P10|models=23 verdict_types=2 scripts=1729
+20261027_060514|P11|holds=36 borderline=0 quarantine_dirs=1
+20261027_060514|P12|head=9ad6fd5 rollback_tags=1
+20261027_070537|P1|mem_pct=9.1 disk_pct=55 load=0.11 ollama=up
+20261027_070537|P2|warm_models=23 fts_excerpts=49
+20261027_070537|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261027_070537|P4|errs_blocked=8
+20261027_070537|P5|local_models=23 debate_entries=49
+20261027_070537|P6|dupes=0 total=49 graded=49
+20261027_070537|P7|schema=49ba22964598 patterned_commits=0
+20261027_070537|P8|fts=49 log_feed=49 joined=49
+20261027_070537|P9|tiny_3b=3 small_7b=5 other=15
+20261027_070537|P10|models=23 verdict_types=2 scripts=1729
+20261027_070537|P11|holds=36 borderline=0 quarantine_dirs=1
+20261027_070537|P12|head=9ad6fd5 rollback_tags=1
+20261027_080547|P1|mem_pct=8.9 disk_pct=55 load=0.25 ollama=up
+20261027_080547|P2|warm_models=23 fts_excerpts=49
+20261027_080547|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261027_080547|P4|errs_blocked=8
+20261027_080547|P5|local_models=23 debate_entries=49
+20261027_080547|P6|dupes=0 total=49 graded=49
+20261027_080547|P7|schema=49ba22964598 patterned_commits=0
+20261027_080547|P8|fts=49 log_feed=49 joined=49
+20261027_080547|P9|tiny_3b=3 small_7b=5 other=15
+20261027_080547|P10|models=23 verdict_types=2 scripts=1729
+20261027_080547|P11|holds=36 borderline=0 quarantine_dirs=1
+20261027_080547|P12|head=9ad6fd5 rollback_tags=1
+20261027_090553|P1|mem_pct=8.8 disk_pct=55 load=0.29 ollama=up
+20261027_090553|P2|warm_models=23 fts_excerpts=49
+20261027_090553|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261027_090553|P4|errs_blocked=8
+20261027_090553|P5|local_models=23 debate_entries=49
+20261027_090553|P6|dupes=0 total=49 graded=49
+20261027_090553|P7|schema=49ba22964598 patterned_commits=0
+20261027_090553|P8|fts=49 log_feed=49 joined=49
+20261027_090553|P9|tiny_3b=3 small_7b=5 other=15
+20261027_090553|P10|models=23 verdict_types=2 scripts=1729
+20261027_090553|P11|holds=36 borderline=0 quarantine_dirs=1
+20261027_090553|P12|head=9ad6fd5 rollback_tags=1
+20261027_100553|P1|mem_pct=8.8 disk_pct=55 load=0.17 ollama=up
+20261027_100553|P2|warm_models=23 fts_excerpts=49
+20261027_100553|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261027_100553|P4|errs_blocked=8
+20261027_100553|P5|local_models=23 debate_entries=49
+20261027_100553|P6|dupes=0 total=49 graded=49
+20261027_100553|P7|schema=49ba22964598 patterned_commits=0
+20261027_100553|P8|fts=49 log_feed=49 joined=49
+20261027_100553|P9|tiny_3b=3 small_7b=5 other=15
+20261027_100553|P10|models=23 verdict_types=2 scripts=1729
+20261027_100553|P11|holds=36 borderline=0 quarantine_dirs=1
+20261027_100553|P12|head=9ad6fd5 rollback_tags=1
+20261027_110607|P1|mem_pct=8.9 disk_pct=55 load=0.31 ollama=up
+20261027_110607|P2|warm_models=23 fts_excerpts=49
+20261027_110607|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261027_110607|P4|errs_blocked=8
+20261027_110607|P5|local_models=23 debate_entries=49
+20261027_110607|P6|dupes=0 total=49 graded=49
+20261027_110607|P7|schema=49ba22964598 patterned_commits=0
+20261027_110607|P8|fts=49 log_feed=49 joined=49
+20261027_110607|P9|tiny_3b=3 small_7b=5 other=15
+20261027_110607|P10|models=23 verdict_types=2 scripts=1729
+20261027_110607|P11|holds=36 borderline=0 quarantine_dirs=1
+20261027_110607|P12|head=9ad6fd5 rollback_tags=1
+20261027_120617|P1|mem_pct=8.9 disk_pct=55 load=0.20 ollama=up
+20261027_120617|P2|warm_models=23 fts_excerpts=49
+20261027_120617|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261027_120617|P4|errs_blocked=8
+20261027_120617|P5|local_models=23 debate_entries=49
+20261027_120617|P6|dupes=0 total=49 graded=49
+20261027_120617|P7|schema=49ba22964598 patterned_commits=0
+20261027_120617|P8|fts=49 log_feed=49 joined=49
+20261027_120617|P9|tiny_3b=3 small_7b=5 other=15
+20261027_120617|P10|models=23 verdict_types=2 scripts=1729
+20261027_120617|P11|holds=36 borderline=0 quarantine_dirs=1
+20261027_120617|P12|head=9ad6fd5 rollback_tags=1
+20261027_130622|P1|mem_pct=8.9 disk_pct=55 load=0.25 ollama=up
+20261027_130622|P2|warm_models=23 fts_excerpts=49
+20261027_130622|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261027_130622|P4|errs_blocked=8
+20261027_130622|P5|local_models=23 debate_entries=49
+20261027_130622|P6|dupes=0 total=49 graded=49
+20261027_130622|P7|schema=49ba22964598 patterned_commits=0
+20261027_130622|P8|fts=49 log_feed=49 joined=49
+20261027_130622|P9|tiny_3b=3 small_7b=5 other=15
+20261027_130622|P10|models=23 verdict_types=2 scripts=1729
+20261027_130622|P11|holds=36 borderline=0 quarantine_dirs=1
+20261027_130622|P12|head=9ad6fd5 rollback_tags=1
+20261027_140622|P1|mem_pct=8.9 disk_pct=55 load=0.21 ollama=up
+20261027_140622|P2|warm_models=23 fts_excerpts=49
+20261027_140622|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261027_140622|P4|errs_blocked=8
+20261027_140622|P5|local_models=23 debate_entries=49
+20261027_140622|P6|dupes=0 total=49 graded=49
+20261027_140622|P7|schema=49ba22964598 patterned_commits=0
+20261027_140622|P8|fts=49 log_feed=49 joined=49
+20261027_140622|P9|tiny_3b=3 small_7b=5 other=15
+20261027_140622|P10|models=23 verdict_types=2 scripts=1729
+20261027_140622|P11|holds=36 borderline=0 quarantine_dirs=1
+20261027_140622|P12|head=9ad6fd5 rollback_tags=1
+20261027_150622|P1|mem_pct=8.9 disk_pct=55 load=0.10 ollama=up
+20261027_150622|P2|warm_models=23 fts_excerpts=49
+20261027_150622|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261027_150622|P4|errs_blocked=8
+20261027_150622|P5|local_models=23 debate_entries=49
+20261027_150622|P6|dupes=0 total=49 graded=49
+20261027_150622|P7|schema=49ba22964598 patterned_commits=0
+20261027_150622|P8|fts=49 log_feed=49 joined=49
+20261027_150622|P9|tiny_3b=3 small_7b=5 other=15
+20261027_150622|P10|models=23 verdict_types=2 scripts=1729
+20261027_150622|P11|holds=36 borderline=0 quarantine_dirs=1
+20261027_150622|P12|head=9ad6fd5 rollback_tags=1
+20261027_160647|P1|mem_pct=9.0 disk_pct=55 load=0.10 ollama=up
+20261027_160647|P2|warm_models=23 fts_excerpts=49
+20261027_160647|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261027_160647|P4|errs_blocked=8
+20261027_160647|P5|local_models=23 debate_entries=49
+20261027_160647|P6|dupes=0 total=49 graded=49
+20261027_160647|P7|schema=49ba22964598 patterned_commits=0
+20261027_160647|P8|fts=49 log_feed=49 joined=49
+20261027_160647|P9|tiny_3b=3 small_7b=5 other=15
+20261027_160647|P10|models=23 verdict_types=2 scripts=1729
+20261027_160647|P11|holds=36 borderline=0 quarantine_dirs=1
+20261027_160647|P12|head=9ad6fd5 rollback_tags=1
+20261027_170652|P1|mem_pct=9.0 disk_pct=55 load=0.03 ollama=up
+20261027_170652|P2|warm_models=23 fts_excerpts=49
+20261027_170652|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261027_170652|P4|errs_blocked=8
+20261027_170652|P5|local_models=23 debate_entries=49
+20261027_170652|P6|dupes=0 total=49 graded=49
+20261027_170652|P7|schema=49ba22964598 patterned_commits=0
+20261027_170652|P8|fts=49 log_feed=49 joined=49
+20261027_170652|P9|tiny_3b=3 small_7b=5 other=15
+20261027_170652|P10|models=23 verdict_types=2 scripts=1729
+20261027_170652|P11|holds=36 borderline=0 quarantine_dirs=1
+20261027_170652|P12|head=9ad6fd5 rollback_tags=1
+20261027_180707|P1|mem_pct=9.0 disk_pct=55 load=0.16 ollama=up
+20261027_180707|P2|warm_models=23 fts_excerpts=49
+20261027_180707|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261027_180707|P4|errs_blocked=8
+20261027_180707|P5|local_models=23 debate_entries=49
+20261027_180707|P6|dupes=0 total=49 graded=49
+20261027_180707|P7|schema=49ba22964598 patterned_commits=0
+20261027_180707|P8|fts=49 log_feed=49 joined=49
+20261027_180707|P9|tiny_3b=3 small_7b=5 other=15
+20261027_180707|P10|models=23 verdict_types=2 scripts=1729
+20261027_180707|P11|holds=36 borderline=0 quarantine_dirs=1
+20261027_180707|P12|head=9ad6fd5 rollback_tags=1
+20261027_190717|P1|mem_pct=9.0 disk_pct=55 load=0.27 ollama=up
+20261027_190717|P2|warm_models=23 fts_excerpts=49
+20261027_190717|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261027_190717|P4|errs_blocked=8
+20261027_190717|P5|local_models=23 debate_entries=49
+20261027_190717|P6|dupes=0 total=49 graded=49
+20261027_190717|P7|schema=49ba22964598 patterned_commits=0
+20261027_190717|P8|fts=49 log_feed=49 joined=49
+20261027_190717|P9|tiny_3b=3 small_7b=5 other=15
+20261027_190717|P10|models=23 verdict_types=2 scripts=1729
+20261027_190717|P11|holds=36 borderline=0 quarantine_dirs=1
+20261027_190717|P12|head=9ad6fd5 rollback_tags=1
+20261027_200721|P1|mem_pct=9.0 disk_pct=55 load=0.10 ollama=up
+20261027_200721|P2|warm_models=23 fts_excerpts=49
+20261027_200721|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261027_200721|P4|errs_blocked=8
+20261027_200721|P5|local_models=23 debate_entries=49
+20261027_200721|P6|dupes=0 total=49 graded=49
+20261027_200721|P7|schema=49ba22964598 patterned_commits=0
+20261027_200721|P8|fts=49 log_feed=49 joined=49
+20261027_200721|P9|tiny_3b=3 small_7b=5 other=15
+20261027_200721|P10|models=23 verdict_types=2 scripts=1729
+20261027_200721|P11|holds=36 borderline=0 quarantine_dirs=1
+20261027_200721|P12|head=9ad6fd5 rollback_tags=1
+20261027_210721|P1|mem_pct=9.0 disk_pct=55 load=0.18 ollama=up
+20261027_210721|P2|warm_models=23 fts_excerpts=49
+20261027_210721|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261027_210721|P4|errs_blocked=8
+20261027_210721|P5|local_models=23 debate_entries=49
+20261027_210721|P6|dupes=0 total=49 graded=49
+20261027_210721|P7|schema=49ba22964598 patterned_commits=0
+20261027_210721|P8|fts=49 log_feed=49 joined=49
+20261027_210721|P9|tiny_3b=3 small_7b=5 other=15
+20261027_210721|P10|models=23 verdict_types=2 scripts=1729
+20261027_210721|P11|holds=36 borderline=0 quarantine_dirs=1
+20261027_210721|P12|head=9ad6fd5 rollback_tags=1
+20261027_220747|P1|mem_pct=9.0 disk_pct=55 load=0.04 ollama=up
+20261027_220747|P2|warm_models=23 fts_excerpts=49
+20261027_220747|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261027_220747|P4|errs_blocked=8
+20261027_220747|P5|local_models=23 debate_entries=49
+20261027_220747|P6|dupes=0 total=49 graded=49
+20261027_220747|P7|schema=49ba22964598 patterned_commits=0
+20261027_220747|P8|fts=49 log_feed=49 joined=49
+20261027_220747|P9|tiny_3b=3 small_7b=5 other=15
+20261027_220747|P10|models=23 verdict_types=2 scripts=1729
+20261027_220747|P11|holds=36 borderline=0 quarantine_dirs=1
+20261027_220747|P12|head=9ad6fd5 rollback_tags=1
+20261027_230750|P1|mem_pct=9.0 disk_pct=55 load=0.26 ollama=up
+20261027_230750|P2|warm_models=23 fts_excerpts=49
+20261027_230750|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261027_230750|P4|errs_blocked=8
+20261027_230750|P5|local_models=23 debate_entries=49
+20261027_230750|P6|dupes=0 total=49 graded=49
+20261027_230750|P7|schema=49ba22964598 patterned_commits=0
+20261027_230750|P8|fts=49 log_feed=49 joined=49
+20261027_230750|P9|tiny_3b=3 small_7b=5 other=15
+20261027_230750|P10|models=23 verdict_types=2 scripts=1729
+20261027_230750|P11|holds=36 borderline=0 quarantine_dirs=1
+20261027_230750|P12|head=3182b13 rollback_tags=1
+20261028_000751|P1|mem_pct=9.1 disk_pct=55 load=0.27 ollama=up
+20261028_000751|P2|warm_models=23 fts_excerpts=49
+20261028_000751|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261028_000751|P4|errs_blocked=8
+20261028_000751|P5|local_models=23 debate_entries=49
+20261028_000751|P6|dupes=0 total=49 graded=49
+20261028_000751|P7|schema=49ba22964598 patterned_commits=0
+20261028_000751|P8|fts=49 log_feed=49 joined=49
+20261028_000751|P9|tiny_3b=3 small_7b=5 other=15
+20261028_000751|P10|models=23 verdict_types=2 scripts=1729
+20261028_000751|P11|holds=36 borderline=0 quarantine_dirs=1
+20261028_000751|P12|head=3182b13 rollback_tags=1
+20261028_005453|P1|mem_pct=29.0 disk_pct=54 load=0.31 ollama=up
+20261028_005453|P2|warm_models=23 fts_excerpts=49
+20261028_005453|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261028_005453|P4|errs_blocked=8
+20261028_005453|P5|local_models=23 debate_entries=49
+20261028_005453|P6|dupes=0 total=49 graded=49
+20261028_005453|P7|schema=49ba22964598 patterned_commits=0
+20261028_005453|P8|fts=49 log_feed=49 joined=49
+20261028_005453|P9|tiny_3b=3 small_7b=5 other=15
+20261028_005453|P10|models=23 verdict_types=2 scripts=1731
+20261028_005453|P11|holds=36 borderline=0 quarantine_dirs=1
+20261028_005453|P12|head=3182b13 rollback_tags=1
+20261028_015454|P1|mem_pct=29.4 disk_pct=54 load=0.17 ollama=up
+20261028_015454|P2|warm_models=23 fts_excerpts=49
+20261028_015454|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261028_015454|P4|errs_blocked=8
+20261028_015454|P5|local_models=23 debate_entries=49
+20261028_015454|P6|dupes=0 total=49 graded=49
+20261028_015454|P7|schema=49ba22964598 patterned_commits=0
+20261028_015454|P8|fts=49 log_feed=49 joined=49
+20261028_015454|P9|tiny_3b=3 small_7b=5 other=15
+20261028_015454|P10|models=23 verdict_types=2 scripts=1731
+20261028_015454|P11|holds=36 borderline=0 quarantine_dirs=1
+20261028_015454|P12|head=3182b13 rollback_tags=1
+20261028_025455|P1|mem_pct=30.9 disk_pct=54 load=1.13 ollama=up
+20261028_025455|P2|warm_models=23 fts_excerpts=49
+20261028_025455|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261028_025455|P4|errs_blocked=8
+20261028_025455|P5|local_models=23 debate_entries=49
+20261028_025455|P6|dupes=0 total=49 graded=49
+20261028_025455|P7|schema=49ba22964598 patterned_commits=0
+20261028_025455|P8|fts=49 log_feed=49 joined=49
+20261028_025455|P9|tiny_3b=3 small_7b=5 other=15
+20261028_025455|P10|models=23 verdict_types=2 scripts=1732
+20261028_025455|P11|holds=36 borderline=0 quarantine_dirs=1
+20261028_025455|P12|head=3182b13 rollback_tags=1
+20261028_035507|P1|mem_pct=21.6 disk_pct=54 load=0.33 ollama=up
+20261028_035507|P2|warm_models=23 fts_excerpts=49
+20261028_035507|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261028_035507|P4|errs_blocked=8
+20261028_035507|P5|local_models=23 debate_entries=49
+20261028_035507|P6|dupes=0 total=49 graded=49
+20261028_035507|P7|schema=49ba22964598 patterned_commits=0
+20261028_035507|P8|fts=49 log_feed=49 joined=49
+20261028_035507|P9|tiny_3b=3 small_7b=5 other=15
+20261028_035507|P10|models=23 verdict_types=2 scripts=1732
+20261028_035507|P11|holds=36 borderline=0 quarantine_dirs=1
+20261028_035507|P12|head=3182b13 rollback_tags=1
+20261028_045517|P1|mem_pct=30.6 disk_pct=54 load=0.13 ollama=up
+20261028_045517|P2|warm_models=23 fts_excerpts=49
+20261028_045517|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261028_045517|P4|errs_blocked=8
+20261028_045517|P5|local_models=23 debate_entries=49
+20261028_045517|P6|dupes=0 total=49 graded=49
+20261028_045517|P7|schema=49ba22964598 patterned_commits=0
+20261028_045517|P8|fts=49 log_feed=49 joined=49
+20261028_045517|P9|tiny_3b=3 small_7b=5 other=15
+20261028_045517|P10|models=23 verdict_types=2 scripts=1732
+20261028_045517|P11|holds=36 borderline=0 quarantine_dirs=1
+20261028_045517|P12|head=971074b rollback_tags=1
+20261028_055517|P1|mem_pct=14.9 disk_pct=54 load=0.56 ollama=up
+20261028_055517|P2|warm_models=23 fts_excerpts=49
+20261028_055517|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261028_055517|P4|errs_blocked=8
+20261028_055517|P5|local_models=23 debate_entries=49
+20261028_055517|P6|dupes=0 total=49 graded=49
+20261028_055517|P7|schema=49ba22964598 patterned_commits=0
+20261028_055517|P8|fts=49 log_feed=49 joined=49
+20261028_055517|P9|tiny_3b=3 small_7b=5 other=15
+20261028_055517|P10|models=23 verdict_types=2 scripts=1732
+20261028_055517|P11|holds=36 borderline=0 quarantine_dirs=1
+20261028_055517|P12|head=971074b rollback_tags=1
+20261028_065519|P1|mem_pct=11.9 disk_pct=54 load=1.84 ollama=up
+20261028_065519|P2|warm_models=23 fts_excerpts=49
+20261028_065519|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261028_065519|P4|errs_blocked=8
+20261028_065519|P5|local_models=23 debate_entries=49
+20261028_065519|P6|dupes=0 total=49 graded=49
+20261028_065519|P7|schema=49ba22964598 patterned_commits=0
+20261028_065519|P8|fts=49 log_feed=49 joined=49
+20261028_065519|P9|tiny_3b=3 small_7b=5 other=15
+20261028_065519|P10|models=23 verdict_types=2 scripts=1732
+20261028_065519|P11|holds=36 borderline=0 quarantine_dirs=1
+20261028_065519|P12|head=8236ff9 rollback_tags=1
+20261028_075519|P1|mem_pct=12.2 disk_pct=54 load=1.25 ollama=up
+20261028_075519|P2|warm_models=23 fts_excerpts=49
+20261028_075519|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261028_075519|P4|errs_blocked=8
+20261028_075519|P5|local_models=23 debate_entries=49
+20261028_075519|P6|dupes=0 total=49 graded=49
+20261028_075519|P7|schema=49ba22964598 patterned_commits=0
+20261028_075519|P8|fts=49 log_feed=49 joined=49
+20261028_075519|P9|tiny_3b=3 small_7b=5 other=15
+20261028_075519|P10|models=23 verdict_types=2 scripts=1732
+20261028_075519|P11|holds=36 borderline=0 quarantine_dirs=1
+20261028_075519|P12|head=8236ff9 rollback_tags=1
+20261028_085547|P1|mem_pct=12.2 disk_pct=54 load=1.71 ollama=up
+20261028_085547|P2|warm_models=23 fts_excerpts=49
+20261028_085547|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261028_085547|P4|errs_blocked=8
+20261028_085547|P5|local_models=23 debate_entries=49
+20261028_085547|P6|dupes=0 total=49 graded=49
+20261028_085547|P7|schema=49ba22964598 patterned_commits=0
+20261028_085547|P8|fts=49 log_feed=49 joined=49
+20261028_085547|P9|tiny_3b=3 small_7b=5 other=15
+20261028_085547|P10|models=23 verdict_types=2 scripts=1732
+20261028_085547|P11|holds=36 borderline=0 quarantine_dirs=1
+20261028_085547|P12|head=8236ff9 rollback_tags=1
+20261028_095549|P1|mem_pct=12.4 disk_pct=54 load=1.60 ollama=up
+20261028_095549|P2|warm_models=23 fts_excerpts=49
+20261028_095549|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261028_095549|P4|errs_blocked=8
+20261028_095549|P5|local_models=23 debate_entries=49
+20261028_095549|P6|dupes=0 total=49 graded=49
+20261028_095549|P7|schema=49ba22964598 patterned_commits=0
+20261028_095549|P8|fts=49 log_feed=49 joined=49
+20261028_095549|P9|tiny_3b=3 small_7b=5 other=15
+20261028_095549|P10|models=23 verdict_types=2 scripts=1732
+20261028_095549|P11|holds=36 borderline=0 quarantine_dirs=1
+20261028_095549|P12|head=8236ff9 rollback_tags=1
+20261028_105608|P1|mem_pct=12.3 disk_pct=54 load=1.83 ollama=up
+20261028_105608|P2|warm_models=23 fts_excerpts=49
+20261028_105608|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261028_105608|P4|errs_blocked=8
+20261028_105608|P5|local_models=23 debate_entries=49
+20261028_105608|P6|dupes=0 total=49 graded=49
+20261028_105608|P7|schema=49ba22964598 patterned_commits=0
+20261028_105608|P8|fts=49 log_feed=49 joined=49
+20261028_105608|P9|tiny_3b=3 small_7b=5 other=15
+20261028_105608|P10|models=23 verdict_types=2 scripts=1732
+20261028_105608|P11|holds=36 borderline=0 quarantine_dirs=1
+20261028_105608|P12|head=8236ff9 rollback_tags=1
+20261028_115618|P1|mem_pct=12.4 disk_pct=54 load=1.78 ollama=up
+20261028_115618|P2|warm_models=23 fts_excerpts=49
+20261028_115618|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261028_115618|P4|errs_blocked=8
+20261028_115618|P5|local_models=23 debate_entries=49
+20261028_115618|P6|dupes=0 total=49 graded=49
+20261028_115618|P7|schema=49ba22964598 patterned_commits=0
+20261028_115618|P8|fts=49 log_feed=49 joined=49
+20261028_115618|P9|tiny_3b=3 small_7b=5 other=15
+20261028_115618|P10|models=23 verdict_types=2 scripts=1732
+20261028_115618|P11|holds=36 borderline=0 quarantine_dirs=1
+20261028_115618|P12|head=8236ff9 rollback_tags=1
+20261028_125618|P1|mem_pct=14.8 disk_pct=54 load=1.67 ollama=up
+20261028_125618|P2|warm_models=23 fts_excerpts=49
+20261028_125618|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261028_125618|P4|errs_blocked=8
+20261028_125618|P5|local_models=23 debate_entries=49
+20261028_125618|P6|dupes=0 total=49 graded=49
+20261028_125618|P7|schema=49ba22964598 patterned_commits=0
+20261028_125618|P8|fts=49 log_feed=49 joined=49
+20261028_125618|P9|tiny_3b=3 small_7b=5 other=15
+20261028_125618|P10|models=23 verdict_types=2 scripts=1732
+20261028_125618|P11|holds=36 borderline=0 quarantine_dirs=1
+20261028_125618|P12|head=8236ff9 rollback_tags=1
+20261028_135647|P1|mem_pct=15.2 disk_pct=54 load=1.75 ollama=up
+20261028_135647|P2|warm_models=23 fts_excerpts=49
+20261028_135647|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261028_135647|P4|errs_blocked=8
+20261028_135647|P5|local_models=23 debate_entries=49
+20261028_135647|P6|dupes=0 total=49 graded=49
+20261028_135647|P7|schema=49ba22964598 patterned_commits=0
+20261028_135647|P8|fts=49 log_feed=49 joined=49
+20261028_135647|P9|tiny_3b=3 small_7b=5 other=15
+20261028_135647|P10|models=23 verdict_types=2 scripts=1732
+20261028_135647|P11|holds=36 borderline=0 quarantine_dirs=1
+20261028_135647|P12|head=8236ff9 rollback_tags=1
+20261028_145647|P1|mem_pct=12.7 disk_pct=54 load=1.51 ollama=up
+20261028_145647|P2|warm_models=23 fts_excerpts=49
+20261028_145647|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261028_145647|P4|errs_blocked=8
+20261028_145647|P5|local_models=23 debate_entries=49
+20261028_145647|P6|dupes=0 total=49 graded=49
+20261028_145647|P7|schema=49ba22964598 patterned_commits=0
+20261028_145647|P8|fts=49 log_feed=49 joined=49
+20261028_145647|P9|tiny_3b=3 small_7b=5 other=15
+20261028_145647|P10|models=23 verdict_types=2 scripts=1732
+20261028_145647|P11|holds=36 borderline=0 quarantine_dirs=1
+20261028_145647|P12|head=8236ff9 rollback_tags=1
+20261028_155657|P1|mem_pct=9.5 disk_pct=54 load=1.56 ollama=up
+20261028_155657|P2|warm_models=23 fts_excerpts=49
+20261028_155657|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261028_155657|P4|errs_blocked=8
+20261028_155657|P5|local_models=23 debate_entries=49
+20261028_155657|P6|dupes=0 total=49 graded=49
+20261028_155657|P7|schema=49ba22964598 patterned_commits=0
+20261028_155657|P8|fts=49 log_feed=49 joined=49
+20261028_155657|P9|tiny_3b=3 small_7b=5 other=15
+20261028_155657|P10|models=23 verdict_types=2 scripts=1732
+20261028_155657|P11|holds=36 borderline=0 quarantine_dirs=1
+20261028_155657|P12|head=8236ff9 rollback_tags=1
+20261028_165659|P1|mem_pct=9.5 disk_pct=54 load=0.05 ollama=up
+20261028_165659|P2|warm_models=23 fts_excerpts=49
+20261028_165659|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261028_165659|P4|errs_blocked=8
+20261028_165659|P5|local_models=23 debate_entries=49
+20261028_165659|P6|dupes=0 total=49 graded=49
+20261028_165659|P7|schema=49ba22964598 patterned_commits=0
+20261028_165659|P8|fts=49 log_feed=49 joined=49
+20261028_165659|P9|tiny_3b=3 small_7b=5 other=15
+20261028_165659|P10|models=23 verdict_types=2 scripts=1732
+20261028_165659|P11|holds=36 borderline=0 quarantine_dirs=1
+20261028_165659|P12|head=8236ff9 rollback_tags=1
+20261028_175659|P1|mem_pct=9.6 disk_pct=54 load=0.22 ollama=up
+20261028_175659|P2|warm_models=23 fts_excerpts=49
+20261028_175659|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261028_175659|P4|errs_blocked=8
+20261028_175659|P5|local_models=23 debate_entries=49
+20261028_175659|P6|dupes=0 total=49 graded=49
+20261028_175659|P7|schema=49ba22964598 patterned_commits=0
+20261028_175659|P8|fts=49 log_feed=49 joined=49
+20261028_175659|P9|tiny_3b=3 small_7b=5 other=15
+20261028_175659|P10|models=23 verdict_types=2 scripts=1732
+20261028_175659|P11|holds=36 borderline=0 quarantine_dirs=1
+20261028_175659|P12|head=8236ff9 rollback_tags=1
+20261028_185707|P1|mem_pct=9.6 disk_pct=54 load=0.03 ollama=up
+20261028_185707|P2|warm_models=23 fts_excerpts=49
+20261028_185707|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261028_185707|P4|errs_blocked=8
+20261028_185707|P5|local_models=23 debate_entries=49
+20261028_185707|P6|dupes=0 total=49 graded=49
+20261028_185707|P7|schema=49ba22964598 patterned_commits=0
+20261028_185707|P8|fts=49 log_feed=49 joined=49
+20261028_185707|P9|tiny_3b=3 small_7b=5 other=15
+20261028_185707|P10|models=23 verdict_types=2 scripts=1732
+20261028_185707|P11|holds=36 borderline=0 quarantine_dirs=1
+20261028_185707|P12|head=8236ff9 rollback_tags=1
+20261028_195727|P1|mem_pct=9.6 disk_pct=54 load=0.20 ollama=up
+20261028_195727|P2|warm_models=23 fts_excerpts=49
+20261028_195727|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261028_195727|P4|errs_blocked=8
+20261028_195727|P5|local_models=23 debate_entries=49
+20261028_195727|P6|dupes=0 total=49 graded=49
+20261028_195727|P7|schema=49ba22964598 patterned_commits=0
+20261028_195727|P8|fts=49 log_feed=49 joined=49
+20261028_195727|P9|tiny_3b=3 small_7b=5 other=15
+20261028_195727|P10|models=23 verdict_types=2 scripts=1732
+20261028_195727|P11|holds=36 borderline=0 quarantine_dirs=1
+20261028_195727|P12|head=8236ff9 rollback_tags=1
+20261028_205728|P1|mem_pct=9.6 disk_pct=54 load=0.07 ollama=up
+20261028_205728|P2|warm_models=23 fts_excerpts=49
+20261028_205728|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261028_205728|P4|errs_blocked=8
+20261028_205728|P5|local_models=23 debate_entries=49
+20261028_205728|P6|dupes=0 total=49 graded=49
+20261028_205728|P7|schema=49ba22964598 patterned_commits=0
+20261028_205728|P8|fts=49 log_feed=49 joined=49
+20261028_205728|P9|tiny_3b=3 small_7b=5 other=15
+20261028_205728|P10|models=23 verdict_types=2 scripts=1732
+20261028_205728|P11|holds=36 borderline=0 quarantine_dirs=1
+20261028_205728|P12|head=8236ff9 rollback_tags=1
+20261028_215728|P1|mem_pct=9.6 disk_pct=54 load=0.38 ollama=up
+20261028_215728|P2|warm_models=23 fts_excerpts=49
+20261028_215728|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261028_215728|P4|errs_blocked=8
+20261028_215728|P5|local_models=23 debate_entries=49
+20261028_215728|P6|dupes=0 total=49 graded=49
+20261028_215728|P7|schema=49ba22964598 patterned_commits=0
+20261028_215728|P8|fts=49 log_feed=49 joined=49
+20261028_215728|P9|tiny_3b=3 small_7b=5 other=15
+20261028_215728|P10|models=23 verdict_types=2 scripts=1732
+20261028_215728|P11|holds=36 borderline=0 quarantine_dirs=1
+20261028_215728|P12|head=8236ff9 rollback_tags=1
+20261028_225757|P1|mem_pct=9.6 disk_pct=54 load=0.18 ollama=up
+20261028_225757|P2|warm_models=23 fts_excerpts=49
+20261028_225757|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261028_225757|P4|errs_blocked=8
+20261028_225757|P5|local_models=23 debate_entries=49
+20261028_225757|P6|dupes=0 total=49 graded=49
+20261028_225757|P7|schema=49ba22964598 patterned_commits=0
+20261028_225757|P8|fts=49 log_feed=49 joined=49
+20261028_225757|P9|tiny_3b=3 small_7b=5 other=15
+20261028_225757|P10|models=23 verdict_types=2 scripts=1734
+20261028_225757|P11|holds=36 borderline=0 quarantine_dirs=1
+20261028_225757|P12|head=8236ff9 rollback_tags=1
+20261028_235758|P1|mem_pct=9.7 disk_pct=54 load=0.24 ollama=up
+20261028_235758|P2|warm_models=23 fts_excerpts=49
+20261028_235758|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261028_235758|P4|errs_blocked=8
+20261028_235758|P5|local_models=23 debate_entries=49
+20261028_235758|P6|dupes=0 total=49 graded=49
+20261028_235758|P7|schema=49ba22964598 patterned_commits=0
+20261028_235758|P8|fts=49 log_feed=49 joined=49
+20261028_235758|P9|tiny_3b=3 small_7b=5 other=15
+20261028_235758|P10|models=23 verdict_types=2 scripts=1734
+20261028_235758|P11|holds=36 borderline=0 quarantine_dirs=1
+20261028_235758|P12|head=8236ff9 rollback_tags=1
+20261029_005807|P1|mem_pct=9.7 disk_pct=54 load=0.22 ollama=up
+20261029_005807|P2|warm_models=23 fts_excerpts=49
+20261029_005807|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261029_005807|P4|errs_blocked=8
+20261029_005807|P5|local_models=23 debate_entries=49
+20261029_005807|P6|dupes=0 total=49 graded=49
+20261029_005807|P7|schema=49ba22964598 patterned_commits=0
+20261029_005807|P8|fts=49 log_feed=49 joined=49
+20261029_005807|P9|tiny_3b=3 small_7b=5 other=15
+20261029_005807|P10|models=23 verdict_types=2 scripts=1734
+20261029_005807|P11|holds=36 borderline=0 quarantine_dirs=1
+20261029_005807|P12|head=8236ff9 rollback_tags=1
+20261029_015827|P1|mem_pct=9.6 disk_pct=54 load=0.35 ollama=up
+20261029_015827|P2|warm_models=23 fts_excerpts=49
+20261029_015827|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261029_015827|P4|errs_blocked=8
+20261029_015827|P5|local_models=23 debate_entries=49
+20261029_015827|P6|dupes=0 total=49 graded=49
+20261029_015827|P7|schema=49ba22964598 patterned_commits=0
+20261029_015827|P8|fts=49 log_feed=49 joined=49
+20261029_015827|P9|tiny_3b=3 small_7b=5 other=15
+20261029_015827|P10|models=23 verdict_types=2 scripts=1734
+20261029_015827|P11|holds=36 borderline=0 quarantine_dirs=1
+20261029_015827|P12|head=8236ff9 rollback_tags=1
+20261029_025827|P1|mem_pct=9.7 disk_pct=54 load=0.10 ollama=up
+20261029_025827|P2|warm_models=23 fts_excerpts=49
+20261029_025827|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261029_025827|P4|errs_blocked=8
+20261029_025827|P5|local_models=23 debate_entries=49
+20261029_025827|P6|dupes=0 total=49 graded=49
+20261029_025827|P7|schema=49ba22964598 patterned_commits=0
+20261029_025827|P8|fts=49 log_feed=49 joined=49
+20261029_025827|P9|tiny_3b=3 small_7b=5 other=15
+20261029_025827|P10|models=23 verdict_types=2 scripts=1734
+20261029_025827|P11|holds=36 borderline=0 quarantine_dirs=1
+20261029_025827|P12|head=8236ff9 rollback_tags=1
+20261029_035827|P1|mem_pct=10.5 disk_pct=54 load=0.15 ollama=up
+20261029_035827|P2|warm_models=23 fts_excerpts=49
+20261029_035827|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261029_035827|P4|errs_blocked=8
+20261029_035827|P5|local_models=23 debate_entries=49
+20261029_035827|P6|dupes=0 total=49 graded=49
+20261029_035827|P7|schema=49ba22964598 patterned_commits=0
+20261029_035827|P8|fts=49 log_feed=49 joined=49
+20261029_035827|P9|tiny_3b=3 small_7b=5 other=15
+20261029_035827|P10|models=23 verdict_types=2 scripts=1734
+20261029_035827|P11|holds=36 borderline=0 quarantine_dirs=1
+20261029_035827|P12|head=8236ff9 rollback_tags=1
+20261029_045831|P1|mem_pct=25.0 disk_pct=54 load=0.27 ollama=up
+20261029_045831|P2|warm_models=23 fts_excerpts=49
+20261029_045831|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261029_045831|P4|errs_blocked=8
+20261029_045831|P5|local_models=23 debate_entries=49
+20261029_045831|P6|dupes=0 total=49 graded=49
+20261029_045831|P7|schema=49ba22964598 patterned_commits=0
+20261029_045831|P8|fts=49 log_feed=49 joined=49
+20261029_045831|P9|tiny_3b=3 small_7b=5 other=15
+20261029_045831|P10|models=23 verdict_types=2 scripts=1734
+20261029_045831|P11|holds=36 borderline=0 quarantine_dirs=1
+20261029_045831|P12|head=8236ff9 rollback_tags=1
+20261029_055831|P1|mem_pct=8.9 disk_pct=54 load=0.14 ollama=up
+20261029_055831|P2|warm_models=23 fts_excerpts=49
+20261029_055831|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261029_055831|P4|errs_blocked=8
+20261029_055831|P5|local_models=23 debate_entries=49
+20261029_055831|P6|dupes=0 total=49 graded=49
+20261029_055831|P7|schema=49ba22964598 patterned_commits=0
+20261029_055831|P8|fts=49 log_feed=49 joined=49
+20261029_055831|P9|tiny_3b=3 small_7b=5 other=15
+20261029_055831|P10|models=23 verdict_types=2 scripts=1734
+20261029_055831|P11|holds=36 borderline=0 quarantine_dirs=1
+20261029_055831|P12|head=8236ff9 rollback_tags=1
+20261029_065857|P1|mem_pct=8.9 disk_pct=54 load=0.28 ollama=up
+20261029_065857|P2|warm_models=23 fts_excerpts=49
+20261029_065857|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261029_065857|P4|errs_blocked=8
+20261029_065857|P5|local_models=23 debate_entries=49
+20261029_065857|P6|dupes=0 total=49 graded=49
+20261029_065857|P7|schema=49ba22964598 patterned_commits=0
+20261029_065857|P8|fts=49 log_feed=49 joined=49
+20261029_065857|P9|tiny_3b=3 small_7b=5 other=15
+20261029_065857|P10|models=23 verdict_types=2 scripts=1734
+20261029_065857|P11|holds=36 borderline=0 quarantine_dirs=1
+20261029_065857|P12|head=8236ff9 rollback_tags=1
+20261029_075900|P1|mem_pct=8.9 disk_pct=54 load=0.27 ollama=up
+20261029_075900|P2|warm_models=23 fts_excerpts=49
+20261029_075900|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261029_075900|P4|errs_blocked=8
+20261029_075900|P5|local_models=23 debate_entries=49
+20261029_075900|P6|dupes=0 total=49 graded=49
+20261029_075900|P7|schema=49ba22964598 patterned_commits=0
+20261029_075900|P8|fts=49 log_feed=49 joined=49
+20261029_075900|P9|tiny_3b=3 small_7b=5 other=15
+20261029_075900|P10|models=23 verdict_types=2 scripts=1734
+20261029_075900|P11|holds=36 borderline=0 quarantine_dirs=1
+20261029_075900|P12|head=8236ff9 rollback_tags=1
+20261029_085907|P1|mem_pct=8.9 disk_pct=54 load=0.18 ollama=up
+20261029_085907|P2|warm_models=23 fts_excerpts=49
+20261029_085907|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261029_085907|P4|errs_blocked=8
+20261029_085907|P5|local_models=23 debate_entries=49
+20261029_085907|P6|dupes=0 total=49 graded=49
+20261029_085907|P7|schema=49ba22964598 patterned_commits=0
+20261029_085907|P8|fts=49 log_feed=49 joined=49
+20261029_085907|P9|tiny_3b=3 small_7b=5 other=15
+20261029_085907|P10|models=23 verdict_types=2 scripts=1734
+20261029_085907|P11|holds=36 borderline=0 quarantine_dirs=1
+20261029_085907|P12|head=8236ff9 rollback_tags=1
+20261029_095927|P1|mem_pct=8.8 disk_pct=54 load=0.17 ollama=up
+20261029_095927|P2|warm_models=23 fts_excerpts=49
+20261029_095927|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261029_095927|P4|errs_blocked=8
+20261029_095927|P5|local_models=23 debate_entries=49
+20261029_095927|P6|dupes=0 total=49 graded=49
+20261029_095927|P7|schema=49ba22964598 patterned_commits=0
+20261029_095927|P8|fts=49 log_feed=49 joined=49
+20261029_095927|P9|tiny_3b=3 small_7b=5 other=15
+20261029_095927|P10|models=23 verdict_types=2 scripts=1734
+20261029_095927|P11|holds=36 borderline=0 quarantine_dirs=1
+20261029_095927|P12|head=8236ff9 rollback_tags=1
+20261029_105929|P1|mem_pct=8.9 disk_pct=54 load=0.15 ollama=up
+20261029_105929|P2|warm_models=23 fts_excerpts=49
+20261029_105929|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261029_105929|P4|errs_blocked=8
+20261029_105929|P5|local_models=23 debate_entries=49
+20261029_105929|P6|dupes=0 total=49 graded=49
+20261029_105929|P7|schema=49ba22964598 patterned_commits=0
+20261029_105929|P8|fts=49 log_feed=49 joined=49
+20261029_105929|P9|tiny_3b=3 small_7b=5 other=15
+20261029_105929|P10|models=23 verdict_types=2 scripts=1734
+20261029_105929|P11|holds=36 borderline=0 quarantine_dirs=1
+20261029_105929|P12|head=8236ff9 rollback_tags=1
+20261029_115929|P1|mem_pct=8.8 disk_pct=54 load=0.11 ollama=up
+20261029_115929|P2|warm_models=23 fts_excerpts=49
+20261029_115929|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261029_115929|P4|errs_blocked=8
+20261029_115929|P5|local_models=23 debate_entries=49
+20261029_115929|P6|dupes=0 total=49 graded=49
+20261029_115929|P7|schema=49ba22964598 patterned_commits=0
+20261029_115929|P8|fts=49 log_feed=49 joined=49
+20261029_115929|P9|tiny_3b=3 small_7b=5 other=15
+20261029_115929|P10|models=23 verdict_types=2 scripts=1734
+20261029_115929|P11|holds=36 borderline=0 quarantine_dirs=1
+20261029_115929|P12|head=8236ff9 rollback_tags=1
+20261029_125957|P1|mem_pct=8.9 disk_pct=54 load=0.03 ollama=up
+20261029_125957|P2|warm_models=23 fts_excerpts=49
+20261029_125957|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261029_125957|P4|errs_blocked=8
+20261029_125957|P5|local_models=23 debate_entries=49
+20261029_125957|P6|dupes=0 total=49 graded=49
+20261029_125957|P7|schema=49ba22964598 patterned_commits=0
+20261029_125957|P8|fts=49 log_feed=49 joined=49
+20261029_125957|P9|tiny_3b=3 small_7b=5 other=15
+20261029_125957|P10|models=23 verdict_types=2 scripts=1734
+20261029_125957|P11|holds=36 borderline=0 quarantine_dirs=1
+20261029_125957|P12|head=8236ff9 rollback_tags=1
+20261029_135959|P1|mem_pct=8.9 disk_pct=54 load=0.01 ollama=up
+20261029_135959|P2|warm_models=23 fts_excerpts=49
+20261029_135959|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261029_135959|P4|errs_blocked=8
+20261029_135959|P5|local_models=23 debate_entries=49
+20261029_135959|P6|dupes=0 total=49 graded=49
+20261029_135959|P7|schema=49ba22964598 patterned_commits=0
+20261029_135959|P8|fts=49 log_feed=49 joined=49
+20261029_135959|P9|tiny_3b=3 small_7b=5 other=15
+20261029_135959|P10|models=23 verdict_types=2 scripts=1734
+20261029_135959|P11|holds=36 borderline=0 quarantine_dirs=1
+20261029_135959|P12|head=8236ff9 rollback_tags=1
+20261029_150007|P1|mem_pct=9.0 disk_pct=54 load=0.27 ollama=up
+20261029_150007|P2|warm_models=23 fts_excerpts=49
+20261029_150007|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261029_150007|P4|errs_blocked=8
+20261029_150007|P5|local_models=23 debate_entries=49
+20261029_150007|P6|dupes=0 total=49 graded=49
+20261029_150007|P7|schema=49ba22964598 patterned_commits=0
+20261029_150007|P8|fts=49 log_feed=49 joined=49
+20261029_150007|P9|tiny_3b=3 small_7b=5 other=15
+20261029_150007|P10|models=23 verdict_types=2 scripts=1734
+20261029_150007|P11|holds=36 borderline=0 quarantine_dirs=1
+20261029_150007|P12|head=8236ff9 rollback_tags=1
+20261029_160019|P1|mem_pct=8.9 disk_pct=54 load=0.12 ollama=up
+20261029_160019|P2|warm_models=23 fts_excerpts=49
+20261029_160019|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261029_160019|P4|errs_blocked=8
+20261029_160019|P5|local_models=23 debate_entries=49
+20261029_160019|P6|dupes=0 total=49 graded=49
+20261029_160019|P7|schema=49ba22964598 patterned_commits=0
+20261029_160019|P8|fts=49 log_feed=49 joined=49
+20261029_160019|P9|tiny_3b=3 small_7b=5 other=15
+20261029_160019|P10|models=23 verdict_types=2 scripts=1734
+20261029_160019|P11|holds=36 borderline=0 quarantine_dirs=1
+20261029_160019|P12|head=8236ff9 rollback_tags=1
+20261029_170019|P1|mem_pct=9.0 disk_pct=54 load=0.07 ollama=up
+20261029_170019|P2|warm_models=23 fts_excerpts=49
+20261029_170019|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261029_170019|P4|errs_blocked=8
+20261029_170019|P5|local_models=23 debate_entries=49
+20261029_170019|P6|dupes=0 total=49 graded=49
+20261029_170019|P7|schema=49ba22964598 patterned_commits=0
+20261029_170019|P8|fts=49 log_feed=49 joined=49
+20261029_170019|P9|tiny_3b=3 small_7b=5 other=15
+20261029_170019|P10|models=23 verdict_types=2 scripts=1734
+20261029_170019|P11|holds=36 borderline=0 quarantine_dirs=1
+20261029_170019|P12|head=8236ff9 rollback_tags=1
+20261029_180027|P1|mem_pct=8.9 disk_pct=54 load=0.27 ollama=up
+20261029_180027|P2|warm_models=23 fts_excerpts=49
+20261029_180027|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261029_180027|P4|errs_blocked=8
+20261029_180027|P5|local_models=23 debate_entries=49
+20261029_180027|P6|dupes=0 total=49 graded=49
+20261029_180027|P7|schema=49ba22964598 patterned_commits=0
+20261029_180027|P8|fts=49 log_feed=49 joined=49
+20261029_180027|P9|tiny_3b=3 small_7b=5 other=15
+20261029_180027|P10|models=23 verdict_types=2 scripts=1734
+20261029_180027|P11|holds=36 borderline=0 quarantine_dirs=1
+20261029_180027|P12|head=8236ff9 rollback_tags=1
+20261029_190254|P1|mem_pct=28.9 disk_pct=54 load=0.13 ollama=up
+20261029_190254|P2|warm_models=23 fts_excerpts=49
+20261029_190254|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261029_190254|P4|errs_blocked=8
+20261029_190254|P5|local_models=23 debate_entries=49
+20261029_190254|P6|dupes=0 total=49 graded=49
+20261029_190254|P7|schema=49ba22964598 patterned_commits=0
+20261029_190254|P8|fts=49 log_feed=49 joined=49
+20261029_190254|P9|tiny_3b=3 small_7b=5 other=15
+20261029_190254|P10|models=23 verdict_types=2 scripts=1734
+20261029_190254|P11|holds=36 borderline=0 quarantine_dirs=1
+20261029_190254|P12|head=8236ff9 rollback_tags=1
+20261029_200258|P1|mem_pct=29.0 disk_pct=54 load=0.18 ollama=up
+20261029_200258|P2|warm_models=23 fts_excerpts=49
+20261029_200258|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261029_200258|P4|errs_blocked=8
+20261029_200258|P5|local_models=23 debate_entries=49
+20261029_200258|P6|dupes=0 total=49 graded=49
+20261029_200258|P7|schema=49ba22964598 patterned_commits=0
+20261029_200258|P8|fts=49 log_feed=49 joined=49
+20261029_200258|P9|tiny_3b=3 small_7b=5 other=15
+20261029_200258|P10|models=23 verdict_types=2 scripts=1734
+20261029_200258|P11|holds=36 borderline=0 quarantine_dirs=1
+20261029_200258|P12|head=8236ff9 rollback_tags=1
+20261029_210258|P1|mem_pct=29.0 disk_pct=54 load=0.22 ollama=up
+20261029_210258|P2|warm_models=23 fts_excerpts=49
+20261029_210258|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261029_210258|P4|errs_blocked=8
+20261029_210258|P5|local_models=23 debate_entries=49
+20261029_210258|P6|dupes=0 total=49 graded=49
+20261029_210258|P7|schema=49ba22964598 patterned_commits=0
+20261029_210258|P8|fts=49 log_feed=49 joined=49
+20261029_210258|P9|tiny_3b=3 small_7b=5 other=15
+20261029_210258|P10|models=23 verdict_types=2 scripts=1734
+20261029_210258|P11|holds=36 borderline=0 quarantine_dirs=1
+20261029_210258|P12|head=8236ff9 rollback_tags=1
+20261029_220259|P1|mem_pct=29.1 disk_pct=54 load=0.20 ollama=up
+20261029_220259|P2|warm_models=23 fts_excerpts=49
+20261029_220259|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261029_220259|P4|errs_blocked=8
+20261029_220259|P5|local_models=23 debate_entries=49
+20261029_220259|P6|dupes=0 total=49 graded=49
+20261029_220259|P7|schema=49ba22964598 patterned_commits=0
+20261029_220259|P8|fts=49 log_feed=49 joined=49
+20261029_220259|P9|tiny_3b=3 small_7b=5 other=15
+20261029_220259|P10|models=23 verdict_types=2 scripts=1734
+20261029_220259|P11|holds=36 borderline=0 quarantine_dirs=1
+20261029_220259|P12|head=8236ff9 rollback_tags=1
+20261029_230304|P1|mem_pct=29.1 disk_pct=54 load=0.02 ollama=up
+20261029_230304|P2|warm_models=23 fts_excerpts=49
+20261029_230304|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261029_230304|P4|errs_blocked=8
+20261029_230304|P5|local_models=23 debate_entries=49
+20261029_230304|P6|dupes=0 total=49 graded=49
+20261029_230304|P7|schema=49ba22964598 patterned_commits=0
+20261029_230304|P8|fts=49 log_feed=49 joined=49
+20261029_230304|P9|tiny_3b=3 small_7b=5 other=15
+20261029_230304|P10|models=23 verdict_types=2 scripts=1734
+20261029_230304|P11|holds=36 borderline=0 quarantine_dirs=1
+20261029_230304|P12|head=8236ff9 rollback_tags=1
+20261030_000324|P1|mem_pct=29.1 disk_pct=54 load=0.22 ollama=up
+20261030_000324|P2|warm_models=23 fts_excerpts=49
+20261030_000324|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261030_000324|P4|errs_blocked=8
+20261030_000324|P5|local_models=23 debate_entries=49
+20261030_000324|P6|dupes=0 total=49 graded=49
+20261030_000324|P7|schema=49ba22964598 patterned_commits=0
+20261030_000324|P8|fts=49 log_feed=49 joined=49
+20261030_000324|P9|tiny_3b=3 small_7b=5 other=15
+20261030_000324|P10|models=23 verdict_types=2 scripts=1734
+20261030_000324|P11|holds=36 borderline=0 quarantine_dirs=1
+20261030_000324|P12|head=8236ff9 rollback_tags=1
+20261030_010327|P1|mem_pct=29.1 disk_pct=54 load=0.17 ollama=up
+20261030_010327|P2|warm_models=23 fts_excerpts=49
+20261030_010327|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261030_010327|P4|errs_blocked=8
+20261030_010327|P5|local_models=23 debate_entries=49
+20261030_010327|P6|dupes=0 total=49 graded=49
+20261030_010327|P7|schema=49ba22964598 patterned_commits=0
+20261030_010327|P8|fts=49 log_feed=49 joined=49
+20261030_010327|P9|tiny_3b=3 small_7b=5 other=15
+20261030_010327|P10|models=23 verdict_types=2 scripts=1734
+20261030_010327|P11|holds=36 borderline=0 quarantine_dirs=1
+20261030_010327|P12|head=8236ff9 rollback_tags=1
+20261030_020354|P1|mem_pct=29.1 disk_pct=54 load=0.21 ollama=up
+20261030_020354|P2|warm_models=23 fts_excerpts=49
+20261030_020354|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261030_020354|P4|errs_blocked=8
+20261030_020354|P5|local_models=23 debate_entries=49
+20261030_020354|P6|dupes=0 total=49 graded=49
+20261030_020354|P7|schema=49ba22964598 patterned_commits=0
+20261030_020354|P8|fts=49 log_feed=49 joined=49
+20261030_020354|P9|tiny_3b=3 small_7b=5 other=15
+20261030_020354|P10|models=23 verdict_types=2 scripts=1734
+20261030_020354|P11|holds=36 borderline=0 quarantine_dirs=1
+20261030_020354|P12|head=8236ff9 rollback_tags=1
+20261030_030356|P1|mem_pct=29.6 disk_pct=54 load=1.43 ollama=up
+20261030_030356|P2|warm_models=23 fts_excerpts=49
+20261030_030356|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261030_030356|P4|errs_blocked=8
+20261030_030356|P5|local_models=23 debate_entries=49
+20261030_030356|P6|dupes=0 total=49 graded=49
+20261030_030356|P7|schema=49ba22964598 patterned_commits=0
+20261030_030356|P8|fts=49 log_feed=49 joined=49
+20261030_030356|P9|tiny_3b=3 small_7b=5 other=15
+20261030_030356|P10|models=23 verdict_types=2 scripts=1734
+20261030_030356|P11|holds=36 borderline=0 quarantine_dirs=1
+20261030_030356|P12|head=8236ff9 rollback_tags=1
+20261030_040404|P1|mem_pct=45.6 disk_pct=54 load=0.58 ollama=up
+20261030_040404|P2|warm_models=23 fts_excerpts=49
+20261030_040404|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261030_040404|P4|errs_blocked=8
+20261030_040404|P5|local_models=23 debate_entries=49
+20261030_040404|P6|dupes=0 total=49 graded=49
+20261030_040404|P7|schema=49ba22964598 patterned_commits=0
+20261030_040404|P8|fts=49 log_feed=49 joined=49
+20261030_040404|P9|tiny_3b=3 small_7b=5 other=15
+20261030_040404|P10|models=23 verdict_types=2 scripts=1734
+20261030_040404|P11|holds=36 borderline=0 quarantine_dirs=1
+20261030_040404|P12|head=8236ff9 rollback_tags=1
+20261030_050408|P1|mem_pct=29.9 disk_pct=54 load=0.12 ollama=up
+20261030_050408|P2|warm_models=23 fts_excerpts=49
+20261030_050408|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261030_050408|P4|errs_blocked=8
+20261030_050408|P5|local_models=23 debate_entries=49
+20261030_050408|P6|dupes=0 total=49 graded=49
+20261030_050408|P7|schema=49ba22964598 patterned_commits=0
+20261030_050408|P8|fts=49 log_feed=49 joined=49
+20261030_050408|P9|tiny_3b=3 small_7b=5 other=15
+20261030_050408|P10|models=23 verdict_types=2 scripts=1734
+20261030_050408|P11|holds=36 borderline=0 quarantine_dirs=1
+20261030_050408|P12|head=8236ff9 rollback_tags=1
+20261030_060408|P1|mem_pct=30.0 disk_pct=54 load=0.22 ollama=up
+20261030_060408|P2|warm_models=23 fts_excerpts=49
+20261030_060408|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261030_060408|P4|errs_blocked=8
+20261030_060408|P5|local_models=23 debate_entries=49
+20261030_060408|P6|dupes=0 total=49 graded=49
+20261030_060408|P7|schema=49ba22964598 patterned_commits=0
+20261030_060408|P8|fts=49 log_feed=49 joined=49
+20261030_060408|P9|tiny_3b=3 small_7b=5 other=15
+20261030_060408|P10|models=23 verdict_types=2 scripts=1734
+20261030_060408|P11|holds=36 borderline=0 quarantine_dirs=1
+20261030_060408|P12|head=8236ff9 rollback_tags=1
+20261030_070434|P1|mem_pct=30.0 disk_pct=54 load=0.17 ollama=up
+20261030_070434|P2|warm_models=23 fts_excerpts=49
+20261030_070434|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261030_070434|P4|errs_blocked=8
+20261030_070434|P5|local_models=23 debate_entries=49
+20261030_070434|P6|dupes=0 total=49 graded=49
+20261030_070434|P7|schema=49ba22964598 patterned_commits=0
+20261030_070434|P8|fts=49 log_feed=49 joined=49
+20261030_070434|P9|tiny_3b=3 small_7b=5 other=15
+20261030_070434|P10|models=23 verdict_types=2 scripts=1734
+20261030_070434|P11|holds=36 borderline=0 quarantine_dirs=1
+20261030_070434|P12|head=8236ff9 rollback_tags=1
+20261030_080438|P1|mem_pct=30.0 disk_pct=54 load=0.18 ollama=up
+20261030_080438|P2|warm_models=23 fts_excerpts=49
+20261030_080438|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261030_080438|P4|errs_blocked=8
+20261030_080438|P5|local_models=23 debate_entries=49
+20261030_080438|P6|dupes=0 total=49 graded=49
+20261030_080438|P7|schema=49ba22964598 patterned_commits=0
+20261030_080438|P8|fts=49 log_feed=49 joined=49
+20261030_080438|P9|tiny_3b=3 small_7b=5 other=15
+20261030_080438|P10|models=23 verdict_types=2 scripts=1734
+20261030_080438|P11|holds=36 borderline=0 quarantine_dirs=1
+20261030_080438|P12|head=8236ff9 rollback_tags=1
+20261030_090504|P1|mem_pct=30.2 disk_pct=54 load=0.07 ollama=up
+20261030_090504|P2|warm_models=23 fts_excerpts=49
+20261030_090504|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261030_090504|P4|errs_blocked=8
+20261030_090504|P5|local_models=23 debate_entries=49
+20261030_090504|P6|dupes=0 total=49 graded=49
+20261030_090504|P7|schema=49ba22964598 patterned_commits=0
+20261030_090504|P8|fts=49 log_feed=49 joined=49
+20261030_090504|P9|tiny_3b=3 small_7b=5 other=15
+20261030_090504|P10|models=23 verdict_types=2 scripts=1734
+20261030_090504|P11|holds=36 borderline=0 quarantine_dirs=1
+20261030_090504|P12|head=8236ff9 rollback_tags=1
+20261030_100507|P1|mem_pct=30.3 disk_pct=54 load=0.22 ollama=up
+20261030_100507|P2|warm_models=23 fts_excerpts=49
+20261030_100507|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261030_100507|P4|errs_blocked=8
+20261030_100507|P5|local_models=23 debate_entries=49
+20261030_100507|P6|dupes=0 total=49 graded=49
+20261030_100507|P7|schema=49ba22964598 patterned_commits=0
+20261030_100507|P8|fts=49 log_feed=49 joined=49
+20261030_100507|P9|tiny_3b=3 small_7b=5 other=15
+20261030_100507|P10|models=23 verdict_types=2 scripts=1734
+20261030_100507|P11|holds=36 borderline=0 quarantine_dirs=1
+20261030_100507|P12|head=8236ff9 rollback_tags=1
+20261030_110507|P1|mem_pct=30.4 disk_pct=54 load=0.20 ollama=up
+20261030_110507|P2|warm_models=23 fts_excerpts=49
+20261030_110507|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261030_110507|P4|errs_blocked=8
+20261030_110507|P5|local_models=23 debate_entries=49
+20261030_110507|P6|dupes=0 total=49 graded=49
+20261030_110507|P7|schema=49ba22964598 patterned_commits=0
+20261030_110507|P8|fts=49 log_feed=49 joined=49
+20261030_110507|P9|tiny_3b=3 small_7b=5 other=15
+20261030_110507|P10|models=23 verdict_types=2 scripts=1734
+20261030_110507|P11|holds=36 borderline=0 quarantine_dirs=1
+20261030_110507|P12|head=8236ff9 rollback_tags=1
+20261030_120508|P1|mem_pct=30.4 disk_pct=54 load=0.12 ollama=up
+20261030_120508|P2|warm_models=23 fts_excerpts=49
+20261030_120508|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261030_120508|P4|errs_blocked=8
+20261030_120508|P5|local_models=23 debate_entries=49
+20261030_120508|P6|dupes=0 total=49 graded=49
+20261030_120508|P7|schema=49ba22964598 patterned_commits=0
+20261030_120508|P8|fts=49 log_feed=49 joined=49
+20261030_120508|P9|tiny_3b=3 small_7b=5 other=15
+20261030_120508|P10|models=23 verdict_types=2 scripts=1734
+20261030_120508|P11|holds=36 borderline=0 quarantine_dirs=1
+20261030_120508|P12|head=8236ff9 rollback_tags=1
+20261030_130534|P1|mem_pct=30.4 disk_pct=54 load=0.16 ollama=up
+20261030_130534|P2|warm_models=23 fts_excerpts=49
+20261030_130534|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261030_130534|P4|errs_blocked=8
+20261030_130534|P5|local_models=23 debate_entries=49
+20261030_130534|P6|dupes=0 total=49 graded=49
+20261030_130534|P7|schema=49ba22964598 patterned_commits=0
+20261030_130534|P8|fts=49 log_feed=49 joined=49
+20261030_130534|P9|tiny_3b=3 small_7b=5 other=15
+20261030_130534|P10|models=23 verdict_types=2 scripts=1734
+20261030_130534|P11|holds=36 borderline=0 quarantine_dirs=1
+20261030_130534|P12|head=8236ff9 rollback_tags=1
+20261030_140536|P1|mem_pct=31.5 disk_pct=54 load=0.20 ollama=up
+20261030_140536|P2|warm_models=23 fts_excerpts=49
+20261030_140536|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261030_140536|P4|errs_blocked=8
+20261030_140536|P5|local_models=23 debate_entries=49
+20261030_140536|P6|dupes=0 total=49 graded=49
+20261030_140536|P7|schema=49ba22964598 patterned_commits=0
+20261030_140536|P8|fts=49 log_feed=49 joined=49
+20261030_140536|P9|tiny_3b=3 small_7b=5 other=15
+20261030_140536|P10|models=23 verdict_types=2 scripts=1734
+20261030_140536|P11|holds=36 borderline=0 quarantine_dirs=1
+20261030_140536|P12|head=8236ff9 rollback_tags=1
+20261030_151036|P1|mem_pct=28.7 disk_pct=54 load=0.19 ollama=up
+20261030_151036|P2|warm_models=23 fts_excerpts=49
+20261030_151036|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261030_151036|P4|errs_blocked=8
+20261030_151036|P5|local_models=23 debate_entries=49
+20261030_151036|P6|dupes=0 total=49 graded=49
+20261030_151036|P7|schema=49ba22964598 patterned_commits=0
+20261030_151036|P8|fts=49 log_feed=49 joined=49
+20261030_151036|P9|tiny_3b=3 small_7b=5 other=15
+20261030_151036|P10|models=23 verdict_types=2 scripts=1734
+20261030_151036|P11|holds=36 borderline=0 quarantine_dirs=1
+20261030_151036|P12|head=8236ff9 rollback_tags=1
+20261030_161038|P1|mem_pct=29.1 disk_pct=54 load=0.10 ollama=up
+20261030_161038|P2|warm_models=23 fts_excerpts=49
+20261030_161038|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261030_161038|P4|errs_blocked=8
+20261030_161038|P5|local_models=23 debate_entries=49
+20261030_161038|P6|dupes=0 total=49 graded=49
+20261030_161038|P7|schema=49ba22964598 patterned_commits=0
+20261030_161038|P8|fts=49 log_feed=49 joined=49
+20261030_161038|P9|tiny_3b=3 small_7b=5 other=15
+20261030_161038|P10|models=23 verdict_types=2 scripts=1734
+20261030_161038|P11|holds=36 borderline=0 quarantine_dirs=1
+20261030_161038|P12|head=8236ff9 rollback_tags=1
+20261030_171039|P1|mem_pct=29.1 disk_pct=54 load=0.08 ollama=up
+20261030_171039|P2|warm_models=23 fts_excerpts=49
+20261030_171039|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261030_171039|P4|errs_blocked=8
+20261030_171039|P5|local_models=23 debate_entries=49
+20261030_171039|P6|dupes=0 total=49 graded=49
+20261030_171039|P7|schema=49ba22964598 patterned_commits=0
+20261030_171039|P8|fts=49 log_feed=49 joined=49
+20261030_171039|P9|tiny_3b=3 small_7b=5 other=15
+20261030_171039|P10|models=23 verdict_types=2 scripts=1734
+20261030_171039|P11|holds=36 borderline=0 quarantine_dirs=1
+20261030_171039|P12|head=8236ff9 rollback_tags=1
+20261030_181106|P1|mem_pct=29.1 disk_pct=54 load=0.23 ollama=up
+20261030_181106|P2|warm_models=23 fts_excerpts=49
+20261030_181106|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261030_181106|P4|errs_blocked=8
+20261030_181106|P5|local_models=23 debate_entries=49
+20261030_181106|P6|dupes=0 total=49 graded=49
+20261030_181106|P7|schema=49ba22964598 patterned_commits=0
+20261030_181106|P8|fts=49 log_feed=49 joined=49
+20261030_181106|P9|tiny_3b=3 small_7b=5 other=15
+20261030_181106|P10|models=23 verdict_types=2 scripts=1734
+20261030_181106|P11|holds=36 borderline=0 quarantine_dirs=1
+20261030_181106|P12|head=8236ff9 rollback_tags=1
+20261030_191108|P1|mem_pct=29.1 disk_pct=54 load=0.24 ollama=up
+20261030_191108|P2|warm_models=23 fts_excerpts=49
+20261030_191108|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261030_191108|P4|errs_blocked=8
+20261030_191108|P5|local_models=23 debate_entries=49
+20261030_191108|P6|dupes=0 total=49 graded=49
+20261030_191108|P7|schema=49ba22964598 patterned_commits=0
+20261030_191108|P8|fts=49 log_feed=49 joined=49
+20261030_191108|P9|tiny_3b=3 small_7b=5 other=15
+20261030_191108|P10|models=23 verdict_types=2 scripts=1734
+20261030_191108|P11|holds=36 borderline=0 quarantine_dirs=1
+20261030_191108|P12|head=8236ff9 rollback_tags=1
+20261030_201136|P1|mem_pct=29.7 disk_pct=54 load=0.51 ollama=up
+20261030_201136|P2|warm_models=23 fts_excerpts=49
+20261030_201136|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261030_201136|P4|errs_blocked=8
+20261030_201136|P5|local_models=23 debate_entries=49
+20261030_201136|P6|dupes=0 total=49 graded=49
+20261030_201136|P7|schema=49ba22964598 patterned_commits=0
+20261030_201136|P8|fts=49 log_feed=49 joined=49
+20261030_201136|P9|tiny_3b=3 small_7b=5 other=15
+20261030_201136|P10|models=23 verdict_types=2 scripts=1734
+20261030_201136|P11|holds=36 borderline=0 quarantine_dirs=1
+20261030_201136|P12|head=8236ff9 rollback_tags=1
+20261030_211139|P1|mem_pct=29.6 disk_pct=54 load=0.10 ollama=up
+20261030_211139|P2|warm_models=23 fts_excerpts=49
+20261030_211139|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261030_211139|P4|errs_blocked=8
+20261030_211139|P5|local_models=23 debate_entries=49
+20261030_211139|P6|dupes=0 total=49 graded=49
+20261030_211139|P7|schema=49ba22964598 patterned_commits=0
+20261030_211139|P8|fts=49 log_feed=49 joined=49
+20261030_211139|P9|tiny_3b=3 small_7b=5 other=15
+20261030_211139|P10|models=23 verdict_types=2 scripts=1734
+20261030_211139|P11|holds=36 borderline=0 quarantine_dirs=1
+20261030_211139|P12|head=8236ff9 rollback_tags=1
+20261030_221139|P1|mem_pct=29.7 disk_pct=54 load=0.23 ollama=up
+20261030_221139|P2|warm_models=23 fts_excerpts=49
+20261030_221139|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261030_221139|P4|errs_blocked=8
+20261030_221139|P5|local_models=23 debate_entries=49
+20261030_221139|P6|dupes=0 total=49 graded=49
+20261030_221139|P7|schema=49ba22964598 patterned_commits=0
+20261030_221139|P8|fts=49 log_feed=49 joined=49
+20261030_221139|P9|tiny_3b=3 small_7b=5 other=15
+20261030_221139|P10|models=23 verdict_types=2 scripts=1734
+20261030_221139|P11|holds=36 borderline=0 quarantine_dirs=1
+20261030_221139|P12|head=b02c268 rollback_tags=1
+20261030_231206|P1|mem_pct=29.7 disk_pct=54 load=0.12 ollama=up
+20261030_231206|P2|warm_models=23 fts_excerpts=49
+20261030_231206|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261030_231206|P4|errs_blocked=8
+20261030_231206|P5|local_models=23 debate_entries=49
+20261030_231206|P6|dupes=0 total=49 graded=49
+20261030_231206|P7|schema=49ba22964598 patterned_commits=0
+20261030_231206|P8|fts=49 log_feed=49 joined=49
+20261030_231206|P9|tiny_3b=3 small_7b=5 other=15
+20261030_231206|P10|models=23 verdict_types=2 scripts=1734
+20261030_231206|P11|holds=36 borderline=0 quarantine_dirs=1
+20261030_231206|P12|head=b02c268 rollback_tags=1
+20261031_001208|P1|mem_pct=29.7 disk_pct=54 load=0.20 ollama=up
+20261031_001208|P2|warm_models=23 fts_excerpts=49
+20261031_001208|P3|pending=0 graded=49 pass=0 hold=36 fail=13
+20261031_001208|P4|errs_blocked=8
+20261031_001208|P5|local_models=23 debate_entries=49
+20261031_001208|P6|dupes=0 total=49 graded=49
+20261031_001208|P7|schema=49ba22964598 patterned_commits=0
+20261031_001208|P8|fts=49 log_feed=49 joined=49
+20261031_001208|P9|tiny_3b=3 small_7b=5 other=15
+20261031_001208|P10|models=23 verdict_types=2 scripts=1734
+20261031_001208|P11|holds=36 borderline=0 quarantine_dirs=1
+20261031_001208|P12|head=b02c268 rollback_tags=1

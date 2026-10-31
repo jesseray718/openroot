@@ -1,10 +1,10 @@
-# SuperLoop Composite Dashboard — 2026-10-19 11:00 UTC
+# SuperLoop Composite Dashboard — 2026-10-31 06:00 UTC
 Auto-pulsed every 15 min via cron | Canary: [SUPERLOOPV3]
 
 ## Command Flow Health
 - Commands analyzed: 250
 - Dominant bucket: `other`
-- Top transitions: other->other, other->author, author->other, other->exec, exec->other
+- Top transitions: other->other, files->other, other->files, other->gitops, gitops->other
 
 ## Routing Weights (Auto-Learned)
 | Trigger | Route | Model |
@@ -26,7 +26,7 @@ Auto-pulsed every 15 min via cron | Canary: [SUPERLOOPV3]
 - [intent_unclear] over half of commands are 'other' — buckets need refinement
 
 ## Live Stack State
-- Ollama: UP | Models: nomic-embed-text:latest, smollm2:1.7b, qwen2.5-coder:3b, gemma3:1b, granite3.3:2b, qwen3:1.7b, qwen3:0.6b, qwen2.5-coder:1.5b, qwen2.5:1.5b, phi4-router:latest, openroot-instruct:7b, qwen2.5:7b-instruct, phi4-mini:latest, llama3.2:3b, qwen2.5-coder:7b, deepseek-r1:1.5b, llama3.2:1b, openroot-coder:latest, qwen2.5:3b, openroot-assistant:latest
+- Ollama: UP | Models: qwen3.5:9b, gemma4:31b-cloud, minimax-m3.1-flash:cloud, nomic-embed-text:latest, smollm2:1.7b, qwen2.5-coder:3b, gemma3:1b, granite3.3:2b, qwen3:1.7b, qwen3:0.6b, qwen2.5-coder:1.5b, qwen2.5:1.5b, phi4-router:latest, openroot-instruct:7b, qwen2.5:7b-instruct, phi4-mini:latest, llama3.2:3b, qwen2.5-coder:7b, deepseek-r1:1.5b, llama3.2:1b, openroot-coder:latest, qwen2.5:3b, openroot-assistant:latest
 - bot_loop daemon: ALIVE (1 proc)
 
 ---

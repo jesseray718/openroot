@@ -1,0 +1,56 @@
+QUESTION
+Does task1's hold receipt prevent task6 from executing? Identify the actual control-flow statement that blocks it, or state that no such statement exists in the supplied source.
+
+EVIDENCE E1: captured gh_window_opener_v1.py
+
+Selected original-source spans follow. Gaps are omitted; absence from this packet does not prove absence from the file. Some runtime globals are not included. Do not execute this packet.
+
+[E1 lines 16-16]
+CONFIRM     = os.environ.get("CONFIRM") == "1"
+
+[E1 lines 24-34]
+def sh(cmd, cwd=ROOT, timeout=180):
+    """Run shell cmd, return (rc, stdout, stderr)."""
+    try:
+        p = subprocess.run(
+            cmd, cwd=cwd, shell=True, capture_output=True, text=True,
+            timeout=timeout,
+            env=dict(os.environ, GIT_PAGER="cat", TERM="dumb"),
+        )
+        return p.returncode, p.stdout.strip(), p.stderr.strip()
+    except subprocess.TimeoutExpired:
+        return 124, "", "TIMEOUT after %ss: %s" % (timeout, cmd)
+
+[E1 lines 37-46]
+def receipt(stage, status, **kw):
+    row = {"ts": UTC.isoformat(), "stage": stage, "status": status}
+    row.update(kw)
+    blob = json.dumps(row, sort_keys=True)
+    row["sha256"] = hashlib.sha256(blob.encode()).hexdigest()
+    with open(RECEIPT_PATH, "a") as f:
+        f.write(json.dumps(row) + "\n")
+    tag = {"ok": "[banked]", "hold": "[held]", "gate": "[gate]"}.get(status, "[" + status + "]")
+    print("%s %s: %s  %s" % (tag, stage, row["sha256"][:12], kw.get("note", "")))
+    return row
+
+[E1 lines 70-74]
+receipt("task1.verify",
+        "ok" if ahead == "0" else "hold",
+        head=head, remote=remote, ahead=ahead,
+        dirty_count=len([l for l in dirty.splitlines() if l.strip()]),
+        note="clean+synced" if (ahead == "0" and not dirty) else "DIRTY or UNPUSHED")
+
+[E1 lines 227-239]
+if CONFIRM:
+    sh("git add -A")
+    rc, out, err = sh("git -c user.name=jesseray718 -c user.email=jesse@openroot.local "
+                      "commit -q -m 'chore(handoff): gh window opener %s - tasks 1-6 receipts' "
+                      "|| echo NO_CHANGES" % TS)
+    print(out or err)
+    rc, out, err = sh("git push origin HEAD", timeout=240)
+    print(out or err)
+    receipt("task6.handoff", "ok" if rc == 0 else "hold", rc=rc, handoff=handoff,
+            note="committed+pushed" if rc == 0 else "push failed - human gate")
+else:
+    receipt("task6.handoff", "gate", handoff=handoff,
+            note="dry-run: wrote handoff, did NOT commit/push (CONFIRM=1)")

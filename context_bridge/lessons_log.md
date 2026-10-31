@@ -1,0 +1,2 @@
+- LESSON 2026-10-22: exfat has no POSIX locks; opening WAL-mode sqlite dbs in place = disk I/O error. Data fine — read copies on ext4. Future backups: .backup or VACUUM INTO, never raw cp of live dbs.
+- LESSON 2026-10-22: exfat has no POSIX locks; opening WAL-mode sqlite dbs in place = disk I/O error. Data fine — read copies on ext4. Future backups: .backup or VACUUM INTO, never raw cp of live dbs.

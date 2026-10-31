@@ -1,0 +1,85 @@
+{
+  "kind": "targeted_gate_dossier_compilation_v2",
+  "compile_id": "826171d89ac24c9980c66798d17a6571",
+  "test_id": "3aabe240753b4b4fa49c5b282d65b92c",
+  "question": "Does task1's hold receipt prevent task6 from executing? Identify the actual control-flow statement that blocks it, or state that no such statement exists in the supplied source.",
+  "compiler_scope": "task-receipt control-flow questions only",
+  "source_db": "/home/jesse/pods/pod_openroot_live_v1/pod.db",
+  "artifact_sha256": "27fb8b29e0d83a122239150ac5e37bf0863f770acb93024713657c05f2a534bc",
+  "input_dossier_sha256": "42a53e5326b02222e6e9299f113f59debf2d7c9d250f38f5949b2c406fff4eff",
+  "output_sha256": "0e3dd2b8157500de9f9656f0e1c9367e15241f5349e5c26068c252d5e1dfd882",
+  "input_chars": 4916,
+  "output_chars": 2464,
+  "character_reduction_percent": 49.88,
+  "character_count_is_not_token_count": true,
+  "selected_spans": [
+    {
+      "source_lines": [
+        16,
+        16
+      ],
+      "char_start": 569,
+      "char_end": 616,
+      "sha256": "b3acbdbd8d0af3f7322745a43af64b7afcc743b5a5848af27c6d8e986458f1cd",
+      "selection_reasons": [
+        "definition of task6 conditional flag"
+      ]
+    },
+    {
+      "source_lines": [
+        24,
+        34
+      ],
+      "char_start": 902,
+      "char_end": 1369,
+      "sha256": "061fb3d0850df7fa3450057c12efdcc8824fdceab4402d98a1d929ae26f2229a",
+      "selection_reasons": [
+        "local function dependency: sh"
+      ]
+    },
+    {
+      "source_lines": [
+        37,
+        46
+      ],
+      "char_start": 1371,
+      "char_end": 1870,
+      "sha256": "ac54b3af620f2ffe6ac0000fada502256b039ac57fc19fa9d00b8e5ebce17731",
+      "selection_reasons": [
+        "local function dependency: receipt"
+      ]
+    },
+    {
+      "source_lines": [
+        70,
+        74
+      ],
+      "char_start": 2743,
+      "char_end": 3013,
+      "sha256": "ac51fb66b2913dbe86202018e411b935a6ea012c739ae53c8fa63adb102d1d6d",
+      "selection_reasons": [
+        "enclosing top-level statement for task1 receipt"
+      ]
+    },
+    {
+      "source_lines": [
+        227,
+        239
+      ],
+      "char_start": 10080,
+      "char_end": 10749,
+      "sha256": "9ef5c6e76daa39722063803c29c5450cfe4c2275533094c6d9a17aed3a568f06",
+      "selection_reasons": [
+        "enclosing top-level statement for task6 receipt"
+      ]
+    }
+  ],
+  "complete_source_archived": true,
+  "full_control_flow_analysis_performed": false,
+  "span_integrity_verified": true,
+  "answer_correctness_verified": false,
+  "model_called": false,
+  "created_utc": "2026-10-21T12:29:10.693556+00:00",
+  "elapsed_seconds": 0.1264315969310701,
+  "archive_directory": "/home/jesse/openroot/data/compiled_dossiers/826171d89ac24c9980c66798d17a6571"
+}

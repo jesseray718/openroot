@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-10-24T08:20:00Z",
+  "epoch": 1,
+  "parent_head": "4ee6798b9f7e1c5468ea7020021d26ae2d17f28efd9ab4ab564b821aa4dc64f3",
+  "receipt_count": 1,
+  "receipts_root": "d9d2f44bf1ffd62cc1b86bac4699138333741927c58c36b12c9b44840e187413",
+  "schema": "openroot.genesis_epoch.v1",
+  "source_db_sha256": "dbad95f9ecc285926b649440cad598421ab05239e87939dff9e2dc1be9dad56f",
+  "tokens_total": 100,
+  "tool": "genesis_chain_v1"
+}
