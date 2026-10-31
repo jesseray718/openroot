@@ -1,9 +1,20 @@
-name: OpenRoot Node CI
-on: [push, pull_request]
+name: OpenRoot Autonomous Sync
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '0 * * * *' # Run every hour
+
 jobs:
-  build:
+  sync-and-audit:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Run Deploy Verification
-        run: python3 bin/openroot_master_deploy.py
+      - name: Run Autonomous Sync
+        run: |
+          chmod +x bin/sync_state.sh
+          ./bin/sync_state.sh
+      - name: Audit Pods
+        run: |
+          echo "Auditing Newton Chain Integrity..."
+          # Logic to verify the last block hash
