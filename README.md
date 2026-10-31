@@ -3,7 +3,7 @@
 
 ![Build Status](https://img.shields.io/github/actions/workflow/status/jesseray718/openroot/main.yml?style=for-the-badge)
 ![Newton Chain](https://img.shields.io/badge/Newton--Chain-VERIFIED-green?style=for-the-badge)
-![Impact](https://img.shields.io/badge/Impact-Regenerative-orange?style=for-the-badge)
+![Impact](https://img.shields.io/badge/Impact-Regenerative-brightgreen?style=for-the-badge)
 
 ## 🌍 The Physical Mission
 OpenRoot is a closed-loop system designed to maximize utility for the human nodes with the least. We are deploying intelligence to solve the most critical physical gaps of our time:
