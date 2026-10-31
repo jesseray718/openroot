@@ -4,6 +4,9 @@
 ![Build Status](https://img.shields.io/github/actions/workflow/status/jesseray718/openroot/main.yml?style=for-the-badge)
 ![Newton Chain](https://img.shields.io/badge/Newton--Chain-VERIFIED-green?style=for-the-badge)
 ![Impact](https://img.shields.io/badge/Impact-Regenerative-brightgreen?style=for-the-badge)
+![License](https://img.shields.io/badge/License-GPLv3-blue?style=for-the-badge)
+![Data](https://img.shields.io/badge/Data-CC--BY--SA-green?style=for-the-badge)
+![Zenodo](https://img.shields.io/badge/Zenodo-DOI-blue?style=for-the-badge)
 
 ## 🌍 The Physical Mission
 OpenRoot is a closed-loop system designed to maximize utility for the human nodes with the least. We are deploying intelligence to solve the most critical physical gaps of our time:
@@ -27,6 +30,9 @@ A free, open-source protocol for **Verifiable Truth**. By replacing probabilisti
 
 ## 📈 The Value Model: Inverted Utility
 OpenRoot is **Absolute Commons**. The protocol and knowledge are free for all. Value is captured only through professional mastery and the implementation of these systems in the physical world.
+
+**Architect:** Jesse McMillen  
+**Contact:** jrm8908@proton.me
 
 ---
 *Built for resilience. Designed for autonomy. Sealed in truth.*
