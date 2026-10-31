@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """workflow_dispatcher_v1.py — validates & routes the ALIGN/ASSESS/ACT/VERIFY/DOCUMENT/AMPLIFY envelope.
 Whitelist registry ONLY. Unknown action or /root/ path = [held], never executed. Human is final gate.

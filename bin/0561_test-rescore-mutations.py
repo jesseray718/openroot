@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Mutation and edge-case tests for the rescore index feature."""
 import struct
 import sqlite3

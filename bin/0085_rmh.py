@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import json, math
 
 # Rocket Mass Heater + Molten Salt Thermal Storage Vehicle Model

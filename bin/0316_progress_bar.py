@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import math
 from functools import lru_cache
 from time import monotonic

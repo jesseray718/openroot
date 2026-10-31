@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Logic that powers autocompletion installed by ``pip completion``."""
 
 from __future__ import annotations

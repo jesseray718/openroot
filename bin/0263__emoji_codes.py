@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 EMOJI = {
     "1st_place_medal": "🥇",
     "2nd_place_medal": "🥈",

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """This is invoked in a subprocess to call the build backend hooks.
 
 It expects:

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import asyncio, hashlib, time
 from typing import Callable, Dict, Awaitable, List
 NANOBOT_NAMES=["translate","analyze","feedback","synthesize","validate","amplify"]

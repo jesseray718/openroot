@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import argparse, hashlib, json, os, shlex, subprocess, sys, time
 from datetime import datetime, timezone
 from pathlib import Path

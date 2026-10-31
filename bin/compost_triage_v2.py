@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """compost_triage_v2.py - classify unsolved COMPOST keys, propose dispositions, optionally bank them.
 

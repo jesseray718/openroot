@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # Convert Hugging Face fine-tuned models to ggml format
 #
 # Usage:

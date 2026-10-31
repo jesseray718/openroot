@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """
 Test 6^6 hierarchy with phone's OpenRoot task data

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Handles all VCS (version control) support"""
 
 from __future__ import annotations

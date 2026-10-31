@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Module containing bug report helper(s)."""
 
 import json

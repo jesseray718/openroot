@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import time, subprocess, random, json, os
 from datetime import datetime
 PODS = "global_brain,wealth_retention"

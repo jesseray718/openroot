@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import math
 
 k = 1.380649e-23

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Write RMH comparison next to this repo. Works on OptiPlex and A15 mesh."""
 from __future__ import annotations

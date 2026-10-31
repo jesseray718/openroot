@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Conservative normal-push gate for openroot. No force-push support."""
 import argparse

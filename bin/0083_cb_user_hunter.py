@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 # ═══════════════════════════════════════════════════════════════════════════════
 #   CB-USERHUNTER v1.0 — Ciberbrigada OSINT Suite

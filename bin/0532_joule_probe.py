@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/data/data/com.termux/files/usr/bin/python3
 import json, os, subprocess
 from datetime import datetime, timezone

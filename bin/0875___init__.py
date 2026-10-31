@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """
 A modern asynchronous library for building I2P applications. 
 """

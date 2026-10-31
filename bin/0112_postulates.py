@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Newton Chain — verified relations become postulates."""
 
 POSTULATES: dict[str, dict] = {

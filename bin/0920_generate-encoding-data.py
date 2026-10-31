@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/python
 
 # Copyright Mozilla Foundation. See the COPYRIGHT

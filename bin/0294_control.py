@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import time
 from typing import TYPE_CHECKING, Callable, Dict, Iterable, List, Union, Final
 

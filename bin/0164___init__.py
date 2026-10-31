@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """
 pip._vendor is for vendoring dependencies of pip to prevent needing pip to
 depend on something external.

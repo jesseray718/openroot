@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Living ride-along state v2: travels between every AI instance/window/session.
 Usage:

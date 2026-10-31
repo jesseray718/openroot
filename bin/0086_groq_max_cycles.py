@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """
 groq_max_cycles.py
 ──────────────────

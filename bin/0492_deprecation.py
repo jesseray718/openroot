@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """
 A module that implements tooling to enable easy warnings about deprecations.
 """

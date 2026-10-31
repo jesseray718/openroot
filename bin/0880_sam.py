@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from base64 import b64decode, b64encode, b32encode
 from hashlib import sha256
 import struct

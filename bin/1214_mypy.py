@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import sys
 from configparser import ConfigParser
 from typing import Any, Callable, Dict, List, Optional, Set, Tuple, Type as TypingType, Union

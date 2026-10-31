@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # Code to read HTTP data
 #
 # Strategy: each writer takes an event + a write-some-bytes function, which is

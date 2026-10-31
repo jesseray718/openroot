@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 # pod_pipeline_v1.py - any-file to pod: txt/md/code/pdf/zip -> sha256+blake3+fts5+nomic+merkle
 # Wraps bin/pod_loader_v1.py (reuse, no schema fork). Run on OptiPlex (ollama for embed).

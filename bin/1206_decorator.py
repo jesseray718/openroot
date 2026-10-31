@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from functools import wraps
 from typing import TYPE_CHECKING, Any, Callable, Dict, List, Mapping, Optional, Tuple, Type, TypeVar, Union, overload
 

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import argparse
 import torch
 from whisper import load_model

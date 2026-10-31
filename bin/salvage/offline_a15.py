@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """
 OpenRoot Offline A15 Workflow — GOVERNOR-01 only

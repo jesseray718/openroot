@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import argparse
 import os
 from huggingface_hub import HfApi, create_repo

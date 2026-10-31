@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 ##########################################################
 # This RNS example demonstrates how to transfer a        #
 # resource over an established link                      #

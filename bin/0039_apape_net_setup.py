@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """
 agape_net_setup.py v1.1 - Fixed SQL placeholder bug

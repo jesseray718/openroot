@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import sys
 from functools import lru_cache
 from operator import attrgetter

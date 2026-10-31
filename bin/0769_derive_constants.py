@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """derive_constants.py - Attempt to derive physical constants from axioms."""
 import sys, json, hashlib

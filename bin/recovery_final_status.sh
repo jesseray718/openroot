@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/bin/bash
 # Final Status & Git Cleanup Script
 # For Jesse Ray / OpenRoot

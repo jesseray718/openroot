@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from collections.abc import Mapping
 from typing import TYPE_CHECKING, Any, Optional, Tuple
 

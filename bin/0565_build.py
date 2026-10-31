@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import numpy as np
 import duckdb
 db = duckdb.connect(":memory:")

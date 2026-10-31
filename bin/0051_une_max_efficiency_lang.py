@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import math
 phi = (1 + math.sqrt(5)) / 2
 

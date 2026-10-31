@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # Kai9000 → OptiPlex connection point
 # Run this FROM Kai9000 (Alpine sandbox on A15) to bootstrap the OpenRoot connection.

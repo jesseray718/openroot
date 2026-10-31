@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Logic for V1 validators, e.g. `@validator` and `@root_validator`."""
 
 from __future__ import annotations as _annotations

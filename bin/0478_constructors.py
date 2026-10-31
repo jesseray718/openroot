@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Backing implementation for InstallRequirement's various constructors
 
 The idea here is that these formed a major chunk of InstallRequirement's size

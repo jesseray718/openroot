@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import sys
 
 def check_moral_alignment(proposal):

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """kai_retrieve_v1 — locate/pull/verify Kai 9000 assets from OptiPlex."""
 import os, sys, subprocess, hashlib, tarfile

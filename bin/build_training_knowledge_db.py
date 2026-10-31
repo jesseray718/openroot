@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Build an FTS-searchable knowledge database for tiny-model training."""
 

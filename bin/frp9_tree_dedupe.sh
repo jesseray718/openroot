@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # frp9_tree_dedupe.sh — collapse ACTIVE branches by tree-SHA duplication from frp8 plan.
 # Duplicate-tree siblings are prune candidates; newest per tree kept. Duplicates carry ZERO unique work vs sibling.

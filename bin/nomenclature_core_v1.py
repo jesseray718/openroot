@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Universal nomenclature core. 36 symbols -> 46656 trigram cells.
 Cmds: symbols | cell ABC | calibrate ABC "gloss" | speak "spoken" "heard"

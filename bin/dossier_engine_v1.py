@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """OpenRoot Ride-Along Dossier Engine v1 — budget-capped BM25 across multiple pods."""
 import argparse, json, os, sqlite3, sys, time

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Reusable JSON-RPC server for UNE"""
 import http.server
 import socketserver

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # Code to read HTTP data
 #
 # Strategy: each reader is a callable which takes a ReceiveBuffer object, and

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 set -eu
 FILE="${1:?usage: hype_gate.sh <manuscript.md>}"

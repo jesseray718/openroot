@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # /// script
 # requires-python = ">=3.10"
 # dependencies = ["sqlite-vec==0.1.6"]

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # compound_v1.sh — THE COMPOUNDING ENGINE (v1.1)
 # One command, end of session: lessons → lessons.db (idempotent by content-hash),

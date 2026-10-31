@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """seven_symbols_recovery.py - Recover the 7-symbol system + find synonym collisions."""
 import sys, json, hashlib

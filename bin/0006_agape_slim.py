@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Remove vendor archives and build artifacts. Keep only source."""
 import os, shutil, subprocess

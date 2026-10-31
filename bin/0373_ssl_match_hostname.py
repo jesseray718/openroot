@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """The match_hostname() function from Python 3.5, essential when using SSL."""
 
 # Note: This file is under the PSF license as the code comes from the python

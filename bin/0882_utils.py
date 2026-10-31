@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import socket
 import os
 import random

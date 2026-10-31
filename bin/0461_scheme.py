@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """
 For types associated with installation schemes.
 

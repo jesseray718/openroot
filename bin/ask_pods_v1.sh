@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # ask_pods_v1.sh "question text" — FTS retrieval across all populated pods,
 # qwen2.5-coder:7b answers from context. READ-ONLY: mode=ro URIs throughout.

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """OpenRoot Kernel One-Shot Deploy — creates repo structure and pushes to GitHub."""
 import os, sys, subprocess, pathlib, hashlib, shutil

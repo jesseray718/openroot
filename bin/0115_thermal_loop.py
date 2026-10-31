@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Evaporative Thermal Loop — water phase change drives cooling.
 
 The law: Hot dry air through wet porous concrete → evaporation occurs.

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from typing import TYPE_CHECKING, List, Optional, Tuple, Union
 
 if TYPE_CHECKING:

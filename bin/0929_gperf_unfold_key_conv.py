@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # gperf_unfold_key_conv.py

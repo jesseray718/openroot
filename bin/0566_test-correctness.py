@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import numpy as np
 import numpy.typing as npt
 import time

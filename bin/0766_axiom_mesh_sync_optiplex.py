@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 
 # Append to pack() function before closing brace
 def pack_full():

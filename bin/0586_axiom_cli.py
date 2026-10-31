@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/data/data/com.termux/files/usr/bin/python3
 """UNE axiom CLI — merge pack 2026-08-26
 Stdlib only. No eval. No cosmos_engine tree.

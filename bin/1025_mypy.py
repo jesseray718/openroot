@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """This module includes classes and functions designed specifically for use with the mypy plugin."""
 
 from __future__ import annotations

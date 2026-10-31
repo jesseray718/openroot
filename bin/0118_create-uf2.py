@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/python3
 
 # Adds PlatformIO post-processing to convert hex files to uf2 files

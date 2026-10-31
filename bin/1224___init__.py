@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from .connection import AsyncHTTPConnection
 from .connection_pool import AsyncConnectionPool
 from .http11 import AsyncHTTP11Connection

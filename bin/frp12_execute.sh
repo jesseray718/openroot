@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # frp12_execute.sh v1.1 — prune executor, keyed by repo:branch (v1.0 name-collision FIXED)
 set -euo pipefail

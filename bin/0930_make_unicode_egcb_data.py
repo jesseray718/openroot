@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # make_unicode_egcb_data.py

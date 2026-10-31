@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from importlib import import_module
 from typing import TYPE_CHECKING
 from warnings import warn

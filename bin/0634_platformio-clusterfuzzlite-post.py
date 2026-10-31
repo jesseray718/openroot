@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """PlatformIO build script (post: runs after other Meshtastic scripts)."""
 
 import os

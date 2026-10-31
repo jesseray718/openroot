@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """canonical/ecosystem_dashboard.py
 The canonical index node — reads ecosystem manifest and generates dashboard."""
 import json, os

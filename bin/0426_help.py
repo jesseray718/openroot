@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from optparse import Values
 
 from pip._internal.cli.base_command import Command

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Validator functions for standard library types.
 
 Import of this module is deferred since it contains imports of many standard library modules.

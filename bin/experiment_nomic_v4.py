@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """CANARY:OPENROOT-EXP-NOMIC-V4 — Hybrid FTS+Vector retrieval test."""
 import sqlite3, json, time, urllib.request, math

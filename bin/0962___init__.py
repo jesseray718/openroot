@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # -*- coding: utf-8 -*-
 
 # Copyright (c) 2009, Giampaolo Rodola'. All rights reserved.

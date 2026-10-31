@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """CANARY:OPENROOT-UNIVERSAL-EXPERIMENT-V2 — sanitized keywords, full rewrite of v1."""
 import sqlite3, time, re

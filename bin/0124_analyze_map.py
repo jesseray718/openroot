@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Summarise linker map output to highlight heavy object files and libraries.
 

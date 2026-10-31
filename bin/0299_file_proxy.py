@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import io
 from typing import IO, TYPE_CHECKING, Any, List
 

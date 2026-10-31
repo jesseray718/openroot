@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import sqlite3
 from helpers import exec, vec0_shadow_table_contents
 

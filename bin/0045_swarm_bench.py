@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """OpenRoot Fractal Swarm - HONEST throughput benchmark. One-shot, idempotent."""
 import gc, hashlib, json, os, time

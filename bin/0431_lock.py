@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import sys
 from optparse import Values
 from pathlib import Path

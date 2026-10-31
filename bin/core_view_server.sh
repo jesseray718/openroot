@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/bin/bash
 # core_view_server.sh — rebuild + serve core view on :8088, survive reboots of terminal
 cd /home/${OPENROOT_USER}/openroot/data/core_view

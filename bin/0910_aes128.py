@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # MIT License
 
 # Copyright (c) 2021 Or Gur Arie

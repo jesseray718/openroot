@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # recover_v1.sh — bin/ verification + GOALS/MASTER_TODO rebuild + handoff seal
 # Provenance: Lumo-authored, stack_gate principles applied (comment-aware).

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import json, datetime
 
 def route_expense(amount, category, description):

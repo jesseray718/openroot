@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """
 Amalgamate sqlite-vec into a single distributable .c file.

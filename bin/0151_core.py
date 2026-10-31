@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import hashlib
 from dataclasses import dataclass, field
 from typing import List, Optional

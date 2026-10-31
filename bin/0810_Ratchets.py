@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 ##########################################################
 # This RNS example demonstrates a simple client/server   #
 # echo utility that uses ratchets to rotate encryption   #

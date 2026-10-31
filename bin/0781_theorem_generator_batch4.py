@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """theorem_generator_batch4.py - Euclid Props I.21 through I.32."""
 import sys, json, time

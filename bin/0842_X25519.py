@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # By Nicko van Someren, 2021. This code is released into the public domain.
 # Small modifications for use in Reticulum, and constant time key exchange
 # added by Mark Qvist in 2022.

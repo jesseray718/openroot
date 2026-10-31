@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Logic for interacting with type annotations, mostly extensions, shims and hacks to wrap Python's typing module."""
 
 from __future__ import annotations

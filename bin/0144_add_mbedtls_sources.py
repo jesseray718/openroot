@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # Pulls all mbedTLS sources from arduino-pico's pico-sdk into the build so the
 # firmware can call mbedtls_* APIs (the precompiled arduino-pico libs only
 # expose BearSSL; mbedTLS is shipped as source under lib/mbedtls/library/*.c).

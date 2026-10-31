@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Generate and work with PEP 425 Compatibility Tags."""
 
 from __future__ import annotations

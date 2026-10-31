@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # refinement_loop_v2: sqlite seeds context, 7B drafts, 3B grades, FIX feeds forward
 set -eu

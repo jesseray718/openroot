@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """OpenRoot self-observing inventory + circuit registry.
 η = useful_joules / human_joules. This script maximises the denominator reduction.

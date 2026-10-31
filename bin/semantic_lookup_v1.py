@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Solution 3: thresholded semantic routing over the pathway embedding store.
 

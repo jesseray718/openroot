@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Fallback pure Python implementation of msgpack"""
 
 import struct

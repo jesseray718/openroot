@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import json
 from enum import Enum
 from typing import TYPE_CHECKING, Any, Callable, Dict, ForwardRef, Optional, Tuple, Type, Union

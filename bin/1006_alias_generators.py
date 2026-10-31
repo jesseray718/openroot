@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Alias generators for converting between different capitalization conventions."""
 
 import re

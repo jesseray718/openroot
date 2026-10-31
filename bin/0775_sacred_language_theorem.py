@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """sacred_language_theorem.py - A=Agape language system formalization."""
 import sys, json, time

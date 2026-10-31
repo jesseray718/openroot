@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """
 This code wraps the vendored appdirs module to so the return values are
 compatible for the current pip code base.

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # frp11_forensics.sh — identify Sep 19 coordinated master pushes + python-quality failure root cause
 set -euo pipefail

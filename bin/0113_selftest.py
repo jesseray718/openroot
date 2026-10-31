@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """OpenRoot Kernel Self-Test v1.0.3."""
 import math, sys, pathlib

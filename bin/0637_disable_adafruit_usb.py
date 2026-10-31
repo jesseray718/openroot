@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 # trunk-ignore-all(flake8/F821)
 # trunk-ignore-all(ruff/F821)

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """
 JouleLeverageAnalyzer: measures work (J) accomplished per human effort (J) to maximize systemic benefit per unit human input per OpenRoot directives.

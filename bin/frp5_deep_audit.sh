@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # frp5_deep_audit.sh — full repo pass v5: GitHub deep audit + local gate + consolidate + guarded push
 # Author: frp5 script, ${OPENROOT_USER}-supervised. Dry-run unless CONFIRM=1.

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import math
 import re
 from collections import OrderedDict, deque

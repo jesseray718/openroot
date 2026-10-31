@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """
 AeroCement Breath Loop v6.0 — WITH RADIATIVE SKY COOLING

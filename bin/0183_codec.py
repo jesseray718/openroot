@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import codecs
 import re
 from typing import Any, Optional, Tuple

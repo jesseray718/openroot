@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """OpenRoot Coefficient Calculator v1 - verified_performance / cost_of_interaction."""
 import argparse, json, sys, time

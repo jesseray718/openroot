@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Experimental module exposing a function to generate a core schema that validates callable arguments."""
 
 from __future__ import annotations

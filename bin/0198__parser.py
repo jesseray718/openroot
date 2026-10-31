@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Handwritten parser of dependency specifiers.
 
 The docstring for each __parse_* function contains EBNF-inspired grammar representing

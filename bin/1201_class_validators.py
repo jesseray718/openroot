@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import warnings
 from collections import ChainMap
 from functools import partial, partialmethod, wraps

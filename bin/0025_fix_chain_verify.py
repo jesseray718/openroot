@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Fix the verify_chain function to handle None values properly."""
 import json
 

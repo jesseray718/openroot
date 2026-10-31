@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 # CANARY:OPENROOT-PHI-ROUTER-HARNESS-V4
 """Enum-locked structured outputs: grammar forbids invented tools; handleable flag guards the trap."""

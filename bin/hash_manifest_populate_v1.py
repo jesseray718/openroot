@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Tiered, resumable populate for hash_manifest_optiplex.db (manifest table).
 

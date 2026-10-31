@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from dataclasses import dataclass, asdict
 from typing import Dict, Any
 @dataclass

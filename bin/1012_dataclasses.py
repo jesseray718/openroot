@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Provide an enhanced dataclass that performs validation."""
 
 from __future__ import annotations as _annotations

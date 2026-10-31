@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 ##########################################################
 # This RNS example demonstrates setting up announce      #
 # callbacks, which will let an application receive a     #

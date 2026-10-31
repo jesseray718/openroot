@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/data/data/com.termux/files/usr/bin/env python3
 """
 dag_orchestrator.py — OpenRoot fractal DAG mold

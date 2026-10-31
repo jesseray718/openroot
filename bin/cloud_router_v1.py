@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """OpenRoot Cloud Router v1 - cascade free-tier APIs with token bucket rotation."""
 import argparse, json, os, sqlite3, sys, time

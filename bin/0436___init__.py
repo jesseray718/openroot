@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from pip._internal.distributions.base import AbstractDistribution
 from pip._internal.distributions.sdist import SourceDistribution
 from pip._internal.distributions.wheel import WheelDistribution

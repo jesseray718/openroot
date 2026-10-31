@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Wrappers to call pyproject.toml-based build backend hooks.
 """
 

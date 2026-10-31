@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from dataclasses import dataclass
 @dataclass
 class SolarResult:

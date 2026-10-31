@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """theorems_extend.py - theorem kernel with flag-memoized proofs. Part 1/3 appended via sh."""
 from __future__ import annotations

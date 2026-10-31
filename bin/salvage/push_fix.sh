@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/data/data/com.termux/files/usr/bin/bash
 set -u
 mkdir -p /data/data/com.termux/files/home/openroot/workflow

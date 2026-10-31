@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """The types module contains custom types used by pydantic."""
 
 from __future__ import annotations as _annotations

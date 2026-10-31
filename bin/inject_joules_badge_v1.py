@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Inject live joules-saved counter into README/profile/landing pages.
 Reads data/joules_saved.json, finds/inserts badge line in three targets."""

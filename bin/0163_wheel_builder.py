@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Orchestrator for building wheels from InstallRequirements."""
 
 from __future__ import annotations

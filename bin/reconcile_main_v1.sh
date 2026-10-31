@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # reconcile_main_v1 — commit kai artifacts, reconcile diverged main, push, then
 # per-branch verdict: PR (unique work) or DELETE (fully merged). No prompts.

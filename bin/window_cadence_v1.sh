@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # window_cadence_v1.sh - runs window_loop only when the window CHANGED.
 # WINDCADV1 canary. A loop is justified iff marginal output > marginal

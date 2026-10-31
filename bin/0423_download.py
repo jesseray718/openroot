@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import logging
 import os
 from optparse import Values

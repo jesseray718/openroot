@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from decimal import Decimal
 from pathlib import Path
 from typing import TYPE_CHECKING, Any, Callable, Sequence, Set, Tuple, Type, Union

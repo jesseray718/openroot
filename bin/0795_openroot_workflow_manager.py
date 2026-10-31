@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """OPENROOT WORKFLOW MANAGER v2.1-imfuse
 Infused with GitHub Copilot CLI explore→plan→code→commit

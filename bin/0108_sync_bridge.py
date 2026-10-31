@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """sync_bridge.py — merge indexes from multiple AgapeMesh nodes"""
 import json, hashlib, sys

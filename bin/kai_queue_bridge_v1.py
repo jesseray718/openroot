@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Convert kai_corpus_manifest to lumo_ingest queue format."""
 import os, sys, json, hashlib

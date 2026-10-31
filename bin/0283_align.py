@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from itertools import chain
 from typing import TYPE_CHECKING, Iterable, Optional, Literal
 

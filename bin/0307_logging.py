@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import logging
 from datetime import datetime
 from logging import Handler, LogRecord

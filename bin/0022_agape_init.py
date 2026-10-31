@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # Paste the code, then Ctrl+O (Save), Enter, Ctrl+X (Exit)	#!/usr/bin/env python3
 """
 AGAPE_NET GENESIS NODE v0.1

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 ##########################################################
 # This RNS example demonstrates how to set up a link to  #
 # a destination, and pass binary data over it using a    #

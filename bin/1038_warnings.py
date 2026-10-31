@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Pydantic-specific warnings."""
 
 from __future__ import annotations as _annotations

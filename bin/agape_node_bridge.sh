@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 set -eu
 # agape_node_bridge.sh — bridges chat → local stack → chat

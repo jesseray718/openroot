@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from contextvars import ContextVar
 from typing import Optional
 import sys

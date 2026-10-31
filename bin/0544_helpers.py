@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import sqlite3
 import struct
 from collections import OrderedDict

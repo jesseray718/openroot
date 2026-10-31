@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """OpenRoot one-shot: bank bench, dedupe theorems, PO-016 reward_verified. Idempotent."""
 import gc, hashlib, json, math, os, py_compile, shutil, time

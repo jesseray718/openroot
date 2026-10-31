@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import inspect
 from functools import partial
 from typing import (

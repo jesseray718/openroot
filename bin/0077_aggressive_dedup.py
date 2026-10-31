@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/data/data/com.termux/files/usr/bin/python3
 """Aggressive content-hash dedup across phone / SD / USB.
 Keeps newest mtime (or largest if tied). Hardlinks when same FS, else deletes dupe.

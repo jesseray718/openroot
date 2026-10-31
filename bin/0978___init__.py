@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from .distro import (
     NORMALIZED_DISTRO_ID,
     NORMALIZED_LSB_ID,

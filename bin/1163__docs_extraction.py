@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Utilities related to attribute docstring extraction."""
 
 from __future__ import annotations

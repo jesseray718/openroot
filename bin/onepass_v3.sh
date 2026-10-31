@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # onepass_v3.sh — Weekly: env_map, merge janitor, manifest regen, drift report, 7B next-move, session seed, commit
 set -eu

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/data/data/com.termux/files/usr/bin/env python3
 """Agape Oracle — Language Operating System
 A1 = DERIVATION | Kernel = AGAPE (R=1.0) | η = useful_joules / human_joules

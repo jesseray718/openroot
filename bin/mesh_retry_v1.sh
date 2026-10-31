@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # mesh_retry_v1.sh — auto-retry on HOLD verdict (max 2 rounds), fix-specific prompts
 # Specialty routing: 7B revisions, 3B grading only. Each round addresses prior reasons.

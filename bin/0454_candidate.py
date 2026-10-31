@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from dataclasses import dataclass
 
 from pip._vendor.packaging.version import Version

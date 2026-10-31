@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # configobj.py
 # A config file reader/writer that supports nested sections in config files.
 # Copyright (C) 2005-2014:

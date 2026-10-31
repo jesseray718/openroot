@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from __future__ import annotations
 
 import pip._vendor.urllib3.connection as urllib3_connection

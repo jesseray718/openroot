@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """OpenRoot Kernel v1.0.3 — Evaporative Thermal Displacement Loop."""
 import os, sys, subprocess, pathlib, shutil

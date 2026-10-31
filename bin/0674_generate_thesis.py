@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 content = r'''
 \documentclass[12pt,a4paper]{article}

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Low-level introspection utilities for [`typing`][] members.
 
 The provided functions in this module check against both the [`typing`][] and [`typing_extensions`][]

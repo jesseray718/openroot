@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 import sys
 sys.path.insert(0, '/data/data/com.termux/files/home/openroot')

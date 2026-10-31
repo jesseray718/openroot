@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Primary application entrypoint."""
 
 from __future__ import annotations

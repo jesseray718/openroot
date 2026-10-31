@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """phi4-router front door: hash-first → embed-second → model-last.
 Acts on DECISION output from semantic_lookup_v1.py and seals pathways.

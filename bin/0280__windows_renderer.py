@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from typing import Iterable, Sequence, Tuple, cast
 
 from pip._vendor.rich._win32_console import LegacyWindowsTerm, WindowsCoordinates

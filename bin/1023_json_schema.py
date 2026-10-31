@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """!!! abstract "Usage Documentation"
     [JSON Schema](../concepts/json_schema.md)
 

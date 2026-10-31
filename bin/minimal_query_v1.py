@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Minimal query: per-pod routing + slim dossier + clarifying loop.
 Outputs a fully-accounted OpenRoot receipt."""

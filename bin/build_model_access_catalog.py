@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Build a read-only catalog of all OpenLoom database pods."""
 

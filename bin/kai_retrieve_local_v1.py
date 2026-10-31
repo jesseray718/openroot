@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """kai_retrieve_local_v1 — runs ON OptiPlex: find, copy, verify, extract kai assets locally."""
 import os, sys, shutil, hashlib, tarfile

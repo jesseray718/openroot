@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Lazy ZIP over HTTP"""
 
 from __future__ import annotations

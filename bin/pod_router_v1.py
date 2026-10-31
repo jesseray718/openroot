@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Per-pod router: picks 1-3 pods by keyword domain mapping."""
 import re, sys, json, os

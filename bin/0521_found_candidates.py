@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Utilities to lazily create and visit candidates found.
 
 Creating and visiting a candidate is a *very* costly operation. It involves

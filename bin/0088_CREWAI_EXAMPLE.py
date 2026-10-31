@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # Minimal CrewAI-style example using the fractal lattice roles
 # (drop into any local CrewAI project that already talks to Ollama)
 from fractallattice import Lattice

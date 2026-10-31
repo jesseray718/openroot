@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 import datetime, hashlib, json, pathlib
 LEDGER = pathlib.Path("/home/jesse/openroot/ledger/agape/chain.jsonl")

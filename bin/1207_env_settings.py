@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import os
 import warnings
 from pathlib import Path

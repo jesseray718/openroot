@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """For when pip wants to check the date or time."""
 
 import datetime

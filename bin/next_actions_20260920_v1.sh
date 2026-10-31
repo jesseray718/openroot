@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # next_actions_20260920_v1.sh — priority queue: fork syncs, supersede PR closes,
 # master->main renames (auto-detect), unstable-PR diagnostics, GOALS/MASTER_TODO draft rebuild.

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """
 UNEClient v0.2 — agape-une governance interface for OpenRoot

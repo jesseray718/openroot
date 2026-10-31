@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Import helper so tests can load a file whose name contains a hyphen."""
 import importlib.util
 import os

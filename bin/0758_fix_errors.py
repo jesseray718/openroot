@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/data/data/com.termux/files/usr/bin/python3
 """Auto-fix known PTTR typos across all AERO_ROOT files."""
 import os, glob

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # OptiPlex → Kai9000 connection (for pushing files, checking A15 state)
 set -eu

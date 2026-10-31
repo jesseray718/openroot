@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """PEP 610"""
 
 from __future__ import annotations

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from collections import defaultdict
 from itertools import chain
 from operator import itemgetter

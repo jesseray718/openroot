@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 ##########################################################
 # This RNS example demonstrates a simple filetransfer    #
 # server and client program. The server will serve a     #

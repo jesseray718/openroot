@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import sqlite3
 EXT_PATH = "dist/vec0"
 db = sqlite3.connect(":memory:")

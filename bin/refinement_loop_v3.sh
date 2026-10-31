@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 set -eu
 export OLLAMA_HOST=http://localhost:11434

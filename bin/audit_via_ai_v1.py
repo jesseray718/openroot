@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """AI audit harness: bounded dir manifest + git diff -> model report -> sealed into pathway ledger.
 Cached pathway hit means the AI is NEVER called for proven input."""

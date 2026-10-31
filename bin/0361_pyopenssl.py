@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """
 Module for using pyOpenSSL as a TLS backend. This module was relevant before
 the standard library ``ssl`` module supported SNI, but now that we've dropped

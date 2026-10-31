@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """worldline_tracker.py - Track individual observer trajectories and timeline branches."""
 import json, time, hashlib

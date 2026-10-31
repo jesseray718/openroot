@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 __title__ = 'i2plib'
 __description__ = 'A modern asynchronous library for building I2P applications.'
 __url__ = 'https://github.com/l-n-s/i2plib'

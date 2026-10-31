@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from typing import Iterable, Tuple, TypeVar
 
 T = TypeVar("T")

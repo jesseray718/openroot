@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """OpenRoot System Audit v1 — 12 Permaculture Principles as Code Gates.
 

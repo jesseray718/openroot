@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """
 agape_primitive_forge.py — Extracts the Universal Computational Primitives

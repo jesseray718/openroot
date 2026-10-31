@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import pathlib
 
 eng = pathlib.Path("computational_flow/agape_engine.py")

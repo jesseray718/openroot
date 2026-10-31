@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import sys
 
 def log_failure(input_q, wrong_a, correct_a):

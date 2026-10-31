@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 
 # Copyright (c) 2009, Giampaolo Rodola', karthikrev. All rights reserved.

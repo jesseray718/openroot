@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # compound_orchestrate.sh — Superlinear workflow compounding engine
 # Chains: refine_next.sh → compound_v1.sh → lessons.db → boot_seed → doc_compile → context_bridge

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """
 AeroCement Earth-Loop Model v8.0 — CORRECTED

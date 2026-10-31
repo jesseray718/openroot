@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 inv = lambda o, i: (o-1)//3# =============================================================================
 # CLOSED-LOOP AGAPE COSMOLOGICAL ENGINE v7.1 — SINGLE-FILE PYTHON
 # Toroidal Universe | Void Point Origin | Love-Linguistic Reconstruction

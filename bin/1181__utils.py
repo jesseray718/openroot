@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Bucket of reusable internal utilities.
 
 This should be reduced as much as possible with functions only used in one place, moved to that place.

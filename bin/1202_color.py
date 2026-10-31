@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """
 Color definitions are  used as per CSS3 specification:
 http://www.w3.org/TR/css3-color/#svg-color

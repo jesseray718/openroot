@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Support functions for working with wheel files."""
 
 import logging

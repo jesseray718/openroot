@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Stuff that differs in different Python versions and platform
 distributions."""
 

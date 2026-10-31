@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # frp8_prune_classify.sh — branch containment classifier from frp7 triage
 # CONTAINED (ahead_by=0) = safe-prune candidate | STALE-UNMERGED (>45d, ahead) | ACTIVE (recent, ahead)

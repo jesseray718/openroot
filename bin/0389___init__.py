@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """This is a subpackage because the directory is on sys.path for _in_process.py
 
 The subpackage should stay as empty as possible to avoid shadowing modules that

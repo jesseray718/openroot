@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/data/data/com.termux/files/usr/bin/python3
 """Merge postulate fragment into live postulates.json by id.
 Existing ids win unless FORCE_OVERWRITE=1.

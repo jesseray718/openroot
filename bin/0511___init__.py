@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # Expose a limited set of classes and functions so callers outside of
 # the vcs package don't need to import deeper than `pip._internal.vcs`.
 # (The test directory may still need to import from a vcs sub-package.)

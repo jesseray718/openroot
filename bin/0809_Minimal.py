@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 ##########################################################
 # This RNS example demonstrates a minimal setup, that    #
 # will start up the Reticulum Network Stack, generate a  #

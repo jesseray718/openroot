@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """
 This module contains provisional support for SOCKS proxies from within
 urllib3. This module supports SOCKS4, SOCKS4A (an extension of SOCKS4), and

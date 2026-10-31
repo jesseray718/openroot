@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from typing import Iterator, List, Optional, Tuple
 
 from ._loop import loop_first, loop_last

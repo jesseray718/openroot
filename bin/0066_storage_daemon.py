@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """AgapeNet Storage Optimizer - VERIFIED FIX"""
 import os, sys, time, hashlib, sqlite3, shutil, signal

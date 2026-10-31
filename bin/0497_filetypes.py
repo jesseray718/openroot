@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Filetype information."""
 
 from pip._internal.utils.misc import splitext

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Smoke v2: discover real exports, verify reward_verified, bank ledger entry."""
 import inspect, json, math, sys

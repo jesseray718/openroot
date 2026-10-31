@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import datetime
 import struct
 from collections import namedtuple

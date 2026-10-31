@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Tools to provide pretty/human-readable display of objects."""
 
 from __future__ import annotations as _annotations

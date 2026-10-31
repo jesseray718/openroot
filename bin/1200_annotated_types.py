@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import sys
 from typing import TYPE_CHECKING, Any, Dict, FrozenSet, NamedTuple, Type
 

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Compute k-means centroids using FAISS and save to a centroids DB.
 

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 class ConsoleError(Exception):
     """An error in console operation."""
 

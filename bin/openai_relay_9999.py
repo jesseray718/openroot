@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """openai_relay_9999.py — transparent HTTP relay 0.0.0.0:9999 -> 127.0.0.1:11434.
 Gives kai9000 an OpenAI-compatible endpoint (/v1/chat/completions, /v1/models) served by

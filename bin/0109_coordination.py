@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """C(N,T,R) — coordination cost. R=1.0 ⇒ C=0."""
 
 def coord_cost(n: int, t: int, r: float) -> float:

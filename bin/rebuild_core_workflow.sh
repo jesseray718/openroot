@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # rebuild_core_workflow.sh — reinstalls 10 lost workflow components from boot seed
 # Per your standing rules: one bash paste, cat <<'EOF' heredoc, self-writing/idempotent

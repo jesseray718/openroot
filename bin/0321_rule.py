@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from typing import Union
 
 from .align import AlignMethod

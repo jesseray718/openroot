@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import struct
 import torch
 import numpy as np

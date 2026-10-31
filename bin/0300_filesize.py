@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Functions for reporting filesizes. Borrowed from https://github.com/PyFilesystem/pyfilesystem2
 
 The functions declared in this module should cover the different

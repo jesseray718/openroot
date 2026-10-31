@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """
 Given a list of integers, made up of (hopefully) a small number of long runs
 of consecutive integers, compute a representation of the form

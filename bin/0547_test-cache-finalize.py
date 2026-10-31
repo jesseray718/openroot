@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Regression tests for #295: vec0 must finalize cached prepared statements
 on every commit, not just the rowid subset.
 

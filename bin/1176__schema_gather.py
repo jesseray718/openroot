@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # pyright: reportTypedDictNotRequiredAccess=false, reportGeneralTypeIssues=false, reportArgumentType=false, reportAttributeAccessIssue=false
 from __future__ import annotations
 

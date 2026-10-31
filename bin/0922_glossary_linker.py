@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """mdbook preprocessor to auto-link glossary terms.
 
 Parses glossary.md for terms defined using definition list syntax:

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import unittest
 
 from .hashes import TestSHA256

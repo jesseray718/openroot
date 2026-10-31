@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from enum import IntEnum
 from functools import lru_cache
 from itertools import filterfalse

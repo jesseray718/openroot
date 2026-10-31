@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # agent.sh — 7B edit → 3B grader loop with sqlite logging
 # Usage: agent.sh <spec> <model_7b> <model_3b>

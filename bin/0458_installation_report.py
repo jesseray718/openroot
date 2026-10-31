@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from collections.abc import Sequence
 from typing import Any
 

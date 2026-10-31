@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/bin/python
 
 # Copyright (C) 2024, Mark Qvist

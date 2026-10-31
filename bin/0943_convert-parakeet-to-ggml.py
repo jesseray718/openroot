@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 # Convert Parakeet TDT model from NeMo format to ggml format
 #

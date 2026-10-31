@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Cached-pathway wrapper for arbitrary commands with RAPL measurement.
 Usage: gh_cache_v2.py [--ttl=3600] -- <command...>

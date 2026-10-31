@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """High-level introspection utilities, used to inspect type annotations."""
 
 from __future__ import annotations

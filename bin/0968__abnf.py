@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # We use native strings for all the re patterns, to take advantage of string
 # formatting, and then convert to bytestrings when compiling the final re
 # objects.

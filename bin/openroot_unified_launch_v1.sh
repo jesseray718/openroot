@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # openroot_unified_launch_v1.sh — Complete verification + architecture + commit workflow
 # Provenance: Lumo-assisted, human-gated

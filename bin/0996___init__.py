@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from ._api import request, stream
 from ._async import (
     AsyncConnectionInterface,

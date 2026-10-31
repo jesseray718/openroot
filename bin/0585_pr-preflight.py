@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Scan the current git diff the way CodeRabbit + caveman99 would.
 

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from .core import contents, where
 
 __all__ = ["contents", "where"]

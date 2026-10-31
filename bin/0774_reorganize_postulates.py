@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """reorganize_postulates.py - Move Euclid postulates from axioms to postulates file."""
 import json

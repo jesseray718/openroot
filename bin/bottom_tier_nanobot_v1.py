@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Bottom Tier — Atomic Nanobot Unit. One role, one call, one artifact."""
 from __future__ import annotations

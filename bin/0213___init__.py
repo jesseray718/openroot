@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """
 Utilities for determining application-specific dirs.
 

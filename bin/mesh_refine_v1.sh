@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # mesh_refine_v1.sh — FTS5 retrieval → 7B drafts → 3B grades → sealed drafts
 # Specialty routing: SQLite/FTS5 (recall), qwen2.5-coder:7b (synthesis),

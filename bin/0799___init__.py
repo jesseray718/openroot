@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 compiling = False
 noticed = False
 notice_delay = 0.3

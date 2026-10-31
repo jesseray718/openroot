@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/bin/bash
 # Final Cleanup: Commit Recovery Artifacts
 # Jesse Ray / OpenRoot

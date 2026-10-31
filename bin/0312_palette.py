@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from math import sqrt
 from functools import lru_cache
 from typing import Sequence, Tuple, TYPE_CHECKING

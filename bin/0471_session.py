@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """PipSession and supporting code, containing all pip-specific
 network request configuration and behavior.
 """

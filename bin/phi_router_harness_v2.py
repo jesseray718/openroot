@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 # CANARY:OPENROOT-PHI-ROUTER-HARNESS-V2
 """Router test harness: manifest-grounded, JSON-gated, numeric-confidence checked."""

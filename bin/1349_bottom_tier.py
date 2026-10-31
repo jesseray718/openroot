@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/data/data/com.termux/files/usr/bin/env python3
 """
 bottom_tier.py — OpenRoot fractal n0 mold (nanobot runner + DAG leaf)

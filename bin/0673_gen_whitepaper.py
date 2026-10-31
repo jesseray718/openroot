@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from fpdf import FPDF
 
 class PDF(FPDF):

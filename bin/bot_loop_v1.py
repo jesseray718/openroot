@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/data/data/com.termux/files/usr/bin/python3
 """OPENROOT BOT LOOP v1.0 — canary [botloop-v1-ok]
 

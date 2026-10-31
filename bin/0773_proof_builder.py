@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """proof_builder.py - manual proof construction with kernel validation."""
 import sys

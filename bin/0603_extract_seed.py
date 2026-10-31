@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/data/data/com.termux/files/usr/bin/python3
 """SESSION EXTRACTOR - Saves session state to portable JSON seed"""
 import json, os, subprocess

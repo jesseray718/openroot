@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Quick self-contained smoke test using a synthetic dataset.
 Creates a tiny base.db in a temp dir, runs the delete benchmark, verifies output.

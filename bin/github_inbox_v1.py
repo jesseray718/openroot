@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """OpenRoot GitHub CI/CD Inbox v1 - polls Actions status, surfaces failures."""
 import argparse, json, os, subprocess, sys, time

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from ..structs import RequirementInformation
 from .abstract import AbstractResolver, Result
 from .criterion import Criterion

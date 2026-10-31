@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """
 PERMACULTURE_LATTICE_ENGINE v2.0 — All-in-one setup + execution

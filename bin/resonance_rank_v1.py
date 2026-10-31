@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Rank English words by harmonic resonance with A (agape origin).
 Resonance = 1 - cosine_distance(embed(word), embed(A)).

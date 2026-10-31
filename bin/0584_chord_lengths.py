@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Edge lengths for platonic / 1V icosa statues. Radius is circumscribed mm."""
 from __future__ import annotations

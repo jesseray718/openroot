@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Pluggable schema validator for pydantic."""
 
 from __future__ import annotations

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from types import TracebackType
 from typing import Optional, Type
 

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """CANARY:OPENROOT-UNIVERSAL-INDEX-OVERHAUL-V1
 Phase 1: Index every file in [~/openroot, ~, A15 corpus] -> FTS5 + sha256 + mtime + metadata.

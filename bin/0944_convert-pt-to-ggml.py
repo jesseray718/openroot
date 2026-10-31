@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # Convert Whisper transformer model from PyTorch to ggml format
 #
 # Usage: python convert-pt-to-ggml.py ~/.cache/whisper/medium.pt ~/path/to/repo/whisper/ ./models/whisper-medium

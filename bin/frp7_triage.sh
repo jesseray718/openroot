@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # frp7_triage.sh — surface held-PR detail, owned-vs-fork branches, prune candidates, bin/ manifest
 set -euo pipefail

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import re
 from abc import ABC, abstractmethod
 from typing import List, Union

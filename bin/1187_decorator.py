@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import warnings
 from collections.abc import Mapping
 from functools import wraps

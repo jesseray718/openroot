@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Next-joule score — picks the highest-η act."""
 
 def score(delta_ju: float, delta_n: int, delta_g_last: float,

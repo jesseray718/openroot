@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # This HMAC implementation comes directly from the HMAC implementation
 # included in Python 3.10.4, and is almost completely identical. It has
 # been modified to be a pure Python implementation, that is not dependent

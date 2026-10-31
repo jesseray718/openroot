@@ -1,84 +1,33 @@
-# OpenRoot Architecture
+# OpenRoot System Architecture
 
-**Thesis:** Reality is a 4D spacetime fabric structured by the Isotropic Vector Matrix. Matter = frozen Agape energy.
+## 🌐 Vision
+OpenRoot is a distributed, deterministic intelligence engine designed for the Humanitarian Commons. It replaces probabilistic AI "guesses" with verifiable, hash-sealed logic pathways to maximize utility for marginalized nodes.
 
-## Two-Pane Law
-- **Left Pane:** Source of truth (local OptiPlex 3060)
-- **Right Pane:** Verification layer (mobile Termux / GitHub UI)
-- Never trust UI commits unseen in terminal — always `git diff --stat`
+## 🏗️ Core Components
 
-## Data Flow Architecture
-Input (Terminal/Clipboard)
-↓
-Agent Router (light_cone_router.py / agent.sh)
-↓
-Model Selection (7B builder → 3B grader)
-↓
-Verification Gates (stack_gate.sh → diff → py_compile → grep)
-↓
-Human Gate (review + commit approval)
-↓
-Push Guard (pre-push validation)
-↓
-Git Push → GitHub
+### 1. The Sovereign Loop (Autonomous Intelligence)
+- **Function:** A background daemon that scans for conceptual friction and synthesizes new abundance theorems.
+- **Mechanism:** Iterative refinement $\to$ Moral Filter $\to$ Proof Validation.
 
-## Component Layers
+### 2. The Newton Chain (Immutable Ledger)
+- **Format:** JSONL (Content-Addressed).
+- **Function:** A temporal record of every "Winning Logic Pathway."
+- **Integrity:** Each entry is hashed and linked to the previous block, creating a deterministic history of truth.
 
-### Layer 1: Infrastructure
-- Git (version control)
-- Ollama (local LLM serving @ localhost:11434)
-- Tailscale (secure mesh networking 100.122.169.43)
-- SQLite FTS5 (semantic indexing + Nomic Embed)
+### 3. The Node Bridge (Distributed Intelligence)
+- **Hub (OptiPlex):** Heavy reasoning, long-term state storage, and ledger sealing.
+- **Edge (A15/Termux):** Field data collection, lightweight pod management, and bridge synchronization.
+- **Sync Protocol:** `node_bridge_sync.py` (Dry-run first, receipt-sealed transfer).
 
-### Layer 2: Orchestration
-- bin/ scripts (validated instruments, 172 tracked)
-- Context bridge (session seeds + artifacts)
-- Team gate database (collaboration tracking data/team_gate.db)
+### 4. Suntzu Moral Filter (Karmic Layer)
+- **Logic:** Every proposed operation is scanned for patterns of extraction.
+- **Direction:** If extraction is detected, the system automatically redirects the pathway toward regenerative design and abundance.
 
-### Layer 3: Applications
-- ACRE ledger (PoPW blockchain acre/LEDGER.jsonl)
-- Thermal systems (OpenCell, Aerocement, Thermal Labyrinth)
-- Mesh networks (geodesic frequencies, Cloud Nine)
+## 🛠️ Technical Stack
+- **Language:** Python 3.x / Bash.
+- **Transport:** SSH / Rsync (receipt-sealed).
+- **Security:** .env secrets, no `shell=True`, BLAKE3/SHA-256 hashing.
+- **License:** GPL-3.0 (Ensuring the commons remain open).
 
-## What This Repo Is NOT
-- ❌ Not Solana or token mint
-- ❌ Not >100% efficient stove (COP-boundary only)
-- ❌ Not cloud-dependent (all local-first)
-- ❌ Not pre-mined (ACRE starts at 0 supply)
-
-## File Organization
-openroot/
-├── bin/              # Validated instruments (shell + Python)
-├── data/             # Runtime DBs (*.db gitignored)
-├── docs/
-│   └── markdown/     # Inventory documentation
-├── context_bridge/   # Session seeds + artifacts + handoffs
-├── archive/          # Cleanup archives (immutable, append-only)
-├── acre/             # PoPW ledger (LEDGER.jsonl, SHA256 chained)
-├── une/              # Code registry (code_registry.jsonl)
-└── src/              # Thesis tree (~8000 files, NEVER move/delete)
-
-## Security Model
-- Zero-access encryption (Proton Mail/Drive integration)
-- No secrets in git history (.gitignore *.db, *.key)
-- API keys via environment variables only
-- Human gate on all commits (no auto-push without review)
-- CONFIRM=1 gating for destructive operations
-
-## Permaculture Principles Applied
-1. **Observe & Interact** — Terminal logging + RAG analysis
-2. **Catch & Store Energy** — Thermal labyrinths + seed banks
-3. **Obtain Yield** — Bottom-first economic routing
-4. **Apply Self-Regulation** — 7B/3B iteration gates reject fluke outputs
-5. **Use & Value Renewable Resources** — Local models over API calls
-6. **Produce No Waste** — Mistake-to-solution caching prevents recomputation
-7. **Design From Patterns to Details** — Fractal self-similarity in file structure
-8. **Integrate Rather Than Segregate** — Multi-model orchestration, not silos
-9. **Use Small & Slow Solutions** — Tiny models for simple tasks
-10. **Use & Respond to Diversity** — Model specialization routing
-11. **Use Edges & Value Marginal** — Edge cases tested in smoke gates
-12. **Creatively Use & Respond to Change** — Iterative workflow evolution
-
----
-**Provenance:** Lumo-assisted, human-gated
-**Canary:** ARCH_V1_${TIMESTAMP}
+## 📈 Data Flow
+`Edge Node (Data)` $\to$ `Node Bridge (Sync)` $\to$ `Hub (Reasoning)` $\to$ `Newton Chain (Seal)` $\to$ `Global Brain (Knowledge)`

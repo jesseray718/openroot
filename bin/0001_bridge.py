@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from flask import Flask, request, jsonify
 import subprocess, os, json
 app = Flask(__name__)

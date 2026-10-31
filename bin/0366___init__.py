@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # For backwards compatibility, provide imports that used to be here.
 from __future__ import annotations
 

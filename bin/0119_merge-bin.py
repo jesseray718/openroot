@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/python3
 
 # Adds PlatformIO post-processing to merge all the ESP flash images into a single image.

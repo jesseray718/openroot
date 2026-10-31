@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 # CANARY:OPENROOT-ESTATE-TOPOLOGY-V1
 """Survey what's built, what's wired, what's orphaned. Emits JSON + MD report."""

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python
 #
 # Copyright 2011-2018 The Rust Project Developers. See the COPYRIGHT

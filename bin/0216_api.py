@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Base API."""
 
 from __future__ import annotations

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # kai_bridge_poller_v1.sh — ingest kai_inbox files into lesson pods, receipt to kai_outbox
 # Kanban: kai_inbox (in) -> pods_garden (work) -> kai_outbox (receipt). Idempotent.

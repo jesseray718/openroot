@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """The `version` module holds the version information for Pydantic."""
 
 from __future__ import annotations as _annotations

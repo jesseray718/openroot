@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # This contains the main Connection class. Everything in h11 revolves around
 # this.
 from typing import (

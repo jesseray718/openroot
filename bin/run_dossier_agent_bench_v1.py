@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """CANARY:OPENROOT-DOSSIER-AGENT-BENCH-V3
 Full dossier pack upfront -> qwen2.5-coder:7b -> script, NO socket timeout.

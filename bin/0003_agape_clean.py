@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """
 AGAPE_CLEAN — Flatten nesting, remove bloat, fix .gitignore

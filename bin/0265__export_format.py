@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 CONSOLE_HTML_FORMAT = """\
 <!DOCTYPE html>
 <html>

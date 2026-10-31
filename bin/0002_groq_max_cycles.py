@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import os, re, time, json, logging, argparse
 from collections import defaultdict, deque
 from dataclasses import dataclass, field

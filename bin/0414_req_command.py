@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Contains the RequirementCommand base class.
 
 This class is in a separate module so the commands that do not always

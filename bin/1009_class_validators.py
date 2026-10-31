@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """`class_validators` module is a backport module from V1."""
 
 from ._migration import getattr_migration

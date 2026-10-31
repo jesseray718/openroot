@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Dependency Resolution
 
 The dependency resolution in pip is performed as follows:

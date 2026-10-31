@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Coder node register. Does not touch Syncthing, SSH keys, or git."""
 from __future__ import annotations

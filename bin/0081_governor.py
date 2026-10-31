@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """GOVERNOR-01 — Bounded LLM Swarm Orchestrator. Pure stdlib, no pip deps."""
 import os, sys, json, subprocess, re

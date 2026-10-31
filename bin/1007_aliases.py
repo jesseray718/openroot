@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Support for alias configurations."""
 
 from __future__ import annotations

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Offline unit tests. No network. No FS writes outside /tmp."""
 

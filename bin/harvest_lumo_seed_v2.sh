@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # CANARY:OPENROOT-HARVEST-V2 (CORPUS-GROUNDED)
 # Fetch estate context via FTS5+embedding, prepend to seed, then call 7B

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 ##########################################################
 # This RNS example demonstrates a simple client/server   #
 # echo utility. A client can send an echo request to the #

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/bin/bash
 # write_context_bridge.sh — session close-out bridge, sealed with SHA256
 set -eu

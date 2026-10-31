@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """
 AEROCEMENT SINGLE-HOME PROTOTYPE - BUILD SPEC v1.0

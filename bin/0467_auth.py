@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Network Authentication Helpers
 
 Contains interface (MultiDomainBasicAuth) and associated glue code for

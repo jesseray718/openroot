@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Agape+Thermo unified ledger v2 — self-accounting + cache-instrumented.
 Every run measures its own joules (RAPL or estimate) and writes a receipt

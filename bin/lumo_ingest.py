@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """lumo_ingest.py v2 — rebuilt from scar 2026-10-09 (original unrecoverable).
 

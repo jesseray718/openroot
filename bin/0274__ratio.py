@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from fractions import Fraction
 from math import ceil
 from typing import cast, List, Optional, Sequence, Protocol

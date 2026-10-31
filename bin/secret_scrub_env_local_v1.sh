@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # secret_scrub_env_local_v1.sh — purge leaked JWT_SECRET from openroot
 # Usage: dry-run default; CONFIRM=1 for full purge; ROTATED=<newhex> optional

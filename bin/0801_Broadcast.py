@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 ##########################################################
 # This RNS example demonstrates broadcasting unencrypted #
 # information to any listening destinations.             #

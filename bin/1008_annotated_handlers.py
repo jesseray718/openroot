@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Type annotations to use with `__get_pydantic_core_schema__` and `__get_pydantic_json_schema__`."""
 
 from __future__ import annotations as _annotations

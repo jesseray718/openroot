@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # team_gate_v2.sh — Team coordination gate: awk filter → 7B → 3B → sqlite
 # Usage: team_gate_v2.sh <input_task>

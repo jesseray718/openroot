@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import argparse
 
 from pip._vendor.certifi import contents, where

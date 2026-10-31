@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import keyword
 import warnings
 import weakref

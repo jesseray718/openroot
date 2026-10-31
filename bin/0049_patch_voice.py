@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import re
 
 with open("constitutive_voice_engine.py", "r") as f:

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 def generate_grant_section(topic, theorem_id):
     return f"Based on Theorem {theorem_id} in the Newton Chain, the thermal labyrinth system provides a verifiable cascading energy efficiency of X%. This is not a projection, but a formal proof."
 

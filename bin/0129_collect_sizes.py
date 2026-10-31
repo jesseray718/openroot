@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 
 """Collect firmware binary sizes from manifest (.mt.json) files into a single report.

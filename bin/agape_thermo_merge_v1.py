@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Unified Agape+Thermo Ledger — merges semantic genesis chain with RAPL/POPW thermo accounting"""
 import json, hashlib, sqlite3, sys, pathlib, datetime

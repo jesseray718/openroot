@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from typing import Any, Generic, List, Optional, TextIO, TypeVar, Union, overload
 
 from . import get_console

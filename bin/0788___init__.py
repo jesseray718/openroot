@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import argparse
 from une.une_atomic_library import unified_effective_power, unified_power_acceleration, global_grid_mass
 

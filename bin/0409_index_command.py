@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """
 Contains command classes which may interact with an index / the network.
 

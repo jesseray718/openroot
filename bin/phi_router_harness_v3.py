@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 # CANARY:OPENROOT-PHI-ROUTER-HARNESS-V3
 """Structured-output routing + semantic gate: tool must be manifest-exact, model must match specialty."""

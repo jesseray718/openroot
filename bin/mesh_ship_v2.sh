@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # mesh_ship_v2.sh — retry loop + visible drafts + full ship on PASS
 # Prints every draft to terminal (chat-visible). On PASS (or exhaust): finalize draft

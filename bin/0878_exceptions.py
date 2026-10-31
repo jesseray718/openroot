@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # SAM exceptions
 
 class SAMException(IOError):

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """batch_nomic_embed_v2.py — recursive nomic-embed-text ingestion, sha256 dedup, atomic JSONL out.
 Fix v2: removed false-positive /root path guard; corrected INPUT_DIR=/home/jesse/openroot."""

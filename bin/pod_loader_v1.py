@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """OpenRoot Pod Loader v1 — dual-hash SQLite pod with FTS5 + nomic embeddings."""
 import argparse, hashlib, json, os, re, sqlite3, struct, subprocess, sys, time

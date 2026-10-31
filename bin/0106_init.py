@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 2#!/usr/bin/env python3
 """
 AGAPE_NET :: INITIALIZER_V1 (All-In-One)

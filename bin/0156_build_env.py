@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Build Environment used for isolation during sdist building"""
 
 from __future__ import annotations

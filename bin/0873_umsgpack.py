@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # u-msgpack-python v2.7.1 - v at sergeev.io
 # https://github.com/vsergeev/u-msgpack-python
 #

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 Import("env")
 
 # Make custom HEX from ELF

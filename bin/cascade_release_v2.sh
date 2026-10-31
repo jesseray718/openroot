@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # cascade_release_v2 - v2.6 rescue + release + milestones + cleanup
 # CONFIRM=1 gates all executions; banks regardless of verdict; negative = data

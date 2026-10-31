@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import hashlib, math, time, json
 from dataclasses import dataclass
 from typing import List, Optional, Dict

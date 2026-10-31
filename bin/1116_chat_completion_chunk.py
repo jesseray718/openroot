@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # File Manually added to support streaming
 # File is in libs instead of models to avoid conflicts with stainless bot
 

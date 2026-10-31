@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Frontend for unified agape+thermo ledger with semantic routing"""
 import json, sqlite3, sys, hashlib

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # ruff: noqa: E731
 
 import re

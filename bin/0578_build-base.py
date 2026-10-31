@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # /// script
 # requires-python = ">=3.12"
 # dependencies = [

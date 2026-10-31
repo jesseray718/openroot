@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # lb.sh v2 — Lumo bridge, fully-autonomous mode with parachute
 #   lb auto   : snapshot repo → run inbox.sh → on nonzero exit or failed gate, auto-revert

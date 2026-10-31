@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # High level events that make up HTTP/1.1 conversations. Loosely inspired by
 # the corresponding events in hyper-h2:
 #

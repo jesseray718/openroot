@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from os.path import realpath
 
 Import("env") # type: ignore

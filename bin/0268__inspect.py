@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import inspect
 from inspect import cleandoc, getdoc, getfile, isclass, ismodule, signature
 from typing import Any, Collection, Iterable, Optional, Tuple, Type, Union

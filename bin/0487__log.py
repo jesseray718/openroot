@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Customize logging
 
 Defines custom logger class for the `logger.verbose(...)` method.

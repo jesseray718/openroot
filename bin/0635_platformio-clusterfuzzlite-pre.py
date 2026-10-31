@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """PlatformIO build script (pre: runs before other Meshtastic scripts).
 
 ClusterFuzzLite executes in a different container from the build. During the build,

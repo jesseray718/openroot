@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """OpenRoot Cloud Router v2 - rolling window tokens + OpenRouter + local models."""
 import argparse, hashlib, json, os, sqlite3, sys, time, urllib.request, urllib.error

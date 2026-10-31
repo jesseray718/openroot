@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # -- Path setup --------------------------------------------------------------
 
 # If extensions (or modules to document with autodoc) are in another directory,

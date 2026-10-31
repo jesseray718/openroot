@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from .connection import HTTPConnection
 from .connection_pool import ConnectionPool
 from .http11 import HTTP11Connection

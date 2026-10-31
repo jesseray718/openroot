@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Functions brought over from jaraco.text.
 
 These functions are not supposed to be used within `pip._internal`. These are

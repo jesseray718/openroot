@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Defining fields on models."""
 
 from __future__ import annotations as _annotations

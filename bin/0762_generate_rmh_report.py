@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import csv
 from pathlib import Path
 from src.openroot_optimizer.rmh_labyrinth_model import compare_current_vs_rmh_lab

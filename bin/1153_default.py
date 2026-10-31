@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """
 Custom transports, with nicely configured defaults.
 

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from operator import itemgetter
 from typing import TYPE_CHECKING, Callable, NamedTuple, Optional, Sequence
 

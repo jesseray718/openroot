@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """This module contains related classes and functions for serialization."""
 
 from __future__ import annotations

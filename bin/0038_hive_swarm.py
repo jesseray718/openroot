@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/data/data/com.termux/files/usr/bin/env python3
 """
 HIERARCHICAL HIVE SWARM — v1.2 PRODUCTION READY

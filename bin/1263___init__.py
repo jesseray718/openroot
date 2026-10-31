@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from __future__ import annotations
 
 from ._eventloop import AsyncBackend as AsyncBackend

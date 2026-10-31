@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from typing import Callable, Optional
 
 from pip._internal.req.req_install import InstallRequirement

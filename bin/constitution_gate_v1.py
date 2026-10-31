@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Governance gate. Cmds: verify | amend --text T | statute add NAME --text T | statute remove NAME"""
 import hashlib, json, sys, datetime

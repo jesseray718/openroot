@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from __future__ import annotations
 
 from ._core._contextmanagers import AsyncContextManagerMixin as AsyncContextManagerMixin

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """OpenRoot Permaculture Encoder v1 - 12 principles as algorithmic fitness functions."""
 import argparse, json, sys

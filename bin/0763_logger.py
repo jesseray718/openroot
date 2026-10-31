@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import json
 from pathlib import Path
 from datetime import datetime

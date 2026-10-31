@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # -*- coding: utf-8 -*-
 #
 # psutil documentation build configuration file, created by

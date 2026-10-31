@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # This is a short example program that
 # demonstrates the bare minimum of using
 # RNode in a Python program. 

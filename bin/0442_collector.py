@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """
 The main purpose of this module is to expose LinkCollector.collect_sources().
 """

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Convert python types to pydantic-core schema."""
 
 from __future__ import annotations as _annotations

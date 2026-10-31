@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """S — synergy multiplier."""
 import math
 

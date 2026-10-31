@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Tests for the rescore index feature in sqlite-vec."""
 import struct
 import sqlite3

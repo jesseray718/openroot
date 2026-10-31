@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #         Based on the original rnsh program by Aaron Heise (@acehoss)
 # https://github.com/acehoss/rnsh - MIT License - Copyright (c) 2023 Aaron Heise
 #     This version of rnsh is included in RNS under the Reticulum License

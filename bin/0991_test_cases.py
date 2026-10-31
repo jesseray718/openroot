@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import math
 import sys
 from datetime import date, datetime, timedelta, timezone

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Rolling joules-saved counter — computes energy saved by cache-hit skips."""
 import json, hashlib, datetime

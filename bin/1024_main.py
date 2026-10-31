@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Logic for creating models."""
 
 # Because `dict` is in the local namespace of the `BaseModel` class, we use `Dict` for annotations.

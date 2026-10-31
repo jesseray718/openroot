@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """η — the only performance language."""
 
 def eta(j_useful: float, j_human: float) -> float:

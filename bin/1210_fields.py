@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import copy
 import re
 from collections import Counter as CollectionCounter, defaultdict, deque

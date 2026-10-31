@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import pytest
 import sqlite3
 import os

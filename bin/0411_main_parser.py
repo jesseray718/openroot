@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """A single place for constructing and exposing the main parser"""
 
 from __future__ import annotations

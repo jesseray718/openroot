@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """!!! abstract "Usage Documentation"
     [Build a Plugin](../concepts/plugins.md#build-a-plugin)
 

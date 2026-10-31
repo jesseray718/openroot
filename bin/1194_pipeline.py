@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Experimental pipeline API functionality. Be careful with this API, it's subject to change."""
 
 from __future__ import annotations

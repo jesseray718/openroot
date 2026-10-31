@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import json
 from typing import TYPE_CHECKING, Any, Dict, Generator, List, Optional, Sequence, Tuple, Type, Union
 

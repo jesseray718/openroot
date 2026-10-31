@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """
 An implementation of `urlparse` that provides URL validation and normalization
 as described by RFC3986.

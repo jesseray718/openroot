@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # finalize_workflow.sh — Fix remaining issues, commit all workflow components
 set -e

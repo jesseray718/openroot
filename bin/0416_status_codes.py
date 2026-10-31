@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 SUCCESS = 0
 ERROR = 1
 UNKNOWN_ERROR = 2

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # Extracted from https://github.com/pfmoore/pkg_metadata
 from __future__ import annotations
 

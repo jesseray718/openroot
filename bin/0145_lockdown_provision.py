@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 r"""
 Lockdown passphrase provisioning / unlock / lock-now over USB serial.

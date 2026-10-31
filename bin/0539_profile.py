@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """CPU profiling for sqlite-vec KNN configurations using macOS `sample` tool.
 

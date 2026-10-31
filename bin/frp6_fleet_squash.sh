@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # frp6_fleet_squash.sh — fleet census + safe squash merges + fork sync + master/main map
 # Dry-run default. CONFIRM=1 executes [merge-safe] and [sync-fork] only. No history rewrites, no manual branch deletions.

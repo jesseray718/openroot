@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """OpenRoot Compost — Produce No Waste.
 Absolute paths only. Phone-first. No tilde.

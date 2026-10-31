@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 class UnpackException(Exception):
     """Base class for some exceptions raised while unpacking.
 

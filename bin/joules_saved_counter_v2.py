@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """CANARY:OPENROOT-JOULES-SAVED-V2 — Running tally of joules saved by cached pathways."""
 import sqlite3, json, time, os, sys

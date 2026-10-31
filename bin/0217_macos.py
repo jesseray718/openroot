@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """macOS."""
 
 from __future__ import annotations

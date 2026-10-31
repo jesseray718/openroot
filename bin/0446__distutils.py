@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Locations where we look for configs, install stuff, etc"""
 
 # The following comment should be removed at some point in the future.

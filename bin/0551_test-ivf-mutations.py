@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """
 Thorough IVF mutation tests: insert, delete, update, KNN correctness,
 error cases, edge cases, and cell overflow scenarios.

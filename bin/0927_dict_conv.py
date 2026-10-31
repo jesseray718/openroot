@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # -*- coding: utf-8 -*-
 # dict_conv.py  (Python3 script)
 

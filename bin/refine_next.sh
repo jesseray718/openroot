@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # refine_next.sh v2 — REAL refinery worker (replaces 7-line stub)
 # Advances concepts through evidence-required 6-state machine in refinery.db

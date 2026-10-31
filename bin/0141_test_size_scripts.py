@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 
 """Tests for bin/collect_sizes.py and bin/size_report.py."""

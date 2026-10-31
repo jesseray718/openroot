@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # This example illustrates creating a custom interface
 # definition, that can be loaded and used by Reticulum at
 # runtime. Any number of custom interfaces can be created

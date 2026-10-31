@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """kai_search_v1 — FTS5 search over ingested msgs (kai9000 + relay traffic). Usage: python3 bin/kai_search_v1.py 'query' [limit]"""
 import sys, sqlite3

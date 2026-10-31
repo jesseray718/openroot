@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """sacred_merkle_system.py - Merkle tree + sacred language + comparative theology."""
 import sys, json, hashlib, time

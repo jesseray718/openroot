@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Exceptions used throughout package.
 
 This module MUST NOT try to import from anything within `pip._internal` to

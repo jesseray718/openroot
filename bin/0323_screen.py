@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from typing import Optional, TYPE_CHECKING
 
 from .segment import Segment

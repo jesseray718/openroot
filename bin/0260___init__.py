@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Rich text and beautiful formatting in the terminal."""
 
 import os

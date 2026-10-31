@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Top-level package for sniffio."""
 
 __all__ = [

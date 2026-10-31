@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # Reticulum License
 #
 # Copyright (c) 2016-2025 Mark Qvist

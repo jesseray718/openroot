@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """
 NEWTON CHAIN ENGINE — Axiomatic Reasoning That Builds on Itself

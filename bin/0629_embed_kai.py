@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Embed Kai9000/agape-une markdown docs into local vector store."""
 import json, os, time, urllib.request, urllib.error

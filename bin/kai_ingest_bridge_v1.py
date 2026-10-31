@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Minimal Kai corpus indexer — writes to lumo_inbox for existing ingestion pipeline."""
 import os, sys, json, hashlib

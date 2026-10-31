@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from collections.abc import Generator
 from contextlib import AbstractContextManager, ExitStack, contextmanager
 from typing import TypeVar

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """
 Python HTTP library with thread-safe connection pooling, file post support, user friendly, and more
 """

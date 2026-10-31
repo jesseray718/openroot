@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # MIT License
 #
 # Copyright (c) 2014 Stefan C. Mueller

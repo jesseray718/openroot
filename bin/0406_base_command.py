@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Base Command class, and related routines"""
 
 from __future__ import annotations

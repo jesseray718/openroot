@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """CANARY:OPENROOT-UNIVERSAL-EXPERIMENT-V1 — Experiments 1-3 on the exp clone."""
 import sqlite3, time

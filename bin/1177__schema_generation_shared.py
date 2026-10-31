@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Types and utility functions used by various other internal tools."""
 
 from __future__ import annotations

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #   __
 #  /__)  _  _     _   _ _/   _
 # / (   (- (/ (/ (- _)  /  _)

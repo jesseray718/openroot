@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Prepares a distribution for installation"""
 
 # The following comment should be removed at some point in the future.

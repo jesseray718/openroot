@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # Simplifies DIY InkHUD builds, with presets for several common E-Ink displays
 # - build using custom task in Platformio's "Project Tasks" panel
 # - build with `pio run -e <variant> -t build_weact_154` (or similar)

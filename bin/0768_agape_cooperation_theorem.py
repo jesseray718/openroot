@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """agape_cooperation_theorem.py - Formalize: Agape-treated nodes have zero cooperation friction."""
 import sys, json, time

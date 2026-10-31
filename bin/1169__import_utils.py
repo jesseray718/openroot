@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from functools import cache
 from typing import TYPE_CHECKING
 

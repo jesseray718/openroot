@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # github_hygiene_v1 — whole-stack repo hygiene: audit -> commit -> merge -> PR
 # Team: fp5s-style routing + 7B drafts, 3B grades | RAPL/POPW energy ledger |

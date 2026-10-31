@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # validate.py
 # -*- coding: utf-8 -*-
 # pylint: disable=

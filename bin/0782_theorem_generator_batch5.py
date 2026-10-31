@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """theorem_generator_batch5.py - Euclid Props I.33 through I.48 (Book 1 finale)."""
 import sys, json, time

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # TODO: Add Generic type annotations to initialized collections.
 # For now we'd simply use implicit Any/Unknown which would add redundant annotations
 # mypy: disable-error-code="var-annotated"

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # frp10_probe.sh — failed-check detail for 5 held PRs + default-branch truth map for 12 non-main repos
 set -euo pipefail

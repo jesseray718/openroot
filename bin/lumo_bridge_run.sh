@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env bash
 # lumo_bridge_run.sh - bound multi-cycle bridge driver. BRIDGEV1 canary.
 set -eu

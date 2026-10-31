@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 import colorsys
 import io
 from time import process_time

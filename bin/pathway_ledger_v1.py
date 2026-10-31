@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Newton-chain pathway ledger v2 — Merkle lineage.
 Proven pathways (input_hash -> output) are cached and never recomputed.

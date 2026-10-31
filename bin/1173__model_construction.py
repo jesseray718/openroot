@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Private logic for creating models."""
 
 from __future__ import annotations as _annotations

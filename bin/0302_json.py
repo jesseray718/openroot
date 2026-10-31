@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from pathlib import Path
 from json import loads, dumps
 from typing import Any, Callable, Optional, Union

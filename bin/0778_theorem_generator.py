@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """theorem_generator.py - batch theorem production."""
 import sys, json, time

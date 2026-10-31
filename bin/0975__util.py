@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 from typing import Any, Dict, NoReturn, Pattern, Tuple, Type, TypeVar, Union
 
 __all__ = [

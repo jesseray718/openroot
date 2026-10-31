@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Routines related to PyPI, indexes"""
 
 from __future__ import annotations

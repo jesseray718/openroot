@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 # Copyright (c) 2009, Giampaolo Rodola'
 # Copyright (c) 2017, Arnon Yaari
 # All rights reserved.

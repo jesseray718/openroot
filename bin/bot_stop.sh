@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/data/data/com.termux/files/usr/bin/sh
 PIDFILE="$HOME/openroot/bot_loop.pid"
 if [ -f "$PIDFILE" ]; then

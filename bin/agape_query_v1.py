@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """Layer2 SQLite index rebuilds from Layer1 chain.jsonl; cmds: show/anchors/drift"""
 import json, pathlib, sqlite3, sys

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """
 Timer context manager, only used in debug.
 

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Generate an initial set of MeshPackets.
 
 The fuzzer uses these MeshPackets as an initial seed of test candidates.

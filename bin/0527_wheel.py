@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Support for installing and building the "wheel" binary package format."""
 
 from __future__ import annotations

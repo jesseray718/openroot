@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Validate parts_library/tidbits.json: schema integrity + connection graph.
 
 This is the "test connections of all kinds" harness referenced in the tidbit

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0
 """Simple mdbook preprocessor to inject pyo3 version into the guide.
 
 It will replace:
