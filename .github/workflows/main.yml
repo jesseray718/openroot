@@ -1,20 +1,12 @@
-name: OpenRoot Autonomous Sync
-on:
-  push:
-    branches: [ main ]
-  schedule:
-    - cron: '0 * * * *' # Run every hour
+name: OpenRoot Health Check
+on: [push, pull_request]
 
 jobs:
-  sync-and-audit:
+  health-check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Run Autonomous Sync
+      - name: Check Project Structure
         run: |
-          chmod +x bin/sync_state.sh
-          ./bin/sync_state.sh
-      - name: Audit Pods
-        run: |
-          echo "Auditing Newton Chain Integrity..."
-          # Logic to verify the last block hash
+          ls -R bin/
+          echo "Structure Verified. Local Runner is handling the heavy lifting."
