@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0
 """Dry-run-first, receipt-sealed sync of OpenRoot blueprints to the hub."""
 
 import argparse
