@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0
 """Idempotent local booking for the OpenRoot e-waste pickup pipeline."""
 
 import argparse
@@ -8,13 +9,15 @@ import json
 import os
 import subprocess
 import tempfile
-from datetime import date, datetime, time, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SLOTS = ROOT / "data" / "ewaste" / "slots.json"
 GENESIS_HASH = "0" * 64
+
 
 def _read_receipts(path: Path) -> list[dict[str, Any]]:
     if not path.exists():
@@ -25,10 +28,22 @@ def _read_receipts(path: Path) -> list[dict[str, Any]]:
             if not line.strip():
                 continue
             try:
-                records.append(json.loads(line))
+                record = json.loads(line)
             except json.JSONDecodeError as exc:
                 raise ValueError(f"Invalid receipt at {path}:{line_number}") from exc
+            if not isinstance(record, dict):
+                raise ValueError(f"Invalid receipt at {path}:{line_number}")
+            claimed_hash = record.get("hash")
+            unsigned = {key: value for key, value in record.items() if key != "hash"}
+            expected_hash = hashlib.sha256(
+                json.dumps(unsigned, sort_keys=True, separators=(",", ":")).encode("utf-8")
+            ).hexdigest()
+            expected_previous = records[-1]["hash"] if records else GENESIS_HASH
+            if claimed_hash != expected_hash or record.get("previous_hash") != expected_previous:
+                raise ValueError(f"Broken receipt chain at {path}:{line_number}")
+            records.append(record)
     return records
+
 
 def _write_slots(path: Path, slots: dict[str, list[str]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -49,8 +64,9 @@ def _write_slots(path: Path, slots: dict[str, list[str]]) -> None:
         if os.path.exists(temporary_name):
             os.unlink(temporary_name)
 
+
 def _append_receipt(path: Path, records: list[dict[str, Any]], event_id: str,
-                   pickup_date: str, pickup_time: str) -> None:
+                    pickup_date: str, pickup_time: str) -> None:
     previous_hash = records[-1]["hash"] if records else GENESIS_HASH
     record = {
         "block_id": len(records),
@@ -69,6 +85,7 @@ def _append_receipt(path: Path, records: list[dict[str, Any]], event_id: str,
         stream.write(json.dumps(record, sort_keys=True) + "\n")
         stream.flush()
         os.fsync(stream.fileno())
+
 
 def book_slot(
     pickup_date: str,
@@ -97,21 +114,27 @@ def book_slot(
         fcntl.flock(lock.fileno(), fcntl.LOCK_EX)
         with slots_file.open(encoding="utf-8") as stream:
             slots = json.load(stream)
-            if not isinstance(slots, dict):
-                raise ValueError("Pickup slots must be a date-to-times JSON object")
-            records = _read_receipts(receipts_file)
-            already_booked = any(record.get("event_id") == event_id for record in records)
+        if not isinstance(slots, dict) or any(
+            not isinstance(day, str)
+            or not isinstance(times, list)
+            or any(not isinstance(slot, str) for slot in times)
+            for day, times in slots.items()
+        ):
+            raise ValueError("Pickup slots must be a date-to-times JSON object")
+        records = _read_receipts(receipts_file)
+        already_booked = any(record.get("event_id") == event_id for record in records)
 
-            available = slots.get(pickup_date, [])
-            if not already_booked and pickup_time not in available:
-                return False
-            if not already_booked:
-                _append_receipt(receipts_file, records, event_id, pickup_date, pickup_time)
+        available = slots.get(pickup_date, [])
+        if not already_booked and pickup_time not in available:
+            return False
+        if not already_booked:
+            _append_receipt(receipts_file, records, event_id, pickup_date, pickup_time)
 
-            if pickup_time in available:
-                slots[pickup_date] = [slot for slot in available if slot != pickup_time]
-                _write_slots(slots_file, slots)
-            return True
+        if pickup_time in available:
+            slots[pickup_date] = [slot for slot in available if slot != pickup_time]
+            _write_slots(slots_file, slots)
+        return True
+
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
@@ -125,20 +148,21 @@ def main() -> int:
         booked = book_slot(args.date, args.time, args.slots, args.ledger)
     except (OSError, ValueError, json.JSONDecodeError) as exc:
         parser.exit(2, f"[error] {exc}\n")
-    
     if not booked:
         print("[alert] Slot unavailable.")
         return 1
-    
     print(f"[logistics] Slot {args.date} {args.time} booked; receipt sealed.")
-    
-    # THERMODYNAMIC MINT: Record as a 'step' contribution
+
+    # Thermodynamic mint: record the pickup as a 'step' contribution.
     try:
-        subprocess.run(["python3", "bin/thermo_mint.py", "step", "jesse", "pickup", args.date], check=True)
-    except Exception as e:
-        print(f"[warning] Thermodynamic mint failed: {e}")
-    
+        subprocess.run(
+            ["python3", str(ROOT / "bin" / "thermo_mint.py"), "step", "jesse", "pickup", args.date],
+            check=True,
+        )
+    except (OSError, subprocess.CalledProcessError) as exc:
+        print(f"[warning] Thermodynamic mint failed: {exc}")
     return 0
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
