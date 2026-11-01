@@ -82,23 +82,17 @@ def _append_receipt(path: Path, records: list[dict[str, Any]], event_id: str,
     ).hexdigest()
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("a", encoding="utf-8") as stream:
-        stream.write(json.dumps(record, sort_keys=True) + "\n")
+        stream.write(json.dumps(record, sort_keys=True, separators=(",", ":")) + "\n")
         stream.flush()
         os.fsync(stream.fileno())
+    records.append(record)
 
 
-def book_slot(
-    pickup_date: str,
-    pickup_time: str,
-    slots_path: Path | str = DEFAULT_SLOTS,
-    ledger_path: Path | str | None = None,
-) -> bool:
-    """Book a slot once; return False when it is unavailable."""
+def book_slot(pickup_date: str, pickup_time: str,
+              slots_path=DEFAULT_SLOTS, ledger_path=None) -> bool:
     try:
-        if date.fromisoformat(pickup_date).isoformat() != pickup_date:
-            raise ValueError
-        if datetime.strptime(pickup_time, "%H:%M").time().strftime("%H:%M") != pickup_time:
-            raise ValueError
+        datetime.strptime(pickup_date, "%Y-%m-%d")
+        datetime.strptime(pickup_time, "%H:%M")
     except ValueError as exc:
         raise ValueError("Use a valid YYYY-MM-DD date and HH:MM time") from exc
 
@@ -112,8 +106,11 @@ def book_slot(
     slots_file.parent.mkdir(parents=True, exist_ok=True)
     with lock_file.open("a+", encoding="utf-8") as lock:
         fcntl.flock(lock.fileno(), fcntl.LOCK_EX)
-        with slots_file.open(encoding="utf-8") as stream:
-            slots = json.load(stream)
+        if not slots_file.exists():
+            slots = {}
+        else:
+            with slots_file.open(encoding="utf-8") as stream:
+                slots = json.load(stream)
         if not isinstance(slots, dict) or any(
             not isinstance(day, str)
             or not isinstance(times, list)
@@ -153,7 +150,7 @@ def main() -> int:
         return 1
     print(f"[logistics] Slot {args.date} {args.time} booked; receipt sealed.")
 
-    # Thermodynamic mint: record the pickup as a 'step' contribution.
+    # Thermodynamic mint: record the pickup as a 'step' contribution (from remote bridge).
     try:
         subprocess.run(
             ["python3", str(ROOT / "bin" / "thermo_mint.py"), "step", "jesse", "pickup", args.date],
