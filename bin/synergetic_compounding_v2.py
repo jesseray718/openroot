@@ -1,5 +1,7 @@
+# SPDX-License-Identifier: GPL-3.0
 #!/usr/bin/env python3
 """
+# SPDX-License-Identifier: GPL-3.0
 synergetic_compounding_v2.py — fractal self-similar pathway amplifier
 =====================================================================
 
