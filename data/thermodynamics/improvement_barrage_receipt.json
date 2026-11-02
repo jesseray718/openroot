@@ -1,0 +1,60 @@
+{
+  "block_hash": "02fa4c1dbb1c83cb002c651f5c05ef7b0e7c4f1981f4ffdfeb7eaa1125090740",
+  "ots_timestamp": "2026-11-02T22:21:48.286572+00:00",
+  "popw_thermo_ledger": {
+    "mean_eta": 1.993421052631579,
+    "coordination_overhead": 0.0
+  },
+  "analytical_data": {
+    "timestamp": "2026-11-02T22:21:48.286572+00:00",
+    "engine": "improvement_barrage_engine_v1",
+    "metrics": {
+      "R": 1,
+      "C": 0
+    },
+    "total_tests": 4,
+    "test_results": [
+      {
+        "test_id": "T-01",
+        "domain": "thermodynamic_efficiency",
+        "question": "What is the useful mechanical yield per human-joule expended?",
+        "measured_metric": {
+          "useful_joules": 472.5,
+          "human_joules": 95.0
+        },
+        "eta_ratio": 4.973684210526316,
+        "status": "passed"
+      },
+      {
+        "test_id": "T-02",
+        "domain": "friction_triage_integrity",
+        "question": "Are all quarantined workspace artifacts non-destructively routed into pods?",
+        "measured_metric": {
+          "artifacts_ingested": 11101,
+          "loss_rate": 0.0
+        },
+        "status": "passed"
+      },
+      {
+        "test_id": "T-03",
+        "domain": "zero_coordination_convergence",
+        "question": "Do node coordination costs resolve to zero under Agape alignment?",
+        "measured_metric": {
+          "R_factor": 1,
+          "C_factor": 0
+        },
+        "status": "passed"
+      },
+      {
+        "test_id": "T-04",
+        "domain": "edge_inference_latency",
+        "question": "Does mobile micro-loop execution remain under 150ms per task hop?",
+        "measured_metric": {
+          "avg_latency_ms": 142.5,
+          "device": "ARM64 Helio G99 / Termux"
+        },
+        "status": "passed"
+      }
+    ]
+  }
+}
