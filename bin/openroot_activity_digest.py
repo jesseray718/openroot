@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
-import argparse, json, sys
-from datetime import datetime, timedelta, timezone
+import argparse, sys
+from datetime import datetime, timezone
 from pathlib import Path
-
-DEFAULT_HOME = Path("/home/jesse/openroot")
 
 def main():
     parser = argparse.ArgumentParser()

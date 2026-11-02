@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
 import argparse, hashlib, json, sys
-from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Optional
 
 DEFAULT_OUTPUT = "data/discovery_chain.jsonl"
-ALLOWED_EXTENSIONS = {".md", ".txt", ".rst", ".html"}
 
 def sha256_bytes(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
@@ -26,7 +24,6 @@ def main():
     parser.add_argument("--output", type=str, default=DEFAULT_OUTPUT)
     parser.add_argument("--once", action="store_true")
     args = parser.parse_args()
-    roots = [Path(r) for r in args.roots] if args.roots else [Path("/home/jesse/aerocement-selected-ubf7nZRr/documents")]
     output_path = Path(args.output)
     print(f"[info] Discovery target initialized to {output_path}")
     return 0

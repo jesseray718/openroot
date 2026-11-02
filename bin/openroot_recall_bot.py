@@ -7,7 +7,6 @@ MAX_FILES = 2000
 MAX_FILE_SIZE = 300000
 MAX_TOTAL_BYTES = 40000000
 MAX_CANDIDATES = 5
-MAX_QUESTION_LENGTH = 4000
 
 DOCUMENT_ROOTS = [
     Path.home() / "openroot" / "context_bridge" / "mistake_solutions",
@@ -15,9 +14,6 @@ DOCUMENT_ROOTS = [
 ]
 STAGING_DIR = Path.home() / ".local" / "share" / "openroot-recall"
 STAGING_DIR.mkdir(parents=True, exist_ok=True)
-
-def sha256_bytes(data: bytes) -> str:
-    return hashlib.sha256(data).hexdigest()
 
 def extract_terms(question: str) -> List[str]:
     return re.findall(r"[a-zA-Z0-9]{3,}", question.lower())
