@@ -14,7 +14,6 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 DB_PATH = Path("data/thermodynamics/openroot_interactive_pods.db")
-USB_PATH = Path("/media/jesse/USB_BACKUP/openroot_backup.db")
 
 def blake2b_hash(data: str) -> str:
     return hashlib.blake2b(data.encode("utf-8"), digest_size=32).hexdigest()
@@ -66,7 +65,6 @@ def execute_loop():
     conn = init_pod()
     cursor = conn.cursor()
     
-    # Base difficulty topics expanding across the OpenRoot project ecosystem
     base_topics = [
         "edgerunner micro-node architecture", "SQLite FTS5 indexing mechanics", "Merkle root validation",
         "Newton-Raphson thermodynamic convergence", "PoPW physical work calculation", "xanthan gum surfactant ratios",
@@ -80,7 +78,6 @@ def execute_loop():
         timestamp = datetime.now(timezone.utc).isoformat()
         topic = base_topics[(i - 1) % len(base_topics)]
         
-        # Formulate progressive difficulty question based on previous answer
         prompt = f"[Level {i}] Analyze the systemic implications of {topic} given previous state: '{previous_response[:60]}...'"
         response = f"Synthesized resolution for Level {i} addressing {topic}: Verified zero coordination overhead, invariant stability maintained, and state vectors updated."
         tags = f"level-{i}, {topic.replace(' ', '-')}, progressive-loop"
@@ -119,17 +116,20 @@ def execute_loop():
         """, (timestamp, parent_hash, merkle_root, json.dumps(state_diff), ots_proof, json.dumps(current_payload)))
         
         new_height = height + 1
+        
+        # Fixed FTS5 Insert statement with explicit VALUES clause
         cursor.execute("""
             INSERT INTO pod_fts (block_height, timestamp, prompt_text, response_text, dossier_tags)
+            VALUES (?, ?, ?, ?, ?)
         """, (new_height, timestamp, prompt, response, tags))
         
         conn.commit()
         previous_response = response
-        print(f"[✔] Mined Block #{new_height} (Level {i}/100) | Merkle: {merkle_root[:12]}...")
+        if i % 10 == 0 or i == 1:
+            print(f"[✔] Mined Block #{new_height} (Level {i}/100) | Merkle: {merkle_root[:12]}...")
 
     conn.close()
     
-    # Backup to USB target if available, otherwise fallback to local backup directory
     backup_dir = Path("data/thermodynamics/backups")
     backup_dir.mkdir(parents=True, exist_ok=True)
     backup_file = backup_dir / f"openroot_pod_backup_{datetime.now().strftime('%Y%m%d_%H%M%S')}.db"
