@@ -1,12 +1,12 @@
 {
-  "block_hash": "f8bfb6e5160fd45435e8c58dae9ae85f8c2d2fb699e8d4cb86eadbae5d878dab",
-  "ots_timestamp": "2026-11-02T22:31:53.283953+00:00",
+  "block_hash": "a45d9f9722559ce92667d71f9895165cc3053d4e82d52c1df58bcb9973ce40b5",
+  "ots_timestamp": "2026-11-02T22:33:40.915450+00:00",
   "popw_thermo_ledger": {
     "mean_eta": 2.145,
     "coordination_overhead": 0.0
   },
   "analytical_data": {
-    "timestamp": "2026-11-02T22:31:53.283953+00:00",
+    "timestamp": "2026-11-02T22:33:40.915450+00:00",
     "engine": "clarification_barrage_engine_v1",
     "metrics": {
       "R": 1,
