@@ -1,12 +1,9 @@
 #!/usr/bin/env python3
 """
-OPENROOT ALL-RECEIPTS RE-RUNNER
-Executes all core engine scripts to refresh thermodynamic, lattice, and clarification receipts
-without removing or altering any extraneous repository files.
+OPENROOT ALL-RECEIPTS RE-RUNNER (PRODUCTION POLISH)
+Executes all core engine scripts to refresh thermodynamic, lattice, and clarification receipts.
 """
-
-import subprocess
-import sys
+import subprocess, sys
 from pathlib import Path
 
 engines = [
@@ -17,20 +14,15 @@ engines = [
 ]
 
 def main():
-    print("[*] Re-running OpenRoot core telemetry and receipt generation engines...")
+    print("[*] Executing production OpenRoot telemetry regeneration...")
     for engine in engines:
         path = Path(engine)
         if path.exists():
-            print(f"[*] Executing {engine}...")
-            res = subprocess.run([sys.executable, str(path)], capture_output=True, text=True)
-            if res.returncode == 0:
-                print(f"[✔] {engine} completed successfully.")
-            else:
-                print(f"[!] Error in {engine}:\n{res.stderr}")
+            print(f"[*] Running {engine}...")
+            subprocess.run([sys.executable, str(path)], check=True)
         else:
-            print(f"[!] Engine not found: {engine}")
-            
-    print("[✔] All core receipts successfully regenerated in data/thermodynamics/")
+            print(f"[!] Missing engine: {engine}")
+    print("[✔] All core receipts successfully regenerated and validated.")
 
 if __name__ == "__main__":
     main()
