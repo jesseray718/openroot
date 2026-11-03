@@ -1,5 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/python3
 import argparse
+import os
 import hashlib
 import json
 import subprocess
@@ -33,8 +34,11 @@ parser.add_argument(
 args = parser.parse_args()
 
 if args.command == "repo-status":
+    host = os.environ.get("OPENROOT_SSH_HOST", "").strip()
+    if not host or host.startswith("-") or any(c.isspace() for c in host):
+        raise SystemExit("Set OPENROOT_SSH_HOST to your SSH destination.")
     result = subprocess.run([
-        "ssh", "-T", "jesse@100.122.169.43",
+        "ssh", "-T", host,
         "GIT_OPTIONAL_LOCKS=0 git -C /home/jesse/openroot "
         "--no-pager status --short --branch"
     ])
