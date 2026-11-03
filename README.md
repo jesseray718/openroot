@@ -175,3 +175,81 @@ See issue #5: [Call to Builders — OpenRoot Needs You](https://github.com/jesse
 
 *Engineering as an act of unconditional integration.*
 *The unification is not something you do. It is something you stop denying.*
+
+<!-- OPENROOT-A15-MIRROR:START -->
+## A15 micro-mirror rollout
+
+### Architecture
+
+The target is a smaller resident replica of the same OpenRoot node,
+not a separate phone chatbot:
+
+- Same logical query interface and request format.
+- Same pod identities, evidence references, and retrieval contracts.
+- Cached pathways with provenance and dependency validation.
+- Same dossier-to-specialist handoff and compatible receipts.
+- Portable relative paths with device-specific model/storage settings.
+
+The proposed phone team uses `qwen2.5-coder:0.5b` as operator and
+`qwen2.5:1.5b` as writer. This collaboration is not yet validated end to end.
+
+### Verified results — 2026-11-03
+
+A manifest-gated transfer staged 20 files on the A15. All 20 passed
+post-transfer SHA-256 verification against the generated manifest.
+
+The staged artifacts include the auto-dossier compiler, pathway-cache
+tooling and ledger, receipt-cache database, genesis-chain artifact, and
+supporting documentation/tools.
+
+SQLite databases were exported using the SQLite backup API. This provides
+per-database snapshots, not a transactionally synchronized snapshot across
+all databases. The rollout did not activate mirrored scripts or replace
+the existing phone installation.
+
+### Model smoke tests
+
+The Termux loopback API returned HTTP 200 and `PHONE_OFFLINE_OK` for:
+
+| Model | Observed request time |
+|---|---:|
+| `qwen2.5-coder:0.5b` | 11.92 seconds |
+| `qwen2.5:1.5b` | 87.26 seconds |
+
+These are end-to-end request times, not generation-speed benchmarks.
+Network-disconnected phone-only inference has not yet been explicitly
+confirmed.
+
+### Current status: staged, not activated
+
+| Check | Result |
+|---|---|
+| Staged files matching manifest hashes | 20 / 20 |
+| Receipt-cache rows | 0 |
+| Valid JSON records in pathway ledger | 2 |
+| Referenced pathway evidence files resident | 0 / 2 |
+| End-to-end mirrored query | Not verified |
+| Cross-device cached-pathway reuse | Not verified |
+
+Valid JSON does not establish pathway-chain integrity or evidence validity.
+Transfer hashes establish that selected artifacts arrived intact, not that
+the application or its dependencies are complete.
+
+### Remaining activation gates
+
+1. Identify the computer's working query/router entry point and actual
+   pod/cache stores.
+2. Include required resident pods, source objects, and pathway evidence.
+3. Verify compiler dependencies and device-path resolution.
+4. Test the operator/writer handoff using the same dossier contract.
+5. Run a known cached query on both nodes and compare pathway/evidence IDs.
+6. Repeat on the phone with networking disconnected.
+7. Activate only after the checks pass.
+
+### Publication boundary
+
+Publish reviewed source, documentation, and non-sensitive verification
+summaries only. This README update does not include credential files,
+raw token documents, private corpus contents, or runtime databases.
+
+<!-- OPENROOT-A15-MIRROR:END -->
