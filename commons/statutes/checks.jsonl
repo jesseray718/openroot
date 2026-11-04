@@ -1,0 +1,5 @@
+{"id":"ST-MERGE-001","scope":"repo","rule":"merge_to_main","conditions":["proof_resolves","independent_reproduction_gte_2","ci_green"],"veto":"failed_reproduction","override":"two_thirds_active_verifiers"}
+{"id":"ST-SEAL-001","scope":"bounty","rule":"seal_claim","conditions":["measured_delta_recorded","blob_hang_complete","safety_interlock_present_if_machine"],"veto":"failed_reproduction","override":"two_thirds_active_verifiers"}
+{"id":"ST-PAY-001","scope":"bounty","rule":"pay_credits","conditions":["seal_complete","chain_unbroken_B4"],"veto":null,"override":null}
+{"id":"ST-RIGHTS-001","scope":"all","rule":"rights_supremacy","conditions":["no_layer1_right_violated"],"veto":"any_verifier","override":"none_rights_are_unalterable"}
+{"id":"ST-FORK-001","scope":"node","rule":"fork_and_prove","conditions":["ordinance_turf_only","retroactive_ratification_within_21d_cure"],"veto":"auditor_strike","override":"two_thirds_active_verifiers"}
