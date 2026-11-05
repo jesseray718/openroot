@@ -1,0 +1,508 @@
+--- Q1 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q2 [final:RUNTIME_ERROR draft:CORRECT] ---
+DRAFT:
+91204ba14572d1c9bc7b7ef51bd352cc7b6c629184caeedebf29c08d6c5864c3
+FINAL:
+__ERROR__
+--- Q3 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q4 [final:RUNTIME_ERROR draft:MISSED] ---
+DRAFT:
+
+FINAL:
+__ERROR__
+--- Q5 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q6 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q7 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q8 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q9 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q10 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q11 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q12 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q13 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q14 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q15 [final:RUNTIME_ERROR draft:MISSED] ---
+DRAFT:
+The lift mechanism of the vacuum-gap aerostat is a mechanism that allows the vacuum-gap to move through the air, enabling the aircraft to move through the air.
+FINAL:
+__ERROR__
+--- Q16 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q17 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q18 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q19 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q20 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+In Spec v1.1, the two operating modes are:
+
+1. **Mode 1**: This mode is used for the first time a user logs in to the application. It involves the user entering their credentials and then receiving a confirmation message. This mode is typically used for testing purposes or when the application is being developed for testing purposes.
+
+2. **Mode 2**: This mode is used for subsequent logins. It involves the user entering their credentials again and receiving a confirmation message. This mode is typically used for real-world applications where users are expected to log in multiple times.
+
+In Spec v1.1, the two operating modes are not in the ledger.
+FINAL:
+__ERROR__
+--- Q21 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+The genesis micro-mirror convergence proof and the v1.1 byte-identical file event are not in the ledger.
+FINAL:
+__ERROR__
+--- Q22 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q23 [final:RUNTIME_ERROR draft:MISSED] ---
+DRAFT:
+The desiccant stage also solves the cold-target problem that Z.ai finding 3 exposed. The principle is that desiccant is a key component of the cold-target problem, as it helps to reduce the temperature of the environment and reduce the risk of cold exposure.
+FINAL:
+__ERROR__
+--- Q24 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q25 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q26 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q27 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q28 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+The vortex tube was first rejected because it was not in the ledger.
+FINAL:
+__ERROR__
+--- Q29 [final:RUNTIME_ERROR draft:MISSED] ---
+DRAFT:
+Evidence stage = 0 on both nodes made a commit message defective because the condition that the vortex tube first rejected and later conditionally re-endorsed was that the vortex tube was not properly connected to the load cell.
+FINAL:
+__ERROR__
+--- Q30 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q31 [final:RUNTIME_ERROR draft:MISSED] ---
+DRAFT:
+The property of black-locust coppice that makes it carbon-negative while actively harvested is that it has a high carbon footprint.
+FINAL:
+__ERROR__
+--- Q32 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q33 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+Not in the ledger.
+FINAL:
+__ERROR__
+--- Q34 [final:RUNTIME_ERROR draft:MISSED] ---
+DRAFT:
+The clear outside reflective in vacuum gap sandwich optimizes for the retention of stack pressure, which is crucial for maintaining the integrity of the stack. This is achieved by minimizing the loss of stack pressure due to the vacuum gap between the condenser and the venting humid air.
+FINAL:
+__ERROR__
+--- Q35 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q36 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+DERIVED: The derived pathway is a path that has been verified by the chain. It is the path that has been followed by the chain to reach the final result. In the fixed-solver run, the derived pathway is not in the ledger because the chain has not yet been verified.
+
+ATTESTED: The attested pathway is a path that has been verified by the chain. It is the path that has been followed by the chain to reach the final result. In the fixed-solver run, the attested pathway is not in the ledger because the chain has not yet been verified.
+FINAL:
+__ERROR__
+--- Q37 [final:RUNTIME_ERROR draft:MISSED] ---
+DRAFT:
+The flywheel correction changes the *mode* the mechanical chain can live in (relate to finding #4).
+FINAL:
+__ERROR__
+--- Q38 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q39 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q40 [final:RUNTIME_ERROR draft:MISSED] ---
+DRAFT:
+The novelty claim has not been done because the incentive failure claim has not been done.
+FINAL:
+__ERROR__
+--- Q41 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q42 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q43 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q44 [final:RUNTIME_ERROR draft:MISSED] ---
+DRAFT:
+The resolution is to resolve the divergence by merging the two branches. The eventual "skip" proves that the nodes have diverged because the `git fsck` report indicates corruption, but the `rev-list --objects --all` command succeeds, which confirms that the nodes have diverged.
+FINAL:
+__ERROR__
+--- Q45 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q46 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+Not in the ledger
+FINAL:
+__ERROR__
+--- Q47 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q48 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q49 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q50 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q51 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q52 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q53 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q54 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q55 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q56 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q57 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q58 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q59 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q60 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q61 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q62 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q63 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q64 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q65 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q66 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q67 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q68 [final:RUNTIME_ERROR draft:CORRECT] ---
+DRAFT:
+Vacuum insulation does not rise or fall in priority. The desiccant ledger gets heavier.
+FINAL:
+__ERROR__
+--- Q69 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q70 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q71 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q72 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q73 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q74 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q75 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q76 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q77 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q78 [final:RUNTIME_ERROR draft:MISSED] ---
+DRAFT:
+The artifact that makes it testable is the "CACHED_PATHWAY" artifact.
+FINAL:
+__ERROR__
+--- Q79 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q80 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q81 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q82 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q83 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q84 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q85 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q86 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q87 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q88 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q89 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q90 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q91 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q92 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q93 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q94 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q95 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q96 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q97 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q98 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q99 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
+--- Q100 [final:RUNTIME_ERROR draft:REFUSED_HONEST] ---
+DRAFT:
+not in the ledger
+FINAL:
+__ERROR__
