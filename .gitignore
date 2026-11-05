@@ -26,3 +26,4 @@ sdcard-sync
 *.tar.gz
 venv/
 workareas/
+data/md_fts_v1.db
