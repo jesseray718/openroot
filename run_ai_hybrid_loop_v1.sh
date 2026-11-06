@@ -47,7 +47,7 @@ elif [ -f data/friction_report.json ]; then
   cp data/friction_report.json "$RUN/friction_report.json"
   S1="OK(reused)"
 fi
-mark step1-friction "\( S1" " \)(wc -c < "$RUN/friction_report.json" 2>/dev/null || echo 0) bytes"
+mark step1-friction "$S1" "see step1_friction.log"
 
 # step2 question travel
 echo "[loop] step2: question travel"
@@ -59,7 +59,7 @@ MODELS = os.environ.get("MODELS_TRY", "smollm2:1.7b").split()
 NQ = int(os.environ.get("NQ", "1"))
 STOP = set("the a an and or of to in on for with is are was were be been this that these those it its as at by from not but if then than so such can could will would should may might must have has had do does did about into over under between within without their there here what which who whom whose when where why how all any each few more most other some only own same too very just also".split())
 def pick_db():
-    for c in ("universal_lattice_fts5.db", ""$HOME/pods"/clone_universal_20261016T083202Z/pod.db"):
+    for c in ("universal_lattice_fts5.db", os.path.expanduser("~/pods/clone_universal_20261016T083202Z/pod.db")):
         if os.path.exists(c): return os.path.realpath(c)
     return None
 def fts_table(cur):
@@ -150,7 +150,7 @@ echo "[loop] step3: fractal pod verification"
 cat > "$RUN/pods_fractal_v1.py" <<'PYFRACTAL'
 #!/usr/bin/env python3
 import json, os, sqlite3, time
-ROOT = ""$HOME/pods""
+ROOT = os.path.expanduser("~/pods")
 HERE = os.path.dirname(os.path.abspath(__file__))
 pods = []
 for name in sorted(os.listdir(ROOT)):
@@ -196,7 +196,7 @@ echo "[loop] step4: pathway record"
 S4="SKIP(no-evidence)"
 if [ -f "$RUN/QUESTION_TRAVEL.json" ] && [ -f "$RUN/PODS_FRACTAL.json" ] && [ -f "$RUN/friction_report.json" ]; then
   S4="FAIL"
-  if python3 bin/pathway_cache_v1.py --ledger data/pathway_cache.jsonl \
+  if python3 bin/pathway_cache_v1.py --root "$PWD" --ledger data/pathway_cache.jsonl record \
       --name "ai-hybrid-${TS}" --actor jesse \
       --step "friction_observer" --step "question_travel" --step "pods_fractal" \
       --evidence "${ABS_RUN}/friction_report.json" \
@@ -211,8 +211,8 @@ mark step4-pathway-record "$S4" "see step4_pathway.log"
 echo "[loop] step5: PATHWAYS.md"
 S5="FAIL"
 cp PATHWAYS.md "$RUN/PATHWAYS.md.bak" 2>/dev/null || true
-if timeout 60 python3 bin/pathway_cache_v1.py export-md PATHWAYS.md > "$RUN/step5_export.log" 2>&1; then S5="OK"; fi
-mark step5-pathways-md "\( S5" "entries= \)(grep -c '^## #' PATHWAYS.md 2>/dev/null || echo 0)"
+if timeout 60 python3 bin/pathway_cache_v1.py --root "$PWD" --ledger data/pathway_cache.jsonl export-md PATHWAYS.md > "$RUN/step5_export.log" 2>&1; then S5="OK"; fi
+mark step5-pathways-md "$S5" "see step5_export.log"
 
 # step6 dossier
 echo "[loop] step6: auto dossier"
