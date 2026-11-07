@@ -27,3 +27,13 @@ sdcard-sync
 venv/
 workareas/
 data/md_fts_v1.db
+acre/
+pods/
+fts_index.db
+bench/state/
+bench/receipts/outbox/
+outbox/
+data/attic/
+data/claims/
+*.db-shm
+*.db-wal
