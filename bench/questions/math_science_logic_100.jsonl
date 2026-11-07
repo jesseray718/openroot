@@ -1,0 +1,100 @@
+{"qid": 1, "question": "State the definition of a prime number and give the first five primes."}
+{"qid": 2, "question": "Using only the definition from Q1, prove that 2 is the only even prime."}
+{"qid": 3, "question": "Given Q1–Q2, explain why every integer greater than 2 that is not prime must have a prime factor ≤ its square root."}
+{"qid": 4, "question": "Apply the result of Q3 to test whether 91 is prime; show the work."}
+{"qid": 5, "question": "State the Euclidean algorithm for computing gcd(a,b)."}
+{"qid": 6, "question": "Using the algorithm from Q5, compute gcd(252,105) and list every remainder."}
+{"qid": 7, "question": "From the remainders in Q6, express gcd(252,105) as an integer linear combination of 252 and 105 (Bézout coefficients)."}
+{"qid": 8, "question": "Given Q5–Q7, prove that if d divides a and d divides b then d divides any integer linear combination of a and b."}
+{"qid": 9, "question": "State the Fundamental Theorem of Arithmetic."}
+{"qid": 10, "question": "Using Q9, prove that if a prime p divides the product ab then p divides a or p divides b."}
+{"qid": 11, "question": "Apply Q10 to show that √2 is irrational."}
+{"qid": 12, "question": "Given Q9–Q11, generalize the argument to prove that √p is irrational for any prime p."}
+{"qid": 13, "question": "Define a mathematical function f:A→B and the notions injective, surjective, and bijective."}
+{"qid": 14, "question": "Using Q13, prove that a function f:A→B is bijective if and only if it has an inverse function."}
+{"qid": 15, "question": "Give an explicit bijection between the set of integers ℤ and the set of even integers."}
+{"qid": 16, "question": "Given Q13–Q15, prove that the set of rational numbers ℚ is countable."}
+{"qid": 17, "question": "State the definition of a limit of a sequence: lim n→∞ a_n = L."}
+{"qid": 18, "question": "Using the ε-N definition from Q17, prove that lim n→∞ (1/n) = 0."}
+{"qid": 19, "question": "Prove that the limit of a sum is the sum of the limits, assuming both limits exist."}
+{"qid": 20, "question": "Given Q17–Q19, prove that lim n→∞ (n/(n+1)) = 1."}
+{"qid": 21, "question": "State the definition of a derivative of a function f at a point a."}
+{"qid": 22, "question": "Using the definition from Q21, compute f'(x) for f(x)=x² from first principles."}
+{"qid": 23, "question": "Prove the product rule (fg)' = f'g + fg' using the definition of derivative."}
+{"qid": 24, "question": "Given Q21–Q23, derive the power rule for positive integers: (x^n)' = n x^{n-1}."}
+{"qid": 25, "question": "State the Intermediate Value Theorem."}
+{"qid": 26, "question": "Using Q25, prove that every odd-degree polynomial with real coefficients has at least one real root."}
+{"qid": 27, "question": "State the Mean Value Theorem."}
+{"qid": 28, "question": "Given Q25–Q27, prove that if f'(x)=0 for all x in an interval then f is constant on that interval."}
+{"qid": 29, "question": "Define a vector space over the real numbers and give the axioms."}
+{"qid": 30, "question": "Using Q29, prove that the zero vector is unique."}
+{"qid": 31, "question": "Define linear independence of a set of vectors."}
+{"qid": 32, "question": "Given Q29–Q31, prove that any set of more than n vectors in ℝ^n is linearly dependent."}
+{"qid": 33, "question": "State the rank-nullity theorem."}
+{"qid": 34, "question": "Apply Q33 to a linear map T:ℝ³→ℝ² whose kernel has dimension 1; what is the dimension of the image?"}
+{"qid": 35, "question": "Define an eigenvalue and eigenvector of a square matrix."}
+{"qid": 36, "question": "Using Q35, compute the eigenvalues of the matrix [[2,1],[1,2]]."}
+{"qid": 37, "question": "Prove that eigenvectors corresponding to distinct eigenvalues are linearly independent."}
+{"qid": 38, "question": "Given Q35–Q37, diagonalize the matrix from Q36 if possible and show the steps."}
+{"qid": 39, "question": "State Newton’s second law and the definition of work done by a force."}
+{"qid": 40, "question": "Using Q39, derive the work–energy theorem for a particle under a constant force."}
+{"qid": 41, "question": "Define kinetic energy and potential energy for a conservative force."}
+{"qid": 42, "question": "Given Q39–Q41, prove that total mechanical energy is conserved when only conservative forces act."}
+{"qid": 43, "question": "State the first law of thermodynamics."}
+{"qid": 44, "question": "Using Q43, explain why a perpetual-motion machine of the first kind is impossible."}
+{"qid": 45, "question": "State the second law of thermodynamics in terms of entropy."}
+{"qid": 46, "question": "Given Q43–Q45, explain why a perpetual-motion machine of the second kind is impossible."}
+{"qid": 47, "question": "Define electric field and electric potential due to a point charge."}
+{"qid": 48, "question": "Using Q47, derive the relationship E = −∇V in electrostatics."}
+{"qid": 49, "question": "State Gauss’s law for electricity."}
+{"qid": 50, "question": "Given Q47–Q49, use Gauss’s law to find the electric field outside a uniformly charged sphere."}
+{"qid": 51, "question": "State the Schrödinger equation for a single particle in one dimension."}
+{"qid": 52, "question": "Using Q51, write the time-independent Schrödinger equation and explain the meaning of the energy eigenvalue."}
+{"qid": 53, "question": "Solve the particle-in-a-box problem: infinite walls at x=0 and x=L; give the energy levels."}
+{"qid": 54, "question": "Given Q51–Q53, explain why the energy of a free particle in a box cannot be zero."}
+{"qid": 55, "question": "Define a formal proposition and the connectives ¬, ∧, ∨, →."}
+{"qid": 56, "question": "Using Q55, construct the truth table for (P → Q) ∧ (Q → R) → (P → R)."}
+{"qid": 57, "question": "Prove that the formula in Q56 is a tautology."}
+{"qid": 58, "question": "Given Q55–Q57, prove that modus ponens is a valid rule of inference."}
+{"qid": 59, "question": "Define a first-order language with quantifiers ∀ and ∃."}
+{"qid": 60, "question": "Using Q59, formalize the statement ‘every natural number has a successor’."}
+{"qid": 61, "question": "State the principle of mathematical induction."}
+{"qid": 62, "question": "Given Q59–Q61, prove by induction that the sum of the first n positive integers is n(n+1)/2."}
+{"qid": 63, "question": "Define a graph (simple, undirected) and the notions of path, cycle, and connectedness."}
+{"qid": 64, "question": "Using Q63, prove that a tree with n vertices has exactly n−1 edges."}
+{"qid": 65, "question": "State Euler’s formula for planar graphs: v − e + f = 2."}
+{"qid": 66, "question": "Given Q63–Q65, prove that K₅ is not planar."}
+{"qid": 67, "question": "Define a probability space (Ω, F, P) and the axioms of probability."}
+{"qid": 68, "question": "Using Q67, prove that P(A ∪ B) = P(A) + P(B) − P(A ∩ B)."}
+{"qid": 69, "question": "Define conditional probability and state Bayes’ theorem."}
+{"qid": 70, "question": "Given Q67–Q69, solve: a test is 99% accurate for a disease that occurs in 0.1% of the population; what is the probability a person who tests positive actually has the disease?"}
+{"qid": 71, "question": "Define expected value of a discrete random variable."}
+{"qid": 72, "question": "Using Q71, compute the expected value of a fair six-sided die."}
+{"qid": 73, "question": "Prove linearity of expectation: E[X+Y] = E[X] + E[Y] even when X and Y are dependent."}
+{"qid": 74, "question": "Given Q71–Q73, compute the expected number of fixed points of a random permutation of n elements."}
+{"qid": 75, "question": "State the central limit theorem (qualitative form)."}
+{"qid": 76, "question": "Using Q75, explain why the sample mean of i.i.d. random variables becomes approximately normal for large n."}
+{"qid": 77, "question": "Define a group and give the group axioms."}
+{"qid": 78, "question": "Using Q77, prove that the identity element of a group is unique."}
+{"qid": 79, "question": "Prove that every element of a group has a unique inverse."}
+{"qid": 80, "question": "Given Q77–Q79, show that (ℤ/nℤ, +) is a group and identify the inverse of k."}
+{"qid": 81, "question": "Define a ring and an integral domain."}
+{"qid": 82, "question": "Using Q81, prove that a finite integral domain is a field."}
+{"qid": 83, "question": "State Fermat’s Little Theorem."}
+{"qid": 84, "question": "Given Q81–Q83, prove Fermat’s Little Theorem using the fact that (ℤ/pℤ)* is a multiplicative group."}
+{"qid": 85, "question": "Define a metric space and an open ball."}
+{"qid": 86, "question": "Using Q85, prove that an open ball is an open set."}
+{"qid": 87, "question": "Define a continuous function between metric spaces via open sets."}
+{"qid": 88, "question": "Given Q85–Q87, prove that the composition of continuous functions is continuous."}
+{"qid": 89, "question": "State the Bolzano–Weierstrass theorem."}
+{"qid": 90, "question": "Using Q89, prove that a continuous function on a closed bounded interval attains its maximum and minimum."}
+{"qid": 91, "question": "Define a Cauchy sequence in a metric space."}
+{"qid": 92, "question": "Given Q89–Q91, prove that a metric space is complete if every Cauchy sequence converges."}
+{"qid": 93, "question": "State the completeness of the real numbers as an axiom (least-upper-bound property)."}
+{"qid": 94, "question": "Using Q93, prove that every Cauchy sequence of real numbers converges."}
+{"qid": 95, "question": "Define the notion of a logical consequence: a set of premises Γ entails a formula φ."}
+{"qid": 96, "question": "Using Q95, prove that if Γ entails φ and Γ entails (φ → ψ) then Γ entails ψ."}
+{"qid": 97, "question": "State the soundness theorem for classical propositional logic."}
+{"qid": 98, "question": "Given Q95–Q97, explain why a sound proof system can never derive a contradiction from consistent premises."}
+{"qid": 99, "question": "State Gödel’s first incompleteness theorem (informal version)."}
+{"qid": 100, "question": "Given the entire chain Q1–Q99, identify which results rely only on finitary combinatorial reasoning and which require a form of completeness or infinitary assumption, and explain how that distinction would affect a cached-pathway verification system that must decide whether a derived claim is still valid after a premise is withdrawn."}
