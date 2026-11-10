@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # OpenRoot Hybrid Tiny Loop v2 — Newton Chain + PoPW thermal + pods-aware
 set -u
-ROOT="/home/jesse/openroot"
+ROOT="$HOME/openroot"
 cd "$ROOT" || exit 2
 export OPENROOT_ROOT="$ROOT"
 TS="$(date -u +%Y%m%dT%H%M%SZ)"
