@@ -37,3 +37,7 @@ data/attic/
 data/claims/
 *.db-shm
 *.db-wal
+dossier/
+__pycache__/
+*.pyc
+.cache/
