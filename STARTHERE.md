@@ -28,6 +28,8 @@ Fix one, then record how you fixed it (see The Compounding Loop below).
 | openroot_recall_bot.py | repo root | local evidence retrieval, staged review packets, receipts |
 | newton_chain_discovery.py | bin/ | seals whitelisted documents into a discovery chain |
 | openroot_activity_digest.py | bin/ | rolling summary of chains, heartbeats, and git |
+| fts_pod_search.py | bin/ | search historical pod records; `ask` answers locally with evidence IDs |
+| openroot-phone-v1 | bin/ | verify phone snapshots and run the shared pod query |
 | pod | PATH | OpenLoom client: `pod ask`, `pod project`, `pod check`, `pod ui` |
 
 ## The compounding loop

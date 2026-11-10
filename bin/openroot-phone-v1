@@ -4,9 +4,15 @@ import os
 import hashlib
 import json
 import subprocess
+import sys
 from pathlib import Path
 
 HOME = Path.home()
+QUERY_FILES = (
+    "bin/fts_pod_search.py",
+    "bin/lumo_lib.py",
+    "data/thermodynamics/openroot_interactive_pods.db",
+)
 
 def snapshot():
     candidates = [
@@ -24,14 +30,39 @@ def snapshot():
     manifest = json.loads((root / "manifest.json").read_text())
     return root.resolve(), manifest
 
+def verify_recorded_file(root, manifest, relative_path):
+    record = next(
+        (item for item in manifest.get("files", [])
+         if item.get("path") == relative_path),
+        None,
+    )
+    if record is None:
+        raise SystemExit(f"WAIT: {relative_path} is not listed in the snapshot manifest.")
+    path = (root / record["path"]).resolve()
+    if not path.is_relative_to(root):
+        raise SystemExit(f"FAIL: unsafe manifest path: {relative_path}")
+    h = hashlib.sha256()
+    with path.open("rb") as f:
+        for block in iter(lambda: f.read(1024**2), b""):
+            h.update(block)
+    if path.stat().st_size != record["bytes"] or h.hexdigest() != record["sha256"]:
+        raise SystemExit(f"FAIL: {relative_path}")
+    return path
+
 parser = argparse.ArgumentParser(
     description="OpenRoot phone snapshot tools; no automatic publication."
 )
 parser.add_argument(
     "command",
-    choices=["status", "pods", "verify", "repo-status"]
+    choices=["status", "pods", "verify", "repo-status", "ask"]
 )
-args = parser.parse_args()
+parser.add_argument("query", nargs="*", help="question for the local pod query")
+parser.add_argument("--model", default=os.environ.get(
+    "OPENROOT_PHONE_MODEL", "qwen2.5:1.5b"
+))
+parser.add_argument("--limit", type=int, default=3)
+parser.add_argument("--json", action="store_true", help="emit query result as JSON")
+args = parser.parse_intermixed_args()
 
 if args.command == "repo-status":
     host = os.environ.get("OPENROOT_SSH_HOST", "").strip()
@@ -46,7 +77,27 @@ if args.command == "repo-status":
 
 root, manifest = snapshot()
 
-if args.command == "status":
+if args.command == "ask":
+    if not args.query:
+        raise SystemExit("Usage: openroot-phone-v1 ask [--model MODEL] <question>")
+    verified_files = [
+        verify_recorded_file(root, manifest, relative_path)
+        for relative_path in QUERY_FILES
+    ]
+    query_script, db_path = verified_files[0], verified_files[2]
+    env = os.environ.copy()
+    env["OPENROOT_ROOT"] = str(root)
+    command = [
+        sys.executable, str(query_script), "ask",
+        "--db", str(db_path), "--model", args.model, "--limit", str(args.limit),
+    ]
+    if args.json:
+        command.append("--json")
+    command.extend(args.query)
+    result = subprocess.run(command, cwd=root, env=env)
+    raise SystemExit(result.returncode)
+
+elif args.command == "status":
     print("Snapshot:", root)
     print("Type:", manifest.get("type"))
     print("Manifest files:", len(manifest["files"]))
@@ -55,7 +106,14 @@ if args.command == "status":
     print("Omissions:", len(manifest.get("omitted", [])))
     print("Transfer verification receipt: present")
     print("Current hashes: run 'verify' to check again")
-    print("Query/model pipeline: not yet bound or validated")
+    listed = {
+        record.get("path") for record in manifest.get("files", [])
+    }
+    query_files_listed = sum(relative_path in listed for relative_path in QUERY_FILES)
+    print(
+        f"Pod-query files in manifest: {query_files_listed}/{len(QUERY_FILES)} "
+        "(ask verifies their current hashes)"
+    )
 
 elif args.command == "pods":
     files = [r["path"] for r in manifest["files"]]
@@ -71,16 +129,5 @@ elif args.command == "pods":
 
 elif args.command == "verify":
     for record in manifest["files"]:
-        path = (root / record["path"]).resolve()
-        if not path.is_relative_to(root):
-            raise SystemExit("FAIL: unsafe manifest path")
-        h = hashlib.sha256()
-        with path.open("rb") as f:
-            for block in iter(lambda: f.read(1024**2), b""):
-                h.update(block)
-        if (
-            path.stat().st_size != record["bytes"]
-            or h.hexdigest() != record["sha256"]
-        ):
-            raise SystemExit("FAIL: " + record["path"])
+        verify_recorded_file(root, {"files": [record]}, record["path"])
     print("SNAPSHOT_HASHES_VERIFIED:", len(manifest["files"]))
