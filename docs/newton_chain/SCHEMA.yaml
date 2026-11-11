@@ -1,0 +1,92 @@
+schema_version: "0.1-draft"
+title: "OpenRoot Newton-chain proof object"
+purpose: >
+  Versioned, content-addressed record for a conditional conclusion and its
+  inspectable reasoning pathway.
+
+proof_object:
+  id:
+    type: string
+    example: "NC-THERMAL-000041"
+  title:
+    type: string
+  kind:
+    allowed:
+      - definition
+      - common_notion
+      - assumption
+      - postulate
+      - evidence_record
+      - proposition
+      - proof
+      - theorem
+      - corollary
+      - counterexample
+      - reproduction_record
+      - revision_record
+  status:
+    allowed:
+      - draft
+      - proposed
+      - reviewed
+      - formally_verified
+      - empirically_supported
+      - independently_reproduced
+      - superseded
+      - narrowed
+      - withdrawn
+  statement:
+    type: string
+  definitions:
+    type: list
+    items: "content-addressed record identifiers"
+  common_notions:
+    type: list
+    items: "content-addressed record identifiers"
+  assumptions:
+    type: list
+    items: "content-addressed record identifiers"
+  postulates:
+    type: list
+    items: "content-addressed record identifiers"
+  evidence_inputs:
+    type: list
+    items: "content-addressed record identifiers"
+  inference_rules:
+    type: list
+    items: "versioned rule identifiers"
+  proof_steps:
+    type: list
+    item_fields:
+      step_id: string
+      premises: "list of record identifiers"
+      rule: "versioned rule identifier"
+      conclusion: "record identifier or inline intermediate statement"
+      notes: string
+  scope:
+    fields:
+      applies_when: "list of explicit conditions"
+      does_not_establish: "list of excluded conclusions"
+      uncertainty: "measurement/model uncertainty description"
+  dependencies:
+    type: mapping
+    values: "sha256 or other content hash"
+  cache:
+    fields:
+      result_hash: "content hash of conclusion/proof result"
+      rule_set_version: string
+      environment_version: string
+      reuse_condition: "all declared dependency hashes match"
+      invalidation_conditions: "list of dependency-change conditions"
+  provenance:
+    fields:
+      created_at_utc: "ISO-8601 timestamp"
+      created_by: "human, AI, or joint attribution"
+      source_locations: "local or public references, as appropriate"
+      revision_history: "ordered list of prior record identifiers"
+  review:
+    fields:
+      supporting_arguments: "list"
+      counterarguments: "list"
+      unresolved_questions: "list"
+      reviewer_notes: "list"
