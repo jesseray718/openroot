@@ -5,9 +5,13 @@ ollama_generate / prove (cache-first, never recompute) / embed (nomic).
 Import from any script: from lumo_lib import ollama_generate, prove, embed
 """
 import datetime, hashlib, json, os, sqlite3, urllib.request
+from pathlib import Path
+from urllib.parse import urlsplit
 
-ROOT = "/home/jesse/openroot"
-OLLAMA_HOST = "http://localhost:11434"
+ROOT = os.environ.get(
+    "OPENROOT_ROOT", str(Path(__file__).resolve().parents[1])
+)
+OLLAMA_HOST = os.environ.get("OLLAMA_HOST", "http://localhost:11434")
 MODEL_BUILDER = "qwen2.5-coder:7b"
 MODEL_GRADER = "qwen2.5:3b"
 MODEL_EMBED = "nomic-embed-text"
@@ -26,6 +30,29 @@ def ollama_generate(prompt, model=MODEL_BUILDER, timeout=600):
     return _post("/api/generate",
                  {"model": model, "prompt": prompt, "stream": False},
                  timeout)["response"]
+
+def ollama_generate_local(prompt, model=MODEL_BUILDER, timeout=600):
+    """Generate via loopback only, without proxies or HTTP redirects."""
+    host = urlsplit(OLLAMA_HOST)
+    if (host.scheme != "http" or host.hostname not in ("localhost", "127.0.0.1", "::1")
+            or host.username is not None or host.password is not None
+            or host.path not in ("", "/") or host.query or host.fragment):
+        raise ValueError("Offline query requires a loopback HTTP Ollama endpoint.")
+    address = "[::1]" if host.hostname == "::1" else "127.0.0.1"
+    port = host.port or 80
+    request = urllib.request.Request(
+        f"http://{address}:{port}/api/generate",
+        data=json.dumps({"model": model, "prompt": prompt, "stream": False}).encode(),
+        headers={"Content-Type": "application/json"},
+    )
+
+    class NoRedirect(urllib.request.HTTPRedirectHandler):
+        def redirect_request(self, req, fp, code, msg, headers, newurl):
+            raise ValueError("Offline query refused an HTTP redirect.")
+
+    opener = urllib.request.build_opener(urllib.request.ProxyHandler({}), NoRedirect())
+    with opener.open(request, timeout=timeout) as response:
+        return json.loads(response.read())["response"]
 
 def embed(texts, model=MODEL_EMBED, timeout=300):
     """Return one embedding for a string, or one per string in a sequence."""

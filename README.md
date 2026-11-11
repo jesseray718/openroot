@@ -246,6 +246,35 @@ the application or its dependencies are complete.
 6. Repeat on the phone with networking disconnected.
 7. Activate only after the checks pass.
 
+### Shared historical-pod query (code path; device validation pending)
+
+The same local-only query path is available on the computer and through the
+phone snapshot CLI:
+
+```bash
+# Computer, from the checkout containing these changes
+python3 bin/fts_pod_search.py ask --json "thermal storage"
+
+# A15 Termux, from the checkout containing these changes, after staging
+python3 bin/openroot-phone-v1 ask --json "thermal storage"
+```
+
+Both commands search `data/thermodynamics/openroot_interactive_pods.db` and
+emit stable evidence IDs. Compare those IDs and the database SHA-256 across
+devices; generated answer wording may differ by model. The phone command checks
+the snapshot manifest hashes for the query tool, shared Ollama helper, and pod
+database before running. The snapshot must list `bin/fts_pod_search.py`,
+`bin/lumo_lib.py`, and `data/thermodynamics/openroot_interactive_pods.db` under
+those exact relative paths. This command does not create or transfer a snapshot.
+Use the same stable SQLite backup on both devices; a nonempty WAL is rejected.
+Answers use a loopback Ollama endpoint only; the phone
+defaults to `qwen2.5:1.5b`, while the computer uses the configured local model.
+Both default to three evidence records. The JSON includes full pod records, so
+review it for private content before sharing. An evidence ID identifies a
+record; it does not verify the chain or prove the model's answer is correct.
+This adds a query path, not proof that the current phone snapshot contains the
+required files or that either device has completed an offline query.
+
 ### Publication boundary
 
 Publish reviewed source, documentation, and non-sensitive verification
