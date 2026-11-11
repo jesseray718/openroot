@@ -9,6 +9,9 @@ UP_HOST, UP_PORT = "127.0.0.1", 11434
 
 class Relay(BaseHTTPRequestHandler):
     protocol_version = "HTTP/1.1"
+    def _is_safe_header_part(self, s):
+        return s is not None and "\r" not in s and "\n" not in s
+
     def _relay(self):
         try:
             length = int(self.headers.get("Content-Length") or 0)
@@ -20,6 +23,7 @@ class Relay(BaseHTTPRequestHandler):
             self.send_response(resp.status)
             for k, v in resp.getheaders():
                 if k.lower() in ("transfer-encoding", "connection"): continue
+                if not self._is_safe_header_part(k) or not self._is_safe_header_part(v): continue
                 self.send_header(k, v)
             self.send_header("Connection", "close")
             self.end_headers()
