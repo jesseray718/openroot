@@ -282,3 +282,17 @@ summaries only. This README update does not include credential files,
 raw token documents, private corpus contents, or runtime databases.
 
 <!-- OPENROOT-A15-MIRROR:END -->
+
+
+<!-- OPENROOT-RECOVERED-DOSSIER-V2 -->
+## Recovered dossier compiler
+
+The existing targeted dossier compiler v2 has been recovered and preserved
+with its original SHA-256 identity. It selects cited source spans before
+inference; it is not a complete all-pod retrieval engine or an automatic
+proof verifier.
+
+See [the recovery and usage guide](docs/recovery/COMPILED_DOSSIER_V2.md)
+for historical measurements, required native databases, write behavior,
+and current limitations. Publication does not activate the tool.
+<!-- /OPENROOT-RECOVERED-DOSSIER-V2 -->
