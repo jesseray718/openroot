@@ -1,3 +1,72 @@
+<!-- OPENROOT_VISIBLE_START_HERE_V1 -->
+# OpenRoot
+
+### Offline-first evidence and reusable work — under active development
+
+OpenRoot's goal is one simple interface: ask a question, retrieve source-addressed
+artifacts, compile a focused evidence packet, check the result, and reuse the work
+on another device without starting over.
+
+## Start here: run the published example
+
+From a checkout of this repository, with Python 3.10 or newer:
+
+    python3 examples/pathway-cache-behavior/demo.py
+    python3 examples/pathway-cache-behavior/demo.py --self-test
+
+Once the source is present, this example needs no network, model server, API key,
+or private database. Expected result: BEHAVIOR_REPRODUCED and seven passing tests.
+
+[Open the example: source, instructions and observations](examples/pathway-cache-behavior/README.md)
+
+## What the example actually demonstrates
+
+| Disposable case | Verifier exit | External evidence-file reads |
+|---|---:|---:|
+| Original evidence and valid ledger | 0 | 0 |
+| External evidence changed; ledger unchanged | 0 | 0 |
+| Changed evidence plus an invalid JSON line | 0 | 0 |
+| Ledger entry changed without resealing | 1 | 0 |
+
+These are characterization results for a frozen reviewed implementation, not an
+endorsement of every behavior. The example creates only temporary fixture files.
+It does not alter your production ledgers or execute recorded pathway steps.
+
+The model experiment matters too: the local 7B gave a plausible explanation that
+incorrectly attributed recording-time file reads to verification. Extra written
+correction did not reliably fix that answer. The executable cases expose the
+mistake so it can become a reproducible lesson rather than trusted cached text.
+
+## Current delivery status
+
+| Capability | Demonstrated status in this experiment |
+|---|---|
+| Portable component example | Published through PR #150 |
+| Four executable cases and seven tests | Passed locally before publication |
+| Saved source, model receipts and failure evidence | Published in the example |
+| Automatic all-pod selection and trimming | Not established as repaired |
+| Automatic lesson ingestion and retrieval | Not completed; correction was artifact-only |
+| Offline A15 consumption of a cached pathway | Not yet demonstrated |
+
+The A/B timings are exploratory sequential observations, not a controlled
+curriculum-caused inference speedup. No thousands-times-faster claim is made.
+
+## Next integration target
+
+The same question should travel through the existing autodossier interface,
+produce a checked reusable pathway, and be consumed on the A15 with networking
+disconnected. This component example is a building block, not a substitute for
+that end-to-end demonstration.
+
+[Recovered dossier compiler](docs/recovery/COMPILED_DOSSIER_V2.md) · [Example and limitations](examples/pathway-cache-behavior/README.md)
+
+---
+
+## Project foundations and existing documentation
+
+The existing README is preserved below; this new opening distinguishes current
+reproducible results from the broader project and historical status descriptions.
+
 # OpenRoot — Floor-Lift Economy, Four Engines, Superlinear Orchestration
 
 <!-- OPENROOT_PATHWAY_BEHAVIOR_DEMO -->
