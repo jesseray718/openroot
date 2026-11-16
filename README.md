@@ -1,5 +1,15 @@
 # OpenRoot — Floor-Lift Economy, Four Engines, Superlinear Orchestration
 
+<!-- OPENROOT_PATHWAY_BEHAVIOR_DEMO -->
+## Reproducible component example
+
+    python3 examples/pathway-cache-behavior/demo.py
+
+[Source, seven tests, observations and limitations](examples/pathway-cache-behavior/README.md).
+Four cases distinguish ledger integrity from external evidence freshness.
+No model server or network is needed to run this example. This is not yet the offline A15 system demo.
+
+
 ## Core Thesis
 
 **The spread between top and bottom is a speed limit on compound human growth.**
