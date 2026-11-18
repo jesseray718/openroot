@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 set -eu
 export OLLAMA_HOST=http://localhost:11434
 SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd) || exit 1

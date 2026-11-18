@@ -79,12 +79,28 @@ Four cases distinguish ledger integrity from external evidence freshness.
 No model server or network is needed to run this example. This is not yet the offline A15 system demo.
 
 
+## Appropriate Technology & Decentralized Edge Ecosystem
+
+OpenRoot is a self-hosted, offline-first decentralized framework integrating
+physical infrastructure (AeroCement 2.0 composites, passive thermal copper
+loops, sensor meshes) with lightweight local edge computing (TinyML, Ollama,
+Qwen Coder).
+
+## Core Pillars
+- **Physical Build Systems:** Modular structural geometries, low-power microcontrollers, and durable material formulations.
+- **Edge Intelligence:** TinyML micro-inference on ESP32 sensor nodes for structural health monitoring (SHM) and thermal loop optimization.
+- **Distributed Core:** Local SQLite/FTS5 indexing synchronized via secure mesh pathways and append-only verification ledgers.
+
+## Recent Milestones
+- **Review Tool v2 (Sandbox CLI):** Native pathway validation, acceptance receipts, and automated release asset bundling.
+- **Edge-to-Spoke Pipelines:** Robust binary/JSON payload ingestion syncing edge telemetry back to the Dell OptiPlex 3060 heavy-spoke storage core.
+
+## Repository Layout
+- `bin/`: Operational shell automation, mesh bridging, and database tuning macros.
+- `workareas/`: Staging, validation receipts, and release packaging artifacts.
+- `data/`: Local validation ledgers, friction logs, and universal indexes.
+
 ## Core Thesis
-
-**The spread between top and bottom is a speed limit on compound human growth.**
-
-Same artifact, routed differently: 26x difference in systemic value. Controlled demo:
-`floor_lift 67.05` (bottom-third routing) vs `2.5` (premium routing) — identical 100-unit benefit.
 
 Metric: `floor_lift = Σ (benefit_i × (1 - percentile_i/100)²)` — graded by routing, not volume.
 Live infrastructure: tier-0 deterministic gates → tier-4 big-brain (Qwen 72B) under a $0.50 hard

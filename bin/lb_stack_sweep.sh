@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 # SPDX-License-Identifier: GPL-3.0
 """lb_stack_sweep.sh — invoke stack_gate.sh with the arg it requires.
 

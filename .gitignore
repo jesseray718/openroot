@@ -41,3 +41,12 @@ dossier/
 __pycache__/
 *.pyc
 .cache/
+data/
+logs/
+mesh/
+state/
+worklog/
+workspace/
+tmp/
+autodossier_cache.db
+*.log

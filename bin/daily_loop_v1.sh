@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 set -eu
 export GIT_PAGER=cat PAGER=cat
 SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd) || exit 1

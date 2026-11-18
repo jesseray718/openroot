@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 set -eu
 export OLLAMA_HOST=http://localhost:11434
 cd /home/jesse/openroot

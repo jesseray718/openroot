@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 # onepass_v3.sh — Weekly: env_map, merge janitor, manifest regen, drift report, 7B next-move, session seed, commit
 set -eu
 export GIT_PAGER=cat

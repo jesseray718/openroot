@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 set -eu
 DB=/home/jesse/openroot/data/lessons.db
 DESC="${1:?usage: task_recall.sh <task description>}"

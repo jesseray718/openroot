@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 # rebuild_core_workflow.sh — reinstalls 10 lost workflow components from boot seed
 # Per your standing rules: one bash paste, cat <<'EOF' heredoc, self-writing/idempotent
 # [banked]/[held]/[gate] tags, absolute paths, [exit=0] final line

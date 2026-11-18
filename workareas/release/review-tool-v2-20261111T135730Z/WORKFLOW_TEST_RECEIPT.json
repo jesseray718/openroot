@@ -1,0 +1,27 @@
+{
+  "canonical_status": "not_canonical",
+  "checks": [
+    "short source hash rejected",
+    "unknown source hash rejected",
+    "tampered source rejected",
+    "stage_preview_no_ledger",
+    "stage_idempotent",
+    "unknown approval target rejected",
+    "blank approver rejected",
+    "blank approval reason rejected",
+    "approval_preview_no_write",
+    "test_approval_idempotent",
+    "nonstage approval target rejected",
+    "isolated_chain_verified",
+    "protected_artifacts_unchanged"
+  ],
+  "entries": 2,
+  "human_approval_performed": false,
+  "production_status": "candidate_workflow_tests_passed",
+  "status": "passed",
+  "test": "review_tool_v2_cli_workflow",
+  "test_directory": "/home/jesse/openroot/workareas/a15-engine-sandbox/workflow-tests-v2-vt8tlamz",
+  "timestamp": "2026-11-11T13:50:01.424553+00:00",
+  "tip": "06a830ea7c9ab2f0a7dfeaf790ac2c0f7d21098ec018b37ab06643b0ebeabdce",
+  "tool_sha256": "a28599e15318cbaffc5403a4dfdc485196bd4e0219f13af370d8ac8d17af87bd"
+}

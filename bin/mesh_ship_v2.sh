@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 # mesh_ship_v2.sh — retry loop + visible drafts + full ship on PASS
 # Prints every draft to terminal (chat-visible). On PASS (or exhaust): finalize draft
 # as MASTER_TODO.md. CONFIRM=1 → commit+push with provenance message. Human gate = env var.

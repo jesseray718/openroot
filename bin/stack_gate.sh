@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 # stack_gate.sh v2 — Active-line gate with awk (skips comments/blanks)
 # Usage: stack_gate.sh <script_path>
 set -eu

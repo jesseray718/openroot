@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 # mesh_refine_v1.sh — FTS5 retrieval → 7B drafts → 3B grades → sealed drafts
 # Specialty routing: SQLite/FTS5 (recall), qwen2.5-coder:7b (synthesis),
 #                    qwen2.5:3b (rubric grading). Local models only.

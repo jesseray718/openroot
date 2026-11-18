@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 # refine_next.sh v2 — REAL refinery worker (replaces 7-line stub)
 # Advances concepts through evidence-required 6-state machine in refinery.db
 # States: raw -> grounded -> schema_bound -> graded -> scheduled -> shipped

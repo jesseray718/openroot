@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 set -eu
 export GIT_PAGER=cat PAGER=cat
 export OLLAMA_HOST=http://localhost:11434

@@ -1,0 +1,212 @@
+[
+ {
+  "path": "/home/jesse/openroot/data/a15_only_canonical.tar.gz",
+  "sha256": "9535263a7d1e3db29a8552a041634463c05cc55ba4ef25dc7f24527e35221018",
+  "size_bytes": 3748677
+ },
+ {
+  "path": "/home/jesse/openroot/data/attic/friction-salvage-20261103T120725Z/salvage/20260912-134943/repo-root/inbox/openroot-skills-20260907.tar.gz",
+  "sha256": "7472fa8fc60709856f293d717e47378f4336c6fe9d4ca9369139552857bb1f92",
+  "size_bytes": 18232
+ },
+ {
+  "path": "/home/jesse/openroot/data/attic/friction-salvage-20261103T120725Z/salvage/20260912-134943/repo-root/inbox/openroot-skills-rest-20260907.tar.gz",
+  "sha256": "1491f0240e1b4e45541d5eaf7d7a44c8b034ba86690b9e6fbde1bc847cad3f62",
+  "size_bytes": 81270
+ },
+ {
+  "path": "/home/jesse/openroot/data/attic/friction-salvage-20261103T120725Z/salvage/20260912-134943/repo-root/axiom_engine/store/axiom_engine_optiplex.tar.gz",
+  "sha256": "c3a53a5ecef6e00b6a2765659ec78295a4e572793ffc26e761b4f3e84229baad",
+  "size_bytes": 11170
+ },
+ {
+  "path": "/home/jesse/src/openroot/attic/2026-09-14/build/tools/ui/dist.tar.gz",
+  "sha256": "4c626d124fd9328369a2c23a08db21278432edb0657b12d2fbf89336af4e45ea",
+  "size_bytes": 2731086
+ },
+ {
+  "path": "/home/jesse/src/openroot/library/kai-sandbox/skills/openroot/archive/openroot-genesis.tar.gz",
+  "sha256": "cc5eb3c2081575f3cdb67d78499e77ebaf7010c97da0f8df6a038c2f36ba1e4f",
+  "size_bytes": 3545
+ },
+ {
+  "path": "/home/jesse/src/openroot/attic/2026-09-14/dist.26/v0.6-release.tar.gz",
+  "sha256": "647e89fb2dbe39aa47e4e40662b5c7cf1c988da407586d696aaa5d5058d57dd6",
+  "size_bytes": 2075
+ },
+ {
+  "path": "/home/jesse/src/openroot/attic/2026-09-14/dist.27/v0.6-release.tar.gz",
+  "sha256": "85cea451eec057fa7e734548ca3ba6d779ed5836a3f9de14b8394575ef0d7d8e",
+  "size_bytes": 45
+ },
+ {
+  "path": "/home/jesse/src/openroot/attic/2026-09-14/dist.27/ipfs/thermal-cascade-bundle.tar.gz",
+  "sha256": "8c71dd2b71a45b36a0f23b42e80394ed5becd72a631c8cb4ff738ab6b1bee48f",
+  "size_bytes": 15560
+ },
+ {
+  "path": "/home/jesse/src/openroot/attic/2026-09-14/dist.29/unified-systems-v1.0.tar.gz",
+  "sha256": "54ac729c25fb4759574c74ad30d1181329204f5144170a72fdf2698766eff88e",
+  "size_bytes": 109
+ },
+ {
+  "path": "/home/jesse/src/openroot/attic/2026-09-14/dist.29/v0.7-release.tar.gz",
+  "sha256": "103dd72885af1cfdd7bf3f2bf28983eb0ed5b591dc8f280ac8e2c714c28b829f",
+  "size_bytes": 525326
+ },
+ {
+  "path": "/home/jesse/src/openroot/attic/2026-09-14/dist.29/openroot-unified-v1.0.tar.gz",
+  "sha256": "134d76f80d180016e484ad7a3b3c15edf25bb00ea32c7053c90f4c8b4640553f",
+  "size_bytes": 2466
+ },
+ {
+  "path": "/home/jesse/src/openroot/openroot-kit-20260902.tar.gz",
+  "sha256": "235ee0e1732dd21058090bd749d5ddd8861052d72294116878bf8a7ec587a930",
+  "size_bytes": 12361
+ },
+ {
+  "path": "/home/jesse/src/openroot/library/kai-sandbox/ollama-linux-arm64.tgz",
+  "sha256": "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5",
+  "size_bytes": 9
+ },
+ {
+  "path": "/home/jesse/openroot/a15/consolidation-backups/OpenCell-Thermal-System.tgz",
+  "sha256": "02c7090ebaca5a5a750bf5d6bb8105b6c5c603c975e4a1e1428b74f7646700ea",
+  "size_bytes": 178005
+ },
+ {
+  "path": "/home/jesse/openroot/a15/consolidation-backups/AeroCement_Ecosystem.tgz",
+  "sha256": "99ad4f3623804767f28cf7f865f7be27e3c7235a6685f86a7972cc68df5dfb5d",
+  "size_bytes": 47994
+ },
+ {
+  "path": "/home/jesse/openroot/a15/consolidation-backups/und-protocol.tgz",
+  "sha256": "3329c79c1ec418f0b15e1df62adbd0106eaf7d4b4ad820c6470957424c7819d5",
+  "size_bytes": 42265
+ },
+ {
+  "path": "/home/jesse/openroot/a15/consolidation-backups/etaledger.tgz",
+  "sha256": "9b0d98299e37eb38d87e0e409701556766f6be1b4e83bf3de07ce810eb0dd6c6",
+  "size_bytes": 34175
+ },
+ {
+  "path": "/home/jesse/openroot/a15/consolidation-backups/agaperesonance.tgz",
+  "sha256": "09a66ec0b6ef53414a6dbb9b4ec7895a69a5bdb972476e7641fb0516e94366d0",
+  "size_bytes": 44970
+ },
+ {
+  "path": "/home/jesse/openroot/a15/consolidation-backups/openroot-ecosystem.tgz",
+  "sha256": "d603e6de70f38009684dfa3d3b1aee2a99ed0eed9f5b5cc83b6b0a6124c12d4c",
+  "size_bytes": 12164
+ },
+ {
+  "path": "/home/jesse/openroot/a15/consolidation-backups/agape-coordination.tgz",
+  "sha256": "e0a3be80b265988247128c3a8c050b11396976bf55bad473c2767d8a393012e6",
+  "size_bytes": 83190
+ },
+ {
+  "path": "/home/jesse/openroot/a15/consolidation-backups/agape-crossover-key.tgz",
+  "sha256": "da5cc32baa6dc536fbc3eca84f0d3682a6b08fcf73b1511c4be5f6336e2e78ed",
+  "size_bytes": 68509
+ },
+ {
+  "path": "/home/jesse/openroot/a15/consolidation-backups/skills-introduction-to-github.tgz",
+  "sha256": "089a0ada1b84b2ac2b4dbf51589db34103d600986e172f33eafb9485328d1f8f",
+  "size_bytes": 701820
+ },
+ {
+  "path": "/home/jesse/openroot/a15/consolidation-backups/canonical.tgz",
+  "sha256": "b2e5458e446b8d6997d9e30c931144cf3774c58c1c51271b5db732daeb98fda3",
+  "size_bytes": 59063
+ },
+ {
+  "path": "/home/jesse/openroot/a15/consolidation-backups/oscillation-mesh.tgz",
+  "sha256": "d888af0158e9ffebb04568f8d48cff481a9085fe4bb8cd0cbb818cab0e4e19bf",
+  "size_bytes": 35422
+ },
+ {
+  "path": "/home/jesse/openroot/a15/consolidation-backups/agape-primitives.tgz",
+  "sha256": "ce9ea0cd73d5911bf67566f3eee2d991bed408ea4dedf7b80c95eb581936e885",
+  "size_bytes": 43821
+ },
+ {
+  "path": "/home/jesse/openroot/a15/consolidation-backups/aerocement.tgz",
+  "sha256": "7cbcbf2f3b36624bfb6d2a361af74ccfb38e4c02575fb5c7621d557afc1a9873",
+  "size_bytes": 280849
+ },
+ {
+  "path": "/home/jesse/openroot/a15/consolidation-backups/fractallattice.tgz",
+  "sha256": "d5f4438bb5e965e9eaea35ce1200bac92af8d9b6fba4ddc36134ffc0cbf4e139",
+  "size_bytes": 41454
+ },
+ {
+  "path": "/home/jesse/openroot/a15/consolidation-backups/aerocement-calc.tgz",
+  "sha256": "830dba8ace36ae60f14bd5aea7ab53c4cb88412f33cdaaeda4d9f209e6a19651",
+  "size_bytes": 43493
+ },
+ {
+  "path": "/home/jesse/openroot/a15/consolidation-backups/agape-ipfs.tgz",
+  "sha256": "2275e5516f8d55d8b6c562a0127ef505754e35c4ad43081a35da95a21a74e973",
+  "size_bytes": 41357
+ },
+ {
+  "path": "/home/jesse/openroot/a15/consolidation-backups/openroot-spoke-template.tgz",
+  "sha256": "c757b4eb3aa035a1050d84dec73e80f13d637ad1afd35880acf07b96d65ce699",
+  "size_bytes": 78675
+ },
+ {
+  "path": "/home/jesse/openroot/a15/consolidation-backups/axiom-library.tgz",
+  "sha256": "47c79d16162c845768168a8ed15cfd34b4ac91fae8e53a25f5f54bbe14d607e2",
+  "size_bytes": 17546
+ },
+ {
+  "path": "/home/jesse/openroot/a15/consolidation-backups/agapenet.tgz",
+  "sha256": "2aebb77deabbeaf0de81949273835046f643ba21496194638398875db7f3715f",
+  "size_bytes": 61955
+ },
+ {
+  "path": "/home/jesse/openroot/a15/consolidation-backups/markor.tgz",
+  "sha256": "5997b86b0ee7a36a665b1daa40c742955ce1ad7ad4480934933bb4ab2a5bdaad",
+  "size_bytes": 41403599
+ },
+ {
+  "path": "/home/jesse/openroot/a15/consolidation-backups/openroot-canon.tgz",
+  "sha256": "6e3e0d9669202ef7df46a64297c893cd02138ecf1a07a2facaf17a2bb13d67c1",
+  "size_bytes": 33520
+ },
+ {
+  "path": "/home/jesse/openroot/a15/consolidation-backups/openroot-foundation.tgz",
+  "sha256": "f97a802e2a742f96d440cb216d429172c2828ff640e40576cd263680b38e57d1",
+  "size_bytes": 61214
+ },
+ {
+  "path": "/home/jesse/openroot/a15/consolidation-backups/agape-une.tgz",
+  "sha256": "54b3a2917b2d8a363889e72ee625ae5c0cb64acfcf1d94a82d1ff7ad81654e55",
+  "size_bytes": 44313
+ },
+ {
+  "path": "/home/jesse/openroot/a15/consolidation-backups/renaissance-protocol.tgz",
+  "sha256": "0ca123aef61ce129a3cdfda63db6554ac7cff99e7cb8960c7e6a746db67120f6",
+  "size_bytes": 212544
+ },
+ {
+  "path": "/home/jesse/src/openroot/library/kai-sandbox/github-repos/OpenCell-Thermal-System/OpenCell-System-v1.0.zip",
+  "sha256": "2e462af7c6ed3a70bbe85f8362044d29f187c6fce974d6b47d68b31eb4132368",
+  "size_bytes": 10594
+ },
+ {
+  "path": "/home/jesse/src/openroot/attic/2026-09-14/dist.54/openroot-synthesis-20260914.tar.xz",
+  "sha256": "16ce4974d8e54f301e0b622fc3e4605baf099eaad76f490459b477bf6f2af687",
+  "size_bytes": 37500
+ },
+ {
+  "path": "/home/jesse/src/openroot/attic/2026-09-14/dist.54/openroot-handoff-20260914.tar.xz",
+  "sha256": "b1ad2ecaacc096aab08b0e6518e5a6479849a335a949ef2fdcafb14edc51dd2e",
+  "size_bytes": 2960
+ },
+ {
+  "path": "/home/jesse/src/openroot/attic/2026-09-14/dist.54/openroot-synth-lever-20260914.tar.xz",
+  "sha256": "652a3faf34af429f5175c9721e4400db1cb9bc119f1d9888d068f24f6c157659",
+  "size_bytes": 49664
+ }
+]

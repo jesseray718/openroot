@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 # SPDX-License-Identifier: GPL-3.0
 # pr_intake.sh — standardized external-PR intake for OpenRoot.
 # Proven on PR #63 (Reh1t). Pipeline: fetch->isolate->conflict check->

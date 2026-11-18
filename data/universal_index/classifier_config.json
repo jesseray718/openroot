@@ -1,0 +1,72 @@
+{
+ "models": {
+  "coder_7b": "qwen2.5-coder:7b",
+  "grader_3b": "qwen2.5:3b",
+  "embedding": "nomic-embed-text"
+ },
+ "content_classes": [
+  [
+   "dome_geometry",
+   "Geodesic calculations, strut lengths, BOMs",
+   "[\"*dome_bom*\", \"*geodesic*\", \"*strut*\"]",
+   "coder_7b"
+  ],
+  [
+   "aerocement",
+   "Cement mixes, absorber panels, opencell formulas",
+   "[\"*aerocement*\", \"*opencell*\", \"*cement_mix*\"]",
+   "coder_7b"
+  ],
+  [
+   "thermal",
+   "Cascade sims, RMH, labyrinth, psychrometrics",
+   "[\"*thermal*\", \"*rmh*\", \"*cascade*\", \"*psychrometric*\"]",
+   "coder_7b"
+  ],
+  [
+   "grants",
+   "Grant applications, ledgers, synthesis records",
+   "[\"*grant*\", \"*synthesis*\", \"*acre*\", \"*ledger*\"]",
+   "grader_3b"
+  ],
+  [
+   "code_scripts",
+   "Python, shell, Rust scripts",
+   "[\"*.py\", \"*.sh\", \"*.rs\"]",
+   "coder_7b"
+  ],
+  [
+   "docs_readme",
+   "Documentation, handbooks, playbooks",
+   "[\"README*\", \"*handbook*\", \"*guide*\"]",
+   "grader_3b"
+  ]
+ ],
+ "qa_templates": [
+  [
+   "grant_query",
+   "Grant eligibility check",
+   "(grant|eligible|fund|apply)"
+  ],
+  [
+   "bom_query",
+   "Bill of materials lookup",
+   "(BOM|cutlist|materials|struts)"
+  ],
+  [
+   "file_locator",
+   "Find file by content/name",
+   "(where is|find|locate|show me)"
+  ],
+  [
+   "theorem_check",
+   "Verify axiom/theorem chain",
+   "(theorem|proof|axiom|verify)"
+  ]
+ ],
+ "runtime": {
+  "batch_size": 150,
+  "temperature": 0.1,
+  "timeout_seconds": 420
+ }
+}

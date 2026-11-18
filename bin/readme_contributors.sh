@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 # SPDX-License-Identifier: GPL-3.0
 # readme_contributors.sh — maintain Contributors section in README.md
 # Idempotent: adds section/contributor only if missing. Marker-guarded table.

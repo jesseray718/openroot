@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 # team_gate_v2.sh — Team coordination gate: awk filter → 7B → 3B → sqlite
 # Usage: team_gate_v2.sh <input_task>
 set -eu

@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 set -Eeuo pipefail
 
 echo "[canary] paste intact"

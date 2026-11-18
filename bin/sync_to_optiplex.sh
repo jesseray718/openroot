@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 # SPDX-License-Identifier: GPL-3.0
 # Sync local Termux openroot node with OptiPlex 3060 & force GitHub Push
 
