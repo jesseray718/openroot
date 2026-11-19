@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 # write_context_bridge.sh — session close-out bridge, sealed with SHA256
 set -eu
 TS=$(date +%Y%m%d_%H%M%S)

@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-11-11T13:47:21.562755+00:00",
+  "status": "local_tests_passed",
+  "release_status": "production_candidate_not_production_certified",
+  "canonical_status": "not_canonical",
+  "installation": "/home/jesse/openroot/workareas/a15-engine-sandbox/review-tool-v2-KUzhQL4W",
+  "files_sha256": {
+    "review_tool.py": "a28599e15318cbaffc5403a4dfdc485196bd4e0219f13af370d8ac8d17af87bd",
+    "test_review_tool.py": "d756e62076cd06f228ddd6040c77d4f6bb25aa2f2af20277813d1f4d23d17dcb",
+    "README.md": "c36d8e94e0ff6e5ffb2caa80c57d5d3df27e4d5cdaa6c3263e58feb78e3d7f6e",
+    "TEST_RESULTS.txt": "f6f4a5483843bf6a119e87bed0a206b76ceacb132cae138fbb5bc8fbee838d3f"
+  }
+}

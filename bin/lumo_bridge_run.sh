@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 # lumo_bridge_run.sh - bound multi-cycle bridge driver. BRIDGEV1 canary.
 set -eu
 export GIT_PAGER=cat

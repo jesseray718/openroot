@@ -75,6 +75,31 @@ class LumoLibTests(unittest.TestCase):
             self.assertEqual(vectors, self.module.embed(["one", "two"]))
         self.assertEqual(["one", "two"], post.call_args.args[1]["input"])
 
+    def test_local_generate_uses_loopback_without_proxy_or_redirects(self):
+        self.module.OLLAMA_HOST = "http://localhost:11434"
+        opener = mock.Mock()
+        opener.open.return_value = Response({"response": "local answer"})
+        with mock.patch.object(
+            self.module.urllib.request, "build_opener", return_value=opener
+        ) as build:
+            answer = self.module.ollama_generate_local("question", model="phone")
+
+        self.assertEqual("local answer", answer)
+        request = opener.open.call_args.args[0]
+        self.assertEqual("http://127.0.0.1:11434/api/generate", request.full_url)
+        self.assertEqual("phone", json.loads(request.data)["model"])
+        proxy, redirects = build.call_args.args
+        self.assertEqual({}, proxy.proxies)
+        with self.assertRaisesRegex(ValueError, "redirect"):
+            redirects.redirect_request(None, None, 302, "", {}, "http://example.com")
+
+    def test_local_generate_rejects_non_loopback_and_bad_url(self):
+        for host in ("http://example.com", "http://127.0.0.1.example.com",
+                     "http://localhost:11434/extra", "http://user@localhost"):
+            self.module.OLLAMA_HOST = host
+            with self.subTest(host=host), self.assertRaisesRegex(ValueError, "loopback"):
+                self.module.ollama_generate_local("question")
+
     def test_prove_banks_passed_proof_with_integrity_metadata(self):
         with mock.patch.object(
             self.module, "ollama_generate", side_effect=["rigorous proof", "VERDICT: PASS\nFIX: none"]

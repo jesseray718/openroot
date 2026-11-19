@@ -1,0 +1,100 @@
+{"qid": 1, "question": "What is the exact command sequence currently used to stage, commit, and push changes from the OptiPlex openroot repository?"}
+{"qid": 2, "question": "Does that sequence use absolute paths only, or does it still contain any tilde or relative-path forms that break under Termux or non-interactive SSH?"}
+{"qid": 3, "question": "Which files or directories are currently listed in .gitignore that should never be committed (WAL, SHM, live pod.db, secrets, large binaries)?"}
+{"qid": 4, "question": "Given the answers to Q1–Q3, what is the single highest-risk command that could still force a large binary or runtime database into git history?"}
+{"qid": 5, "question": "What is the current default branch and does every push go through a pull-request gate or is direct push to main still possible?"}
+{"qid": 6, "question": "Is there a pre-push or pre-commit hook that enforces absolute paths, no-tilde rules, and blocks of files larger than a defined threshold?"}
+{"qid": 7, "question": "What is the exact git config user.name and user.email recorded on the OptiPlex for this repository?"}
+{"qid": 8, "question": "From the last ten commits, how many contain a clear one-line subject that starts with a conventional type (feat, fix, docs, chore, etc.)?"}
+{"qid": 9, "question": "Given Q5–Q8, what is the smallest change that would make every future commit automatically receive a conventional subject and a short body that names the affected component?"}
+{"qid": 10, "question": "What is the current remote URL (SSH or HTTPS) and does it require a passphrase or key agent on every push?"}
+{"qid": 11, "question": "Is the SSH key used for GitHub stored only on the OptiPlex, or is the same key also present on the A15 Termux environment?"}
+{"qid": 12, "question": "What happens when a push is attempted while the OptiPlex is offline or the Tailscale link is down—does the command fail cleanly or leave the index in a partial state?"}
+{"qid": 13, "question": "Given Q10–Q12, design the minimal offline-first push workflow that queues commits locally and only transmits when the remote is reachable."}
+{"qid": 14, "question": "How many large files (>10 MB) currently exist in the tracked history of the openroot repository?"}
+{"qid": 15, "question": "Which of those large files are still required for a fresh clone to build and run the hybrid loop, and which can be replaced by LFS or external download instructions?"}
+{"qid": 16, "question": "What is the current size of the .git directory and what percentage of that size is attributable to the large files identified in Q14?"}
+{"qid": 17, "question": "Given Q14–Q16, write the exact sequence of git filter-repo or BFG commands that would permanently remove the unnecessary large objects while preserving all commit messages and authorship."}
+{"qid": 18, "question": "After such a history rewrite, what is the required force-push policy and how will collaborators be notified that their local clones must be rebased or re-cloned?"}
+{"qid": 19, "question": "Is there currently any signed commit or signed tag practice in the repository?"}
+{"qid": 20, "question": "What is the minimum set of GPG or SSH signing keys that would need to be published so that every release tag can be verified by both OptiPlex and A15?"}
+{"qid": 21, "question": "Does the repository contain a CODEOWNERS or equivalent file that automatically requests review on changes to bin/, ledger/, or the hybrid-loop scripts?"}
+{"qid": 22, "question": "Given Q19–Q21, what is the smallest addition that would make every push to main require both a signed commit and an explicit review from at least one designated path owner?"}
+{"qid": 23, "question": "What is the exact content of the current README.md section that tells a new clone how to perform its first push?"}
+{"qid": 24, "question": "Does that section mention absolute paths, the no-tilde rule, and the correct SSH key setup for both OptiPlex and Termux?"}
+{"qid": 25, "question": "What is missing from the README that would prevent a new contributor from accidentally committing a live pod.db or a secrets file on their first push?"}
+{"qid": 26, "question": "Given Q23–Q25, rewrite the 'First Push' section of the README so that it is executable as a single copy-paste block on both OptiPlex and A15."}
+{"qid": 27, "question": "Is there a CONTRIBUTING.md that defines the required commit message format, branch naming, and PR checklist?"}
+{"qid": 28, "question": "Does CONTRIBUTING.md currently require that every PR include a short η or joule note when the change touches the hybrid loop or the thermal ledger?"}
+{"qid": 29, "question": "What is the exact checklist a reviewer should apply before merging a PR that modifies run_ai_hybrid_loop_v2.sh or popw_thermal_ledger.py?"}
+{"qid": 30, "question": "Given Q27–Q29, produce the minimal CONTRIBUTING.md section that enforces absolute-path discipline, conventional commits, and a required 'ledger impact' field for any change that writes to ledger/."}
+{"qid": 31, "question": "What is the current process for creating a release tag and pushing it to GitHub?"}
+{"qid": 32, "question": "Does the release process generate a signed tag and attach a machine-readable receipt (SHA-256 of the tree, list of changed ledger tips)?"}
+{"qid": 33, "question": "How is a user expected to verify that a downloaded release matches the signed tag and the published receipt?"}
+{"qid": 34, "question": "Given Q31–Q33, design the offline verification steps a user can perform with only the release tarball, the public signing key, and no network access."}
+{"qid": 35, "question": "What is the difference between the online GitHub-hosted user manual and any offline documentation that ships inside the repository itself?"}
+{"qid": 36, "question": "Where does the online user manual currently live (GitHub wiki, docs/ folder rendered by GitHub Pages, external site)?"}
+{"qid": 37, "question": "Is the offline user manual a single Markdown file, a set of man pages, or a generated HTML/PDF bundle that can be read without a browser?"}
+{"qid": 38, "question": "Given Q35–Q37, list every command or workflow that is documented only in the online manual and is therefore unavailable to a fully offline A15 or OptiPlex user."}
+{"qid": 39, "question": "What is the single most critical procedure (push, commit, first hybrid-loop run, ledger verify) that must be present in both the online and offline manuals with identical wording?"}
+{"qid": 40, "question": "Does the offline manual currently contain a complete 'First Commit and Push' section that matches the absolute-path rules already enforced in the repository?"}
+{"qid": 41, "question": "Given Q38–Q40, write the exact offline-manual section titled 'Commit and Push from a Fresh Clone' that a user can follow with zero network access after the initial clone."}
+{"qid": 42, "question": "How are screenshots or terminal examples kept consistent between the online and offline manuals when the UI or command output changes?"}
+{"qid": 43, "question": "Is there a single source-of-truth Markdown tree that is rendered both to the online site and to the offline bundle, or are the two manuals maintained separately?"}
+{"qid": 44, "question": "What is the current process for updating the offline manual after a change is merged to main?"}
+{"qid": 45, "question": "Given Q42–Q44, design a documentation pipeline that guarantees the offline manual is always byte-identical to the online version at the moment a release tag is created."}
+{"qid": 46, "question": "What offline-first tools (pandoc, mdBook, man-page generation, etc.) are already present on both the OptiPlex and the A15 that could be used to build the offline manual?"}
+{"qid": 47, "question": "Does the offline manual currently ship as a single self-contained file that can be opened with only a text viewer or pager?"}
+{"qid": 48, "question": "How does a completely offline user discover the existence and location of the offline manual after cloning the repository?"}
+{"qid": 49, "question": "Given Q46–Q48, specify the exact files and directories that must be present in a release tarball so that an offline user can open a complete, searchable manual without any network or package installation."}
+{"qid": 50, "question": "What is the current status of man-page or --help text for the hybrid-loop and popw_thermal_ledger entry points?"}
+{"qid": 51, "question": "Do the --help messages currently mention the absolute-path rule and the requirement to run from /home/jesse/openroot (or the Termux equivalent)?"}
+{"qid": 52, "question": "Given Q50–Q51, write the exact --help text that should be emitted by run_ai_hybrid_loop_v2.sh so that an offline user understands the contract before any model is called."}
+{"qid": 53, "question": "How does an online user currently report a documentation error or request a clarification?"}
+{"qid": 54, "question": "Is there a corresponding offline mechanism (local issue file, ledger note, or receipt) that an offline user can create and later sync when connectivity returns?"}
+{"qid": 55, "question": "Given Q53–Q54, design a dual-path documentation-feedback system that works identically for online GitHub issues and offline local receipts."}
+{"qid": 56, "question": "What sections of the current online manual assume the presence of a browser, JavaScript, or an internet connection and therefore cannot be used offline?"}
+{"qid": 57, "question": "Which of those sections contain essential operational knowledge that must be rewritten for the offline manual?"}
+{"qid": 58, "question": "Given Q56–Q57, produce a prioritized list of the five online-only sections that must be converted first so that an offline user can perform a full commit-push-hybrid-loop cycle."}
+{"qid": 59, "question": "How is versioning of the user manual currently handled relative to the software version?"}
+{"qid": 60, "question": "Does every release tag also tag the exact commit of the documentation tree that matches that software version?"}
+{"qid": 61, "question": "Given Q59–Q60, define the rule that guarantees the offline manual shipped inside a release is always the manual that was current when that release was tagged."}
+{"qid": 62, "question": "What is the current procedure for a user who has only the offline manual and needs to perform a first-time git push after fixing a local bug?"}
+{"qid": 63, "question": "Does that procedure correctly handle the case where the user's local branch has diverged from the remote while they were offline?"}
+{"qid": 64, "question": "Given Q62–Q63, write the exact offline-manual recovery steps for 'my local commits no longer fast-forward to origin/main'."}
+{"qid": 65, "question": "How does the online manual currently explain the difference between a normal push and a force-push, and what warnings does it contain?"}
+{"qid": 66, "question": "Does the offline manual contain the same warnings and the same recommended recovery commands?"}
+{"qid": 67, "question": "Given Q65–Q66, produce a single shared Markdown fragment that can be included in both manuals and that forbids force-push to main except under an explicitly listed emergency procedure."}
+{"qid": 68, "question": "What is the current treatment of SSH key rotation in the online manual?"}
+{"qid": 69, "question": "Is there any offline guidance for a user who must rotate an SSH key while the machine has no network access?"}
+{"qid": 70, "question": "Given Q68–Q69, write the offline procedure that lets a user generate a new key pair, update the local ssh config, and queue the public-key upload until connectivity returns."}
+{"qid": 71, "question": "How does the online manual currently document the hybrid loop's exit codes and the meaning of a PoPW thermal receipt?"}
+{"qid": 72, "question": "Does the offline manual contain the identical explanation and the exact commands needed to verify a receipt without network access?"}
+{"qid": 73, "question": "Given Q71–Q72, write the offline-manual section that teaches a user to interpret a RUN_RECEIPT.md and a popw_thermal.jsonl tip using only local tools."}
+{"qid": 74, "question": "What is the single most common failure mode reported by users who try to push for the first time, according to any existing issues or receipts?"}
+{"qid": 75, "question": "Does either the online or offline manual currently address that failure mode with a concrete diagnostic and fix?"}
+{"qid": 76, "question": "Given Q74–Q75, write the diagnostic decision tree that should appear in both manuals for 'push rejected' or 'permission denied (publickey)'."}
+{"qid": 77, "question": "How are environment differences between OptiPlex (Ubuntu) and A15 (Termux) currently documented for the push and commit workflow?"}
+{"qid": 78, "question": "Does the offline manual contain separate, tested command blocks for each platform, or does it rely on the user to adapt absolute paths themselves?"}
+{"qid": 79, "question": "Given Q77–Q78, produce the dual-platform offline-manual fragment that shows the identical logical steps with the correct absolute paths for both OptiPlex and Termux."}
+{"qid": 80, "question": "What is the current status of a 'quick-start' card or one-page cheat sheet that a user can print or keep offline?"}
+{"qid": 81, "question": "Does that cheat sheet currently include the absolute-path commit-push sequence and the hybrid-loop invocation?"}
+{"qid": 82, "question": "Given Q80–Q81, design a single-page offline cheat sheet that covers clone → first commit → push → first hybrid-loop run → ledger verify."}
+{"qid": 83, "question": "How does the online manual currently handle the case of a user who has never used git before?"}
+{"qid": 84, "question": "Does the offline manual assume prior git knowledge or does it include the minimal git concepts required for the documented workflows?"}
+{"qid": 85, "question": "Given Q83–Q84, write the minimal 'Git Concepts You Need' section that must appear in the offline manual before any commit or push command is shown."}
+{"qid": 86, "question": "What is the current policy for documenting breaking changes to the push or commit workflow?"}
+{"qid": 87, "question": "Is there an offline-visible CHANGELOG or release-note entry that an offline user can read to discover that a previously working push command has changed?"}
+{"qid": 88, "question": "Given Q86–Q87, define the rule that every breaking change to the commit-push-hybrid-loop path must appear in both the online CHANGELOG and the offline manual's 'Recent Changes' section at the same release."}
+{"qid": 89, "question": "How are screenshots of terminal output kept up to date when command flags or default paths change?"}
+{"qid": 90, "question": "Does the offline manual currently embed terminal examples as literal code blocks that can be copied, or as images that cannot be searched or copied?"}
+{"qid": 91, "question": "Given Q89–Q90, mandate that every terminal example in both manuals must be a fenced code block that is executable after path substitution, never a screenshot."}
+{"qid": 92, "question": "What is the final acceptance criterion for declaring that the online and offline user manuals are in sync for the commit-push-hybrid-loop workflow?"}
+{"qid": 93, "question": "Who is responsible for performing that acceptance check before a release tag is created?"}
+{"qid": 94, "question": "Given Q92–Q93, write the exact release-checklist item that must be checked off before any tag that claims 'documentation in sync' may be pushed."}
+{"qid": 95, "question": "After all preceding improvements, what remains the single largest residual risk that an offline user will still fail to push a correct first commit?"}
+{"qid": 96, "question": "What additional offline artifact (script, receipt template, or checklist) would most reduce that residual risk?"}
+{"qid": 97, "question": "Given Q95–Q96, specify the content of that artifact and the exact location it must occupy inside every release tarball."}
+{"qid": 98, "question": "How will future changes to the hybrid loop or the PoPW ledger be guaranteed to update both the online and offline manuals in the same pull request?"}
+{"qid": 99, "question": "What automated check (CI or local pre-commit) can enforce that any PR touching bin/run_ai_hybrid_loop_v2.sh or bin/popw_thermal_ledger.py also updates the corresponding offline-manual section?"}
+{"qid": 100, "question": "Given the entire chain Q1–Q99, state the final definition of 'done' for GitHub push/commit hygiene and for the dual online/offline user manuals that would allow the project to claim that a completely offline user can clone, commit, push (when connectivity returns), and run a sealed hybrid-loop cycle with zero undocumented steps."}

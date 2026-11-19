@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 # refinement_loop_v2: sqlite seeds context, 7B drafts, 3B grades, FIX feeds forward
 set -eu
 export OLLAMA_HOST=http://localhost:11434

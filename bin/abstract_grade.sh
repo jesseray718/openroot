@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 set -eu
 export OLLAMA_HOST=http://localhost:11434
 FILE="${1:?usage: abstract_grade.sh <manuscript.md>}"

@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 set -eu
 FILE="${1:?usage: hype_gate.sh <manuscript.md>}"
 CODE=0

@@ -1,0 +1,86 @@
+{
+  "source_sha256": "1c148b1c6f9a4474c3b1840ba0819de6fa343457d2681bec1812ae9107cffc5c",
+  "scope": "One component experiment; not an end-to-end OpenRoot validation",
+  "runs": [
+    {
+      "label": "A-source-only",
+      "question": "What does OpenRoot's pathway cache record and verify, and does it automatically execute recorded steps?",
+      "question_sha256": "060194d83bfe095af84a4a812170f1c4a845ed956ee9ca842efb053b8b3ae49c",
+      "evidence_sha256": "99b8f65f8e306a258465cdb26b99205b8c245b1de88c5a47a74457b7366d1a1d",
+      "wall_seconds": 191.04309980200196,
+      "status": "ANSWER_GENERATED_UNGRADED",
+      "model_requested": "qwen2.5-coder:7b",
+      "model_returned": "qwen2.5-coder:7b",
+      "telemetry": {
+        "done_reason": "stop",
+        "load_duration": 2117120,
+        "prompt_eval_count": 1466,
+        "prompt_eval_duration": 44971409000,
+        "eval_count": 319,
+        "eval_duration": 145905070000,
+        "total_duration": 190954444403
+      }
+    },
+    {
+      "label": "B-with-curriculum",
+      "question": "What does OpenRoot's pathway cache record and verify, and does it automatically execute recorded steps?",
+      "question_sha256": "060194d83bfe095af84a4a812170f1c4a845ed956ee9ca842efb053b8b3ae49c",
+      "evidence_sha256": "99b8f65f8e306a258465cdb26b99205b8c245b1de88c5a47a74457b7366d1a1d",
+      "wall_seconds": 46.32825082100317,
+      "status": "ANSWER_GENERATED_UNGRADED",
+      "model_requested": "qwen2.5-coder:7b",
+      "model_returned": "qwen2.5-coder:7b",
+      "telemetry": {
+        "done_reason": "stop",
+        "load_duration": 1933542,
+        "prompt_eval_count": 1574,
+        "prompt_eval_duration": 4916547000,
+        "eval_count": 236,
+        "eval_duration": 41222488000,
+        "total_duration": 46319687652
+      }
+    },
+    {
+      "label": "C-transfer",
+      "question": "An evidence file changes after recording and an invalid JSON line is added to the ledger. Could verify still return success? Explain the control flow and the limits of that success.",
+      "question_sha256": "12fac7e8f2ca68beeb1a3c4f5c20e127b13a07e4c8c12032b6bffdf1652dfd49",
+      "evidence_sha256": "99b8f65f8e306a258465cdb26b99205b8c245b1de88c5a47a74457b7366d1a1d",
+      "wall_seconds": 99.86232381599984,
+      "status": "ANSWER_GENERATED_UNGRADED",
+      "model_requested": "qwen2.5-coder:7b",
+      "model_returned": "qwen2.5-coder:7b",
+      "telemetry": {
+        "done_reason": "stop",
+        "load_duration": 2579043,
+        "prompt_eval_count": 1589,
+        "prompt_eval_duration": 1722668000,
+        "eval_count": 534,
+        "eval_duration": 98045485000,
+        "total_duration": 99853835752
+      }
+    },
+    {
+      "label": "D-causal-correction",
+      "question": "An external evidence file changes after recording, while the stored ledger entry remains unchanged. Identify the exact function or expression that reads the file's new bytes during cmd_verify. If none does, say none and explain exactly what entry_hash hashes. If an invalid JSON line is added, does that necessarily make verification fail? Preserve the stated changed-file premise.",
+      "question_sha256": "1c29ee177c19a00feb53c9ac815f3a30b89450186867ed407efbc505fe6abf8e",
+      "evidence_sha256": "99b8f65f8e306a258465cdb26b99205b8c245b1de88c5a47a74457b7366d1a1d",
+      "wall_seconds": 220.83918518499559,
+      "status": "ANSWER_GENERATED_UNGRADED",
+      "model_requested": "qwen2.5-coder:7b",
+      "model_returned": "qwen2.5-coder:7b",
+      "telemetry": {
+        "done_reason": "stop",
+        "load_duration": 7077919843,
+        "prompt_eval_count": 1607,
+        "prompt_eval_duration": 48775432000,
+        "eval_count": 435,
+        "eval_duration": 164858277000,
+        "total_duration": 220733271086
+      }
+    }
+  ],
+  "failed_answer": "The function that reads the file's new bytes during `cmd_verify` is:\n\n```python\ndata = p.read_bytes()\n```\n\nThis line is found in the `cmd_record` function, specifically in the loop that processes evidence files:\n\n```python\nfor e in (args.evidence or [])[:MAX_EVIDENCE_FILES]:\n    p = Path(e)\n    try:\n        data = p.read_bytes()\n    except OSError as exc:\n        print(f\"[error] evidence unreadable: {e} ({exc})\", file=sys.stderr)\n        return 1\n    evidence.append({\"path\": str(p.resolve()), \"bytes\": len(data),\n                     \"sha256\": sha256_bytes(data)})\n```\n\nThe `entry_hash` function hashes the core of the entry, which includes the evidence metadata but not the actual file bytes. It does this by serializing the entry dictionary except for the \"hash\" field:\n\n```python\ndef entry_hash(entry: dict) -> str:\n    core = {k: v for k, v in entry.items() if k != \"hash\"}\n    return sha256_bytes(\n        json.dumps(core, sort_keys=True, separators=(\",\", \":\")).encode())\n```\n\nIf an invalid JSON line is added to the ledger, it will be skipped by the `load_chain` function:\n\n```python\ndef load_chain(lp: Path):\n    if not lp.exists():\n        return []\n    out = []\n    for line in lp.read_text(encoding=\"utf-8\").split(\"\\n\"):\n        line = line.strip()\n        if not line:\n            continue\n        try:\n            out.append(json.loads(line))\n        except json.JSONDecodeError:\n            continue\n    return out\n```\n\nHowever, this does not necessarily make verification fail. Verification checks the hash of the stored entry against the hash of the entry reconstructed from the current state of the ledger and evidence files. If the evidence files have changed, the hash of the reconstructed entry will also change, and verification will fail. If the evidence files have not changed, the hash of the reconstructed entry will match the stored hash, and verification will succeed.",
+  "original_answer_sha256": "cb70779fe729c881a88f9c91a732b3dd06c0abefa6b549b1146ff1ecc2f5a597",
+  "verdict": "FAIL_CAUSAL_REGRESSION",
+  "warning": "Sequential timings are not a causal speedup benchmark. Offline A15 reuse is not demonstrated."
+}

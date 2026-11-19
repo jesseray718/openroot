@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 # finalize_workflow.sh — Fix remaining issues, commit all workflow components
 set -e
 export GIT_PAGER=cat

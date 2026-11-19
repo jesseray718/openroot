@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 # core_view_server.sh — rebuild + serve core view on :8088, survive reboots of terminal
 cd /home/jesse/openroot/data/core_view
 python3 /home/jesse/openroot/bin/build_core_view.py || exit 1

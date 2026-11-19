@@ -1,11 +1,106 @@
+<!-- OPENROOT_VISIBLE_START_HERE_V1 -->
+# OpenRoot
+
+### Offline-first evidence and reusable work — under active development
+
+OpenRoot's goal is one simple interface: ask a question, retrieve source-addressed
+artifacts, compile a focused evidence packet, check the result, and reuse the work
+on another device without starting over.
+
+## Start here: run the published example
+
+From a checkout of this repository, with Python 3.10 or newer:
+
+   python3 examples/pathway-cache-behavior/demo.py
+    python3 examples/pathway-cache-behavior/demo.py --self-test
+
+Once the source is present, this example needs no network, model server, API key,
+or private database. Expected result: BEHAVIOR_REPRODUCED and seven passing tests.
+
+[Open the example: source, instructions and observations](examples/pathway-cache-behavior/README.md)
+
+## What the example actually demonstrates
+
+| Disposable case | Verifier exit | External evidence-file reads |
+|---|---:|---:|
+| Original evidence and valid ledger | 0 | 0 |
+| External evidence changed; ledger unchanged | 0 | 0 |
+| Changed evidence plus an invalid JSON line | 0 | 0 |
+| Ledger entry changed without resealing | 1 | 0 |
+
+These are characterization results for a frozen reviewed implementation, not an
+endorsement of every behavior. The example creates only temporary fixture files.
+It does not alter your production ledgers or execute recorded pathway steps.
+
+The model experiment matters too: the local 7B gave a plausible explanation that
+incorrectly attributed recording-time file reads to verification. Extra written
+correction did not reliably fix that answer. The executable cases expose the
+mistake so it can become a reproducible lesson rather than trusted cached text.
+
+## Current delivery status
+
+| Capability | Demonstrated status in this experiment |
+|---|---|
+| Portable component example | Published through PR #150 |
+| Four executable cases and seven tests | Passed locally before publication |
+| Saved source, model receipts and failure evidence | Published in the example |
+| Automatic all-pod selection and trimming | Not established as repaired |
+| Automatic lesson ingestion and retrieval | Not completed; correction was artifact-only |
+| Offline A15 consumption of a cached pathway | Not yet demonstrated |
+
+The A/B timings are exploratory sequential observations, not a controlled
+curriculum-caused inference speedup. No thousands-times-faster claim is made.
+
+## Next integration target
+
+The same question should travel through the existing autodossier interface,
+produce a checked reusable pathway, and be consumed on the A15 with networking
+disconnected. This component example is a building block, not a substitute for
+that end-to-end demonstration.
+
+[Recovered dossier compiler](docs/recovery/COMPILED_DOSSIER_V2.md) · [Example and limitations](examples/pathway-cache-behavior/README.md)
+
+---
+
+## Project foundations and existing documentation
+
+The existing README is preserved below; this new opening distinguishes current
+reproducible results from the broader project and historical status descriptions.
+
 # OpenRoot — Floor-Lift Economy, Four Engines, Superlinear Orchestration
 
+<!-- OPENROOT_PATHWAY_BEHAVIOR_DEMO -->
+## Reproducible component example
+
+    python3 examples/pathway-cache-behavior/demo.py
+
+[Source, seven tests, observations and limitations](examples/pathway-cache-behavior/README.md).
+Four cases distinguish ledger integrity from external evidence freshness.
+No model server or network is needed to run this example. This is not yet the offline A15 system demo.
+
+
+## Appropriate Technology & Decentralized Edge Ecosystem
+
+OpenRoot is a self-hosted, offline-first decentralized framework integrating
+physical infrastructure (AeroCement 2.0 composites, passive thermal copper
+loops, sensor meshes) with lightweight local edge computing (TinyML, Ollama,
+Qwen Coder).
+
+## Core Pillars
+- **Physical Build Systems:** Modular structural geometries, low-power microcontrollers, and durable material formulations.
+- **Edge Intelligence:** TinyML micro-inference on ESP32 sensor nodes for structural health monitoring (SHM) and thermal loop optimization.
+- **Distributed Core:** Local SQLite/FTS5 indexing synchronized via secure mesh pathways and append-only verification ledgers.
+
+## Recent Milestones
+- **Review Tool v2 (Sandbox CLI):** Native pathway validation, acceptance receipts, and automated release asset bundling.
+- **Edge-to-Spoke Pipelines:** Robust binary/JSON payload ingestion syncing edge telemetry back to the Dell OptiPlex 3060 heavy-spoke storage core.
+
+## Repository Layout
+- `bin/`: Operational shell automation, mesh bridging, and database tuning macros.
+- `workareas/`: Staging, validation receipts, and release packaging artifacts.
+- `data/`: Local validation ledgers, friction logs, and universal indexes.
+
 ## Core Thesis
-
-**The spread between top and bottom is a speed limit on compound human growth.**
-
-Same artifact, routed differently: 26x difference in systemic value. Controlled demo:
-`floor_lift 67.05` (bottom-third routing) vs `2.5` (premium routing) — identical 100-unit benefit.
 
 Metric: `floor_lift = Σ (benefit_i × (1 - percentile_i/100)²)` — graded by routing, not volume.
 Live infrastructure: tier-0 deterministic gates → tier-4 big-brain (Qwen 72B) under a $0.50 hard
@@ -246,6 +341,35 @@ the application or its dependencies are complete.
 6. Repeat on the phone with networking disconnected.
 7. Activate only after the checks pass.
 
+### Shared historical-pod query (code path; device validation pending)
+
+The same local-only query path is available on the computer and through the
+phone snapshot CLI:
+
+```bash
+# Computer, from the checkout containing these changes
+python3 bin/fts_pod_search.py ask --json "thermal storage"
+
+# A15 Termux, from the checkout containing these changes, after staging
+python3 bin/openroot-phone-v1 ask --json "thermal storage"
+```
+
+Both commands search `data/thermodynamics/openroot_interactive_pods.db` and
+emit stable evidence IDs. Compare those IDs and the database SHA-256 across
+devices; generated answer wording may differ by model. The phone command checks
+the snapshot manifest hashes for the query tool, shared Ollama helper, and pod
+database before running. The snapshot must list `bin/fts_pod_search.py`,
+`bin/lumo_lib.py`, and `data/thermodynamics/openroot_interactive_pods.db` under
+those exact relative paths. This command does not create or transfer a snapshot.
+Use the same stable SQLite backup on both devices; a nonempty WAL is rejected.
+Answers use a loopback Ollama endpoint only; the phone
+defaults to `qwen2.5:1.5b`, while the computer uses the configured local model.
+Both default to three evidence records. The JSON includes full pod records, so
+review it for private content before sharing. An evidence ID identifies a
+record; it does not verify the chain or prove the model's answer is correct.
+This adds a query path, not proof that the current phone snapshot contains the
+required files or that either device has completed an offline query.
+
 ### Publication boundary
 
 Publish reviewed source, documentation, and non-sensitive verification
@@ -253,3 +377,16 @@ summaries only. This README update does not include credential files,
 raw token documents, private corpus contents, or runtime databases.
 
 <!-- OPENROOT-A15-MIRROR:END -->
+
+<!-- OPENROOT-RECOVERED-DOSSIER-V2 -->
+## Recovered dossier compiler
+
+The existing targeted dossier compiler v2 has been recovered and preserved
+with its original SHA-256 identity. It selects cited source spans before
+inference; it is not a complete all-pod retrieval engine or an automatic
+proof verifier.
+
+See [the recovery and usage guide](docs/recovery/COMPILED_DOSSIER_V2.md)
+for historical measurements, required native databases, write behavior,
+and current limitations. Publication does not activate the tool.
+<!-- /OPENROOT-RECOVERED-DOSSIER-V2 -->

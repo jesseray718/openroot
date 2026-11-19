@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 # recover_v1.sh — bin/ verification + GOALS/MASTER_TODO rebuild + handoff seal
 # Provenance: Lumo-authored, stack_gate principles applied (comment-aware).
 # Dry-run default. CONFIRM=1 banks. Idempotent. Absolute paths. Canary-verified.

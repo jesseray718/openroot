@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 # SPDX-License-Identifier: GPL-3.0-or-later
 # resolve_pr58_v1.sh — audit PR #58 (master->main), gate changed files,
 # fix thixo-foam.md:4, merge behind CONFIRM=1. Idempotent, fork-only, no tree switches.

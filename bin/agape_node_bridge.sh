@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 set -eu
 # agape_node_bridge.sh — bridges chat → local stack → chat
 # Usage: echo "QUERY: <question>" | agape_node_bridge.sh

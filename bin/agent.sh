@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 # agent.sh — 7B edit → 3B grader loop with sqlite logging
 # Usage: agent.sh <spec> <model_7b> <model_3b>
 set -eu

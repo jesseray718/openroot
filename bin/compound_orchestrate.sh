@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 # compound_orchestrate.sh — Superlinear workflow compounding engine
 # Chains: refine_next.sh → compound_v1.sh → lessons.db → boot_seed → doc_compile → context_bridge
 # Each stage's output SHA256-hashed and logged; failures halt and rollback

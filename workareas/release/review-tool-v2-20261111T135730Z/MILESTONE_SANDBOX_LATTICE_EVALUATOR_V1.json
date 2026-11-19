@@ -1,0 +1,16 @@
+{
+  "canonical_status": "not_canonical",
+  "chain_verification": "PASS",
+  "eligible_entries": 1,
+  "first_previous_hash": "genesis",
+  "last_entry_hash": "5c2bc0fc84d5093a00afff91fc27c8e6434eff6b993cd395099301f48713feeb",
+  "ledger_entries": 3,
+  "ledger_sha256": "326e82e237630caab693ed5605a92bf9295eca886c6e47afe7f1ee8efb55f4c3",
+  "live_acre_ledger_present": false,
+  "live_tree_modified": false,
+  "milestone": "sandboxed_lattice_evaluator_v1_verified",
+  "next_action": "document_tool_and_design_canonical_promotion_gate",
+  "status": "passed",
+  "timestamp": "2026-11-11T13:35:23.289041+00:00",
+  "tool_sha256": "413e9e1ad9c772841e0ae5d814c3bcc330d11286d4986db1860fa95ecd9514b3"
+}
