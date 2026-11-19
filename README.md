@@ -11,7 +11,7 @@ on another device without starting over.
 
 From a checkout of this repository, with Python 3.10 or newer:
 
-    python3 examples/pathway-cache-behavior/demo.py
+   python3 examples/pathway-cache-behavior/demo.py
     python3 examples/pathway-cache-behavior/demo.py --self-test
 
 Once the source is present, this example needs no network, model server, API key,
@@ -377,7 +377,6 @@ summaries only. This README update does not include credential files,
 raw token documents, private corpus contents, or runtime databases.
 
 <!-- OPENROOT-A15-MIRROR:END -->
-
 
 <!-- OPENROOT-RECOVERED-DOSSIER-V2 -->
 ## Recovered dossier compiler
