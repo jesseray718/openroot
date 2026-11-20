@@ -1,3 +1,60 @@
+<!-- OPENROOT_PUBLIC_ENTRY_V2:START -->
+# OpenRoot
+
+### Useful knowledge should outlive the conversation.
+
+OpenRoot is an open-source technology commons for preserving, testing, improving, and sharing practical knowledge. It connects appropriate technology, local computing, source-addressed evidence, and reusable workflows.
+
+The goal: help another person understand, build, repair, or improve something without paying the full cost of rediscovery.
+
+[Explore OpenRoot](https://github.com/jesseray718/openroot) · [Project overview](https://jesseray718.github.io/openroot/) · [Contribute](https://github.com/jesseray718/openroot/blob/f238c5f3c3a0a4ff8ce3498427dacea3207873d6/CONTRIBUTING.md)
+
+## What connects the work
+
+- Knowledge: source identity, SQLite/FTS5 retrieval, corrections, and inspectable records.
+- Reusable work: procedures and results with evidence, dependencies, and applicability conditions.
+- Appropriate technology: thermal-cascade research, AeroCement, repairable hardware, and community-scale infrastructure.
+- Access: useful tools for ordinary phones and used computers, with offline operation as a design priority.
+
+Agape, permaculture, and shared benefit guide the design: preserve what is useful, accept feedback, integrate compatible functions, avoid waste, and support people with the fewest resources.
+
+## Start with a reproducible component
+
+[Read the pathway-cache behavior example](https://github.com/jesseray718/openroot/tree/f238c5f3c3a0a4ff8ce3498427dacea3207873d6/examples/pathway-cache-behavior). From a checkout containing it:
+
+```bash
+python3 examples/pathway-cache-behavior/demo.py
+python3 examples/pathway-cache-behavior/demo.py --self-test
+```
+
+The published example documents four cases and seven tests. It distinguishes ledger integrity from external evidence-file freshness. It uses disposable fixtures, not private databases, and does not execute recorded workflow steps. Run it to inspect the behavior; it is not proof that the whole OpenRoot pipeline is complete.
+
+## Current status and next proof
+
+OpenRoot is an active experimental build. Component examples and local tools exist; automatic all-pod retrieval, correction-aware reuse, and a complete cross-device offline pathway are integration work, not universal guarantees.
+
+The next end-to-end proof is one evidence-backed question, a checked reusable result, offline consumption on another device, and reliable refusal when a required dependency changes.
+
+Physical-system performance requires its own measurements and replication. A hash establishes an artifact identity under its construction; it does not by itself establish scientific truth, measured energy yield, or token value.
+
+## Help build the commons
+
+Start with a narrow contribution: reproduce a test, improve a confusing instruction, report a retrieval miss, document a correction, or contribute a clearly labeled experiment or design packet.
+
+[Contribution guide](https://github.com/jesseray718/openroot/blob/f238c5f3c3a0a4ff8ce3498427dacea3207873d6/CONTRIBUTING.md) · [Issues and discussion of concrete work](https://github.com/jesseray718/openroot/issues) · [Design-packet template](https://github.com/jesseray718/openroot-design-packet-template)
+
+## Licensing and credit
+
+Respect repository licenses and individual file headers. OpenRoot's documented model is GPL-3.0-only for software and CC BY-SA 4.0 for non-code material; see the actual [license](https://github.com/jesseray718/openroot/blob/f238c5f3c3a0a4ff8ce3498427dacea3207873d6/LICENSE) and source headers for applicability. Preserve contributor attribution and third-party terms.
+
+*Engineering as an act of unconditional integration.*
+<!-- OPENROOT_PUBLIC_ENTRY_V2:END -->
+
+<details>
+<summary>Project foundations and historical notes — earlier status descriptions may be superseded</summary>
+
+The material below is preserved for continuity. Historical performance, deployment, financial, and physical claims are not promoted to current verified results by this update. Follow dated evidence and current source instructions.
+
 <!-- OPENROOT_VISIBLE_START_HERE_V1 -->
 # OpenRoot
 
@@ -390,3 +447,5 @@ See [the recovery and usage guide](docs/recovery/COMPILED_DOSSIER_V2.md)
 for historical measurements, required native databases, write behavior,
 and current limitations. Publication does not activate the tool.
 <!-- /OPENROOT-RECOVERED-DOSSIER-V2 -->
+
+</details>
