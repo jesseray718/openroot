@@ -1,5 +1,19 @@
 # OpenRoot
 
+<!-- OPENROOT-STATUS-2026-11-23 -->
+## November 23, 2026: working pods, correction retrieval passed, end-to-end acceptance next
+
+OpenRoot is building local-first knowledge pods and correction-aware, sealed answer pathways: preserve evidence, retrieve before generating, and replay valid results without another generation request.
+
+Latest operator-reported local results: tree-to-pod tooling passed a 249-cell sanity run and an 18-cell docs-pod run; G22 retrieval-only acceptance passed all six assertions, including corrective facts present in the packet and zero model requests. An earlier instrumented integration receipt records generation, exact zero-generation replay, and operator-blocked replay. These are different test scopes, not a claim of complete production integration.
+
+Next gates: one metered G22 answer-content test, its pathway/replay/block verification, then AeroCement exhaustive-selection and quality acceptance on its separate lane. Legacy `b3` means BLAKE2b-256, not BLAKE3. Payload stays out of Git; pinned identity-bearing files and existing seals stay unchanged.
+
+[Current status, evidence boundaries, and remaining build list](docs/STATUS-2026-11-23.md) · [Specific questions to resolve through the system](docs/SYSTEM-QUESTIONS-2026-11-23.md)
+
+This is a documentation publication of reviewed receipts and the operator's latest handoff. Newer local-only tooling and receipts have not been independently retrieved or executed by this publication agent. Publishing this page does not deploy them.
+<!-- /OPENROOT-STATUS-2026-11-23 -->
+
 ### Local capability. Shared knowledge. A distributed commons.
 
 OpenRoot is an open-source appropriate-technology project connecting physical infrastructure, local computing, evidence, and shared contribution. Its ambition is a worldwide web of locally useful clusters: communities able to build, measure, repair, and improve essential systems while sharing what works.
@@ -80,7 +94,7 @@ It characterizes ledger-integrity behavior and its distinction from external evi
 | Area | Current public-entry claim |
 |---|---|
 | Component behavior | Published executable example with documented observations and limitations. |
-| Correction-aware retrieval and reuse | Integration work; reliable end-to-end behavior not established here. |
+| Correction-aware retrieval and reuse | G22 retrieval acceptance reported locally; earlier instrumented generation/replay/block receipt reviewed. Current metered content test and actual-route acceptance remain open; see the dated status above. |
 | Cross-device offline pathway | Transfer and component work do not establish complete disconnected reuse. |
 | Physical systems | Preserve the documented designs; require configuration-specific measurement and replication for performance claims. |
 | Independent clusters | Intended adoption model, not an established worldwide network. |
@@ -90,6 +104,8 @@ A useful next demonstration joins the layers: one bounded experiment, a source-l
 
 ## Find the existing work
 
+- [Dated implementation status and remaining build list](docs/STATUS-2026-11-23.md).
+- [Questions to resolve through source retrieval and receipted acceptance](docs/SYSTEM-QUESTIONS-2026-11-23.md).
 - [Start here](START-HERE.md) and [contribution guide](CONTRIBUTING.md).
 - [Recovered dossier compiler: usage, dependencies, and limitations](docs/recovery/COMPILED_DOSSIER_V2.md).
 - [Pathway-cache component example](examples/pathway-cache-behavior/README.md).
