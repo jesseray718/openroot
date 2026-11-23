@@ -129,4 +129,3 @@ if __name__ == "__main__":
     else:
         print("usage: init | ingest-ledger | verify | fts-probe")
         sys.exit(2)
-
