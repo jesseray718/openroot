@@ -2,6 +2,7 @@
 """Check local link destinations in README.md and top-level docs Markdown."""
 
 import html
+import hashlib
 import re
 import sys
 import unicodedata
@@ -14,6 +15,16 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFINITION = re.compile(r"^\s{0,3}\[[^]]+\]:\s*(<[^>]+>|\S+)", re.MULTILINE)
 FENCE = re.compile(r"^\s{0,3}(`{3,}|~{3,})")
 HEADING = re.compile(r"^\s{0,3}#{1,6}\s+(.+?)\s*#*\s*$", re.MULTILINE)
+EXCLUSIONS = (
+    {
+        "path": "docs/README.draft.md",
+        "reason": (
+            "Pinned draft contains two known broken links, ./CODE_OF_CONDUCT.md "
+            "and ./LICENSE; exclusion hides them but does not fix them."
+        ),
+        "sha256": "518b6643428d443338cdcfb65ee6be3715b8b57fdbf6331e8f8b2170634eb2ce",
+    },
+)
 
 
 class HtmlLinks(HTMLParser):
@@ -160,9 +171,52 @@ def check_file(path, root=ROOT):
     return errors
 
 
+def validate_exclusions(root=ROOT, exclusions=EXCLUSIONS):
+    excluded_paths = set()
+    errors = []
+    root = root.resolve()
+    for exclusion in exclusions:
+        relative_path = Path(exclusion["path"])
+        path = (root / relative_path).resolve()
+        if not path.is_relative_to(root):
+            errors.append(f"exclusion path escapes repository: {relative_path}")
+            continue
+        if not path.is_file():
+            errors.append(f"excluded file is missing: {relative_path}")
+            continue
+        digest = hashlib.sha256(path.read_bytes()).hexdigest()
+        if digest != exclusion["sha256"]:
+            errors.append(
+                f"excluded file SHA-256 changed: {relative_path} "
+                f"(expected {exclusion['sha256']}, got {digest})"
+            )
+            continue
+        excluded_paths.add(relative_path.as_posix())
+    return excluded_paths, errors
+
+
+def check_files(files, root=ROOT, exclusions=EXCLUSIONS):
+    excluded_paths, errors = validate_exclusions(root, exclusions)
+    if errors:
+        return excluded_paths, errors
+    errors = [
+        error
+        for path in files
+        if path.relative_to(root).as_posix() not in excluded_paths
+        for error in check_file(path, root)
+    ]
+    return excluded_paths, errors
+
+
 def main():
     files = [ROOT / "README.md", *sorted((ROOT / "docs").glob("*.md"))]
-    errors = [error for path in files for error in check_file(path)]
+    excluded_paths, errors = check_files(files)
+    if errors and any(error.startswith("excluded file ") for error in errors):
+        for error in errors:
+            print(f"[error] {error}", file=sys.stderr)
+        return 1
+    for exclusion in EXCLUSIONS:
+        print(f"[excluded] {exclusion['path']}: {exclusion['reason']}", file=sys.stderr)
     for error in errors:
         print(error, file=sys.stderr)
     if errors:
