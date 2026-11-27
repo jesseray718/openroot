@@ -108,10 +108,10 @@ A useful next demonstration joins the layers: one bounded experiment, a source-l
 
 - [Dated implementation status and remaining build list](docs/STATUS-2026-11-23.md).
 - [Questions to resolve through source retrieval and receipted acceptance](docs/SYSTEM-QUESTIONS-2026-11-23.md).
-- [Start here](START-HERE.md) and [contribution guide](CONTRIBUTING.md).
+- [Start here](STARTHERE.md) and [contribution guide](CONTRIBUTING.md).
 - [Recovered dossier compiler: usage, dependencies, and limitations](docs/recovery/COMPILED_DOSSIER_V2.md).
 - [Pathway-cache component example](examples/pathway-cache-behavior/README.md).
-- [Thesis](THESIS.md): design arguments require their own evidence review.
+- [Project vision](docs/REGENERATIVE-COMMONS.md): design arguments require their own evidence review.
 - [Previous README and detailed historical rollout notes](https://github.com/jesseray718/openroot/blob/2563eae80a885973740615b0a680bad19a6378c3/README.md): retained in Git history, not promoted to current verified results.
 
 ## Bring one useful improvement
