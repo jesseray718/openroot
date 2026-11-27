@@ -41,6 +41,13 @@ class CICheckTests(unittest.TestCase):
         del record["previous_hash"]
         self.assertIn("missing link", chains.check_records([record]))
 
+    def test_blank_lines_are_ignored_but_invalid_json_is_reported(self):
+        records, bad = chains.parse_records('\n{"event":"test"}\n\n')
+        self.assertEqual([{"event": "test"}], records)
+        self.assertIsNone(bad)
+        _, bad = chains.parse_records('\n{"event":"test"}\nnot-json\n')
+        self.assertEqual(3, bad)
+
     def test_token_patterns_without_exposing_values(self):
         fake_key = b"AK" + b"IA" + b"A" * 16
         fake_token = b"gh" + b"p_" + b"A" * 36

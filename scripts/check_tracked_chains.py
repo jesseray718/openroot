@@ -42,6 +42,21 @@ def check_records(records):
     return None
 
 
+def parse_records(text):
+    records = []
+    for index, line in enumerate(text.splitlines(), 1):
+        if not line.strip():
+            continue
+        try:
+            record = json.loads(line)
+        except json.JSONDecodeError:
+            return records, index
+        if not isinstance(record, dict):
+            return records, index
+        records.append(record)
+    return records, None
+
+
 def main():
     paths = subprocess.check_output(
         ["git", "ls-files", "-z", "--", "*.jsonl"], cwd=ROOT
@@ -55,23 +70,12 @@ def main():
             failures += 1
             continue
         try:
-            lines = path.read_text(encoding="utf-8").splitlines()
+            text = path.read_text(encoding="utf-8")
         except (OSError, UnicodeError) as exc:
             print(f"[error] cannot read {path.relative_to(ROOT)}: {exc}", file=sys.stderr)
             failures += 1
             continue
-        records = []
-        bad = None
-        for index, line in enumerate(lines, 1):
-            try:
-                record = json.loads(line)
-            except json.JSONDecodeError:
-                bad = index
-                break
-            if not isinstance(record, dict):
-                bad = index
-                break
-            records.append(record)
+        records, bad = parse_records(text)
         if bad:
             print(f"[error] cannot classify {path.relative_to(ROOT)}: invalid row {bad}", file=sys.stderr)
             failures += 1
