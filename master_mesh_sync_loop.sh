@@ -1,22 +1,46 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 cd "$(dirname "$0")"
-CORE_IP="${OPTIPLEX_TAILSCALE_IP:-100.122.169.43}"
-SYNC_INTERVAL=60
-mkdir -p workareas/compost_logs workareas/release
+
+: "${OPTIPLEX_TAILSCALE_IP:?Set OPTIPLEX_TAILSCALE_IP to the destination host}"
+: "${MESH_SSH_USER:?Set MESH_SSH_USER to the destination account}"
+: "${MESH_REMOTE_DIR:?Set MESH_REMOTE_DIR to the destination directory}"
+SYNC_INTERVAL="${SYNC_INTERVAL:-60}"
+MESH_PAYLOAD_KEEP="${MESH_PAYLOAD_KEEP:-10}"
+if [[ ! "$SYNC_INTERVAL" =~ ^[1-9][0-9]{0,5}$ ||
+      ! "$MESH_PAYLOAD_KEEP" =~ ^[1-9][0-9]{0,5}$ ]]; then
+  echo "[error] SYNC_INTERVAL and MESH_PAYLOAD_KEEP must be positive integers" >&2
+  exit 2
+fi
+
+mkdir -p workareas/release
+shopt -s nullglob
 while true; do
-  TIMESTAMP="$(date -u +%Y%m%dT%H%M%SZ)"
-  echo "[$(date -u +%T)] [SYNC-LOOP] Probing core $CORE_IP"
-  if ping -c 1 -W 2 "$CORE_IP" >/dev/null 2>&1; then
-    echo "[$(date -u +%T)] [ok] Core online — staging"
-    PAYLOAD="workareas/release/mesh_sync_payload_${TIMESTAMP}.tar.gz"
-    tar -czf "$PAYLOAD" --exclude='.git' --exclude='__pycache__' \
-      workareas/agape_pods workareas/compost_logs workareas/analytics 2>/dev/null || true
-    scp -o ConnectTimeout=5 "$PAYLOAD" "jesse@$CORE_IP:/home/jesse/openroot/workareas/release/" >/dev/null 2>&1 \
-      && echo "[$(date -u +%T)] [ok] transmitted" \
-      || echo "[$(date -u +%T)] [warn] scp failed"
+  if [[ ! -d workareas/mesh_export_redacted ]]; then
+    echo "[warn] No operator-prepared export directory available"
   else
-    echo "[$(date -u +%T)] [info] Core offline — holding"
+    timestamp="$(date -u +%Y%m%dT%H%M%SZ)"
+    payload="$(mktemp "workareas/release/mesh_sync_payload_${timestamp}_XXXXXXXX.tar.gz")"
+    if tar -czf "$payload" --exclude='.git' --exclude='__pycache__' \
+      workareas/mesh_export_redacted; then
+      if scp -o BatchMode=yes -o ConnectTimeout=5 "$payload" \
+        "${MESH_SSH_USER}@${OPTIPLEX_TAILSCALE_IP}:${MESH_REMOTE_DIR}"; then
+        echo "[ok] transmitted"
+      else
+        echo "[warn] transfer failed" >&2
+      fi
+    else
+      echo "[error] payload creation failed" >&2
+      rm -f -- "$payload"
+    fi
   fi
+  mapfile -d '' -t payloads < <(
+    find workareas/release -maxdepth 1 -type f -name 'mesh_sync_payload_*.tar.gz' \
+      -printf '%T@ %p\0' | sort -z -n
+  )
+  while (( ${#payloads[@]} > MESH_PAYLOAD_KEEP )); do
+    rm -f -- "${payloads[0]#* }"
+    payloads=("${payloads[@]:1}")
+  done
   sleep "$SYNC_INTERVAL"
 done
