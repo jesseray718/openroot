@@ -1,9 +1,29 @@
 name: OpenRoot Node CI
 on: [push, pull_request]
+permissions:
+  contents: read
 jobs:
-  build:
+  tests:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: ./bin
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -m pip install pyyaml
+      - run: |
+          if ! command -v sqlite3 >/dev/null; then
+            sudo apt-get update
+            sudo apt-get install -y sqlite3
+          fi
+      - run: python3 -m unittest discover -s tests
+  secrets:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Run Deploy Verification
-        run: python3 bin/openroot_master_deploy.py
+      - uses: actions/checkout@v4
+      - run: python3 scripts/check_tracked_secrets.py
+  chains:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/check_tracked_chains.py
