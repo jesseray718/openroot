@@ -1,4 +1,5 @@
 import importlib.util
+import hashlib
 import tempfile
 import unittest
 from pathlib import Path
@@ -48,6 +49,46 @@ class MarkdownLinkTests(unittest.TestCase):
     def test_nested_image_link_checks_both_destinations(self):
         errors = self.check("[![image](missing.png)](missing.md)")
         self.assertEqual(2, len(errors))
+
+    def test_pinned_exclusion_accepts_unchanged_file_and_skips_links(self):
+        relative = Path("docs/README.draft.md")
+        draft = self.root / relative
+        draft.parent.mkdir()
+        content = "[broken](missing.md)\n"
+        draft.write_text(content)
+        exclusion = {
+            "path": relative.as_posix(),
+            "reason": "pinned draft with known broken links",
+            "sha256": hashlib.sha256(content.encode()).hexdigest(),
+        }
+
+        excluded, errors = checker.check_files([draft], self.root, (exclusion,))
+
+        self.assertEqual({relative.as_posix()}, excluded)
+        self.assertEqual([], errors)
+        self.assertEqual(
+            ["docs/README.draft.md: missing or out-of-repository target: missing.md"],
+            checker.check_file(draft, self.root),
+        )
+
+    def test_pinned_exclusion_fails_if_hash_changes_or_file_is_missing(self):
+        relative = Path("docs/README.draft.md")
+        draft = self.root / relative
+        draft.parent.mkdir()
+        draft.write_text("changed\n")
+        exclusion = {
+            "path": relative.as_posix(),
+            "reason": "pinned draft with known broken links",
+            "sha256": hashlib.sha256(b"original\n").hexdigest(),
+        }
+
+        excluded, errors = checker.check_files([draft], self.root, (exclusion,))
+        self.assertEqual(set(), excluded)
+        self.assertIn("SHA-256 changed", errors[0])
+
+        draft.unlink()
+        _, errors = checker.check_files([draft], self.root, (exclusion,))
+        self.assertIn("file is missing", errors[0])
 
 
 if __name__ == "__main__":
