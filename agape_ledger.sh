@@ -1,33 +1,95 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
-LOG_DIR="workareas/audit"
-mkdir -p "$LOG_DIR"
-LEDGER_FILE="$LOG_DIR/agape_audit.log"
+SCRIPT_DIR="$(cd -- "$(dirname -- "$0")" && pwd)"
+LEDGER_FILE="${AGAPE_LEDGER_FILE:-$SCRIPT_DIR/workareas/audit/agape_audit.log}"
+GENESIS="0000000000000000000000000000000000000000000000000000000000000000"
 
-log_event() {
-    local event_type="$1"
-    local message="$2"
-    local timestamp
-    timestamp="$(date -u +%Y-%m-%dT%H%M%SZ)"
-    
-    # Get last hash for chain integrity (or genesis hash if empty)
-    local prev_hash="0000000000000000000000000000000000000000000000000000000000000000"
-    if [ -f "$LEDGER_FILE" ]; then
-        prev_hash="$(tail -n 1 "$LEDGER_FILE" | cut -d'|' -f4)"
+verify_chain() {
+    local line prefix timestamp rest event digest actual previous="$GENESIS" count=0
+    while :; do
+        line=""
+        if IFS= read -r line; then
+            :
+        elif [[ -n "$line" ]]; then
+            echo "[error] incomplete ledger line" >&2
+            return 1
+        else
+            break
+        fi
+
+        if [[ "$line" != *"|"*"|"*"|"* ]]; then
+            echo "[error] malformed ledger line $((count + 1))" >&2
+            return 1
+        fi
+        digest="${line##*|}"
+        prefix="${line%|*}"
+        timestamp="${prefix%%|*}"
+        rest="${prefix#*|}"
+        event="${rest%%|*}"
+        if [[ -z "$timestamp" || -z "$event" || ! "$digest" =~ ^[0-9a-f]{64}$ ]]; then
+            echo "[error] malformed ledger line $((count + 1))" >&2
+            return 1
+        fi
+        actual="$(printf '%s' "$prefix|$previous" | sha256sum)"
+        actual="${actual%% *}"
+        if [[ "$actual" != "$digest" ]]; then
+            echo "[error] hash mismatch at ledger line $((count + 1))" >&2
+            return 1
+        fi
+        previous="$digest"
+        count=$((count + 1))
+    done < "$LEDGER_FILE"
+
+    if (( count == 0 )); then
+        echo "[error] ledger is empty" >&2
+        return 1
     fi
-    
-    local raw_data="${timestamp}|${event_type}|${message}|${prev_hash}"
-    local current_hash
-    current_hash="$(echo -n "$raw_data" | sha256sum | awk '{print $1}')"
-    
-    echo "${timestamp}|${event_type}|${message}|${current_hash}" >> "$LEDGER_FILE"
-    echo "[LEDGER] Recorded immutable event: $event_type -> Hash: ${current_hash:0:16}..."
+    LAST_HASH="$previous"
+    ENTRY_COUNT="$count"
 }
 
-# Example invocation if run directly
-if [ "${1:-}" = "log" ]; then
-    log_event "${2:-SYSTEM_EVENT}" "${3:-Agape node initialized}"
-else
-    log_event "LEDGER_INIT" "Immutable audit chain verified (R=1, c=0)"
-fi
+log_event() {
+    local event="$1" message="$2" timestamp previous="$GENESIS" digest
+    if [[ -z "$event" || "$event" == *"|"* || "$event" == *$'\n'* ||
+          "$event" == *$'\r'* || "$message" == *$'\n'* || "$message" == *$'\r'* ]]; then
+        echo "[error] event must be nonempty without delimiters; message must be one line" >&2
+        return 1
+    fi
+    if [[ -s "$LEDGER_FILE" ]]; then
+        verify_chain
+        previous="$LAST_HASH"
+    fi
+    timestamp="$(date -u +%Y-%m-%dT%H%M%SZ)"
+    digest="$(printf '%s' "$timestamp|$event|$message|$previous" | sha256sum)"
+    digest="${digest%% *}"
+    printf '%s|%s|%s|%s\n' "$timestamp" "$event" "$message" "$digest" >> "$LEDGER_FILE"
+    printf '[LEDGER] Recorded event: %s -> Hash: %.16s...\n' "$event" "$digest"
+}
+
+command -v flock >/dev/null || { echo "[error] flock is required" >&2; exit 1; }
+case "${1:-log}" in
+    log)
+        (( $# <= 3 )) || { echo "[error] usage: $0 log [event] [message]" >&2; exit 2; }
+        mkdir -p -- "$(dirname -- "$LEDGER_FILE")"
+        exec {lock_fd}>"$LEDGER_FILE.lock"
+        flock -x "$lock_fd"
+        if (( $# == 0 )); then
+            log_event "LEDGER_INIT" "Agape ledger initialized"
+        else
+            log_event "${2:-SYSTEM_EVENT}" "${3:-Agape node initialized}"
+        fi
+        ;;
+    verify)
+        (( $# == 1 )) || { echo "[error] usage: $0 verify" >&2; exit 2; }
+        [[ -f "$LEDGER_FILE" ]] || { echo "[error] ledger not found" >&2; exit 1; }
+        exec {lock_fd}>"$LEDGER_FILE.lock"
+        flock -s "$lock_fd"
+        verify_chain
+        printf '[ok] chain verified: %s entries\n' "$ENTRY_COUNT"
+        ;;
+    *)
+        echo "[error] usage: $0 {log [event] [message]|verify}" >&2
+        exit 2
+        ;;
+esac
