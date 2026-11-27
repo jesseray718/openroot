@@ -22,6 +22,8 @@ The computer serves the physical outcome—not the other way around. Useful heat
 
 [Project overview](https://jesseray718.github.io/openroot/) · [Contribute](CONTRIBUTING.md) · [Concrete work](https://github.com/jesseray718/openroot/issues) · [Design-packet template](https://github.com/jesseray718/openroot-design-packet-template)
 
+**The bigger picture:** [OpenRoot as a regenerative commons of energy and knowledge](docs/REGENERATIVE-COMMONS.md) connects AeroCement, the aperture mesh, recursively composable tidbits, reusable pathways, and Agape-centered resilience. It also summarizes the November 27 operator-shared local pod results and their limits.
+
 ## The connected architecture
 
 | Layer | Purpose |
