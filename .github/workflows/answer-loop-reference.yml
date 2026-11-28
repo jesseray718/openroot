@@ -1,0 +1,19 @@
+name: Answer-loop reference
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  synthetic-reference:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - name: Require reference implementation
+        run: |
+          test -f examples/answer-loop/reference.py && test -f tests/test_answer_loop_reference.py || {
+            echo "The separate answer-loop reference proposal must land before this workflow." >&2
+            exit 1
+          }
+      - name: Run disposable fixture tests
+        run: python3 -m unittest discover -s tests -p test_answer_loop_reference.py -v
